@@ -1,0 +1,293 @@
+{
+	"coal": [
+		"dust"
+	],
+	"copper": [
+		"plate",
+		"rod",
+		"gear",
+		"dust"
+	],
+	"diamond": [
+		"gear",
+		"dust"
+	],
+	"emerald": [
+		"gear",
+		"dust"
+	],
+	"gold": [
+		"plate",
+		"rod",
+		"gear",
+		"dust"
+	],
+	"iron": [
+		"plate",
+		"rod",
+		"gear",
+		"dust"
+	],
+	"lapis": [
+		"gear",
+		"dust"
+	],
+	"netherite": [
+		"plate",
+		"gear",
+		"dust"
+	],
+	"quartz": [
+		"gear",
+		"dust"
+	],
+	"redstone": [],
+	"brass": [
+		"ingot",
+		"nugget",
+		"plate",
+		"rod",
+		"storage_block"
+	],
+	"bronze": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block"
+	],
+	"constantan": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block"
+	],
+	"electrum": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"rod",
+		"storage_block"
+	],
+	"enderium": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block"
+	],
+	"graphite": [],
+	"invar": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block"
+	],
+	"lumium": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block"
+	],
+	"signalum": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block"
+	],
+	"steel": [
+		"dust",
+		"ingot",
+		"nugget",
+		"plate",
+		"rod",
+		"storage_block"
+	],
+	"fiery": [],
+	"infused_iron": [],
+	"ironwood": [],
+	"knightmetal": [],
+	"orichalcum": [],
+	"refined_glowstone": [
+		"ingot",
+		"nugget",
+		"storage_block"
+	],
+	"refined_obsidian": [
+		"dust",
+		"ingot",
+		"nugget",
+		"storage_block"
+	],
+	"rose_gold": [
+		"ingot",
+		"nugget",
+		"storage_block"
+	],
+	"sky": [],
+	"soul_steel": [],
+	"tainted_gold": [],
+	"apatite": [
+		"storage_block",
+		"gem",
+		"dust",
+		"storage_block",
+		"ore"
+	],
+	"bitumen": [
+		"storage_block",
+		"storage_block"
+	],
+	"charoite": [],
+	"cinnabar": [
+		"storage_block",
+		"gem",
+		"dust",
+		"storage_block",
+		"ore"
+	],
+	"dimensional": [],
+	"diopside": [],
+	"moonstone": [],
+	"potassium_nitrate": [],
+	"pyrope": [],
+	"sapphire": [
+		"storage_block",
+		"gem",
+		"gear",
+		"dust",
+		"storage_block",
+		"ore"
+	],
+	"sulfur": [
+		"storage_block",
+		"gem",
+		"dust",
+		"storage_block",
+		"ore"
+	],
+	"aquite": [],
+	"arcane": [],
+	"carminite": [],
+	"certus_quartz": [
+		"storage_block",
+		"gem",
+		"dust",
+		"storage_block"
+	],
+	"fluorite": [
+		"storage_block",
+		"gem",
+		"dust",
+		"storage_block",
+		"ore"
+	],
+	"peridot": [],
+	"ruby": [
+		"storage_block",
+		"gem",
+		"gear",
+		"dust",
+		"storage_block",
+		"ore"
+	],
+	"aluminum": [
+		"dust",
+		"ingot",
+		"nugget",
+		"plate",
+		"rod",
+		"storage_block",
+		"ore"
+	],
+	"iridium": [],
+	"lead": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block",
+		"ore"
+	],
+	"nickel": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block",
+		"ore"
+	],
+	"platinum": [],
+	"silver": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block",
+		"ore"
+	],
+	"tin": [
+		"dust",
+		"gear",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block",
+		"ore"
+	],
+	"titanium": [],
+	"tungsten": [],
+	"uranium": [
+		"dust",
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block",
+		"ore"
+	],
+	"zinc": [
+		"ingot",
+		"nugget",
+		"plate",
+		"storage_block",
+		"ore"
+	],
+	"cobalt": [
+		"ingot",
+		"nugget",
+		"storage_block",
+		"ore"
+	],
+	"falsite": [],
+	"horizonite": [],
+	"osmium": [
+		"dust",
+		"ingot",
+		"nugget",
+		"storage_block",
+		"ore"
+	],
+	"ventium": [],
+	"iesnium": [
+		"dust",
+		"ingot",
+		"nugget",
+		"storage_block",
+		"ore"
+	]
+}

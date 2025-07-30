@@ -1,0 +1,40 @@
+
+#Pedestal rendering options
+[Pedestal]
+	#Should items on pedestal rotate
+	#§a§lLOW§f impact when §a§lTRUE
+	#§2§lLOWEST§f impact when §c§lFALSE
+	"Rotate Items" = true
+	#Should items be rendered on pedestal
+	#§6§lMEDIUM§f impact when §a§lTRUE
+	#§2§lLOWEST§f impact when §c§lFALSE
+	"Render Items" = true
+	#Should pedestals render particles
+	#§a§lLOW§f impact when §a§lTRUE
+	#§2§lLOWEST§f impact when §c§lFALSE
+	"Render Particles" = true
+	#Should pedestals render HUD elements?
+	#§a§lLOW§f impact when §a§lTRUE
+	#§2§lLOWEST§f impact when §c§lFALSE
+	"Render HUD" = true
+	#Should pedestals render upgrades?
+	#This will prevent upgrades from being rendered
+	#Set to false if you're experiencing client-side lag from Pedestals
+	#§4§lHIGHEST§f impact when §a§lTRUE
+	#§2§lLOWEST§f impact when §c§lFALSE
+	"Render Upgrades" = true
+	#Should pedestals render their Tool Slot which is located at the TOP?
+	#§a§lLOW§f impact when §a§lTRUE
+	#§2§lLOWEST§f impact when §c§lFALSE
+	"Render Tool Slot" = true
+	#Should the pedestal upgrades be rendered on TOP instead?
+	#This will prevent the 'Tool Slot' from being rendered
+	#§a§lLOW§f impact when §c§lFALSE
+	#§2§lLOWEST§f impact when §a§lTRUE
+	"Render Upgrades in Tool Slot" = false
+	#Distance (blocks) away before Pedestal renders
+	#§6§lMEDIUM§f impact when on §c§l64
+	#§2§lLOWEST§f impact when on §a§l1
+	#Range: 1 ~ 64
+	"Render Distance" = 32
+

@@ -1,0 +1,4 @@
+showLineNumbers = true
+#Allowed Values: OFF, BASIC, ADVANCED
+intellisenseLevel = "OFF"
+

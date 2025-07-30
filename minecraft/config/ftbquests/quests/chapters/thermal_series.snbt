@@ -1,0 +1,965 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "thermal_series"
+	group: "72A9465344128AF9"
+	icon: "thermal:wrench"
+	id: "00000000000003A1"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"The Thermal Series is a suite of mods that has been a staple of Modded Minecraft for years. Time has brought many changes to it, but it has kept its overall theme of slightly magical tech throughout. "
+				""
+				"The Thermalpedia provided goes into greater detail on many of the tools and machines in the Thermal Series. Refer to it often to learn more. "
+				""
+				"~MuteTiefling"
+			]
+			id: "00000000000003A2"
+			optional: true
+			rewards: [{
+				count: 4
+				id: "4623F41B74F1829E"
+				item: "emendatusenigmatica:iron_chunk"
+				random_bonus: 8
+				title: "Iron Chunk"
+				type: "item"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "6F8140DE19FABFDA"
+				item: "thermal:wrench"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"You can't get something for nothing; doing work means using energy and the search for energy drives all things. Our first step, therefore will be to generate some power to begin working with Thermal machines."
+				""
+				"A Stirling Dynamo burns fuel to create a heat differential, thus allowing engine to spin and generate energy in an easily stored and transferable form."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			icon: "thermal:dynamo_stirling"
+			id: "00000000000004A3"
+			rewards: [
+				{
+					count: 8
+					id: "00000000000004EC"
+					item: "mekanism:basic_universal_cable"
+					title: "Energy Cable (Basic)"
+					type: "item"
+				}
+				{
+					id: "000000000000063A"
+					item: "powah:energy_cell_basic"
+					title: "Energy Cell (Basic)"
+					type: "item"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
+					icon: "kubejs:farmers_delight"
+					id: "0000000000000A7E"
+					title: "Farmer's Delight"
+					type: "command"
+				}
+			]
+			subtitle: "Power, From the Top"
+			tasks: [
+				{
+					id: "00000000000004A4"
+					item: "thermal:dynamo_stirling"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "00000000000004B8"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "minecraft:coals"
+						}
+					}
+					title: "Any Coal"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000000004A3"]
+			description: [
+				"While nothing is without cost, the source of energy isn't always immediately obvious. The Arboreal Extractor uses a combination of gravity and the trees own capillary action to collect the fluids available in the tree. "
+				""
+				"This is a non-destructive process, but a living tree is required. Supplying some bone meal or other fertilizer can help replenish the tree's reserves faster, thus boosting production."
+				""
+				"Check the Thermalpedia for information on relevant upgrades as well as a list of what fluids can be extracted from each tree."
+			]
+			id: "00000000000004A5"
+			rewards: [
+				{
+					auto: "disabled"
+					count: 4
+					id: "00000000000004BA"
+					item: "minecraft:jungle_sapling"
+					title: "Jungle Sapling"
+					type: "item"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+					icon: "kubejs:rare_lootbox"
+					id: "00000000000004F0"
+					title: "Rare Thermal Series Loot Box"
+					type: "command"
+				}
+				{
+					count: 4
+					id: "0000000000000F87"
+					item: "minecraft:acacia_sapling"
+					title: "Acacia Sapling"
+					type: "item"
+				}
+			]
+			subtitle: "Trickle-Down Economics"
+			tasks: [{
+				id: "00000000000004A6"
+				item: "thermal:device_tree_extractor"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["00000000000004BB"]
+			description: [
+				"With a little bit of energy input, the Fractionating Still can refine Resin into Tree Oil, a fine renewable fuel that burns more efficiently than coal."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			icon: "thermal:machine_refinery"
+			id: "00000000000004A7"
+			rewards: [
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+					icon: "kubejs:epic_lootbox"
+					id: "00000000000004EF"
+					title: "Epic Thermal Series Loot Box"
+					type: "command"
+				}
+				{
+					count: 8
+					id: "0000000000000639"
+					item: "mekanism:basic_mechanical_pipe"
+					title: "Basic Mechanical Pipe"
+					type: "item"
+				}
+			]
+			subtitle: "Not Your Ordinary Moonshine"
+			tasks: [
+				{
+					id: "00000000000004A8"
+					item: "thermal:machine_refinery"
+					type: "item"
+				}
+				{
+					id: "00000000000004C1"
+					item: "thermal:tree_oil_bucket"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["00000000000004C2"]
+			description: [
+				"Some materials are more abundant than they seem at first glance, they're simply locked up in different forms that require a touch more work to release."
+				""
+				"A Pulverizer can help extract these extras, such as getting some nickel from iron ore, or silver from lead ore. "
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004AB"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "00000000000004F2"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Between a Rock and a Hard Place"
+			tasks: [{
+				id: "00000000000004AC"
+				item: "thermal:machine_pulverizer"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["00000000000004AB"]
+			description: [
+				"An ordinary Furnace will need a helping hand to produce advanced alloys. "
+				""
+				"Invar has many useful properties, not least of which being the ability to withstand the heat used in a better furnace."
+				""
+				"Pulverize some iron and nickel, combine it by hand, and smelt the result to progress."
+			]
+			id: "00000000000004AD"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "00000000000004F3"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Bootstrapping Technology"
+			tasks: [{
+				id: "00000000000004AE"
+				item: "emendatusenigmatica:invar_dust"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["00000000000004AD"]
+			description: [
+				"An advanced furnace used for making alloys directly, as well as many other useful materials, such as hardened glass."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004AF"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004F4"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Support the Resistance!"
+			tasks: [{
+				id: "00000000000004B0"
+				item: "thermal:machine_smelter"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["00000000000004A5"]
+			description: [
+				"Though some may still be seeking the sweetest taste, others are just trying to keep the lights on. "
+				""
+				"Resin can be extracted from many different trees and with a little work can be made into an excellent fuel source."
+			]
+			id: "00000000000004BB"
+			rewards: [
+				{
+					count: 16
+					id: "00000000000004ED"
+					item: "minecraft:sweet_berries"
+					title: "Sweet Berries"
+					type: "item"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+					icon: "kubejs:rare_lootbox"
+					id: "000000000000063B"
+					title: "Rare Thermal Series Loot Box"
+					type: "command"
+				}
+			]
+			subtitle: "A Sticky Mess"
+			tasks: [{
+				id: "00000000000004BC"
+				item: "thermal:resin_bucket"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["00000000000004A7"]
+			description: [
+				"With better fuel in hand, start up a Compression Dynamo for some simple renewable energy. "
+				""
+				"From here, explore some of the other Dynamos on your own to find the right power source for your situation."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004BF"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004EE"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "ICE, ICE, Baby"
+			tasks: [{
+				id: "00000000000004C0"
+				item: "thermal:dynamo_compression"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"A simple furnace, like a standard coal burning furnace except  faster and more efficient."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004C2"
+			rewards: [
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+					icon: "kubejs:rare_lootbox"
+					id: "00000000000004F1"
+					title: "Rare Thermal Series Loot Box"
+					type: "command"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+					icon: "kubejs:scavengers_delight"
+					id: "0000000000000A7F"
+					title: "Scavenger's Delight"
+					type: "command"
+				}
+			]
+			subtitle: "Capissen 38 Mark II"
+			tasks: [{
+				id: "00000000000004C3"
+				item: "thermal:machine_furnace"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["00000000000004AF"]
+			description: [
+				"Precision machining typically means greater efficiencies, either in terms of time spent doing a task or materials used. The MultiServo Press is one such machine that makes pressing plates faster and gears cheaper, as well as opening the door to other processing techniques."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004C4"
+			rewards: [
+				{
+					id: "00000000000004F6"
+					item: "immersiveengineering:mold_gear"
+					title: "Metal Press Mold: Gear"
+					type: "item"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+					icon: "kubejs:epic_lootbox"
+					id: "000000000000068B"
+					title: "Epic Thermal Series Loot Box"
+					type: "command"
+				}
+			]
+			subtitle: "Bop It, Pull It, Twist It"
+			tasks: [{
+				id: "00000000000004C5"
+				item: "thermal:machine_press"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000000004AF"]
+			description: [
+				"Nature does an excellent job of growing plants; it has been at it for a while, after all. But when space is at a premium a Phytogenic Insolator is an excellent alternative to the natural approach. "
+				""
+				"Water and energy are required. Fertilizer is recommended, though optional. "
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004C6"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004F5"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Between the Wasteland and Sky..."
+			tasks: [{
+				id: "00000000000004C7"
+				item: "thermal:machine_insolator"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000000004AF"]
+			description: [
+				"A precision machine that can quickly assemble components, simplifying automation. It features an internal fluid tank as well which can automatically provide liquids to crafts that need them. "
+				""
+				"Set a recipe, press the green check to validate it, and then supply the ingredients."
+				""
+				"Check the Thermalpedia for information on relevant upgrades."
+			]
+			id: "00000000000004C8"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "000000000000064E"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Insert Tab A Into Slot B"
+			tasks: [{
+				id: "00000000000004C9"
+				item: "thermal:machine_crafter"
+				type: "item"
+			}]
+			x: 6.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["00000000000004DD"]
+			dependency_requirement: "one_started"
+			description: ["A handheld 'explosive' that releases the charged energy of elemental Blitz, causing lightning to strike spontaneously."]
+			id: "00000000000004CA"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004FD"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "00000000000004DC"
+				item: "thermal:lightning_grenade"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["00000000000004DD"]
+			dependency_requirement: "one_started"
+			description: ["A handheld 'explosive' that releases the chilling power of elemental Blizz, freezing water and blanketing the area in snow."]
+			id: "00000000000004CC"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004FE"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "00000000000004DB"
+				item: "thermal:ice_grenade"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["00000000000004DD"]
+			dependency_requirement: "one_started"
+			description: ["A handheld 'explosive' that releases the latent power of elemental Basalz, causing the earth to shift and crack."]
+			id: "00000000000004CE"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004FC"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "00000000000004DA"
+				item: "thermal:earth_grenade"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000000004DD"]
+			description: ["A handheld 'explosive' that releases the smoldering energy of elemental Blaze, lighting the surroundings on fire."]
+			id: "00000000000004D7"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004FF"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "00000000000004D9"
+				item: "thermal:fire_grenade"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: ["Simple metallurgy can only go so far. At a certain point, more exotic materials are required. Seek out the elemental creatures that make their homes in the world's most extreme environments."]
+			id: "00000000000004DD"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00000000000004FB"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Everything changed when the Fire Elementals attacked"
+			tasks: [
+				{
+					id: "00000000000004DE"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+				{
+					id: "00000000000004DF"
+					item: "thermal:blitz_rod"
+					type: "item"
+				}
+				{
+					id: "00000000000004E0"
+					item: "thermal:blizz_rod"
+					type: "item"
+				}
+				{
+					id: "00000000000004E1"
+					item: "thermal:basalz_rod"
+					type: "item"
+				}
+			]
+			title: "Exotic Elements"
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"Better storage or faster discharge? "
+				""
+				"Consider the application carefully when choosing between these augments. "
+			]
+			id: "00000000000004E2"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "00000000000004FA"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000F56"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "thermal:rf_coil_augment"
+							}
+							{
+								Count: 1b
+								id: "thermal:rf_coil_storage_augment"
+							}
+							{
+								Count: 1b
+								id: "thermal:rf_coil_xfer_augment"
+							}
+						]
+					}
+				}
+				title: "RF Capacity/Upgrade Augments"
+				type: "item"
+			}]
+			title: "RF Capacity and Transfer Augments"
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"Integral Components generally upgrade all stats of the machine or tool they are installed in. "
+				""
+				"Only the highest tier counts, so only install one at a time. "
+				""
+				"More advanced versions will require more exotic materials."
+			]
+			id: "00000000000004E6"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "00000000000004F8"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000F8D"
+				item: "thermal:upgrade_augment_1"
+				type: "item"
+			}]
+			title: "Integral Components"
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"Industrial Engineers often face a trade-off when designing a system, speed versus efficiency. Consider the needs of the application when choosing between these. "
+				""
+				"Efficiency pays off when energy can be stored for future use, but sometimes a loss is required to keep up with a steady demand. "
+			]
+			id: "0000000000000F52"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000F9F"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000F59"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "thermal:dynamo_output_augment"
+							}
+							{
+								Count: 1b
+								id: "thermal:dynamo_fuel_augment"
+							}
+						]
+					}
+				}
+				title: "Dynamo Augments"
+				type: "item"
+			}]
+			title: "Dynamo Augments"
+			x: 1.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["00000000000004A5"]
+			description: [
+				"The natural world tends to work the kinks out as it goes, rarely submitting unless something comes along to really dominate the scene. Shall we switch things up a bit? See what it can be made to do?"
+				""
+				"Tap a Jungle Tree and begin extracting raw latex. There are no hard limits here. "
+			]
+			id: "0000000000000F67"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000F8A"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "That's Mistress Nature To You"
+			tasks: [{
+				id: "0000000000000F68"
+				item: "industrialforegoing:latex_bucket"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0000000000000F67"]
+			description: ["Once smooth and supple, latex toughens through a process of vulcanization that makes it suitable for more industrial purposes. "]
+			id: "0000000000000F69"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000F8B"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Vulcanizing Bond"
+			tasks: [{
+				count: 8L
+				id: "0000000000000F6A"
+				item: "thermal:cured_rubber"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"00000000000004A8"
+				"00000000000004A7"
+			]
+			description: [
+				"Found mostly in shallow pools and deep beneath bedrock, Crude Oil may also be extracted from Bitumen Ore if great care is taken in extracting it from the ground. "
+				""
+				"Gather some up and begin processing it through a Fractionating Still. With a bit of refining, it can be converted into an excellent fuel source."
+			]
+			id: "0000000000000F6B"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "124C10AC728F1A8C"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000F6C"
+				item: "pneumaticcraft:oil_bucket"
+				title: "Crude Oil"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["00000000000004AF"]
+			description: [
+				"Based on the ancient art of spinning things until they fly apart, Centrifuges are a vital part of industry, allowing for efficient separation of materials. "
+				""
+				"Useful for a variety of purposes, its also the first step in creating a versatile and energy dense liquid fuel.  "
+			]
+			hide_dependency_lines: false
+			id: "0000000000000F78"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "5839B6FFB471A35B"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Up Against a Wall"
+			tasks: [{
+				id: "0000000000000F79"
+				item: "thermal:machine_centrifuge"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0000000000000F69"]
+			description: ["Expandable, upgradable, portable. An excellent first choice for gathering liquids in the field.  "]
+			id: "0000000000000F83"
+			rewards: [{
+				id: "0000000000000F9C"
+				item: "thermal:fluid_tank_augment"
+				title: "Expanded Tank Construction"
+				type: "item"
+			}]
+			subtitle: "Can't Help But Feeling a Bit Sloshed"
+			tasks: [{
+				id: "0000000000000F84"
+				item: {
+					Count: 1
+					id: "thermal:fluid_cell"
+					tag: {
+						BlockEntityTag: {
+							TankInv: [{
+								Amount: 0
+								Capacity: 32000
+								FluidName: "minecraft:empty"
+								Tank: 0b
+							}]
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -3.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000000000F69"]
+			description: [
+				""
+				"Expandable, upgradable, portable. Perfect for a quick charge just about anywhere. "
+			]
+			id: "0000000000000F85"
+			rewards: [{
+				id: "0000000000000F88"
+				item: {
+					Count: 1
+					id: "minecraft:enchanted_book"
+					tag: {
+						StoredEnchantments: [{
+							id: "cofh_core:holding"
+							lvl: 4s
+						}]
+					}
+				}
+				title: "Holding IV"
+				type: "item"
+			}]
+			subtitle: "Feeling Energetic and Quite Positive"
+			tasks: [{
+				id: "0000000000000F86"
+				item: {
+					Count: 1
+					id: "thermal:energy_cell"
+					tag: {
+						BlockEntityTag: {
+							Energy: 0
+							EnergyMax: 1000000
+							EnergyRecv: 1000
+							EnergySend: 1000
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"A lot of material can be lost in a system that would otherwise be recovered by slowing down to check again. "
+				""
+				"The Auxiliary Process Sieve trades speed for extra materials in applicable machines."
+			]
+			id: "0000000000000F90"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000FA0"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000F91"
+				item: "thermal:machine_output_augment"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"Sometimes a job just needs to get done now and damn the costs. "
+				""
+				"Flux Linkage Amplifiers greatly enhance the speed of machines though they reduce energy efficiency in turn."
+			]
+			id: "0000000000000F9D"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000FA1"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000F9E"
+				item: "thermal:machine_speed_augment"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"Feeling a bit peckish? How ‘bout a nice cold one, fresh from the tap?"
+				""
+				"Place water sources on each side to produce infinite water that can be extracted by any fluid pipe. Perfect for automation!"
+			]
+			id: "3D23E5D7FA0F0A3E"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "052C23B5160E5C9A"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Sick of Tea? That's like being sick of breathing. "
+			tasks: [{
+				id: "6EC90AFC954E42C8"
+				item: "thermal:device_water_gen"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: [
+				"A bit of lava, a bit of water. Boom, box of rocks. "
+				""
+				"The type of stone output by the Igneous Extruder is controlled by the block placed beneath it. "
+			]
+			id: "724E414250F20D9C"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "5FF0D0F905311B5F"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Flameo, Hotman!"
+			tasks: [{
+				id: "2395D1B3DDEB3FB6"
+				item: "thermal:device_rock_gen"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: ["A handy device for picking up that mess those zombies left. Such inconsiderate house-guests. "]
+			id: "505A3C679D3EDD3B"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "7AE5586CD4CAE2A9"
+				title: "Rare Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "I laugh at gravity all the time. Hahaha, gravity!"
+			tasks: [{
+				id: "66FA40C40EA10DE7"
+				item: "thermal:device_collector"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["00000000000003A2"]
+			description: ["A multi purpose cooling chamber, equally suited to making a highball or a fully formed ingot. "]
+			id: "47B80FE2B94D5548"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_thermal_series_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "111267C52D39C197"
+				title: "Epic Thermal Series Loot Box"
+				type: "command"
+			}]
+			subtitle: "Why is it that every time you play with magic water, I get soaked?"
+			tasks: [{
+				id: "7DFFBA48694F1143"
+				item: "thermal:machine_chiller"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 5.5d
+		}
+	]
+	title: "Thermal Series"
+}

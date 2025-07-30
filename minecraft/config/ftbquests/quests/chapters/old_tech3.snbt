@@ -1,0 +1,468 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "old_tech3"
+	group: "20A042B1689B41C4"
+	icon: "kubejs:memory_basic_filled"
+	id: "1BAD3096A2D8A7E3"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7522971912BCF482"
+			tasks: [{
+				id: "558BD74C18EFB6EA"
+				item: "industrialforegoing:machine_frame_pity"
+				type: "item"
+			}]
+			title: "Industrial Foregoing"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "1E4DC3A7546EC894"
+			tasks: [{
+				id: "3E03729D4E825E26"
+				item: "rftoolsbase:machine_frame"
+				type: "item"
+			}]
+			title: "RFTools"
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7522971912BCF482"]
+			id: "221F90FFF031E7B4"
+			optional: true
+			shape: "diamond"
+			tasks: [{
+				id: "6784136B840606FA"
+				item: "industrialforegoing:latex_processing_unit"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["7522971912BCF482"]
+			description: ["Capable of safely working with all manner of corrosive, reactive, and otherwise dangerous liquids to incorporate them into useful products, the Dissolution Chamber is an invaluable tool in the Engineer’s Toolbox. "]
+			id: "6079CBE9ECE6EB1D"
+			tasks: [{
+				id: "76E7A09884C5D8AB"
+				item: "industrialforegoing:dissolution_chamber"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["35EE2BA3A988F416"]
+			id: "206F4AA9A9278D8D"
+			tasks: [{
+				id: "1C9B934F52D9FB49"
+				item: "kubejs:pink_ender_slime_bucket"
+				type: "item"
+			}]
+			title: "Enrich Pink Slime"
+			x: 0.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"6079CBE9ECE6EB1D"
+				"26D8327770B81C08"
+			]
+			description: [
+				"How does one drill for pink slime when the machines used to drill it require it as a component?"
+				""
+				"Who has even ever seen a Pink Wither?"
+				""
+				"The question comes up regularly over the Amadron network, with would-be engineers left scratching their noses. But, having studied the Arcane, you think you see a way around this. The answer? Well, Magic, of course."
+			]
+			id: "412F3A311A7CFCB3"
+			tasks: [
+				{
+					id: "0536AAB566704AC9"
+					item: "industrialforegoing:laser_drill"
+					type: "item"
+				}
+				{
+					id: "5703696A09A152C1"
+					item: "industrialforegoing:fluid_laser_base"
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["412F3A311A7CFCB3"]
+			description: ["Summon a Pink Wither with Occultism Rituals or convert a Wither with a Pinkinator obtained by fighting The Guardian of Gaia."]
+			icon: "minecraft:wither_skeleton_skull"
+			id: "35EE2BA3A988F416"
+			subtitle: "Milk a Pink Wither."
+			tasks: [{
+				id: "046A0A8AB86FF128"
+				item: "industrialforegoing:pink_slime_bucket"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"72945D9390F479E7"
+				"242AEF5D6C2318D3"
+			]
+			description: ["The next step towards Nuclear Physics requires materials that can withstand the high temperatures, pressures, and radiation involved. "]
+			id: "3B9B0EB73BF19CBD"
+			tasks: [
+				{
+					id: "65AF9984F551512B"
+					item: "mekanism:metallurgic_infuser"
+					type: "item"
+				}
+				{
+					id: "044F4F0627E059A3"
+					item: "mekanism:alloy_infused"
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1E4DC3A7546EC894"]
+			description: [
+				"Kickstart some Blaze Rods with a zap of focused energy in an Energizing Orb to make some Blazing Rods. These make an excellent, low-cost, portable fuel source that may be burned in a Blazing Generator. "
+				""
+				"They may be inserted into a Blazing Agitator to further refine them as a fuel source. Starting off with a high-quality rod such as these is preferred."
+			]
+			id: "72945D9390F479E7"
+			tasks: [
+				{
+					id: "3C415238A247D89A"
+					item: "rftoolspower:blazing_agitator"
+					type: "item"
+				}
+				{
+					id: "29584C030AC3CC61"
+					item: "rftoolspower:blazing_rod"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			description: ["Crude, yet effective. These memory chips have done admirably thus far, but they’re in need of a boost. "]
+			id: "2182BC78D342D1AA"
+			shape: "diamond"
+			tasks: [{
+				id: "6B231E1F097FC1DC"
+				item: "kubejs:advanced_ram_chip"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["2182BC78D342D1AA"]
+			description: ["An empty shell, missing one vital component: You."]
+			id: "51AFB0E11AB83CFC"
+			shape: "diamond"
+			tasks: [{
+				id: "5DD654B9BD38AC93"
+				item: "kubejs:memory_basic_empty"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["51AFB0E11AB83CFC"]
+			description: ["High Technology requires smarter machines, and what better to make them more intelligent than one’s own distilled experience? "]
+			id: "52FEE141AD87B819"
+			shape: "diamond"
+			tasks: [{
+				id: "7FDBBDEA3D78E027"
+				item: "kubejs:memory_basic_filled"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6079CBE9ECE6EB1D"]
+			description: ["Though costly to run, the Stasis Chamber can safely contain most creatures, preventing them from moving and even slowly healing them of any wounds they might incur. "]
+			id: "0F16543E9DE08714"
+			optional: true
+			shape: "diamond"
+			tasks: [{
+				id: "6C1CEE8121C1BEA9"
+				item: "industrialforegoing:stasis_chamber"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3B9B0EB73BF19CBD"]
+			description: ["Advanced optics for highly focused laser operations."]
+			id: "26D8327770B81C08"
+			tasks: [{
+				id: "469EF5B5F3B3A6C7"
+				item: "mekanismgenerators:laser_focus_matrix"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["71D581C742D17CA4"]
+			description: [
+				"It’s time to assemble our first fully technological Fission Reactor! "
+				""
+				"Refer to the Mekanism quest chapter for more information regarding fissile fuel processing and the Reactor structure itself. "
+			]
+			id: "7E3DDF2413EA9433"
+			tasks: [{
+				id: "45C0FD125FCC0EC5"
+				item: "mekanismgenerators:control_rod_assembly"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["71D581C742D17CA4"]
+			description: ["While technically optional, running a Fission Reactor without a turbine is slow and wastes all the precious energy generated by the reaction. The larger they are, the more efficient they become. "]
+			id: "5AB7BDCE735F200A"
+			tasks: [{
+				id: "2DC0607EC0F51335"
+				item: "mekanismgenerators:turbine_blade"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["412F3A311A7CFCB3"]
+			description: ["Summon a Wither and safely contain it to begin drilling for Ether Gas."]
+			icon: "minecraft:wither_skeleton_skull"
+			id: "4A453667AB7D1197"
+			subtitle: "Milk a Wither."
+			tasks: [{
+				id: "6842B6803B8B613F"
+				item: "industrialforegoing:ether_gas_bucket"
+				type: "item"
+			}]
+			title: "Ether Gas"
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"4A453667AB7D1197"
+				"3B9B0EB73BF19CBD"
+			]
+			description: ["The penultimate control circuit known to modern science. Securing a supply of Ether Gas for cooling is critical, as these run hot."]
+			id: "71D581C742D17CA4"
+			tasks: [{
+				id: "249303BB1931E8BF"
+				item: "mekanism:elite_control_circuit"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["52FEE141AD87B819"]
+			description: ["Putting it all together gets us a Basic Control Circuit capable of driving more powerful machines. "]
+			id: "242AEF5D6C2318D3"
+			tasks: [{
+				id: "586BD5184CB0DAF7"
+				item: "mekanism:basic_control_circuit"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"206F4AA9A9278D8D"
+				"5AD982728B95438C"
+			]
+			description: ["The ultimate circuit design, capable of controlling machines working at the quantum level. "]
+			id: "40204EBF03AD725E"
+			tasks: [{
+				id: "497E05EC7D5541E0"
+				item: "mekanism:ultimate_control_circuit"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: [
+				"7E3DDF2413EA9433"
+				"5AB7BDCE735F200A"
+			]
+			description: [
+				"Plutonium, Manyullyn, and Shadow Steel fuse to become a very powerful and important alloy. "
+				""
+				"Always take special precautions when dealing with radioactive materials! Keeping these machines well away from living creatures is highly recommended. "
+			]
+			id: "5AD982728B95438C"
+			tasks: [{
+				id: "06305D4712AFDD6A"
+				item: "mekanism:alloy_atomic"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"5A772150FF638680"
+				"5E61BE9DA7DA1FEC"
+			]
+			description: ["A feat once thought impossible, even by those great engineers who came before. It was only through careful fusion of their sciences and ancient magics that they were able to master fusion and power their cities with seemingly limitless energy. "]
+			id: "16DE48989A21D643"
+			tasks: [{
+				id: "56BA92C0A36137C1"
+				item: "mekanismgenerators:fusion_reactor_controller"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["40204EBF03AD725E"]
+			description: ["Any sufficiently advanced technology is indistinguishable from magic. We may not fully understand the fusion of Magic and Technology in these mycelial networks, but we’re certainly able to exploit it. "]
+			id: "2A9B2999EFB358D6"
+			tasks: [{
+				id: "5919D1C305DF769B"
+				item: "industrialforegoing:mycelial_reactor"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 8.5d
+		}
+		{
+			dependencies: ["206F4AA9A9278D8D"]
+			description: ["Help your engineering network over the hump by providing them with drills and computers of their own. It seems they’ve got a trick or two to teach you in exchange."]
+			id: "0E7B4F927F548AF9"
+			shape: "gear"
+			tasks: [{
+				id: "4769F3CFE98A445F"
+				item: "kubejs:heavy_machinery_schematics"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 7.0d
+		}
+		{
+			dependencies: ["40204EBF03AD725E"]
+			description: [
+				"A fusion of technology and magic, the Stellar Neutron Activator is capable of producing enormous quantities of Tritium continuously, though the process requires enormous quantities of mana and energy to extract it from water."
+				""
+				"This machine operates for 4000 ticks every time it consumes mana."
+				""
+				"================================================================="
+				""
+				"Note that the recipes shown in JEI don't accurately display whether any given input is per tick or all at once. For simplicity, all recipes for all Masterful Machines have been standardized under the following rule set:"
+				""
+				"● Forge Energy is consumed per tick"
+				"● Pneumatic Air is consumed per tick and must be over 10 Bar"
+				"● Astral Starlight is consumed per tick"
+				"● Fluids are consumed or created per tick"
+				"● Items are consumed or created at the end of a craft"
+				"● Mana is consumed at the start of a craft or created at the end"
+			]
+			id: "5A772150FF638680"
+			min_width: 400
+			shape: "gear"
+			tasks: [{
+				id: "2124E28BB47D675C"
+				item: "masterfulmachinery:stellar_neutron_activator_controller"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["71D581C742D17CA4"]
+			description: [
+				"A high-speed, high-pressure version of the standard Assembly Table capable of processing many circuits at once. Very useful for expanding circuit manufacturing operations!"
+				""
+				"Two air supplies are required to run this machine. The High-Pressure Input requires greater than 11 bar to begin functioning while the Assembly Controller needs 5 bar and may be accessed from below. "
+				""
+				"This machine will still function for all regular Assembly Table crafts as well by placing the inputs in the crate in the back. All outputs will be retrieved from this same crate."
+				""
+				"================================================================="
+				""
+				"Note that the recipes shown in JEI don't accurately display whether any given input is per tick or all at once. For simplicity, all recipes for all Masterful Machines have been standardized under the following rule set:"
+				""
+				"● Forge Energy is consumed per tick"
+				"● Pneumatic Air is consumed per tick and must be over 10 Bar"
+				"● Astral Starlight is consumed per tick"
+				"● Fluids are consumed or created per tick"
+				"● Items are consumed or created at the end of a craft"
+				"● Mana is consumed at the start of a craft or created at the end"
+			]
+			id: "76EDB33FBF318FB4"
+			min_width: 400
+			shape: "gear"
+			tasks: [{
+				id: "33104A6845FE9370"
+				item: "masterfulmachinery:advanced_assembly_table_controller"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["40204EBF03AD725E"]
+			description: [
+				"Though based on simple technologies, this massive machine can churn out industrial quantities of Deuterium quickly enough to meet the needs of a Fusion Reactor."
+				""
+				"Note: This multiblock expects water underneath it with the legs submerged right up to the base of the platform. As such, it is best built as an offshore platform. Be wary of kelp and other plant life, as its presence will break the structure."
+				""
+				"================================================================="
+				""
+				"Note that the recipes shown in JEI don't accurately display whether any given input is per tick or all at once. For simplicity, all recipes for all Masterful Machines have been standardized under the following rule set:"
+				""
+				"● Forge Energy is consumed per tick"
+				"● Pneumatic Air is consumed per tick and must be over 10 Bar"
+				"● Astral Starlight is consumed per tick"
+				"● Fluids are consumed or created per tick"
+				"● Items are consumed or created at the end of a craft"
+				"● Mana is consumed at the start of a craft or created at the end"
+			]
+			id: "5E61BE9DA7DA1FEC"
+			min_width: 400
+			shape: "gear"
+			tasks: [{
+				id: "621697B1EC42D23F"
+				item: "masterfulmachinery:industrial_deuterium_plant_controller"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["40204EBF03AD725E"]
+			description: ["It certainly shouldn’t be possible, by all accounts. Yet here you are, holding antimatter in the palm of your hand!"]
+			id: "169619599EE68547"
+			tasks: [{
+				id: "0FC0D1296975D5F3"
+				item: "mekanism:pellet_antimatter"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 9.0d
+		}
+	]
+	title: "Tech - Nuclear Physics"
+}

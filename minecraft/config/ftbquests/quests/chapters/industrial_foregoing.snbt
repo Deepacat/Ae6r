@@ -1,0 +1,1236 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "industrial_foregoing"
+	group: "72A9465344128AF9"
+	icon: "industrialforegoing:latex_processing_unit"
+	id: "0000000000000003"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"This mod provides a wide range of machines to automate various tasks. This questline introduces some key machines (but not ALL the machines, as there are quite a few)."
+				""
+				"There are currently four (craftable) tiers of IF machine frame. Right now, you can only make the lowest-tier version."
+			]
+			icon: "industrialforegoing:plastic"
+			id: "000000000000004A"
+			optional: true
+			rewards: [
+				{
+					id: "234EA77258AE837C"
+					type: "xp"
+					xp: 100
+				}
+				{
+					count: 6
+					id: "63727AE711541D73"
+					item: "minecraft:iron_ingot"
+					random_bonus: 4
+					title: "Iron Ingot"
+					type: "item"
+				}
+			]
+			size: 1.5d
+			tasks: [{
+				id: "452B662F54BEAD8D"
+				item: "industrialforegoing:machine_frame_pity"
+				type: "item"
+			}]
+			title: "Industrial Foregoing"
+			x: 1.5d
+			y: -9.0d
+		}
+		{
+			dependencies: ["000000000000004A"]
+			description: ["The Fluid Extractor, shockingly, extracts fluid. Place one facing a log block, and it will slowly break down the log while producing Latex. Power is optional, but speeds up the process by a factor of 2.5. Acacia logs give the best yield."]
+			id: "000000000000004B"
+			rewards: [
+				{
+					count: 32
+					id: "0000000000000628"
+					item: "minecraft:acacia_log"
+					title: "Acacia Log"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "0000000000000CAB"
+					item: "minecraft:acacia_sapling"
+					title: "Acacia Sapling"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "000000000000004C"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "industrialforegoing:fluid_extractor"
+							}
+							{
+								Count: 1b
+								id: "thermal:device_tree_extractor"
+							}
+						]
+					}
+				}
+				title: "Fluid Extractor"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["000000000000004B"]
+			description: ["The Latex Processing Unit takes latex, water, and power as inputs to produce Tiny Dry Rubber. This can be crafted into Dry Rubber, which in turn is smelted into Plastic, a critical resource."]
+			id: "000000000000004F"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000629"
+				title: "Rare Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000050"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "industrialforegoing:latex_processing_unit"
+							}
+							{
+								Count: 1b
+								id: "thermal:machine_refinery"
+							}
+						]
+					}
+				}
+				title: "Latex Processing Unit"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["The second tier of machine frame. A few recipes (such as the Plant Fertilizer) use this frame on its own, but it's also a component of the third tier of machine frame."]
+			id: "0000000000000051"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000632"
+				title: "Rare Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			shape: "pentagon"
+			tasks: [{
+				id: "0000000000000052"
+				item: "industrialforegoing:machine_frame_simple"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["000000000000004F"]
+			description: ["The Mob Slaughter Factory kills mobs and animals in its area of effect. Entities slain in this way do not drop anything, but are converted to Liquid Meat and Pink Slime, liquids that can be piped out of the block."]
+			id: "0000000000000053"
+			rewards: [{
+				id: "0000000000000626"
+				item: "industrialforegoing:meat_feeder"
+				title: "Meat Feeder"
+				type: "item"
+			}]
+			tasks: [{
+				icon: "industrialforegoing:mob_slaughter_factory"
+				id: "0000000000000054"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "industrialforegoing:pink_slime_bucket"
+							}
+							{
+								Count: 1b
+								id: "industrialforegoing:mob_slaughter_factory"
+							}
+						]
+					}
+				}
+				title: "Mob Slaughter Factory"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"000000000000004C"
+				"000000000000004F"
+			]
+			description: ["The Dissolution Chamber requires power and recipe-dependent items/fluids to craft various items."]
+			id: "0000000000000057"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "000000000000062A"
+				title: "Rare Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "000000000000006B"
+				item: "industrialforegoing:dissolution_chamber"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["Addons can increase the range, speed, or efficiency of most machines. As default operating areas are usually quite small, addons are important!"]
+			icon: {
+				Count: 1
+				id: "industrialforegoing:range_addon11"
+				tag: {
+					TitaniumAugment: {
+						Range: 11.0f
+					}
+				}
+			}
+			id: "0000000000000076"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000631"
+				title: "Rare Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "35428F7A336EE4A1"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "industrialforegoing:addons"
+					}
+				}
+				title: "Any Addon"
+				type: "item"
+			}]
+			title: "Addons"
+			x: 3.0d
+			y: -3.5d
+		}
+		{
+			dependencies: [
+				"0000000000000050"
+				"0000000000000051"
+				"0000000000000053"
+			]
+			description: ["The third tier of machine frame. Used in a variety of powerful automation machines."]
+			id: "0000000000000078"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "0000000000000633"
+				title: "Epic Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			shape: "hexagon"
+			tasks: [{
+				id: "0000000000000079"
+				item: "industrialforegoing:machine_frame_advanced"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["The Mob Crusher kills mobs, producing Essence and normal mob drops."]
+			id: "000000000000007A"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "0000000000000636"
+				title: "Epic Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "000000000000007B"
+				item: "industrialforegoing:mob_crusher"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000000000007A"]
+			description: ["These machines, when provided with power and Essence, will act like several enchanting related machines. Essence can be generated by using the Resourceful Furnace or Mob Crusher."]
+			id: "000000000000007C"
+			rewards: [
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_epic"
+					icon: "kubejs:epic_lootbox"
+					id: "0000000000000635"
+					title: "Epic Industrial Foregoing Loot Box"
+					type: "command"
+				}
+				{
+					id: "0000000000000F3B"
+					item: {
+						Count: 1
+						id: "industrialforegoing:common_black_hole_tank"
+						tag: {
+							BlockEntityTag: {
+								filter: {
+									Filter: { }
+									Pointer: 0
+									Type: "WHITELIST"
+								}
+								tank: {
+									Amount: 16000
+									FacingModes: {
+										BACK: "ENABLED"
+										BOTTOM: "ENABLED"
+										FRONT: "ENABLED"
+										LEFT: "ENABLED"
+										RIGHT: "ENABLED"
+										TOP: "ENABLED"
+									}
+									FluidName: "industrialforegoing:essence"
+								}
+							}
+						}
+					}
+					title: "Common Black Hole Tank"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "000000000000007D"
+					item: "industrialforegoing:enchantment_factory"
+					type: "item"
+				}
+				{
+					id: "0000000000000F0E"
+					item: "industrialforegoing:enchantment_applicator"
+					type: "item"
+				}
+				{
+					id: "0000000000000F0F"
+					item: "industrialforegoing:enchantment_extractor"
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This machine is a one-stop shop for cobblestone processing. It can generate cobblestone from lava/water, then perform up to three sequential operations to craft products like stone bricks or sand."]
+			id: "000000000000007E"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "0000000000000637"
+				title: "Epic Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "000000000000007F"
+				item: "industrialforegoing:material_stonework_factory"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["000000000000004F"]
+			description: ["The Bioreactor can process up to nine different types of plant-based items at once to make Biofuel; the more slots that are filled, the higher the efficiency. Biofuel can be used to make power with the Biofuel Generator, or to run Infinity tools."]
+			id: "0000000000000080"
+			rewards: [
+				{
+					count: 8
+					id: "000000000000062C"
+					item: "minecraft:beetroot"
+					title: "Beetroot"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "000000000000062D"
+					item: "minecraft:carrot"
+					title: "Carrot"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "000000000000062E"
+					item: "minecraft:potato"
+					title: "Potato"
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "0000000000000081"
+				item: "industrialforegoing:bioreactor"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["The Infinity Drill is powered by Biofuel and can mine increasingly large areas depending on its RF charge level."]
+			id: "0000000000000082"
+			rewards: [{
+				id: "0000000000000F36"
+				item: {
+					Count: 1
+					id: "industrialforegoing:common_black_hole_tank"
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Filter: { }
+								Pointer: 0
+								Type: "WHITELIST"
+							}
+							tank: {
+								Amount: 16000
+								FacingModes: {
+									BACK: "ENABLED"
+									BOTTOM: "ENABLED"
+									FRONT: "ENABLED"
+									LEFT: "ENABLED"
+									RIGHT: "ENABLED"
+									TOP: "ENABLED"
+								}
+								FluidName: "industrialforegoing:biofuel"
+							}
+						}
+					}
+				}
+				title: "Common Black Hole Tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0000000000000083"
+				item: {
+					Count: 1
+					id: "industrialforegoing:infinity_drill"
+					tag: {
+						CanCharge: 1
+						Energy: 0
+						Fluid: {
+							Amount: 0
+							FluidName: "biofuel"
+						}
+						Selected: "POOR"
+						Special: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["The Plant Fertilizer automatically fertilizes plants (believe it or not) with Bonemeal or Industrial Fertilizer."]
+			id: "0000000000000086"
+			rewards: [{
+				count: 16
+				id: "0000000000000634"
+				item: "industrialforegoing:fertilizer"
+				title: "Fertilizer"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0000000000000087"
+				item: "industrialforegoing:plant_fertilizer"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"000000000000004C"
+				"000000000000004F"
+			]
+			description: ["IF conveyor belts move entities (not items, unlike IE belts). Several types of conveyor belt upgrades are available; see JEI."]
+			id: "0000000000000088"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "000000000000062B"
+				title: "Rare Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			tasks: [{
+				id: "0000000000000089"
+				item: "industrialforegoing:conveyor"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["Fourth, last tier of machine frame is only used in few applications. But those applications are nuclear!"]
+			id: "0000000000000EDC"
+			rewards: [{
+				id: "0000000000000EE0"
+				item: "industrialforegoing:ether_gas_bucket"
+				title: "Ether Gas Bucket"
+				type: "item"
+			}]
+			shape: "octagon"
+			tasks: [{
+				id: "0000000000000EDD"
+				item: "industrialforegoing:machine_frame_supreme"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["This generator uses any furnace fuel to generate FE. Check JEI for generation rates for any compatible item."]
+			hide_dependency_lines: true
+			id: "0000000000000EE1"
+			tasks: [{
+				id: "0000000000000EE2"
+				item: "industrialforegoing:mycelial_furnace"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"0000000000000EE1"
+				"0000000000000EE5"
+				"0000000000000EE7"
+				"0000000000000EE9"
+				"0000000000000EEB"
+				"0000000000000EEF"
+				"0000000000000EED"
+				"0000000000000EFB"
+				"0000000000000F03"
+				"0000000000000EF1"
+				"0000000000000EF3"
+				"0000000000000EF7"
+				"0000000000000EF5"
+				"0000000000000EF9"
+				"0000000000000EFD"
+				"0000000000000F01"
+				"0000000000000EDC"
+			]
+			description: ["When all 16 mycelial generators are actively running the Mycelial Reactor will activate and make 25M RF/t."]
+			id: "0000000000000EE3"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_epic"
+				icon: "kubejs:epic_lootbox"
+				id: "00EAC9D358EBDA6E"
+				title: "Epic Industrial Foregoing Loot Box"
+				type: "command"
+			}]
+			shape: "gear"
+			tasks: [{
+				id: "0000000000000EE4"
+				item: "industrialforegoing:mycelial_reactor"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator uses slimeballs to generate FE. Check JEI for generation rates."]
+			hide_dependency_lines: true
+			id: "0000000000000EE5"
+			tasks: [{
+				id: "0000000000000EE6"
+				item: "industrialforegoing:mycelial_slimey"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["This generator uses food to generate FE. Check JEI for statistic of each food item."]
+			hide_dependency_lines: true
+			id: "0000000000000EE7"
+			tasks: [{
+				id: "0000000000000EE8"
+				item: "industrialforegoing:mycelial_culinary"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generators produces FE from potions. Check JEI to see statistics for each potion."]
+			hide_dependency_lines: true
+			id: "0000000000000EE9"
+			tasks: [{
+				id: "0000000000000EEA"
+				item: "industrialforegoing:mycelial_potion"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator will produce FE from enchanted books. Check JEI for statistics for each enchantment."]
+			hide_dependency_lines: true
+			id: "0000000000000EEB"
+			tasks: [{
+				id: "0000000000000EEC"
+				item: "industrialforegoing:mycelial_disenchantment"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator generates FE from ender pearls. Check JEI for generation rates."]
+			hide_dependency_lines: true
+			id: "0000000000000EED"
+			tasks: [{
+				id: "0000000000000EEE"
+				item: "industrialforegoing:mycelial_ender"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator uses TNT and gunpowder to generate FE. Check JEI for generation rates."]
+			hide_dependency_lines: true
+			id: "0000000000000EEF"
+			tasks: [{
+				id: "0000000000000EF0"
+				item: "industrialforegoing:mycelial_explosive"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["This generator produces FE from snow and ice. Check JEI for statistics for each compatible item."]
+			hide_dependency_lines: true
+			id: "0000000000000EF1"
+			tasks: [{
+				id: "0000000000000EF2"
+				item: "industrialforegoing:mycelial_frosty"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000000000EDC"]
+			description: ["This generator will produce FE from dragon breath. Check JEI for generation rate."]
+			hide_dependency_lines: true
+			id: "0000000000000EF3"
+			tasks: [{
+				id: "0000000000000EF4"
+				item: "industrialforegoing:mycelial_halitosis"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator generates FE from lava. Optionaly you can provide Redstone to boost power production. Check JEI for generation rates."]
+			hide_dependency_lines: true
+			id: "0000000000000EF5"
+			tasks: [{
+				id: "0000000000000EF6"
+				item: "industrialforegoing:mycelial_magma"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["This generator generates FE from everything that is, you guessed it, pink. Check JEI for statistic of each item."]
+			hide_dependency_lines: true
+			id: "0000000000000EF7"
+			tasks: [{
+				id: "0000000000000EF8"
+				item: "industrialforegoing:mycelial_pink"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["0000000000000EDC"]
+			description: ["This generator generates FE from what its name suggest, from Nether Stars! Check JEI for generation rate."]
+			hide_dependency_lines: true
+			id: "0000000000000EF9"
+			tasks: [{
+				id: "0000000000000EFA"
+				item: "industrialforegoing:mycelial_netherstar"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 11.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator generates FE from monster drops. Check JEI for statistic of compatible items."]
+			hide_dependency_lines: true
+			id: "0000000000000EFB"
+			tasks: [{
+				id: "0000000000000EFC"
+				item: "industrialforegoing:mycelial_death"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator will produce power using fireworks depending of the firework type and shapes."]
+			hide_dependency_lines: true
+			id: "0000000000000EFD"
+			tasks: [{
+				id: "0000000000000EFE"
+				item: "industrialforegoing:mycelial_rocket"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 10.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["This generator produces FE from nether mushroom related items. Check JEI for statistics of compatible items."]
+			hide_dependency_lines: true
+			id: "0000000000000F01"
+			tasks: [{
+				id: "0000000000000F02"
+				item: "industrialforegoing:mycelial_crimed"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["0000000000000EDC"]
+			description: ["This generator uses metal ingots to generate power. Check JEI for generation rates and compatible metals."]
+			hide_dependency_lines: true
+			id: "0000000000000F03"
+			tasks: [{
+				id: "0000000000000F04"
+				item: "industrialforegoing:mycelial_meatallurgic"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 10.0d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["The Infinity Backpack is powered by Biofuel and can hold big amounts of items depending on its RF charge level. It can feed you with meat and it is also used as a magnet."]
+			id: "0000000000000F05"
+			rewards: [{
+				id: "0000000000000F37"
+				item: {
+					Count: 1
+					id: "industrialforegoing:common_black_hole_tank"
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Filter: { }
+								Pointer: 0
+								Type: "WHITELIST"
+							}
+							tank: {
+								Amount: 16000
+								FacingModes: {
+									BACK: "ENABLED"
+									BOTTOM: "ENABLED"
+									FRONT: "ENABLED"
+									LEFT: "ENABLED"
+									RIGHT: "ENABLED"
+									TOP: "ENABLED"
+								}
+								FluidName: "industrialforegoing:biofuel"
+							}
+						}
+					}
+				}
+				title: "Common Black Hole Tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0000000000000F06"
+				item: {
+					Count: 1
+					id: "industrialforegoing:infinity_backpack"
+					tag: {
+						CanCharge: 1b
+						Energy: 0L
+						Selected: "POOR"
+						Special: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["The Infinity Trident is powered by Biofuel and it's a more powerful trident."]
+			id: "0000000000000F07"
+			rewards: [{
+				id: "0000000000000F38"
+				item: {
+					Count: 1
+					id: "industrialforegoing:common_black_hole_tank"
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Filter: { }
+								Pointer: 0
+								Type: "WHITELIST"
+							}
+							tank: {
+								Amount: 16000
+								FacingModes: {
+									BACK: "ENABLED"
+									BOTTOM: "ENABLED"
+									FRONT: "ENABLED"
+									LEFT: "ENABLED"
+									RIGHT: "ENABLED"
+									TOP: "ENABLED"
+								}
+								FluidName: "industrialforegoing:biofuel"
+							}
+						}
+					}
+				}
+				title: "Common Black Hole Tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0000000000000F08"
+				item: {
+					Count: 1
+					id: "industrialforegoing:infinity_trident"
+					tag: {
+						CanCharge: 1b
+						Channeling: 0b
+						Energy: 0L
+						Fluid: {
+							Amount: 0
+							FluidName: "biofuel"
+						}
+						Loyalty: 0
+						Riptide: 0
+						Selected: "POOR"
+						Special: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["The Infinity Saw is powered by Biofuel and can chop increasingly large areas depending on its RF charge level."]
+			id: "0000000000000F09"
+			rewards: [{
+				id: "0000000000000F39"
+				item: {
+					Count: 1
+					id: "industrialforegoing:common_black_hole_tank"
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Filter: { }
+								Pointer: 0
+								Type: "WHITELIST"
+							}
+							tank: {
+								Amount: 16000
+								FacingModes: {
+									BACK: "ENABLED"
+									BOTTOM: "ENABLED"
+									FRONT: "ENABLED"
+									LEFT: "ENABLED"
+									RIGHT: "ENABLED"
+									TOP: "ENABLED"
+								}
+								FluidName: "industrialforegoing:biofuel"
+							}
+						}
+					}
+				}
+				title: "Common Black Hole Tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0000000000000F0A"
+				item: {
+					Count: 1
+					id: "industrialforegoing:infinity_saw"
+					tag: {
+						CanCharge: 1b
+						Energy: 0L
+						Fluid: {
+							Amount: 0
+							FluidName: "biofuel"
+						}
+						Selected: "POOR"
+						Special: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["The Infinity Hammer is powered by Biofuel and will damage entities in a large areas depending on its RF charge level. It also has Beheading."]
+			id: "0000000000000F0B"
+			rewards: [{
+				id: "0000000000000F3A"
+				item: {
+					Count: 1
+					id: "industrialforegoing:common_black_hole_tank"
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Filter: { }
+								Pointer: 0
+								Type: "WHITELIST"
+							}
+							tank: {
+								Amount: 16000
+								FacingModes: {
+									BACK: "ENABLED"
+									BOTTOM: "ENABLED"
+									FRONT: "ENABLED"
+									LEFT: "ENABLED"
+									RIGHT: "ENABLED"
+									TOP: "ENABLED"
+								}
+								FluidName: "industrialforegoing:biofuel"
+							}
+						}
+					}
+				}
+				title: "Common Black Hole Tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0000000000000F0C"
+				item: {
+					Count: 1
+					id: "industrialforegoing:infinity_hammer"
+					tag: {
+						Beheading: 0
+						CanCharge: 1b
+						Energy: 0L
+						Fluid: {
+							Amount: 0
+							FluidName: "biofuel"
+						}
+						Selected: "POOR"
+						Special: 0b
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["000000000000004A"]
+			description: ["A block capable of storing big amounts of an item, you can insert or extract items by interacting with the front."]
+			hide_dependency_lines: true
+			id: "0000000000000F10"
+			rewards: [{
+				id: "0000000000000F2B"
+				type: "xp"
+				xp: 16
+			}]
+			tasks: [{
+				id: "0000000000000F11"
+				item: "industrialforegoing:common_black_hole_unit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -9.0d
+		}
+		{
+			description: ["A block capable of storing big amounts of an item, you can insert or extract items by interacting with the front."]
+			hide_dependency_lines: true
+			id: "0000000000000F12"
+			rewards: [{
+				id: "0000000000000F2C"
+				type: "xp"
+				xp: 32
+			}]
+			tasks: [{
+				id: "0000000000000F13"
+				item: "industrialforegoing:pity_black_hole_unit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["A block capable of storing big amounts of an item, you can insert or extract items by interacting with the front."]
+			hide_dependency_lines: true
+			id: "0000000000000F14"
+			rewards: [{
+				id: "0000000000000F2D"
+				type: "xp"
+				xp: 64
+			}]
+			tasks: [{
+				id: "0000000000000F15"
+				item: "industrialforegoing:simple_black_hole_unit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["A block capable of storing big amounts of an item, you can insert or extract items by interacting with the front."]
+			hide_dependency_lines: true
+			id: "0000000000000F16"
+			rewards: [{
+				id: "0000000000000F2E"
+				type: "xp"
+				xp: 128
+			}]
+			tasks: [{
+				id: "0000000000000F17"
+				item: "industrialforegoing:advanced_black_hole_unit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0000000000000EDC"]
+			description: ["A block capable of storing big amounts of an item, you can insert or extract items by interacting with the front."]
+			hide_dependency_lines: true
+			id: "0000000000000F18"
+			rewards: [{
+				id: "0000000000000F2F"
+				type: "xp"
+				xp: 256
+			}]
+			tasks: [{
+				id: "0000000000000F19"
+				item: "industrialforegoing:supreme_black_hole_unit"
+				type: "item"
+			}]
+			x: 10.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["000000000000004A"]
+			description: ["A block capable of storing big amounts of a fluid."]
+			hide_dependency_lines: true
+			id: "0000000000000F1A"
+			rewards: [{
+				id: "0000000000000F31"
+				type: "xp"
+				xp: 16
+			}]
+			tasks: [{
+				id: "0000000000000F1B"
+				item: "industrialforegoing:common_black_hole_tank"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -9.0d
+		}
+		{
+			description: ["A block capable of storing big amounts of a fluid."]
+			hide_dependency_lines: true
+			id: "0000000000000F1C"
+			rewards: [{
+				id: "0000000000000F32"
+				type: "xp"
+				xp: 32
+			}]
+			tasks: [{
+				id: "0000000000000F1D"
+				item: "industrialforegoing:pity_black_hole_tank"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -8.0d
+		}
+		{
+			dependencies: ["0000000000000051"]
+			description: ["A block capable of storing big amounts of a fluid."]
+			hide_dependency_lines: true
+			id: "0000000000000F1E"
+			rewards: [{
+				id: "0000000000000F33"
+				type: "xp"
+				xp: 64
+			}]
+			tasks: [{
+				id: "0000000000000F1F"
+				item: "industrialforegoing:simple_black_hole_tank"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["0000000000000078"]
+			description: ["A block capable of storing big amounts of a fluid."]
+			hide_dependency_lines: true
+			id: "0000000000000F20"
+			rewards: [{
+				id: "0000000000000F34"
+				type: "xp"
+				xp: 128
+			}]
+			tasks: [{
+				id: "0000000000000F21"
+				item: "industrialforegoing:advanced_black_hole_tank"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0000000000000EDC"]
+			description: ["A block capable of storing big amounts of a fluid."]
+			hide_dependency_lines: true
+			id: "0000000000000F22"
+			rewards: [{
+				id: "0000000000000F35"
+				type: "xp"
+				xp: 256
+			}]
+			tasks: [{
+				id: "0000000000000F23"
+				item: "industrialforegoing:supreme_black_hole_tank"
+				type: "item"
+			}]
+			x: 12.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["0000000000000EDC"]
+			description: ["This block will store up to 16 black hole units or tanks and will make their contents accessible externally."]
+			hide_dependency_lines: true
+			id: "0000000000000F24"
+			rewards: [{
+				id: "0000000000000F30"
+				type: "xp"
+				xp: 512
+			}]
+			tasks: [{
+				id: "0000000000000F25"
+				item: "industrialforegoing:black_hole_controller"
+				type: "item"
+			}]
+			x: 11.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0000000000000057"]
+			description: ["Mechanical Dirt is used to convert FE and Liquid Meat into Mob Spawns. It respects light requirements and will spawn based on the biome it is in. It will also distribute Power and Liquid Meat to adjacent Mechanical Dirt blocks."]
+			id: "68F315FF23CD8A22"
+			rewards: [{
+				id: "0997C2E0E6DE8F76"
+				item: {
+					Count: 1
+					id: "industrialforegoing:common_black_hole_tank"
+					tag: {
+						BlockEntityTag: {
+							filter: {
+								Filter: { }
+								Pointer: 0
+								Type: "WHITELIST"
+							}
+							tank: {
+								Amount: 16000
+								FacingModes: {
+									BACK: "ENABLED"
+									BOTTOM: "ENABLED"
+									FRONT: "ENABLED"
+									LEFT: "ENABLED"
+									RIGHT: "ENABLED"
+									TOP: "ENABLED"
+								}
+								FluidName: "industrialforegoing:meat"
+							}
+						}
+					}
+				}
+				title: "Common Black Hole Tank"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3991AE48C18012EC"
+				item: "industrialforegoing:mechanical_dirt"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["000000000000007A"]
+			description: ["The Mob Duplicator will convert FE and Essence into Mobs. Capture the mob you would like to duplicate in a Mob Imprisonment Tool, put it in the Mob Duplicator, and enjoy an endless supply of your mobs."]
+			id: "73E9574B069570BD"
+			rewards: [{
+				id: "24B8F1EFDCF5A2D9"
+				item: "industrialforegoing:mob_imprisonment_tool"
+				title: "Mob Imprisonment Tool"
+				type: "item"
+			}]
+			tasks: [{
+				id: "27D665ECBDA02E5A"
+				item: "industrialforegoing:mob_duplicator"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -0.5d
+		}
+	]
+	title: "Industrial Foregoing"
+}

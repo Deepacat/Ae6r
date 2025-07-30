@@ -1,0 +1,505 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "old_tech2"
+	group: "20A042B1689B41C4"
+	icon: "immersiveengineering:workbench"
+	id: "1367E0A795499DE6"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "pneumaticcraft:pressure_gauge_module"
+			id: "67F7E4C19E39F9F3"
+			shape: "rsquare"
+			tasks: [{
+				count: 16L
+				id: "76965E68CB17945A"
+				item: "pneumaticcraft:ingot_iron_compressed"
+				type: "item"
+			}]
+			title: "PneumaticCraft: Repressurized"
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			id: "06F4A47216226927"
+			shape: "rsquare"
+			tasks: [{
+				count: 27L
+				id: "369D57ECAEBF7A77"
+				item: "immersiveengineering:cokebrick"
+				type: "item"
+			}]
+			title: "Immersive Engineering: Part One"
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06F4A47216226927"]
+			description: [
+				"Layered brick work suitable for insulating machines working at very high temperatures."
+				""
+				"Build up a Blast Furnace to begin preparing a specialized compound.  "
+			]
+			id: "0FF412352C4AA995"
+			tasks: [{
+				count: 27L
+				id: "5CDC032E69DE6348"
+				item: "immersiveengineering:blastbrick"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["159CEE8160564096"]
+			description: [
+				"Ordinarily used for simply alloying, kilns well insulated to maintain high temperatures, and often sealed to prevent impurities being introduced into the product."
+				""
+				"Build up an Alloy Kiln to prepare for the next step."
+			]
+			id: "51C4B771C756A8DD"
+			tasks: [{
+				count: 8L
+				id: "1696A045279F7734"
+				item: "immersiveengineering:alloybrick"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0FF412352C4AA995"]
+			description: ["A peculiar compound with very special properties indeed…"]
+			id: "159CEE8160564096"
+			shape: "diamond"
+			tasks: [{
+				id: "1E770D18A73E9D10"
+				item: "kubejs:smoldering_lapis_lazuli_compound"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"640AF7C1C65218DD"
+				"51C4B771C756A8DD"
+			]
+			description: [
+				"Haunted? Surely not… Though the bricks are infused with rather peculiar materials… and that voice you hear near the kiln does seem rather insistent. "
+				""
+				"Place a book and an Upgrade Matrix into the Alloy Kiln…"
+			]
+			id: "56A05A07C30709EC"
+			tasks: [{
+				id: "2B7F725CA5D12C72"
+				item: {
+					Count: 1
+					id: "immersiveengineering:blueprint"
+					tag: {
+						blueprint: "components"
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["56A05A07C30709EC"]
+			description: [
+				"Precision craftsmanship has its benefits. "
+				""
+				"Build an Engineer’s Workbench to have a proper place for building up smaller components. "
+			]
+			id: "3AC1DD7E5DDDC129"
+			shape: "diamond"
+			tasks: [{
+				id: "4DDB5EC00B0ACDFE"
+				item: "immersiveengineering:workbench"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3AC1DD7E5DDDC129"]
+			description: ["A batch of these ought to last a while, right?"]
+			id: "065270B7FA576ED0"
+			shape: "diamond"
+			tasks: [{
+				id: "18E3BEB02D473233"
+				item: "immersiveengineering:component_iron"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"065270B7FA576ED0"
+				"3DA107DD546F8E02"
+			]
+			description: [
+				"It ain’t much, but it’s honest work. "
+				""
+				"Pity Machine Frames open the way to advanced material processing needed for Nuclear Science. "
+			]
+			id: "1B3A149D46540273"
+			shape: "octagon"
+			tasks: [{
+				id: "0153100351695FB1"
+				item: "industrialforegoing:machine_frame_pity"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["3AC1DD7E5DDDC129"]
+			description: ["Ready? Set…"]
+			id: "3DA107DD546F8E02"
+			shape: "diamond"
+			tasks: [{
+				id: "2B67FC4FC12C5684"
+				item: "immersiveengineering:concrete_leaded"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"37CC74C655BCE0C0"
+				"54DA0B6FC5FE6F1A"
+			]
+			description: [
+				"Some tasks are simply better off to the precision control of machines where tight tolerances don’t leave any room for error.  "
+				""
+				"Build out a full Assembly Table to begin assembling more complex components and pave the way towards the nuclear sciences. "
+			]
+			id: "4B7BDCCE4535A4F9"
+			tasks: [
+				{
+					id: "70256FD4A3182AA1"
+					item: "pneumaticcraft:assembly_controller"
+					type: "item"
+				}
+				{
+					id: "7111F86DD237301D"
+					item: "pneumaticcraft:assembly_program_drill_laser"
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["6EC89B2EB48331A5"]
+			description: [
+				"It fries, it crystallizes, it infuses! "
+				""
+				"Just maybe consider washing it out first between uses…"
+			]
+			id: "640AF7C1C65218DD"
+			tasks: [{
+				id: "4AC6C6F032DAAE12"
+				item: "pneumaticcraft:thermopneumatic_processing_plant"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["67F7E4C19E39F9F3"]
+			description: [
+				"Solid fuel compressors are disabled entirely, instead relying on liquid fueled compressors to start."
+				""
+				"Look closely at the recipes involved here. There are multiple paths available, but only one is viable at this stage. "
+			]
+			id: "6EC89B2EB48331A5"
+			tasks: [{
+				id: "5D63662B1B0695CE"
+				item: "pneumaticcraft:liquid_compressor"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["601203BF957994C2"]
+			description: ["The basis for many advanced technologies, plastic is both durable and flexible, lending itself well to a number of delicate applications. "]
+			id: "5258B21FEBF3E222"
+			shape: "diamond"
+			tasks: [{
+				id: "77060D75C44D7CC2"
+				item: "pneumaticcraft:plastic"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"5258B21FEBF3E222"
+				"4214CE273DD3B183"
+			]
+			description: [
+				"With the creation of Printed Circuit Boards, a whole new world of automation possibilities opens up. "
+				""
+				"Let the Drones take to the skies or hack away at a Computer Craft terminal to add that extra layer of fine tuning to your automations.  "
+			]
+			id: "37CC74C655BCE0C0"
+			tasks: [{
+				id: "789B1A4C9CE21200"
+				item: "pneumaticcraft:printed_circuit_board"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6EC89B2EB48331A5"]
+			description: ["Oil deposits scatter the landscape, representing a significant potential fuel source if refined. Though it’s byproducts may prove to be even more valuable. "]
+			id: "601203BF957994C2"
+			tasks: [
+				{
+					id: "007E6DD90C5F3F4C"
+					item: "pneumaticcraft:refinery"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "715292E89B95375D"
+					item: "pneumaticcraft:refinery_output"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["66A2267B602C6232"]
+			description: ["A simple processor by any definition. Still, it’s quite suitable for low-level computational tasks. "]
+			id: "4214CE273DD3B183"
+			shape: "diamond"
+			tasks: [{
+				id: "42384EBFD1848ACD"
+				item: "refinedstorage:basic_processor"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7773B233487FEBD2"]
+			description: [
+				"It takes how many?"
+				""
+				"Though the Journal of Engineering and Innovation you’ve been working from has been clear enough, as you delve progressively deeper into increasingly complicated technology, it’s becoming clear that some help is needed. "
+				""
+				"Begin laying the foundations of a Refined Storage system for the purpose of automating manufacturing tasks. "
+			]
+			id: "174A3B072A1CEFE5"
+			shape: "octagon"
+			tasks: [{
+				id: "39703E840E7CE98F"
+				item: "refinedstorage:controller"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["66A2267B602C6232"]
+			description: ["There’s something eerily unusual about Enderium that makes it invaluable for complex computation…"]
+			id: "7773B233487FEBD2"
+			shape: "diamond"
+			tasks: [{
+				id: "51C37065B81DA404"
+				item: "refinedstorage:advanced_processor"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5258B21FEBF3E222"]
+			description: [
+				"By refining our electrical components, we’ll be better positioned to harness energy from multiple sources."
+				""
+				"Powah is now available and represents a sizeable upgrade over dynamos. Consider an upgrade perhaps. "
+				""
+				"Note: The generation values listed on many Powah devices represents a baseline multiplier that doesn’t account for things like different coolants, fuels, or heat sources. These things can impact the final output substantially. "
+			]
+			id: "54DA0B6FC5FE6F1A"
+			shape: "diamond"
+			tasks: [{
+				id: "585089F444DD3061"
+				item: "powah:capacitor_basic_large"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["6EC89B2EB48331A5"]
+			id: "66A2267B602C6232"
+			tasks: [
+				{
+					count: 22L
+					id: "68B66FC4450F1B1B"
+					item: "pneumaticcraft:pressure_chamber_wall"
+					type: "item"
+				}
+				{
+					id: "28CA1F0A1B98D1D7"
+					item: "pneumaticcraft:pressure_chamber_valve"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3AA19ED845355309"
+					item: "pneumaticcraft:pressure_chamber_interface"
+					type: "item"
+				}
+				{
+					id: "5CBC4FC4423F78F0"
+					item: "pneumaticcraft:pressure_chamber_glass"
+					type: "item"
+				}
+			]
+			x: 5.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5258B21FEBF3E222"]
+			description: [
+				"Amadron at last. But is there anyone out there still listening? "
+				""
+				"It appears you’re not alone in your endeavors; accessing the Amadron network has allowed you to tap into a small global community of like-minded engineers looking to trade for knowledge and materials."
+			]
+			id: "26BE40771EA0B53D"
+			tasks: [{
+				id: "3A2FE29E3F3C08FA"
+				item: "pneumaticcraft:amadron_tablet"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 6.5d
+		}
+		{
+			dependencies: [
+				"2F4E5595CF6E7C18"
+				"2B8E1E0F065271FC"
+				"77685CCEBB43BE31"
+			]
+			description: [
+				"For your massive contributions in providing a new school, the engineers have shared their blueprints for several advanced machines. "
+				""
+				"By receiving these blueprints, you’ll now be able to construct several larger multiblock machines from Immersive Engineering. Be sure to check your Engineer’s Manual to see exactly which block to hit to form them! Hitting them on the wrong block, or even the wrong side of the block will not work!"
+			]
+			id: "44D8EF9036E30760"
+			shape: "gear"
+			tasks: [{
+				id: "6DF327D277407CBF"
+				item: "kubejs:medium_machinery_schematics"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["4B7BDCCE4535A4F9"]
+			description: ["A suitably shielded casing for delicate electronics."]
+			id: "1560E98A52BEF117"
+			shape: "octagon"
+			tasks: [{
+				id: "7F4FBA868C08B64B"
+				item: "rftoolsbase:machine_frame"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 8.5d
+		}
+		{
+			dependencies: ["26BE40771EA0B53D"]
+			description: [
+				"Short on rare resources?"
+				""
+				"The Amadron network maintained by the few remaining engineers around the world specializes in targeted mining operations. "
+				""
+				"Simply provide the drones with the tools they’ll need, and they’ll deliver a plethora of useful resources directly to your doorstep!"
+			]
+			id: "50971B41665D4AD5"
+			shape: "diamond"
+			tasks: [{
+				id: "5C3819A92A37BF5A"
+				item: "kubejs:amadron_survey_tools"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["26BE40771EA0B53D"]
+			description: ["Empty bellies are terrible at physical labor, and worse still at the mental efforts to come. Prepare nourishing meals to help these engineers as they build their school and prepare to welcome their new students. "]
+			id: "2F4E5595CF6E7C18"
+			shape: "diamond"
+			tasks: [{
+				id: "0B08E1FD7B99D610"
+				item: "kubejs:engineering_student_meals"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["26BE40771EA0B53D"]
+			description: ["Clearing the land and laying the foundations for this school would be grueling work without mechanical aid. Send along some supplies to get the work done extra quick. "]
+			id: "2B8E1E0F065271FC"
+			shape: "diamond"
+			tasks: [{
+				id: "792FFEF4FD9A35BE"
+				item: "kubejs:construction_tools"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 8.0d
+		}
+		{
+			dependencies: ["26BE40771EA0B53D"]
+			description: [
+				"It appears this small network of engineers is looking to expand their numbers. But they’re lacking in the raw resources to bring their dreams to reality."
+				""
+				"Without a doubt, building an entire school is no small undertaking. Begin gathering the materials they’ve requested for their building project. "
+			]
+			id: "77685CCEBB43BE31"
+			shape: "diamond"
+			tasks: [
+				{
+					count: 5L
+					id: "65B40E4EE6596323"
+					item: "kubejs:building_materials"
+					type: "item"
+				}
+				{
+					id: "457B0FD1BEFC5F7B"
+					item: "kubejs:foundation_materials"
+					type: "item"
+				}
+				{
+					id: "6B9D17102A99F785"
+					item: "kubejs:landscaping_materials"
+					type: "item"
+				}
+			]
+			title: "Building Materials"
+			x: 3.0d
+			y: 7.5d
+		}
+	]
+	title: "Tech - Computer Science"
+}

@@ -1,0 +1,541 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "old_magic3"
+	group: "20A042B1689B41C4"
+	icon: {
+		Count: 1b
+		id: "astralsorcery:celestial_crystal"
+		tag: {
+			astralsorcery: { }
+		}
+	}
+	id: "4530AE1D511B7928"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["3ECB259F269FF80A"]
+			description: [
+				"Known for their mischief as much as their grace, the elves of Alfheim are... discerning in who they allow to enter their realm. "
+				""
+				"Just the same, they’re perfectly willing to trade for materials via this gateway. "
+			]
+			id: "54D0E568361DC267"
+			tasks: [
+				{
+					id: "06EFC0926D9228EB"
+					item: "botania:alfheim_portal"
+					type: "item"
+				}
+				{
+					id: "0F894768DC2FA6A1"
+					item: "botania:natura_pylon"
+					type: "item"
+				}
+			]
+			title: "Elven Gateway"
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["690063418D6815D2"]
+			description: ["Through careful handling, Demonic Will may be purified and crystallized. Though they resemble candies of a sort, those who attempted to consume it experimentally quickly devolved into gibbering wretches. It is uncertain if this merely accelerated their madness, or caused it, but no sane arcanist has attempted it since. "]
+			id: "5E1A0B48076CD5F6"
+			tasks: [
+				{
+					id: "4B0D2FA22A7EDF1D"
+					item: "bloodmagic:demoncrucible"
+					type: "item"
+				}
+				{
+					id: "5D01EE5258D5D499"
+					item: "bloodmagic:demoncrystallizer"
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			id: "06A6BE8C4A3B0C1D"
+			shape: "rsquare"
+			tasks: [{
+				id: "3200842BF652DCB5"
+				item: {
+					Count: 1
+					id: "bloodmagic:soulgempetty"
+					tag: {
+						souls: 64.0d
+					}
+				}
+				type: "item"
+			}]
+			title: "Spirit Magic - Master"
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["06A6BE8C4A3B0C1D"]
+			description: ["A better receptacle is needed once more to delve deeper into the knowledge of the spirit worlds. A Mana Tablet, deeply rooted in the natural arts of this plane, will serve as a safe anchor. "]
+			icon: "bloodmagic:altar"
+			id: "06E76BE2A422E8AC"
+			tasks: [
+				{
+					id: "512B339FA8AB4383"
+					item: "bloodmagic:magicianbloodorb"
+					type: "item"
+				}
+				{
+					id: "0AC9515E1EEEE596"
+					item: {
+						Count: 1
+						id: "botania:mana_tablet"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Blood Altar - Tier 3"
+			x: 3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0BEFCA7CB5EE447D"
+				"06E76BE2A422E8AC"
+			]
+			description: [
+				"“Few problems cannot be solved with a bit of magic and a decent blade. Doubly so for a magical blade.”"
+				""
+				"– Strigeor the Soulsmith"
+			]
+			id: "152B45DD8C1899C2"
+			tasks: [{
+				id: "665FEB1890A1E866"
+				item: {
+					Count: 1
+					id: "occultism:chalk_purple"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			description: ["Seek out the Crystalline Mountains in the End where these crystals grow naturally in great abundance. "]
+			id: "0CFE47372EC49DC8"
+			shape: "diamond"
+			tasks: [{
+				id: "5F5822FEF6F28BB7"
+				item: "betterendforge:crystal_shards"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.5d
+		}
+		{
+			description: ["Found commonly in the Sulfur Springs of the End. Be prepared to go for a swim!"]
+			id: "69201BA9E47F94EE"
+			shape: "diamond"
+			tasks: [{
+				id: "124E2656A866D979"
+				item: "betterendforge:hydralux_petal"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: [
+				"69201BA9E47F94EE"
+				"0CFE47372EC49DC8"
+			]
+			description: ["Enchanted Petals have long been used as a test of sorts for those seeking the title of Master. Requiring extensive travel through the inhospitable lands of the End, these petals hold the key to advanced spell casting and summoning.  "]
+			id: "0BEFCA7CB5EE447D"
+			shape: "diamond"
+			tasks: [{
+				id: "6A2F524DD66901A3"
+				item: "betterendforge:enchanted_petal"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["152B45DD8C1899C2"]
+			description: [
+				"Before we run, we walk; before we walk, we crawl. "
+				""
+				"Harvesting Iesnium simply is not possible with the materials and magics of this plane. The first to discover and make use of it did so only with the aid of spirits bound into their tools. "
+			]
+			id: "07786879C8859B12"
+			shape: "diamond"
+			tasks: [{
+				id: "0E36F674D2F3A549"
+				item: {
+					Count: 1
+					id: "occultism:infused_pickaxe"
+					tag: {
+						Damage: 0
+						spiritName: "Krarcmur"
+					}
+				}
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["07786879C8859B12"]
+			description: [
+				"A mysterious ore found seeping into the depths of this world, seemingly from the Otherworld. Little is known of its origins, though the lack of any naturally occurring sources in this plane suggest its source is not entirely natural. "
+				""
+				"Prized for both it’s magical capacity and ability to hold a keen edge, it has been sought after, and fought over, by arcanists and artificers throughout the ages. "
+				""
+				"Seek some in the nether with the assistance of Otherworld Goggles and a Divination Rod."
+			]
+			id: "690063418D6815D2"
+			shape: "diamond"
+			tasks: [{
+				id: "1AD42494E69B8715"
+				item: "occultism:iesnium_ore"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["690063418D6815D2"]
+			description: ["Potent tools made from materials from across the realms and multi-disciplinary magics, the invention of Sentient Tools was a landmark moment in the arcane world, opening doors unimagined at the time. "]
+			id: "051F9C054B9CDE96"
+			shape: "diamond"
+			tasks: [
+				{
+					id: "6841E8793EE2C2E0"
+					item: {
+						Count: 1
+						id: "bloodmagic:soulpickaxe"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0B1582FDA55A0D17"
+					item: {
+						Count: 1
+						id: "bloodmagic:soulsword"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["152B45DD8C1899C2"]
+			description: [
+				"It is said that the spirits of the Otherworld exist in an incorporeal state in their homes; the magic invoked in bringing them to this world assists them in building a form to inhabit to protect them during their stay. "
+				""
+				"Ordinarily these shells disintegrate entirely once the spirit leaves this realm, however some of the more powerful spirits seem to leave behind some small amount of Essence which has been found useful for the most advanced spirit magics. "
+				""
+				"Summon and slay an Unbound Afrit to obtain Afrit Essence. "
+				""
+				"Through a combination of both the natural and spiritual arts, a Weak Blood Shard may be created from the remnants of an Afrit’s shell. Craft some and prepare for one final expansion of your Blood Altar."
+			]
+			id: "44ADBADBF2774DF4"
+			tasks: [
+				{
+					id: "673AC1CB014F917C"
+					item: "occultism:afrit_essence"
+					type: "item"
+				}
+				{
+					id: "7E7737137E78204B"
+					item: "bloodmagic:weakbloodshard"
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3103AD6157F2D6AC"]
+			description: [
+				"When her apprentice finally broke through the barred door and entered the chamber, Uphyxes was nowhere to be seen. To this day, the cause of her disappearance is a mystery. Some say she ascended to the Otherworld herself, shedding the chains of her mortal self and becoming a timeless being such as those she studied. "
+				""
+				"The only remnant of her final studies is the pentacle she had chalked in the chamber. Though a number of uses have been found for it since, no further arcanists have disappeared while using the Inverted Tower pentacle that she discovered."
+			]
+			id: "15799BB5752AECB9"
+			tasks: [{
+				id: "7F2F8873597EE837"
+				item: {
+					Count: 1
+					id: "occultism:chalk_red"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["44ADBADBF2774DF4"]
+			description: [
+				"With the Essence of an Afrit guiding the Altar it becomes possible to make use of many more runes, and therefore reach levels of power previously unattainable. "
+				""
+				"Mastery over the spiritual arts means the arcanist has reached a level of power where they may practice their magic outside of the Undergarden and away from the watchful eyes of dead who find their final rest there. "
+			]
+			icon: "bloodmagic:altar"
+			id: "3103AD6157F2D6AC"
+			tasks: [{
+				id: "6C327DA3D328E507"
+				item: "bloodmagic:masterbloodorb"
+				type: "item"
+			}]
+			title: "Blood Altar - Tiers 4 and 5"
+			x: 3.5d
+			y: 4.5d
+		}
+		{
+			id: "1C5802ADD3834FE9"
+			shape: "rsquare"
+			tasks: [{
+				id: "7660DCCE5DF6B3E1"
+				item: "naturesaura:sky_ingot"
+				type: "item"
+			}]
+			title: "Natural Magic - Master"
+			x: 0.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1C5802ADD3834FE9"]
+			description: [
+				"“Thoughts create a new heaven, a new firmament, a new source of energy, from which new arts flow.”"
+				""
+				"– Templar Paracelsus of the Azure Fold"
+			]
+			id: "3ECB259F269FF80A"
+			tasks: [
+				{
+					id: "48AA30BC0F5A4969"
+					item: "botania:terra_plate"
+					type: "item"
+				}
+				{
+					id: "7147695020152097"
+					item: "botania:terrasteel_ingot"
+					type: "item"
+				}
+			]
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["54D0E568361DC267"]
+			description: [
+				"Another trial is placed before those who would be called Master. "
+				""
+				"Some believe it to be a mere shade, our inner demons made manifest while others see the very avatar of the Earth herself."
+				""
+				"One thing is certain, however; those who approached this challenge un-prepared were lucky if they escaped with their lives."
+			]
+			id: "457523FA165A5A0B"
+			tasks: [{
+				id: "1807A32A1B2AAEE8"
+				item: "botania:gaia_pylon"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["54D0E568361DC267"]
+			description: ["Though quite potent in its raw form, some advanced practitioners have found that it may be further enhanced through special optics; filtering, focusing, and otherwise manipulating the starlight by way of special apparatuses."]
+			id: "706AC0678CD303BA"
+			tasks: [{
+				id: "0A3D5347A4034BF1"
+				item: "astralsorcery:altar_constellation"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"42EC202E93A7E5A3"
+				"3103AD6157F2D6AC"
+			]
+			description: [
+				"“Beautiful dreamer, wake unto me, Starlight and dewdrops are waiting for thee; Sounds of the rude world heard in the day, Lull'd by the moonlight have all pass'd away.”"
+				""
+				"–Aes-Danai Foster of the Celestial Order"
+			]
+			id: "2D6DDD000FC99514"
+			tasks: [{
+				id: "5494E63BE36C5962"
+				item: "astralsorcery:altar_radiance"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 6.5d
+		}
+		{
+			dependencies: ["706AC0678CD303BA"]
+			description: [
+				"The skies of Alfheim have been described as a blanket of stars so dense hardly any sky may be seen. If true, it is no wonder that they’ve developed a special affinity for the celestial magics; their Mana-Infuser being several orders of magnitude more powerful than the Terrestrial Agglomeration Plates used and developed in our realms. "
+				""
+				"Over the ages, some of their secrets have been divulged and the knowledge guarded with care to ensure it is never lost. The ancient texts describe in great detail how to create and harness this wonderous tool. "
+			]
+			id: "42EC202E93A7E5A3"
+			tasks: [
+				{
+					id: "32A341D25D3AD1B9"
+					item: "mythicbotany:mana_infuser"
+					type: "item"
+				}
+				{
+					id: "27FE801DA5AB6863"
+					item: "mythicbotany:alfsteel_ingot"
+					type: "item"
+				}
+			]
+			x: -0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"457523FA165A5A0B"
+				"5E1A0B48076CD5F6"
+				"15799BB5752AECB9"
+			]
+			description: [
+				"“Patience, Connor. You have done well. But it will take time. You're at one with all living things. Each man's thoughts and dreams are yours to know. You have power beyond imagination. Use it well, my friend.”"
+				""
+				"– Elder Ramirez to his apprentice upon successful celestial attunement"
+				"_________________________________"
+				""
+				"A special trapped ritual is described in the Journal of Ephraim the Incanter whereby a pentacle is chalked up and primed a few blocks below the floor of an arena suitable for battling the Guardian of Gaia. The entry shows the sorcerer drawing the Guardian into the center of the arena before striking the final blow."
+				""
+				"Patience and timing are of the utmost importance."
+			]
+			id: "0E083E5951149AB5"
+			tasks: [{
+				id: "04E0027B30C34B89"
+				item: "astralsorcery:attunement_altar"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["06A6BE8C4A3B0C1D"]
+			description: ["Snares are a cruel joke invented to test the initiate. Most practitioners prefer the use of the Sentient Harm glyph to obtain Demon Will. "]
+			id: "2182A1B04F9C2C84"
+			shape: "diamond"
+			tasks: [{
+				id: "6064EF838E958365"
+				item: "ars_nouveau:glyph_sentientharm"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["06E76BE2A422E8AC"]
+			description: [
+				"Travel to the Hidden Realms, a land bordering this world and the Spirit Realm. Here, the ancient Tau Berry may be found. Retrieve some of this precious fruit and learn to cultivate it. "
+				""
+				"Upon completion of the Edge of the Hidden Realm ritual, a pillar will appear. Right click it to travel to a pocket dungeon filled with treasures. Opening the doors in this realm requires Iron Keys so come prepared. "
+			]
+			id: "0225B4F9E4ECAC21"
+			shape: "hexagon"
+			tasks: [
+				{
+					count: 8L
+					id: "5B057F8FE1A8E286"
+					item: "bloodmagic:simplekey"
+					type: "item"
+				}
+				{
+					id: "1ECC374EB08B5BDA"
+					item: "bloodmagic:weak_tau"
+					type: "item"
+				}
+			]
+			title: "Edge of the Hidden Realm"
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2D6DDD000FC99514"]
+			description: [
+				"By storing Starlight eddies in a massive crystalline battery, the Iridescent Altar may be made to work faster and at any time of day."
+				""
+				"Advanced control circuits ensure the rituals are handled appropriately and without oversight."
+				""
+				"================================================================="
+				""
+				"Note that the recipes shown in JEI don't accurately display whether any given input is per tick or all at once. For simplicity, all recipes for all Masterful Machines have been standardized under the following rule set:"
+				""
+				"● Forge Energy is consumed per tick"
+				"● Pneumatic Air is consumed per tick and must be over 10 Bar"
+				"● Astral Starlight is consumed per tick"
+				"● Fluids are consumed or created per tick"
+				"● Items are consumed or created at the end of a craft"
+				"● Mana is consumed at the start of a craft or created at the end"
+			]
+			id: "0D5EFF4C653C3DD9"
+			min_width: 400
+			shape: "gear"
+			tasks: [{
+				id: "11A8B09E6B1A0DFB"
+				item: "masterfulmachinery:auto_iridescent_altar_controller"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 7.5d
+		}
+		{
+			dependencies: ["5E1A0B48076CD5F6"]
+			description: [
+				"A massive starlight cooled construct used to extract the very essence from the Guardian trapped within."
+				""
+				"Though energy intensive, the machine can renewably generate Gaia Spirits needed by higher magics."
+				""
+				"================================================================="
+				""
+				"Note that the recipes shown in JEI don't accurately display whether any given input is per tick or all at once. For simplicity, all recipes for all Masterful Machines have been standardized under the following rule set:"
+				""
+				"● Forge Energy is consumed per tick"
+				"● Pneumatic Air is consumed per tick and must be over 10 Bar"
+				"● Astral Starlight is consumed per tick"
+				"● Fluids are consumed or created per tick"
+				"● Items are consumed or created at the end of a craft"
+				"● Mana is consumed at the start of a craft or created at the end"
+			]
+			id: "226F249D3F4A9258"
+			min_width: 400
+			shape: "gear"
+			tasks: [{
+				id: "59FF57ADF3D44FA2"
+				item: "masterfulmachinery:gaia_reactor_controller"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+	]
+	title: "Magic - Master"
+}

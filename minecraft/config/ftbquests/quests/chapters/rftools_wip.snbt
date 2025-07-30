@@ -1,0 +1,902 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "rftools_wip"
+	group: "72A9465344128AF9"
+	icon: "rftoolsbase:machine_frame"
+	id: "0000000000000349"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Welcome to RFTools! In this chapter we will explore, no surprises here, the RFTools mod, which focuses on giving you different miscellaneous devices you can use for all sorts of purposes, from fast digging, to teleportation and wireless redstone! "
+				""
+				"The quests will guide you to some of the mods key items, but will leave some items up to you to find and discover."
+				"We will also touch on XNet, a companion to RFTools designed especially for item transportation! Well, what are we waiting for, let’s get started!"
+				""
+				"~Merlo"
+			]
+			id: "000000000000034A"
+			optional: true
+			rewards: [{
+				id: "0000000000000C00"
+				item: "rftoolsbase:smartwrench"
+				title: "Smart Wrench"
+				type: "item"
+			}]
+			shape: "rsquare"
+			subtitle: "But what does the RF stand for?"
+			tasks: [{
+				id: "0EB362B38C59907A"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "xnet:controller"
+							}
+							{
+								Count: 1b
+								id: "rftoolsbase:machine_frame"
+							}
+							{
+								Count: 1b
+								id: "rftoolsbase:machine_base"
+							}
+						]
+					}
+				}
+				title: "RFTools or XNet intro item"
+				type: "item"
+			}]
+			title: "Welcome to RFTools!"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["000000000000034A"]
+			description: ["Get familiar with this guy, it will be the basic block you will have to craft for every RFTools machine, just like his sister, the Machine Base, for the smaller devices. Better stock up on them!"]
+			id: "000000000000034D"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+				icon: "kubejs:scavengers_delight"
+				id: "0000000000000C6A"
+				title: "Scavenger's Delight"
+				type: "command"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "They framed me!"
+			tasks: [{
+				id: "000000000000034E"
+				item: "rftoolsbase:machine_frame"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["000000000000034A"]
+			description: ["Get familiar with this girl, it will be the basic block you will have to craft for every RFTools device, just like her brother, the Machine Frame, for the bigger machines. Better go make a bunch!"]
+			id: "0000000000000380"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+				icon: "kubejs:scavengers_delight"
+				id: "0000000000000C69"
+				title: "Scavenger's Delight"
+				type: "command"
+			}]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "Base after Base"
+			tasks: [{
+				id: "0000000000000381"
+				item: "rftoolsbase:machine_base"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000000000380"]
+			description: [
+				"Have you ever wanted to transfer redstone signals easily and without all of those ugly wires? Well just make a redstone transmitter and a receiver!"
+				""
+				"They work with channels, meaning any receiver on a channel X will output the same redstone signal its getting from transmitters on the same frequency. If you simply place down one of these blocks they will automatically connect to a new channel."
+				""
+				"To then connect other blocks to the same channel frequency just take them and right click them on another transmitter or receiver that is already on that channel. Pretty sweet huh?"
+			]
+			id: "0000000000000382"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C6C"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "The future is now!"
+			tasks: [
+				{
+					id: "0000000000000383"
+					item: "rftoolsutility:redstone_transmitter"
+					type: "item"
+				}
+				{
+					id: "000000000000056E"
+					item: "rftoolsutility:redstone_receiver"
+					type: "item"
+				}
+			]
+			title: "Wireless Redstone"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0000000000000380"]
+			description: [
+				"The inventory checker is a very unique device that can, as its name suggests, check for specific items in specific slots of any inventory it’s looking at. It can even work with tags! "
+				"Its use cases might be a bit niche, but it will prove to be very useful in complex automation setups."
+			]
+			id: "0000000000000386"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C6B"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "I prefer Inventory Chess"
+			tasks: [{
+				id: "0000000000000387"
+				item: "rftoolsutility:invchecker"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0000000000000380"]
+			description: ["This one is pretty easy, just a regular old redstone timer you can place down and manually program delays for. You can also reset it by giving it a redstone signal on its input (the one with the blue inwards V)."]
+			id: "0000000000000388"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
+				icon: "kubejs:farmers_delight"
+				id: "0000000000000C68"
+				title: "Farmer's Delight"
+				type: "command"
+			}]
+			subtitle: "Tick tock..."
+			tasks: [{
+				id: "0000000000000389"
+				item: "rftoolsutility:timer"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000000000380"]
+			description: [
+				"The logic is a simple yet effective way to create custom logic gates for all your redstone needs."
+				""
+				"It takes three inputs, from the three different sides of the machine with blue arrows, and outputs a signal from the orange arrow’s side based on the configuration programmed inside of it."
+				"You can check for any different combination of inputs (for example, two specific sides off and one on) and manually set the desired output."
+			]
+			id: "000000000000038A"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
+				icon: "kubejs:farmers_delight"
+				id: "0000000000000C6E"
+				title: "Farmer's Delight"
+				type: "command"
+			}]
+			subtitle: "Just like that rapper!"
+			tasks: [{
+				id: "000000000000038B"
+				item: "rftoolsutility:logic"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000000000038A"]
+			description: [
+				"You can view the analog as a more advanced logic of sorts. It still has three inputs, however it compares two of them (named A and B in the machine), and outputs a signal of strength based on the third input, with some custom calculations applied."
+				""
+				"You can also have different factors for the input calculations depending on the comparison of the A and B signals."
+			]
+			id: "000000000000038E"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C6F"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "I thought we all went Digital!"
+			tasks: [{
+				id: "000000000000038F"
+				item: "rftoolsutility:analog"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["000000000000038E"]
+			description: [
+				"The sequencer is yet another small device you can use to create custom redstone circuits."
+				""
+				"This one is a bit more advanced and can look confusing at first, but is actually pretty straight forward: think of the grid you see in the GUI as a time sequence, starting from the upper left corner and ending in the lower right. "
+				""
+				"Every square represents a game tick, so 1/20th of a second. For example, if you were to light up the first 20 squares, the sequence would now be an on signal for a second, and then off for the rest of the duration."
+				""
+				"You can also customize how the sequence will trigger (by default it will only activate once, the first time the block receives an input signal. Check all the modes and cycle through them by clicking on the “Once1” button)."
+			]
+			id: "0000000000000390"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C70"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: " It’s as easy as 1,1,2,3..."
+			tasks: [{
+				id: "0000000000000391"
+				item: "rftoolsutility:sequencer"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["0000000000000380"]
+			description: ["Just like its name implies, the sensor can be used to check for the presence of a number of blocks, items, entities and other things in different areas in front of it, giving out a redstone signal when the conditions are met. Pretty handy device!"]
+			id: "0000000000000392"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C6D"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "This joke has been sensored..."
+			tasks: [{
+				id: "0000000000000393"
+				item: "rftoolsutility:sensor"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			description: [
+				"RFTools offers a quick and easy way to teleport around the world, which can come in really handy to travel around the world or simply to always have a quick way to get back home."
+				""
+				"The two main blocks you’ll need are receivers and transmitters: the first ones are where you can teleport to, and the second ones are where you can teleport from."
+				""
+				" First of all, set down some receivers in the places where you want to teleport and make sure they are powered. Then, place down a Transmitter and a Dialing Device somewhere in your base."
+				""
+				"The Dialing Device will be able to see all the public Receivers in the world and the private ones for which you are whitelisted (you can also name Receivers to identify them more easily)."
+				""
+				"Choose which Receiver you want to be dialed to in the Dialing Device and you will see the Transmitter light up: step on it and woosh! Teleportation!"
+			]
+			icon: "rftoolsutility:matter_receiver"
+			id: "0000000000000394"
+			min_width: 300
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C67"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "*Teleports behind you*"
+			tasks: [
+				{
+					id: "0000000000000395"
+					item: "rftoolsutility:matter_transmitter"
+					type: "item"
+				}
+				{
+					id: "0000000000000396"
+					item: "rftoolsutility:matter_receiver"
+					type: "item"
+				}
+				{
+					id: "0000000000000C02"
+					item: "rftoolsutility:dialing_device"
+					type: "item"
+				}
+			]
+			title: "Teleportation"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0000000000000394"]
+			description: [
+				"Teleportation is cool and all, but what if you could teleport to your Receivers without having to place down a Transmitter every time? Introducing the Charged Porter! Sneak Right-Click on any Receiver you can access to save it into the Porter."
+				"Providing the Porter has power, you can then simply right click it and teleport there immediately!"
+				""
+				"While the regular Porter can only store one Receiver, the Advanced one can have up to 8, and you can switch between them by Sneak Right-Clicking it into the air. Try it out!"
+			]
+			id: "0000000000000399"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C71"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "Now I'm here, and now I'm not!"
+			tasks: [{
+				id: "000000000000039A"
+				item: {
+					Count: 1
+					id: "rftoolsutility:advanced_charged_porter"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000000000034A"]
+			description: ["Dimensional shards are the only raw resource introduced by RFTools, found in rare ores but also craftable with rare materials. You will need a bunch of these for crafting and to infuse all of your RFTools machines. Go gather a bunch!"]
+			id: "000000000000039B"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
+				icon: "kubejs:farmers_delight"
+				id: "0000000000000C65"
+				title: "Farmer's Delight"
+				type: "command"
+			}]
+			subtitle: "It's from a different world..."
+			tasks: [{
+				count: 16L
+				id: "000000000000039C"
+				item: "rftoolsbase:dimensionalshard"
+				type: "item"
+			}]
+			title: "Dimensional Shards"
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"000000000000039B"
+				"000000000000034D"
+			]
+			description: [
+				"You might have noticed some RFTools machines have an “Infusing Bonus” written in orange in their tooltips."
+				""
+				"Take any of those machines, place them into the machine infuser with four stacks of dimensional shards and some power, and you’ll have successfully infused that machine, unlocking said bonus and powering up your machine!"
+			]
+			id: "000000000000039D"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C7E"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "Infused with love!"
+			tasks: [{
+				id: "000000000000039E"
+				item: "rftoolsbase:machine_infuser"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			description: [
+				"Crafters are really nice machines, which should be pretty self explanatory: they craft stuff for you."
+				""
+				"The nice thing about them is that they’re able to chain recipes as well, so if you teach them how to make planks from wood and sticks from planks they’ll be able to make sticks from wood no problem."
+				""
+				"They come in different tiers, and the only real difference between them is the number of recipes they’re able to remember, with 8 being the max amount on the highest tier."
+			]
+			id: "000000000000039F"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C76"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "Crafts better than you ever could"
+			tasks: [{
+				id: "00000000000003A0"
+				item: {
+					Count: 1b
+					id: "itemfilters:tag"
+					tag: {
+						value: "rftools:crafter"
+					}
+				}
+				title: "Crafter"
+				type: "item"
+			}]
+			title: "Crafters"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			description: [
+				"Unsurprisingly, the Builder is a machine that can build stuff for you. However, it might surprise you to see it can do much more! The Builder works with a Shape Card, of which there are many varieties."
+				""
+				"Sneak Right-Click your shape card on the Builder, and then go Sneak Right-Click it on the first and second corner of the area you want to work with."
+				""
+				"Now you can also right click the Shape Card into the air to configure it further, changing the shape, the size, the dimensions and so on."
+				""
+				"Once you’re done, place the Shape Card into the Builder to start working! Depending on which card you have, the Builder will build in the selected area, quarry out the selected area, pump fluids and more."
+				""
+				"In all these cases, you’ll need power and an inventory above or below the Builder to grab/put blocks into."
+				""
+				"Quick tip, clicking the lifebuoy icon in the builder will activate preview mode, and you’ll be able to see an outline of the area you’re working with."
+			]
+			id: "000000000000055B"
+			min_width: 300
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C75"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "Brick by Boring Brick"
+			tasks: [{
+				id: "000000000000055C"
+				item: "rftoolsbuilder:builder"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["000000000000055B"]
+			description: [
+				"This is the Quarry Shape Card for the Builder. Unsurprisingly, this one will dig blocks from the selected area and will place them into the Builder’s inventory."
+				""
+				"There are many different variations of the Quarry card, like Fortune or Silk Touch."
+				""
+				"The Clearing cards will also actually dig the block and leave a hole in the world, while the normal Quarry cards will replace what they dig with Dirt. You can also Configure the Card to void certain blocks, like stones or dirt."
+			]
+			id: "000000000000055D"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C7B"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "For all your digging needs"
+			tasks: [{
+				id: "000000000000055E"
+				item: "rftoolsbuilder:shape_card_quarry"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["000000000000055B"]
+			description: ["This is the default Shape Card for the Builder. If you use this one, the Builder will place blocks from its inventory in the selected area."]
+			id: "000000000000055F"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C7C"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "For all your building needs"
+			tasks: [{
+				id: "0000000000000560"
+				item: "rftoolsbuilder:shape_card_def"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["000000000000055B"]
+			description: ["The various pump cards will pump up liquids from the selected area, so you’ll need some sort of tank above or below the builder. There’s also one for placing fluids!"]
+			id: "0000000000000561"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C7D"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "For all your fluid needs"
+			tasks: [{
+				id: "0000000000000BFB"
+				item: "rftoolsbuilder:shape_card_pump"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			description: [
+				"The Modular Storage is an advanced form of item storage. Place one down and then make an items storage module, like the tier 1 one provided by this quest."
+				""
+				"You can then start putting items in and out of the Modular Storage, which will hold a number of different stacks, higher for each tier of Storage Module. It even has an integrated crafting grid that can remember up to 8 recipes!"
+				""
+				"The items are also stored in the Module itself, so you can easily take it out, move it to another Modular Storage and transfer all your items there."
+			]
+			id: "0000000000000563"
+			rewards: [
+				{
+					id: "0000000000000BFF"
+					item: "rftoolsstorage:storage_module0"
+					title: "Tier 1 Storage Module"
+					type: "item"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+					icon: "kubejs:scavengers_delight"
+					id: "0000000000000C77"
+					title: "Scavenger's Delight"
+					type: "command"
+				}
+			]
+			subtitle: "What's with mods and modules?"
+			tasks: [{
+				id: "0000000000000564"
+				item: "rftoolsstorage:modular_storage"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0000000000000563"]
+			description: ["Tier up the Storage Module ladder and get up to tier 4, which will be able to store up to 500 stacks of items in a single module! That’s a lot of items, huh?"]
+			id: "0000000000000565"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C79"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "Too Many Items!"
+			tasks: [{
+				id: "0000000000000566"
+				item: "rftoolsstorage:storage_module3"
+				type: "item"
+			}]
+			title: "Maximum Storage!"
+			x: -3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			description: [
+				"RFTools control is a collection of blocks used to program advanced sequences of task that can be really useful to automate complex setups."
+				""
+				"Since it’s very in-depth and complicated to explain with words alone, quests won’t really be able to explain it very well, so we’ll link to a well done youtube tutorial instead."
+				""
+				"If you’re interested in getting familiar with control, this is the best place to start: https://www.youtube.com/watch?v=18-R5L-CATg."
+			]
+			icon: "rftoolscontrol:processor"
+			id: "0000000000000567"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C72"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "This is for all you nerds out there"
+			tasks: [
+				{
+					id: "0000000000000568"
+					item: "rftoolscontrol:processor"
+					type: "item"
+				}
+				{
+					id: "000000000000056B"
+					item: "rftoolscontrol:programmer"
+					type: "item"
+				}
+				{
+					id: "000000000000056C"
+					item: "rftoolscontrol:workbench"
+					type: "item"
+				}
+				{
+					id: "000000000000056D"
+					item: "rftoolscontrol:program_card"
+					type: "item"
+				}
+			]
+			title: "RFTools Control"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["000000000000034A"]
+			description: [
+				"XNet is a set of machines in the RFTools family designed specifically for moving items, liquids, power and more around with cables, in a compact fashion."
+				""
+				"To start out with XNet, you will need a Controller for each setup, connectors to put on the inventories/machines you want to interact with and cables to connect them together."
+				""
+				"Since the process is a bit complex and would get too wordy for the quest, I suggest you look at this video to get a better understanding of the controller: https://www.youtube.com/watch?v=ksaJgiipaOg."
+				""
+				" It will take some getting used to, but for the more complex automation setups XNet will always be your best friend."
+			]
+			id: "0000000000000571"
+			min_width: 300
+			rewards: [
+				{
+					count: 32
+					id: "0000000000000C03"
+					item: "xnet:netcable_blue"
+					title: "Blue Network Cable"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "0000000000000C04"
+					item: "xnet:connector_blue"
+					title: "Blue Connector"
+					type: "item"
+				}
+			]
+			shape: "hexagon"
+			size: 1.5d
+			subtitle: "But what does the X stand for?"
+			tasks: [{
+				id: "0000000000000572"
+				item: "xnet:controller"
+				type: "item"
+			}]
+			title: "XNet"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0000000000000571"]
+			description: ["Advanced connectors can give you extra functionality, like faster speed or access to any side of a machine."]
+			id: "0000000000000578"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C66"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "Even fancier!"
+			tasks: [{
+				id: "0000000000000579"
+				item: "xnet:connector_upgrade"
+				type: "item"
+			}]
+			title: "Advanced Connectors"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0000000000000563"]
+			description: [
+				"The Storage Scanner is an even more advanced way to store and access your items. It can read inventories in a radius around itself (maximum of 20 blocks) and it will give you the ability to access all those inventories from one single block. "
+				""
+				"So, say you have a wall of chests? A Storage Scanner can easily connect to all of them and show you everything in a single place. It even works with Modular Storages!"
+			]
+			id: "0000000000000BF4"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C78"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "No privacy for your Chests!"
+			tasks: [{
+				id: "0000000000000BF5"
+				item: "rftoolsstorage:storage_scanner"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			description: [
+				"Power Cells are an easy way to store large amounts of power. They act like a multiblock, so the more you have connected together the more your power storage capacity grows, even with cells of different tiers!"
+				""
+				"You can then right click the multiblock with a smart wrench to create input (blue) and output (orange) points, from which you can then start inserting or taking power."
+			]
+			id: "0000000000000BF6"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C73"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "Cell's Kitchen"
+			tasks: [{
+				id: "0000000000000BF7"
+				item: "rftoolspower:cell1"
+				type: "item"
+			}]
+			title: "Power Cells"
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["000000000000034D"]
+			dependency_requirement: "one_completed"
+			description: [
+				"Dimensional Cells are a significant upgrade from Power Cells. They act pretty much the same way, but don’t need to be close to each other to form a multiblock and share their power buffer."
+				""
+				"You can connect different Dimensional Cells to the same channel using Powercell Cards. First, place a Powercell Card in the upper left slot of the Dimensional Cell you want to start linking to other cells, and leave it in."
+				""
+				"You will see that it will now have changed from “unlinked” to “Link: x”, where x is a number that identifies the channel that cell is now connected to. "
+				""
+				"Then, place other Cards in the “Link” slot of the Dimensional Cell, and they will also link to that same channel x."
+				""
+				"Now you can go around, place other Dimensional Cells wherever you want in the world, and placing the Card linked to the channel x in the upper left slot will link the new cells to the original one sharing its power buffer and acting like a multiblock"
+			]
+			icon: "rftoolspower:dimensionalcell"
+			id: "0000000000000BF8"
+			min_width: 300
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+				icon: "kubejs:rare_lootbox"
+				id: "0000000000000C74"
+				title: "Rare RFTools Loot Box"
+				type: "command"
+			}]
+			subtitle: "Better with Cards!"
+			tasks: [
+				{
+					id: "0000000000000BF9"
+					item: {
+						Count: 1b
+						id: "itemfilters:tag"
+						tag: {
+							value: "rftools:dimensionalcell"
+						}
+					}
+					title: "Dimensional Cell"
+					type: "item"
+				}
+				{
+					id: "0000000000000BFA"
+					item: "rftoolspower:powercell_card"
+					type: "item"
+				}
+			]
+			title: "Dimensional Cells"
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0000000000000BF4"]
+			description: [
+				"The Tablet can be used to monitor different RFTools machines from a distance, based on what module you put in the Tablet itself."
+				""
+				"For example, bind the Storage Control Module you will get from this quest to your Storage Scanner by right clicking it, and as long as the Storage Scanner is chunkloaded you will be able to access it from anywhere in the world!"
+			]
+			id: "0000000000000BFC"
+			optional: true
+			rewards: [
+				{
+					id: "0000000000000BFE"
+					item: {
+						Count: 1
+						id: "rftoolsstorage:storage_control_module"
+						tag: {
+							Damage: 0
+						}
+					}
+					title: "Storage Control Screen Module"
+					type: "item"
+				}
+				{
+					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_rftools_loot_rare"
+					icon: "kubejs:rare_lootbox"
+					id: "0000000000000C7A"
+					title: "Rare RFTools Loot Box"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			subtitle: "Definitively not an iPad"
+			tasks: [{
+				id: "0000000000000BFD"
+				item: "rftoolsbase:tablet"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0000000000000571"]
+			description: [
+				"To access the link for the XNet tutorial, click on the chat message generated by this quest's reward."
+				""
+				"Unfortunately repeatable quests aren't yet implemented so the command will only run once, so be sure to save the link somewhere!"
+			]
+			icon: "xnet:controller"
+			id: "0000000000000C14"
+			optional: true
+			rewards: [{
+				command: "/tellraw @p {\"text\":\"XNet Tutorial Link\",\"bold\":true,\"color\":\"dark_green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://youtu.be/ksaJgiipaOg\"}}"
+				icon: "pneumaticcraft:tag_filter"
+				id: "0000000000000C16"
+				title: "XNet Tutorial Link"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "Click Me!"
+			tasks: [{
+				id: "0000000000000C15"
+				title: "Xnet tutorial link"
+				type: "checkmark"
+			}]
+			title: "XNet Tutorial Link"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["0000000000000567"]
+			description: [
+				"To access the link for the RFTools Control tutorial, click on the chat message generated by this quest's reward."
+				""
+				"Unfortunately repeatable quests aren't yet implemented so the command will only run once, so be sure to save the link somewhere!"
+			]
+			id: "0000000000000C1A"
+			optional: true
+			rewards: [{
+				command: "/tellraw @p {\"text\":\"RFTools Control Tutorial Link\",\"bold\":true,\"color\":\"dark_green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"https://www.youtube.com/watch?v=18-R5L-CATg&t=814s\"}}"
+				icon: "pneumaticcraft:tag_filter"
+				id: "0000000000000C1C"
+				title: "RFTools Control Tutorial Link"
+				type: "command"
+			}]
+			shape: "diamond"
+			subtitle: "Click Me!"
+			tasks: [{
+				icon: "rftoolscontrol:advanced_network_card"
+				id: "0000000000000C1B"
+				title: "RFTools Control Tutorial Link"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: -1.5d
+		}
+	]
+	title: "RFTools"
+}

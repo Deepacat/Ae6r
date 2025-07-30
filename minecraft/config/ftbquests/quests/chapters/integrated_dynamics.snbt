@@ -1,0 +1,669 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "integrated_dynamics"
+	group: "0856CF7F5CBEB20A"
+	icon: "integrateddynamics:crystalized_menril_chunk"
+	id: "529A046A403F6A21"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Integrated Dynamics is a mod that focuses on transporting Items, Fluids, FE/RF, and Data."
+				""
+				"It is possible to solve nearly all of your automation problems with Integrated Dynamics, from automating ore processing, to reading Mana values off of a Botania Mana Pool."
+				""
+				"In order to function, all blocks other than the Logic Programmer, Squeezers, Drying Basins, and Generators have to be connected to each other via Logic Cables."
+				""
+				"For more complex blocks, like the Readers and Writers, make sure to read the mod's guide book \"On the Dynamics of Integration\" to fully understand them."
+				""
+				"-OneLemonyBoi"
+			]
+			id: "7E516ACCF6DA5588"
+			optional: true
+			rewards: [{
+				id: "58CE7881F576F9A5"
+				item: "integrateddynamics:wrench"
+				type: "item"
+			}]
+			subtitle: "Prepare for Trouble! And make it Double!"
+			tasks: [{
+				icon: "integrateddynamics:on_the_dynamics_of_integration"
+				id: "581379EDC8E0E1B8"
+				title: "Welcome To Integrated Dynamics!"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["Menril is one of the most important substances in Integrated Dynamics, and it will be used in almost every item and blocks from ID. At first, you can get menril from breaking Enriched Menril Logs."]
+			id: "42D9F6E36CF8F06E"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+				icon: "kubejs:scavengers_delight"
+				id: "27A45121C7D34FAD"
+				title: "Scavenger's Delight"
+				type: "command"
+			}]
+			subtitle: "Minecraft's Blue Sky"
+			tasks: [
+				{
+					id: "721B495113A784A4"
+					item: "integrateddynamics:menril_log"
+					type: "item"
+				}
+				{
+					id: "3DA829AF71F9CEE9"
+					item: "integrateddynamics:crystalized_menril_chunk"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["42D9F6E36CF8F06E"]
+			description: [
+				"This should be the first block that you make from ID, along with the Drying Basin. This block creates Menril Resin from Menril Logs. However, someone or something needs to jump on the top of it numerous times in order to work the machine. Apply a redstone signal to reset the Squeezer for the next item."
+				""
+				"Known issue: You cannot use the Squeezer if you have a Dank in your inventory."
+			]
+			id: "4666E2A199FC676E"
+			optional: true
+			rewards: [
+				{
+					id: "5476A59853122500"
+					item: "minecraft:armor_stand"
+					title: "Armor Stand"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1822E8DD1641B839"
+					item: "minecraft:slime_block"
+					title: "Green Slime Block"
+					type: "item"
+				}
+			]
+			subtitle: "Keep JUMPING!"
+			tasks: [{
+				icon: "integrateddynamics:squeezer"
+				id: "53097394003302F7"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:squeezer"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:bucket_menril_resin"
+							}
+						]
+					}
+				}
+				title: "Squeezer"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["42D9F6E36CF8F06E"]
+			description: ["This, along with the Squeezer, will make getting Menril a lot easier. Place this block right next to the Squeezer, with the spout of the squeezer facing it. Every time a Menril Log is squeezed, the Menril Resin enters the drying basin, and dries into a Menril Block."]
+			id: "510121D501040EA5"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+				icon: "kubejs:scavengers_delight"
+				id: "6FCCEF89844BC6E9"
+				title: "Scavenger's Delight"
+				type: "command"
+			}]
+			subtitle: "Dryer than my Jokes"
+			tasks: [{
+				icon: "integrateddynamics:drying_basin"
+				id: "6DFFC1D94075DA22"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:drying_basin"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:crystalized_menril_block"
+							}
+						]
+					}
+				}
+				title: "Drying Basin"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["510121D501040EA5"]
+			description: ["The same as the regular Drying Basin, but is faster and uses RF."]
+			id: "05C24B4CAB4AC124"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+				icon: "kubejs:scavengers_delight"
+				id: "2490003809DE5195"
+				title: "Scavenger's Delight"
+				type: "command"
+			}]
+			subtitle: "Drying, but FASTER"
+			tasks: [{
+				icon: "integrateddynamics:mechanical_drying_basin"
+				id: "4884D5DED8B35CFD"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:mechanical_drying_basin"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:crystalized_chorus_block"
+							}
+						]
+					}
+				}
+				title: "Mechanical Drying Basin"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4666E2A199FC676E"]
+			description: ["The same as the Squeezer, but is faster, requires RF, and doesn't require the player to be jumping on it."]
+			id: "5183909586CBC38F"
+			optional: true
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
+				icon: "kubejs:scavengers_delight"
+				id: "7C49676D6152BAE1"
+				title: "Scavenger's Delight"
+				type: "command"
+			}]
+			subtitle: "No more Jumping"
+			tasks: [{
+				icon: "integrateddynamics:mechanical_squeezer"
+				id: "256E9E07904E5A4A"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:mechanical_squeezer"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:bucket_liquid_chorus"
+							}
+						]
+					}
+				}
+				title: "Mechanical Squeezer"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["The following three blocks relate to Fluid Transportation."]
+			icon: "minecraft:water_bucket"
+			id: "0EC4E05346C842DC"
+			rewards: [{
+				id: "0BACBA6E6F6282A6"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Where's my Water?"
+			tasks: [{
+				id: "50DF9F183B30FD05"
+				type: "checkmark"
+			}]
+			title: "Fluid Transportation"
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["The following 3 blocks relate to RF transportation."]
+			icon: {
+				Count: 1
+				id: "integrateddynamics:energy_battery"
+				tag: {
+					energy: 1000000
+				}
+			}
+			id: "69C09D451357D847"
+			rewards: [{
+				id: "35DB2C6D79D15457"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "near INFINITE POWAH transportation."
+			tasks: [{
+				id: "67D84A2961098D39"
+				type: "checkmark"
+			}]
+			title: "RF Transportation"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["The following three blocks relate to Item Transportation."]
+			icon: "minecraft:item_frame"
+			id: "47BF421FFE9A02B6"
+			rewards: [{
+				id: "62AA590D2815B802"
+				type: "xp"
+				xp: 100
+			}]
+			subtitle: "Glorified Hoppers"
+			tasks: [{
+				id: "19A2827522FB5641"
+				type: "checkmark"
+			}]
+			title: "Item Transportation"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["47BF421FFE9A02B6"]
+			description: ["This connects to Item Storages so that they can be seen on the ID Network."]
+			id: "0A50B0D7088492C5"
+			tasks: [{
+				id: "7BF8D228C32BFAA3"
+				item: "integratedtunnels:part_interface_item"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["47BF421FFE9A02B6"]
+			description: ["This imports items into the ID Network."]
+			id: "056D516E5F520ECD"
+			tasks: [{
+				id: "0B8682EB51258EAF"
+				item: "integratedtunnels:part_importer_item"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["47BF421FFE9A02B6"]
+			description: ["This exports items from the ID Network."]
+			id: "6B0199533EB50413"
+			tasks: [{
+				id: "51EFE65BD012FE42"
+				item: "integratedtunnels:part_exporter_item"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["0EC4E05346C842DC"]
+			description: ["This imports fluids into the ID Network."]
+			id: "4F5F78B1254B6370"
+			tasks: [{
+				id: "4FE15E8CEABF6765"
+				item: "integratedtunnels:part_importer_fluid"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0EC4E05346C842DC"]
+			description: ["This connects to Fluid Storages to allow it to be seen in the ID Network."]
+			id: "2F25517C899BC435"
+			tasks: [{
+				id: "0A14E33816A8971F"
+				item: "integratedtunnels:part_interface_fluid"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0EC4E05346C842DC"]
+			description: ["This exports fluids from the ID Network."]
+			id: "1EE4A5F1220A6405"
+			tasks: [{
+				id: "71B88A271A60F408"
+				item: "integratedtunnels:part_exporter_fluid"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["69C09D451357D847"]
+			description: ["This connects to Energy Storages so that they can be seen on the ID Network."]
+			id: "3813AC7EDF335C11"
+			tasks: [{
+				id: "32F54E29927301E5"
+				item: "integratedtunnels:part_interface_energy"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["69C09D451357D847"]
+			description: ["This imports RF into the ID Network."]
+			id: "395AD749713702EB"
+			tasks: [{
+				id: "2DBBB2572F9877D0"
+				item: "integratedtunnels:part_importer_energy"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["69C09D451357D847"]
+			description: ["This exports RF from the ID Network."]
+			id: "62847890633837C8"
+			tasks: [{
+				id: "0EC0C78AE0937396"
+				item: "integratedtunnels:part_exporter_energy"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["These three blocks place Items, Fluids, and RF into the world."]
+			id: "629FE9742ED9DA8E"
+			subtitle: "Different name for a Dropper"
+			tasks: [{
+				id: "22CA50E3B6CE7873"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_fluid"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_exporter_world_energy"
+							}
+						]
+					}
+				}
+				title: "Exporters"
+				type: "item"
+			}]
+			title: "World Exporters"
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["These three blocks pick up Items, Fluids, and RF from the world."]
+			id: "0D2453FD06A1207B"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_miners_delight"
+				icon: "kubejs:miners_delight"
+				id: "1F96D4CC5E668E12"
+				title: "Miner's Delight"
+				type: "command"
+			}]
+			subtitle: "Pick-up Sticks (or any item)"
+			tasks: [{
+				id: "4647A50833440DED"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_item"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_fluid"
+							}
+							{
+								Count: 1b
+								id: "integratedtunnels:part_importer_world_energy"
+							}
+						]
+					}
+				}
+				title: "Importers"
+				type: "item"
+			}]
+			title: "World Importers"
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["These 10 blocks can read information, whether that is Redstone, Block Data, or Entities."]
+			id: "39AED68EE6F495B1"
+			subtitle: "I prefer Kindles"
+			tasks: [{
+				id: "3526F3A4F711D7E1"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:part_audio_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_block_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_entity_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_extradimensional_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_fluid_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_inventory_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_machine_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_network_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_redstone_reader"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_world_reader"
+							}
+						]
+					}
+				}
+				title: "Readers"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["These four blocks write to Redstone, Inventories, Output Audio and Music, and Output Particles."]
+			id: "61D790A907882415"
+			subtitle: "Pen, not Pencil"
+			tasks: [{
+				id: "2BAF749D34AB438F"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:part_audio_writer"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_effect_writer"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_inventory_writer"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_redstone_writer"
+							}
+						]
+					}
+				}
+				title: "Writers"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: [
+				"A Mono-Directional Connector can transfer an ID network over a straight line to another Mono-Directional Connector without having to run Logic Cables all the way there. However, it can only connect to Mono-Directional connectors that are in a straight line."
+				"A Omni-Directional Connector can connect to any other Omni-Directional connector, even over Dimensions."
+			]
+			id: "4C47990454684103"
+			subtitle: "This Relationship will Work Out"
+			tasks: [{
+				id: "6465225AA0D53CFB"
+				item: {
+					Count: 1b
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "integrateddynamics:part_connector_mono_directional"
+							}
+							{
+								Count: 1b
+								id: "integrateddynamics:part_connector_omni_directional"
+							}
+						]
+					}
+				}
+				title: "Directional Connectors"
+				type: "item"
+			}]
+			title: "Long Distance Connections"
+			x: -2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: [
+				"Integrated Dynamics can be used as an alternative to RS, with many of the features that RS contains. ID has a way to craft with all your items, a way to store items, a way to autocraft items, and a way to persistently craft items."
+				""
+				"You can view Items, Fluids, and Energy from the Storage Terminal. You can also craft with items in your ID System. In order to add things to your system, you can attach an Interface to a chest, or any other item storage block in order to make it accessible to the ID Network."
+				""
+				"You can autocraft items on demand via the Crafting Interface. Just create a variable card with the recipe, and stick it into the Interface. If you want to do a regular crafting task, you need to make sure that the Interface is facing a Crafting Table. Otherwise, face it towards the chest/machine you want to input to."
+				""
+				"In order to persistently craft, you need to use a Crafting Writer, and create a variable card of the recipe that you already have in the Crafting Interface. Then, just place the variable card into the Crafting Writer's Craft Recipe slot, and it will persistently craft for you!"
+			]
+			id: "020DD2A8A7FA170B"
+			rewards: [{
+				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_miners_delight"
+				icon: "kubejs:miners_delight"
+				id: "182ED3A3806D1D78"
+				title: "Miner's Delight"
+				type: "command"
+			}]
+			subtitle: "RS but Worse"
+			tasks: [
+				{
+					id: "51EBE9CB057981DB"
+					item: "integratedterminals:part_terminal_storage"
+					type: "item"
+				}
+				{
+					id: "24FC2D0BFBF84232"
+					item: "integratedterminals:part_terminal_crafting_job"
+					type: "item"
+				}
+				{
+					id: "4FF70CD62E232768"
+					item: "integratedcrafting:part_interface_crafting"
+					type: "item"
+				}
+				{
+					id: "5479E812F182F318"
+					item: "integratedcrafting:part_crafting_writer"
+					type: "item"
+				}
+			]
+			title: "Item Management, Crafting, and Autocrafting with ID"
+			x: -1.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7E516ACCF6DA5588"]
+			description: ["As the name suggests, this can perform Player Actions, such as clicking with an item."]
+			id: "0AD26267625F46D8"
+			subtitle: "Minecraft: Become Player"
+			tasks: [{
+				id: "2C36F7C1789E5E61"
+				item: "integratedtunnels:part_player_simulator"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.0d
+		}
+	]
+	title: "Integrated Dynamics"
+}

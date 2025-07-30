@@ -1,0 +1,113 @@
+
+["Outline Settings"]
+	#Set the outline thickness.
+	#Range: 0.5 ~ 10.0
+	Outline_Size = 4.0
+	#Set the outline color in hex (e.g., FF0000 for red). Works with FLAT_COLOR and COMBINED_COLOR modes.
+	Outline_Color = "00FFFF"
+	#If true, the outline will be drawn no matter what (even in Spectator, when GUI is hidden, etc.).
+	Always_Render_Outline = false
+
+["Visual Effects"]
+	#Color modes:
+	#FLAT_COLOR = Uses only Outline_Color.
+	#TEXTURE_COLOR = Uses the block's texture color.
+	#COMBINED_COLOR = Combines both texture and Outline_Color.
+	#RAINBOW_COLOR = Animated Rainbow color change effect.
+	#
+	#Allowed Values: FLAT_COLOR, TEXTURE_COLOR, COMBINED_COLOR, RAINBOW_COLOR
+	Color_Mode = "FLAT_COLOR"
+	#Which outline style to use:
+	#STATIC, PULSING, DASHED, etc.
+	#
+	#Allowed Values: NONE, VANILLA, STATIC, CORNER, DASHED, PULSING, FLOWING, RUNNER, WAVY
+	Outline_Style = "STATIC"
+	#If true, uses more elaborate shapes (stairs, fences, etc.).
+	Fancy_Shapes = true
+	#Blend the outline colour smoothly instead of snapping.
+	Smooth_Color_Transition = true
+	#Rate at which the outline colour moves toward the
+	#current block colour each frame when smoothing is enabled.
+	#0.03 is a gentle default. Larger values converge faster.
+	#
+	#Range: 0.0 ~ 1.0
+	Color_Transition_Speed = 0.03
+
+["Corner Outline"]
+	#How long each corner bracket is, in blocks.
+	#Range: 0.01 ~ 1.0
+	Corner_Length = 0.1
+
+["Dashed Outline"]
+	#Number of dash segments (per half edge) for dashed outlines.
+	#Range: 1 ~ 64
+	Dash_Segment_Count = 2
+	#Fraction of each segment that is dash vs. gap.
+	#Range: 0.05 ~ 0.95
+	Dash_Ratio = 0.4
+
+["Pulsing Outline"]
+	#Pulsing animation speed. 0 = slowest, 1 = fastest.
+	#Range: 0.01 ~ 1.0
+	Pulsing_Speed = 0.5
+	#Pulsing size variation factor. Higher = greater size fluctuation.
+	#Range: 0.1 ~ 10.0
+	Pulsing_Size = 1.0
+
+["Flowing Outline"]
+	#Number of subdivided segments for the flow effect.
+	#Range: 5 ~ 200
+	Flowing_Segment_Count = 15
+	#Scrolling speed of the color wave.
+	#Range: 0.0 ~ 1.0
+	Flowing_Speed = 0.1
+	#Number of wave cycles along each edge.
+	#Range: 0.1 ~ 20.0
+	Flowing_Frequency = 1.5
+	#Minimum brightness factor in the wave.
+	#Range: 0.0 ~ 1.0
+	Flowing_Brightness_Min = 0.4
+
+["Runner Outline"]
+	#Speed of the runner highlight along edges.
+	#Range: 0.0 ~ 1.0
+	Runner_Speed = 0.1
+	#Fraction of edge length occupied by the runner.
+	#Range: 0.01 ~ 1.0
+	Runner_Length = 0.2
+	#Multiplier for the runner's brightness.
+	#Range: 1.0 ~ 5.0
+	Runner_Brightness = 1.5
+	#If true, runner cycles through rainbow colors.
+	Runner_Rainbow = true
+
+["Wavy Outline"]
+	#Number of sub segments per edge for the wavy effect.
+	#Range: 1 ~ 200
+	Wavy_Segment_Count = 5
+	#Amplitude of the wave (vertical displacement).
+	#Range: 0.0 ~ 5.0
+	Wavy_Amplitude = 0.2
+	#How many wave cycles occur per block of edge length.
+	#Range: 0.1 ~ 20.0
+	Wavy_Frequency = 2.0
+	#Speed of the wave animation.
+	#Range: 0.0 ~ 5.0
+	Wavy_Speed = 0.05
+
+["Construction Wand Compatibility"]
+	#When true, the wand preview re‑uses the
+	#main outline’s STYLE and COLOR_MODE.
+	#When false you can set them separately.
+	#
+	Sync_With_Main = true
+	#If true, draw the wand preview as one outline per block
+	#instead of a single merged outline.
+	Wand_Preview_Per_Block = false
+	#Outline style to use when Sync_With_Main = false.
+	#Allowed Values: NONE, VANILLA, STATIC, CORNER, DASHED, PULSING, FLOWING, RUNNER, WAVY
+	Wand_Outline_Style = "STATIC"
+	#Colour mode for wand preview when Sync_With_Main = false.
+	#Allowed Values: FLAT_COLOR, TEXTURE_COLOR, COMBINED_COLOR, RAINBOW_COLOR
+	Wand_Color_Mode = "FLAT_COLOR"
+

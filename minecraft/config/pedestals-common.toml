@@ -1,0 +1,987 @@
+
+#Pedestal Defaults
+["Global Pedestal Defaults"]
+	#Base Item Transfer Rate
+	#Range: > 1
+	pedestal_baseItemTransferRate = 4
+	#Base Fluid Transfer Rate
+	#Range: > 1
+	pedestal_baseFluidTransferRate = 1000
+	#Base Energy Transfer Rate
+	#Range: > 1
+	pedestal_baseEnergyTransferRate = 5000
+	#Base Xp Transfer Rate [In Levels]
+	#Range: > 1
+	pedestal_baseXpTransferRate = 1
+	#Base Dust Transfer Rate
+	#Range: > 1
+	pedestal_baseDustTransferRate = 10
+	#The Base Distance between Pedestals for Linking
+	#Range: > 1
+	pedestal_baseLinkingRange = 8
+
+#Tiered Augments
+[Augment_Tiers]
+	#Tier 1, Capacity Item Transfer Increase
+	#Range: > 0
+	t1_increaseItemTransfer = 2
+	#Tier 1, Capacity Fluid Transfer Increase
+	#Range: > 0
+	t1_increaseFluidTransfer = 2000
+	#Tier 1, Capacity Energy Transfer Increase
+	#Range: > 0
+	t1_increaseEnergyTransfer = 5000
+	#Tier 1, Capacity Xp Transfer Increase (Levels)
+	#Range: > 0
+	t1_increaseXpTransfer = 1
+	#Tier 1, Capacity Dust Transfer Increase
+	#Range: > 0
+	t1_increaseDustTransfer = 10
+	#Tier 1, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t1_increaseInsertableAmount = 4
+	#Tier 2, Capacity Item Transfer Increase
+	#Range: > 0
+	t2_increaseItemTransfer = 4
+	#Tier 2, Capacity Fluid Transfer Increase
+	#Range: > 0
+	t2_increaseFluidTransfer = 4000
+	#Tier 2, Capacity Energy Transfer Increase
+	#Range: > 0
+	t2_increaseEnergyTransfer = 10000
+	#Tier 2, Capacity Xp Transfer Increase (Levels)
+	#Range: > 0
+	t2_increaseXpTransfer = 5
+	#Tier 2, Capacity Dust Transfer Increase (Levels)
+	#Range: > 0
+	t2_increaseDustTransfer = 10
+	#Tier 2, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t2_increaseInsertableAmount = 8
+	#Tier 3, Capacity Item Transfer Increase
+	#Range: > 0
+	t3_increaseItemTransfer = 8
+	#Tier 3, Capacity Fluid Transfer Increase
+	#Range: > 0
+	t3_increaseFluidTransfer = 8000
+	#Tier 3, Capacity Energy Transfer Increase
+	#Range: > 0
+	t3_increaseEnergyTransfer = 100000
+	#Tier 3, Capacity Xp Transfer Increase (Levels)
+	#Range: > 0
+	t3_increaseXpTransfer = 10
+	#Tier 3, Capacity Dust Transfer Increase
+	#Range: > 0
+	t3_increaseDustTransfer = 10
+	#Tier 3, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t3_increaseInsertableAmount = 12
+	#Tier 4, Capacity Item Transfer Increase
+	#Range: > 0
+	t4_increaseItemTransfer = 16
+	#Tier 4, Capacity Fluid Transfer Increase
+	#Range: > 0
+	t4_increaseFluidTransfer = 16000
+	#Tier 4, Capacity Energy Transfer Increase
+	#Range: > 0
+	t4_increaseEnergyTransfer = 1000000
+	#Tier 4, Capacity Xp Transfer Increase (Levels)
+	#Range: > 0
+	t4_increaseXpTransfer = 15
+	#Tier 4, Capacity Dust Transfer Increase
+	#Range: > 0
+	t4_increaseDustTransfer = 10
+	#Tier 4, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t4_increaseInsertableAmount = 16
+	#Tier 1, Storage Item Increase
+	#Range: > 0
+	t1_increaseItemStorage = 1
+	#Tier 1, Storage Fluid Increase
+	#Range: > 0
+	t1_increaseFluidStorage = 4000
+	#Tier 1, Storage Energy Increase
+	#Range: > 0
+	t1_increaseEnergyStorage = 20000
+	#Tier 1, Storage Xp Increase (Levels)
+	#Range: > 0
+	t1_increaseXpStorage = 10
+	#Tier 1, Storage Dust Increase
+	#Range: > 0
+	t1_increaseDustStorage = 50
+	#Tier 1, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t1_increaseInsertableStorageAmount = 3
+	#Tier 2, Storage Item Increase
+	#Range: > 0
+	t2_increaseItemStorage = 1
+	#Tier 2, Storage Fluid Increase
+	#Range: > 0
+	t2_increaseFluidStorage = 16000
+	#Tier 2, Storage Energy Increase
+	#Range: > 0
+	t2_increaseEnergyStorage = 100000
+	#Tier 2, Storage Xp Increase (Levels)
+	#Range: > 0
+	t2_increaseXpStorage = 15
+	#Tier 2, Storage Dust Increase
+	#Range: > 0
+	t2_increaseDustStorage = 100
+	#Tier 2, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t2_increaseInsertableStorageAmount = 7
+	#Tier 3, Storage Item Increase
+	#Range: > 0
+	t3_increaseItemStorage = 1
+	#Tier 3, Storage Fluid Increase
+	#Range: > 0
+	t3_increaseFluidStorage = 64000
+	#Tier 3, Storage Energy Increase
+	#Range: > 0
+	t3_increaseEnergyStorage = 1000000
+	#Tier 3, Storage Xp Increase (Levels)
+	#Range: > 0
+	t3_increaseXpStorage = 20
+	#Tier 3, Storage Dust Increase
+	#Range: > 0
+	t3_increaseDustStorage = 200
+	#Tier 3, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t3_increaseInsertableStorageAmount = 11
+	#Tier 4, Storage Item Increase
+	#Range: > 0
+	t4_increaseItemStorage = 1
+	#Tier 4, Storage Fluid Increase
+	#Range: > 0
+	t4_increaseFluidStorage = 265000
+	#Tier 4, Storage Energy Increase
+	#Range: > 0
+	t4_increaseEnergyStorage = 10000000
+	#Tier 4, Storage Xp Increase (Levels)
+	#Range: > 0
+	t4_increaseXpStorage = 25
+	#Tier 4, Storage Dust Increase
+	#Range: > 0
+	t4_increaseDustStorage = 500
+	#Tier 4, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t4_increaseInsertableStorageAmount = 15
+	#The max number of ticks needed to send items (before augments)
+	#Range: > 1
+	pedestal_ticksToTransfer = 40
+	#The initial number of stacks a pedestal holds (max values are definitive max values including with upgrades)
+	#Range: 1 ~ 27
+	pedestal_baseItemStacks = 1
+	#The initial fluid storage for pedestals (max values are definitive max values including with upgrades)
+	#Range: > 1
+	pedestal_baseFluidStorage = 16000
+	#The initial energy storage for pedestals (max values are definitive max values including with upgrades)
+	#Range: > 1
+	pedestal_baseEnergyStorage = 20000
+	#The initial xp storage for pedestals [In levels] (max values are definitive max values including with upgrades)
+	#Range: 1 ~ 21000
+	pedestal_baseXpStorage = 30
+	#The initial dust storage for pedestals (max values are definitive max values including with upgrades)
+	#Range: > 1
+	pedestal_baseDustStorage = 200
+	#Tier 1, Number of Ticks Reduced
+	#Range: > 0
+	t1_ticksReduced = 2
+	#Tier 1, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t1_speedInsertable = 5
+	#Tier 2, Number of Ticks Reduced
+	#Range: > 0
+	t2_ticksReduced = 4
+	#Tier 2, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t2_speedInsertable = 5
+	#Tier 3, Number of Ticks Reduced
+	#Range: > 0
+	t3_ticksReduced = 6
+	#Tier 3, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t3_speedInsertable = 5
+	#Tier 4, Number of Ticks Reduced
+	#Range: > 0
+	t4_ticksReduced = 8
+	#Tier 4, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t4_speedInsertable = 5
+	#Tier 1, Block Range Increase
+	#Range: > 0
+	t1_rangeIncrease = 2
+	#Tier 1, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t1_rangeInsertable = 4
+	#Tier 2, Block Range Increase
+	#Range: > 0
+	t2_rangeIncrease = 6
+	#Tier 2, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t2_rangeInsertable = 4
+	#Tier 3, Block Range Increase
+	#Range: > 0
+	t3_rangeIncrease = 8
+	#Tier 3, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t3_rangeInsertable = 5
+	#Tier 4, Block Range Increase
+	#Range: > 0
+	t4_rangeIncrease = 8
+	#Tier 4, Max Allowed To Insert of this Tier
+	#Range: 1 ~ 64
+	t4_rangeInsertable = 7
+
+#Global Upgrade Configs
+[Global_Upgrade_Configs]
+	#Allows the breaking of Block Entities
+	allowBreakEntities = false
+	#Restrict the Selectable Area Size based on the Upgrades AOE modifier
+	upgrade_toggleable_require_selectable_size = false
+	#The Base Distance from the Pedestal for Upgrade Block Selections to be 'In Range' 
+	#Range: > 1
+	upgrades_baseSelectionRange = 8
+
+#Material Generator Configs
+[Material_Generator_Configs]
+	#Material Generator Damages Inserted Tools
+	materialGenToolDamage = false
+
+#Import Upgrade Configs
+[Import_Upgrade_Configs]
+	#Base Import Speed (Item)
+	#Range: > 0
+	upgrade_import_base_item_rate = 4
+	#Base Import Speed (Fluid)
+	#Range: > 0
+	upgrade_import_base_fluid_rate = 1000
+	#Base Import Speed (Energy)
+	#Range: > 0
+	upgrade_import_base_energy_rate = 5000
+	#Base Import Speed (Exp)
+	#Range: > 0
+	upgrade_import_base_exp_rate = 7
+	#Base Import Speed (Dust)
+	#Range: > 0
+	upgrade_import_base_dust_rate = 200
+
+#Export Upgrade Configs
+[Export_Upgrade_Configs]
+	#Base Export Speed (Item)
+	#Range: > 0
+	upgrade_export_base_item_rate = 4
+	#Base Export Speed (Fluid)
+	#Range: > 0
+	upgrade_export_base_fluid_rate = 1000
+	#Base Export Speed (Energy)
+	#Range: > 0
+	upgrade_export_base_energy_rate = 5000
+	#Base Export Speed (Exp)
+	#Range: > 0
+	upgrade_export_base_exp_rate = 7
+	#Base Export Speed (Dust)
+	#Range: > 0
+	upgrade_export_base_dust_rate = 200
+
+#Magnet Configs
+[Magnet_Configs]
+	#Base RF cost per upgrade operation [Magnet]
+	#Range: > 0
+	upgrade_magnet_base_energy_cost = 0
+	#Energy Multiplier, total cost x multiplier [Magnet]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_magnet_base_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Magnet]
+	#Range: > 0
+	upgrade_magnet_base_xp_cost = 0
+	#XP Multiplier, total cost x multiplier [Magnet]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_magnet_base_xp_multiplier = 1.0
+	#Dust Color Required to do action [Magnet]
+	#Range: > -1
+	upgrade_magnet_base_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Magnet]
+	#Range: > 0
+	upgrade_magnet_base_dust_amount = 0
+	#Dust Amount Multiplier, total cost x multiplier [Magnet]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_magnet_base_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Magnet]
+	upgrade_magnet_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Magnet]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_magnet_selected_modifier = 1.0
+
+#Breaker Configs
+[Breaker_Configs]
+	#Block Breaker Damages Inserted Tools
+	blockBreakerDamageTools = false
+	#Base RF cost per upgrade operation [Block Breaker]
+	#Range: > 0
+	upgrade_blockbreaker_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Block Breaker]
+	upgrade_blockbreaker_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Block Breaker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockbreaker_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Block Breaker]
+	#Range: > 0
+	upgrade_blockbreaker_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Block Breaker]
+	upgrade_blockbreaker_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Block Breaker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockbreaker_xp_multiplier = 1.0
+	#Dust Color Required to do action [Block Breaker]
+	#Range: > -1
+	upgrade_blockbreaker_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Block Breaker]
+	#Range: > 0
+	upgrade_blockbreaker_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Block Breaker]
+	upgrade_blockbreaker_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Block Breaker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockbreaker_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Block Breaker]
+	upgrade_blockbreaker_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Block Breaker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockbreaker_selected_multiplier = 1.0
+
+#Placer Configs
+[Placer_Configs]
+	#Base RF cost per upgrade operation [Block Placer]
+	#Range: > 0
+	upgrade_blockplacer_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Block Placer]
+	upgrade_blockplacer_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Block Placer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockplacer_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Block Placer]
+	#Range: > 0
+	upgrade_blockplacer_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Block Placer]
+	upgrade_blockplacer_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Block Placer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockplacer_xp_multiplier = 1.0
+	#Dust Color Required to do action [Block Placer]
+	#Range: > -1
+	upgrade_blockplacer_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Block Placer]
+	#Range: > 0
+	upgrade_blockplacer_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Block Placer]
+	upgrade_blockplacer_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Block Placer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockplacer_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Block Placer]
+	upgrade_blockplacer_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Block Placer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_blockplacer_selected_multiplier = 1.0
+
+#Filler Configs
+[Filler_Configs]
+	#Base RF cost per upgrade operation [Filler]
+	#Range: > 0
+	upgrade_filler_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Filler]
+	upgrade_filler_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Filler]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_filler_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Filler]
+	#Range: > 0
+	upgrade_filler_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Filler]
+	upgrade_filler_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Filler]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_filler_xp_multiplier = 1.0
+	#Dust Color Required to do action [Filler]
+	#Range: > -1
+	upgrade_filler_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Filler]
+	#Range: > 0
+	upgrade_filler_based_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Filler]
+	upgrade_filler_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Filler]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_filler_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(placing a block or picking up items as an example) from pedestal [Filler]
+	upgrade_filler_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Filler]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_filler_selected_multiplier = 1.0
+	#Base Amount of Blocks the Filler will Place at a Time. [Filler]
+	#Range: > 0
+	upgrade_filler_base_blocks_placed = 4
+
+#Quarry Configs
+[Quarry_Configs]
+	#Quarry Damages Inserted Tools
+	quarryDamageTools = false
+	#Base RF cost per upgrade operation [Quarry]
+	#Range: > 0
+	upgrade_quarry_base_energy_cost = 500
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Quarry]
+	upgrade_quarry_energy_distance_multiplier = false
+	#Energy Multiplier, total cost x multiplier [Quarry]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_quarry_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Quarry]
+	#Range: > 0
+	upgrade_quarry_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Quarry]
+	upgrade_quarry_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Quarry]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_quarry_xp_multiplier = 1.0
+	#Dust Color Required to do action [Quarry]
+	#Range: > -1
+	upgrade_quarry_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Quarry]
+	#Range: > 0
+	upgrade_quarry_based_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Quarry]
+	upgrade_quarry_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Quarry]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_quarry_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Quarry]
+	upgrade_quarry_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Quarry]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_quarry_selected_multiplier = 1.0
+	#Base Amount of Blocks the Quarry will Mine at a Time. [Quarry]
+	#Range: > 0
+	upgrade_quarry_base_blocks_mined = 4
+
+#Chopper Configs
+[Chopper_Configs]
+	#Chopper Damages Inserted Tools
+	chopper_damages_tools = false
+	#Base RF cost per upgrade operation [Chopper]
+	#Range: > 0
+	upgrade_chopper_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Chopper]
+	upgrade_chopper_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Chopper]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_chopper_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Chopper]
+	#Range: > 0
+	upgrade_chopper_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Chopper]
+	upgrade_chopper_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Chopper]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_chopper_xp_multiplier = 1.0
+	#Dust Color Required to do action [Chopper]
+	#Range: > -1
+	upgrade_chopper_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Chopper]
+	#Range: > 0
+	upgrade_chopper_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Chopper]
+	upgrade_chopper_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Chopper]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_chopper_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Chopper]
+	upgrade_chopper_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Chopper]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_chopper_selected_multiplier = 1.0
+
+#Harvester Configs
+[Harvester_Configs]
+	#Harvester Damages Inserted Tools
+	harvester_damage_tools = false
+	#Base RF cost per upgrade operation [Harvester]
+	#Range: > 0
+	upgrade_harvester_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Harvester]
+	upgrade_harvester_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_harvester_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Harvester]
+	#Range: > 0
+	upgrade_harvester_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Harvester]
+	upgrade_harvester_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_harvester_xp_multiplier = 1.0
+	#Dust Color Required to do action [Harvester]
+	#Range: > -1
+	upgrade_harvester_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Harvester]
+	#Range: > 0
+	upgrade_harvester_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Harvester]
+	upgrade_harvester_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_harvester_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Harvester]
+	upgrade_harvester_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_harvester_selected_multiplier = 1.0
+
+#Planter Configs
+[Planter_Configs]
+	#Base RF cost per upgrade operation [Planter]
+	#Range: > 0
+	upgrade_planter_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Planter]
+	upgrade_planter_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Planter]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_planter_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Planter]
+	#Range: > 0
+	upgrade_planter_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Chopper]
+	upgrade_planter_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Planter]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_planter_xp_multiplier = 1.0
+	#Dust Color Required to do action [Planter]
+	#Range: > -1
+	upgrade_planter_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Planter]
+	#Range: > 0
+	upgrade_planter_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Planter]
+	upgrade_planter_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Planter]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_planter_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Planter]
+	upgrade_planter_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Planter]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_planter_selected_multiplier = 1.0
+
+#Fertilizer Configs
+[Fertilizer_Configs]
+	#Base RF cost per upgrade operation [Fertilizer]
+	#Range: > 0
+	upgrade_fertilizer_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Fertilizer]
+	upgrade_fertilizer_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Fertilizer]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	upgrade_fertilizer_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Fertilizer]
+	#Range: > 0
+	upgrade_fertilizer_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Fertilizer]
+	upgrade_fertilizer_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Fertilizer]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	upgrade_fertilizer_xp_multiplier = 1.0
+	#Dust Color Required to do action [Fertilizer]
+	#Range: > -1
+	upgrade_fertilizer_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Fertilizer]
+	#Range: > 0
+	upgrade_fertilizer_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Fertilizer]
+	upgrade_fertilizer_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Fertilizer]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	upgrade_fertilizer_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Fertilizer]
+	upgrade_fertilizer_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Fertilizer]
+	#Range: 0.0 ~ 1.7976931348623157E308
+	upgrade_fertilizer_selected_multiplier = 1.0
+
+#Hive Harvester Configs
+[Hive_Harvester_Configs]
+	#Hive Harvester Damages Inserted Tools
+	hiveharvester_damage_tools = false
+	#Base RF cost per upgrade operation [Hive Harvester]
+	#Range: > 0
+	upgrade_hiveharvester_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Hive Harvester]
+	upgrade_hiveharvester_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Hive Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_hiveharvester_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Hive Harvester]
+	#Range: > 0
+	upgrade_hiveharvester_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Hive Harvester]
+	upgrade_hiveharvester_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Hive Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_hiveharvester_xp_multiplier = 1.0
+	#Dust Color Required to do action [Hive Harvester]
+	#Range: > -1
+	upgrade_hiveharvester_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Hive Harvester]
+	#Range: > 0
+	upgrade_hiveharvester_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Hive Harvester]
+	upgrade_hiveharvester_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Hive Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_hiveharvester_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Hive Harvester]
+	upgrade_hiveharvester_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Hive Harvester]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_hiveharvester_selected_multiplier = 1.0
+
+#Dropper Configs
+[Dropper_Configs]
+	#Is Dropper Allowed to Drop Lightning
+	upgrade_dropper_can_drop_bolt = true
+	#Base Item Drop Amount 
+	#Range: > 0
+	upgrade_dropper_base_drop_item_amount = 1
+	#Base Fluid Drop Amount 
+	#Range: > 0
+	upgrade_dropper_base_drop_fluid_amount = 1000
+	#Base Energy Drop Amount 
+	#Range: > 0
+	upgrade_dropper_base_drop_energy_amount = 5000
+	#Base Exp Drop Amount 
+	#Range: > 0
+	upgrade_dropper_base_drop_exp_amount = 7
+	#Base Dust Drop Amount 
+	#Range: > 0
+	upgrade_dropper_base_drop_dust_amount = 200
+
+#Pump Configs
+[Pump_Configs]
+	#Base RF cost per upgrade operation [Pump]
+	#Range: > 0
+	upgrade_pump_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Pump]
+	upgrade_pump_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Pump]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_pump_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Pump]
+	#Range: > 0
+	upgrade_pump_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Pump]
+	upgrade_pump_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Pump]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_pump_xp_multiplier = 1.0
+	#Dust Color Required to do action [Pump]
+	#Range: > -1
+	upgrade_pump_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Pump]
+	#Range: > 0
+	upgrade_pump_based_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Pump]
+	upgrade_pump_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Pump]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_pump_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Pump]
+	upgrade_pump_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Pump]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_pump_selected_multiplier = 1.0
+	#Base Amount of Blocks the Quarry will Mine at a Time. [Pump]
+	#Range: > 0
+	upgrade_pump_base_blocks_mined = 4
+	#Remove water from Waterlogged Blocks [Pump]
+	upgrade_pump_waterlogged = false
+
+#Drain Configs
+[Drain_Configs]
+	#Base RF cost per upgrade operation [Drain]
+	#Range: > 0
+	upgrade_drain_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Drain]
+	upgrade_drain_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Drain]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_drain_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Drain]
+	#Range: > 0
+	upgrade_drain_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Drain]
+	upgrade_drain_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Drain]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_drain_xp_multiplier = 1.0
+	#Dust Color Required to do action [Drain]
+	#Range: > -1
+	upgrade_drain_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Drain]
+	#Range: > 0
+	upgrade_drain_based_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Drain]
+	upgrade_drain_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Drain]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_drain_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(placing a block or picking up items as an example) from pedestal [Drain]
+	upgrade_drain_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Drain]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_drain_selected_multiplier = 1.0
+	#Base Amount of Blocks the Drain will Place at a Time. [Drain]
+	#Range: > 0
+	upgrade_drain_base_blocks_placed = 4
+
+#Sheerer Configs
+[Sheerer_Configs]
+	#Sheerer Damages Inserted Tools
+	shearer_damages_tools = false
+	#Base RF cost per upgrade operation [Sheerer]
+	#Range: > 0
+	upgrade_sheerer_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Sheerer]
+	upgrade_sheerer_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Sheerer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_sheerer_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Sheerer]
+	#Range: > 0
+	upgrade_sheerer_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Sheerer]
+	upgrade_sheerer_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Sheerer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_sheerer_xp_multiplier = 1.0
+	#Dust Color Required to do action [Sheerer]
+	#Range: > -1
+	upgrade_sheerer_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Sheerer]
+	#Range: > 0
+	upgrade_sheerer_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Sheerer]
+	upgrade_sheerer_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Sheerer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_sheerer_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Sheerer]
+	upgrade_sheerer_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Sheerer]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_sheerer_selected_multiplier = 1.0
+
+#Milker Configs
+[Milker_Configs]
+	#Milker Damages Inserted Tools
+	milker_damages_tools = false
+	#Base RF cost per upgrade operation [Milker]
+	#Range: > 0
+	upgrade_milker_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Milker]
+	upgrade_milker_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Milker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_milker_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Milker]
+	#Range: > 0
+	upgrade_milker_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Milker]
+	upgrade_milker_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Milker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_milker_xp_multiplier = 1.0
+	#Dust Color Required to do action [Milker]
+	#Range: > -1
+	upgrade_milker_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Milker]
+	#Range: > 0
+	upgrade_milker_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Milker]
+	upgrade_milker_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Milker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_milker_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Milker]
+	upgrade_milker_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Milker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_milker_selected_multiplier = 1.0
+
+#Mob Breeder Configs
+[Mob_Breeder_Configs]
+	#Mob Breeder Damages Inserted Tools
+	breeder_damages_tools = false
+	#Base RF cost per upgrade operation [Mob Breeder]
+	#Range: > 0
+	upgrade_breeder_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Mob Breeder]
+	upgrade_breeder_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Mob Breeder]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_breeder_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Mob Breeder]
+	#Range: > 0
+	upgrade_breeder_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Mob Breeder]
+	upgrade_breeder_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Mob Breeder]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_breeder_xp_multiplier = 1.0
+	#Dust Color Required to do action [Mob Breeder]
+	#Range: > -1
+	upgrade_breeder_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Mob Breeder]
+	#Range: > 0
+	upgrade_breeder_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Mob Breeder]
+	upgrade_breeder_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Mob Breeder]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_breeder_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Mob Breeder]
+	upgrade_breeder_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Mob Breeder]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_breeder_selected_multiplier = 1.0
+	#Checks for Entities in the Selected Area, if they exceed an amount, itll halt all breeding operations.
+	upgrade_breeder_has_limit = false
+	#If the limiter is true, this is the entity count limit before it stop breeding
+	#Range: > 1
+	upgrade_breeder_limit_count = 20
+
+#Attacker Configs
+[Attacker_Configs]
+	#Attacker Damages Inserted Tools
+	attacker_damages_tools = false
+	#Base RF cost per upgrade operation [Attacker]
+	#Range: > 0
+	upgrade_attacker_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Attacker]
+	upgrade_attacker_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Attacker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_attacker_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Attacker]
+	#Range: > 0
+	upgrade_attacker_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Attacker]
+	upgrade_attacker_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Attacker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_attacker_xp_multiplier = 1.0
+	#Dust Color Required to do action [Attacker]
+	#Range: > -1
+	upgrade_attacker_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Attacker]
+	#Range: > 0
+	upgrade_attacker_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Attacker]
+	upgrade_attacker_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Attacker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_attacker_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Attacker]
+	upgrade_attacker_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Attacker]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_attacker_selected_multiplier = 1.0
+
+#Fan Configs
+[Fan_Configs]
+	#Base RF cost per upgrade operation [Fan]
+	#Range: > 0
+	upgrade_fan_base_energy_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Fan]
+	upgrade_fan_energy_distance_multiplier = true
+	#Energy Multiplier, total cost x multiplier [Fan]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_fan_energy_multiplier = 1.0
+	#Base XP cost per upgrade operation [Fan]
+	#Range: > 0
+	upgrade_fan_base_xp_cost = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Fan]
+	upgrade_fan_xp_distance_multiplier = true
+	#XP Multiplier, total cost x multiplier [Fan]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_fan_xp_multiplier = 1.0
+	#Dust Color Required to do action [Fan]
+	#Range: > -1
+	upgrade_fan_dust_color = -1
+	#Base Dust amount needed per upgrade operation [Fan]
+	#Range: > 0
+	upgrade_fan_base_dust_amount = 0
+	#Distance of Block Broken Used as a modifier (Requires selected_allowed = True) [Fan]
+	upgrade_fan_dust_distance_multiplier = true
+	#Dust Amount Multiplier, total cost x multiplier [Fan]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_fan_dust_multiplier = 1.0
+	#Additional Modifier based on distance of work(breaking a block or picking up items as an example) from pedestal [Fan]
+	upgrade_fan_selected_allowed = false
+	#Modifier Amount, Distance x Modifier + Other 'Energy' BaseCost (this is the 'total cost' formula) [Fan]
+	#Range: 0.0 ~ 2.147483647E9
+	upgrade_fan_selected_multiplier = 1.0
+
+#Smelter Configs
+[Smelter_Configs]
+	#Base RF cost per tick
+	#Range: > 0
+	upgrade_smelter_base_energy_cost = 20
+
+#BlastFurnace Configs
+[BlastFurnace_Configs]
+	#Base RF cost per tick
+	#Range: > 0
+	upgrade_blast_base_energy_cost = 20
+
+#Smoking Configs
+[Smoking_Configs]
+	#Base RF cost per tick
+	#Range: > 0
+	upgrade_smoker_base_energy_cost = 20
+
+#RF Generator Configs
+[RFGenerator_Configs]
+	#Base RF generation per tick
+	#Range: > 0
+	upgrade_generator_base_energy_production = 20
+
+#Bulk Storage Options
+[Bulk_Storage]
+	#Time (In Seconds) for items to Discharge from Bulk Storage (Item)
+	#Range: > 1
+	bulkstorage_item_discharge_time = 5
+	#Weather bulk storage discharge is allowed to trigger or not (Item)
+	bulkstorage_item_discharge_toggle = true
+	#Set Max Item Stacks Allowed in a Package
+	#Range: > 1
+	bulkstorage_item_max_stacks = 54
+	#Time (In Seconds) for energy to Discharge from Bulk Storage (Fluid)
+	#Range: > 1
+	bulkstorage_fluid_discharge_time = 5
+	#Weather bulk storage discharge is allowed to trigger or not (Fluid)
+	bulkstorage_fluid_discharge_toggle = true
+	#Time (In Seconds) for energy to Discharge from Bulk Storage (Energy)
+	#Range: > 1
+	bulkstorage_energy_discharge_time = 5
+	#Weather bulk storage discharge is allowed to trigger or not (Energy)
+	bulkstorage_energy_discharge_toggle = true
+	#Time (In Seconds) for energy to Discharge from Bulk Storage (XP)
+	#Range: > 1
+	bulkstorage_xp_discharge_time = 5
+	#Weather bulk storage discharge is allowed to trigger or not (XP)
+	bulkstorage_xp_discharge_toggle = true
+	#Time (In Seconds) for energy to Discharge from Bulk Storage (Dust)
+	#Range: > 1
+	bulkstorage_dust_discharge_time = 5
+	#Weather bulk storage discharge is allowed to trigger or not (Dust)
+	bulkstorage_dust_discharge_toggle = true
+
