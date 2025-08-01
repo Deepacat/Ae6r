@@ -1,5 +1,5 @@
 ServerEvents.recipes(e => {
-    function lightning(id, inputs, posts) {
+    function lightning(id, inputs, posts, comment) {
         // lychee apparently doesn't do itemstacks, only ingredient, so I have to add these stupid items several times to replicate it
         // it also doesn't like having over 27 inputs
         let finalInputs = []
@@ -18,11 +18,15 @@ ServerEvents.recipes(e => {
             return
         }
 
-        e.custom({
+        let recipe = {
             type: "lychee:lightning_channeling",
             item_in: finalInputs,
             post: posts
-        }).id('kubejs:lychee/lightning/' + id)
+        }
+
+        if (comment) { recipe.comment = comment }
+
+        e.custom(recipe).id('kubejs:lychee/lightning/' + id)
     }
     /*"contextual": {
         "type": "chance",

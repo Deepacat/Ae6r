@@ -12,7 +12,7 @@
 		}
 	}
 	id: "0000000000000CB0"
-	order_index: 6
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -1763,35 +1763,6 @@
 			}]
 			x: 0.5d
 			y: 7.0d
-		}
-		{
-			dependencies: ["0000000000000D9A"]
-			description: [
-				""
-				"The Foliot Janitor pairs nicely with the crusher spirit. This spirit picks up items from the ground and deposits them in to a set inventory."
-				"Shift right click the spirit for filtering options!"
-			]
-			icon: "cfm:oak_kitchen_sink_light"
-			id: "55DC3E0B9FA8AA4F"
-			rewards: [{
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
-				icon: "kubejs:farmers_delight"
-				id: "63C1F20FAAC09395"
-				title: "Farmer's Delight"
-				type: "command"
-			}]
-			shape: "hexagon"
-			subtitle: "My job. Toilets 'n boilers, boilers 'n toilets. Plus that one boilin' toilet. Fire me if'n you dare."
-			tasks: [{
-				advancement: "occultism:occultism/summon_foliot_cleaner"
-				criterion: ""
-				icon: "occultism:brush"
-				id: "326131CF6E83F4CC"
-				title: "Summon Foliot Janitor"
-				type: "advancement"
-			}]
-			x: 8.0d
-			y: 0.5d
 		}
 		{
 			dependencies: ["0000000000000D9C"]

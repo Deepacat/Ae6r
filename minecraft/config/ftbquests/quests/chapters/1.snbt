@@ -48,7 +48,7 @@
 				}
 				{
 					id: "05DB92A0E663893C"
-					item: "emendatus:zinc_dust"
+					item: "emendatus:invar_dust"
 					type: "item"
 				}
 			]
@@ -78,10 +78,18 @@
 		}
 		{
 			dependencies: ["09CC73450B191D9F"]
+			icon: "thermal:lightning_charge"
 			id: "586CC55F42AABB1F"
 			tasks: [{
-				id: "2492A7DE79E16AC1"
-				item: "powah:charged_snowball"
+				id: "353D6044614A3436"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(item(powah:charged_snowball)item(archers_paradox:lightning_arrow)item(thermal:lightning_charge)item(thermal:lightning_grenade)item(minecraft:lightning_rod)item(artifacts:shock_pendant)nbt(fuzzy:{Potion:\"ars_elemental:shock_potion_long\"}))"
+					}
+				}
+				title: "Lightning producing item"
 				type: "item"
 			}]
 			x: 1.5d
@@ -283,6 +291,7 @@
 		}
 		{
 			dependencies: ["63C35E379745481B"]
+			description: [""]
 			icon: "embers:ember_activator"
 			id: "6D72206EAEBA46E0"
 			tasks: [
@@ -330,6 +339,7 @@
 		{
 			dependencies: ["3FB5BA7D7B54B852"]
 			id: "2E7956FE5FFAF5C6"
+			optional: true
 			shape: "hexagon"
 			tasks: [{
 				id: "0F0C5BBA20503F7B"
@@ -347,6 +357,7 @@
 			tasks: [{
 				id: "1EE321AAD2ACE650"
 				item: "tconstruct:smeltery_controller"
+				optional_task: true
 				type: "item"
 			}]
 			x: -1.0d
@@ -675,7 +686,7 @@
 				}
 			]
 			x: -2.5d
-			y: 2.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["00AA0E1E061988B5"]
@@ -704,6 +715,13 @@
 			dependencies: ["0E9DE9C7AD78C8A6"]
 			icon: "create:stock_ticker"
 			id: "48AD6CD8CFF92F93"
+			optional: true
+			shape: "hexagon"
+			tasks: [{
+				id: "7ABF9092A783EC47"
+				item: "create:stock_ticker"
+				type: "item"
+			}]
 			x: -2.0d
 			y: -0.5d
 		}
@@ -713,6 +731,7 @@
 				"63C35E379745481B"
 			]
 			id: "7678EEC915A4748F"
+			optional: true
 			shape: "hexagon"
 			tasks: [{
 				id: "6C9CF12513742889"
@@ -755,12 +774,12 @@
 				type: "item"
 			}]
 			x: -4.5d
-			y: 2.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["6F2EF58A8DC63D5F"]
-			icon: "thermal:machine_refinery"
 			id: "2EF4805DA973D0CA"
+			shape: "circle"
 			tasks: [
 				{
 					icon: "thermal:machine_refinery"
@@ -775,18 +794,19 @@
 				}
 			]
 			x: -4.0d
-			y: 3.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["7829357FC39DE238"]
 			id: "74C7C15846895392"
+			shape: "circle"
 			tasks: [{
 				id: "1D7E4FAB5E23DC04"
 				item: "emendatus:steel_ingot"
 				type: "item"
 			}]
 			x: -3.0d
-			y: 3.5d
+			y: 4.0d
 		}
 		{
 			dependencies: [
@@ -794,13 +814,14 @@
 				"74C7C15846895392"
 			]
 			id: "167BE86E3DE69218"
+			shape: "circle"
 			tasks: [{
 				id: "4F3AC136FB6CFD83"
 				item: "kubejs:superheated_steel_ingot"
 				type: "item"
 			}]
 			x: -3.5d
-			y: 4.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["6F2EF58A8DC63D5F"]
@@ -812,11 +833,12 @@
 				type: "item"
 			}]
 			x: -5.0d
-			y: 3.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["167BE86E3DE69218"]
 			id: "769C15E5DA48B038"
+			optional: true
 			shape: "hexagon"
 			tasks: [{
 				id: "4D24B2D0F82A5561"
@@ -824,19 +846,26 @@
 				type: "item"
 			}]
 			x: -2.5d
-			y: 4.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["167BE86E3DE69218"]
 			id: "46483EEAF200D273"
 			shape: "pentagon"
-			tasks: [{
-				id: "0202AD0BABDC9051"
-				item: "pneumaticcraft:ingot_iron_compressed"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0202AD0BABDC9051"
+					item: "pneumaticcraft:ingot_iron_compressed"
+					type: "item"
+				}
+				{
+					id: "54242193974607D6"
+					item: "kubejs:hot_compressed_iron_ingot"
+					type: "item"
+				}
+			]
 			x: -3.5d
-			y: 6.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["19244793FD02F7FB"]

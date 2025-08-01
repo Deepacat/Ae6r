@@ -1,0 +1,51 @@
+
+[damage-particles]
+	#Whether the pop-up particles when a mob is injured or healed are enabled.
+	damage_particles_enabled = true
+	#The relative size of damage particles.
+	#Range: 0.1 ~ 10.0
+	damage_particle_size = 1.0
+	#Whether the numbers that appear as pop-up particles are outlined in a darker color.
+	damage_particle_outline = true
+
+[hud-indicator]
+	#Whether the hud damage indicator is enabled.
+	hud_indicator_enabled = true
+	#How far away (in blocks) entities can be to appear in the hud health indicator
+	#Range: 3.0 ~ 10000.0
+	max_distance = 100.0
+	#Whether health appears with a more visible yellow/black scheme.
+	colorblind_health_bar = false
+	#Whether health appears with a decimal point.
+	health_decimals = true
+	#Whether health appears appears as a | (true) or / (false).
+	health_separator = true
+	#How long after mousing over an entity the hud damage indicator remains on screen, in game ticks.
+	#Range: 0 ~ 1200
+	hud_linger_time = 30
+	#The relative size of hud indicator.
+	#Range: 0.0 ~ 10.0
+	hud_indicator_size = 0.75
+	#How opaque the background of the hud indicator is.
+	#Range: 0.0 ~ 10.0
+	hud_indicator_background_opacity = 0.75
+	#True if the hud indicator appears on the left side of the screen, false for right.
+	hud_indicator_align_left = true
+	#True if the hud indicator appears on the top of the screen, false for bottom.
+	hud_indicator_align_top = true
+	#How many pixels from the left side of the screen the hud indicator is.
+	#Range: > -2147483648
+	hud_indicator_position_x = 10
+	#How many pixels from the top of the screen the hud indicator is.
+	#Range: > -2147483648
+	hud_indicator_position_y = 10
+	#The size in pixels a usual entity should render as in the hud indicator.
+	#Range: 0.0 ~ 2000.0
+	hud_entity_size = 38.0
+	#Whether the name of the entity in the hud indicator should be outlined.
+	hud_name_text_outline = false
+	#Whether the health of the entity in the hud indicator should be outlined.
+	hud_health_text_outline = false
+	#List of all entity_types to just render as a model instead of with entity context. add to this if an entity is rendering strangely.
+	hud_old_render_entities = ["alexsmobs:giant_squid"]
+

@@ -5,7 +5,7 @@
 	group: "5A8B89F87F77CF4C"
 	icon: "eidolon:unholy_symbol"
 	id: "0000000000000E7F"
-	order_index: 4
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{

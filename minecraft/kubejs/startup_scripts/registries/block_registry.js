@@ -1,5 +1,6 @@
 StartupEvents.registry('block', event => {
     const blocks = [
+        { name: 'warding_stone', material: 'stone', hardness: 2 },
         { name: 'firmament', material: 'stone', hardness: 2 },
         { name: 'superheated_steel_block', material: 'metal', hardness: 5 },
         { name: 'hot_compressed_metal_block', material: 'metal', hardness: 5 },

@@ -26,6 +26,8 @@ ServerEvents.recipes(e => {
     ]
 
     const recipeFilterRemovals = [
+        { type: 'eidolon:worktable' },
+        { type: 'eidolon:crucible' },
         { output: 'apotheosis:hellshelf', id: 'apotheosis:hellshelf' },
         { output: 'apotheosis:seashelf', id: 'apotheosis:seashelf' },
         { output: 'apotheosis:endshelf', id: 'apotheosis:endshelf' },
@@ -149,6 +151,6 @@ ServerEvents.recipes(e => {
     })
 
     recipeFilterRemovals.forEach((output) => {
-        e.remove({ output: output })
+        e.remove(output)
     })
 })

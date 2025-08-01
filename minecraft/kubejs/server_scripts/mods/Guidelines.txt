@@ -1,5 +1,5 @@
 All mod folders must match their mod id
-Each file should match a recipe types id, with mod namespace before it
+Each file should match a recipe types id
 
 Before a recipe is added, if it is to an item with an existing recipe that is to be removed,
 and the recipe is not to be removed by a regex or recipe filter, it should be removed right 

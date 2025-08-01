@@ -2,10 +2,13 @@ StartupEvents.registry('item', event => {
     const generalItems = [
         // placeholder item
         'replaceme',
+        
         // removed items from 1.16 e6e that need to be remade 
         'blaze_fiber', // ars
         'end_fiber',
         'advanced_pcb', // pnc
+        'rainbow_rune', // quark
+
         // lootboxes
         'common_lootbox',
         'rare_lootbox',
@@ -20,6 +23,7 @@ StartupEvents.registry('item', event => {
         'quintuple_alfsteel_ingot',
         'altered_recipe_indicator',
         'disabled_recipe_indicator',
+
         // misc ingredients
         'observatory_lens',
         'coarse_lapis_lazuli_compound',
@@ -55,6 +59,7 @@ StartupEvents.registry('item', event => {
         'cpu_core_mk_1026',
         'cpu_core_eg_28222',
         'cpu_core_as_81221',
+
         // mastery shards
         'automation_mastery_shard',
         'engineering_mastery_shard',
@@ -68,6 +73,7 @@ StartupEvents.registry('item', event => {
         'ritual_mastery_shard',
         'aura_mastery_shard',
         'culinary_mastery_shard',
+
         // mastery tokens
         'automation_mastery_token',
         'engineering_mastery_token',
@@ -81,11 +87,13 @@ StartupEvents.registry('item', event => {
         'ritual_mastery_token',
         'aura_mastery_token',
         'culinary_mastery_token',
+
         // worldshaper finale
         'worldshaper_handle',
         'worldshaper_cog',
         'worldshaper_barrel',
         'laputian_ingot',
+
         // partial items for create sequences
         'partial_alloybrick',
         'partial_blastbrick',
