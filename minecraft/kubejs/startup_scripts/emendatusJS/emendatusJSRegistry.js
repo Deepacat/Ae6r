@@ -34,11 +34,11 @@ StartupEvents.registry('block', e => {
             if (replaceableId == undefined) { continue }
             if (matObj[1].delFlags.includes(blockType)) { continue }
             let blockId = `emendatus:${replaceableId}`
+            emDbg(`Registering ${blockId} with texture ${texturePath}`)
             // registering ores
             if (blockType == 'ore') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matObj[0]}`
                 // if (matObj[1].type == 'gem') { texturePath = texturePath + '_sample' }
-                emDbg(`Registering ${blockId} with texture ${texturePath}`)
                 let ore = e.create(blockId)
                 ores.push(ore)
                 ore.soundType('stone')
@@ -66,12 +66,24 @@ StartupEvents.registry('block', e => {
                 }
                 continue
             }
+            if (blockType == 'raw_ore') {
+                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw/${matObj[0]}`
+                e.create(blockId)
+                    .soundType('stone')
+                    .textureAll(texturePath)
+                    .hardness(5)
+                    .tagBlock('forge:storage_blocks')
+                    .tagBlock(`forge:storage_blocks/raw_${matObj[0]}`)
+                continue
+            }
+            // else generation should just be full storage blocks
             let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
-            emDbg(`Registering ${blockId} with texture ${texturePath}`)
             e.create(blockId)
                 .soundType('metal')
                 .textureAll(texturePath)
                 .hardness(5)
+                .tagBlock('forge:storage_blocks')
+                .tagBlock(`forge:storage_blocks/${matObj[0]}`)
         }
     }
 })

@@ -1,9 +1,9 @@
 // enable debug logging, prints alot to console
-global.emenDebug = false
+global.emenDebug = true
 
 // enable regenerating tag data after a /reload
 // probably keep this on for pack dev, disable for releases (ensure it works first)
-global.emenDatagen = false
+global.emenDatagen = true
 
 /*
 hide all items in recipe viewer that don't replace existing items in your modpack.
@@ -18,32 +18,32 @@ global.emenHideNonReplacing = true
 // (removes other mods items from tags and hides them)
 global.emenUnifyReplaces = true
 
-// ['replaceable string', 'flag id']
-// @ is used as a placeholder to be replaced by a material name by global.emenGetTypeReplace
-global.emendatus_item_types = [
-    ['@_nugget', 'nugget'],
-    ['@_ingot', 'ingot'],
-    ['@_dust', 'dust'],
-    ['@_plate', 'plate'],
-    ['@_rod', 'rod'],
-    ['@_gear', 'gear'],
-    ['@_gem', 'gem'],
-    ['@_gravel', 'gravel'],
-    ['@_dirty_dust', 'dirty_dust'],
-    ['@_fragment', 'fragment'],
-    ['@_shard', 'shard'],
-    ['@_crystal', 'crystal'],
-    ['@_clump', 'clump'],
-    ['@_cluster_shard', 'cluster_shard'],
-    ['crushed_@_ore', 'crushed_ore'],
-    ['raw_@', 'raw_ore']
-]
+global.emendatus_item_types = {
+    nugget: { replacer: '@_nugget', tag: 'nuggets/' },
+    ingot: { replacer: '@_ingot', tag: 'ingots/' },
+    dust: { replacer: '@_dust', tag: 'dusts/' },
+    plate: { replacer: '@_plate', tag: 'plates/' },
+    rod: { replacer: '@_rod', tag: 'rods/' },
+    gear: { replacer: '@_gear', tag: 'gears/' },
+    gem: { replacer: '@_gem', tag: 'gems/' },
+    gravel: { replacer: '@_gravel', tag: 'gravels/' },
+    dirty_dust: { replacer: '@_dirty_dust', tag: 'dirty_dusts/' },
+    fragment: { replacer: '@_fragment', tag: 'fragments/' },
+    shard: { replacer: '@_shard', tag: 'shards/' },
+    crystal: { replacer: '@_crystal', tag: 'crystals/' },
+    clump: { replacer: '@_clump', tag: 'clumps/' },
+    cluster_shard: { replacer: '@_cluster_shard', tag: 'cluster_shards/' },
+    crushed_ore: { replacer: 'crushed_@_ore', tag: 'crushed_ores/' },
+    raw_ore: { replacer: 'raw_@', tag: 'raw_materials/' }
+}
 
-global.emendatus_block_types = [
-    ['@_block', 'storage_block'],
-    ['@_ore', 'ore'],
-    ['raw_@_block', 'raw_block']
-]
+global.emendatus_block_types = {
+    storage_block: { replacer: '@_block', tag: 'storage_blocks/' },
+    ore: { replacer: '@_ore', tag: 'ores/' },
+    raw_block: { replacer: 'raw_@_block', tag: 'storage_blocks/raw_' }
+}
+
+global.emendatus_all_types = Object.assign(global.emendatus_item_types, global.emendatus_block_types)
 
 /* 
     obj[0] = gets the name of material object
@@ -130,29 +130,33 @@ global.emendatus_mats = {
 // gets the replaceable string for a typeid, then replaces the '@' with the material name
 // since some item type ids have diff formatting than id:material_type e.g. iron_ingot vs crushed_iron_ore
 global.emenGetTypeReplace = function emendatusGetTypeReplacementString(typeIn, matNameIn, registryType) {
-    let typesToCheck = []
+    let typesToCheck = {}
+    emDbg(`getting type replace for ${typeIn} and ${matNameIn}`)
     switch (registryType) {
         case 'block':
-            // emDbg(`getting block types for ${matNameIn}`)
+            emDbg(`getting block types for ${matNameIn}`)
             typesToCheck = global.emendatus_block_types
             break
         case 'item':
-            // emDbg(`getting item types for ${matNameIn}`)
+            emDbg(`getting item types for ${matNameIn}`)
             typesToCheck = global.emendatus_item_types
             break
         case 'all':
-            // emDbg(`getting all types for ${matNameIn}`)
-            typesToCheck = global.emendatus_item_types.concat(global.emendatus_block_types)
+            emDbg(`getting all types for ${matNameIn}`)
+            typesToCheck = global.emendatus_all_types
             break
         default:
-            // emDbg(`defaulted to item types for ${matNameIn}`)
+            emDbg(`defaulted to item types for ${matNameIn}`)
             typesToCheck = global.emendatus_item_types
     }
-    for (let i = 0; i < typesToCheck.length; i++) {
-        if (typesToCheck[i][1] == typeIn) {
+    for (let obj of Object.entries(typesToCheck)) {
+        if (obj[0] == typeIn) {
+            emDbg(obj)
+            emDbg(`replacer: ${obj[1].replacer}`)
             // if theres no match for a material, like a item checking for storage_blocks flag or something
             // itll just return undefined and break registries, so make sure that uses check for undefined
-            let a = typesToCheck[i][0].replace('@', matNameIn)
+            let a = obj[1].replacer.replace('@', matNameIn)
+            emDbg(`returning ${a} for type replace`)
             return a
         }
     }

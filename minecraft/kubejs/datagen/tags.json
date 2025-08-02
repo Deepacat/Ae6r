@@ -533,8 +533,7 @@
 		"rod",
 		"dirty_dust",
 		"dust",
-		"storage_block",
-		"ore"
+		"storage_block"
 	],
 	"fluorite": [
 		"storage_block",
@@ -597,9 +596,11 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"shard",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"iridium": [
 		"clump",
@@ -628,8 +629,10 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"nickel": [
 		"clump",
@@ -643,9 +646,11 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"shard",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"platinum": [
 		"clump",
@@ -674,9 +679,11 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"shard",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"tin": [
 		"clump",
@@ -690,8 +697,10 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"titanium": [
 		"clump",
@@ -735,8 +744,10 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"zinc": [
 		"clump",
@@ -750,9 +761,11 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"shard",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"cobalt": [
 		"clump",
@@ -766,9 +779,11 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"shard",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"falsite": [
 		"clump",
@@ -812,8 +827,10 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	],
 	"ventium": [
 		"clump",
@@ -842,8 +859,10 @@
 		"nugget",
 		"plate",
 		"rod",
+		"raw_ore",
 		"shard",
 		"storage_block",
-		"ore"
+		"ore",
+		"raw_block"
 	]
 }
