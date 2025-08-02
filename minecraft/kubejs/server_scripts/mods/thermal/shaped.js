@@ -310,8 +310,8 @@ ServerEvents.recipes(e => {
         'DED'
     ], {
         A: 'architects_palette:abyssaline_lamp',
-        B: '#botania:runes/midgard',
-        C: '#botanypots:botany_pots/simple',
+        B: 'mythicbotany:midgard_rune',
+        C: '#botanypots:basic_botany_pots',
         D: '#forge:gears/lumium',
         E: '#industrialforegoing:machine_frame/supreme'
     })
@@ -401,7 +401,7 @@ ServerEvents.recipes(e => {
         'BCB',
         'DED'
     ], {
-        A: 'environmental:kiln',
+        A: 'minecraft:blast_furnace',
         B: 'immersiveengineering:wirecoil_redstone',
         C: 'thermal:machine_frame',
         D: '#forge:gears/invar',
@@ -418,7 +418,7 @@ ServerEvents.recipes(e => {
         B: 'ars_nouveau:greater_experience_gem',
         C: 'ars_nouveau:enchanting_apparatus',
         D: '#forge:gears/cobalt',
-        E: '#botania:runes/mana'
+        E: 'botania:rune_mana'
     })
 
     e.remove({ id: 'thermal:dynamo_gourmand' })
