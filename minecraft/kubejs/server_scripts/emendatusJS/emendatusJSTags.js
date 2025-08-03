@@ -16,8 +16,6 @@ ServerEvents.tags('item', event => {
         console.log('Datagen is running for tags')
     }
 
-    // matObj[0] = material name,
-    // matObj[1] = material obj
     for (let matObj of Object.entries(global.emendatus_mats)) {
         dataObj[matObj[0]] = []
 
@@ -44,7 +42,7 @@ ServerEvents.tags('item', event => {
             }
         }
     }
-    if (dataGen) {
+    if (dataGen && global.emenDatagen) {
         console.log('Saving tag data for emendatus datagen')
         JsonIO.write('kubejs/datagen/tags.json', dataObj)
     }
