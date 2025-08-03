@@ -16,11 +16,11 @@ StartupEvents.registry('item', e => {
 
         for (let itemType of matTypes) {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName)
+            let itemId = `emendatus:${replaceableId}`
 
             if (replaceableId == undefined) { continue }
             if (matObj[1].delFlags.includes(itemType)) { continue }
 
-            let itemId = `emendatus:${replaceableId}`
             let texturePath = `kubejs:item/emendatus/${matObj[1].type}/${replaceableId}`
 
             emDbg(`Registering ${itemId} with texture ${texturePath}`)
@@ -45,11 +45,11 @@ StartupEvents.registry('block', e => {
 
         for (let blockType of matTypes) {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockType].replacer, matName)
+            let blockId = `emendatus:${replaceableId}`
 
             if (replaceableId == undefined) { continue }
             if (matObj[1].delFlags.includes(blockType)) { continue }
 
-            let blockId = `emendatus:${replaceableId}`
             emDbg(`Registering ${blockId} with texture ${texturePath}`)
             // registering ores
             if (blockType == 'ore') {
