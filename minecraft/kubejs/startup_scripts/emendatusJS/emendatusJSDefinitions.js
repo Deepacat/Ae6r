@@ -13,7 +13,7 @@ global.emendatus_mats = {
     gold: { type: 'vanilla', toolLv: 'iron', isVanilla: true, addFlags: [], delFlags: ['cluster_shard'] },
     iron: { type: 'vanilla', toolLv: 'stone', isVanilla: true, addFlags: [], delFlags: ['cluster_shard'] },
     lapis: { type: 'vanilla', toolLv: 'stone', isVanilla: true, addFlags: [], delFlags: [] },
-    netherite: { type: 'vanilla', toolLv: 'diamond', isVanilla: true, addFlags: [], delFlags: ['clump', 'dirty_dust', 'crystal', 'shard', 'crushed_ore', 'cluster_shard'] },
+    netherite: { type: 'vanilla', toolLv: 'diamond', isVanilla: true, addFlags: [], delFlags: ['clump', 'dirty_dust', 'crystal', 'shard', 'crushed_ore', 'cluster_shard', 'ore'] },
     quartz: { type: 'vanilla', toolLv: 'stone', isVanilla: true, addFlags: [], delFlags: [] },
     redstone: { type: 'vanilla', toolLv: 'iron', isVanilla: true, addFlags: [], delFlags: ['dust'] },
     // - - alloy - - 
@@ -51,7 +51,7 @@ global.emendatus_mats = {
     sapphire: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },
     sulfur: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },
     aquite: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },
-    source: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },
+    arcane: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },
     carminite: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: ['dirty_dust'] },
     certus_quartz: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },
     // charged_certus_quartz: { type: 'gem', toolLv: 'stone', addFlags: [], delFlags: [] },

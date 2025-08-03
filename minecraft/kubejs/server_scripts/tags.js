@@ -20,5 +20,5 @@ ServerEvents.tags('item', e => {
     e.add('forge:rods/blaze', 'minecraft:blaze_rod')
     e.add('forge:rods/blizz', 'thermal:blizz_rod')
 
-    e.add('forge:gems/source_diamond', ['arsnouveau:source_gem', 'minecraft:diamond'])
+    e.add('forge:gems/source_diamond', ['ars_nouveau:source_gem', 'minecraft:diamond'])
 })

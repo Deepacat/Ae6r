@@ -35,9 +35,10 @@ ServerEvents.tags('item', event => {
             }
 
             // check tag for existing items from other mods
-            let checkExisting = dataGen && Ingredient.of(`#${tagId}`)
-                .itemIds.toArray()[0] != ('minecraft:barrier' || /emendatus:/)
-            if (checkExisting) {
+            let existingItems = Ingredient.of(`#${tagId}`).itemIds.toArray()
+            let checkExisting = (existingItems.length > 0 && !existingItems[0].includes('emendatus'))
+            
+            if (checkExisting && dataGen) {
                 dataObj[matName].push(itemType)
             }
         }
