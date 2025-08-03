@@ -20,15 +20,16 @@ ServerEvents.tags('item', event => {
     // matObj[1] = material obj
     for (let matObj of Object.entries(global.emendatus_mats)) {
         dataObj[matObj[0]] = []
-        // itemType[0] = replaceableId,
-        //  itemType[1] = matType
-        let matTypes = global.gbfpt(matObj[1].type)[0]
-            .concat(global.gbfpt(matObj[1].type)[1])
+
+        let matName = matObj[0]
+        let matType = matObj[1].type
+        let matTypesToUse = global.emendatus_base_flags[matType].item
+            .concat(global.emendatus_base_flags[matType].block)
             .concat(matObj[1].addFlags)
 
-        for (let itemType of matTypes) {
+        for (let itemType of matTypesToUse) {
             let tagId = `forge:${global.emendatus_all_types[itemType].tag}${matObj[0]}`
-            let itemId = `emendatus:${global.emenGetTypeReplace(itemType, matObj[0], 'all')}`
+            let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName, 'all')}`
             if (matObj[1].delFlags.includes(itemType)) { continue }
             if (global.emenHideNonReplacing) {
                 // emDbg(`Adding hidden tag to ${itemId}`)
@@ -39,7 +40,7 @@ ServerEvents.tags('item', event => {
             let checkExisting = dataGen && Ingredient.of(`#${tagId}`)
                 .itemIds.toArray()[0] != ('minecraft:barrier' || /emendatus:/)
             if (checkExisting) {
-                dataObj[matObj[0]].push(itemType)
+                dataObj[matName].push(itemType)
             }
         }
     }
@@ -51,13 +52,9 @@ ServerEvents.tags('item', event => {
     let data = JsonIO.read('kubejs/datagen/tags.json')
     for (let itemMat in data) {
         for (let itemType of data[itemMat]) {
-            let tagId = `forge:${global.emendatus_all_types[itemType].tag}${itemMat}`
-            let itemId = `emendatus:${global.emenGetTypeReplace(itemType, itemMat, 'all')}`
-
+            let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, itemMat, 'all')}`
             // emDbg(`removing hidden tag from "emendatus:${itemMat}_${itemType}"`)
             event.remove('c:hidden_from_recipe_viewers', itemId)
-
-            event.add(`${tagId}`, itemId)
         }
     }
 })

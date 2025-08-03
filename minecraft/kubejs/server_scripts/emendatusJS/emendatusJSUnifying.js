@@ -1,7 +1,6 @@
 ServerEvents.recipes(event => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let material = matObj[0]
-        console.log(`Unifying recipes for ${material}`)
         if (Item.exists(`emendatus:${material}_ingot`) && Item.exists(`emendatus:${material}_block`)) {
             event.shapeless(`emendatus:${material}_block`, [`9x emendatus:${material}_ingot`]).id(`ico:unification/unify_materials/emendatus_base/${material}_block`);
             event.shapeless(`9x emendatus:${material}_ingot`, `emendatus:${material}_block`).id(`ico:unification/unify_materials/emendatus_base/${material}_ingot_from_block`);

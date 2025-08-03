@@ -19,28 +19,28 @@ global.emenHideNonReplacing = true
 global.emenUnifyReplaces = true
 
 global.emendatus_item_types = {
-    nugget: { replacer: '@_nugget', tag: 'nuggets/' },
-    ingot: { replacer: '@_ingot', tag: 'ingots/' },
-    dust: { replacer: '@_dust', tag: 'dusts/' },
-    plate: { replacer: '@_plate', tag: 'plates/' },
-    rod: { replacer: '@_rod', tag: 'rods/' },
-    gear: { replacer: '@_gear', tag: 'gears/' },
-    gem: { replacer: '@_gem', tag: 'gems/' },
-    gravel: { replacer: '@_gravel', tag: 'gravels/' },
-    dirty_dust: { replacer: '@_dirty_dust', tag: 'dirty_dusts/' },
-    fragment: { replacer: '@_fragment', tag: 'fragments/' },
-    shard: { replacer: '@_shard', tag: 'shards/' },
-    crystal: { replacer: '@_crystal', tag: 'crystals/' },
-    clump: { replacer: '@_clump', tag: 'clumps/' },
-    cluster_shard: { replacer: '@_cluster_shard', tag: 'cluster_shards/' },
-    crushed_ore: { replacer: 'crushed_@_ore', tag: 'crushed_ores/' },
-    raw_ore: { replacer: 'raw_@', tag: 'raw_materials/' }
+    nugget: { replacer: '@_nugget', tag: 'nuggets/', tags: ['forge:nuggets/@', 'forge:nuggets'] },
+    ingot: { replacer: '@_ingot', tag: 'ingots/', tags: ['forge:ingots/@', 'forge:ingots'] },
+    dust: { replacer: '@_dust', tag: 'dusts/', tags: ['forge:dusts/@', 'forge:dusts'] },
+    plate: { replacer: '@_plate', tag: 'plates/', tags: ['forge:plates/@', 'forge:plates'] },
+    rod: { replacer: '@_rod', tag: 'rods/', tags: ['forge:rods/@', 'forge:rods'] },
+    gear: { replacer: '@_gear', tag: 'gears/', tags: ['forge:gears/@', 'forge:gears'] },
+    gem: { replacer: '@_gem', tag: 'gems/', tags: ['forge:gems/@', 'forge:gems'] },
+    gravel: { replacer: '@_gravel', tag: 'gravels/', tags: ['forge:gravels/@', 'forge:gravels'] },
+    dirty_dust: { replacer: '@_dirty_dust', tag: 'dirty_dusts/', tags: ['forge:dirty_dusts/@', 'forge:dirty_dusts'] },
+    fragment: { replacer: '@_fragment', tag: 'fragments/', tags: ['forge:fragments/@', 'forge:fragments'] },
+    shard: { replacer: '@_shard', tag: 'shards/', tags: ['forge:shards/@', 'forge:shards'] },
+    crystal: { replacer: '@_crystal', tag: 'crystals/', tags: ['forge:crystals/@', 'forge:crystals'] },
+    clump: { replacer: '@_clump', tag: 'clumps/', tags: ['forge:clumps/@', 'forge:clumps'] },
+    cluster_shard: { replacer: '@_cluster_shard', tag: 'cluster_shards/', tags: ['forge:cluster_shards/@', 'forge:cluster_shards'] },
+    crushed_ore: { replacer: 'crushed_@_ore', tag: 'crushed_ores/', tags: ['forge:crushed_ores/@', 'forge:crushed_ores'] },
+    raw_ore: { replacer: 'raw_@', tag: 'raw_materials/', tags: ['forge:raw_materials/@', 'forge:raw_materials'] }
 }
 
 global.emendatus_block_types = {
-    storage_block: { replacer: '@_block', tag: 'storage_blocks/' },
-    ore: { replacer: '@_ore', tag: 'ores/' },
-    raw_block: { replacer: 'raw_@_block', tag: 'storage_blocks/raw_' }
+    storage_block: { replacer: '@_block', tag: 'storage_blocks/', tags: ['forge:storage_blocks/@', 'forge:storage_blocks'] },
+    ore: { replacer: '@_ore', tag: 'ores/', tags: ['forge:ores/@', 'forge:ores'] },
+    raw_block: { replacer: 'raw_@_block', tag: 'storage_blocks/raw_', tags: ['forge:storage_blocks/raw_@', 'forge:storage_blocks/raw'] }
 }
 
 global.emendatus_all_types = Object.assign(global.emendatus_item_types, global.emendatus_block_types)
@@ -127,67 +127,30 @@ global.emendatus_mats = {
 
 // - - global functions - -
 
-// gets the replaceable string for a typeid, then replaces the '@' with the material name
-// since some item type ids have diff formatting than id:material_type e.g. iron_ingot vs crushed_iron_ore
-global.emenGetTypeReplace = function emendatusGetTypeReplacementString(typeIn, matNameIn, registryType) {
-    let typesToCheck = {}
-    emDbg(`getting type replace for ${typeIn} and ${matNameIn}`)
-    switch (registryType) {
-        case 'block':
-            emDbg(`getting block types for ${matNameIn}`)
-            typesToCheck = global.emendatus_block_types
-            break
-        case 'item':
-            emDbg(`getting item types for ${matNameIn}`)
-            typesToCheck = global.emendatus_item_types
-            break
-        case 'all':
-            emDbg(`getting all types for ${matNameIn}`)
-            typesToCheck = global.emendatus_all_types
-            break
-        default:
-            emDbg(`defaulted to item types for ${matNameIn}`)
-            typesToCheck = global.emendatus_item_types
-    }
-    for (let obj of Object.entries(typesToCheck)) {
-        if (obj[0] == typeIn) {
-            emDbg(obj)
-            emDbg(`replacer: ${obj[1].replacer}`)
-            // if theres no match for a material, like a item checking for storage_blocks flag or something
-            // itll just return undefined and break registries, so make sure that uses check for undefined
-            let a = obj[1].replacer.replace('@', matNameIn)
-            emDbg(`returning ${a} for type replace`)
-            return a
-        }
-    }
+global.emenGetReplace = function emendatusGetReplacementString(replaceableString, materialName) {
+    if (!replaceableString.includes('@')) { return replaceableString }
+    return replaceableString.replace('@', materialName)
 }
 
-// [0] = item flags, [1] = block flags
-global.gbfpt = function getBaseFlagsPerType(type) {
-    switch (type) {
-        case 'alloy':
-            return [
-                ['dust', 'gear', 'ingot', 'nugget', 'plate', 'rod'],
-                ['storage_block']
-            ]
-        case 'gem':
-            return [
-                ['storage_block', 'clump', 'cluster_shard', 'crystal', 'gem',
-                    'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
-                ['storage_block', 'ore']
-            ]
-        case 'metal':
-            return [
-                ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment',
-                    'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
-                ['storage_block', 'ore', 'raw_block']
-            ]
-        case 'vanilla': //vanilla
-            return [
-                ['plate', 'rod', 'gear', 'dust', 'gravel', 'fragment', 'clump',
-                    'dirty_dust', 'crystal', 'shard', 'crushed_ore', 'cluster_shard'], []
-            ]
-        default:
-            return []
+
+global.emendatus_base_flags = {
+    alloy: {
+        item: ['dust', 'gear', 'ingot', 'nugget', 'plate', 'rod'],
+        block: ['storage_block']
+    },
+    gem: {
+        item: ['clump', 'cluster_shard', 'crystal', 'gem',
+            'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
+        block: ['storage_block', 'ore']
+    },
+    metal: {
+        item: ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment',
+            'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
+        block: ['storage_block', 'ore', 'raw_block']
+    },
+    vanilla: {
+        item: ['plate', 'rod', 'gear', 'dust', 'gravel', 'fragment', 'clump',
+            'dirty_dust', 'crystal', 'shard', 'crushed_ore', 'cluster_shard'],
+        block: ['ore']
     }
 }
