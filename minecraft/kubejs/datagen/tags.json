@@ -92,9 +92,7 @@
 		"plate",
 		"storage_block"
 	],
-	"graphite": [
-		"storage_block"
-	],
+	"graphite": [],
 	"invar": [
 		"dust",
 		"gear",
@@ -127,21 +125,11 @@
 		"rod",
 		"storage_block"
 	],
-	"fiery": [
-		"storage_block"
-	],
-	"infused_iron": [
-		"storage_block"
-	],
-	"ironwood": [
-		"storage_block"
-	],
-	"knightmetal": [
-		"storage_block"
-	],
-	"orichalcum": [
-		"storage_block"
-	],
+	"fiery": [],
+	"infused_iron": [],
+	"ironwood": [],
+	"knightmetal": [],
+	"orichalcum": [],
 	"refined_glowstone": [
 		"ingot",
 		"nugget",
@@ -158,15 +146,9 @@
 		"nugget",
 		"storage_block"
 	],
-	"sky": [
-		"storage_block"
-	],
-	"soul_steel": [
-		"storage_block"
-	],
-	"tainted_gold": [
-		"storage_block"
-	],
+	"sky": [],
+	"soul_steel": [],
+	"tainted_gold": [],
 	"apatite": [
 		"gem",
 		"dust",
@@ -174,39 +156,20 @@
 		"ore"
 	],
 	"bitumen": [
-		"storage_block",
-		"ore"
+		"storage_block"
 	],
-	"charoite": [
-		"storage_block",
-		"ore"
-	],
+	"charoite": [],
 	"cinnabar": [
 		"gem",
 		"dust",
 		"storage_block",
 		"ore"
 	],
-	"dimensional": [
-		"storage_block",
-		"ore"
-	],
-	"diopside": [
-		"storage_block",
-		"ore"
-	],
-	"moonstone": [
-		"storage_block",
-		"ore"
-	],
-	"potassium_nitrate": [
-		"storage_block",
-		"ore"
-	],
-	"pyrope": [
-		"storage_block",
-		"ore"
-	],
+	"dimensional": [],
+	"diopside": [],
+	"moonstone": [],
+	"potassium_nitrate": [],
+	"pyrope": [],
 	"sapphire": [
 		"gem",
 		"gear",
@@ -220,23 +183,13 @@
 		"storage_block",
 		"ore"
 	],
-	"aquite": [
-		"storage_block",
-		"ore"
-	],
-	"arcane": [
-		"storage_block",
-		"ore"
-	],
-	"carminite": [
-		"storage_block",
-		"ore"
-	],
+	"aquite": [],
+	"arcane": [],
+	"carminite": [],
 	"certus_quartz": [
 		"gem",
 		"dust",
-		"storage_block",
-		"ore"
+		"storage_block"
 	],
 	"fluorite": [
 		"gem",
@@ -244,10 +197,7 @@
 		"storage_block",
 		"ore"
 	],
-	"peridot": [
-		"storage_block",
-		"ore"
-	],
+	"peridot": [],
 	"ruby": [
 		"gem",
 		"gear",
@@ -267,8 +217,6 @@
 		"raw_block"
 	],
 	"iridium": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"lead": [
@@ -294,8 +242,6 @@
 		"raw_block"
 	],
 	"platinum": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"silver": [
@@ -321,13 +267,9 @@
 		"raw_block"
 	],
 	"titanium": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"tungsten": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"uranium": [
@@ -358,13 +300,9 @@
 		"raw_block"
 	],
 	"falsite": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"horizonite": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"osmium": [
@@ -377,8 +315,6 @@
 		"raw_block"
 	],
 	"ventium": [
-		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"iesnium": [

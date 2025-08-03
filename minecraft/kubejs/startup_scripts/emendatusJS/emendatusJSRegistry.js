@@ -29,7 +29,7 @@ StartupEvents.registry('item', e => {
             let item = e.create(itemId).texture(texturePath)
 
             // add tags from object for the items type
-            for(let tag of global.emendatus_all_types[itemType].tags) {
+            for (let tag of global.emendatus_all_types[itemType].tags) {
                 item.tag(global.emenGetReplace(tag, matName))
             }
         }
@@ -40,7 +40,7 @@ StartupEvents.registry('block', e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         if (matObj[1].addFlags.length > 0) { emDbg(`${matName} has additional flags: ${matObj[1].addFlags}`) }
-        
+
         let matTypes = global.emendatus_base_flags[matObj[1].type].block.concat(matObj[1].addFlags)
 
         for (let blockType of matTypes) {
@@ -50,7 +50,6 @@ StartupEvents.registry('block', e => {
             if (replaceableId == undefined) { continue }
             if (matObj[1].delFlags.includes(blockType)) { continue }
 
-            emDbg(`Registering ${blockId} with texture ${texturePath}`)
             // registering ores
             if (blockType == 'ore') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
@@ -58,6 +57,8 @@ StartupEvents.registry('block', e => {
                 let ore = e.create(blockId)
                 ore.soundType('stone')
                 ore.hardness(5)
+                ore.tag('forge:ores')
+                ore.tag(`forge:ores/${matName}`)
                 ore.tagBlock('forge:ores')
                 ore.tagBlock(`forge:ores/${matName}`)
                 ore.tagBlock('minecraft:mineable/pickaxe')
@@ -87,18 +88,24 @@ StartupEvents.registry('block', e => {
                     .soundType('stone')
                     .textureAll(texturePath)
                     .hardness(5)
+                    .tag('forge:storage_blocks')
+                    .tag(`forge:storage_blocks/raw_${matName}`)
                     .tagBlock('forge:storage_blocks')
                     .tagBlock(`forge:storage_blocks/raw_${matName}`)
                 continue
             }
             // else generation should just be full storage blocks
-            let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
-            e.create(blockId)
-                .soundType('metal')
-                .textureAll(texturePath)
-                .hardness(5)
-                .tagBlock('forge:storage_blocks')
-                .tagBlock(`forge:storage_blocks/${matName}`)
+            if (blockType == 'storage_block') {
+                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
+                e.create(blockId)
+                    .soundType('metal')
+                    .textureAll(texturePath)
+                    .hardness(5)
+                    .tag('forge:storage_blocks')
+                    .tag(`forge:storage_blocks/${matName}`)
+                    .tagBlock('forge:storage_blocks')
+                    .tagBlock(`forge:storage_blocks/${matName}`)
+            }
         }
     }
 })

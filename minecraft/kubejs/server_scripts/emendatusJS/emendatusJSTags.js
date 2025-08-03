@@ -3,7 +3,7 @@ let emDbg = function consoleLogDebugMessage(msg) {
 }
 
 // need to generate some data since item registry isn't available to compare to on first load (Ingredient.of can't get existing tags)
-ServerEvents.tags('item', event => {
+ServerEvents.tags('item', e => {
     let dataObj = {}
     let dataGen = false
 
@@ -24,14 +24,14 @@ ServerEvents.tags('item', event => {
         let matTypesToUse = global.emendatus_base_flags[matType].item
             .concat(global.emendatus_base_flags[matType].block)
             .concat(matObj[1].addFlags)
-
+        console.log(matName, matTypesToUse)
         for (let itemType of matTypesToUse) {
             let tagId = `forge:${global.emendatus_all_types[itemType].tag}${matObj[0]}`
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName, 'all')}`
             if (matObj[1].delFlags.includes(itemType)) { continue }
             if (global.emenHideNonReplacing) {
-                // emDbg(`Adding hidden tag to ${itemId}`)
-                event.add('c:hidden_from_recipe_viewers', itemId)
+                emDbg(`Adding hidden tag to ${itemId}`)
+                e.add('c:hidden_from_recipe_viewers', itemId)
             }
 
             // check tag for existing items from other mods
@@ -52,8 +52,8 @@ ServerEvents.tags('item', event => {
     for (let itemMat in data) {
         for (let itemType of data[itemMat]) {
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, itemMat, 'all')}`
-            // emDbg(`removing hidden tag from "emendatus:${itemMat}_${itemType}"`)
-            event.remove('c:hidden_from_recipe_viewers', itemId)
+            emDbg(`removing hidden tag from "emendatus:${itemMat}_${itemType}"`)
+            e.remove('c:hidden_from_recipe_viewers', itemId)
         }
     }
 })
