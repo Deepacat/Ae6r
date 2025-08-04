@@ -62,7 +62,7 @@ StartupEvents.registry('block', e => {
                 ore.tagBlock('forge:ores')
                 ore.tagBlock(`forge:ores/${matName}`)
                 ore.tagBlock('minecraft:mineable/pickaxe')
-                ore.tagBlock(`minecraft:needs_${matObj[1].toolLv}_tool`)
+                ore.tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
                 ore.modelJson = {
                     loader: "forge:composite",
                     textures: { particle: texturePath },
@@ -90,6 +90,7 @@ StartupEvents.registry('block', e => {
                     .hardness(5)
                     .tag('forge:storage_blocks')
                     .tag(`forge:storage_blocks/raw_${matName}`)
+                    .tagBlock('minecraft:mineable/pickaxe')
                     .tagBlock('forge:storage_blocks')
                     .tagBlock(`forge:storage_blocks/raw_${matName}`)
                 continue
@@ -103,6 +104,7 @@ StartupEvents.registry('block', e => {
                     .hardness(5)
                     .tag('forge:storage_blocks')
                     .tag(`forge:storage_blocks/${matName}`)
+                    .tagBlock('minecraft:mineable/pickaxe')
                     .tagBlock('forge:storage_blocks')
                     .tagBlock(`forge:storage_blocks/${matName}`)
             }

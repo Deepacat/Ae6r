@@ -928,5 +928,4 @@ ServerEvents.recipes(e => {
         D: '#forge:circuits/advanced',
         E: 'rftoolspower:cell1'
     }).id('kubejs:mekanism_modification_station')
-
 })

@@ -602,11 +602,6 @@
 					item: "aether:altar"
 					type: "item"
 				}
-				{
-					id: "4899C1E26C2D5E0D"
-					item: "wizards_reborn:arcanum_block"
-					type: "item"
-				}
 			]
 			x: 3.0d
 			y: 5.0d
@@ -624,6 +619,7 @@
 			y: 6.5d
 		}
 		{
+			dependencies: ["4EAA5F5409E4DD3E"]
 			icon: "minecraft:oak_sapling"
 			id: "18909429C6F9FE62"
 			tasks: [{
@@ -899,6 +895,25 @@
 			}]
 			x: -1.0d
 			y: -4.5d
+		}
+		{
+			dependencies: ["310E121655B252D7"]
+			id: "228A42320F11D892"
+			shape: "hexagon"
+			tasks: [
+				{
+					id: "5295C1FB5B39A502"
+					item: "littlelogistics:fishing_barge"
+					type: "item"
+				}
+				{
+					id: "33C5C70664FC9B8A"
+					item: "littlelogistics:tug"
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: -1.5d
 		}
 	]
 	title: " 1 - Discovery"

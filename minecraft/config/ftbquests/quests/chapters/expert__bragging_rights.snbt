@@ -636,11 +636,6 @@
 				}
 				type: "item"
 			}]
-			tasks: [{
-				id: "4BA322BD06DE3777"
-				item: "kubejs:astronomy_mastery_token"
-				type: "item"
-			}]
 			x: -1.5d
 			y: 1.5d
 		}

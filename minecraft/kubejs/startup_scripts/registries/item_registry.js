@@ -2,12 +2,32 @@ StartupEvents.registry('item', event => {
     const generalItems = [
         // placeholder item
         'replaceme',
-        
+
         // removed items from 1.16 e6e that need to be remade 
         'blaze_fiber', // ars
         'end_fiber',
+        'magic_clay',
+        'marvelous_clay',
+        'mythical_clay',
         'advanced_pcb', // pnc
         'rainbow_rune', // quark
+        'white_rune',
+        'light_gray_rune',
+        'gray_rune',
+        'black_rune',
+        'brown_rune',
+        'red_rune',
+        'orange_rune',
+        'yellow_rune',
+        'lime_rune',
+        'green_rune',
+        'cyan_rune',
+        'light_blue_rune',
+        'blue_rune',
+        'purple_rune',
+        'magenta_rune',
+        'pink_rune',
+
 
         // lootboxes
         'common_lootbox',

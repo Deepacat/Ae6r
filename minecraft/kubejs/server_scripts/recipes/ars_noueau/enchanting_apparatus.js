@@ -6,13 +6,13 @@ ServerEvents.recipes(e => {
         Item.of('4x architects_palette:sunmetal_blend'), 100
     ).id('kubejs:sunmetal_blend')
 
-    e.remove({ id: 'occultism:golden_sacrificial_bowl' })
+    e.remove({ id: 'occultism:crafting/golden_sacrificial_bowl' })
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['eidolon:gold_inlay', '#forge:dusts/mana', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
         'occultism:sacrificial_bowl',
         'occultism:golden_sacrificial_bowl', 5000
     ).id('kubejs:crafting/golden_sacrificial_bowl')
-
+    
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['eidolon:pewter_inlay', 'occultism:stable_wormhole', 'eidolon:pewter_inlay', 'bloodmagic:reinforcedslate', 'bloodmagic:reinforcedslate', 'eidolon:pewter_inlay', 'occultism:otherstone_pedestal', 'eidolon:pewter_inlay'],
         'farmersdelight:cooking_pot',

@@ -56,9 +56,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "splendid_slimes": {
-    "splendid_slime": true
-  },
   "jadeaddons.create": {
     "filter": true,
     "backtank_capacity": true,
@@ -94,6 +91,12 @@
     "apiary_errors": true,
     "show_errors": true,
     "bee_nest_type": true
+  },
+  "botania_editor": {
+    "botania_spreader": true,
+    "botania_spreader_advanced": true,
+    "botania_mana": true,
+    "botania_flower": true
   },
   "ae2": {
     "part_icon": true,

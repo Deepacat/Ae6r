@@ -19,10 +19,11 @@ ServerEvents.tags('item', e => {
 
         let matName = matObj[0]
         let matType = matObj[1].type
+        // combined item and block flags, plus force added flags
         let matTypesToUse = global.emendatus_base_flags[matType].item
             .concat(global.emendatus_base_flags[matType].block)
             .concat(matObj[1].addFlags)
-        console.log(matName, matTypesToUse)
+
         for (let itemType of matTypesToUse) {
             let tagId = `forge:${global.emendatus_all_types[itemType].tag}${matObj[0]}`
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName, 'all')}`
