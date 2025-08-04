@@ -1,0 +1,9 @@
+ServerEvents.recipes(e => {
+    e.shapeless(Item.of('bloodmagic:woodbrickpath', 4),
+        ['eidolon:polished_planks', 'eidolon:polished_planks', 'eidolon:polished_planks', 'eidolon:polished_planks', { type: 'bloodmagic:bloodorb', orb_tier: 2 }]
+    ).id('kubejs:shapeless/path/path_wood')
+
+    e.shapeless(Item.of('bloodmagic:largebloodstonebrick', 4),
+        ['naturesaura:infused_stone', 'naturesaura:infused_stone', 'naturesaura:infused_stone', 'naturesaura:infused_stone', 'bloodmagic:weakbloodshard']
+    ).id('kubejs:shapeless/largebloodstonebrick')
+})
