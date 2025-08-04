@@ -9,9 +9,7 @@ ServerEvents.tags('item', e => {
 
     // checks if theres any items in the copper ingot tag, to check if item registry access is available
     // when launching for the first time, it doesn't have access and needs a /reload
-    if (Ingredient.of('#forge:ingots/copper').itemIds.toArray()[0] !=
-        ('minecraft:barrier' || 'minecraft:air' || [] || undefined || '')
-    ) {
+    if (Ingredient.of('#forge:ingots/copper').itemIds.toArray().length > 0) {
         dataGen = true
         console.log('Datagen is running for tags')
     }
@@ -37,7 +35,7 @@ ServerEvents.tags('item', e => {
             // check tag for existing items from other mods
             let existingItems = Ingredient.of(`#${tagId}`).itemIds.toArray()
             let checkExisting = (existingItems.length > 0 && !existingItems[0].includes('emendatus'))
-            
+
             if (checkExisting && dataGen) {
                 dataObj[matName].push(itemType)
             }
