@@ -1,7 +1,8 @@
 ServerEvents.recipes(e => {
     function exploding(id, inputs, posts, comment) {
-        // lychee apparently doesn't do itemstacks, only ingredient, so I have to add these stupid items several times to replicate it
-        // it also doesn't like having over 27 inputs
+        /* lychee apparently doesn't do itemstacks, only ingredient,
+        so I have to add these stupid items several times to replicate it
+        it also doesn't like having over 27 inputs */
         let finalInputs = []
         for (let input of inputs) {
             if (input.count > 0) {

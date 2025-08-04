@@ -11,7 +11,7 @@ ServerEvents.recipes(e => {
         B: "create:andesite_casing",
         C: "embers:ember_crystal"
     }).id('kubejs:craftingstation')
-    
+
     e.remove({ id: 'architects_palette:sunmetal_block' })
     e.shaped('architects_palette:sunmetal_block', [
         'AAA',

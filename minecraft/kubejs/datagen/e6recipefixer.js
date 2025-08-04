@@ -50,63 +50,56 @@ const industrialforegoing = {
 	}
 }
 
-
-const recipes = [
-	{
-		output: Item.of('bloodmagic:woodbrickpath', 4),
-		inputs: [
-			'eidolon:polished_planks',
-			'eidolon:polished_planks',
-			'eidolon:polished_planks',
-			'eidolon:polished_planks',
-			{ type: 'bloodmagic:bloodorb', orb_tier: 2 }
-		],
-		id: 'bloodmagic:path/path_wood'
-	},
-	{
-		output: Item.of('bloodmagic:largebloodstonebrick', 4),
-		inputs: [
-			'naturesaura:infused_stone',
-			'naturesaura:infused_stone',
-			'naturesaura:infused_stone',
-			'naturesaura:infused_stone',
-			'bloodmagic:weakbloodshard'
-		],
-		id: 'bloodmagic:largebloodstonebrick'
-	}
-]
-
-// shapeless 
+/* // bloodmagic altar 
 recipes.forEach((recipe) => {
-	console.log(`e.shapeless(${getString(recipe.output)},
-    [${recipe.inputs.map(getString).join(", ")}]
+	console.log(`${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n'}e.recipes.bloodmagic.altar(${getString(recipe.output)}, ${getString(recipe.input)})
+	.upgradeLevel(${recipe.altarLevel})
+	.altarSyphon(${recipe.syphon})
+	.consumptionRate(${recipe.consumptionRate})
+	.drainRate(${recipe.drainRate})
+	.id('${recipe.id.replace(/.*:/g, "kubejs:")}')\n`)
+}) */
+
+/* // bloodmagic alchemytable 
+recipes.forEach((recipe) => {
+	console.log(`${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n'}e.recipes.bloodmagic.alchemytable(Item.of(${getString(recipe.output)}, ${recipe.count}),
+	[${recipe.inputs.map(getString).join(", ")}])
+	.syphon(${recipe.syphon})
+	.ticks(${recipe.ticks})
+	.upgradeLevel(${recipe.orbLevel})
+	.id('${recipe.id.replace(/.*:/g, "kubejs:")}')\n`)
+}) */
+
+/* // shapeless 
+recipes.forEach((recipe) => {
+	console.log(`${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n'}e.shapeless(${getString(recipe.output)},
+	[${recipe.inputs.map(getString).join(", ")}]
 ).id('${recipe.id.replace(/.*:/g, "kubejs:shapeless/")}')\n`)
-})
+}) */
 
-
-/* // runic altar 
+/* // botania runic altar 
 recipes.forEach((recipe) => {
 	console.log(`e.recipes.botania.runic_altar(${getString(`${(recipe.count) > 1 ? `${recipe.count}x ` : ""}` + recipe.output)},
-    [${recipe.inputs.map(getString).join(", ")}],
+	[${recipe.inputs.map(getString).join(", ")}],
 	${recipe.mana}
 ).id('${recipe.id}')\n`)
 }) */
 
-/* //enchapp
+/* // ars enchanting apparatus
 recipes.forEach((recipe) => {
 	console.log(`e.recipes.ars_nouveau.enchanting_apparatus(
-    [${recipe.inputs.map(getString).join(", ")}],
-    ${getString(recipe.reagent)},
-    ${getString(recipe.output)}${recipe.sourceCost ? `, ${recipe.sourceCost}` : ""
+	[${recipe.inputs.map(getString).join(", ")}],
+	${getString(recipe.reagent)},
+	${getString(recipe.output)}${recipe.sourceCost ? `, ${recipe.sourceCost}` : ""
 		}
 ).id('${recipe.id}')\n`)
 }) */
 
-/* //petal apothecary
+/* // botania petal apothecary
 recipes.forEach((recipe) => {
 	console.log(`e.recipes.botania.petal_apothecary(
 	${getString(recipe.output)},
-    [${recipe.inputs.map(getString).join(", ")}],
+	[${recipe.inputs.map(getString).join(", ")}],
 ).id('${recipe.id}')\n`)
 }) */
 
@@ -123,4 +116,37 @@ e.shaped(${finalOut}, [
 	${finalKey}
 }).id(${finalId}\n`
 	)
+}) */
+
+/* recipes.forEach((recipe) => {
+	// console.log(`Adding recipe: ${recipe.id}, output: ${recipe.output}`)
+	// class ArcBloodmagic extends Internal.RecipeJS {
+	//             output(output: OutputItem_): this
+	//             input(input: InputItem_): this
+	//             tool(tool: InputItem_): this
+	//             inputFluid(inputFluid: {fluid: string, amount: number}[]): this
+	//             addedoutput(addedoutput: {chance: number, mainchance?: number, type: OutputItem_}[]): this
+	//             consumeingredient(consumeingredient: boolean): this
+	//             inputsize(inputsize: number): this
+	//             outputFluid(outputFluid: {fluid: string, amount: number}[]): this
+	// }
+	const re = event.recipes.bloodmagic
+		.arc(recipe.output, recipe.input, recipe.tool)
+		.consumeIngredient(recipe.consume)
+		.id(recipe.id)
+
+	if (recipe.extraOutputs) {
+		re.addedoutput(recipe.extraOutputs)
+	}
+
+	if (recipe.outputFluid) {
+		re.outputFluid(recipe.outputFluid)
+	}
+}) */
+
+/* // bloodmagic arc 
+recipes.forEach((recipe) => {
+	console.log(`${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n'}e.recipes.bloodmagic.arc(${getString(recipe.output)}, ${getString(recipe.input)}, ${getString(recipe.tool)})
+	.consumeIngredient(${recipe.consume})${recipe.extraOutputs ? `\n	.addedoutput(${getString(recipe.extraOutputs)})` : ""}
+	.id('${recipe.id.replace(/.*:/g, "kubejs:")}')\n`)
 }) */

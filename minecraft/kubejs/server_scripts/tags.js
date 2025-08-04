@@ -21,23 +21,16 @@ ServerEvents.tags('item', e => {
 
     e.add('forge:gems/source_diamond', ['ars_nouveau:source_gem', 'minecraft:diamond'])
 
-    e.add('botania:runes',)
-    e.add('botania:runes/water', 'botania:rune_water')
-    e.add('botania:runes/fire', 'botania:rune_fire')
-    e.add('botania:runes/earth', 'botania:rune_earth')
-    e.add('botania:runes/air', 'botania:rune_air')
-    e.add('botania:runes/spring', 'botania:rune_spring')
-    e.add('botania:runes/summer', 'botania:rune_summer')
-    e.add('botania:runes/autumn', 'botania:rune_autumn')
-    e.add('botania:runes/winter', 'botania:rune_winter')
-    e.add('botania:runes/mana', 'botania:rune_mana')
-    e.add('botania:runes/lust', 'botania:rune_lust')
-    e.add('botania:runes/gluttony', 'botania:rune_gluttony')
-    e.add('botania:runes/greed', 'botania:rune_greed')
-    e.add('botania:runes/sloth', 'botania:rune_sloth')
-    e.add('botania:runes/wrath', 'botania:rune_wrath')
-    e.add('botania:runes/envy', 'botania:rune_envy')
-    e.add('botania:runes/pride', 'botania:rune_pride')
+    const botaniaRunes = [
+        'water', 'fire', 'earth', 'air', 'spring', 'summer', 'autumn', 'winter', 'mana',
+        'lust', 'gluttony', 'greed', 'sloth', 'wrath', 'envy', 'pride',
+        'asgard', 'vanaheim', 'alfheim', 'midgard', 'joetunheim', 'muspelheim', 'niflheim', 'nidavellir', 'helheim'
+    ]
+
+    for (let rune of botaniaRunes) {
+        e.add(`botania:runes/${rune}`, `botania:rune_${rune}`)
+        e.add(`botania:runes/${rune}`, `mythicbotany:${rune}_rune`)
+    }
 
     e.add('forge:ingots/gaia', 'botania:gaia_ingot')
 
@@ -50,4 +43,19 @@ ServerEvents.tags('item', e => {
         'kubejs:light_blue_rune', 'kubejs:blue_rune', 'kubejs:purple_rune', 'kubejs:magenta_rune',
         'kubejs:pink_rune',
     ])
+
+    e.add('forge:ingots', 'architects_palette:sunmetal_brick')
+    e.add('forge:ingots/sunmetal', 'architects_palette:sunmetal_brick')
+
+    // blood magic is dumb and only applied this tag in blocks so their recipes dont work LMAO
+    e.add('minecraft:mushroom_hyphae', [
+        "minecraft:brown_mushroom_block", "minecraft:red_mushroom_block", "minecraft:crimson_hyphae", "minecraft:warped_hyphae",
+        "minecraft:stripped_crimson_hyphae", "minecraft:stripped_warped_hyphae", "minecraft:nether_wart_block", "minecraft:warped_wart_block",
+        "minecraft:shroomlight"
+    ])
+
+    const powahGems = ['crystal_blazing', 'crystal_niotic', 'crystal_spirited', 'crystal_nitro']
+    for (let gem of powahGems) {
+        e.add(`forge:gems/${gem}`, `powah:${gem}`)
+    }
 })
