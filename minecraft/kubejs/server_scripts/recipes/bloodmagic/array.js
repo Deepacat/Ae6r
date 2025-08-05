@@ -3,7 +3,7 @@ ServerEvents.recipes(e => {
         .texture('bindinglightningarray')
         .id(`kubejs:array/charged_snowball`)
 
-    e.recipes.bloodmagic.array('minecraft:heart_of_the_sea', 'architects_palette:algal_lamp', '#forge:gems/aquamarine')
+    e.recipes.bloodmagic.array('minecraft:heart_of_the_sea', 'architects_palette:algal_lamp', '#forge:gems/arcanum')
         .texture('watersigil')
         .id(`kubejs:array/heart_of_the_sea`)
 

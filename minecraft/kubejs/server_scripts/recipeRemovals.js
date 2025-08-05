@@ -9,7 +9,9 @@ ServerEvents.recipes(e => {
         /bloodmagic:alchemytable\/melee_damage_anointment/,
 
         /compactmachines:machine_/,
-        /create:pressing\/\w*_ingot/,
+
+        /createaddition:compat/,
+        /createaddition:pressing/,
 
         /immersiveengineering:crafting\/plate_/,
 

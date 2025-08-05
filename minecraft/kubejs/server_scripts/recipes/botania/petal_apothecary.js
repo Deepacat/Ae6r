@@ -226,7 +226,7 @@ ServerEvents.recipes(e => {
 
     e.recipes.botania.petal_apothecary(
         'eidolon:unholy_effigy',
-        ['upgrade_aquatic:elder_guardian_spine', 'upgrade_aquatic:elder_guardian_spine', 'upgrade_aquatic:elder_guardian_spine', '#forge:inlays/arcane_gold', '#forge:gems/aquamarine', 'minecraft:heart_of_the_sea', '#forge:gems/aquamarine', 'eidolon:unholy_symbol'],
+        ['upgrade_aquatic:elder_guardian_spine', 'upgrade_aquatic:elder_guardian_spine', 'upgrade_aquatic:elder_guardian_spine', '#forge:inlays/arcane_gold', '#forge:gems/arcanum', 'minecraft:heart_of_the_sea', '#forge:gems/arcanum', 'eidolon:unholy_symbol'],
     ).id('kubejs:petal_apothecary/unholy_effigy')
 
     e.recipes.botania.petal_apothecary(

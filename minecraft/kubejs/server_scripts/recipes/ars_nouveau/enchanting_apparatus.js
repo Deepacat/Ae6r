@@ -103,14 +103,14 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:amulet_of_mana_regen' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:gems/aquamarine', 'naturesaura:birth_spirit', '#forge:gems/aquamarine', '#forge:ingots/regalium', '#forge:ingots/regalium', '#forge:gems/source', '#forge:gems/source', '#forge:gems/source'],
+        ['#forge:gems/arcanum', 'naturesaura:birth_spirit', '#forge:gems/arcanum', '#forge:ingots/regalium', '#forge:ingots/regalium', '#forge:gems/source', '#forge:gems/source', '#forge:gems/source'],
         'kubejs:replaceme',
         'ars_nouveau:amulet_of_mana_regen', 500
     ).id('kubejs:amulet_of_mana_regen')
 
     e.remove({ id: 'ars_nouveau:amulet_of_mana_boost' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:gems/aquamarine', 'minecraft:conduit', '#forge:gems/aquamarine', '#forge:ingots/regalium', '#forge:ingots/regalium', '#forge:gems/source', '#forge:gems/source', '#forge:gems/source'],
+        ['#forge:gems/arcanum', 'minecraft:conduit', '#forge:gems/arcanum', '#forge:ingots/regalium', '#forge:ingots/regalium', '#forge:gems/source', '#forge:gems/source', '#forge:gems/source'],
         'kubejs:replaceme',
         'ars_nouveau:amulet_of_mana_boost', 500
     ).id('kubejs:amulet_of_mana_boost')
