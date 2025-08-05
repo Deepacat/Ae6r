@@ -3,7 +3,7 @@ global.emenDebug = false
 
 // enable regenerating tag data after a /reload
 // probably keep this on for pack dev, disable for releases (ensure it works first)
-global.emenDatagen = false
+global.emenDatagen = true
 
 /*
 hide all items in recipe viewer that don't replace existing items in your modpack.

@@ -4,18 +4,19 @@ let emDbg = function consoleLogDebugMessage(msg) {
 
 // need to generate some data since item registry isn't available to compare to on first load (Ingredient.of can't get existing tags)
 ServerEvents.tags('item', e => {
-    let dataObj = {}
+    let hidingDataObj = {}
     let dataGen = false
 
     // checks if theres any items in the copper ingot tag, to check if item registry access is available
     // when launching for the first time, it doesn't have access and needs a /reload
-    if (Ingredient.of('#forge:ingots/copper').itemIds.toArray().length > 0) {
+    console.log((Ingredient.of('#forge:ingots/copper').itemIds.contains('minecraft:copper_ingot')))
+    if (global.emenDatagen && (Ingredient.of('#forge:ingots/copper').itemIds.contains('minecraft:copper_ingot'))) {
         dataGen = true
         console.log('Datagen is running for tags')
     }
 
     for (let matObj of Object.entries(global.emendatus_mats)) {
-        dataObj[matObj[0]] = []
+        hidingDataObj[matObj[0]] = []
 
         let matName = matObj[0]
         let matType = matObj[1].type
@@ -37,14 +38,14 @@ ServerEvents.tags('item', e => {
             let existingItems = Ingredient.of(`#${tagId}`).itemIds.toArray()
             let checkExisting = (existingItems.length > 0 && !existingItems[0].includes('emendatus'))
 
-            if (checkExisting && dataGen) {
-                dataObj[matName].push(itemType)
+            if (dataGen && checkExisting) {
+                hidingDataObj[matName].push(itemType)
             }
         }
     }
-    if (dataGen && global.emenDatagen) {
+    if (dataGen) {
         console.log('Saving tag data for emendatus datagen')
-        JsonIO.write('kubejs/datagen/tags.json', dataObj)
+        JsonIO.write('kubejs/datagen/tags.json', hidingDataObj)
     }
 
     let data = JsonIO.read('kubejs/datagen/tags.json')
