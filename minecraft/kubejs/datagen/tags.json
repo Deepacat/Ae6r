@@ -216,9 +216,7 @@
 		"ore",
 		"raw_block"
 	],
-	"iridium": [
-		"raw_block"
-	],
+	"iridium": [],
 	"lead": [
 		"dust",
 		"gear",
@@ -241,9 +239,7 @@
 		"ore",
 		"raw_block"
 	],
-	"platinum": [
-		"raw_block"
-	],
+	"platinum": [],
 	"silver": [
 		"dust",
 		"gear",
@@ -266,12 +262,8 @@
 		"ore",
 		"raw_block"
 	],
-	"titanium": [
-		"raw_block"
-	],
-	"tungsten": [
-		"raw_block"
-	],
+	"titanium": [],
+	"tungsten": [],
 	"uranium": [
 		"dust",
 		"ingot",
@@ -299,12 +291,8 @@
 		"ore",
 		"raw_block"
 	],
-	"falsite": [
-		"raw_block"
-	],
-	"horizonite": [
-		"raw_block"
-	],
+	"falsite": [],
+	"horizonite": [],
 	"osmium": [
 		"dust",
 		"ingot",
@@ -314,9 +302,7 @@
 		"ore",
 		"raw_block"
 	],
-	"ventium": [
-		"raw_block"
-	],
+	"ventium": [],
 	"iesnium": [
 		"dust",
 		"ingot",

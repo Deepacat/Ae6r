@@ -1,3 +1,22 @@
+// add a flags entry to each material object which has their final correct flags, with base + force added and removed flags
+for (let matObj of Object.entries(global.emendatus_mats)) {
+    global.emendatus_mats[matObj[0]].flags = {}
+
+    global.emendatus_mats[matObj[0]].flags.item = global.emendatus_base_flags[matObj[1].type].item
+        .concat(matObj[1].addFlags)
+        .filter(flag => !matObj[1].delFlags.includes(flag))
+
+    global.emendatus_mats[matObj[0]].flags.block = global.emendatus_base_flags[matObj[1].type].block
+        .concat(matObj[1].addFlags)
+        .filter(flag => !matObj[1].delFlags.includes(flag))
+
+    global.emendatus_mats[matObj[0]].flags.all =
+        global.emendatus_base_flags[matObj[1].type].item
+            .concat(global.emendatus_base_flags[matObj[1].type].block)
+            .concat(matObj[1].addFlags)
+            .filter(flag => !matObj[1].delFlags.includes(flag))
+}
+
 let emDbg = function consoleLogDebugMessage(msg) {
     if (global.emenDebug) { console.log(msg) }
 }
@@ -10,17 +29,12 @@ StartupEvents.registry('item', e => {
     // itemType = item type id, e.g. 'ingot'
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
-        if (matObj[1].addFlags.length > 0) { emDbg(`${matName} has additional flags: ${matObj[1].addFlags}`) }
+        let matFlags = matObj[1].flags.item
 
-        let matTypes = global.emendatus_base_flags[matObj[1].type].item.concat(matObj[1].addFlags)
-
-        for (let itemType of matTypes) {
+        for (let itemType of matFlags) {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName)
-            let itemId = `emendatus:${replaceableId}`
-
             if (replaceableId == undefined) { continue }
-            if (matObj[1].delFlags.includes(itemType)) { continue }
-
+            let itemId = `emendatus:${replaceableId}`
             let texturePath = `kubejs:item/emendatus/${matObj[1].type}/${replaceableId}`
 
             emDbg(`Registering ${itemId} with texture ${texturePath}`)
@@ -39,20 +53,18 @@ StartupEvents.registry('item', e => {
 StartupEvents.registry('block', e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
-        if (matObj[1].addFlags.length > 0) { emDbg(`${matName} has additional flags: ${matObj[1].addFlags}`) }
-
-        let matTypes = global.emendatus_base_flags[matObj[1].type].block.concat(matObj[1].addFlags)
+        let matTypes = matObj[1].flags.block
 
         for (let blockType of matTypes) {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockType].replacer, matName)
             let blockId = `emendatus:${replaceableId}`
-
             if (replaceableId == undefined) { continue }
-            if (matObj[1].delFlags.includes(blockType)) { continue }
 
             // registering ores
             if (blockType == 'ore') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
+                emDbg(`Registering ${blockId} with texture ${texturePath}`)
+
                 // if (matObj[1].type == 'gem') { texturePath = texturePath + '_sample' }
                 let ore = e.create(blockId)
                 ore.soundType('stone')
@@ -82,8 +94,9 @@ StartupEvents.registry('block', e => {
                 }
                 continue
             }
-            if (blockType == 'raw_ore') {
-                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw/${matName}`
+            if (blockType == 'raw_block') {
+                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw_${matName}_block`
+                emDbg(`Registering ${blockId} with texture ${texturePath}`)
                 e.create(blockId)
                     .soundType('stone')
                     .textureAll(texturePath)
@@ -98,6 +111,7 @@ StartupEvents.registry('block', e => {
             // else generation should just be full storage blocks
             if (blockType == 'storage_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
+                emDbg(`Registering ${blockId} with texture ${texturePath}`)
                 e.create(blockId)
                     .soundType('metal')
                     .textureAll(texturePath)

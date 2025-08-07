@@ -35,10 +35,10 @@
 	hud_indicator_align_top = true
 	#How many pixels from the left side of the screen the hud indicator is.
 	#Range: > -2147483648
-	hud_indicator_position_x = 10
+	hud_indicator_position_x = 5
 	#How many pixels from the top of the screen the hud indicator is.
 	#Range: > -2147483648
-	hud_indicator_position_y = 10
+	hud_indicator_position_y = 15
 	#The size in pixels a usual entity should render as in the hud indicator.
 	#Range: 0.0 ~ 2000.0
 	hud_entity_size = 38.0

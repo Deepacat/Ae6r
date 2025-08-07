@@ -1,0 +1,860 @@
+{
+	"forge:dusts/coal": [
+		"bloodmagic:coalsand",
+		"mekanism:dust_coal",
+		"emendatus:coal_dust"
+	],
+	"forge:plates/copper": [
+		"thermal:copper_plate",
+		"immersiveengineering:plate_copper",
+		"embers:copper_plate",
+		"create:copper_sheet",
+		"emendatus:copper_plate"
+	],
+	"forge:rods/copper": [
+		"createaddition:copper_rod",
+		"emendatus:copper_rod"
+	],
+	"forge:gears/copper": [
+		"thermal:copper_gear",
+		"emendatus:copper_gear"
+	],
+	"forge:dusts/copper": [
+		"bloodmagic:coppersand",
+		"thermal:copper_dust",
+		"mekanism:dust_copper",
+		"immersiveengineering:dust_copper",
+		"occultism:copper_dust",
+		"emendatus:copper_dust"
+	],
+	"forge:gears/diamond": [
+		"industrialforegoing:diamond_gear",
+		"thermal:diamond_gear",
+		"emendatus:diamond_gear"
+	],
+	"forge:dusts/diamond": [
+		"thermal:diamond_dust",
+		"mekanism:dust_diamond",
+		"createaddition:diamond_grit",
+		"emendatus:diamond_dust"
+	],
+	"forge:gears/emerald": [
+		"thermal:emerald_gear",
+		"emendatus:emerald_gear"
+	],
+	"forge:dusts/emerald": [
+		"thermal:emerald_dust",
+		"mekanism:dust_emerald",
+		"emendatus:emerald_dust"
+	],
+	"forge:plates/gold": [
+		"thermal:gold_plate",
+		"immersiveengineering:plate_gold",
+		"create:golden_sheet",
+		"emendatus:gold_plate"
+	],
+	"forge:rods/gold": [
+		"createaddition:gold_rod",
+		"emendatus:gold_rod"
+	],
+	"forge:gears/gold": [
+		"industrialforegoing:gold_gear",
+		"thermal:gold_gear",
+		"emendatus:gold_gear"
+	],
+	"forge:dusts/gold": [
+		"bloodmagic:goldsand",
+		"thermal:gold_dust",
+		"mekanism:dust_gold",
+		"immersiveengineering:dust_gold",
+		"occultism:gold_dust",
+		"emendatus:gold_dust"
+	],
+	"forge:plates/iron": [
+		"thermal:iron_plate",
+		"immersiveengineering:plate_iron",
+		"embers:iron_plate",
+		"create:iron_sheet",
+		"emendatus:iron_plate"
+	],
+	"forge:rods/iron": [
+		"immersiveengineering:stick_iron",
+		"createaddition:iron_rod",
+		"emendatus:iron_rod"
+	],
+	"forge:gears/iron": [
+		"industrialforegoing:iron_gear",
+		"thermal:iron_gear",
+		"emendatus:iron_gear"
+	],
+	"forge:dusts/iron": [
+		"bloodmagic:ironsand",
+		"thermal:iron_dust",
+		"mekanism:dust_iron",
+		"immersiveengineering:dust_iron",
+		"occultism:iron_dust",
+		"emendatus:iron_dust"
+	],
+	"forge:gears/lapis": [
+		"thermal:lapis_gear",
+		"emendatus:lapis_gear"
+	],
+	"forge:dusts/lapis": [
+		"thermal:lapis_dust",
+		"mekanism:dust_lapis_lazuli",
+		"emendatus:lapis_dust"
+	],
+	"forge:plates/netherite": [
+		"thermal:netherite_plate",
+		"emendatus:netherite_plate"
+	],
+	"forge:gears/netherite": [
+		"thermal:netherite_gear",
+		"emendatus:netherite_gear"
+	],
+	"forge:dusts/netherite": [
+		"thermal:netherite_dust",
+		"mekanism:dust_netherite",
+		"emendatus:netherite_dust"
+	],
+	"forge:gears/quartz": [
+		"thermal:quartz_gear",
+		"emendatus:quartz_gear"
+	],
+	"forge:dusts/quartz": [
+		"thermal:quartz_dust",
+		"mekanism:dust_quartz",
+		"emendatus:quartz_dust"
+	],
+	"forge:ingots/brass": [
+		"create:brass_ingot",
+		"emendatus:brass_ingot"
+	],
+	"forge:nuggets/brass": [
+		"create:brass_nugget",
+		"emendatus:brass_nugget"
+	],
+	"forge:plates/brass": [
+		"create:brass_sheet",
+		"emendatus:brass_plate"
+	],
+	"forge:rods/brass": [
+		"createaddition:brass_rod",
+		"emendatus:brass_rod"
+	],
+	"forge:storage_blocks/brass": [
+		"create:brass_block",
+		"emendatus:brass_block"
+	],
+	"forge:dusts/bronze": [
+		"thermal:bronze_dust",
+		"mekanism:dust_bronze",
+		"emendatus:bronze_dust"
+	],
+	"forge:gears/bronze": [
+		"thermal:bronze_gear",
+		"emendatus:bronze_gear"
+	],
+	"forge:ingots/bronze": [
+		"thermal:bronze_ingot",
+		"mekanism:ingot_bronze",
+		"tcintegrations:bronze_ingot",
+		"emendatus:bronze_ingot"
+	],
+	"forge:nuggets/bronze": [
+		"thermal:bronze_nugget",
+		"mekanism:nugget_bronze",
+		"tcintegrations:bronze_nugget",
+		"emendatus:bronze_nugget"
+	],
+	"forge:plates/bronze": [
+		"thermal:bronze_plate",
+		"emendatus:bronze_plate"
+	],
+	"forge:storage_blocks/bronze": [
+		"thermal:bronze_block",
+		"mekanism:block_bronze",
+		"tcintegrations:bronze_block",
+		"emendatus:bronze_block"
+	],
+	"forge:dusts/constantan": [
+		"thermal:constantan_dust",
+		"immersiveengineering:dust_constantan",
+		"emendatus:constantan_dust"
+	],
+	"forge:gears/constantan": [
+		"thermal:constantan_gear",
+		"emendatus:constantan_gear"
+	],
+	"forge:ingots/constantan": [
+		"thermal:constantan_ingot",
+		"immersiveengineering:ingot_constantan",
+		"emendatus:constantan_ingot"
+	],
+	"forge:nuggets/constantan": [
+		"thermal:constantan_nugget",
+		"immersiveengineering:nugget_constantan",
+		"emendatus:constantan_nugget"
+	],
+	"forge:plates/constantan": [
+		"thermal:constantan_plate",
+		"immersiveengineering:plate_constantan",
+		"emendatus:constantan_plate"
+	],
+	"forge:storage_blocks/constantan": [
+		"thermal:constantan_block",
+		"immersiveengineering:storage_constantan",
+		"emendatus:constantan_block"
+	],
+	"forge:dusts/electrum": [
+		"thermal:electrum_dust",
+		"immersiveengineering:dust_electrum",
+		"emendatus:electrum_dust"
+	],
+	"forge:gears/electrum": [
+		"thermal:electrum_gear",
+		"emendatus:electrum_gear"
+	],
+	"forge:ingots/electrum": [
+		"thermal:electrum_ingot",
+		"immersiveengineering:ingot_electrum",
+		"createaddition:electrum_ingot",
+		"emendatus:electrum_ingot"
+	],
+	"forge:nuggets/electrum": [
+		"thermal:electrum_nugget",
+		"immersiveengineering:nugget_electrum",
+		"createaddition:electrum_nugget",
+		"emendatus:electrum_nugget"
+	],
+	"forge:plates/electrum": [
+		"thermal:electrum_plate",
+		"immersiveengineering:plate_electrum",
+		"createaddition:electrum_sheet",
+		"emendatus:electrum_plate"
+	],
+	"forge:rods/electrum": [
+		"createaddition:electrum_rod",
+		"emendatus:electrum_rod"
+	],
+	"forge:storage_blocks/electrum": [
+		"thermal:electrum_block",
+		"immersiveengineering:storage_electrum",
+		"emendatus:electrum_block"
+	],
+	"forge:dusts/enderium": [
+		"thermal:enderium_dust",
+		"emendatus:enderium_dust"
+	],
+	"forge:gears/enderium": [
+		"thermal:enderium_gear",
+		"emendatus:enderium_gear"
+	],
+	"forge:ingots/enderium": [
+		"thermal:enderium_ingot",
+		"emendatus:enderium_ingot"
+	],
+	"forge:nuggets/enderium": [
+		"thermal:enderium_nugget",
+		"emendatus:enderium_nugget"
+	],
+	"forge:plates/enderium": [
+		"thermal:enderium_plate",
+		"emendatus:enderium_plate"
+	],
+	"forge:storage_blocks/enderium": [
+		"thermal:enderium_block",
+		"emendatus:enderium_block"
+	],
+	"forge:dusts/invar": [
+		"thermal:invar_dust",
+		"emendatus:invar_dust"
+	],
+	"forge:gears/invar": [
+		"thermal:invar_gear",
+		"emendatus:invar_gear"
+	],
+	"forge:ingots/invar": [
+		"thermal:invar_ingot",
+		"emendatus:invar_ingot"
+	],
+	"forge:nuggets/invar": [
+		"thermal:invar_nugget",
+		"emendatus:invar_nugget"
+	],
+	"forge:plates/invar": [
+		"thermal:invar_plate",
+		"emendatus:invar_plate"
+	],
+	"forge:storage_blocks/invar": [
+		"thermal:invar_block",
+		"emendatus:invar_block"
+	],
+	"forge:dusts/lumium": [
+		"thermal:lumium_dust",
+		"emendatus:lumium_dust"
+	],
+	"forge:gears/lumium": [
+		"thermal:lumium_gear",
+		"emendatus:lumium_gear"
+	],
+	"forge:ingots/lumium": [
+		"thermal:lumium_ingot",
+		"emendatus:lumium_ingot"
+	],
+	"forge:nuggets/lumium": [
+		"thermal:lumium_nugget",
+		"emendatus:lumium_nugget"
+	],
+	"forge:plates/lumium": [
+		"thermal:lumium_plate",
+		"emendatus:lumium_plate"
+	],
+	"forge:storage_blocks/lumium": [
+		"thermal:lumium_block",
+		"emendatus:lumium_block"
+	],
+	"forge:dusts/signalum": [
+		"thermal:signalum_dust",
+		"emendatus:signalum_dust"
+	],
+	"forge:gears/signalum": [
+		"thermal:signalum_gear",
+		"emendatus:signalum_gear"
+	],
+	"forge:ingots/signalum": [
+		"thermal:signalum_ingot",
+		"emendatus:signalum_ingot"
+	],
+	"forge:nuggets/signalum": [
+		"thermal:signalum_nugget",
+		"emendatus:signalum_nugget"
+	],
+	"forge:plates/signalum": [
+		"thermal:signalum_plate",
+		"emendatus:signalum_plate"
+	],
+	"forge:storage_blocks/signalum": [
+		"thermal:signalum_block",
+		"emendatus:signalum_block"
+	],
+	"forge:dusts/steel": [
+		"mekanism:dust_steel",
+		"immersiveengineering:dust_steel",
+		"emendatus:steel_dust"
+	],
+	"forge:ingots/steel": [
+		"mekanism:ingot_steel",
+		"immersiveengineering:ingot_steel",
+		"tconstruct:steel_ingot",
+		"emendatus:steel_ingot"
+	],
+	"forge:nuggets/steel": [
+		"mekanism:nugget_steel",
+		"immersiveengineering:nugget_steel",
+		"tconstruct:steel_nugget",
+		"emendatus:steel_nugget"
+	],
+	"forge:plates/steel": [
+		"immersiveengineering:plate_steel",
+		"emendatus:steel_plate"
+	],
+	"forge:rods/steel": [
+		"immersiveengineering:stick_steel",
+		"emendatus:steel_rod"
+	],
+	"forge:storage_blocks/steel": [
+		"mekanism:block_steel",
+		"immersiveengineering:storage_steel",
+		"tconstruct:steel_block",
+		"emendatus:steel_block"
+	],
+	"forge:ingots/refined_glowstone": [
+		"mekanism:ingot_refined_glowstone",
+		"emendatus:refined_glowstone_ingot"
+	],
+	"forge:nuggets/refined_glowstone": [
+		"mekanism:nugget_refined_glowstone",
+		"emendatus:refined_glowstone_nugget"
+	],
+	"forge:storage_blocks/refined_glowstone": [
+		"mekanism:block_refined_glowstone",
+		"emendatus:refined_glowstone_block"
+	],
+	"forge:dusts/refined_obsidian": [
+		"mekanism:dust_refined_obsidian",
+		"emendatus:refined_obsidian_dust"
+	],
+	"forge:ingots/refined_obsidian": [
+		"mekanism:ingot_refined_obsidian",
+		"emendatus:refined_obsidian_ingot"
+	],
+	"forge:nuggets/refined_obsidian": [
+		"mekanism:nugget_refined_obsidian",
+		"emendatus:refined_obsidian_nugget"
+	],
+	"forge:storage_blocks/refined_obsidian": [
+		"mekanism:block_refined_obsidian",
+		"emendatus:refined_obsidian_block"
+	],
+	"forge:ingots/rose_gold": [
+		"tconstruct:rose_gold_ingot",
+		"emendatus:rose_gold_ingot"
+	],
+	"forge:nuggets/rose_gold": [
+		"tconstruct:rose_gold_nugget",
+		"emendatus:rose_gold_nugget"
+	],
+	"forge:storage_blocks/rose_gold": [
+		"tconstruct:rose_gold_block",
+		"emendatus:rose_gold_block"
+	],
+	"forge:gems/apatite": [
+		"thermal:apatite",
+		"emendatus:apatite_gem"
+	],
+	"forge:dusts/apatite": [
+		"thermal:apatite_dust",
+		"emendatus:apatite_dust"
+	],
+	"forge:storage_blocks/apatite": [
+		"thermal:apatite_block",
+		"emendatus:apatite_block"
+	],
+	"forge:storage_blocks/bitumen": [
+		"thermal:bitumen_block",
+		"emendatus:bitumen_block"
+	],
+	"forge:gems/cinnabar": [
+		"thermal:cinnabar",
+		"emendatus:cinnabar_gem"
+	],
+	"forge:dusts/cinnabar": [
+		"thermal:cinnabar_dust",
+		"emendatus:cinnabar_dust"
+	],
+	"forge:storage_blocks/cinnabar": [
+		"thermal:cinnabar_block",
+		"emendatus:cinnabar_block"
+	],
+	"forge:gems/sapphire": [
+		"thermal:sapphire",
+		"emendatus:sapphire_gem"
+	],
+	"forge:gears/sapphire": [
+		"thermal:sapphire_gear",
+		"emendatus:sapphire_gear"
+	],
+	"forge:dusts/sapphire": [
+		"thermal:sapphire_dust",
+		"emendatus:sapphire_dust"
+	],
+	"forge:storage_blocks/sapphire": [
+		"thermal:sapphire_block",
+		"emendatus:sapphire_block"
+	],
+	"forge:gems/sulfur": [
+		"thermal:sulfur",
+		"emendatus:sulfur_gem"
+	],
+	"forge:dusts/sulfur": [
+		"bloodmagic:sulfur",
+		"thermal:sulfur_dust",
+		"mekanism:dust_sulfur",
+		"immersiveengineering:dust_sulfur",
+		"eidolon:sulfur",
+		"emendatus:sulfur_dust"
+	],
+	"forge:storage_blocks/sulfur": [
+		"thermal:sulfur_block",
+		"emendatus:sulfur_block"
+	],
+	"forge:gems/certus_quartz": [
+		"ae2:certus_quartz_crystal",
+		"ae2:charged_certus_quartz_crystal",
+		"emendatus:certus_quartz_gem"
+	],
+	"forge:dusts/certus_quartz": [
+		"ae2:certus_quartz_dust",
+		"emendatus:certus_quartz_dust"
+	],
+	"forge:storage_blocks/certus_quartz": [
+		"ae2:quartz_block",
+		"emendatus:certus_quartz_block"
+	],
+	"forge:gems/fluorite": [
+		"mekanism:fluorite_gem",
+		"emendatus:fluorite_gem"
+	],
+	"forge:dusts/fluorite": [
+		"mekanism:dust_fluorite",
+		"emendatus:fluorite_dust"
+	],
+	"forge:storage_blocks/fluorite": [
+		"mekanism:block_fluorite",
+		"emendatus:fluorite_block"
+	],
+	"forge:gems/ruby": [
+		"thermal:ruby",
+		"emendatus:ruby_gem"
+	],
+	"forge:gears/ruby": [
+		"thermal:ruby_gear",
+		"emendatus:ruby_gear"
+	],
+	"forge:dusts/ruby": [
+		"thermal:ruby_dust",
+		"emendatus:ruby_dust"
+	],
+	"forge:storage_blocks/ruby": [
+		"thermal:ruby_block",
+		"emendatus:ruby_block"
+	],
+	"forge:dusts/aluminum": [
+		"immersiveengineering:dust_aluminum",
+		"emendatus:aluminum_dust"
+	],
+	"forge:ingots/aluminum": [
+		"immersiveengineering:ingot_aluminum",
+		"emendatus:aluminum_ingot"
+	],
+	"forge:nuggets/aluminum": [
+		"immersiveengineering:nugget_aluminum",
+		"emendatus:aluminum_nugget"
+	],
+	"forge:plates/aluminum": [
+		"immersiveengineering:plate_aluminum",
+		"emendatus:aluminum_plate"
+	],
+	"forge:rods/aluminum": [
+		"immersiveengineering:stick_aluminum",
+		"emendatus:aluminum_rod"
+	],
+	"forge:raw_materials/aluminum": [
+		"immersiveengineering:raw_aluminum",
+		"emendatus:raw_aluminum"
+	],
+	"forge:storage_blocks/aluminum": [
+		"immersiveengineering:storage_aluminum",
+		"emendatus:aluminum_block"
+	],
+	"forge:storage_blocks/raw_aluminum": [
+		"immersiveengineering:raw_block_aluminum",
+		"emendatus:raw_aluminum_block"
+	],
+	"forge:dusts/lead": [
+		"thermal:lead_dust",
+		"mekanism:dust_lead",
+		"immersiveengineering:dust_lead",
+		"emendatus:lead_dust"
+	],
+	"forge:gears/lead": [
+		"thermal:lead_gear",
+		"emendatus:lead_gear"
+	],
+	"forge:ingots/lead": [
+		"thermal:lead_ingot",
+		"mekanism:ingot_lead",
+		"immersiveengineering:ingot_lead",
+		"embers:lead_ingot",
+		"eidolon:lead_ingot",
+		"emendatus:lead_ingot"
+	],
+	"forge:nuggets/lead": [
+		"thermal:lead_nugget",
+		"mekanism:nugget_lead",
+		"immersiveengineering:nugget_lead",
+		"embers:lead_nugget",
+		"eidolon:lead_nugget",
+		"emendatus:lead_nugget"
+	],
+	"forge:plates/lead": [
+		"thermal:lead_plate",
+		"immersiveengineering:plate_lead",
+		"embers:lead_plate",
+		"emendatus:lead_plate"
+	],
+	"forge:raw_materials/lead": [
+		"thermal:raw_lead",
+		"mekanism:raw_lead",
+		"immersiveengineering:raw_lead",
+		"embers:raw_lead",
+		"eidolon:raw_lead",
+		"emendatus:raw_lead"
+	],
+	"forge:storage_blocks/lead": [
+		"thermal:lead_block",
+		"mekanism:block_lead",
+		"immersiveengineering:storage_lead",
+		"embers:lead_block",
+		"eidolon:lead_block",
+		"emendatus:lead_block"
+	],
+	"forge:storage_blocks/raw_lead": [
+		"thermal:raw_lead_block",
+		"mekanism:block_raw_lead",
+		"immersiveengineering:raw_block_lead",
+		"embers:raw_lead_block",
+		"eidolon:raw_lead_block",
+		"emendatus:raw_lead_block"
+	],
+	"forge:dusts/nickel": [
+		"thermal:nickel_dust",
+		"immersiveengineering:dust_nickel",
+		"emendatus:nickel_dust"
+	],
+	"forge:gears/nickel": [
+		"thermal:nickel_gear",
+		"emendatus:nickel_gear"
+	],
+	"forge:ingots/nickel": [
+		"thermal:nickel_ingot",
+		"immersiveengineering:ingot_nickel",
+		"emendatus:nickel_ingot"
+	],
+	"forge:nuggets/nickel": [
+		"thermal:nickel_nugget",
+		"immersiveengineering:nugget_nickel",
+		"emendatus:nickel_nugget"
+	],
+	"forge:plates/nickel": [
+		"thermal:nickel_plate",
+		"immersiveengineering:plate_nickel",
+		"emendatus:nickel_plate"
+	],
+	"forge:raw_materials/nickel": [
+		"thermal:raw_nickel",
+		"immersiveengineering:raw_nickel",
+		"emendatus:raw_nickel"
+	],
+	"forge:storage_blocks/nickel": [
+		"thermal:nickel_block",
+		"immersiveengineering:storage_nickel",
+		"emendatus:nickel_block"
+	],
+	"forge:storage_blocks/raw_nickel": [
+		"thermal:raw_nickel_block",
+		"immersiveengineering:raw_block_nickel",
+		"emendatus:raw_nickel_block"
+	],
+	"forge:dusts/silver": [
+		"thermal:silver_dust",
+		"immersiveengineering:dust_silver",
+		"occultism:silver_dust",
+		"emendatus:silver_dust"
+	],
+	"forge:gears/silver": [
+		"thermal:silver_gear",
+		"emendatus:silver_gear"
+	],
+	"forge:ingots/silver": [
+		"thermal:silver_ingot",
+		"immersiveengineering:ingot_silver",
+		"embers:silver_ingot",
+		"occultism:silver_ingot",
+		"eidolon:silver_ingot",
+		"emendatus:silver_ingot"
+	],
+	"forge:nuggets/silver": [
+		"thermal:silver_nugget",
+		"immersiveengineering:nugget_silver",
+		"embers:silver_nugget",
+		"occultism:silver_nugget",
+		"eidolon:silver_nugget",
+		"emendatus:silver_nugget"
+	],
+	"forge:plates/silver": [
+		"thermal:silver_plate",
+		"immersiveengineering:plate_silver",
+		"embers:silver_plate",
+		"emendatus:silver_plate"
+	],
+	"forge:raw_materials/silver": [
+		"thermal:raw_silver",
+		"immersiveengineering:raw_silver",
+		"embers:raw_silver",
+		"occultism:raw_silver",
+		"eidolon:raw_silver",
+		"emendatus:raw_silver"
+	],
+	"forge:storage_blocks/silver": [
+		"thermal:silver_block",
+		"immersiveengineering:storage_silver",
+		"embers:silver_block",
+		"occultism:silver_block",
+		"eidolon:silver_block",
+		"emendatus:silver_block"
+	],
+	"forge:storage_blocks/raw_silver": [
+		"thermal:raw_silver_block",
+		"immersiveengineering:raw_block_silver",
+		"embers:raw_silver_block",
+		"occultism:raw_silver_block",
+		"eidolon:raw_silver_block",
+		"emendatus:raw_silver_block"
+	],
+	"forge:dusts/tin": [
+		"thermal:tin_dust",
+		"mekanism:dust_tin",
+		"emendatus:tin_dust"
+	],
+	"forge:gears/tin": [
+		"thermal:tin_gear",
+		"emendatus:tin_gear"
+	],
+	"forge:ingots/tin": [
+		"thermal:tin_ingot",
+		"mekanism:ingot_tin",
+		"emendatus:tin_ingot"
+	],
+	"forge:nuggets/tin": [
+		"thermal:tin_nugget",
+		"mekanism:nugget_tin",
+		"emendatus:tin_nugget"
+	],
+	"forge:plates/tin": [
+		"thermal:tin_plate",
+		"emendatus:tin_plate"
+	],
+	"forge:raw_materials/tin": [
+		"thermal:raw_tin",
+		"mekanism:raw_tin",
+		"emendatus:raw_tin"
+	],
+	"forge:storage_blocks/tin": [
+		"thermal:tin_block",
+		"mekanism:block_tin",
+		"emendatus:tin_block"
+	],
+	"forge:storage_blocks/raw_tin": [
+		"thermal:raw_tin_block",
+		"mekanism:block_raw_tin",
+		"emendatus:raw_tin_block"
+	],
+	"forge:dusts/uranium": [
+		"mekanism:dust_uranium",
+		"immersiveengineering:dust_uranium",
+		"emendatus:uranium_dust"
+	],
+	"forge:ingots/uranium": [
+		"mekanism:ingot_uranium",
+		"immersiveengineering:ingot_uranium",
+		"emendatus:uranium_ingot"
+	],
+	"forge:nuggets/uranium": [
+		"mekanism:nugget_uranium",
+		"immersiveengineering:nugget_uranium",
+		"emendatus:uranium_nugget"
+	],
+	"forge:plates/uranium": [
+		"immersiveengineering:plate_uranium",
+		"emendatus:uranium_plate"
+	],
+	"forge:raw_materials/uranium": [
+		"mekanism:raw_uranium",
+		"immersiveengineering:raw_uranium",
+		"emendatus:raw_uranium"
+	],
+	"forge:storage_blocks/uranium": [
+		"mekanism:block_uranium",
+		"immersiveengineering:storage_uranium",
+		"emendatus:uranium_block"
+	],
+	"forge:storage_blocks/raw_uranium": [
+		"mekanism:block_raw_uranium",
+		"immersiveengineering:raw_block_uranium",
+		"emendatus:raw_uranium_block"
+	],
+	"forge:ingots/zinc": [
+		"create:zinc_ingot",
+		"emendatus:zinc_ingot"
+	],
+	"forge:nuggets/zinc": [
+		"create:zinc_nugget",
+		"emendatus:zinc_nugget"
+	],
+	"forge:plates/zinc": [
+		"createaddition:zinc_sheet",
+		"emendatus:zinc_plate"
+	],
+	"forge:raw_materials/zinc": [
+		"create:raw_zinc",
+		"emendatus:raw_zinc"
+	],
+	"forge:storage_blocks/zinc": [
+		"create:zinc_block",
+		"emendatus:zinc_block"
+	],
+	"forge:storage_blocks/raw_zinc": [
+		"create:raw_zinc_block",
+		"emendatus:raw_zinc_block"
+	],
+	"forge:ingots/cobalt": [
+		"tconstruct:cobalt_ingot",
+		"emendatus:cobalt_ingot"
+	],
+	"forge:nuggets/cobalt": [
+		"tconstruct:cobalt_nugget",
+		"emendatus:cobalt_nugget"
+	],
+	"forge:raw_materials/cobalt": [
+		"tconstruct:raw_cobalt",
+		"emendatus:raw_cobalt"
+	],
+	"forge:storage_blocks/cobalt": [
+		"tconstruct:cobalt_block",
+		"emendatus:cobalt_block"
+	],
+	"forge:storage_blocks/raw_cobalt": [
+		"tconstruct:raw_cobalt_block",
+		"emendatus:raw_cobalt_block"
+	],
+	"forge:dusts/osmium": [
+		"mekanism:dust_osmium",
+		"emendatus:osmium_dust"
+	],
+	"forge:ingots/osmium": [
+		"mekanism:ingot_osmium",
+		"emendatus:osmium_ingot"
+	],
+	"forge:nuggets/osmium": [
+		"mekanism:nugget_osmium",
+		"emendatus:osmium_nugget"
+	],
+	"forge:raw_materials/osmium": [
+		"mekanism:raw_osmium",
+		"emendatus:raw_osmium"
+	],
+	"forge:storage_blocks/osmium": [
+		"mekanism:block_osmium",
+		"emendatus:osmium_block"
+	],
+	"forge:storage_blocks/raw_osmium": [
+		"mekanism:block_raw_osmium",
+		"emendatus:raw_osmium_block"
+	],
+	"forge:dusts/iesnium": [
+		"occultism:iesnium_dust",
+		"emendatus:iesnium_dust"
+	],
+	"forge:ingots/iesnium": [
+		"occultism:iesnium_ingot",
+		"emendatus:iesnium_ingot"
+	],
+	"forge:nuggets/iesnium": [
+		"occultism:iesnium_nugget",
+		"emendatus:iesnium_nugget"
+	],
+	"forge:raw_materials/iesnium": [
+		"occultism:raw_iesnium",
+		"emendatus:raw_iesnium"
+	],
+	"forge:storage_blocks/iesnium": [
+		"occultism:iesnium_block",
+		"emendatus:iesnium_block"
+	],
+	"forge:storage_blocks/raw_iesnium": [
+		"occultism:raw_iesnium_block",
+		"emendatus:raw_iesnium_block"
+	]
+}

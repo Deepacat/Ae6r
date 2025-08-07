@@ -14,6 +14,12 @@ ServerEvents.recipes(e => {
         /createaddition:pressing/,
 
         /immersiveengineering:crafting\/plate_/,
+        /immersiveengineering:metalpress\/.*plate/,
+        /immersiveengineering:metalpress\/.*rod/,
+        /immersiveengineering:metalpress\/.*gear/,
+
+        /embers:stamping\/.*gear/,
+        /embers:melting\/.*gear/,
 
         /industrialforegoing:mycelial/,
 
@@ -25,9 +31,99 @@ ServerEvents.recipes(e => {
         /powah:crafting\/cable_/,
 
         /create:crafting\/materials\/andesite_alloy/,
+
+        /create:\w+\/bread/,
+        /create:smelting\/ingot_\w+_compat/,
+        /create:smelting\/\w+_ingot_compat/,
+        /create:blasting\/ingot_\w+_compat/,
+        /create:blasting\/\w+_ingot_compat/,
+        /create:compat\/thermal\/crushing\/\w+_ore/,
+        /thermal:compat\/\w+\/\w+_ore/,
+        /decorative_blocks:\w+_beam/,
+        /decorative_blocks_abnormals:\w+_beam/,
+        /mekanism:storage_blocks\/\w+/,
+        /mekanism:nuggets\/\w+/,
+        /mekanism:processing\/\w+\/storage_blocks\/from_ingots/,
+        /mekanism:processing\/\w+\/ingot\/from_block/,
+        /mekanism:processing\/\w+\/ingot\/from_nuggets/,
+        /mekanism:processing\/\w+\/nugget\/from_ingot/,
+        /thermal:storage\/\w+_block/,
+        /thermal:storage\/\w+_ingot_from_nuggets/,
+        /thermal:storage\/\w+_nugget_from_ingot/,
+        /tconstruct:common\/materials\/\w+_block_from_ingots/,
+        /tconstruct:common\/materials\/\w+_ingot_from_block/,
+        /tconstruct:common\/materials\/\w+_ingot_from_nuggets/,
+        /tconstruct:common\/materials\/\w+_nugget_from_ingot/,
+        /immersiveengineering:crafting\/ingot_\w+_to_storage_\w+/,
+        /immersiveengineering:crafting\/ingot_\w+_to_nugget_\w+/,
+        /immersiveengineering:crafting\/nugget_\w+_to_ingot_\w+/,
+        /immersiveengineering:crafting\/storage_\w+_to_ingot_\w+/,
+        /create:crafting\/materials\/\w+_block_from_compacting/,
+        /create:crafting\/materials\/\w+_ingot_from_compacting/,
+        /create:crafting\/materials\/\w+_ingot_from_decompacting/,
+        /create:crafting\/materials\/\w+_nugget_from_decompacting/,
+        /occultism:crafting\/\w+_block/,
+        /occultism:crafting\/\w+_nugget/,
+        /occultism:crafting\/\w+_ingot_from_nuggets/
     ]
 
     const recipeFilterRemovals = [
+        {
+            output: 'mekanism:sawdust',
+            mod: 'mekanism',
+            type: 'mekanism:sawing'
+        },
+        {
+            output: '/\\w+:\\w+_gear$/',
+            type: 'minecraft:crafting_shaped'
+        },
+        {
+            mod: 'occultism',
+            type: 'occultism:miner'
+        },
+        {
+            output: '/powah:\\w+_starter/',
+            mod: 'powah'
+        },
+        { type: 'botanypots:crop' },
+        { type: 'botanypots:soil' },
+        { type: 'thermal:insolator' },
+        { type: 'immersiveengineering:cloche' },
+        { type: 'valhelsia_structures:axe_crafting' },
+        {
+            input: 'minecraft:fire_charge',
+            mod: 'thermal',
+            type: 'minecraft:crafting_shapeless'
+        },
+        { type: 'pedestals:pedestal_crushing', output: '#forge:dyes' },
+        { type: 'create:milling', output: '#forge:dyes' },
+        { type: 'create:crushing', output: '#forge:dyes' },
+        { type: 'mekanism:enriching', output: '#forge:dyes' },
+        { type: 'thermal:centrifuge', output: '#forge:dyes' },
+        { type: 'immersiveengineering:crusher', output: '#forge:dyes' },
+
+        { type: 'create:cutting', input: '#minecraft:logs' },
+        { type: 'immersiveengineering:sawmill', input: '#minecraft:logs' },
+
+        { type: 'mekanism:combining' },
+        { type: 'minecraft:smelting', output: 'minecraft:obsidian' },
+        { type: 'minecraft:blasting', output: 'minecraft:obsidian' },
+
+        { type: 'minecraft:smelting', input: '#forge:ores' },
+        { type: 'minecraft:blasting', input: '#forge:ores' },
+        { type: 'minecraft:smelting', input: '#forge:dusts' },
+        { type: 'minecraft:blasting', input: '#forge:dusts' },
+
+        { type: 'minecraft:smelting', input: '#farmersdelight:tools/knives' },
+        { type: 'minecraft:blasting', input: '#farmersdelight:tools/knives' },
+
+        { type: 'industrialforegoing:fluid_extractor' },
+        { type: 'thermal:tree_extractor' },
+
+        { mod: 'ironjetpacks' },
+        { mod: 'theoneprobe' },
+
+        { type: 'thermal:compression_fuel' },
         { type: 'eidolon:worktable' },
         { type: 'eidolon:crucible' },
         { output: 'apotheosis:hellshelf', id: 'apotheosis:hellshelf' },

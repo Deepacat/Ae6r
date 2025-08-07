@@ -5,6 +5,7 @@ let emDbg = function consoleLogDebugMessage(msg) {
 // need to generate some data since item registry isn't available to compare to on first load (Ingredient.of can't get existing tags)
 ServerEvents.tags('item', e => {
     let hidingDataObj = {}
+    let unifyDataObj = {}
     let dataGen = false
 
     // checks if theres any items in the copper ingot tag, to check if item registry access is available
@@ -20,15 +21,11 @@ ServerEvents.tags('item', e => {
 
         let matName = matObj[0]
         let matType = matObj[1].type
-        // combined item and block flags, plus force added flags
-        let matTypesToUse = global.emendatus_base_flags[matType].item
-            .concat(global.emendatus_base_flags[matType].block)
-            .concat(matObj[1].addFlags)
+        let matFlags = matObj[1].flags.all
 
-        for (let itemType of matTypesToUse) {
+        for (let itemType of matFlags) {
             let tagId = `forge:${global.emendatus_all_types[itemType].tag}${matObj[0]}`
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName, 'all')}`
-            if (matObj[1].delFlags.includes(itemType)) { continue }
             if (global.emenHideNonReplacing) {
                 emDbg(`Adding hidden tag to ${itemId}`)
                 e.add('c:hidden_from_recipe_viewers', itemId)
@@ -36,24 +33,36 @@ ServerEvents.tags('item', e => {
 
             // check tag for existing items from other mods
             let existingItems = Ingredient.of(`#${tagId}`).itemIds.toArray()
-            let checkExisting = (existingItems.length > 0 && !existingItems[0].includes('emendatus'))
 
-            if (dataGen && checkExisting) {
+            if (dataGen && existingItems.length > 1) {
                 hidingDataObj[matName].push(itemType)
+
+                if (tagId.includes('ores')) { continue }
+                unifyDataObj[tagId] = existingItems.slice()
             }
         }
     }
     if (dataGen) {
-        console.log('Saving tag data for emendatus datagen')
+        console.log('Saving tag datagen for emendatusJS')
         JsonIO.write('kubejs/datagen/tags.json', hidingDataObj)
+        JsonIO.write('kubejs/datagen/unify.json', unifyDataObj)
     }
 
-    let data = JsonIO.read('kubejs/datagen/tags.json')
-    for (let itemMat in data) {
-        for (let itemType of data[itemMat]) {
+    let hidingData = JsonIO.read('kubejs/datagen/tags.json')
+    for (let itemMat in hidingData) {
+        for (let itemType of hidingData[itemMat]) {
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, itemMat, 'all')}`
             emDbg(`removing hidden tag from "emendatus:${itemMat}_${itemType}"`)
             e.remove('c:hidden_from_recipe_viewers', itemId)
+        }
+    }
+
+    let unifData = JsonIO.read('kubejs/datagen/unify.json')
+    for (let tagId in unifData) {
+        for (let itemId of unifData[tagId]) {
+            if (itemId.includes('emendatus')) { continue }
+            e.remove(tagId, itemId)
+            e.add('c:hidden_from_recipe_viewers', itemId)
         }
     }
 })
