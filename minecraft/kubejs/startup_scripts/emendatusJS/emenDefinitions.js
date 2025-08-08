@@ -8,44 +8,44 @@
 global.vanilla_mats = {
     // - - vanilla - - 
     coal: {
-        type: 'none', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'none', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore', 'deepslate_ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     copper: {
-        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'raw_ore', 'ore', 'deepslate_ore', 'raw_block', 'storage_block'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     diamond: {
-        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore', 'deepslate_ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     emerald: {
-        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore', 'deepslate_ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     gold: {
-        type: 'metal', toolLvl: 'iron', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
+        type: 'metal', toolLvl: 'iron', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'deepslate_ore', 'nether_ore', 'raw_block', 'storage_block'],
         addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     iron: {
-        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'deepslate_ore', 'raw_block', 'storage_block'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     lapis: {
-        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'ore', 'deepslate_ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     netherite: {
         type: 'metal', toolLvl: 'diamond', vanillaFlags: ['ingot', 'storage_block'],
         addFlags: [], delFlags: ['raw_ore', 'shard', 'crushed_ore', 'ore', 'clump', 'crystal', 'dirty_dust'], addProcFlags: [], delProcFlags: []
     },
     quartz: {
-        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'nether_ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['ore', 'deepslate_ore']
     },
     redstone: {
-        type: 'none', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        type: 'none', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore', 'deepslate_ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
 }
 
@@ -110,12 +110,12 @@ global.metal_mats = {
     // tungsten: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
     uranium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: [] },
     zinc: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: [] },
-    cobalt: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore', 'ore'], addProcFlags: [], delProcFlags: [] },
+    cobalt: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore', 'ore', 'deepslate_ore', 'nether_ore'], addProcFlags: [], delProcFlags: [] },
     // falsite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
     // horizonite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
     osmium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: [] },
     // ventium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    iesnium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['ore'], addProcFlags: [], delProcFlags: [] }
+    iesnium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['ore', 'deepslate_ore', 'nether_ore'], addProcFlags: [], delProcFlags: [] }
 }
 
 global.flagless_mats = {
@@ -146,9 +146,21 @@ global.emendatus_item_types = {
 }
 
 global.emendatus_block_types = {
-    storage_block: { replacer: '@_block', tag: 'storage_blocks/', tags: ['forge:storage_blocks/@', 'forge:storage_blocks'] },
-    ore: { replacer: '@_ore', tag: 'ores/', tags: ['forge:ores/@', 'forge:ores'] },
-    raw_block: { replacer: 'raw_@_block', tag: 'storage_blocks/raw_', tags: ['forge:storage_blocks/raw_@', 'forge:storage_blocks/raw'] }
+    storage_block: {
+        replacer: '@_block', tag: 'storage_blocks/', tags: ['forge:storage_blocks/@', 'forge:storage_blocks']
+    },
+    ore: {
+        replacer: '@_ore', oreData: { block: 'stone', sound: 'stone' }, tag: 'ores/', tags: ['forge:ores/@', 'forge:ores', 'forge:ores_in_ground/stone']
+    },
+    deepslate_ore: {
+        replacer: 'deepslate_@_ore', oreData: { block: 'deepslate', sound: 'deepslate' }, tag: 'ores/', tags: ['forge:ores/@', 'forge:ores', 'forge:ores_in_ground/deepslate']
+    },
+    nether_ore: {
+        replacer: 'nether_@_ore', oreData: { block: 'netherrack', sound: 'nether_ore' }, tag: 'ores/', tags: ['forge:ores/@', 'forge:ores', 'forge:ores_in_ground/netherrack']
+    },
+    raw_block: {
+        replacer: 'raw_@_block', tag: 'storage_blocks/raw_', tags: ['forge:storage_blocks/raw_@', 'forge:storage_blocks/raw']
+    }
 }
 
 global.emendatus_all_types = Object.assign(global.emendatus_item_types, global.emendatus_block_types)
@@ -161,12 +173,12 @@ global.emendatus_base_flags = {
     gem: {
         item: ['clump', 'cluster_shard', 'crystal', 'gem',
             'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
-        block: ['storage_block', 'ore']
+        block: ['storage_block', 'ore', 'deepslate_ore', 'nether_ore']
     },
     metal: {
         item: ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment',
             'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
-        block: ['storage_block', 'ore', 'raw_block']
+        block: ['storage_block', 'ore', 'deepslate_ore', 'nether_ore', 'raw_block']
     },
     none: {
         item: [],

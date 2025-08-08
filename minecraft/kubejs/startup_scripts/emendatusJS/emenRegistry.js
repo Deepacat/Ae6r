@@ -58,41 +58,21 @@ StartupEvents.registry('block', e => {
             if (replaceableId == undefined) { continue }
 
             // registering ores
-            if (blockType == 'ore') {
+            if (oreFlags.includes(blockType)) {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
+                let oreBlock = global.emendatus_all_types[blockType].oreData.block
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
-
                 // if (matObj[1].type == 'gem') { texturePath = texturePath + '_sample' }
-                e.create(`emendatus:stone_${replaceableId}`)
-                    .soundType('stone')
-                    .hardness(5)
+                e.create(`emendatus:${replaceableId}`)
+                    .soundType(global.emendatus_all_types[blockType].oreData.sound)
+                    .hardness(3)
                     .tag('forge:ores')
                     .tag(`forge:ores/${matName}`)
                     .tagBlock('forge:ores')
                     .tagBlock(`forge:ores/${matName}`)
                     .tagBlock('minecraft:mineable/pickaxe')
                     .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                    .modelJson = oreModel('stone', texturePath)
-                e.create(`emendatus:deepslate_${replaceableId}`)
-                    .soundType('stone')
-                    .hardness(5)
-                    .tag('forge:ores')
-                    .tag(`forge:ores/${matName}`)
-                    .tagBlock('forge:ores')
-                    .tagBlock(`forge:ores/${matName}`)
-                    .tagBlock('minecraft:mineable/pickaxe')
-                    .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                    .modelJson = oreModel('deepslate', texturePath)
-                e.create(`emendatus:nether_${replaceableId}`)
-                    .soundType('stone')
-                    .hardness(5)
-                    .tag('forge:ores')
-                    .tag(`forge:ores/${matName}`)
-                    .tagBlock('forge:ores')
-                    .tagBlock(`forge:ores/${matName}`)
-                    .tagBlock('minecraft:mineable/pickaxe')
-                    .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                    .modelJson = oreModel('netherrack', texturePath)
+                    .modelJson = oreModel(oreBlock, texturePath)
                 continue
             }
             if (blockType == 'raw_block') {
@@ -145,5 +125,6 @@ function oreModel(blockType, texturePath) {
             }
         }
     }
-
 }
+
+const oreFlags = ['ore', 'deepslate_ore', 'nether_ore']
