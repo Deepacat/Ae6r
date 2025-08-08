@@ -17,13 +17,9 @@ for (let matObj of Object.entries(global.emendatus_mats)) {
             .filter(flag => !matObj[1].delFlags.includes(flag))
 }
 
-let emDbg = function consoleLogDebugMessage(msg) {
-    if (global.emenDebug) { console.log(msg) }
-}
-
 StartupEvents.registry('item', e => {
-    e.create(`emendatus:charcoal_dust`).texture(`kubejs:item/emendatus/vanilla/charcoal_dust`)
-    e.create(`emendatus:obsidian_dust`).texture(`kubejs:item/emendatus/vanilla/obsidian_dust`)
+    e.create(`emendatus:charcoal_dust`).texture(`kubejs:item/emendatus/gem/charcoal_dust`)
+    e.create(`emendatus:obsidian_dust`).texture(`kubejs:item/emendatus/obsidian_dust`)
     // matObj[1].type = material type, e.g. 'alloy'
     // matObj[0] = material name, e.g. 'copper'
     // itemType = item type id, e.g. 'ingot'
@@ -32,12 +28,13 @@ StartupEvents.registry('item', e => {
         let matFlags = matObj[1].flags.item
 
         for (let itemType of matFlags) {
+            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(itemType)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName)
             if (replaceableId == undefined) { continue }
             let itemId = `emendatus:${replaceableId}`
             let texturePath = `kubejs:item/emendatus/${matObj[1].type}/${replaceableId}`
 
-            emDbg(`Registering ${itemId} with texture ${texturePath}`)
+            console.log(`Registering ${itemId} with texture ${texturePath}`)
 
             // register item
             let item = e.create(itemId).texture(texturePath)
@@ -56,6 +53,7 @@ StartupEvents.registry('block', e => {
         let matTypes = matObj[1].flags.block
 
         for (let blockType of matTypes) {
+            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockType)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockType].replacer, matName)
             let blockId = `emendatus:${replaceableId}`
             if (replaceableId == undefined) { continue }
@@ -63,7 +61,7 @@ StartupEvents.registry('block', e => {
             // registering ores
             if (blockType == 'ore') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
-                emDbg(`Registering ${blockId} with texture ${texturePath}`)
+                console.log(`Registering ${blockId} with texture ${texturePath}`)
 
                 // if (matObj[1].type == 'gem') { texturePath = texturePath + '_sample' }
                 let ore = e.create(blockId)
@@ -96,7 +94,7 @@ StartupEvents.registry('block', e => {
             }
             if (blockType == 'raw_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw_${matName}_block`
-                emDbg(`Registering ${blockId} with texture ${texturePath}`)
+                console.log(`Registering ${blockId} with texture ${texturePath}`)
                 e.create(blockId)
                     .soundType('stone')
                     .textureAll(texturePath)
@@ -111,7 +109,7 @@ StartupEvents.registry('block', e => {
             // else generation should just be full storage blocks
             if (blockType == 'storage_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
-                emDbg(`Registering ${blockId} with texture ${texturePath}`)
+                console.log(`Registering ${blockId} with texture ${texturePath}`)
                 e.create(blockId)
                     .soundType('metal')
                     .textureAll(texturePath)
