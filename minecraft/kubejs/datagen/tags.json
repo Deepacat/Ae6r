@@ -1,57 +1,47 @@
 {
-	"coal": [
-		"dust",
-		"ore"
-	],
+	"coal": [],
 	"copper": [
-		"plate",
-		"rod",
-		"gear",
 		"dust",
-		"ore"
+		"gear",
+		"nugget",
+		"plate",
+		"rod"
 	],
 	"diamond": [
 		"gear",
-		"dust",
-		"ore"
+		"dust"
 	],
 	"emerald": [
 		"gear",
-		"dust",
-		"ore"
+		"dust"
 	],
 	"gold": [
-		"plate",
-		"rod",
-		"gear",
 		"dust",
-		"ore"
+		"gear",
+		"plate",
+		"rod"
 	],
 	"iron": [
-		"plate",
-		"rod",
-		"gear",
 		"dust",
-		"ore"
+		"gear",
+		"plate",
+		"rod"
 	],
 	"lapis": [
 		"gear",
-		"dust",
-		"ore"
+		"dust"
 	],
 	"netherite": [
-		"plate",
+		"dust",
 		"gear",
-		"dust"
+		"nugget",
+		"plate"
 	],
 	"quartz": [
 		"gear",
-		"dust",
-		"ore"
+		"dust"
 	],
-	"redstone": [
-		"ore"
-	],
+	"redstone": [],
 	"brass": [
 		"ingot",
 		"nugget",
@@ -92,7 +82,6 @@
 		"plate",
 		"storage_block"
 	],
-	"graphite": [],
 	"invar": [
 		"dust",
 		"gear",
@@ -125,11 +114,6 @@
 		"rod",
 		"storage_block"
 	],
-	"fiery": [],
-	"infused_iron": [],
-	"ironwood": [],
-	"knightmetal": [],
-	"orichalcum": [],
 	"refined_glowstone": [
 		"ingot",
 		"nugget",
@@ -146,9 +130,6 @@
 		"nugget",
 		"storage_block"
 	],
-	"sky": [],
-	"soul_steel": [],
-	"tainted_gold": [],
 	"apatite": [
 		"gem",
 		"dust",
@@ -158,7 +139,6 @@
 	"bitumen": [
 		"storage_block"
 	],
-	"charoite": [],
 	"cinnabar": [
 		"gem",
 		"dust",
@@ -166,10 +146,7 @@
 		"ore"
 	],
 	"dimensional": [],
-	"diopside": [],
-	"moonstone": [],
 	"potassium_nitrate": [],
-	"pyrope": [],
 	"sapphire": [
 		"gem",
 		"gear",
@@ -183,9 +160,7 @@
 		"storage_block",
 		"ore"
 	],
-	"aquite": [],
 	"arcane": [],
-	"carminite": [],
 	"certus_quartz": [
 		"gem",
 		"dust",
@@ -197,7 +172,6 @@
 		"storage_block",
 		"ore"
 	],
-	"peridot": [],
 	"ruby": [
 		"gem",
 		"gear",
@@ -216,7 +190,6 @@
 		"ore",
 		"raw_block"
 	],
-	"iridium": [],
 	"lead": [
 		"dust",
 		"gear",
@@ -262,8 +235,6 @@
 		"ore",
 		"raw_block"
 	],
-	"titanium": [],
-	"tungsten": [],
 	"uranium": [
 		"dust",
 		"ingot",
@@ -291,8 +262,6 @@
 		"ore",
 		"raw_block"
 	],
-	"falsite": [],
-	"horizonite": [],
 	"osmium": [
 		"dust",
 		"ingot",
@@ -302,7 +271,6 @@
 		"ore",
 		"raw_block"
 	],
-	"ventium": [],
 	"iesnium": [
 		"dust",
 		"ingot",

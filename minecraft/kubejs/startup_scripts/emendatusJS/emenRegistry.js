@@ -55,47 +55,50 @@ StartupEvents.registry('block', e => {
         for (let blockType of matTypes) {
             if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockType)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockType].replacer, matName)
-            let blockId = `emendatus:${replaceableId}`
             if (replaceableId == undefined) { continue }
 
             // registering ores
             if (blockType == 'ore') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
-                console.log(`Registering ${blockId} with texture ${texturePath}`)
+                console.log(`Registering ${replaceableId} with texture ${texturePath}`)
 
                 // if (matObj[1].type == 'gem') { texturePath = texturePath + '_sample' }
-                let ore = e.create(blockId)
-                ore.soundType('stone')
-                ore.hardness(5)
-                ore.tag('forge:ores')
-                ore.tag(`forge:ores/${matName}`)
-                ore.tagBlock('forge:ores')
-                ore.tagBlock(`forge:ores/${matName}`)
-                ore.tagBlock('minecraft:mineable/pickaxe')
-                ore.tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                ore.modelJson = {
-                    loader: "forge:composite",
-                    textures: { particle: texturePath },
-                    parent: "block/block",
-                    children: {
-                        base: {
-                            parent: "block/cube_all",
-                            render_type: "solid",
-                            textures: { all: "block/stone" },
-                        },
-                        overlay: {
-                            parent: "block/cube_all",
-                            render_type: "translucent",
-                            textures: { all: texturePath },
-                        }
-                    }
-                }
+                e.create(`emendatus:stone_${replaceableId}`)
+                    .soundType('stone')
+                    .hardness(5)
+                    .tag('forge:ores')
+                    .tag(`forge:ores/${matName}`)
+                    .tagBlock('forge:ores')
+                    .tagBlock(`forge:ores/${matName}`)
+                    .tagBlock('minecraft:mineable/pickaxe')
+                    .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
+                    .modelJson = oreModel('stone', texturePath)
+                e.create(`emendatus:deepslate_${replaceableId}`)
+                    .soundType('stone')
+                    .hardness(5)
+                    .tag('forge:ores')
+                    .tag(`forge:ores/${matName}`)
+                    .tagBlock('forge:ores')
+                    .tagBlock(`forge:ores/${matName}`)
+                    .tagBlock('minecraft:mineable/pickaxe')
+                    .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
+                    .modelJson = oreModel('deepslate', texturePath)
+                e.create(`emendatus:nether_${replaceableId}`)
+                    .soundType('stone')
+                    .hardness(5)
+                    .tag('forge:ores')
+                    .tag(`forge:ores/${matName}`)
+                    .tagBlock('forge:ores')
+                    .tagBlock(`forge:ores/${matName}`)
+                    .tagBlock('minecraft:mineable/pickaxe')
+                    .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
+                    .modelJson = oreModel('netherrack', texturePath)
                 continue
             }
             if (blockType == 'raw_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw_${matName}_block`
-                console.log(`Registering ${blockId} with texture ${texturePath}`)
-                e.create(blockId)
+                console.log(`Registering ${replaceableId} with texture ${texturePath}`)
+                e.create(`emendatus:${replaceableId}`)
                     .soundType('stone')
                     .textureAll(texturePath)
                     .hardness(5)
@@ -109,8 +112,8 @@ StartupEvents.registry('block', e => {
             // else generation should just be full storage blocks
             if (blockType == 'storage_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
-                console.log(`Registering ${blockId} with texture ${texturePath}`)
-                e.create(blockId)
+                console.log(`Registering ${replaceableId} with texture ${texturePath}`)
+                e.create(`emendatus:${replaceableId}`)
                     .soundType('metal')
                     .textureAll(texturePath)
                     .hardness(5)
@@ -123,3 +126,24 @@ StartupEvents.registry('block', e => {
         }
     }
 })
+
+function oreModel(blockType, texturePath) {
+    return {
+        loader: "forge:composite",
+        textures: { particle: texturePath },
+        parent: "block/block",
+        children: {
+            base: {
+                parent: "block/cube_all",
+                render_type: "solid",
+                textures: { all: `block/${blockType}` },
+            },
+            overlay: {
+                parent: "block/cube_all",
+                render_type: "translucent",
+                textures: { all: texturePath },
+            }
+        }
+    }
+
+}

@@ -1,8 +1,24 @@
 {
-	"forge:dusts/coal": [
-		"bloodmagic:coalsand",
-		"mekanism:dust_coal",
-		"emendatus:coal_dust"
+	"forge:dusts/copper": [
+		"bloodmagic:coppersand",
+		"thermal:copper_dust",
+		"mekanism:dust_copper",
+		"immersiveengineering:dust_copper",
+		"occultism:copper_dust",
+		"emendatus:copper_dust"
+	],
+	"forge:gears/copper": [
+		"thermal:copper_gear",
+		"emendatus:copper_gear"
+	],
+	"forge:nuggets/copper": [
+		"pneumaticcraft:copper_nugget",
+		"thermal:copper_nugget",
+		"immersiveengineering:nugget_copper",
+		"embers:copper_nugget",
+		"create:copper_nugget",
+		"tconstruct:copper_nugget",
+		"emendatus:copper_nugget"
 	],
 	"forge:plates/copper": [
 		"thermal:copper_plate",
@@ -14,18 +30,6 @@
 	"forge:rods/copper": [
 		"createaddition:copper_rod",
 		"emendatus:copper_rod"
-	],
-	"forge:gears/copper": [
-		"thermal:copper_gear",
-		"emendatus:copper_gear"
-	],
-	"forge:dusts/copper": [
-		"bloodmagic:coppersand",
-		"thermal:copper_dust",
-		"mekanism:dust_copper",
-		"immersiveengineering:dust_copper",
-		"occultism:copper_dust",
-		"emendatus:copper_dust"
 	],
 	"forge:gears/diamond": [
 		"industrialforegoing:diamond_gear",
@@ -47,6 +51,19 @@
 		"mekanism:dust_emerald",
 		"emendatus:emerald_dust"
 	],
+	"forge:dusts/gold": [
+		"bloodmagic:goldsand",
+		"thermal:gold_dust",
+		"mekanism:dust_gold",
+		"immersiveengineering:dust_gold",
+		"occultism:gold_dust",
+		"emendatus:gold_dust"
+	],
+	"forge:gears/gold": [
+		"industrialforegoing:gold_gear",
+		"thermal:gold_gear",
+		"emendatus:gold_gear"
+	],
 	"forge:plates/gold": [
 		"thermal:gold_plate",
 		"immersiveengineering:plate_gold",
@@ -57,18 +74,18 @@
 		"createaddition:gold_rod",
 		"emendatus:gold_rod"
 	],
-	"forge:gears/gold": [
-		"industrialforegoing:gold_gear",
-		"thermal:gold_gear",
-		"emendatus:gold_gear"
+	"forge:dusts/iron": [
+		"bloodmagic:ironsand",
+		"thermal:iron_dust",
+		"mekanism:dust_iron",
+		"immersiveengineering:dust_iron",
+		"occultism:iron_dust",
+		"emendatus:iron_dust"
 	],
-	"forge:dusts/gold": [
-		"bloodmagic:goldsand",
-		"thermal:gold_dust",
-		"mekanism:dust_gold",
-		"immersiveengineering:dust_gold",
-		"occultism:gold_dust",
-		"emendatus:gold_dust"
+	"forge:gears/iron": [
+		"industrialforegoing:iron_gear",
+		"thermal:iron_gear",
+		"emendatus:iron_gear"
 	],
 	"forge:plates/iron": [
 		"thermal:iron_plate",
@@ -82,19 +99,6 @@
 		"createaddition:iron_rod",
 		"emendatus:iron_rod"
 	],
-	"forge:gears/iron": [
-		"industrialforegoing:iron_gear",
-		"thermal:iron_gear",
-		"emendatus:iron_gear"
-	],
-	"forge:dusts/iron": [
-		"bloodmagic:ironsand",
-		"thermal:iron_dust",
-		"mekanism:dust_iron",
-		"immersiveengineering:dust_iron",
-		"occultism:iron_dust",
-		"emendatus:iron_dust"
-	],
 	"forge:gears/lapis": [
 		"thermal:lapis_gear",
 		"emendatus:lapis_gear"
@@ -104,18 +108,23 @@
 		"mekanism:dust_lapis_lazuli",
 		"emendatus:lapis_dust"
 	],
-	"forge:plates/netherite": [
-		"thermal:netherite_plate",
-		"emendatus:netherite_plate"
+	"forge:dusts/netherite": [
+		"thermal:netherite_dust",
+		"mekanism:dust_netherite",
+		"emendatus:netherite_dust"
 	],
 	"forge:gears/netherite": [
 		"thermal:netherite_gear",
 		"emendatus:netherite_gear"
 	],
-	"forge:dusts/netherite": [
-		"thermal:netherite_dust",
-		"mekanism:dust_netherite",
-		"emendatus:netherite_dust"
+	"forge:nuggets/netherite": [
+		"thermal:netherite_nugget",
+		"tconstruct:netherite_nugget",
+		"emendatus:netherite_nugget"
+	],
+	"forge:plates/netherite": [
+		"thermal:netherite_plate",
+		"emendatus:netherite_plate"
 	],
 	"forge:gears/quartz": [
 		"thermal:quartz_gear",
@@ -421,6 +430,11 @@
 		"thermal:apatite_block",
 		"emendatus:apatite_block"
 	],
+	"forge:ores/apatite": [
+		"thermal:apatite_ore",
+		"thermal:deepslate_apatite_ore",
+		"emendatus:apatite_ore"
+	],
 	"forge:storage_blocks/bitumen": [
 		"thermal:bitumen_block",
 		"emendatus:bitumen_block"
@@ -436,6 +450,11 @@
 	"forge:storage_blocks/cinnabar": [
 		"thermal:cinnabar_block",
 		"emendatus:cinnabar_block"
+	],
+	"forge:ores/cinnabar": [
+		"thermal:cinnabar_ore",
+		"thermal:deepslate_cinnabar_ore",
+		"emendatus:cinnabar_ore"
 	],
 	"forge:gems/sapphire": [
 		"thermal:sapphire",
@@ -453,6 +472,11 @@
 		"thermal:sapphire_block",
 		"emendatus:sapphire_block"
 	],
+	"forge:ores/sapphire": [
+		"thermal:sapphire_ore",
+		"thermal:deepslate_sapphire_ore",
+		"emendatus:sapphire_ore"
+	],
 	"forge:gems/sulfur": [
 		"thermal:sulfur",
 		"emendatus:sulfur_gem"
@@ -468,6 +492,11 @@
 	"forge:storage_blocks/sulfur": [
 		"thermal:sulfur_block",
 		"emendatus:sulfur_block"
+	],
+	"forge:ores/sulfur": [
+		"thermal:sulfur_ore",
+		"thermal:deepslate_sulfur_ore",
+		"emendatus:sulfur_ore"
 	],
 	"forge:gems/certus_quartz": [
 		"ae2:certus_quartz_crystal",
@@ -494,6 +523,11 @@
 		"mekanism:block_fluorite",
 		"emendatus:fluorite_block"
 	],
+	"forge:ores/fluorite": [
+		"mekanism:fluorite_ore",
+		"mekanism:deepslate_fluorite_ore",
+		"emendatus:fluorite_ore"
+	],
 	"forge:gems/ruby": [
 		"thermal:ruby",
 		"emendatus:ruby_gem"
@@ -509,6 +543,11 @@
 	"forge:storage_blocks/ruby": [
 		"thermal:ruby_block",
 		"emendatus:ruby_block"
+	],
+	"forge:ores/ruby": [
+		"thermal:ruby_ore",
+		"thermal:deepslate_ruby_ore",
+		"emendatus:ruby_ore"
 	],
 	"forge:dusts/aluminum": [
 		"immersiveengineering:dust_aluminum",
@@ -537,6 +576,11 @@
 	"forge:storage_blocks/aluminum": [
 		"immersiveengineering:storage_aluminum",
 		"emendatus:aluminum_block"
+	],
+	"forge:ores/aluminum": [
+		"immersiveengineering:ore_aluminum",
+		"immersiveengineering:deepslate_ore_aluminum",
+		"emendatus:aluminum_ore"
 	],
 	"forge:storage_blocks/raw_aluminum": [
 		"immersiveengineering:raw_block_aluminum",
@@ -590,6 +634,19 @@
 		"eidolon:lead_block",
 		"emendatus:lead_block"
 	],
+	"forge:ores/lead": [
+		"thermal:lead_ore",
+		"thermal:deepslate_lead_ore",
+		"mekanism:lead_ore",
+		"mekanism:deepslate_lead_ore",
+		"immersiveengineering:ore_lead",
+		"immersiveengineering:deepslate_ore_lead",
+		"embers:lead_ore",
+		"embers:deepslate_lead_ore",
+		"eidolon:lead_ore",
+		"eidolon:deep_lead_ore",
+		"emendatus:lead_ore"
+	],
 	"forge:storage_blocks/raw_lead": [
 		"thermal:raw_lead_block",
 		"mekanism:block_raw_lead",
@@ -631,6 +688,13 @@
 		"thermal:nickel_block",
 		"immersiveengineering:storage_nickel",
 		"emendatus:nickel_block"
+	],
+	"forge:ores/nickel": [
+		"thermal:nickel_ore",
+		"thermal:deepslate_nickel_ore",
+		"immersiveengineering:ore_nickel",
+		"immersiveengineering:deepslate_ore_nickel",
+		"emendatus:nickel_ore"
 	],
 	"forge:storage_blocks/raw_nickel": [
 		"thermal:raw_nickel_block",
@@ -685,6 +749,19 @@
 		"eidolon:silver_block",
 		"emendatus:silver_block"
 	],
+	"forge:ores/silver": [
+		"thermal:silver_ore",
+		"thermal:deepslate_silver_ore",
+		"immersiveengineering:ore_silver",
+		"immersiveengineering:deepslate_ore_silver",
+		"embers:silver_ore",
+		"embers:deepslate_silver_ore",
+		"occultism:silver_ore",
+		"occultism:silver_ore_deepslate",
+		"eidolon:silver_ore",
+		"eidolon:deep_silver_ore",
+		"emendatus:silver_ore"
+	],
 	"forge:storage_blocks/raw_silver": [
 		"thermal:raw_silver_block",
 		"immersiveengineering:raw_block_silver",
@@ -726,6 +803,13 @@
 		"mekanism:block_tin",
 		"emendatus:tin_block"
 	],
+	"forge:ores/tin": [
+		"thermal:tin_ore",
+		"thermal:deepslate_tin_ore",
+		"mekanism:tin_ore",
+		"mekanism:deepslate_tin_ore",
+		"emendatus:tin_ore"
+	],
 	"forge:storage_blocks/raw_tin": [
 		"thermal:raw_tin_block",
 		"mekanism:block_raw_tin",
@@ -760,6 +844,13 @@
 		"immersiveengineering:storage_uranium",
 		"emendatus:uranium_block"
 	],
+	"forge:ores/uranium": [
+		"mekanism:uranium_ore",
+		"mekanism:deepslate_uranium_ore",
+		"immersiveengineering:ore_uranium",
+		"immersiveengineering:deepslate_ore_uranium",
+		"emendatus:uranium_ore"
+	],
 	"forge:storage_blocks/raw_uranium": [
 		"mekanism:block_raw_uranium",
 		"immersiveengineering:raw_block_uranium",
@@ -785,6 +876,11 @@
 		"create:zinc_block",
 		"emendatus:zinc_block"
 	],
+	"forge:ores/zinc": [
+		"create:zinc_ore",
+		"create:deepslate_zinc_ore",
+		"emendatus:zinc_ore"
+	],
 	"forge:storage_blocks/raw_zinc": [
 		"create:raw_zinc_block",
 		"emendatus:raw_zinc_block"
@@ -804,6 +900,10 @@
 	"forge:storage_blocks/cobalt": [
 		"tconstruct:cobalt_block",
 		"emendatus:cobalt_block"
+	],
+	"forge:ores/cobalt": [
+		"tconstruct:cobalt_ore",
+		"emendatus:cobalt_ore"
 	],
 	"forge:storage_blocks/raw_cobalt": [
 		"tconstruct:raw_cobalt_block",
@@ -829,6 +929,11 @@
 		"mekanism:block_osmium",
 		"emendatus:osmium_block"
 	],
+	"forge:ores/osmium": [
+		"mekanism:osmium_ore",
+		"mekanism:deepslate_osmium_ore",
+		"emendatus:osmium_ore"
+	],
 	"forge:storage_blocks/raw_osmium": [
 		"mekanism:block_raw_osmium",
 		"emendatus:raw_osmium_block"
@@ -852,6 +957,10 @@
 	"forge:storage_blocks/iesnium": [
 		"occultism:iesnium_block",
 		"emendatus:iesnium_block"
+	],
+	"forge:ores/iesnium": [
+		"occultism:iesnium_ore",
+		"emendatus:iesnium_ore"
 	],
 	"forge:storage_blocks/raw_iesnium": [
 		"occultism:raw_iesnium_block",
