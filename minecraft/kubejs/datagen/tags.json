@@ -5,15 +5,18 @@
 		"gear",
 		"nugget",
 		"plate",
-		"rod"
+		"rod",
+		"nether_ore"
 	],
 	"diamond": [
 		"gear",
-		"dust"
+		"dust",
+		"nether_ore"
 	],
 	"emerald": [
 		"gear",
-		"dust"
+		"dust",
+		"nether_ore"
 	],
 	"gold": [
 		"dust",
@@ -25,21 +28,27 @@
 		"dust",
 		"gear",
 		"plate",
-		"rod"
+		"rod",
+		"nether_ore"
 	],
 	"lapis": [
 		"gear",
-		"dust"
+		"dust",
+		"nether_ore"
 	],
 	"netherite": [
 		"dust",
 		"gear",
 		"nugget",
-		"plate"
+		"plate",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"quartz": [
 		"gear",
-		"dust"
+		"dust",
+		"ore",
+		"deepslate_ore"
 	],
 	"redstone": [],
 	"brass": [
@@ -134,50 +143,80 @@
 		"gem",
 		"dust",
 		"storage_block",
-		"ore"
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"bitumen": [
-		"storage_block"
+		"storage_block",
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"cinnabar": [
 		"gem",
 		"dust",
 		"storage_block",
-		"ore"
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
-	"dimensional": [],
-	"potassium_nitrate": [],
+	"dimensional": [
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
+	],
+	"potassium_nitrate": [
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
+	],
 	"sapphire": [
 		"gem",
 		"gear",
 		"dust",
 		"storage_block",
-		"ore"
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"sulfur": [
 		"gem",
 		"dust",
 		"storage_block",
-		"ore"
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
-	"arcane": [],
+	"arcane": [
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
+	],
 	"certus_quartz": [
 		"gem",
 		"dust",
-		"storage_block"
+		"storage_block",
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"fluorite": [
 		"gem",
 		"dust",
 		"storage_block",
-		"ore"
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"ruby": [
 		"gem",
 		"gear",
 		"dust",
 		"storage_block",
-		"ore"
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
 	],
 	"aluminum": [
 		"dust",
@@ -188,6 +227,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"lead": [
@@ -199,6 +240,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"nickel": [
@@ -210,9 +253,15 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
-	"platinum": [],
+	"platinum": [
+		"ore",
+		"deepslate_ore",
+		"nether_ore"
+	],
 	"silver": [
 		"dust",
 		"gear",
@@ -222,6 +271,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"tin": [
@@ -233,6 +284,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"uranium": [
@@ -243,6 +296,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"zinc": [
@@ -252,6 +307,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"cobalt": [
@@ -259,7 +316,6 @@
 		"nugget",
 		"raw_ore",
 		"storage_block",
-		"ore",
 		"raw_block"
 	],
 	"osmium": [
@@ -269,6 +325,8 @@
 		"raw_ore",
 		"storage_block",
 		"ore",
+		"deepslate_ore",
+		"nether_ore",
 		"raw_block"
 	],
 	"iesnium": [
@@ -277,7 +335,6 @@
 		"nugget",
 		"raw_ore",
 		"storage_block",
-		"ore",
 		"raw_block"
 	]
 }

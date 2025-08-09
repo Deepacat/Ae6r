@@ -1,9 +1,44 @@
+// i dont know which works for what ore but whatever i have here removed all i wanted i think
+
+WorldgenEvents.remove(event => {
+    event.removeFeatureById("underground_ores", [
+        "thermal:apatite_ore",
+        "thermal:cinnabar_ore",
+        "thermal:lead_ore",
+        "thermal:nickel_ore",
+        "thermal:niter_ore",
+        "thermal:silver_ore",
+        "thermal:sulfur_ore",
+        "thermal:tin_ore",
+        
+        "mekanism:ore_fluorite_normal",
+        "mekanism:ore_fluorite_buried",
+        "mekanism:ore_lead_normal",
+        "mekanism:ore_osmium_small",
+        "mekanism:ore_osmium_middle",
+        "mekanism:ore_osmium_upper",
+        "mekanism:ore_tin_large",
+        "mekanism:ore_tin_small",
+        "mekanism:ore_uranium_buried",
+        "mekanism:ore_uranium_small",
+
+        "immersiveengineering:bauxite",
+        "immersiveengineering:deep_nickel",
+        "immersiveengineering:lead",
+        "immersiveengineering:mineral_veins",
+        "immersiveengineering:nickel",
+        "immersiveengineering:silver",
+        "immersiveengineering:uranium",
+    ])
+})
+
 WorldgenEvents.remove(event => {
     // print all features for a given biome filter
     // event.printFeatures('', 'minecraft:plains')
     // event.printFeatures('underground_ores', '#minecraft:is_overworld')
     // event.removeFeatureById('lakes', 'pneumaticcraft:oil_lake_surface')
     // event.removeFeatureById('lakes', 'pneumaticcraft:oil_lake_underground')
+    
     event.removeOres(props => {
         props.blocks = [
             "thermal:apatite_ore",
@@ -69,6 +104,12 @@ WorldgenEvents.remove(event => {
 
             "mekanism:osmium_ore",
             "mekanism:deepslate_osmium_ore",
+
+            "miniutilities:ender_ore",
+
+            "rftoolsbase:dimensionalshard_overworld",
+            "rftoolsbase:dimensionalshard_nether",
+            "rftoolsbase:dimensionalshard_end"
         ]
     })
 })

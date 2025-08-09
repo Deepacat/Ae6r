@@ -1,0 +1,19 @@
+
+["The Garden Awakens"]
+	#Determine if resin should generate after hitting a creaking
+	generateResin = true
+	#Determine if creakings should spawn from creaking hearts
+	spawnCreakingFromHearts = true
+	#Determine if creaking hearts should spawn from pale oak saplings
+	spawnCreakingHeartsFromSaplings = false
+	#Determine if Pale Gardens should generate in the overworld
+	generatePaleGarden = true
+	#Determine if the wandering trader should have trades from the pale garden
+	paleTradesFromWanderer = true
+
+["Chase the Skies"]
+	#Determine if dried ghasts should generate in Nether Fossils
+	generateDriedGhasts = true
+	#Determine if all leash connections should be dropped when using a firework rocket while elytra flying
+	dropLeashConnectionsOnFireworkBoost = true
+

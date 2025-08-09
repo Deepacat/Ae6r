@@ -13,13 +13,13 @@
 	hud_indicator_enabled = true
 	#How far away (in blocks) entities can be to appear in the hud health indicator
 	#Range: 3.0 ~ 10000.0
-	max_distance = 100.0
+	max_distance = 50.0
 	#Whether health appears with a more visible yellow/black scheme.
 	colorblind_health_bar = false
 	#Whether health appears with a decimal point.
-	health_decimals = true
+	health_decimals = false
 	#Whether health appears appears as a | (true) or / (false).
-	health_separator = true
+	health_separator = false
 	#How long after mousing over an entity the hud damage indicator remains on screen, in game ticks.
 	#Range: 0 ~ 1200
 	hud_linger_time = 30

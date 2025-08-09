@@ -66,12 +66,11 @@ StartupEvents.registry('block', e => {
                 e.create(`emendatus:${replaceableId}`)
                     .soundType(global.emendatus_all_types[blockType].oreData.sound)
                     .hardness(3)
-                    .tag('forge:ores')
-                    .tag(`forge:ores/${matName}`)
-                    .tagBlock('forge:ores')
-                    .tagBlock(`forge:ores/${matName}`)
+                    .tagBoth('forge:ores')
+                    .tagBoth(`forge:ores/${matName}`)
                     .tagBlock('minecraft:mineable/pickaxe')
                     .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
+                    .noDrops()
                     .modelJson = oreModel(oreBlock, texturePath)
                 continue
             }
@@ -82,11 +81,9 @@ StartupEvents.registry('block', e => {
                     .soundType('stone')
                     .textureAll(texturePath)
                     .hardness(5)
-                    .tag('forge:storage_blocks')
-                    .tag(`forge:storage_blocks/raw_${matName}`)
+                    .tagBoth('forge:storage_blocks')
+                    .tagBoth(`forge:storage_blocks/raw_${matName}`)
                     .tagBlock('minecraft:mineable/pickaxe')
-                    .tagBlock('forge:storage_blocks')
-                    .tagBlock(`forge:storage_blocks/raw_${matName}`)
                 continue
             }
             // else generation should just be full storage blocks
@@ -97,11 +94,9 @@ StartupEvents.registry('block', e => {
                     .soundType('metal')
                     .textureAll(texturePath)
                     .hardness(5)
-                    .tag('forge:storage_blocks')
-                    .tag(`forge:storage_blocks/${matName}`)
+                    .tagBoth('forge:storage_blocks')
+                    .tagBoth(`forge:storage_blocks/${matName}`)
                     .tagBlock('minecraft:mineable/pickaxe')
-                    .tagBlock('forge:storage_blocks')
-                    .tagBlock(`forge:storage_blocks/${matName}`)
             }
         }
     }

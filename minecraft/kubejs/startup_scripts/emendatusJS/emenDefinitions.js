@@ -8,7 +8,7 @@
 global.vanilla_mats = {
     // - - vanilla - - 
     coal: {
-        type: 'none', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore', 'deepslate_ore'],
+        type: 'other', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore', 'deepslate_ore'],
         addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
     copper: {
@@ -44,7 +44,7 @@ global.vanilla_mats = {
         addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['ore', 'deepslate_ore']
     },
     redstone: {
-        type: 'none', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore', 'deepslate_ore'],
+        type: 'other', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore', 'deepslate_ore'],
         addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
     },
 }
@@ -180,7 +180,7 @@ global.emendatus_base_flags = {
             'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
         block: ['storage_block', 'ore', 'deepslate_ore', 'nether_ore', 'raw_block']
     },
-    none: {
+    other: {
         item: [],
         block: []
     }
