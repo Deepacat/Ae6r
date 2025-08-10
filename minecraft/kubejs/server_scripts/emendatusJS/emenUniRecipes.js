@@ -31,6 +31,7 @@ ServerEvents.recipes(e => {
 
             // while replacing the in and output with tags DOES fix alot of unification, I'd prefer
             // to make recipe gen for my own recipes instead, which needs to be done anyway
+
             // e.replaceInput({ input: itemId }, itemId, `#${tagId}`)
             // e.replaceOutput({ output: itemId}, itemId, `#${tagId}`)
 
@@ -78,7 +79,7 @@ function checkTag(tag, material) {
 }
 
 function validateFlag(flag, matObj) {
-    return matObj.flags.item.includes(flag)
+    return matObj.flags.all.includes(flag)
 }
 
 function validateTag(flag, matName) {
@@ -86,7 +87,7 @@ function validateTag(flag, matName) {
 }
 
 const prefix = 'emendatus:'
-const smeltable = ['dust', 'ore', 'raw_ore']
+const smeltable = ['dust', 'raw_ore', 'ore']
 
 function smeltingRecipes(e, matObj, matName, inputFlagType) {
     // smelting recipes
@@ -94,8 +95,13 @@ function smeltingRecipes(e, matObj, matName, inputFlagType) {
         if (validateFlag(flag, matObj) && !validateTag(flag, matName)) {
             let input = '#' + getTagReplace(flag, matName)
             let outputId = '#' + getTagReplace(inputFlagType, matName)
-            e.smelting(outputId, input).xp(0.7)
+
+            let smelt = e.smelting(outputId, input)
                 .id(`${prefix}smelting/${matName}/${flag}_to_${inputFlagType}`)
+            switch (flag) {
+                case 'raw_ore': smelt.xp(0.7); break
+                case 'ore': smelt.xp(2); break
+            }
         }
     }
 

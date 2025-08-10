@@ -8,44 +8,44 @@
 global.vanilla_mats = {
     // - - vanilla - - 
     coal: {
-        type: 'other', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore', 'deepslate_ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'other', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     copper: {
-        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'raw_ore', 'ore', 'deepslate_ore', 'raw_block', 'storage_block'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     diamond: {
-        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore', 'deepslate_ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     emerald: {
-        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore', 'deepslate_ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'gem', toolLvl: 'iron', vanillaFlags: ['gem', 'storage_block', 'ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     gold: {
-        type: 'metal', toolLvl: 'iron', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'deepslate_ore', 'nether_ore', 'raw_block', 'storage_block'],
+        type: 'metal', toolLvl: 'iron', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
         addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     iron: {
-        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'deepslate_ore', 'raw_block', 'storage_block'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     lapis: {
-        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'ore', 'deepslate_ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     netherite: {
         type: 'metal', toolLvl: 'diamond', vanillaFlags: ['ingot', 'storage_block'],
-        addFlags: [], delFlags: ['raw_ore', 'shard', 'crushed_ore', 'ore', 'clump', 'crystal', 'dirty_dust'], addProcFlags: [], delProcFlags: []
+        addFlags: [], delFlags: ['raw_ore', 'shard', 'crushed_ore', 'ore', 'clump', 'crystal', 'dirty_dust', 'raw_block'], addProcFlags: [], delProcFlags: []
     },
     quartz: {
-        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'nether_ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['ore', 'deepslate_ore']
+        type: 'gem', toolLvl: 'stone', vanillaFlags: ['gem', 'storage_block', 'ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     redstone: {
-        type: 'other', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore', 'deepslate_ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: ['nether_ore']
+        type: 'other', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore'],
+        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
 }
 
@@ -76,50 +76,94 @@ global.alloy_mats = {
 
 global.gem_mats = {
     // - - gem - - 
-    apatite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
-    bitumen: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    apatite: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // charoite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    cinnabar: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
-    dimensional: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    cinnabar: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
+    dimensional: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // diopside: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
     // moonstone: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    potassium_nitrate: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    potassium_nitrate: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // pyrope: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    sapphire: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
-    sulfur: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    sapphire: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
+    sulfur: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // aquite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    arcane: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    arcane: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // carminite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: ['dirty_dust'], addProcFlags: [], delProcFlags: []},
-    certus_quartz: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    certus_quartz: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // charged_certus_quartz: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    fluorite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    fluorite: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
     // peridot: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    ruby: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
+    ruby: {
+        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
 }
 
 global.metal_mats = {
     // - - metal - -
-    aluminum: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: [] },
+    aluminum: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: []
+    },
     // iridium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: []},
-    lead: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard', 'crushed_ore'], addProcFlags: [], delProcFlags: [] },
-    nickel: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
-    platinum: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
-    silver: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: [] },
-    tin: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: [] },
+    lead: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard', 'crushed_ore'], addProcFlags: [], delProcFlags: []
+    },
+    nickel: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
+    platinum: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
+    silver: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
+    tin: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: []
+    },
     // titanium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
     // tungsten: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    uranium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: [] },
-    zinc: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: [] },
-    cobalt: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore', 'ore', 'deepslate_ore', 'nether_ore'], addProcFlags: [], delProcFlags: [] },
+    uranium: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: []
+    },
+    zinc: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: []
+    },
+    cobalt: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'], addProcFlags: [], delProcFlags: []
+    },
     // falsite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
     // horizonite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    osmium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: [] },
+    osmium: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'], addProcFlags: [], delProcFlags: []
+    },
     // ventium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    iesnium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['ore', 'deepslate_ore', 'nether_ore'], addProcFlags: [], delProcFlags: [] }
+    iesnium: {
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['ore'], addProcFlags: [], delProcFlags: []
+    }
 }
 
 global.flagless_mats = {
     // - - no default flags - -
+    // bitumen: {
+    //     type: 'other', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+    // },
 }
 
 global.emendatus_mats = Object.assign({},
@@ -150,13 +194,7 @@ global.emendatus_block_types = {
         replacer: '@_block', tag: 'storage_blocks/', tags: ['forge:storage_blocks/@', 'forge:storage_blocks']
     },
     ore: {
-        replacer: '@_ore', oreData: { block: 'stone', sound: 'stone' }, tag: 'ores/', tags: ['forge:ores/@', 'forge:ores', 'forge:ores_in_ground/stone']
-    },
-    deepslate_ore: {
-        replacer: 'deepslate_@_ore', oreData: { block: 'deepslate', sound: 'deepslate' }, tag: 'ores/', tags: ['forge:ores/@', 'forge:ores', 'forge:ores_in_ground/deepslate']
-    },
-    nether_ore: {
-        replacer: 'nether_@_ore', oreData: { block: 'netherrack', sound: 'nether_ore' }, tag: 'ores/', tags: ['forge:ores/@', 'forge:ores', 'forge:ores_in_ground/netherrack']
+        replacer: '@_ore', tag: 'ores/', tags: ['forge:ores/@', 'forge:ores']
     },
     raw_block: {
         replacer: 'raw_@_block', tag: 'storage_blocks/raw_', tags: ['forge:storage_blocks/raw_@', 'forge:storage_blocks/raw']
@@ -171,19 +209,36 @@ global.emendatus_base_flags = {
         block: ['storage_block']
     },
     gem: {
-        item: ['clump', 'cluster_shard', 'crystal', 'gem',
-            'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
-        block: ['storage_block', 'ore', 'deepslate_ore', 'nether_ore']
+        item: ['clump', 'cluster_shard', 'crystal', 'gem', 'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
+        block: ['storage_block', 'ore']
     },
     metal: {
-        item: ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment',
-            'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
-        block: ['storage_block', 'ore', 'deepslate_ore', 'nether_ore', 'raw_block']
+        item: ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment', 'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
+        block: ['storage_block', 'ore', 'raw_block']
     },
     other: {
         item: [],
         block: []
     }
+}
+
+// add a flags entry to each material object which has their final correct flags, with base + force added and removed flags
+for (let matObj of Object.entries(global.emendatus_mats)) {
+    global.emendatus_mats[matObj[0]].flags = {}
+
+    global.emendatus_mats[matObj[0]].flags.item = global.emendatus_base_flags[matObj[1].type].item
+        .concat(matObj[1].addFlags)
+        .filter(flag => !matObj[1].delFlags.includes(flag))
+
+    global.emendatus_mats[matObj[0]].flags.block = global.emendatus_base_flags[matObj[1].type].block
+        .concat(matObj[1].addFlags)
+        .filter(flag => !matObj[1].delFlags.includes(flag))
+
+    global.emendatus_mats[matObj[0]].flags.all =
+        global.emendatus_base_flags[matObj[1].type].item
+            .concat(global.emendatus_base_flags[matObj[1].type].block)
+            .concat(matObj[1].addFlags)
+            .filter(flag => !matObj[1].delFlags.includes(flag))
 }
 
 // - - global functions - -

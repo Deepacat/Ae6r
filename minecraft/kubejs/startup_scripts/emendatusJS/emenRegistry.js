@@ -1,22 +1,3 @@
-// add a flags entry to each material object which has their final correct flags, with base + force added and removed flags
-for (let matObj of Object.entries(global.emendatus_mats)) {
-    global.emendatus_mats[matObj[0]].flags = {}
-
-    global.emendatus_mats[matObj[0]].flags.item = global.emendatus_base_flags[matObj[1].type].item
-        .concat(matObj[1].addFlags)
-        .filter(flag => !matObj[1].delFlags.includes(flag))
-
-    global.emendatus_mats[matObj[0]].flags.block = global.emendatus_base_flags[matObj[1].type].block
-        .concat(matObj[1].addFlags)
-        .filter(flag => !matObj[1].delFlags.includes(flag))
-
-    global.emendatus_mats[matObj[0]].flags.all =
-        global.emendatus_base_flags[matObj[1].type].item
-            .concat(global.emendatus_base_flags[matObj[1].type].block)
-            .concat(matObj[1].addFlags)
-            .filter(flag => !matObj[1].delFlags.includes(flag))
-}
-
 StartupEvents.registry('item', e => {
     e.create(`emendatus:charcoal_dust`).texture(`kubejs:item/emendatus/gem/charcoal_dust`)
     e.create(`emendatus:obsidian_dust`).texture(`kubejs:item/emendatus/obsidian_dust`)
@@ -48,33 +29,43 @@ StartupEvents.registry('item', e => {
 })
 
 StartupEvents.registry('block', e => {
+    let registeredOres = {}
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matTypes = matObj[1].flags.block
 
-        for (let blockType of matTypes) {
-            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockType)) { continue }
-            let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockType].replacer, matName)
+        for (let blockFlag of matTypes) {
+            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
+            let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
 
             // registering ores
-            if (oreFlags.includes(blockType)) {
+            if (blockFlag == 'ore' && matObj[1].oreData) {
+                console.log(`Registering ${matName} ores`)
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
-                let oreBlock = global.emendatus_all_types[blockType].oreData.block
-                console.log(`Registering ${replaceableId} with texture ${texturePath}`)
-                // if (matObj[1].type == 'gem') { texturePath = texturePath + '_sample' }
-                e.create(`emendatus:${replaceableId}`)
-                    .soundType(global.emendatus_all_types[blockType].oreData.sound)
-                    .hardness(3)
-                    .tagBoth('forge:ores')
-                    .tagBoth(`forge:ores/${matName}`)
-                    .tagBlock('minecraft:mineable/pickaxe')
-                    .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                    .noDrops()
-                    .modelJson = oreModel(oreBlock, texturePath)
+                for (let dimension of Object.entries(matObj[1].oreData.dimensions)) {
+                    for (let oreBlockType of global.oreBlockTypes[dimension[0]]) {
+                        let blockSplit = oreBlockType.split(':')
+                        let blockId = blockSplit.length == 2 ?
+                            `emendatus:${blockSplit[1]}_${replaceableId}` :
+                            `emendatus:${oreBlockType}_${replaceableId}`
+
+                        if (registeredOres[blockId]) { continue }
+
+                        e.create(blockId)
+                            // .soundType(global.emendatus_all_types[blockType].oreData.sound)
+                            .hardness(3)
+                            .tagBoth('forge:ores')
+                            .tagBoth(`forge:ores/${matName}`)
+                            .tagBlock('minecraft:mineable/pickaxe')
+                            .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
+                            .modelJson = oreModel(oreBlockType, texturePath)
+                        registeredOres[blockId] = true
+                    }
+                }
                 continue
             }
-            if (blockType == 'raw_block') {
+            if (blockFlag == 'raw_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw_${matName}_block`
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
                 e.create(`emendatus:${replaceableId}`)
@@ -87,7 +78,7 @@ StartupEvents.registry('block', e => {
                 continue
             }
             // else generation should just be full storage blocks
-            if (blockType == 'storage_block') {
+            if (blockFlag == 'storage_block') {
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
                 e.create(`emendatus:${replaceableId}`)
@@ -102,16 +93,27 @@ StartupEvents.registry('block', e => {
     }
 })
 
+
+const createOreStones = ['create:crimsite', 'create:ochrum', 'create:asurine', 'create:veridium']
+
 function oreModel(blockType, texturePath) {
+    if (createOreStones.includes(blockType)) {
+        blockType = blockType + "_natural_1"
+    }
+    let split = blockType.split(':')
+    if (split.length == 2) {
+        blockType = `${split[0]}:block/${split[1]}`
+    } else {
+        blockType = `block/${blockType}`
+    }
+
     return {
         loader: "forge:composite",
         textures: { particle: texturePath },
         parent: "block/block",
         children: {
             base: {
-                parent: "block/cube_all",
-                render_type: "solid",
-                textures: { all: `block/${blockType}` },
+                parent: blockType
             },
             overlay: {
                 parent: "block/cube_all",
@@ -121,5 +123,3 @@ function oreModel(blockType, texturePath) {
         }
     }
 }
-
-const oreFlags = ['ore', 'deepslate_ore', 'nether_ore']

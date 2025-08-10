@@ -23,6 +23,7 @@ ServerEvents.tags('item', e => {
             if(matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(itemType)) { continue }
             let tagId = `forge:${global.emendatus_all_types[itemType].tag}${matObj[0]}`
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName, 'all')}`
+
             if (global.emenHideNonReplacing) {
                 e.add('c:hidden_from_recipe_viewers', itemId)
             }
@@ -30,7 +31,11 @@ ServerEvents.tags('item', e => {
             // check tag for existing items from other mods
             let existingItems = Ingredient.of(`#${tagId}`).itemIds.toArray()
 
-            if (dataGen && existingItems.length > 1) {
+            if (Item.of(itemId).hasTag('emendatus:hidden_datagen') || dataGen && existingItems.length > 1) {
+                // hidden datagen tag so it still adds them to the datagen even if it's already been ran, to avoid reloading breaking the existing datagen
+                // this still might break if you change datagen alot so idk
+                e.add('emendatus:hidden_datagen', itemId)
+                console.log(`Adding ${itemId} to hiding data`)
                 hidingDataObj[matName].push(itemType)
 
                 unifyDataObj[tagId] = existingItems.slice()

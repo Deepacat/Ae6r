@@ -70,3 +70,7 @@ ServerEvents.tags('item', e => {
 
     e.add('forge:paper', 'minecraft:paper')
 })
+
+ServerEvents.tags('block', e => {
+
+})
