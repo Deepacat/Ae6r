@@ -58,6 +58,12 @@
     "regions_unexplored:larch_leaves",
     "create:scoria",
     "create:ochrum",
-    "minecraft:dripstone_block"
+    "minecraft:dripstone_block",
+    "minecraft:blackstone",
+    "create:veridium",
+    "minecraft:smooth_basalt",
+    "minecraft:calcite",
+    "create:limestone",
+    "regions_unexplored:raw_redstone_block"
   ]
 }

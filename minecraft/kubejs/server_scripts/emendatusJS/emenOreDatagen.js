@@ -16,7 +16,7 @@ ServerEvents.tags('block', e => {
                         let fixedBlockType = blockSplit.length == 2 ?
                             `emendatus:${blockSplit[1]}` :
                             `emendatus:${strataType}`
-                        e.add(`${fixedBlockType}_ore_replaceables`, `${fixedBlockType}_${replaceableId}`)
+                        e.add(`${fixedBlockType}_ore_replaceables`, strataType)
                     }
                 }
             }
@@ -39,9 +39,9 @@ ServerEvents.highPriorityData(e => {
                 for (let dimension of Object.entries(oreData.dimensions)) {
                     let dimData = global.dimensionsOreData[dimension[0]]
                     let featureId = `${dimension[0].split(':')[1]}_${matName}_ore`
-
-                    let configuredOre = oreConfiguredObj(dimension[1].size)
-                    let biomeModifier = modifier(dimData.biomeTag)
+                    if (dimData.biomeTag == '') { continue }
+                    let configuredOre = oreConfiguredObj(dimension[1].size, oreData.airDiscardChance)
+                    let biomeModifier = modifier(featureId, dimData.biomeTag)
                     let placedOre = orePlacedObj(featureId, dimension[1].range, dimension[1].count)
 
                     for (let strataType of dimData.strata) {
@@ -60,17 +60,13 @@ ServerEvents.highPriorityData(e => {
                                 tag: `emendatus:${fixedBlockType}_ore_replaceables`
                             }
                         })
-                        biomeModifier.features.push(oreBlockId)
-
-                        console.log(`${oreBlockId}, ${itemDropId}, ${oreData.dropCountRange}`)
 
                         let oreLoot = lootTable(oreBlockId, itemDropId, oreData.dropCountRange)
                         e.addJson(`emendatus:loot_tables/blocks/${fixedBlockType}`, oreLoot)
                     }
-                    console.log(`feature id: ${featureId}`)
                     e.addJson(`emendatus:worldgen/placed_feature/${featureId}`, placedOre)
-                    e.addJson(`emendatus:forge/biome_modifier/${featureId}`, biomeModifier)
                     e.addJson(`emendatus:worldgen/configured_feature/${featureId}`, configuredOre)
+                    e.addJson(`emendatus:forge/biome_modifier/${featureId}`, biomeModifier)
                 }
             }
         }
@@ -78,7 +74,7 @@ ServerEvents.highPriorityData(e => {
 })
 
 let orePlacedObj = (featureId, heightRange, veinCountPerChunk) => JsonIO.toObject({
-    feature: featureId,
+    feature: `emendatus:${featureId}`,
     placement: [
         // {
         //     type: "minecraft:rarity_filter",
@@ -109,10 +105,10 @@ let orePlacedObj = (featureId, heightRange, veinCountPerChunk) => JsonIO.toObjec
     ]
 })
 
-let oreConfiguredObj = (oreVeinSize) => JsonIO.toObject({
+let oreConfiguredObj = (oreVeinSize, airDiscardChance) => JsonIO.toObject({
     type: "minecraft:ore",
     config: {
-        discard_chance_on_air_exposure: 0.2,
+        discard_chance_on_air_exposure: airDiscardChance,
         size: oreVeinSize,
         targets: [
             // targets added by loop
@@ -120,12 +116,10 @@ let oreConfiguredObj = (oreVeinSize) => JsonIO.toObject({
     }
 })
 
-let modifier = (biomeTag) => JsonIO.toObject({
+let modifier = (featureId, biomeTag) => JsonIO.toObject({
     type: "forge:add_features",
     biomes: biomeTag,
-    features: [
-        // add features here
-    ],
+    features: [`emendatus:${featureId}`],
     step: "underground_ores"
 })
 
@@ -186,5 +180,5 @@ let lootTable = (oreBlockId, itemToDrop, dropRange) => JsonIO.toObject({
             rolls: 1
         }
     ],
-    random_sequence: `emendatus:blocks/${oreBlockId.split[':'][1]}`
+    random_sequence: `emendatus:blocks/${oreBlockId.split(':')[1]}`
 })
