@@ -41,6 +41,8 @@ WorldgenEvents.remove(event => {
     
     event.removeOres(props => {
         props.blocks = [
+            // "minecraft:coal_ore",
+
             "thermal:apatite_ore",
             "thermal:deepslate_apatite_ore",
 

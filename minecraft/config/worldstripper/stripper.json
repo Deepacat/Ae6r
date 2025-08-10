@@ -64,6 +64,7 @@
     "minecraft:smooth_basalt",
     "minecraft:calcite",
     "create:limestone",
-    "regions_unexplored:raw_redstone_block"
+    "regions_unexplored:raw_redstone_block",
+    "quark:limestone"
   ]
 }

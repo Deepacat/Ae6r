@@ -2,7 +2,7 @@ global.dimensionsOreData = {
     "minecraft:overworld": {
         strata: ['stone', 'deepslate', 'diorite', 'granite', 'andesite', 'tuff', 'calcite', 'sandstone', 'dripstone_block',
             'create:crimsite', 'create:veridium', 'create:ochrum', 'create:asurine', 'create:scoria', 'create:limestone',
-            'quark:jasper', 'quark:shale', 'regions_unexplored:argillite', 'regions_unexplored:raw_redstone_block'],
+            'quark:jasper', 'quark:shale', 'quark:limestone', 'regions_unexplored:argillite', 'regions_unexplored:raw_redstone_block'],
         biomeTag: '#minecraft:is_overworld'
     },
     "minecraft:the_nether": {
@@ -149,4 +149,6 @@ global.emendatus_mats['osmium'].oreData = {
         }
     }
 }
+// gems
+
 

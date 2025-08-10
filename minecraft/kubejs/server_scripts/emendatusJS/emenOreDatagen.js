@@ -29,6 +29,7 @@ ServerEvents.highPriorityData(e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matTypes = matObj[1].flags.block
+        console.log(matName)
 
         for (let blockFlag of matTypes) {
             if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
@@ -60,9 +61,8 @@ ServerEvents.highPriorityData(e => {
                                 tag: `emendatus:${fixedBlockType}_ore_replaceables`
                             }
                         })
-
                         let oreLoot = lootTable(oreBlockId, itemDropId, oreData.dropCountRange)
-                        e.addJson(`emendatus:loot_tables/blocks/${fixedBlockType}`, oreLoot)
+                        e.addJson(`emendatus:loot_tables/blocks/${fixedBlockType}_${replaceableId}`, oreLoot)
                     }
                     e.addJson(`emendatus:worldgen/placed_feature/${featureId}`, placedOre)
                     e.addJson(`emendatus:worldgen/configured_feature/${featureId}`, configuredOre)

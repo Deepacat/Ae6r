@@ -7,7 +7,6 @@ StartupEvents.registry('item', e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matFlags = matObj[1].flags.item
-
         for (let itemType of matFlags) {
             if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(itemType)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName)
