@@ -10,16 +10,20 @@ global.dimensionsOreData = {
         biomeTag: 'minecraft:is_nether'
     },
     "minecraft:the_end": {
-        strata: ['end_stone']
+        strata: ['end_stone'],
+        biomeTag: ''
     },
     "undergarden:undergarden": {
-        strata: ['undergarden:depthrock', 'undergarden:shiverstone']
+        strata: ['undergarden:depthrock', 'undergarden:shiverstone'],
+        biomeTag: ''
     },
     "aether:the_aether": {
-        strata: ['aether:holystone']
+        strata: ['aether:holystone'],
+        biomeTag: ''
     },
     "mythicbotany:alfheim": {
-        strata: ['botania:livingrock']
+        strata: ['botania:livingrock'],
+        biomeTag: ''
     }
 }
 
@@ -27,7 +31,7 @@ global.dimensionsOreData = {
 // metals
 global.emendatus_mats['aluminum'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -68,7 +72,7 @@ global.emendatus_mats['aluminum'].oreData = {
 
 global.emendatus_mats['lead'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -81,7 +85,7 @@ global.emendatus_mats['lead'].oreData = {
 
 global.emendatus_mats['nickel'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -94,7 +98,7 @@ global.emendatus_mats['nickel'].oreData = {
 
 global.emendatus_mats['platinum'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -107,7 +111,7 @@ global.emendatus_mats['platinum'].oreData = {
 
 global.emendatus_mats['silver'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -120,7 +124,7 @@ global.emendatus_mats['silver'].oreData = {
 
 global.emendatus_mats['tin'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -133,7 +137,7 @@ global.emendatus_mats['tin'].oreData = {
 
 global.emendatus_mats['uranium'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {
@@ -146,7 +150,7 @@ global.emendatus_mats['uranium'].oreData = {
 
 global.emendatus_mats['zinc'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:the_nether": {
@@ -159,7 +163,7 @@ global.emendatus_mats['zinc'].oreData = {
 
 global.emendatus_mats['cobalt'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:the_nether": {
@@ -172,7 +176,7 @@ global.emendatus_mats['cobalt'].oreData = {
 
 global.emendatus_mats['osmium'].oreData = {
     dropType: 'raw_ore',
-    dropCount: [1, 1],
+    dropCountRange: [1, 1],
     airDiscard: 0,
     dimensions: {
         "minecraft:overworld": {

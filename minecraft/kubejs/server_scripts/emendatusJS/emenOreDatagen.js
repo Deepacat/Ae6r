@@ -24,6 +24,7 @@ ServerEvents.tags('block', e => {
     }
 })
 
+// generating ore worldgen data and loot tables
 ServerEvents.highPriorityData(e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
@@ -34,52 +35,50 @@ ServerEvents.highPriorityData(e => {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
             if (blockFlag == 'ore' && matObj[1].oreData) {
-                console.log(`Registering ${matName} ores`)
-                for (let dimension of Object.entries(matObj[1].oreData.dimensions)) {
+                let oreData = matObj[1].oreData
+                for (let dimension of Object.entries(oreData.dimensions)) {
+                    let dimData = global.dimensionsOreData[dimension[0]]
+                    let featureId = `${dimension[0].split(':')[1]}_${matName}_ore`
 
-                    // let configuredOre = oreConfiguredObj()
-                    // let biomeModifier = modifier()
+                    let configuredOre = oreConfiguredObj(dimension[1].size)
+                    let biomeModifier = modifier(dimData.biomeTag)
+                    let placedOre = orePlacedObj(featureId, dimension[1].range, dimension[1].count)
 
-                    for (let strataType of global.dimensionsOreData[dimension[0]].strata) {
+                    for (let strataType of dimData.strata) {
                         let blockSplit = strataType.split(':')
                         let fixedBlockType = blockSplit.length == 2 ?
-                            `emendatus:${blockSplit[1]}` :
-                            `emendatus:${strataType}`
+                            blockSplit[1] :
+                            strataType
 
-                        // let placedOre = orePlacedObj(`${fixedBlockType}_${replaceableId}`)
+                        let oreBlockId = `emendatus:${fixedBlockType}_${replaceableId}`
+                        let itemDropId = `emendatus:${getFlagReplace(oreData.dropType, matName)}`
 
+                        configuredOre.config.targets.push({
+                            state: { Name: oreBlockId },
+                            target: {
+                                predicate_type: "minecraft:tag_match",
+                                tag: `emendatus:${fixedBlockType}_ore_replaceables`
+                            }
+                        })
+                        biomeModifier.features.push(oreBlockId)
+
+                        console.log(`${oreBlockId}, ${itemDropId}, ${oreData.dropCountRange}`)
+
+                        let oreLoot = lootTable(oreBlockId, itemDropId, oreData.dropCountRange)
+                        e.addJson(`emendatus:loot_tables/blocks/${fixedBlockType}`, oreLoot)
                     }
+                    console.log(`feature id: ${featureId}`)
+                    e.addJson(`emendatus:worldgen/placed_feature/${featureId}`, placedOre)
+                    e.addJson(`emendatus:forge/biome_modifier/${featureId}`, biomeModifier)
+                    e.addJson(`emendatus:worldgen/configured_feature/${featureId}`, configuredOre)
                 }
             }
         }
-
-        // for (let blockType of matTypes) {
-        //     if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockType)) { continue }
-        //     let oreBlockId = global.emenGetReplace(global.emendatus_all_types[blockType].replacer, matName)
-        //     if (oreBlockId == undefined) { continue }
-        //     if (!oreFlags.includes(blockType)) { continue }
-
-        //     let itemToDrop = ''
-        //     if (matObj[1].type == 'metal') {
-        //         itemToDrop = getFlagReplace('raw_ore', matName)
-        //     } else if (matObj[1].type == 'gem') {
-        //         itemToDrop = getFlagReplace('gem', matName)
-        //     }
-
-        //     if (!Item.exists(`emendatus:${itemToDrop}`)) { continue }
-
-
-        //     // e.addJson(`emendatus:worldgen/placed_feature/${oreBlockId}`, orePlacedObj(oreBlockId))
-        //     // e.addJson(`emendatus:worldgen/configured_feature/${oreBlockId}`, oreConfiguredObj(oreBlockId, blockType))
-        //     // e.addJson(`emendatus:forge/biome_modifier/${oreBlockId}`, modifier(oreBlockId))
-        //     // e.addJson(`emendatus:loot_tables/blocks/${oreBlockId}`, lootTable(oreBlockId, itemToDrop))
-
-        // }
     }
 })
 
-let orePlacedObj = (oreBlockId, heightRange, chunkCount) => JsonIO.toObject({
-    feature: `emendatus:${oreBlockId}`,
+let orePlacedObj = (featureId, heightRange, veinCountPerChunk) => JsonIO.toObject({
+    feature: featureId,
     placement: [
         // {
         //     type: "minecraft:rarity_filter",
@@ -87,7 +86,7 @@ let orePlacedObj = (oreBlockId, heightRange, chunkCount) => JsonIO.toObject({
         // },
         {
             type: "minecraft:count",
-            count: chunkCount
+            count: veinCountPerChunk
         },
         {
             type: "minecraft:in_square"
@@ -116,24 +115,7 @@ let oreConfiguredObj = (oreVeinSize) => JsonIO.toObject({
         discard_chance_on_air_exposure: 0.2,
         size: oreVeinSize,
         targets: [
-            // {
-            //     state: {
-            //         Name: `emendatus:${oreBlockId}`
-            //     },
-            //     target: {
-            //         predicate_type: "minecraft:tag_match",
-            //         tag: `minecraft:${oreReplaceAbleTag[oreFlag]}`
-            //     }
-            // },
-            // {
-            //     state: {
-            //         Name: `emendatus:deepslate_lead_ore`
-            //     },
-            //     target: {
-            //         predicate_type: "minecraft:tag_match",
-            //         tag: "minecraft:deepslate_ore_replaceables"
-            //     }
-            // }
+            // targets added by loop
         ]
     }
 })
@@ -142,7 +124,7 @@ let modifier = (biomeTag) => JsonIO.toObject({
     type: "forge:add_features",
     biomes: biomeTag,
     features: [
-
+        // add features here
     ],
     step: "underground_ores"
 })
@@ -173,7 +155,7 @@ let lootTable = (oreBlockId, itemToDrop, dropRange) => JsonIO.toObject({
                                     }
                                 }
                             ],
-                            name: `emendatus:${oreBlockId}`
+                            name: oreBlockId
                         },
                         {
                             type: "minecraft:item",
@@ -196,7 +178,7 @@ let lootTable = (oreBlockId, itemToDrop, dropRange) => JsonIO.toObject({
                                     function: "minecraft:explosion_decay"
                                 }
                             ],
-                            name: `emendatus:${itemToDrop}`
+                            name: itemToDrop
                         }
                     ]
                 }
@@ -204,5 +186,5 @@ let lootTable = (oreBlockId, itemToDrop, dropRange) => JsonIO.toObject({
             rolls: 1
         }
     ],
-    random_sequence: `emendatus:blocks/${oreBlockId}`
+    random_sequence: `emendatus:blocks/${oreBlockId.split[':'][1]}`
 })
