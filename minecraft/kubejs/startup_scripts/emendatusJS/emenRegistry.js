@@ -44,11 +44,11 @@ StartupEvents.registry('block', e => {
                 console.log(`Registering ${matName} ores`)
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
                 for (let dimension of Object.entries(matObj[1].oreData.dimensions)) {
-                    for (let oreBlockType of global.oreBlockTypes[dimension[0]]) {
-                        let blockSplit = oreBlockType.split(':')
+                    for (let strataType of global.dimensionsOreData[dimension[0]].strata) {
+                        let blockSplit = strataType.split(':')
                         let blockId = blockSplit.length == 2 ?
                             `emendatus:${blockSplit[1]}_${replaceableId}` :
-                            `emendatus:${oreBlockType}_${replaceableId}`
+                            `emendatus:${strataType}_${replaceableId}`
 
                         if (registeredOres[blockId]) { continue }
 
@@ -59,7 +59,7 @@ StartupEvents.registry('block', e => {
                             .tagBoth(`forge:ores/${matName}`)
                             .tagBlock('minecraft:mineable/pickaxe')
                             .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                            .modelJson = oreModel(oreBlockType, texturePath)
+                            .modelJson = oreModel(strataType, texturePath)
                         registeredOres[blockId] = true
                     }
                 }
@@ -113,7 +113,8 @@ function oreModel(blockType, texturePath) {
         parent: "block/block",
         children: {
             base: {
-                parent: blockType
+                parent: blockType,
+                render_type: "solid"
             },
             overlay: {
                 parent: "block/cube_all",

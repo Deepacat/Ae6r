@@ -39,8 +39,7 @@
 	],
 	"quartz": [
 		"gear",
-		"dust",
-		"ore"
+		"dust"
 	],
 	"redstone": [],
 	"brass": [
@@ -137,9 +136,6 @@
 		"storage_block",
 		"ore"
 	],
-	"bitumen": [
-		"storage_block"
-	],
 	"cinnabar": [
 		"gem",
 		"dust",
@@ -213,7 +209,9 @@
 		"ore",
 		"raw_block"
 	],
-	"platinum": [],
+	"platinum": [
+		"ore"
+	],
 	"silver": [
 		"dust",
 		"gear",
@@ -260,6 +258,7 @@
 		"nugget",
 		"raw_ore",
 		"storage_block",
+		"ore",
 		"raw_block"
 	],
 	"osmium": [

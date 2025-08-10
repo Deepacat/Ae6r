@@ -135,10 +135,6 @@
 		"mekanism:dust_quartz",
 		"emendatus:quartz_dust"
 	],
-	"forge:ores/quartz": [
-		"minecraft:nether_quartz_ore",
-		"emendatus:quartz_ore"
-	],
 	"forge:ingots/brass": [
 		"create:brass_ingot",
 		"emendatus:brass_ingot"
@@ -436,12 +432,7 @@
 	],
 	"forge:ores/apatite": [
 		"thermal:apatite_ore",
-		"thermal:deepslate_apatite_ore",
-		"emendatus:apatite_ore"
-	],
-	"forge:storage_blocks/bitumen": [
-		"thermal:bitumen_block",
-		"emendatus:bitumen_block"
+		"thermal:deepslate_apatite_ore"
 	],
 	"forge:gems/cinnabar": [
 		"thermal:cinnabar",
@@ -457,8 +448,7 @@
 	],
 	"forge:ores/cinnabar": [
 		"thermal:cinnabar_ore",
-		"thermal:deepslate_cinnabar_ore",
-		"emendatus:cinnabar_ore"
+		"thermal:deepslate_cinnabar_ore"
 	],
 	"forge:gems/sapphire": [
 		"thermal:sapphire",
@@ -478,8 +468,7 @@
 	],
 	"forge:ores/sapphire": [
 		"thermal:sapphire_ore",
-		"thermal:deepslate_sapphire_ore",
-		"emendatus:sapphire_ore"
+		"thermal:deepslate_sapphire_ore"
 	],
 	"forge:gems/sulfur": [
 		"thermal:sulfur",
@@ -499,8 +488,7 @@
 	],
 	"forge:ores/sulfur": [
 		"thermal:sulfur_ore",
-		"thermal:deepslate_sulfur_ore",
-		"emendatus:sulfur_ore"
+		"thermal:deepslate_sulfur_ore"
 	],
 	"forge:gems/certus_quartz": [
 		"ae2:certus_quartz_crystal",
@@ -529,8 +517,7 @@
 	],
 	"forge:ores/fluorite": [
 		"mekanism:fluorite_ore",
-		"mekanism:deepslate_fluorite_ore",
-		"emendatus:fluorite_ore"
+		"mekanism:deepslate_fluorite_ore"
 	],
 	"forge:gems/ruby": [
 		"thermal:ruby",
@@ -550,8 +537,7 @@
 	],
 	"forge:ores/ruby": [
 		"thermal:ruby_ore",
-		"thermal:deepslate_ruby_ore",
-		"emendatus:ruby_ore"
+		"thermal:deepslate_ruby_ore"
 	],
 	"forge:dusts/aluminum": [
 		"immersiveengineering:dust_aluminum",
@@ -584,7 +570,33 @@
 	"forge:ores/aluminum": [
 		"immersiveengineering:ore_aluminum",
 		"immersiveengineering:deepslate_ore_aluminum",
-		"emendatus:aluminum_ore"
+		"emendatus:stone_aluminum_ore",
+		"emendatus:deepslate_aluminum_ore",
+		"emendatus:diorite_aluminum_ore",
+		"emendatus:granite_aluminum_ore",
+		"emendatus:andesite_aluminum_ore",
+		"emendatus:tuff_aluminum_ore",
+		"emendatus:calcite_aluminum_ore",
+		"emendatus:sandstone_aluminum_ore",
+		"emendatus:dripstone_block_aluminum_ore",
+		"emendatus:crimsite_aluminum_ore",
+		"emendatus:veridium_aluminum_ore",
+		"emendatus:ochrum_aluminum_ore",
+		"emendatus:asurine_aluminum_ore",
+		"emendatus:scoria_aluminum_ore",
+		"emendatus:limestone_aluminum_ore",
+		"emendatus:jasper_aluminum_ore",
+		"emendatus:argillite_aluminum_ore",
+		"emendatus:raw_redstone_block_aluminum_ore",
+		"emendatus:netherrack_aluminum_ore",
+		"emendatus:basalt_aluminum_ore",
+		"emendatus:blackstone_aluminum_ore",
+		"emendatus:scorchia_aluminum_ore",
+		"emendatus:end_stone_aluminum_ore",
+		"emendatus:depthrock_aluminum_ore",
+		"emendatus:shiverstone_aluminum_ore",
+		"emendatus:holystone_aluminum_ore",
+		"emendatus:livingrock_aluminum_ore"
 	],
 	"forge:storage_blocks/raw_aluminum": [
 		"immersiveengineering:raw_block_aluminum",
@@ -649,7 +661,24 @@
 		"embers:deepslate_lead_ore",
 		"eidolon:lead_ore",
 		"eidolon:deep_lead_ore",
-		"emendatus:lead_ore"
+		"emendatus:stone_lead_ore",
+		"emendatus:deepslate_lead_ore",
+		"emendatus:diorite_lead_ore",
+		"emendatus:granite_lead_ore",
+		"emendatus:andesite_lead_ore",
+		"emendatus:tuff_lead_ore",
+		"emendatus:calcite_lead_ore",
+		"emendatus:sandstone_lead_ore",
+		"emendatus:dripstone_block_lead_ore",
+		"emendatus:crimsite_lead_ore",
+		"emendatus:veridium_lead_ore",
+		"emendatus:ochrum_lead_ore",
+		"emendatus:asurine_lead_ore",
+		"emendatus:scoria_lead_ore",
+		"emendatus:limestone_lead_ore",
+		"emendatus:jasper_lead_ore",
+		"emendatus:argillite_lead_ore",
+		"emendatus:raw_redstone_block_lead_ore"
 	],
 	"forge:storage_blocks/raw_lead": [
 		"thermal:raw_lead_block",
@@ -698,12 +727,49 @@
 		"thermal:deepslate_nickel_ore",
 		"immersiveengineering:ore_nickel",
 		"immersiveengineering:deepslate_ore_nickel",
-		"emendatus:nickel_ore"
+		"emendatus:stone_nickel_ore",
+		"emendatus:deepslate_nickel_ore",
+		"emendatus:diorite_nickel_ore",
+		"emendatus:granite_nickel_ore",
+		"emendatus:andesite_nickel_ore",
+		"emendatus:tuff_nickel_ore",
+		"emendatus:calcite_nickel_ore",
+		"emendatus:sandstone_nickel_ore",
+		"emendatus:dripstone_block_nickel_ore",
+		"emendatus:crimsite_nickel_ore",
+		"emendatus:veridium_nickel_ore",
+		"emendatus:ochrum_nickel_ore",
+		"emendatus:asurine_nickel_ore",
+		"emendatus:scoria_nickel_ore",
+		"emendatus:limestone_nickel_ore",
+		"emendatus:jasper_nickel_ore",
+		"emendatus:argillite_nickel_ore",
+		"emendatus:raw_redstone_block_nickel_ore"
 	],
 	"forge:storage_blocks/raw_nickel": [
 		"thermal:raw_nickel_block",
 		"immersiveengineering:raw_block_nickel",
 		"emendatus:raw_nickel_block"
+	],
+	"forge:ores/platinum": [
+		"emendatus:stone_platinum_ore",
+		"emendatus:deepslate_platinum_ore",
+		"emendatus:diorite_platinum_ore",
+		"emendatus:granite_platinum_ore",
+		"emendatus:andesite_platinum_ore",
+		"emendatus:tuff_platinum_ore",
+		"emendatus:calcite_platinum_ore",
+		"emendatus:sandstone_platinum_ore",
+		"emendatus:dripstone_block_platinum_ore",
+		"emendatus:crimsite_platinum_ore",
+		"emendatus:veridium_platinum_ore",
+		"emendatus:ochrum_platinum_ore",
+		"emendatus:asurine_platinum_ore",
+		"emendatus:scoria_platinum_ore",
+		"emendatus:limestone_platinum_ore",
+		"emendatus:jasper_platinum_ore",
+		"emendatus:argillite_platinum_ore",
+		"emendatus:raw_redstone_block_platinum_ore"
 	],
 	"forge:dusts/silver": [
 		"thermal:silver_dust",
@@ -764,7 +830,24 @@
 		"occultism:silver_ore_deepslate",
 		"eidolon:silver_ore",
 		"eidolon:deep_silver_ore",
-		"emendatus:silver_ore"
+		"emendatus:stone_silver_ore",
+		"emendatus:deepslate_silver_ore",
+		"emendatus:diorite_silver_ore",
+		"emendatus:granite_silver_ore",
+		"emendatus:andesite_silver_ore",
+		"emendatus:tuff_silver_ore",
+		"emendatus:calcite_silver_ore",
+		"emendatus:sandstone_silver_ore",
+		"emendatus:dripstone_block_silver_ore",
+		"emendatus:crimsite_silver_ore",
+		"emendatus:veridium_silver_ore",
+		"emendatus:ochrum_silver_ore",
+		"emendatus:asurine_silver_ore",
+		"emendatus:scoria_silver_ore",
+		"emendatus:limestone_silver_ore",
+		"emendatus:jasper_silver_ore",
+		"emendatus:argillite_silver_ore",
+		"emendatus:raw_redstone_block_silver_ore"
 	],
 	"forge:storage_blocks/raw_silver": [
 		"thermal:raw_silver_block",
@@ -812,7 +895,24 @@
 		"thermal:deepslate_tin_ore",
 		"mekanism:tin_ore",
 		"mekanism:deepslate_tin_ore",
-		"emendatus:tin_ore"
+		"emendatus:stone_tin_ore",
+		"emendatus:deepslate_tin_ore",
+		"emendatus:diorite_tin_ore",
+		"emendatus:granite_tin_ore",
+		"emendatus:andesite_tin_ore",
+		"emendatus:tuff_tin_ore",
+		"emendatus:calcite_tin_ore",
+		"emendatus:sandstone_tin_ore",
+		"emendatus:dripstone_block_tin_ore",
+		"emendatus:crimsite_tin_ore",
+		"emendatus:veridium_tin_ore",
+		"emendatus:ochrum_tin_ore",
+		"emendatus:asurine_tin_ore",
+		"emendatus:scoria_tin_ore",
+		"emendatus:limestone_tin_ore",
+		"emendatus:jasper_tin_ore",
+		"emendatus:argillite_tin_ore",
+		"emendatus:raw_redstone_block_tin_ore"
 	],
 	"forge:storage_blocks/raw_tin": [
 		"thermal:raw_tin_block",
@@ -853,7 +953,24 @@
 		"mekanism:deepslate_uranium_ore",
 		"immersiveengineering:ore_uranium",
 		"immersiveengineering:deepslate_ore_uranium",
-		"emendatus:uranium_ore"
+		"emendatus:stone_uranium_ore",
+		"emendatus:deepslate_uranium_ore",
+		"emendatus:diorite_uranium_ore",
+		"emendatus:granite_uranium_ore",
+		"emendatus:andesite_uranium_ore",
+		"emendatus:tuff_uranium_ore",
+		"emendatus:calcite_uranium_ore",
+		"emendatus:sandstone_uranium_ore",
+		"emendatus:dripstone_block_uranium_ore",
+		"emendatus:crimsite_uranium_ore",
+		"emendatus:veridium_uranium_ore",
+		"emendatus:ochrum_uranium_ore",
+		"emendatus:asurine_uranium_ore",
+		"emendatus:scoria_uranium_ore",
+		"emendatus:limestone_uranium_ore",
+		"emendatus:jasper_uranium_ore",
+		"emendatus:argillite_uranium_ore",
+		"emendatus:raw_redstone_block_uranium_ore"
 	],
 	"forge:storage_blocks/raw_uranium": [
 		"mekanism:block_raw_uranium",
@@ -883,7 +1000,11 @@
 	"forge:ores/zinc": [
 		"create:zinc_ore",
 		"create:deepslate_zinc_ore",
-		"emendatus:zinc_ore"
+		"emendatus:netherrack_zinc_ore",
+		"emendatus:basalt_zinc_ore",
+		"emendatus:blackstone_zinc_ore",
+		"emendatus:scorchia_zinc_ore",
+		"emendatus:raw_redstone_block_zinc_ore"
 	],
 	"forge:storage_blocks/raw_zinc": [
 		"create:raw_zinc_block",
@@ -904,6 +1025,13 @@
 	"forge:storage_blocks/cobalt": [
 		"tconstruct:cobalt_block",
 		"emendatus:cobalt_block"
+	],
+	"forge:ores/cobalt": [
+		"emendatus:netherrack_cobalt_ore",
+		"emendatus:basalt_cobalt_ore",
+		"emendatus:blackstone_cobalt_ore",
+		"emendatus:scorchia_cobalt_ore",
+		"emendatus:raw_redstone_block_cobalt_ore"
 	],
 	"forge:storage_blocks/raw_cobalt": [
 		"tconstruct:raw_cobalt_block",
@@ -932,7 +1060,24 @@
 	"forge:ores/osmium": [
 		"mekanism:osmium_ore",
 		"mekanism:deepslate_osmium_ore",
-		"emendatus:osmium_ore"
+		"emendatus:stone_osmium_ore",
+		"emendatus:deepslate_osmium_ore",
+		"emendatus:diorite_osmium_ore",
+		"emendatus:granite_osmium_ore",
+		"emendatus:andesite_osmium_ore",
+		"emendatus:tuff_osmium_ore",
+		"emendatus:calcite_osmium_ore",
+		"emendatus:sandstone_osmium_ore",
+		"emendatus:dripstone_block_osmium_ore",
+		"emendatus:crimsite_osmium_ore",
+		"emendatus:veridium_osmium_ore",
+		"emendatus:ochrum_osmium_ore",
+		"emendatus:asurine_osmium_ore",
+		"emendatus:scoria_osmium_ore",
+		"emendatus:limestone_osmium_ore",
+		"emendatus:jasper_osmium_ore",
+		"emendatus:argillite_osmium_ore",
+		"emendatus:raw_redstone_block_osmium_ore"
 	],
 	"forge:storage_blocks/raw_osmium": [
 		"mekanism:block_raw_osmium",

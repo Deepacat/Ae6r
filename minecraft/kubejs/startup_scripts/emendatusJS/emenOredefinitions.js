@@ -1,24 +1,26 @@
-global.oreBlockTypes = {
-    "minecraft:overworld": [
-        'stone', 'deepslate', 'diorite', 'granite', 'andesite', 'tuff', 'calcite', 'sandstone', 'dripstone_block',
-        'create:crimsite', 'create:veridium', 'create:ochrum', 'create:asurine', 'create:scoria', 'create:limestone',
-        'quark:jasper', 'regions_unexplored:argillite', 'regions_unexplored:raw_redstone_block'
-    ],
-    "minecraft:the_nether": [
-        'netherrack', 'basalt', 'blackstone', 'create:scorchia', 'regions_unexplored:raw_redstone_block'
-    ],
-    "minecraft:the_end": [
-        'end_stone'
-    ],
-    "undergarden:undergarden": [
-        'undergarden:depthrock', 'undergarden:shiverstone'
-    ],
-    "aether:the_aether": [
-        'aether:holystone'
-    ],
-    "mythicbotany:alfheim": [
-        'botania:livingrock'
-    ]
+global.dimensionsOreData = {
+    "minecraft:overworld": {
+        strata: ['stone', 'deepslate', 'diorite', 'granite', 'andesite', 'tuff', 'calcite', 'sandstone', 'dripstone_block',
+            'create:crimsite', 'create:veridium', 'create:ochrum', 'create:asurine', 'create:scoria', 'create:limestone',
+            'quark:jasper', 'regions_unexplored:argillite', 'regions_unexplored:raw_redstone_block'],
+        biomeTag: 'minecraft:is_overworld'
+    },
+    "minecraft:the_nether": {
+        strata: ['netherrack', 'basalt', 'blackstone', 'create:scorchia', 'regions_unexplored:raw_redstone_block'],
+        biomeTag: 'minecraft:is_nether'
+    },
+    "minecraft:the_end": {
+        strata: ['end_stone']
+    },
+    "undergarden:undergarden": {
+        strata: ['undergarden:depthrock', 'undergarden:shiverstone']
+    },
+    "aether:the_aether": {
+        strata: ['aether:holystone']
+    },
+    "mythicbotany:alfheim": {
+        strata: ['botania:livingrock']
+    }
 }
 
 // aluminium lead nickel platinum silver tin uranium zinc cobalt osmium iesnium
