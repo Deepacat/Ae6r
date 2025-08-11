@@ -29,7 +29,7 @@ global.dimensionsOreData = {
 
 // coal copper diamond emerald gold iron lapis quartz redstone
 // vanilla
-// PLACEHOLDER, TODO: MAKE VEINS USE THIS FORMAT FOR DEFINING INSTEAD OF PER DIMENSION
+// TODO: allow adding additional biome flags
 global.emendatus_mats['coal'].oreData = {
     dropType: 'gem',
     vanillaDrop: 'minecraft:coal',
@@ -45,7 +45,7 @@ global.emendatus_mats['coal'].oreData = {
         "coal_lower_overworld": {
             dimension: 'minecraft:overworld',
             range: [-10, 20],
-            count: 5,
+            count: 3,
             size: 20
         }
     }
@@ -58,8 +58,8 @@ global.emendatus_mats['copper'].oreData = {
     veins: {
         "copper_overworld": {
             dimension: 'minecraft:overworld',
-            range: [-30, 112],
-            count: 30,
+            range: [-40, 160],
+            count: 35,
             size: 15
         }
     }
@@ -68,13 +68,13 @@ global.emendatus_mats['diamond'].oreData = {
     dropType: 'gem',
     vanillaDrop: 'minecraft:diamond',
     dropCountRange: [1, 1],
-    airDiscardChance: 0.5,
+    airDiscardChance: 0,
     veins: {
         "diamond_overworld": {
             dimension: 'minecraft:overworld',
-            range: [-64, 20],
+            range: [-64, 10],
             count: 4,
-            size: 10
+            size: 6
         }
     }
 }
@@ -115,8 +115,8 @@ global.emendatus_mats['iron'].oreData = {
         "iron_overworld": {
             dimension: 'minecraft:overworld',
             range: [-45, 200],
-            count: 70,
-            size: 10
+            count: 75,
+            size: 12
         }
     }
 }

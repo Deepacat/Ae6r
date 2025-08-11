@@ -75,6 +75,10 @@
     "aether:aether_dirt",
     "minecraft:air",
     "aether:holystone",
-    "aether:aether_grass_block"
+    "aether:aether_grass_block",
+    "undergarden:deepturf_block",
+    "undergarden:shiverstone",
+    "undergarden:sediment",
+    "create:asurine"
   ]
 }
