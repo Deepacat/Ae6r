@@ -29,114 +29,123 @@ global.dimensionsOreData = {
 
 // coal copper diamond emerald gold iron lapis quartz redstone
 // vanilla
-// global.emendatus_mats['coal'].oreData = {
-//     dropType: 'gem',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['copper'].oreData = {
-//     dropType: 'raw_ore',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['diamond'].oreData = {
-//     dropType: 'gem',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['emerald'].oreData = {
-//     dropType: 'gem',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['gold'].oreData = {
-//     dropType: 'raw_ore',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['iron'].oreData = {
-//     dropType: 'raw_ore',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['lapis'].oreData = {
-//     dropType: 'gem',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['quartz'].oreData = {
-//     dropType: 'gem',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:the_nether": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
-// global.emendatus_mats['redstone'].oreData = {
-//     dropType: 'dust',
-//     dropCountRange: [1, 1],
-//     airDiscardChance: 0,
-//     dimensions: {
-//         "minecraft:overworld": {
-//             range :[-60, 256],
-//             count: 20,
-//             size: 25
-//         }
-//     }
-// }
+global.emendatus_mats['coal'].oreData = {
+    dropType: 'gem',
+    vanillaDrop: 'minecraft:coal',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['copper'].oreData = {
+    dropType: 'raw_ore',
+    vanillaDrop: 'minecraft:raw_copper',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['diamond'].oreData = {
+    dropType: 'gem',
+    vanillaDrop: 'minecraft:diamond',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['emerald'].oreData = {
+    dropType: 'gem',
+    vanillaDrop: 'minecraft:emerald',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['gold'].oreData = {
+    dropType: 'raw_ore',
+    vanillaDrop: 'minecraft:raw_gold',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['iron'].oreData = {
+    dropType: 'raw_ore',
+    vanillaDrop: 'minecraft:raw_iron',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['lapis'].oreData = {
+    dropType: 'gem',
+    vanillaDrop: 'minecraft:lapis_lazuli',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['quartz'].oreData = {
+    dropType: 'gem',
+    vanillaDrop: 'minecraft:quartz',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:the_nether": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
+global.emendatus_mats['redstone'].oreData = {
+    dropType: 'dust',
+    vanillaDrop: 'minecraft:redstone',
+    dropCountRange: [1, 1],
+    airDiscardChance: 0,
+    dimensions: {
+        "minecraft:overworld": {
+            range :[-60, 256],
+            count: 8,
+            size: 7
+        }
+    }
+}
 
 // aluminium lead nickel platinum silver tin uranium zinc cobalt osmium iesnium
 // metals
@@ -147,8 +156,8 @@ global.emendatus_mats['aluminum'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -159,8 +168,8 @@ global.emendatus_mats['lead'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -171,8 +180,8 @@ global.emendatus_mats['nickel'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -183,8 +192,8 @@ global.emendatus_mats['platinum'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -195,8 +204,8 @@ global.emendatus_mats['silver'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -207,8 +216,8 @@ global.emendatus_mats['tin'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -219,8 +228,8 @@ global.emendatus_mats['uranium'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -231,8 +240,8 @@ global.emendatus_mats['zinc'].oreData = {
     dimensions: {
         "minecraft:the_nether": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -243,8 +252,8 @@ global.emendatus_mats['cobalt'].oreData = {
     dimensions: {
         "minecraft:the_nether": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -255,8 +264,8 @@ global.emendatus_mats['osmium'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -270,8 +279,8 @@ global.emendatus_mats['apatite'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -282,8 +291,8 @@ global.emendatus_mats['cinnabar'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -294,8 +303,8 @@ global.emendatus_mats['dimensional'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -306,8 +315,8 @@ global.emendatus_mats['potassium_nitrate'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -318,8 +327,8 @@ global.emendatus_mats['sapphire'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -330,8 +339,8 @@ global.emendatus_mats['sulfur'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -342,8 +351,8 @@ global.emendatus_mats['arcane'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -354,8 +363,8 @@ global.emendatus_mats['certus_quartz'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -366,8 +375,8 @@ global.emendatus_mats['fluorite'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }
@@ -378,8 +387,8 @@ global.emendatus_mats['ruby'].oreData = {
     dimensions: {
         "minecraft:overworld": {
             range :[-60, 256],
-            count: 20,
-            size: 25
+            count: 8,
+            size: 7
         }
     }
 }

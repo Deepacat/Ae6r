@@ -65,6 +65,9 @@
     "minecraft:calcite",
     "create:limestone",
     "regions_unexplored:raw_redstone_block",
-    "quark:limestone"
+    "quark:limestone",
+    "minecraft:obsidian",
+    "minecraft:magma_block",
+    "quark:jasper"
   ]
 }

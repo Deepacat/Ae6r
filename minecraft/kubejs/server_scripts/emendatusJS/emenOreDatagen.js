@@ -5,7 +5,6 @@ ServerEvents.tags('block', e => {
         let matTypes = matObj[1].flags.block
 
         for (let blockFlag of matTypes) {
-            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
             if (blockFlag == 'ore' && matObj[1].oreData) {
@@ -32,42 +31,46 @@ ServerEvents.highPriorityData(e => {
         console.log(matName)
 
         for (let blockFlag of matTypes) {
-            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
+            if (!(blockFlag == 'ore' && matObj[1].oreData)) { continue }
+            // if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
-            if (blockFlag == 'ore' && matObj[1].oreData) {
-                let oreData = matObj[1].oreData
-                for (let dimension of Object.entries(oreData.dimensions)) {
-                    let dimData = global.dimensionsOreData[dimension[0]]
-                    let featureId = `${dimension[0].split(':')[1]}_${matName}_ore`
-                    if (dimData.biomeTag == '') { continue }
-                    let configuredOre = oreConfiguredObj(dimension[1].size, oreData.airDiscardChance)
-                    let biomeModifier = modifier(featureId, dimData.biomeTag)
-                    let placedOre = orePlacedObj(featureId, dimension[1].range, dimension[1].count)
+            let oreData = matObj[1].oreData
+            for (let dimension of Object.entries(oreData.dimensions)) {
+                let dimData = global.dimensionsOreData[dimension[0]]
+                let featureId = `${dimension[0].split(':')[1]}_${matName}_ore`
+                if (dimData.biomeTag == '') { continue }
+                let configuredOre = oreConfiguredObj(dimension[1].size, oreData.airDiscardChance)
+                let biomeModifier = modifier(featureId, dimData.biomeTag)
+                let placedOre = orePlacedObj(featureId, dimension[1].range, dimension[1].count)
 
-                    for (let strataType of dimData.strata) {
-                        let blockSplit = strataType.split(':')
-                        let fixedBlockType = blockSplit.length == 2 ?
-                            blockSplit[1] :
-                            strataType
+                for (let strataType of dimData.strata) {
+                    let blockSplit = strataType.split(':')
+                    let fixedBlockType = blockSplit.length == 2 ?
+                        blockSplit[1] :
+                        strataType
 
-                        let oreBlockId = `emendatus:${fixedBlockType}_${replaceableId}`
-                        let itemDropId = `emendatus:${getFlagReplace(oreData.dropType, matName)}`
+                    let oreBlockId = `emendatus:${fixedBlockType}_${replaceableId}`
+                    let itemDropId = `emendatus:${getFlagReplace(oreData.dropType, matName)}`
 
-                        configuredOre.config.targets.push({
-                            state: { Name: oreBlockId },
-                            target: {
-                                predicate_type: "minecraft:tag_match",
-                                tag: `emendatus:${fixedBlockType}_ore_replaceables`
-                            }
-                        })
-                        let oreLoot = lootTable(oreBlockId, itemDropId, oreData.dropCountRange)
-                        e.addJson(`emendatus:loot_tables/blocks/${fixedBlockType}_${replaceableId}`, oreLoot)
-                    }
-                    e.addJson(`emendatus:worldgen/placed_feature/${featureId}`, placedOre)
-                    e.addJson(`emendatus:worldgen/configured_feature/${featureId}`, configuredOre)
-                    e.addJson(`emendatus:forge/biome_modifier/${featureId}`, biomeModifier)
+                    // replace vanilla drops from object because edge cases suck
+                    if (oreData.vanillaDrop) { itemDropId = oreData.vanillaDrop }
+                    if (!Item.exists(itemDropId)) { itemDropId = 'kubejs:replaceme' }
+
+                    configuredOre.config.targets.push({
+                        state: { Name: oreBlockId },
+                        target: {
+                            predicate_type: "minecraft:tag_match",
+                            tag: `emendatus:${fixedBlockType}_ore_replaceables`
+                        }
+                    })
+
+                    let oreLoot = lootTable(oreBlockId, itemDropId, oreData.dropCountRange)
+                    e.addJson(`emendatus:loot_tables/blocks/${fixedBlockType}_${replaceableId}`, oreLoot)
                 }
+                e.addJson(`emendatus:worldgen/placed_feature/${featureId}`, placedOre)
+                e.addJson(`emendatus:worldgen/configured_feature/${featureId}`, configuredOre)
+                e.addJson(`emendatus:forge/biome_modifier/${featureId}`, biomeModifier)
             }
         }
     }

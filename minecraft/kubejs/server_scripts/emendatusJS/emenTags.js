@@ -20,7 +20,6 @@ ServerEvents.tags('item', e => {
         let matFlags = matObj[1].flags.all
 
         for (let itemType of matFlags) {
-            if(matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(itemType)) { continue }
             let tagId = `forge:${global.emendatus_all_types[itemType].tag}${matObj[0]}`
             let itemId = `emendatus:${global.emenGetReplace(global.emendatus_all_types[itemType].replacer, matName, 'all')}`
 

@@ -9,7 +9,7 @@ global.vanilla_mats = {
     // - - vanilla - - 
     coal: {
         type: 'other', toolLvl: 'wood', vanillaFlags: ['storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        addFlags: ['ore'], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     copper: {
         type: 'metal', toolLvl: 'stone', vanillaFlags: ['ingot', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
@@ -45,7 +45,7 @@ global.vanilla_mats = {
     },
     redstone: {
         type: 'other', toolLvl: 'iron', vanillaFlags: ['dust', 'storage_block', 'ore'],
-        addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
+        addFlags: ['ore'], delFlags: [], addProcFlags: [], delProcFlags: []
     },
 }
 
@@ -227,18 +227,18 @@ for (let matObj of Object.entries(global.emendatus_mats)) {
     global.emendatus_mats[matObj[0]].flags = {}
 
     global.emendatus_mats[matObj[0]].flags.item = global.emendatus_base_flags[matObj[1].type].item
-        .concat(matObj[1].addFlags)
         .filter(flag => !matObj[1].delFlags.includes(flag))
+        .concat(matObj[1].addFlags)
 
     global.emendatus_mats[matObj[0]].flags.block = global.emendatus_base_flags[matObj[1].type].block
-        .concat(matObj[1].addFlags)
         .filter(flag => !matObj[1].delFlags.includes(flag))
+        .concat(matObj[1].addFlags)
 
     global.emendatus_mats[matObj[0]].flags.all =
         global.emendatus_base_flags[matObj[1].type].item
             .concat(global.emendatus_base_flags[matObj[1].type].block)
-            .concat(matObj[1].addFlags)
             .filter(flag => !matObj[1].delFlags.includes(flag))
+            .concat(matObj[1].addFlags)
 }
 
 // - - global functions - -
