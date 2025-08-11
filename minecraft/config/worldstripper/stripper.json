@@ -68,6 +68,13 @@
     "quark:limestone",
     "minecraft:obsidian",
     "minecraft:magma_block",
-    "quark:jasper"
+    "quark:jasper",
+    "botania:livingrock",
+    "undergarden:deepsoil",
+    "undergarden:depthrock",
+    "aether:aether_dirt",
+    "minecraft:air",
+    "aether:holystone",
+    "aether:aether_grass_block"
   ]
 }
