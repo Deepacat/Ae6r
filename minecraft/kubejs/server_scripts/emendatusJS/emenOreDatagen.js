@@ -9,8 +9,8 @@ ServerEvents.tags('block', e => {
             if (replaceableId == undefined) { continue }
             if (blockFlag == 'ore' && matObj[1].oreData) {
                 console.log(`Registering ${matName} ores`)
-                for (let dimension of Object.entries(matObj[1].oreData.dimensions)) {
-                    for (let strataType of global.dimensionsOreData[dimension[0]].strata) {
+                for (let veinData of Object.entries(matObj[1].oreData.veins)) {
+                    for (let strataType of global.dimensionsOreData[veinData[1].dimension].strata) {
                         let blockSplit = strataType.split(':')
                         let fixedBlockType = blockSplit.length == 2 ?
                             `emendatus:${blockSplit[1]}` :
@@ -36,13 +36,14 @@ ServerEvents.highPriorityData(e => {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
             let oreData = matObj[1].oreData
-            for (let dimension of Object.entries(oreData.dimensions)) {
-                let dimData = global.dimensionsOreData[dimension[0]]
-                let featureId = `${dimension[0].split(':')[1]}_${matName}_ore`
+            for (let veinData of Object.entries(oreData.veins)) {
+                let dimData = global.dimensionsOreData[veinData[1].dimension]
                 if (dimData.biomeTag == '') { continue }
-                let configuredOre = oreConfiguredObj(dimension[1].size, oreData.airDiscardChance)
+
+                let featureId = veinData[0]
+                let configuredOre = oreConfiguredObj(veinData[1].size, oreData.airDiscardChance)
                 let biomeModifier = modifier(featureId, dimData.biomeTag)
-                let placedOre = orePlacedObj(featureId, dimension[1].range, dimension[1].count)
+                let placedOre = orePlacedObj(featureId, veinData[1].range, veinData[1].count)
 
                 for (let strataType of dimData.strata) {
                     let blockSplit = strataType.split(':')

@@ -42,15 +42,15 @@ StartupEvents.registry('block', e => {
             if (blockFlag == 'ore' && matObj[1].oreData) {
                 console.log(`Registering ${matName} ores`)
                 let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
-                for (let dimension of Object.entries(matObj[1].oreData.dimensions)) {
-                    for (let strataType of global.dimensionsOreData[dimension[0]].strata) {
+                for (let veinData of Object.entries(matObj[1].oreData.veins)) {
+                    console.log(`Registering ${matName} ores`)
+
+                    for (let strataType of global.dimensionsOreData[veinData[1].dimension].strata) {
                         let blockSplit = strataType.split(':')
                         let blockId = blockSplit.length == 2 ?
                             `emendatus:${blockSplit[1]}_${replaceableId}` :
                             `emendatus:${strataType}_${replaceableId}`
-
                         if (registeredOres[blockId]) { continue }
-                        console.log(`Registering ${blockId} with texture ${texturePath}`)
                         e.create(blockId)
                             // .soundType(global.emendatus_all_types[blockType].oreData.sound)
                             .hardness(3)

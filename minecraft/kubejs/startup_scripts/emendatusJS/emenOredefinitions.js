@@ -29,16 +29,24 @@ global.dimensionsOreData = {
 
 // coal copper diamond emerald gold iron lapis quartz redstone
 // vanilla
+// PLACEHOLDER, TODO: MAKE VEINS USE THIS FORMAT FOR DEFINING INSTEAD OF PER DIMENSION
 global.emendatus_mats['coal'].oreData = {
     dropType: 'gem',
     vanillaDrop: 'minecraft:coal',
     dropCountRange: [1, 3],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "coal_upper_overworld": {
+            dimension: 'minecraft:overworld',
             range: [0, 130],
             count: 30,
             size: 17
+        },
+        "coal_lower_overworld": {
+            dimension: 'minecraft:overworld',
+            range: [-10, 20],
+            count: 5,
+            size: 20
         }
     }
 }
@@ -47,8 +55,9 @@ global.emendatus_mats['copper'].oreData = {
     vanillaDrop: 'minecraft:raw_copper',
     dropCountRange: [2, 4],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "copper_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-30, 112],
             count: 30,
             size: 15
@@ -60,8 +69,9 @@ global.emendatus_mats['diamond'].oreData = {
     vanillaDrop: 'minecraft:diamond',
     dropCountRange: [1, 1],
     airDiscardChance: 0.5,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "diamond_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-64, 20],
             count: 4,
             size: 10
@@ -73,8 +83,9 @@ global.emendatus_mats['emerald'].oreData = {
     vanillaDrop: 'minecraft:emerald',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "emerald_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-16, 480],
             count: 80,
             size: 3
@@ -86,8 +97,9 @@ global.emendatus_mats['gold'].oreData = {
     vanillaDrop: 'minecraft:raw_gold',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "gold_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-64, 32],
             count: 8,
             size: 7
@@ -99,8 +111,9 @@ global.emendatus_mats['iron'].oreData = {
     vanillaDrop: 'minecraft:raw_iron',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "iron_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-45, 200],
             count: 70,
             size: 10
@@ -112,8 +125,9 @@ global.emendatus_mats['lapis'].oreData = {
     vanillaDrop: 'minecraft:lapis_lazuli',
     dropCountRange: [4, 9],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "lapis_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-50, 20],
             count: 8,
             size: 5
@@ -125,8 +139,9 @@ global.emendatus_mats['quartz'].oreData = {
     vanillaDrop: 'minecraft:quartz',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:the_nether": {
+    veins: {
+        "quartz_nether": {
+            dimension: 'minecraft:the_nether',
             range: [10, 110],
             count: 8,
             size: 7
@@ -138,8 +153,9 @@ global.emendatus_mats['redstone'].oreData = {
     vanillaDrop: 'minecraft:redstone',
     dropCountRange: [4, 5],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "redstone_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-64, 0],
             count: 12,
             size: 8
@@ -153,8 +169,9 @@ global.emendatus_mats['aluminum'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "aluminum_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-32, 30],
             count: 10,
             size: 10
@@ -165,8 +182,9 @@ global.emendatus_mats['lead'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "lead_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-55, 5],
             count: 10,
             size: 10
@@ -177,8 +195,9 @@ global.emendatus_mats['nickel'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "nickel_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-20, 50],
             count: 10,
             size: 10
@@ -189,8 +208,9 @@ global.emendatus_mats['platinum'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "platinum_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-50, 5],
             count: 10,
             size: 10
@@ -201,8 +221,9 @@ global.emendatus_mats['silver'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "silver_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-45, 20],
             count: 10,
             size: 10
@@ -213,8 +234,9 @@ global.emendatus_mats['tin'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "tin_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-30, 60],
             count: 15,
             size: 10
@@ -225,8 +247,9 @@ global.emendatus_mats['uranium'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "uranium_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-60, 20],
             count: 10,
             size: 10
@@ -237,8 +260,9 @@ global.emendatus_mats['zinc'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "zinc_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-20, 70],
             count: 13,
             size: 10
@@ -249,8 +273,9 @@ global.emendatus_mats['cobalt'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:the_nether": {
+    veins: {
+        "cobalt_nether": {
+            dimension: 'minecraft:the_nether',
             range: [0, 110],
             count: 6,
             size: 6
@@ -261,8 +286,9 @@ global.emendatus_mats['osmium'].oreData = {
     dropType: 'raw_ore',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "osmium_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-60, -10],
             count: 10,
             size: 10
@@ -276,8 +302,9 @@ global.emendatus_mats['apatite'].oreData = {
     dropType: 'gem',
     dropCountRange: [4, 9],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "apatite_overworld": {
+            dimension: 'minecraft:overworld',
             range: [50, 120],
             count: 8,
             size: 12
@@ -288,8 +315,9 @@ global.emendatus_mats['cinnabar'].oreData = {
     dropType: 'gem',
     dropCountRange: [2, 4],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "cinnabar_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-20, 20],
             count: 8,
             size: 7
@@ -300,8 +328,9 @@ global.emendatus_mats['dimensional'].oreData = {
     dropType: 'gem',
     dropCountRange: [1, 2],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "dimensional_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-10, 30],
             count: 6,
             size: 5
@@ -312,8 +341,9 @@ global.emendatus_mats['potassium_nitrate'].oreData = {
     dropType: 'gem',
     dropCountRange: [2, 3],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "potassium_nitrate_overworld": {
+            dimension: 'minecraft:overworld',
             range: [10, 40],
             count: 5,
             size: 7
@@ -324,8 +354,9 @@ global.emendatus_mats['sapphire'].oreData = {
     dropType: 'gem',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "sapphire_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-60, 5],
             count: 5,
             size: 3
@@ -336,8 +367,9 @@ global.emendatus_mats['sulfur'].oreData = {
     dropType: 'dust',
     dropCountRange: [3, 5],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "sulfur_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-20, 30],
             count: 8,
             size: 5
@@ -348,8 +380,9 @@ global.emendatus_mats['arcane'].oreData = {
     dropType: 'gem',
     dropCountRange: [1, 2],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "arcane_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-60, -10],
             count: 8,
             size: 4
@@ -360,8 +393,9 @@ global.emendatus_mats['certus_quartz'].oreData = {
     dropType: 'gem',
     dropCountRange: [1, 3],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "certus_quartz_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-40, 20],
             count: 8,
             size: 4
@@ -372,8 +406,9 @@ global.emendatus_mats['fluorite'].oreData = {
     dropType: 'gem',
     dropCountRange: [2, 4],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "fluorite_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-25, 10],
             count: 5,
             size: 7
@@ -384,8 +419,9 @@ global.emendatus_mats['ruby'].oreData = {
     dropType: 'gem',
     dropCountRange: [1, 1],
     airDiscardChance: 0,
-    dimensions: {
-        "minecraft:overworld": {
+    veins: {
+        "ruby_overworld": {
+            dimension: 'minecraft:overworld',
             range: [-60, 5],
             count: 5,
             size: 3
