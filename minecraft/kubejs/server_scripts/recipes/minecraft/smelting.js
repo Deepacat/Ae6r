@@ -1,0 +1,11 @@
+ServerEvents.recipes(e => {
+    e.smelting('kubejs:coke_brick', 'kubejs:coke_brick_blend')
+        .xp(0.5)
+        .id('kubejs:smelting/coke_brick_blend')
+    e.smelting('kubejs:blast_brick', 'kubejs:blast_brick_blend')
+        .xp(0.5)
+        .id('kubejs:smelting/blast_brick_blend')
+    e.smelting('kubejs:meat_ingot', 'kubejs:ground_meat')
+        .xp(0.5)
+        .id('kubejs:smelting/ground_meat')
+})

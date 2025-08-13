@@ -63,6 +63,7 @@ const industrialforegoing = {
 }
 
 
+
 // const powahTiers = ['starter', 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro'];
 
 // powahTiers.forEach(function (tier) {
@@ -182,7 +183,7 @@ recipes.forEach((recipe) => {
 ).id('${recipe.id}')\n`)
 }) */
 
-/* // shaped
+// shaped
 recipes.forEach(recipe => {
 	let finalOut = getString(recipe.output)
 	let finalPattern = recipe.pattern.map(getString).join(",\n\t")
@@ -195,7 +196,7 @@ e.shaped(${finalOut}, [
 	${finalKey}
 }).id(${finalId}\n`
 	)
-}) */
+})
 
 /* // bloodmagic arc
 recipes.forEach((recipe) => {

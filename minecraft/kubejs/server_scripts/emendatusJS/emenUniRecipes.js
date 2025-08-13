@@ -96,8 +96,10 @@ function smeltingRecipes(e, matObj, matName, inputFlagType) {
             let input = '#' + getTagReplace(flag, matName)
             let outputId = '#' + getTagReplace(inputFlagType, matName)
 
-            let smelt = e.smelting(outputId, input)
-                .id(`${prefix}smelting/${matName}/${flag}_to_${inputFlagType}`)
+            e.remove({ output: outputId, type: 'minecraft:smelting' })
+            e.remove({ output: outputId, type: 'minecraft:blasting' })
+            let smelt = e.blasting(outputId, input)
+                .id(`${prefix}blasting/${matName}/${flag}_to_${inputFlagType}`)
             switch (flag) {
                 case 'raw_ore': smelt.xp(0.7); break
                 case 'ore': smelt.xp(2); break

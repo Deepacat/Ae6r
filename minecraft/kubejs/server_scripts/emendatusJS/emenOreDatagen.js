@@ -28,7 +28,6 @@ ServerEvents.highPriorityData(e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matTypes = matObj[1].flags.block
-        console.log(matName)
 
         for (let blockFlag of matTypes) {
             if (!(blockFlag == 'ore' && matObj[1].oreData)) { continue }
@@ -41,7 +40,7 @@ ServerEvents.highPriorityData(e => {
                 if (dimData.biomeTag == '') { continue }
 
                 let featureId = veinData[0]
-                let configuredOre = oreConfiguredObj(veinData[1].size, oreData.airDiscardChance)
+                let configuredOre = oreConfiguredObj(veinData[1].size, veinData[1].airDiscardChance)
                 let biomeModifier = modifier(featureId, dimData.biomeTag)
                 let placedOre = orePlacedObj(featureId, veinData[1].range, veinData[1].count)
 

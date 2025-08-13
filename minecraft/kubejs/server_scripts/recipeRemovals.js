@@ -248,7 +248,13 @@ ServerEvents.recipes(e => {
         { output: 'pneumaticcraft:assembly_controller', id: 'pneumaticcraft:assembly_controller' },
         { output: 'pneumaticcraft:assembly_platform', id: 'pneumaticcraft:assembly_platform' },
         { output: 'pneumaticcraft:aerial_interface', id: 'pneumaticcraft:aerial_interface' },
-        { output: 'pneumaticcraft:spawner_extractor', id: 'pneumaticcraft:spawner_extractor' }
+        { output: 'pneumaticcraft:spawner_extractor', id: 'pneumaticcraft:spawner_extractor' },
+
+        { input: 'quark:deepslate_furnace' },
+        { input: 'quark:blackstone_furnace' },
+        { output: 'quark:deepslate_furnace' },
+        { output: 'quark:blackstone_furnace' }
+
     ]
 
     idRemovals.forEach((id) => {

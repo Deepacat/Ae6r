@@ -21,6 +21,8 @@ ServerEvents.tags('item', e => {
 
     e.add('forge:gems/source_diamond', ['ars_nouveau:source_gem', 'minecraft:diamond'])
 
+    e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
+
     const botaniaRunes = [
         'water', 'fire', 'earth', 'air', 'spring', 'summer', 'autumn', 'winter', 'mana',
         'lust', 'gluttony', 'greed', 'sloth', 'wrath', 'envy', 'pride',
