@@ -27,7 +27,6 @@ function makeJsonIngredients(inputs) {
         // remove the ingredient part of the obj since recipes dont often use that
         obj = Object.assign(obj, obj.ingredient)
         delete obj.ingredient
-
         return obj
     })
 }

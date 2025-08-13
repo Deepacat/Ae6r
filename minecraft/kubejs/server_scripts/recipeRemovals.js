@@ -14,10 +14,12 @@ ServerEvents.recipes(e => {
         /createaddition:pressing/,
 
         /immersiveengineering:crafting\/plate_/,
+        /immersiveengineering:crafting\/stick_/,
         /immersiveengineering:metalpress\/.*plate/,
         /immersiveengineering:metalpress\/.*rod/,
         /immersiveengineering:metalpress\/.*gear/,
 
+        /embers:.*hammering/,
         /embers:stamping\/.*gear/,
         /embers:melting\/.*gear/,
         /embers:melting\/plates/,

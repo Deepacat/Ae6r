@@ -53,7 +53,7 @@ ServerEvents.recipes(e => {
         B: 'eidolon:polished_planks'
     })
 
-    e.remove('create:crafting/kinetics/encased_chain_drive')
+    e.remove({ id: 'create:crafting/kinetics/encased_chain_drive' })
     e.shaped('create:encased_chain_drive', [
         ' A ',
         'BCB',
@@ -64,7 +64,7 @@ ServerEvents.recipes(e => {
         C: 'create:andesite_casing'
     }).id('kubejs:create/kinetics/encased_chain_drive')
 
-    e.remove('create:crafting/appliances/copper_backtank')
+    e.remove({ id: 'create:crafting/appliances/copper_backtank' })
     e.shaped('create:copper_backtank', ['ABA', 'CDC', 'ECE'], {
         A: 'betterendforge:leather_stripe',
         B: 'create:shaft',
@@ -73,14 +73,14 @@ ServerEvents.recipes(e => {
         E: 'create:andesite_alloy'
     })
 
-    e.remove('create:crafting/appliances/copper_diving_helmet')
+    e.remove({ id: 'create:crafting/appliances/copper_diving_helmet' })
     e.shaped('create:copper_diving_helmet', ['ABA', 'BCB'], {
         A: 'thermal:diving_fabric',
         B: '#forge:ingots/dawnstone',
         C: '#forge:glass_panes/cyan'
     })
 
-    e.remove('create:crafting/appliances/copper_diving_boots')
+    e.remove({ id: 'create:crafting/appliances/copper_diving_boots' })
     e.shaped('create:copper_diving_boots', ['A A', 'B B', 'C C'], {
         A: 'thermal:diving_fabric',
         B: '#forge:ingots/dawnstone',

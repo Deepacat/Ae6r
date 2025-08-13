@@ -23,6 +23,8 @@ ServerEvents.tags('item', e => {
 
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
 
+    e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
+
     const botaniaRunes = [
         'water', 'fire', 'earth', 'air', 'spring', 'summer', 'autumn', 'winter', 'mana',
         'lust', 'gluttony', 'greed', 'sloth', 'wrath', 'envy', 'pride',

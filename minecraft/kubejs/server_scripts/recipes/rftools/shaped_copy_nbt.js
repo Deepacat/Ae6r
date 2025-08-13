@@ -2,7 +2,7 @@ ServerEvents.recipes(e => {
     function rftoolsShapedCopyNbt(result, pattern, key) {
         e.custom({
             type: 'mcjtylib:copy_nbt',
-            result: makeJsonIngredients([result]),
+            result: makeJsonIngredients([result])[0],
             pattern: pattern,
             key: key
         }).id(`kubejs:shaped/${result.replace(':', '_')}`)

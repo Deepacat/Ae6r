@@ -1,4 +1,23 @@
 ServerEvents.recipes(e => {
+    // load datagen with item ids in unified tags to replace them with prefered emendatus materials
+    let unifData = JsonIO.read('kubejs/datagen/unify.json')
+    for (let tagId in unifData) {
+        for (let itemId of unifData[tagId]) {
+            if (itemId.includes('emendatus')) {
+                // e.replaceInput({ input: `#${tagId}` }, `#${tagId}`, itemId)
+                // e.replaceOutput({ output: `#${tagId}` }, `#${tagId}`, itemId)
+                continue
+            }
+
+            // while replacing the in and output with tags DOES fix alot of unification, I'd prefer
+            // to make recipe gen for my own recipes instead, which needs to be done anyway
+
+            // e.replaceInput({ input: itemId }, itemId, `#${tagId}`)
+            e.replaceOutput({ output: itemId }, itemId, `#${tagId}`)
+            e.remove({ output: itemId })
+        }
+    }
+
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let material = matObj[0]
         if (Item.exists(`emendatus:${material}_ingot`) && Item.exists(`emendatus:${material}_block`)) {
@@ -19,28 +38,6 @@ ServerEvents.recipes(e => {
         }
     }
 
-    // load datagen with item ids in unified tags to replace them with prefered emendatus materials
-    let unifData = JsonIO.read('kubejs/datagen/unify.json')
-    for (let tagId in unifData) {
-        for (let itemId of unifData[tagId]) {
-            if (itemId.includes('emendatus')) {
-                // e.replaceInput({ input: `#${tagId}` }, `#${tagId}`, itemId)
-                // e.replaceOutput({ output: `#${tagId}` }, `#${tagId}`, itemId)
-                continue
-            }
-
-            // while replacing the in and output with tags DOES fix alot of unification, I'd prefer
-            // to make recipe gen for my own recipes instead, which needs to be done anyway
-
-            // e.replaceInput({ input: itemId }, itemId, `#${tagId}`)
-            // e.replaceOutput({ output: itemId}, itemId, `#${tagId}`)
-
-            e.remove({ output: itemId })
-        }
-    }
-})
-
-ServerEvents.recipes(e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
 
@@ -138,20 +135,26 @@ function plateRecipes(e, matObj, matName, inputFlagType) {
             embersMelting(e, Fluid.of(`tconstruct:molten_${matName}`, fluidAmt), `forge:plates/${matName}`)
         }
 
+        e.remove({ output: output, type: 'create:pressing' })
         e.recipes.create.pressing(Item.of(output), input)
             .id(`${prefix}create/pressing/${matName}_plate`)
 
+        e.remove({ output: output, type: 'thermal:press' })
         e.recipes.thermal.press(output, input)
             .id(`${prefix}thermal/press/${matName}_plate`)
 
+        e.remove({ output: output, type: 'immersiveengineering:metal_press' })
         e.recipes.immersiveengineering.metal_press(`4x ${output}`, `4x ${input}`, 'immersiveengineering:mold_plate')
             .id(`${prefix}immersiveengineering/metalpress/${matName}_plate`)
 
+        e.remove({ output: output, type: 'createdieselgenerators:hammering' })
         e.custom({
             type: "createdieselgenerators:hammering",
             ingredients: [{ tag: getTagReplace(inputFlagType, matName) }],
             results: [{ item: output }]
         }).id(`${prefix}createdieselgenerators/hammering/${matName}_plate`)
+
+        e.remove({ output: output, type: 'immersiveengineering:hammer' })
 
         e.shaped(output, [
             'H  ',
@@ -181,18 +184,22 @@ function rodRecipes(e, matObj, matName, inputFlagType) {
             embersMelting(e, Fluid.of(`tconstruct:molten_${matName}`, fluidAmt), `forge:rods/${matName}`)
         }
 
+        e.remove({ output: output, type: 'thermal:press' })
         e.recipes.thermal.press(`2x ${output}`, [input, 'immersiveengineering:mold_rod'])
             .id(`${prefix}thermal/press/${matName}_rod`)
 
+        e.remove({ output: output, type: 'immersiveengineering:metal_press' })
         e.recipes.immersiveengineering.metal_press(`8x ${output}`, `4x ${input}`, 'immersiveengineering:mold_rod')
             .id(`${prefix}immersiveengineering/metalpress/${matName}_rod`)
 
+        e.remove({ output: output, type: 'createaddition:rolling' })
         e.custom({
             type: "createaddition:rolling",
             input: { tag: getTagReplace(inputFlagType, matName) },
             result: { item: output, count: 2 }
         }).id(`${prefix}createaddition/rolling/${matName}_rod`)
 
+        e.remove({ output: output, type: 'createdieselgenerators:wire_cutting' })
         e.custom({
             type: "createdieselgenerators:wire_cutting",
             ingredients: [{ tag: getTagReplace(inputFlagType, matName) }],
@@ -227,9 +234,11 @@ function gearRecipes(e, matObj, matName, inputFlagType) {
 
             embersMelting(e, Fluid.of(`tconstruct:molten_${matName}`, fluidAmt), `forge:gears/${matName}`)
         }
+        e.remove({ output: output, type: 'thermal:press' })
         e.recipes.thermal.press(output, [`4x ${input}`, 'immersiveengineering:mold_gear'])
             .id(`${prefix}thermal/press/${matName}_gear`)
 
+        e.remove({ output: output, type: 'immersiveengineering:metal_press' })
         e.recipes.immersiveengineering.metal_press(`4x ${output}`, `16x ${input}`, 'immersiveengineering:mold_gear')
             .id(`${prefix}immersiveengineering/metalpress/${matName}_gear`)
 

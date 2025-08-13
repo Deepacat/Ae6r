@@ -28,6 +28,6 @@ ServerEvents.recipes(e => {
         .id('kubejs:scannable_rare_ores_module')
 
     e.remove({ id: 'scannable:fluid_module' })
-    e.shapeless('scannable:fluid_module', ['scannable:blank_module', 'ars_nouveau:bucket_of_mana'])
+    e.shapeless('scannable:fluid_module', ['scannable:blank_module', 'tcintegrations:molten_manasteel_bucket'])
         .id('kubejs:scannable_fluid_module')
 })

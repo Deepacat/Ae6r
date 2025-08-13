@@ -49,11 +49,11 @@ ServerEvents.recipes(e => {
     ], 'kubejs:partial_alloybrick', 4)
         .id('kubejs:sequenced_assembly/alloybricks')
 
-    e.recipes.create.sequenced_assembly(['integrateddynamics:cable'], 'kubejs:replaceme', [
-        e.recipes.create.filling('kubejs:replaceme', ['kubejs:replaceme', /* { fluid: undefined, toString: undefined } */]),
-        e.recipes.create.filling('kubejs:replaceme', ['kubejs:replaceme', /* { fluid: undefined, toString: undefined } */])
-    ], 'kubejs:replaceme', 1)
-        .id('kubejs:sequenced_assembly/logic_cable')
+    // e.recipes.create.sequenced_assembly(['integrateddynamics:cable'], 'kubejs:replaceme', [
+    //     e.recipes.create.filling('kubejs:replaceme', ['kubejs:replaceme', /* { fluid: undefined, toString: undefined } */]),
+    //     e.recipes.create.filling('kubejs:replaceme', ['kubejs:replaceme', /* { fluid: undefined, toString: undefined } */])
+    // ], 'kubejs:replaceme', 1)
+    //     .id('kubejs:sequenced_assembly/logic_cable')
 
     e.recipes.create.sequenced_assembly(['immersiveengineering:circuit_board'], 'immersiveengineering:insulating_glass', [
         e.recipes.create.deploying('immersiveengineering:insulating_glass', ['immersiveengineering:insulating_glass', '#forge:plates/copper']),
