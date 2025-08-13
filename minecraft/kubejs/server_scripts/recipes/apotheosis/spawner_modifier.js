@@ -43,14 +43,14 @@ ServerEvents.recipes(event => {
             id: 'apotheosis:spawner/ignore_conditions_inverted'
         },
         {
-            mainhand: { item: 'ars_nouveau:glyph_shield' },
+            mainhand: { item: 'ars_elemental:glyph_bubble_shield' },
             offhand: { item: 'naturesaura:token_joy' },
             consumes_offhand: false,
             stat_changes: [{ id: 'ignore_light', value: true }],
             id: 'apotheosis:spawner/ignore_light'
         },
         {
-            mainhand: { item: 'ars_nouveau:glyph_shield' },
+            mainhand: { item: 'ars_elemental:glyph_bubble_shield' },
             offhand: { item: 'naturesaura:token_sorrow' },
             consumes_offhand: false,
             stat_changes: [{ id: 'ignore_light', value: false }],

@@ -20,6 +20,9 @@ ServerEvents.recipes(e => {
 
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let material = matObj[0]
+        e.remove({ output: `emendatus:${material}_block`, mod: 'tconstruct'})
+        e.remove({ output: `emendatus:${material}_ingot`, mod: 'tconstruct'})
+        e.remove({ output: `emendatus:${material}_nugget`, mod: 'tconstruct'})
         if (Item.exists(`emendatus:${material}_ingot`) && Item.exists(`emendatus:${material}_block`)) {
             e.shapeless(`emendatus:${material}_block`, [`9x emendatus:${material}_ingot`]).id(`emendatus:shaped/${material}_block`);
             e.shapeless(`9x emendatus:${material}_ingot`, `emendatus:${material}_block`).id(`emendatus:shaped/${material}_ingot_from_block`);
