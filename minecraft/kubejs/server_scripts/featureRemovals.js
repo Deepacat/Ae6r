@@ -1,77 +1,95 @@
 ServerEvents.highPriorityData(e => {
-    function removeFeature(path) {
+    let ores = [
+        'minecraft:ore_coal',
+        'minecraft:ore_coal_buried',
+        'minecraft:ore_copper_large',
+        'minecraft:ore_copper_small',
+        'minecraft:ore_iron',
+        'minecraft:ore_iron_small',
+        'minecraft:ore_gold',
+        'minecraft:ore_gold_buried',
+        'minecraft:ore_nether_gold',
+        'minecraft:ore_quartz',
+        'minecraft:ore_lapis',
+        'minecraft:ore_lapis_buried',
+        'minecraft:ore_redstone',
+        'minecraft:ore_diamond_buried',
+        'minecraft:ore_diamond_large',
+        'minecraft:ore_diamond_small',
+
+        'embers:ore_lead',
+        'embers:ore_silver',
+
+        'eidolon:lead_ore',
+        'eidolon:silver_ore',
+
+        'create:zinc_ore',
+
+        'occultism:ore_silver',
+        'occultism:ore_silver_deepslate',
+
+        'miniutilities:overworld_ender_ore',
+
+        'rftoolsbase:dimshard_dimensions',
+        'rftoolsbase:dimshard_overworld',
+        'rftoolsbase:dimshard_nether',
+        'rftoolsbase:dimshard_end',
+
+        'thermal:apatite_ore',
+        'thermal:cinnabar_ore',
+        'thermal:lead_ore',
+        'thermal:nickel_ore',
+        'thermal:niter_ore',
+        'thermal:silver_ore',
+        'thermal:sulfur_ore',
+        'thermal:tin_ore',
+
+        'mekanism:ore_fluorite_normal',
+        'mekanism:ore_fluorite_buried',
+        'mekanism:ore_lead_normal',
+        'mekanism:ore_osmium_small',
+        'mekanism:ore_osmium_middle',
+        'mekanism:ore_osmium_upper',
+        'mekanism:ore_tin_large',
+        'mekanism:ore_tin_small',
+        'mekanism:ore_uranium_buried',
+        'mekanism:ore_uranium_small',
+
+        'immersiveengineering:bauxite',
+        'immersiveengineering:deep_nickel',
+        'immersiveengineering:lead',
+        'immersiveengineering:mineral_veins',
+        'immersiveengineering:nickel',
+        'immersiveengineering:silver',
+        'immersiveengineering:uranium',
+
+        'aether:zanite_ore',
+        'aether:ambrosium_ore',
+        'aether:gravitite_ore',
+        'aether:gravitite_ore_buried'
+    ]
+
+    function removeFeatures(idArray) {
         let noop = {
             "type": "minecraft:no_op",
             "config": {}
         }
-        e.addJson(path, noop)
+        for (let id of idArray) {
+            e.addJson(`${id.namespace}:worldgen/configured_feature/${id.path}`, noop)
+        }
     }
-    // ores
-    removeFeature('minecraft:worldgen/configured_feature/ore_coal')
-    removeFeature('minecraft:worldgen/configured_feature/ore_coal_buried')
-    removeFeature('minecraft:worldgen/configured_feature/ore_copper_large')
-    removeFeature('minecraft:worldgen/configured_feature/ore_copper_small')
-    removeFeature('minecraft:worldgen/configured_feature/ore_iron')
-    removeFeature('minecraft:worldgen/configured_feature/ore_iron_small')
-    removeFeature('minecraft:worldgen/configured_feature/ore_gold')
-    removeFeature('minecraft:worldgen/configured_feature/ore_gold_buried')
-    removeFeature('minecraft:worldgen/configured_feature/ore_nether_gold')
-    removeFeature('minecraft:worldgen/configured_feature/ore_quartz')
-    removeFeature('minecraft:worldgen/configured_feature/ore_lapis')
-    removeFeature('minecraft:worldgen/configured_feature/ore_lapis_buried')
-    removeFeature('minecraft:worldgen/configured_feature/ore_redstone')
-    removeFeature('minecraft:worldgen/configured_feature/ore_diamond_buried')
-    removeFeature('minecraft:worldgen/configured_feature/ore_diamond_large')
-    removeFeature('minecraft:worldgen/configured_feature/ore_diamond_small')
-    
-    removeFeature('embers:worldgen/configured_feature/ore_lead')
-    removeFeature('embers:worldgen/configured_feature/ore_silver')
 
-    removeFeature('eidolon:worldgen/configured_feature/lead_ore')
-    removeFeature('eidolon:worldgen/configured_feature/silver_ore')
+    removeFeatures(ores)
 
-    removeFeature('create:worldgen/configured_feature/zinc_ore')
-
-    removeFeature('occultism:worldgen/configured_feature/ore_silver')
-    removeFeature('occultism:worldgen/configured_feature/ore_silver_deepslate')
-
-    removeFeature('miniutilities:worldgen/configured_feature/overworld_ender_ore')
-
-    removeFeature('rftoolsbase:worldgen/configured_feature/dimshard_dimensions')
-    removeFeature('rftoolsbase:worldgen/configured_feature/dimshard_overworld')
-    removeFeature('rftoolsbase:worldgen/configured_feature/dimshard_nether')
-    removeFeature('rftoolsbase:worldgen/configured_feature/dimshard_end')
-
-    removeFeature('thermal:worldgen/configured_feature/apatite_ore')
-    removeFeature('thermal:worldgen/configured_feature/cinnabar_ore')
-    removeFeature('thermal:worldgen/configured_feature/lead_ore')
-    removeFeature('thermal:worldgen/configured_feature/nickel_ore')
-    removeFeature('thermal:worldgen/configured_feature/niter_ore')
-    removeFeature('thermal:worldgen/configured_feature/silver_ore')
-    removeFeature('thermal:worldgen/configured_feature/sulfur_ore')
-    removeFeature('thermal:worldgen/configured_feature/tin_ore')
-
-    removeFeature('mekanism:worldgen/configured_feature/ore_fluorite_normal')
-    removeFeature('mekanism:worldgen/configured_feature/ore_fluorite_buried')
-    removeFeature('mekanism:worldgen/configured_feature/ore_lead_normal')
-    removeFeature('mekanism:worldgen/configured_feature/ore_osmium_small')
-    removeFeature('mekanism:worldgen/configured_feature/ore_osmium_middle')
-    removeFeature('mekanism:worldgen/configured_feature/ore_osmium_upper')
-    removeFeature('mekanism:worldgen/configured_feature/ore_tin_large')
-    removeFeature('mekanism:worldgen/configured_feature/ore_tin_small')
-    removeFeature('mekanism:worldgen/configured_feature/ore_uranium_buried')
-    removeFeature('mekanism:worldgen/configured_feature/ore_uranium_small')
-    
-    removeFeature('immersiveengineering:worldgen/configured_feature/bauxite')
-    removeFeature('immersiveengineering:worldgen/configured_feature/deep_nickel')
-    removeFeature('immersiveengineering:worldgen/configured_feature/lead')
-    removeFeature('immersiveengineering:worldgen/configured_feature/mineral_veins')
-    removeFeature('immersiveengineering:worldgen/configured_feature/nickel')
-    removeFeature('immersiveengineering:worldgen/configured_feature/silver')
-    removeFeature('immersiveengineering:worldgen/configured_feature/uranium')
-
-    removeFeature('aether:worldgen/configured_feature/zanite_ore')
-    removeFeature('aether:worldgen/configured_feature/ambrosium_ore')
-    removeFeature('aether:worldgen/configured_feature/gravitite_ore')
-    removeFeature('aether:worldgen/configured_feature/gravitite_ore_buried')
+    // couldnt get to work
+    // for (let dim of Object.entries(global.dimensionsOreData)) {
+    //     let modifier = JsonIO.toObject({
+    //         type: "forge:remove_features",
+    //         biomes: dim[1].biomeTag,
+    //         features: features
+    //     })
+    //     console.log(`emendatus:forge/biome_modifier/remove_ores_${dim[0].split(':')[1]}`)
+    //     console.log(modifier)
+    //     e.addJson(`emendatus:forge/biome_modifier/remove_ores_${dim[0].split(':')[1]}`, modifier)
+    // }
 })

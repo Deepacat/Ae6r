@@ -37,7 +37,7 @@
 #Menu
 [menu]
 	#Fluffy Fur Panorama.
-	panorama = "minecraft:vanilla"
+	panorama = "wizards_reborn:magical_origins"
 	#Enable Fluffy Fur menu button.
 	menuButton = true
 	#Fluffy Fur menu button row.
@@ -50,7 +50,7 @@
 	#Fluffy Fur menu button Y offset.
 	menuButtonYOffset = 0
 	#Enable logo in Fluffy Fur Panorama.
-	panoramaLogo = true
+	panoramaLogo = false
 	#Enable music in Fluffy Fur Panorama.
 	panoramaMusic = true
 
