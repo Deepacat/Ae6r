@@ -1,4 +1,5 @@
 ServerEvents.tags('item', e => {
+    // TODO: Port substituion material stuff from e6e
     e.add('forge:ingots/gold_brass', ['#forge:ingots/gold', '#forge:ingots/brass'])
     e.add('forge:nuggets/gold_brass', ['#forge:nuggets/gold', '#forge:nuggets/brass'])
     e.add('forge:storage_blocks/gold_brass', ['#forge:storage_blocks/gold', '#forge:storage_blocks/brass'])
@@ -36,10 +37,42 @@ ServerEvents.tags('item', e => {
         e.add(`botania:runes/${rune}`, `mythicbotany:${rune}_rune`)
     }
 
+    e.add('mythicbotany:ritua_runes', [
+        // /*'astralsorcery:'*/ 'kubejs:replaceme',
+        // /*'astralsorcery:'*/ 'kubejs:replaceme',
+        'ars_nouveau:ritual_sunrise',
+        'ars_nouveau:ritual_moonfall',
+        'ars_nouveau:ritual_awakening',
+        'botania:livingwood',
+        'mythicbotany:yggdrasil_branch',
+        'kubejs:crystalline_oak_leaves',
+        'kubejs:crystalline_flowering_palo_verde_leaves',
+        'naturesaura:generator_limit_remover',
+        'quark:root_item',
+        'mekanism:pellet_antimatter',
+        'mekanism:ultimate_control_circuit',
+        'kubejs:laputian_ingot',
+        'botania:mana_diamond_block',
+        'botania:dragonstone_block',
+        'powah:ender_core'
+    ])
+
     e.add('forge:ingots/gaia', 'botania:gaia_ingot')
+    e.add('forge:ingots/gaia_spirit', 'botania:gaia_ingot')
+    e.add('forge:ingots/alfsteel', 'mythicbotany:alfsteel_ingot')
+
+
+    e.add('forge:ingots/sky', ['naturesaura:sky_ingot'])
+    e.add('forge:ingots/tainted_gold', ['naturesaura:tainted_gold'])
+    e.add('forge:ingots/infused_iron', ['naturesaura:infused_iron'])
+    e.add('forge:ingots/sunmetal', ['architects_palette:sunmetal_brick'])
 
     e.add('forge:inlays/arcane_gold', 'eidolon:gold_inlay')
     e.add('forge:inlays/pewter', 'eidolon:pewter_inlay')
+
+    e.add('forge:ingots/uraninite', 'powah:uraninite');
+    e.add('forge:ingots/energized_steel', 'powah:steel_energized');
+    e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium']);
 
     e.add('quark:runes', ['kubejs:white_rune', 'kubejs:light_gray_rune', 'kubejs:gray_rune',
         'kubejs:black_rune', 'kubejs:brown_rune', 'kubejs:red_rune', 'kubejs:orange_rune',
@@ -47,9 +80,6 @@ ServerEvents.tags('item', e => {
         'kubejs:light_blue_rune', 'kubejs:blue_rune', 'kubejs:purple_rune', 'kubejs:magenta_rune',
         'kubejs:pink_rune',
     ])
-
-    e.add('forge:ingots', 'architects_palette:sunmetal_brick')
-    e.add('forge:ingots/sunmetal', 'architects_palette:sunmetal_brick')
 
     // blood magic is dumb and only applied this tag in blocks so their recipes dont work LMAO
     e.add('minecraft:mushroom_hyphae', [

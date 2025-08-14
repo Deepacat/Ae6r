@@ -8,7 +8,6 @@ ServerEvents.recipes(e => {
     e.replaceInput({ id: 'eidolon:stone_hand' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
     e.replaceInput({ id: 'culinaryconstruct:culinary_station' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
     e.replaceInput({ id: 'minecraft:grindstone' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
-    e.replaceInput({ id: 'dustrial_decor:sheet_metal' }, '#forge:ingots/iron', '#forge:plates/iron')
     e.replaceInput({ id: 'minecraft:nether_bricks' }, '#forge:ingots/nether_brick', 'minecraft:nether_brick')
     e.replaceInput({ id: 'thermal:machine/press/packing2x2/press_nether_bricks_packing' },
         '#forge:ingots/nether_brick',
@@ -18,11 +17,6 @@ ServerEvents.recipes(e => {
         'minecraft:white_wool',
         '#forge:wool'
     )
-    e.replaceInput({ id: 'dustrial_decor:iron_bar_trapdoor' },
-        'minecraft:iron_bars',
-        'dustrial_decor:barbed_iron_bars'
-    )
-
     e.replaceInput({ id: 'bloodmagic:alchemytable/basic_cutting_fluid' },
         'minecraft:potion',
         Item.of('minecraft:potion', { Potion: 'minecraft:water' })
@@ -72,8 +66,8 @@ ServerEvents.recipes(e => {
     e.replaceInput({}, 'thermal:sulfur', '#forge:gems/sulfur')
     e.replaceInput({}, 'thermal:apatite', '#forge:gems/apatite')
     e.replaceInput({}, 'thermal:niter', '#forge:gems/niter')
-    e.replaceInput({}, 'thermal:bitumen', '#forge:gems/bitumen')
-    e.replaceInput({}, 'thermal:coal_coke', '#forge:gems/coal_coke')
+    e.replaceInput({}, 'thermal:bitumen', '#forge:bitumen')
+    e.replaceInput({}, 'thermal:coal_coke', '#forge:coal_coke')
     e.replaceInput({}, 'rftoolsbase:dimensionalshard', '#forge:gems/dimensional')
     e.replaceInput({}, 'ars_nouveau:mana_gem', '#forge:gems/mana')
     e.replaceInput({}, 'immersiveengineering:slag', '#forge:slag')
@@ -267,7 +261,6 @@ ServerEvents.recipes(e => {
                 'xnet:antenna_base',
                 'xnet:antenna',
                 'resourcefulbees:centrifuge_casing',
-                'engineersdecor:metal_bar',
                 'integrateddynamics:drying_basin'
             ]
         },
