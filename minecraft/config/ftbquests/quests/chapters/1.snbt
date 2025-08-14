@@ -16,7 +16,7 @@
 				id: "05EECBFBB6A1F278"
 				type: "checkmark"
 			}]
-			title: "tech"
+			title: "Technology | 1"
 			x: -3.0d
 			y: -2.5d
 		}
@@ -33,6 +33,7 @@
 				title: "magic"
 				type: "checkmark"
 			}]
+			title: "Magic | 1"
 			x: 1.0d
 			y: -2.5d
 		}
@@ -628,10 +629,202 @@
 			dependencies: ["4EAA5F5409E4DD3E"]
 			icon: "minecraft:oak_sapling"
 			id: "18909429C6F9FE62"
+			rewards: [{
+				id: "1E7F2DDA3AEEEADE"
+				item: {
+					Count: 1
+					id: "akashictome:tome"
+					tag: {
+						"akashictome:data": {
+							advancedperipherals: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "advancedperipherals:manual"
+								}
+							}
+							alexsmobs: {
+								Count: 1
+								id: "alexsmobs:animal_dictionary"
+							}
+							apotheosis: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "apotheosis:apoth_chronicle"
+								}
+							}
+							ars_nouveau: {
+								Count: 1
+								id: "ars_nouveau:worn_notebook"
+							}
+							bloodmagic: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "bloodmagic:guide"
+								}
+							}
+							botania: {
+								Count: 1
+								id: "botania:lexicon"
+								tag: {
+									"botania:elven_unlock": 1
+								}
+							}
+							buildinggadgets2: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "buildinggadgets2:buildinggadgets2book"
+								}
+							}
+							cookingforblockheads: {
+								Count: 1
+								id: "cookingforblockheads:crafting_book"
+							}
+							eidolon: {
+								Count: 1
+								id: "eidolon:codex"
+							}
+							embers: {
+								Count: 1
+								id: "embers:ancient_codex"
+							}
+							ftbquests: {
+								Count: 1
+								id: "ftbquests:book"
+							}
+							immersiveengineering: {
+								Count: 1
+								id: "immersiveengineering:manual"
+							}
+							industrialforegoing: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "industrialforegoing:industrial_foregoing"
+								}
+							}
+							integratedtunnels: {
+								Count: 1
+								id: "integrateddynamics:on_the_dynamics_of_integration"
+							}
+							laserio: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "laserio:laseriobook"
+								}
+							}
+							littlelogistics: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "littlelogistics:guide"
+								}
+							}
+							modularrouters: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "modularrouters:book"
+								}
+							}
+							naturesaura: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "naturesaura:book"
+								}
+							}
+							occultism: {
+								Count: 1
+								id: "occultism:dictionary_of_spirits"
+								tag: {
+									"modonomicon:book_id": "occultism:dictionary_of_spirits"
+								}
+							}
+							pneumaticcraft: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "pneumaticcraft:book"
+								}
+							}
+							powah: {
+								Count: 1
+								id: "powah:book"
+							}
+							rftoolsbase: {
+								Count: 1
+								id: "rftoolsbase:manual"
+							}
+							tconstruct: {
+								Count: 1
+								id: "tconstruct:materials_and_you"
+							}
+							tconstruct_0: {
+								Count: 1
+								id: "tconstruct:puny_smelting"
+								tag: {
+									"akashictome:definedMod": "tconstruct_0"
+								}
+							}
+							tconstruct_1: {
+								Count: 1
+								id: "tconstruct:mighty_smelting"
+								tag: {
+									"akashictome:definedMod": "tconstruct_1"
+								}
+							}
+							tconstruct_2: {
+								Count: 1
+								id: "tconstruct:tinkers_gadgetry"
+								tag: {
+									"akashictome:definedMod": "tconstruct_2"
+								}
+							}
+							tconstruct_3: {
+								Count: 1
+								id: "tconstruct:fantastic_foundry"
+								tag: {
+									"akashictome:definedMod": "tconstruct_3"
+								}
+							}
+							tconstruct_4: {
+								Count: 1
+								id: "tconstruct:encyclopedia"
+								tag: {
+									"akashictome:definedMod": "tconstruct_4"
+									mantle: {
+										book: {
+											current_page: ""
+										}
+									}
+								}
+							}
+							thermal: {
+								Count: 1
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "thermal:guidebook"
+								}
+							}
+							wizards_reborn: {
+								Count: 1
+								id: "wizards_reborn:arcanemicon"
+							}
+						}
+					}
+				}
+				type: "item"
+			}]
 			tasks: [{
 				id: "3142ECA350DD0BAA"
 				type: "checkmark"
 			}]
+			title: "The paths"
 			x: -1.0d
 			y: -3.5d
 		}
@@ -895,10 +1088,17 @@
 		}
 		{
 			id: "4EAA5F5409E4DD3E"
+			rewards: [{
+				count: 16
+				id: "0818308C587CC162"
+				item: "farmersdelight:honey_glazed_ham"
+				type: "item"
+			}]
 			tasks: [{
 				id: "2A6E3EF661912B5C"
 				type: "checkmark"
 			}]
+			title: "Welcome"
 			x: -1.0d
 			y: -4.5d
 		}
