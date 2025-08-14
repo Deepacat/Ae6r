@@ -43,9 +43,6 @@ ServerEvents.recipes(e => {
 
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
-
-        // TODO: make this work with gems + ingots lolmao
-        // TODO: embers and magma crucible scrap melting
         // TODO: replace embers fluid outputs with tinkers if thats even possible in kjs god save me
         // TODO: unify alloying? maybe? or just keep it unique per method so they're all useful
         // TODO: wires

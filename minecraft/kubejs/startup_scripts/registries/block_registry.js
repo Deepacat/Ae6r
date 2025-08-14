@@ -3,7 +3,7 @@ StartupEvents.registry('block', event => {
         { name: 'warding_stone', material: 'stone', hardness: 2 },
         { name: 'firmament', material: 'stone', hardness: 2 },
         { name: 'superheated_steel_block', material: 'metal', hardness: 5 },
-        { name: 'hot_compressed_metal_block', material: 'metal', hardness: 5 },
+        { name: 'hot_compressed_iron_block', material: 'metal', hardness: 5 },
         { name: 'rough_machine_frame_top', material: 'metal', hardness: 5 },
         { name: 'coated_machine_frame_top', material: 'metal', hardness: 5 },
         { name: 'rough_machine_frame', material: 'metal', hardness: 5 },
