@@ -1,4 +1,5 @@
 ServerEvents.recipes(e => {
+    // logistics
     e.remove({ id: 'eidolon:wooden_altar' })
     e.shaped('eidolon:wooden_altar', [
         'AAA',

@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
     e.remove({ id: 'embers:item_extractor' })
-    e.shaped('2x embers:item_extractor', [
+    e.shaped('4x embers:item_extractor', [
         ' B ',
         'CAC',
         ' D '
@@ -45,7 +45,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_item_vacuum')
 
     e.remove({ id: 'embers:item_transfer' })
-    e.shaped('embers:item_transfer', [
+    e.shaped('2x embers:item_transfer', [
         'BDB',
         'CAC',
         'C C'
@@ -57,7 +57,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_item_transfer')
 
     e.remove({ id: 'embers:fluid_extractor' })
-    e.shaped('3x embers:fluid_extractor', [
+    e.shaped('4x embers:fluid_extractor', [
         ' B ',
         'CDC',
         ' A '
@@ -90,7 +90,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_fluid_vessel')
 
     e.remove({ id: 'embers:fluid_transfer' })
-    e.shaped('embers:fluid_transfer', [
+    e.shaped('3x embers:fluid_transfer', [
         'BDB',
         'CAC',
         'C C'

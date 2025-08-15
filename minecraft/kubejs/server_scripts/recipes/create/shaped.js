@@ -1,4 +1,38 @@
 ServerEvents.recipes(e => {
+    e.remove({ id: 'create:crafting/kinetics/mechanical_press' })
+    e.shaped('create:mechanical_press', [
+        ' A ',
+        'CBC',
+        ' D '
+    ], {
+        A: '#forge:gears/copper',
+        B: 'create:andesite_casing',
+        C: '#forge:storage_blocks/andesite_alloy',
+        D: '#forge:storage_blocks/invar'
+    }).id('kubejs:shaped/mechanical_press')
+
+    e.remove({ id: 'create:crafting/kinetics/mechanical_mixer' })
+    e.shaped('create:mechanical_mixer', [
+        ' A ',
+        'CBC',
+        ' D '
+    ], {
+        A: '#forge:gears/invar',
+        B: 'create:andesite_casing',
+        C: '#forge:ingots/andesite_alloy',
+        D: 'create:whisk'
+    }).id('kubejs:shaped/mechanical_mixer')
+
+    e.remove({ id: 'create:crafting/kinetics/whisk' })
+    e.shaped('create:whisk', [
+        ' A ',
+        'BAB',
+        'BBB'
+    ], {
+        A: '#forge:storage_blocks/andesite_alloy',
+        B: '#forge:plates/invar',
+    }).id('kubejs:shaped/whisk')
+
     e.remove({ id: 'create:crafting/kinetics/millstone' })
     e.shaped('create:millstone', [
         ' A ',
@@ -6,10 +40,34 @@ ServerEvents.recipes(e => {
         'DDD'
     ], {
         A: '#forge:gears/copper',
-        B: 'create:andesite_alloy',
+        B: '#forge:ingots/andesite_alloy',
         C: 'create:cogwheel',
         D: 'minecraft:smooth_stone_slab'
     }).id('kubejs:create/kinetics/millstone')
+
+    e.remove({ id: 'create:crafting/kinetics/mechanical_drill' })
+    e.shaped('create:mechanical_drill', [
+        ' A ',
+        'BCB',
+        'BDB'
+    ], {
+        A: 'thermal:drill_head',
+        B: '#forge:ingots/andesite_alloy',
+        C: 'create:cogwheel',
+        D: 'create:andesite_casing'
+    })
+
+    e.remove({ id: 'create:crafting/kinetics/mechanical_saw' })
+    e.shaped('create:mechanical_saw', [
+        ' A ',
+        'BCB',
+        'BDB'
+    ], {
+        A: 'thermal:saw_blade',
+        B: '#forge:ingots/andesite_alloy',
+        C: 'create:cogwheel',
+        D: 'create:andesite_casing'
+    })
 
     e.remove({ id: 'create:crafting/kinetics/windmill_bearing' })
     e.shaped('create:windmill_bearing', [
