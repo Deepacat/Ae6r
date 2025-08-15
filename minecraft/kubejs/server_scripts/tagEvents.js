@@ -105,6 +105,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:paper', 'minecraft:paper')
 
     e.add('forge:dough', 'farmersdelight:wheat_dough')
+    e.add('forge:doughs', 'farmersdelight:wheat_dough')
 })
 
 ServerEvents.tags('block', e => {

@@ -9,6 +9,8 @@ ServerEvents.recipes(e => {
         'quark:tweaks/crafting/utility/misc/easy_sticks',
         'minecraft:stick',
         
+        'thermal:invar_dust_3',
+        
         /bloodmagic:alchemytable\/melee_damage_anointment/,
 
         /compactmachines:machine_/,
@@ -54,25 +56,30 @@ ServerEvents.recipes(e => {
         
         /mekanism:storage_blocks\/\w+/,
         /mekanism:nuggets\/\w+/,
-        // /mekanism:processing\/\w+\/storage_blocks\/from_ingots/,
-        // /mekanism:processing\/\w+\/ingot\/from_block/,
-        // /mekanism:processing\/\w+\/ingot\/from_nuggets/,
-        // /mekanism:processing\/\w+\/nugget\/from_ingot/,
-        // /thermal:storage\/\w+_block/,
-        // /thermal:storage\/\w+_ingot_from_nuggets/,
-        // /thermal:storage\/\w+_nugget_from_ingot/,
-        // /tconstruct:common\/materials\/\w+_block_from_ingots/,
-        // /tconstruct:common\/materials\/\w+_ingot_from_block/,
-        // /tconstruct:common\/materials\/\w+_ingot_from_nuggets/,
-        // /tconstruct:common\/materials\/\w+_nugget_from_ingot/,
-        // /immersiveengineering:crafting\/ingot_\w+_to_storage_\w+/,
-        // /immersiveengineering:crafting\/ingot_\w+_to_nugget_\w+/,
-        // /immersiveengineering:crafting\/nugget_\w+_to_ingot_\w+/,
-        // /immersiveengineering:crafting\/storage_\w+_to_ingot_\w+/,
+        /mekanism:processing\/\w+\/storage_blocks\/from_ingots/,
+        /mekanism:processing\/\w+\/ingot\/from_block/,
+        /mekanism:processing\/\w+\/ingot\/from_nuggets/,
+        /mekanism:processing\/\w+\/nugget\/from_ingot/,
+        
+        /thermal:storage\/\w+_block/,
+        /thermal:storage\/\w+_ingot_from_nuggets/,
+        /thermal:storage\/\w+_nugget_from_ingot/,
+
+        /tconstruct:common\/materials\/\w+_block_from_ingots/,
+        /tconstruct:common\/materials\/\w+_ingot_from_block/,
+        /tconstruct:common\/materials\/\w+_ingot_from_nuggets/,
+        /tconstruct:common\/materials\/\w+_nugget_from_ingot/,
+
+        /immersiveengineering:crafting\/ingot_\w+_to_storage_\w+/,
+        /immersiveengineering:crafting\/ingot_\w+_to_nugget_\w+/,
+        /immersiveengineering:crafting\/nugget_\w+_to_ingot_\w+/,
+        /immersiveengineering:crafting\/storage_\w+_to_ingot_\w+/,
+
         /create:crafting\/materials\/\w+_block_from_compacting/,
         /create:crafting\/materials\/\w+_ingot_from_compacting/,
         /create:crafting\/materials\/\w+_ingot_from_decompacting/,
         /create:crafting\/materials\/\w+_nugget_from_decompacting/,
+
         /occultism:crafting\/\w+_block/,
         /occultism:crafting\/\w+_nugget/,
         /occultism:crafting\/\w+_ingot_from_nuggets/

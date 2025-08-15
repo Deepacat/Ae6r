@@ -8,4 +8,5 @@ ServerEvents.recipes(e => {
     e.replaceOutput({}, 'thermal:rubber', 'industrialforegoing:dryrubber')
     e.replaceOutput({}, 'immersiveengineering:slag', 'thermal:slag')
     e.replaceOutput({}, 'create:dough', 'farmersdelight:wheat_dough')
+    e.replaceOutput({}, 'create:wheat_flour', 'pneumaticcraft:wheat_flour')
 })
