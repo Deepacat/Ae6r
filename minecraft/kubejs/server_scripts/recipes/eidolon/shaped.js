@@ -24,8 +24,8 @@ ServerEvents.recipes(e => {
         'BCB',
         'ABA'
     ], {
-        A: 'kubejs:replaceme',
-        B: 'kubejs:replaceme',
+        A: 'kubejs:silk_fiber',
+        B: 'kubejs:leather_stripe',
         C: '#forge:gems/source'
     }).id('kubejs:basic_belt')
 

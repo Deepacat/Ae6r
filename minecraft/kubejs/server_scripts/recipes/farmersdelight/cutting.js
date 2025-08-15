@@ -1,7 +1,7 @@
 ServerEvents.recipes(e => {
     e.recipes.farmersdelight.cutting(['minecraft:leather'],
-        '#forge:tools/knives', '2x kubejs:leather_stripe',
-    ).id('kubejs:cutting_board/leather')
+        '#forge:tools/knives', '3x kubejs:leather_stripe',
+    ).id('kubejs:cutting_board/leather_stripe')
 
     e.recipes.farmersdelight.cutting(['#minecraft:planks'],
         '#forge:tools/axes', '2x minecraft:stick'

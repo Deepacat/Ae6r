@@ -336,7 +336,7 @@ ServerEvents.recipes(e => {
         A: '#forge:plates/steel',
         B: 'thermal:saw_blade',
         C: 'mekanism:hdpe_sheet',
-        D: 'kubejs:replaceme',
+        D: 'kubejs:leather_stripe',
         E: 'create:precision_mechanism',
         F: Item.of('thermal:flux_capacitor'),
         G: 'mekanism:hdpe_stick'
@@ -352,7 +352,7 @@ ServerEvents.recipes(e => {
         A: '#forge:plates/steel',
         B: 'thermal:drill_head',
         C: 'mekanism:hdpe_sheet',
-        D: 'kubejs:replaceme',
+        D: 'kubejs:leather_stripe',
         E: 'create:precision_mechanism',
         F: Item.of('thermal:flux_capacitor'),
         G: 'mekanism:hdpe_stick'

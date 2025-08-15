@@ -15,7 +15,7 @@ ServerEvents.recipes(e => {
         'ACA',
         'BBB'
     ], {
-        A: 'kubejs:replaceme',
+        A: 'kubejs:leather_stripe',
         B: 'farmersdelight:canvas',
         C: 'farmersdelight:basket'
     }).id('kubejs:sophisticatedbackpacks_backpack')

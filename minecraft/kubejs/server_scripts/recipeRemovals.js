@@ -8,6 +8,7 @@ ServerEvents.recipes(e => {
     const idRemovals = [
         'quark:tweaks/crafting/utility/misc/easy_sticks',
         'minecraft:stick',
+        
         /bloodmagic:alchemytable\/melee_damage_anointment/,
 
         /compactmachines:machine_/,

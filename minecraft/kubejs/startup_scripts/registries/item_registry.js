@@ -1,15 +1,17 @@
 StartupEvents.registry('item', event => {
     const generalItems = [
-        // placeholder item
+        // placeholder item for mod items that were removed
         'replaceme',
-
         // removed items from 1.16 e6e that need to be remade
         'leather_stripe', // betterendforge
-        'blaze_fiber', // ars
+        'silk_fiber',
+
+        'blaze_fiber', // ars nouveau
         'end_fiber',
         'magic_clay',
         'marvelous_clay',
         'mythical_clay',
+
         'rainbow_rune', // quark
         'white_rune',
         'light_gray_rune',

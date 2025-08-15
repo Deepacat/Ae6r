@@ -66,7 +66,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'create:crafting/appliances/copper_backtank' })
     e.shaped('create:copper_backtank', ['ABA', 'CDC', 'ECE'], {
-        A: 'betterendforge:leather_stripe',
+        A: 'kubejs:leather_stripe',
         B: 'create:shaft',
         C: '#forge:plates/copper',
         D: 'mekanism:basic_chemical_tank',
