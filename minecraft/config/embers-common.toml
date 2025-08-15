@@ -129,11 +129,11 @@
 #Miscellaneous settings
 [misc]
 	#Codex entries need to be completed before the next one unlocks.
-	codexProgression = true
+	codexProgression = false
 	#If true, Embers homing projectiles will go for neutral players.
 	everybodyIsEnemy = false
 	#Which domains are preferred for recipes with dynamic outputs.
-	tagPreferences = ["minecraft", "embers"]
+	tagPreferences = ["minecraft", "kubejs", "emendatus", "embers"]
 	#Which items are preferred as the result of breaking down a tool on an anvil.
 	itemPreferences = ["minecraft:oak_planks", "minecraft:cobblestone"]
 

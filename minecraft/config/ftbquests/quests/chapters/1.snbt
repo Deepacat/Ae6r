@@ -862,7 +862,7 @@
 				}
 			]
 			x: -3.0d
-			y: 1.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["671903A25CFC2BC0"]
@@ -945,7 +945,7 @@
 				type: "item"
 			}]
 			x: -4.0d
-			y: 1.5d
+			y: 2.0d
 		}
 		{
 			dependencies: ["32641439DB4C18EC"]
@@ -1078,11 +1078,7 @@
 			dependencies: ["7039C8B5F77E2353"]
 			icon: "embers:archaic_bricks"
 			id: "45CFB6E5BAA062B8"
-			tasks: [{
-				id: "1A84C09E42F57606"
-				title: "mbd2 taking ember and rota?"
-				type: "checkmark"
-			}]
+			title: "mb2 machine/multi thats related to embers"
 			x: 0.5d
 			y: 1.5d
 		}
