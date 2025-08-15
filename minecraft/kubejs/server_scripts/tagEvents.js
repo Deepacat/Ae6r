@@ -103,6 +103,8 @@ ServerEvents.tags('item', e => {
         'powah:energizing_rod_blazing', 'powah:energizing_rod_niotic', 'powah:energizing_rod_spirited', 'powah:energizing_rod_nitro'])
 
     e.add('forge:paper', 'minecraft:paper')
+
+    e.add('forge:dough', 'farmersdelight:wheat_dough')
 })
 
 ServerEvents.tags('block', e => {

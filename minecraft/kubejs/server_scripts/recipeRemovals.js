@@ -1,11 +1,13 @@
 ServerEvents.recipes(e => {
     /*
     This file is moreso for mass removals of items via regex or recipe filters, 
-    if an item has a recipe then the recipe should be removed before it is created
+    if an item has one recipe then the recipe should be removed before it is created
     if an item has no recipe, and should be entirely removed, -
     it should be added to nuker instead to be hidden and removed
     */
     const idRemovals = [
+        'quark:tweaks/crafting/utility/misc/easy_sticks',
+        'minecraft:stick',
         /bloodmagic:alchemytable\/melee_damage_anointment/,
 
         /compactmachines:machine_/,
@@ -39,7 +41,6 @@ ServerEvents.recipes(e => {
         /powah:crafting\/cable_/,
 
         /create:crafting\/materials\/andesite_alloy/,
-
         /create:\w+\/bread/,
 
         /create:smelting\/ingot_\w+_compat/,
@@ -47,9 +48,9 @@ ServerEvents.recipes(e => {
         /create:blasting\/ingot_\w+_compat/,
         /create:blasting\/\w+_ingot_compat/,
         /create:compat\/thermal\/crushing\/\w+_ore/,
+        
         /thermal:compat\/\w+\/\w+_ore/,
-        /decorative_blocks:\w+_beam/,
-        /decorative_blocks_abnormals:\w+_beam/,
+        
         /mekanism:storage_blocks\/\w+/,
         /mekanism:nuggets\/\w+/,
         // /mekanism:processing\/\w+\/storage_blocks\/from_ingots/,

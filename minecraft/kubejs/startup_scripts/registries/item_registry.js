@@ -3,13 +3,13 @@ StartupEvents.registry('item', event => {
         // placeholder item
         'replaceme',
 
-        // removed items from 1.16 e6e that need to be remade 
+        // removed items from 1.16 e6e that need to be remade
+        'leather_stripe', // betterendforge
         'blaze_fiber', // ars
         'end_fiber',
         'magic_clay',
         'marvelous_clay',
         'mythical_clay',
-        'advanced_pcb', // pnc
         'rainbow_rune', // quark
         'white_rune',
         'light_gray_rune',
@@ -27,7 +27,6 @@ StartupEvents.registry('item', event => {
         'purple_rune',
         'magenta_rune',
         'pink_rune',
-
 
         // lootboxes
         'common_lootbox',
