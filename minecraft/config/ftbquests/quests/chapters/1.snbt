@@ -5,7 +5,7 @@
 	group: "34B7FB260B6AEB81"
 	icon: "minecraft:oak_sapling"
 	id: "3EC0922FC48FEBB3"
-	order_index: 0
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{

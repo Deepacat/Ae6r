@@ -5,7 +5,7 @@
 	group: "34B7FB260B6AEB81"
 	icon: "kubejs:disabled_recipe_indicator"
 	id: "0000000000000B69"
-	order_index: 3
+	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
