@@ -99,9 +99,7 @@ global.gem_mats = {
         type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     },
     // aquite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []},
-    arcane: {
-        type: 'gem', toolLvl: 'iron', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
-    },
+
     // carminite: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: ['dirty_dust'], addProcFlags: [], delProcFlags: []},
     certus_quartz: {
         type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
@@ -164,6 +162,9 @@ global.flagless_mats = {
     // bitumen: {
     //     type: 'other', toolLvl: 'stone', addFlags: [], delFlags: [], addProcFlags: [], delProcFlags: []
     // },
+    source: {
+        type: 'other', toolLvl: 'iron', addFlags: ['ore'], delFlags: [], addProcFlags: [], delProcFlags: []
+    },
 }
 
 global.emendatus_mats = Object.assign({},
