@@ -20,7 +20,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:nuggets/silver',
         B: 'tconstruct:greenheart_pressure_plate',
-        C: 'kubejs:replaceme',
+        C: 'kubejs:magic_clay',
         D: 'ars_nouveau:ritual_scrying',
         E: '#forge:nuggets/copper',
         F: 'create:polished_rose_quartz'
