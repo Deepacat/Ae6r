@@ -69,6 +69,16 @@ ServerEvents.recipes(e => {
         D: 'create:andesite_casing'
     })
 
+    e.remove({ id: 'create:crafting/kinetics/propeller' })
+    e.shaped('create:propeller', [
+        ' B ',
+        'BAB',
+        ' B '
+    ], {
+        A: '#forge:ingots/arcane_gold',
+        B: '#forge:plates/invar',
+    })
+
     e.remove({ id: 'create:crafting/kinetics/windmill_bearing' })
     e.shaped('create:windmill_bearing', [
         'A',

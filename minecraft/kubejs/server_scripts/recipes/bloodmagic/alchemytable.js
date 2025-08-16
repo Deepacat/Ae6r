@@ -1,7 +1,7 @@
 ServerEvents.recipes(e => {
     e.remove({ id: "bloodmagic:alchemytable/arcane_ash" })
     e.recipes.bloodmagic.alchemytable(Item.of('bloodmagic:arcaneashes', 1),
-        ['kubejs:replaceme', 'minecraft:blaze_powder'])
+        ['kubejs:magic_clay', 'minecraft:blaze_powder'])
         .syphon(500)
         .ticks(200)
         .upgradeLevel(1)

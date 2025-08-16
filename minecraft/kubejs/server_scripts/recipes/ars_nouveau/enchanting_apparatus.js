@@ -12,7 +12,7 @@ ServerEvents.recipes(e => {
         'occultism:sacrificial_bowl',
         'occultism:golden_sacrificial_bowl', 5000
     ).id('kubejs:crafting/golden_sacrificial_bowl')
-    
+
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['eidolon:pewter_inlay', 'occultism:stable_wormhole', 'eidolon:pewter_inlay', 'bloodmagic:reinforcedslate', 'bloodmagic:reinforcedslate', 'eidolon:pewter_inlay', 'occultism:otherstone_pedestal', 'eidolon:pewter_inlay'],
         'farmersdelight:cooking_pot',
@@ -348,8 +348,8 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'botania:swap_ring' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['kubejs:replaceme', '#forge:ingots/manasteel', '#forge:ingots/manasteel'],
-        'kubejs:replaceme',
+        ['kubejs:magic_clay', '#forge:ingots/manasteel', '#forge:ingots/manasteel'],
+        'kubejs:replaceme', /*atum non dirty ring */
         'botania:swap_ring', 500
     ).id('kubejs:swap_ring')
 
@@ -526,7 +526,7 @@ ServerEvents.recipes(e => {
         'ars_nouveau:potion_flask_extend_time', 50
     ).id('kubejs:potion_flask_extend_time')
 
-    e.remove({ id: 'ars_nouveau:potion_flask_amplify'})
+    e.remove({ id: 'ars_nouveau:potion_flask_amplify' })
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['ars_nouveau:glyph_amplify', '#forge:gems/source', 'ars_nouveau:glyph_amplify', '#forge:ingots/arcane_gold', '#forge:ingots/arcane_gold', 'ars_nouveau:glyph_amplify', '#forge:gems/source', 'ars_nouveau:glyph_amplify'],
         'ars_nouveau:potion_flask',

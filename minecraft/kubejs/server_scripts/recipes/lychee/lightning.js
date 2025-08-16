@@ -19,7 +19,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'minecraft:conduit' })
     lightningRecipe(e, 'conduit',
-        [{ item: 'minecraft:heart_of_the_sea' }, { item: 'minecraft:nautilus_shell', count: 2 },
+        [{ item: 'minecraft:heart_of_the_sea' }, { item: 'minecraft:nautilus_shell', count: 4 },
         { tag: 'forge:gems/lapis' }, { tag: 'forge:gems/fluorite' }, { tag: 'forge:gems/source' }],
         [{ type: "drop_item", item: "minecraft:conduit" }]
     )
