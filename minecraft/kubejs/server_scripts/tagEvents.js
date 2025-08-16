@@ -74,7 +74,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/energized_steel', 'powah:steel_energized');
     e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium']);
 
-    e.add('quark:runes', ['kubejs:white_rune', 'kubejs:light_gray_rune', 'kubejs:gray_rune',
+    e.add('quark:runes', [ 'kubejs:white_rune', 'kubejs:light_gray_rune', 'kubejs:gray_rune',
         'kubejs:black_rune', 'kubejs:brown_rune', 'kubejs:red_rune', 'kubejs:orange_rune',
         'kubejs:yellow_rune', 'kubejs:lime_rune', 'kubejs:green_rune', 'kubejs:cyan_rune',
         'kubejs:light_blue_rune', 'kubejs:blue_rune', 'kubejs:purple_rune', 'kubejs:magenta_rune',
@@ -106,6 +106,13 @@ ServerEvents.tags('item', e => {
 
     e.add('forge:dough', 'farmersdelight:wheat_dough')
     e.add('forge:doughs', 'farmersdelight:wheat_dough')
+
+    e.add('enigmatica:burning_hot', [
+        'kubejs:hot_compressed_iron_ingot',
+        'kubejs:superheated_steel_ingot',
+        'kubejs:superheated_steel_block',
+        'kubejs:hot_compressed_iron_block'
+    ])
 })
 
 ServerEvents.tags('block', e => {
