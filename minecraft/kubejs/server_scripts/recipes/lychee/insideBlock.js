@@ -1,9 +1,4 @@
 ServerEvents.recipes(e => {
-    insideBlock(e, [{ type: "drop_item", item: "ars_nouveau:sourcestone", count: 4 }],
-        makeJsonIngredients(["minecraft:stone", "2x minecraft:oak_planks"]),
-        "minecraft:water",
-        "sourcestone_test"
-    )
     insideBlock(e, [{ type: "drop_item", item: "kubejs:magic_clay", count: 2 }],
         makeJsonIngredients(["2x eidolon:enchanted_ash", "#forge:clay", "#forge:dusts/mana", "#forge:dusts/lapis"]),
         "minecraft:water",
