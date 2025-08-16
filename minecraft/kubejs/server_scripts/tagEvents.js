@@ -107,7 +107,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:dough', 'farmersdelight:wheat_dough')
     e.add('forge:doughs', 'farmersdelight:wheat_dough')
 
-    e.add('enigmatica:burning_hot', [
+    e.add('kubejs:burning_hot', [
         'kubejs:hot_compressed_iron_ingot',
         'kubejs:superheated_steel_ingot',
         'kubejs:superheated_steel_block',

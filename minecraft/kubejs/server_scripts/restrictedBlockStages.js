@@ -24,22 +24,3 @@ ItemEvents.rightClicked(event => {
         }
     })
 })
-
-// hot item drop detection to extinguish when dropped
-ItemEvents.dropped(event => {
-    const player = event.player
-    if (!player.isPlayer() || player.isFake()) {
-        return
-    }
-
-    if (!event.item.hasTag('kubejs:burning_hot')) {
-        return
-    }
-
-    if (!playerHas('#kubejs:burning_hot', player)) {
-        if (global.setOnFire) {
-            player.extinguish()
-            global.setOnFire = false
-        }
-    }
-})
