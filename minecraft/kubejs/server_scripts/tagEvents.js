@@ -113,6 +113,8 @@ ServerEvents.tags('item', e => {
         'kubejs:superheated_steel_block',
         'kubejs:hot_compressed_iron_block'
     ])
+    e.add('forge:gems/mana', '#forge:gems/source')
+    e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
 })
 
 ServerEvents.tags('block', e => {

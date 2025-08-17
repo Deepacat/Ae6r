@@ -3,6 +3,8 @@ global.emenDebug = true
 
 // enable regenerating tag data after a /reload
 // probably keep this on for pack dev, disable for releases (ensure it works first)
+// NEW NOTE: Reloading a second time can cause issues due to previous tags no longer existing
+// just run this on first reload then disable probably
 global.emenDatagen = false
 
 /*

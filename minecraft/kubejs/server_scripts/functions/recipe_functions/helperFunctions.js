@@ -1,6 +1,7 @@
 // A helper which turns a list of inputs into a list of json ingredients
 // Inputs can be Item stacks, Ingredient stacks, item or tag strings
 function makeJsonIngredients(inputs) {
+    if (typeof inputs == "string") { inputs = [inputs] }
     return inputs.map(input => {
         let ingredient = ''
         // get the ingredient which can only be read by converting the data to json

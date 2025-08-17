@@ -32,7 +32,7 @@ global.dimensionsOreData = {
 // TODO: allow adding additional biome flags
 global.emendatus_mats['coal'].oreData = {
     dropType: 'gem',
-    vanillaDrop: 'minecraft:coal',
+    overrideDrop: 'minecraft:coal',
     dropCountRange: [1, 3],
     veins: {
         "coal_upper_overworld": {
@@ -54,7 +54,7 @@ global.emendatus_mats['coal'].oreData = {
 }
 global.emendatus_mats['copper'].oreData = {
     dropType: 'raw_ore',
-    vanillaDrop: 'minecraft:raw_copper',
+    overrideDrop: 'minecraft:raw_copper',
     dropCountRange: [2, 4],
     veins: {
         "copper_overworld": {
@@ -68,7 +68,7 @@ global.emendatus_mats['copper'].oreData = {
 }
 global.emendatus_mats['diamond'].oreData = {
     dropType: 'gem',
-    vanillaDrop: 'minecraft:diamond',
+    overrideDrop: 'minecraft:diamond',
     dropCountRange: [1, 1],
     veins: {
         "diamond_overworld": {
@@ -89,7 +89,7 @@ global.emendatus_mats['diamond'].oreData = {
 }
 global.emendatus_mats['emerald'].oreData = {
     dropType: 'gem',
-    vanillaDrop: 'minecraft:emerald',
+    overrideDrop: 'minecraft:emerald',
     dropCountRange: [1, 1],
     veins: {
         "emerald_overworld": {
@@ -103,7 +103,7 @@ global.emendatus_mats['emerald'].oreData = {
 }
 global.emendatus_mats['gold'].oreData = {
     dropType: 'raw_ore',
-    vanillaDrop: 'minecraft:raw_gold',
+    overrideDrop: 'minecraft:raw_gold',
     dropCountRange: [1, 1],
     veins: {
         "gold_overworld": {
@@ -117,7 +117,7 @@ global.emendatus_mats['gold'].oreData = {
 }
 global.emendatus_mats['iron'].oreData = {
     dropType: 'raw_ore',
-    vanillaDrop: 'minecraft:raw_iron',
+    overrideDrop: 'minecraft:raw_iron',
     dropCountRange: [1, 1],
     veins: {
         "iron_overworld": {
@@ -131,7 +131,7 @@ global.emendatus_mats['iron'].oreData = {
 }
 global.emendatus_mats['lapis'].oreData = {
     dropType: 'gem',
-    vanillaDrop: 'minecraft:lapis_lazuli',
+    overrideDrop: 'minecraft:lapis_lazuli',
     dropCountRange: [4, 9],
     veins: {
         "lapis_overworld": {
@@ -145,7 +145,7 @@ global.emendatus_mats['lapis'].oreData = {
 }
 global.emendatus_mats['quartz'].oreData = {
     dropType: 'gem',
-    vanillaDrop: 'minecraft:quartz',
+    overrideDrop: 'minecraft:quartz',
     dropCountRange: [1, 1],
     veins: {
         "quartz_nether": {
@@ -159,7 +159,7 @@ global.emendatus_mats['quartz'].oreData = {
 }
 global.emendatus_mats['redstone'].oreData = {
     dropType: 'dust',
-    vanillaDrop: 'minecraft:redstone',
+    overrideDrop: 'minecraft:redstone',
     dropCountRange: [4, 5],
     veins: {
         "redstone_overworld": {
@@ -172,7 +172,7 @@ global.emendatus_mats['redstone'].oreData = {
     }
 }
 
-// aluminium lead nickel platinum silver tin uranium zinc cobalt osmium iesnium
+// aluminium lead nickel silver tin uranium zinc cobalt osmium iesnium
 // metals
 global.emendatus_mats['aluminum'].oreData = {
     dropType: 'raw_ore',
@@ -210,19 +210,6 @@ global.emendatus_mats['nickel'].oreData = {
             range: [-20, 50],
             count: 10,
             size: 10
-        }
-    }
-}
-global.emendatus_mats['platinum'].oreData = {
-    dropType: 'raw_ore',
-    dropCountRange: [1, 1],
-    veins: {
-        "platinum_overworld": {
-            dimension: 'minecraft:overworld',
-            airDiscardChance: 0,
-            range: [-50, 5],
-            count: 5,
-            size: 6
         }
     }
 }
@@ -361,6 +348,7 @@ global.emendatus_mats['potassium_nitrate'].oreData = {
 }
 global.emendatus_mats['sapphire'].oreData = {
     dropType: 'gem',
+    overrideDrop: 'thermal:sapphire',
     dropCountRange: [1, 1],
     veins: {
         "sapphire_overworld": {
@@ -385,11 +373,12 @@ global.emendatus_mats['sulfur'].oreData = {
         }
     }
 }
-global.emendatus_mats['arcane'].oreData = {
+global.emendatus_mats['source'].oreData = {
     dropType: 'gem',
+    overrideDrop: 'ars_nouveau:source_gem',
     dropCountRange: [1, 2],
     veins: {
-        "arcane_overworld": {
+        "source_overworld": {
             dimension: 'minecraft:overworld',
             airDiscardChance: 0,
             range: [-60, -10],
@@ -426,6 +415,7 @@ global.emendatus_mats['fluorite'].oreData = {
 }
 global.emendatus_mats['ruby'].oreData = {
     dropType: 'gem',
+    overrideDrop: 'thermal:ruby',
     dropCountRange: [1, 1],
     veins: {
         "ruby_overworld": {

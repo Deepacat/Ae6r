@@ -54,7 +54,7 @@ function tagIsEmpty(tag) {
  */
 function getPreferredItemInTag(tag) {
     const got = getItemsInTag(tag).sort((a, b) => compareIndices(a.mod, b.mod, tag))[0]
-    return got || Item.of(air)
+    return got || undefined
 }
 
 /**
@@ -63,6 +63,19 @@ function getPreferredItemInTag(tag) {
  */
 function getItemsInTag(tag) {
     return Ingredient.of(tag).stacks.toArray();
+}
+
+/**
+ * @param {string} materialName 
+ */
+function getFluid(materialName) {
+    for (let mod of modFluidPriorities) {
+        if (Fluid.exists(`${mod}:molten_${materialName}`)) {
+            return Fluid.of(`${mod}:molten_${materialName}`)
+        } else if (Fluid.exists(`${mod}:${materialName}`)) {
+            return Fluid.of(`${mod}:${materialName}`)            
+        }
+    }
 }
 
 function compareIndices(a, b, tag) {

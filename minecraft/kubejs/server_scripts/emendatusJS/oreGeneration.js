@@ -8,7 +8,6 @@ ServerEvents.tags('block', e => {
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
             if (blockFlag == 'ore' && matObj[1].oreData) {
-                console.log(`Registering ${matName} ores`)
                 for (let veinData of Object.entries(matObj[1].oreData.veins)) {
                     for (let strataType of global.dimensionsOreData[veinData[1].dimension].strata) {
                         let blockSplit = strataType.split(':')
@@ -28,10 +27,12 @@ ServerEvents.highPriorityData(e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matTypes = matObj[1].flags.block
+        let ignoreFlags = matObj[1].ignoreRegisterFlags
 
         for (let blockFlag of matTypes) {
             if (!(blockFlag == 'ore' && matObj[1].oreData)) { continue }
-            // if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
+            // if (matObj[1].ignoreRegisterFlags && matObj[1].ignoreRegisterFlags.includes(blockFlag)) { continue }
+
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
             let oreData = matObj[1].oreData
@@ -54,7 +55,7 @@ ServerEvents.highPriorityData(e => {
                     let itemDropId = `emendatus:${getFlagReplace(oreData.dropType, matName)}`
 
                     // replace vanilla drops from object because edge cases suck
-                    if (oreData.vanillaDrop) { itemDropId = oreData.vanillaDrop }
+                    if (oreData.overrideDrop) { itemDropId = oreData.overrideDrop }
                     if (!Item.exists(itemDropId)) { itemDropId = 'kubejs:replaceme' }
 
                     configuredOre.config.targets.push({

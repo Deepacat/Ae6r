@@ -34,15 +34,7 @@ ServerEvents.recipes(e => {
     e.shapeless('minecraft:crafting_table',
         ['#forge:workbenches']
     ).id('kubejs:shapeless/crafting_table')
-
-    e.shapeless('ars_nouveau:source_gem',
-        ['emendatus:arcane_gem']
-    ).id('kubejs:shapeless/source_gem')
-
-    e.shapeless('emendatus:arcane_gem',
-        ['ars_nouveau:source_gem']
-    ).id('kubejs:shapeless/arcane_gem')
-
+    
     e.shapeless('botania:fertilizer',
         ['#forge:fertilizer', '#forge:dyes', '#forge:dyes', '#forge:dyes', '#forge:dyes']
     ).id('kubejs:shapeless/fertilizer')
