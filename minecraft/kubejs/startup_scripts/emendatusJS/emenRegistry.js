@@ -1,18 +1,18 @@
 StartupEvents.registry('item', e => {
-    e.create(`emendatus:charcoal_dust`).texture(`kubejs:item/emendatus/gem/charcoal_dust`)
-    e.create(`emendatus:obsidian_dust`).texture(`kubejs:item/emendatus/obsidian_dust`)
     // matObj[1].type = material type, e.g. 'alloy'
     // matObj[0] = material name, e.g. 'copper'
     // itemType = item type id, e.g. 'ingot'
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matFlags = matObj[1].flags.item
+        let ignoreFlags = matObj[1].ignoreRegisterFlags
+
         for (let itemFlag of matFlags) {
-            if (matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(itemFlag)) { continue }
+            if (ignoreFlags && ignoreFlags.includes(itemFlag)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[itemFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
             let itemId = `emendatus:${replaceableId}`
-            let texturePath = `kubejs:item/emendatus/${matObj[1].type}/${replaceableId}`
+            let texturePath = `emendatus:item/${replaceableId}`
 
             console.log(`Registering ${itemId} with texture ${texturePath}`)
 
@@ -32,19 +32,18 @@ StartupEvents.registry('block', e => {
     for (let matObj of Object.entries(global.emendatus_mats)) {
         let matName = matObj[0]
         let matTypes = matObj[1].flags.block
+        let ignoreFlags = matObj[1].ignoreRegisterFlags
 
         for (let blockFlag of matTypes) {
-            if (!blockFlag == 'ore' && matObj[1].vanillaFlags && matObj[1].vanillaFlags.includes(blockFlag)) { continue }
+            if (!(blockFlag == 'ore') && ignoreFlags && ignoreFlags.includes(blockFlag)) { continue }
             let replaceableId = global.emenGetReplace(global.emendatus_all_types[blockFlag].replacer, matName)
             if (replaceableId == undefined) { continue }
 
             // registering ores
             if (blockFlag == 'ore' && matObj[1].oreData) {
                 console.log(`Registering ${matName} ores`)
-                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/overlays/${matName}`
+                let texturePath = `emendatus:block/overlays/${matName}`
                 for (let veinData of Object.entries(matObj[1].oreData.veins)) {
-                    console.log(`Registering ${matName} ores`)
-
                     for (let strataType of global.dimensionsOreData[veinData[1].dimension].strata) {
                         let blockSplit = strataType.split(':')
                         let blockId = blockSplit.length == 2 ?
@@ -67,7 +66,7 @@ StartupEvents.registry('block', e => {
             }
 
             if (blockFlag == 'raw_block') {
-                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/raw_${matName}_block`
+                let texturePath = `emendatus:block/raw_${matName}_block`
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
                 e.create(`emendatus:${replaceableId}`)
                     .soundType('stone')
@@ -81,7 +80,7 @@ StartupEvents.registry('block', e => {
             }
             // else generation should just be full storage blocks
             if (blockFlag == 'storage_block') {
-                let texturePath = `kubejs:block/emendatus/${matObj[1].type}/${replaceableId}`
+                let texturePath = `emendatus:block/${replaceableId}`
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
                 e.create(`emendatus:${replaceableId}`)
                     .soundType('metal')
