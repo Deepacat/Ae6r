@@ -292,7 +292,7 @@ global.emendatus_mats['osmium'].oreData = {
     }
 }
 
-// apatite cinnabar dimensional potassium_nitrate sapphire sulfur arcane certus_quartz fluorite ruby
+// apatite cinnabar dimensional potassium_nitrate arcane certus_quartz fluorite 
 // gems
 global.emendatus_mats['apatite'].oreData = {
     dropType: 'gem',
@@ -304,19 +304,6 @@ global.emendatus_mats['apatite'].oreData = {
             range: [50, 120],
             count: 8,
             size: 12
-        }
-    }
-}
-global.emendatus_mats['cinnabar'].oreData = {
-    dropType: 'gem',
-    dropCountRange: [2, 4],
-    veins: {
-        "cinnabar_overworld": {
-            dimension: 'minecraft:overworld',
-            airDiscardChance: 0,
-            range: [-20, 20],
-            count: 8,
-            size: 7
         }
     }
 }
@@ -346,33 +333,6 @@ global.emendatus_mats['potassium_nitrate'].oreData = {
         }
     }
 }
-global.emendatus_mats['sapphire'].oreData = {
-    dropType: 'gem',
-    overrideDrop: 'thermal:sapphire',
-    dropCountRange: [1, 1],
-    veins: {
-        "sapphire_overworld": {
-            dimension: 'minecraft:overworld',
-            airDiscardChance: 0,
-            range: [-60, 5],
-            count: 5,
-            size: 3
-        }
-    }
-}
-global.emendatus_mats['sulfur'].oreData = {
-    dropType: 'dust',
-    dropCountRange: [3, 5],
-    veins: {
-        "sulfur_overworld": {
-            dimension: 'minecraft:overworld',
-            airDiscardChance: 0,
-            range: [-20, 30],
-            count: 8,
-            size: 5
-        }
-    }
-}
 global.emendatus_mats['source'].oreData = {
     dropType: 'gem',
     overrideDrop: 'ars_nouveau:source_gem',
@@ -382,19 +342,6 @@ global.emendatus_mats['source'].oreData = {
             dimension: 'minecraft:overworld',
             airDiscardChance: 0,
             range: [-60, -10],
-            count: 8,
-            size: 4
-        }
-    }
-}
-global.emendatus_mats['certus_quartz'].oreData = {
-    dropType: 'gem',
-    dropCountRange: [1, 3],
-    veins: {
-        "certus_quartz_overworld": {
-            dimension: 'minecraft:overworld',
-            airDiscardChance: 0,
-            range: [-40, 20],
             count: 8,
             size: 4
         }
@@ -410,20 +357,6 @@ global.emendatus_mats['fluorite'].oreData = {
             range: [-25, 10],
             count: 5,
             size: 7
-        }
-    }
-}
-global.emendatus_mats['ruby'].oreData = {
-    dropType: 'gem',
-    overrideDrop: 'thermal:ruby',
-    dropCountRange: [1, 1],
-    veins: {
-        "ruby_overworld": {
-            dimension: 'minecraft:overworld',
-            airDiscardChance: 0,
-            range: [-60, 5],
-            count: 5,
-            size: 3
         }
     }
 }
