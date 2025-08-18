@@ -16,11 +16,6 @@ ServerEvents.recipes(e => {
 
     // generating and removing un unified recipes
     for (let materialName of materialsToUnify) {
-
-        // getting *one* item of ore is kinda problematic
-        // let ore = getPreferredItemInTag(Ingredient.of(`#forge:ores/${material}`))
-        let ore = getTaggedItem(`forge:ores/${materialName}`)
-
         // general meterial types
         let block = getTaggedItem(`forge:storage_blocks/${materialName}`)
         let ingot = getTaggedItem(`forge:ingots/${materialName}`)
@@ -28,10 +23,14 @@ ServerEvents.recipes(e => {
         // gem specific
         let gem = getTaggedItem(`forge:gems/${materialName}`)
         let chunk = getTaggedItem(`forge:chunks/${materialName}`)
-        // processing
+        // general oreproc
+        let ore = getTaggedItem(`forge:ores/${materialName}`) /* getting *one* item of ore is kinda problematic, but .tag works for most things prolly */
+        let raw_ore = getTaggedItem(`forge:raw_materials/${materialName}`)
+        let raw_ore_block = getTaggedItem(`forge:storage_blocks/raw_${materialName}`)
         let crushed_ore = getTaggedItem(`forge:crushed_ores/${materialName}`)
         let dust = getTaggedItem(`forge:dusts/${materialName}`)
         let shard = getTaggedItem(`forge:shards/${materialName}`)
+        let smeltable = [raw_ore, raw_ore_block, crushed_ore, dust]
         // mekanism oreproc
         let mek_crystal = getTaggedItem(`forge:crystals/${materialName}`)
         let mek_shard = getTaggedItem(`forge:shards/${materialName}`)
@@ -40,6 +39,11 @@ ServerEvents.recipes(e => {
         // bloodmagic oreproc
         let fragment = getTaggedItem(`forge:fragments/${materialName}`)
         let gravel = getTaggedItem(`forge:gravels/${materialName}`)
+        // enigmatica magic oreproc
+        // var mana_cluster = getPreferredItemInTag(Ingredient.of(`#enigmatica:mana_clusters/${material}`)).id;
+        // var fulminated_cluster = getPreferredItemInTag(Ingredient.of(`#enigmatica:fulminated_clusters/${material}`)).id;
+        // var levigated_material = getPreferredItemInTag(Ingredient.of(`#enigmatica:levigated_materials/${material}`)).id;
+        // var crystalline_sliver = getPreferredItemInTag(Ingredient.of(`#enigmatica:crystalline_slivers/${material}`)).id;
         // components
         let gear = getTaggedItem(`forge:gears/${materialName}`)
         let rod = getTaggedItem(`forge:rods/${materialName}`)
@@ -50,11 +54,56 @@ ServerEvents.recipes(e => {
 
         let gemOrIngot = gem || ingot
 
+        smeltingRecipes(e, materialName, gemOrIngot, ore, smeltable)
         plateRecipes(e, materialName, gemOrIngot, plate, fluid)
         rodRecipes(e, materialName, gemOrIngot, rod, fluid)
         gearRecipes(e, materialName, gemOrIngot, gear, fluid)
     }
 })
+
+// // smelting recipe gen for emendatus
+function a(e, matObj, matName, inputFlagType) {
+    // smelting recipes
+    for (let flag of smeltable) {
+        if (validateFlag(flag, matObj) && !validateTag(flag, matName)) {
+            let input = '#' + getTagReplace(flag, matName)
+            let outputId = '#' + getTagReplace(inputFlagType, matName)
+
+            e.remove({ output: outputId, type: 'minecraft:smelting' })
+            e.remove({ output: outputId, type: 'minecraft:blasting' })
+            let smelt = e.blasting(outputId, input)
+                .id(`${prefix}blasting/${matName}/${flag}_to_${inputFlagType}`)
+            switch (flag) {
+                case 'raw_ore': smelt.xp(0.7); break
+                case 'ore': smelt.xp(2); break
+            }
+        }
+    }
+}
+
+function smeltingRecipes(e, materialName, gemOrIngot, ore, smeltable) {
+    // added to an empty string to convert to a normal js string instead of java
+    if (!gemOrIngot) { return }
+
+    let gemOrIngotItem = gemOrIngot.item.id + ''
+
+    let smeltableItems = []
+    for (let smelt of smeltable) {
+        if (smelt) { smeltableItems.push(smelt.item.id) }
+    }
+    if (ore) { smeltableItems.push(`#${ore.tag}`) }
+
+    e.remove({ output: gemOrIngotItem, type: 'minecraft:smelting' })
+    e.remove({ output: gemOrIngotItem, type: 'minecraft:blasting' })
+
+    for (let toSmelt of smeltableItems) {
+        if (!toSmelt) { continue }
+        let smelt = e.blasting(gemOrIngotItem, toSmelt)
+            .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        if (toSmelt.includes('raw') && !toSmelt.includes('raw_redstone')) { smelt.xp(0.7) }
+        if (toSmelt.includes('ores')) { smelt.xp(2) }
+    }
+}
 
 function plateRecipes(e, materialName, gemOrIngot, plate, fluid) {
     if (!(gemOrIngot && plate)) { return }
