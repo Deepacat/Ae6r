@@ -41,6 +41,7 @@ const modFluidPriorities = [
     'emendatus',
     'thermal',
     'tconstruct',
+    'tcintegrations',
     'embers',
     'create'
 ]

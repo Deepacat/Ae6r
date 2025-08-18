@@ -28,17 +28,18 @@ function embersMelting(e, output, input) {
     }).id(`${prefix}embers/melting/${input.tag ? input.tag.split(':')[1] : input.item.split(':')[1]}`)
 }
 
-// embers stamp melter
 function embersStamping(e, itemOutput, fluidInput, stamp) {
-    itemOutput = Item.of(itemOutput)
-    e.custom({
+    const recipe = e.custom({
         type: "embers:stamping",
         fluid: fluidInput,
-        output: itemOutput,
-        stamp: {
-            item: stamp
+        output: makeJsonIngredient(itemOutput),
+        stamp: makeJsonIngredient(stamp)
+    })
+    return {
+        id: function (customId) {
+            recipe.id(customId ?? `kubejs:embers/stamping/${itemOutput.split(':')[1]}`)
         }
-    }).id(`${prefix}embers/stamping/${itemOutput.id.split(':')[1]}`)
+    }
 }
 
 // lychee exploding recipe helper

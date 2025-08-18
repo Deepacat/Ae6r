@@ -10,12 +10,12 @@ ServerEvents.recipes(e => {
         "spectres_eye"
     )
     insideBlock(e, [{ type: "drop_item", item: "pneumaticcraft:ingot_iron_compressed", count: 1 }],
-        makeJsonIngredients(["kubejs:hot_compressed_iron_ingot"]),
+        makeJsonIngredient("kubejs:hot_compressed_iron_ingot"),
         "minecraft:water",
         "ingot_iron_compressed"
     )
     insideBlock(e, [{ type: "drop_item", item: "pneumaticcraft:compressed_iron_block", count: 1 }],
-        makeJsonIngredients(["kubejs:hot_compressed_iron_block"]),
+        makeJsonIngredient("kubejs:hot_compressed_iron_block"),
         "minecraft:water",
         "compressed_iron_block"
     )
