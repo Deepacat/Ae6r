@@ -103,6 +103,15 @@ function rodRecipes(e, materialName, gemOrIngot, rod, fluid) {
 
     e.remove({ output: rod })
 
+    if (fluid) {
+        let fluidAmt = getFluidAmountForType(gemOrIngot.tag) / 2
+
+        e.recipes.thermal.chiller(rodItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+            .id(`emendatus:thermal/chiller/${materialName}_rod`)
+        embersStamping(e, rodItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'immersiveengineering:mold_rod')
+            .id(`emendatus:embers/stamping/${materialName}_rod`)
+    }
+
     e.recipes.thermal.press(`2x ${rodItem}`, [gemOrIngotItem, 'immersiveengineering:mold_rod'])
         .id(`emendatus:thermal/press/${materialName}_rod`)
     e.recipes.immersiveengineering.metal_press(`8x ${rodItem}`, `4x ${gemOrIngotItem}`, 'immersiveengineering:mold_rod')
@@ -129,19 +138,6 @@ function rodRecipes(e, materialName, gemOrIngot, rod, fluid) {
     }).id(`emendatus:hammer/${materialName}_rod`)
 }
 
-// if (Fluid.exists(`tconstruct:molten_${materialName}`)) {
-//     let fluidAmt = 45
-//     if (inputFlagType == 'gem') { fluidAmt = 50 }
-//     e.recipes.thermal.chiller(output, ['tconstruct:rod_cast', Fluid.of(`tconstruct:molten_${materialName}`, 45)])
-//         .id(`emendatus:thermal/chiller/${materialName}_rod`)
-
-//     e.recipes.thermal.crucible(Fluid.of(`tconstruct:molten_${materialName}`, 45), '#' + getTagReplace('rod', materialName), 0, 1000)
-//         .id(`emendatus:thermal/crucible/${materialName}_rod`)
-
-//     embersMelting(e, Fluid.of(`tconstruct:molten_${materialName}`, fluidAmt), `forge:rods/${materialName}`)
-// }
-
-
 // gear recipe gen for emendatus
 function gearRecipes(e, materialName, gemOrIngot, gear, fluid) {
     if (!(gemOrIngot && gear)) { return }
@@ -150,6 +146,15 @@ function gearRecipes(e, materialName, gemOrIngot, gear, fluid) {
     let gearItem = gear.item.id + ''
 
     e.remove({ output: gearItem })
+
+    if (fluid) {
+        let fluidAmt = getFluidAmountForType(gemOrIngot.tag) * 4
+
+        e.recipes.thermal.chiller(gearItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+            .id(`emendatus:thermal/chiller/${materialName}_gear`)
+        embersStamping(e, gearItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:gear_stamp')
+            .id(`emendatus:embers/stamping/${materialName}_gear`)
+    }
 
     e.recipes.thermal.press(gearItem, [`4x ${gemOrIngotItem}`, 'immersiveengineering:mold_gear'])
         .id(`emendatus:thermal/press/${materialName}_gear`)
@@ -167,16 +172,3 @@ function gearRecipes(e, materialName, gemOrIngot, gear, fluid) {
     }).id(`emendatus:shaped/${materialName}_gear`)
 
 }
-// if (Fluid.exists(`tconstruct:molten_${materialName}`)) {
-//     let fluidAmt = 360
-//     if (inputFlagType == 'gem') { fluidAmt = 400 }
-//     e.recipes.thermal.chiller(output, ['tconstruct:gear_cast', Fluid.of(`tconstruct:molten_${materialName}`, fluidAmt)])
-//         .id(`emendatus:thermal/chiller/${materialName}_gear`)
-
-//     embersStamping(e, output, { fluid: `tconstruct:molten_${materialName}`, amount: fluidAmt }, 'embers:gear_stamp')
-
-//     e.recipes.thermal.crucible(Fluid.of(`tconstruct:molten_${materialName}`, fluidAmt), '#' + getTagReplace('gear', materialName), 0, 8000)
-//         .id(`emendatus:thermal/crucible/${materialName}_gear`)
-
-//     embersMelting(e, Fluid.of(`tconstruct:molten_${materialName}`, fluidAmt), `forge:gears/${materialName}`)
-// }
