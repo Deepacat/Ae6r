@@ -16,94 +16,118 @@ ServerEvents.recipes(e => {
 
     // generating and removing un unified recipes
     for (let materialName of materialsToUnify) {
-        // general meterial types
-        let block = getTaggedItem(`forge:storage_blocks/${materialName}`)
-        let ingot = getTaggedItem(`forge:ingots/${materialName}`)
-        let nugget = getTaggedItem(`forge:nuggets/${materialName}`)
-        // gem specific
-        let gem = getTaggedItem(`forge:gems/${materialName}`)
-        let chunk = getTaggedItem(`forge:chunks/${materialName}`)
-        // general oreproc
-        let ore = getTaggedItem(`forge:ores/${materialName}`) /* getting *one* item of ore is kinda problematic, but .tag works for most things prolly */
-        let raw_ore = getTaggedItem(`forge:raw_materials/${materialName}`)
-        let raw_ore_block = getTaggedItem(`forge:storage_blocks/raw_${materialName}`)
-        let crushed_ore = getTaggedItem(`forge:crushed_ores/${materialName}`)
-        let dust = getTaggedItem(`forge:dusts/${materialName}`)
-        let shard = getTaggedItem(`forge:shards/${materialName}`)
-        let smeltable = [raw_ore, raw_ore_block, crushed_ore, dust]
-        // mekanism oreproc
-        let mek_crystal = getTaggedItem(`forge:crystals/${materialName}`)
-        let mek_shard = getTaggedItem(`forge:shards/${materialName}`)
-        let mek_clump = getTaggedItem(`forge:clumps/${materialName}`)
-        let mek_dirty_dust = getTaggedItem(`forge:dirty_dusts/${materialName}`)
-        // bloodmagic oreproc
-        let fragment = getTaggedItem(`forge:fragments/${materialName}`)
-        let gravel = getTaggedItem(`forge:gravels/${materialName}`)
-        // enigmatica magic oreproc
-        // var mana_cluster = getPreferredItemInTag(Ingredient.of(`#enigmatica:mana_clusters/${material}`)).id;
-        // var fulminated_cluster = getPreferredItemInTag(Ingredient.of(`#enigmatica:fulminated_clusters/${material}`)).id;
-        // var levigated_material = getPreferredItemInTag(Ingredient.of(`#enigmatica:levigated_materials/${material}`)).id;
-        // var crystalline_sliver = getPreferredItemInTag(Ingredient.of(`#enigmatica:crystalline_slivers/${material}`)).id;
-        // components
-        let gear = getTaggedItem(`forge:gears/${materialName}`)
-        let rod = getTaggedItem(`forge:rods/${materialName}`)
-        let plate = getTaggedItem(`forge:plates/${materialName}`)
-        let coin = getTaggedItem(`forge:coins/${materialName}`)
+        let typesObj = {
+            // general meterial types
+            block: getTaggedItem(`forge:storage_blocks/${materialName}`),
+            ingot: getTaggedItem(`forge:ingots/${materialName}`),
+            nugget: getTaggedItem(`forge:nuggets/${materialName}`),
+            // gem specific
+            gem: getTaggedItem(`forge:gems/${materialName}`),
+            chunk: getTaggedItem(`forge:chunks/${materialName}`),
+            // general oreproc
+            ore: getTaggedItem(`forge:ores/${materialName}`),
+            raw_ore: getTaggedItem(`forge:raw_materials/${materialName}`),
+            raw_ore_block: getTaggedItem(`forge:storage_blocks/raw_${materialName}`),
+            crushed_ore: getTaggedItem(`forge:crushed_ores/${materialName}`),
+            dust: getTaggedItem(`forge:dusts/${materialName}`),
+            shard: getTaggedItem(`forge:shards/${materialName}`),
+            // mekanism oreproc
+            mek_crystal: getTaggedItem(`forge:crystals/${materialName}`),
+            mek_shard: getTaggedItem(`forge:shards/${materialName}`),
+            mek_clump: getTaggedItem(`forge:clumps/${materialName}`),
+            // bloodmagic oreproc
+            fragment: getTaggedItem(`forge:fragments/${materialName}`),
+            gravel: getTaggedItem(`forge:gravels/${materialName}`),
+            // enigmatica magic oreproc
+            mana_cluster: getTaggedItem(`enigmatica:mana_clusters/${materialName}`),
+            fulminated_cluster: getTaggedItem(`enigmatica:fulminated_clusters/${materialName}`),
+            levigated_material: getTaggedItem(`enigmatica:levigated_materials/${materialName}`),
+            crystalline_sliver: getTaggedItem(`enigmatica:crystalline_slivers/${materialName}`),
+            // components
+            gear: getTaggedItem(`forge:gears/${materialName}`),
+            rod: getTaggedItem(`forge:rods/${materialName}`),
+            plate: getTaggedItem(`forge:plates/${materialName}`),
+            coin: getTaggedItem(`forge:coins/${materialName}`),
+            // special
+            fluid: getFluid(materialName),
+        }
+        typesObj['gemOrIngot'] = typesObj.gem || typesObj.ingot
+        typesObj['smeltable'] = [typesObj.raw_ore, typesObj.crushed_ore, typesObj.dust]
 
-        let fluid = getFluid(materialName)
+        ingotRecipes(e, materialName, typesObj) // gemOrIngot, fluid, ore, smeltable
+        // storageBlockRecipes(e, materialName, typesObj) // gemOrIngot, fluid, block, raw_ore_block
+        plateRecipes(e, materialName, typesObj) // gemOrIngot, fluid, plate
+        rodRecipes(e, materialName, typesObj) // gemOrIngot, fluid, rod
+        gearRecipes(e, materialName, typesObj) // gemOrIngot, fluid, gear
+        // wireRecipes
 
-        let gemOrIngot = gem || ingot
-
-        smeltingRecipes(e, materialName, gemOrIngot, ore, smeltable)
-        plateRecipes(e, materialName, gemOrIngot, plate, fluid)
-        rodRecipes(e, materialName, gemOrIngot, rod, fluid)
-        gearRecipes(e, materialName, gemOrIngot, gear, fluid)
     }
 })
 
-function smeltingRecipes(e, materialName, gemOrIngot, ore, smeltable) {
+function ingotRecipes(e, materialName, typesObj) {
     // added to an empty string to convert to a normal js string instead of java
-    if (!gemOrIngot) { return }
+    if (!typesObj.gemOrIngot) { return }
 
-    let gemOrIngotItem = gemOrIngot.item.id + ''
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
 
     let smeltableItems = []
-    for (let smelt of smeltable) {
+    for (let smelt of typesObj.smeltable) {
         if (smelt) { smeltableItems.push(smelt.item.id) }
     }
-    if (ore) { smeltableItems.push(`#${ore.tag}`) }
+    if (typesObj.ore) { smeltableItems.push(`#${typesObj.ore.tag}`) }
 
     e.remove({ output: gemOrIngotItem, type: 'minecraft:smelting' })
     e.remove({ output: gemOrIngotItem, type: 'minecraft:blasting' })
 
     for (let toSmelt of smeltableItems) {
         if (!toSmelt) { continue }
-        let smelt = e.blasting(gemOrIngotItem, toSmelt)
-            .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        let smelt =
+            e.blasting(gemOrIngotItem, toSmelt)
+                .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
         if (toSmelt.includes('raw') && !toSmelt.includes('raw_redstone')) { smelt.xp(0.7) }
         if (toSmelt.includes('ores')) { smelt.xp(2) }
+
         e.recipes.mekanism.smelting(gemOrIngotItem, toSmelt)
             .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
         e.recipes.thermal.furnace(gemOrIngotItem, toSmelt)
             .id(`emendatus:thermal/furnace/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
     }
+
+    if (typesObj.fluid) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
+        let fluid = typesObj.fluid
+
+        e.recipes.thermal.chiller(gemOrIngotItem, ['tconstruct:ingot_cast', Fluid.of(fluid, fluidAmt)])
+            .id(`emendatus:thermal/chiller/${materialName}_ingot`)
+        embersStamping(e, gemOrIngotItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:ingot_stamp')
+            .id(`emendatus:embers/stamping/${materialName}_ingot`)
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gemOrIngotItem, 0, 2000)
+            .id(`emendatus:thermal/crucible/${materialName}_ingot`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), gemOrIngotItem)
+            .id(`emendatus:embers/melting/${materialName}_ingot`)
+    }
 }
 
-function plateRecipes(e, materialName, gemOrIngot, plate, fluid) {
-    if (!(gemOrIngot && plate)) { return }
+function plateRecipes(e, materialName, typesObj) {
+    if (!(typesObj.gemOrIngot && typesObj.plate)) { return }
     // added to an empty string to convert to a normal js string instead of java
-    let gemOrIngotItem = gemOrIngot.item.id + ''
-    let plateItem = plate.item.id + ''
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+    let plateItem = typesObj.plate.item.id + ''
 
-    e.remove({ output: plate })
+    e.remove({ output: plateItem })
 
-    if (fluid) {
-        let fluidAmt = getFluidAmountForType(gemOrIngot.tag)
+    if (typesObj.fluid) {
+        let fluid = typesObj.fluid
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
 
         e.recipes.thermal.chiller(plateItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
             .id(`emendatus:thermal/chiller/${materialName}_plate`)
         embersStamping(e, plateItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:plate_stamp')
             .id(`emendatus:embers/stamping/${materialName}_plate`)
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), plateItem, 0, 2000)
+            .id(`emendatus:thermal/crucible/${materialName}_plate`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), plateItem)
+            .id(`emendatus:embers/melting/${materialName}_plate`)
     }
     e.recipes.create.pressing(plateItem, gemOrIngotItem)
         .id(`emendatus:create/pressing/${materialName}_plate`)
@@ -128,21 +152,25 @@ function plateRecipes(e, materialName, gemOrIngot, plate, fluid) {
     }).id(`emendatus:hammer/${materialName}_plate`)
 }
 
-// rod recipe gen for emendatus
-function rodRecipes(e, materialName, gemOrIngot, rod, fluid) {
-    if (!(gemOrIngot && rod)) { return }
-    let gemOrIngotItem = gemOrIngot.item.id + ''
-    let rodItem = rod.item.id + ''
+function rodRecipes(e, materialName, typesObj) {
+    if (!(typesObj.gemOrIngot && typesObj.rod)) { return }
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+    let rodItem = typesObj.rod.item.id + ''
 
-    e.remove({ output: rod })
+    e.remove({ output: rodItem })
 
-    if (fluid) {
-        let fluidAmt = getFluidAmountForType(gemOrIngot.tag) / 2
+    if (typesObj.fluid) {
+        let fluid = typesObj.fluid
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
 
         e.recipes.thermal.chiller(rodItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
             .id(`emendatus:thermal/chiller/${materialName}_rod`)
         embersStamping(e, rodItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'immersiveengineering:mold_rod')
             .id(`emendatus:embers/stamping/${materialName}_rod`)
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), rodItem, 0, 1000)
+            .id(`emendatus:thermal/crucible/${materialName}_rod`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), rodItem)
+            .id(`emendatus:embers/melting/${materialName}_rod`)
     }
 
     e.recipes.thermal.press(`2x ${rodItem}`, [gemOrIngotItem, 'immersiveengineering:mold_rod'])
@@ -171,22 +199,26 @@ function rodRecipes(e, materialName, gemOrIngot, rod, fluid) {
     }).id(`emendatus:hammer/${materialName}_rod`)
 }
 
-// gear recipe gen for emendatus
-function gearRecipes(e, materialName, gemOrIngot, gear, fluid) {
-    if (!(gemOrIngot && gear)) { return }
+function gearRecipes(e, materialName, typesObj) {
+    if (!(typesObj.gemOrIngot && typesObj.gear)) { return }
 
-    let gemOrIngotItem = gemOrIngot.item.id + ''
-    let gearItem = gear.item.id + ''
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+    let gearItem = typesObj.gear.item.id + ''
 
     e.remove({ output: gearItem })
 
-    if (fluid) {
-        let fluidAmt = getFluidAmountForType(gemOrIngot.tag) * 4
+    if (typesObj.fluid) {
+        let fluid = typesObj.fluid
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) * 4
 
         e.recipes.thermal.chiller(gearItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
             .id(`emendatus:thermal/chiller/${materialName}_gear`)
         embersStamping(e, gearItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:gear_stamp')
             .id(`emendatus:embers/stamping/${materialName}_gear`)
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gearItem, 0, 8000)
+            .id(`emendatus:thermal/crucible/${materialName}_gear`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), gearItem)
+            .id(`emendatus:embers/melting/${materialName}_gear`)
     }
 
     e.recipes.thermal.press(gearItem, [`4x ${gemOrIngotItem}`, 'immersiveengineering:mold_gear'])

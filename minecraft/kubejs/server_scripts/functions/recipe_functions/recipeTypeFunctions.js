@@ -14,18 +14,17 @@ const farmersDelightTools = {
     }
 }
 
-// embers melter helper
-function embersMelting(e, output, input) {
-    output = Fluid.of(output)
-    input = input.includes('/') ? { tag: input } : { item: input }
-    e.custom({
+function embersMelting(e, fluidOutput, itemInput) {
+    const recipe = e.custom({
         type: "embers:melting",
-        input: input,
-        output: {
-            amount: output.amount,
-            fluid: output.id
+        input: makeJsonIngredient(itemInput),
+        output: makeFluidJson(fluidOutput)
+    })
+    return {
+        id: function (customId) {
+            recipe.id(customId ?? `kubejs:embers/melting/${itemInput.split(':')[1]}`)
         }
-    }).id(`${prefix}embers/melting/${input.tag ? input.tag.split(':')[1] : input.item.split(':')[1]}`)
+    }
 }
 
 function embersStamping(e, itemOutput, fluidInput, stamp) {

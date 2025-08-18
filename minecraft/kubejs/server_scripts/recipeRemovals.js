@@ -28,7 +28,7 @@ ServerEvents.recipes(e => {
         /immersiveengineering:metalpress\/.*gear/,
 
         /embers:.*hammering/,
-        /embers:stamping\/.*gear/,
+        /embers:stamping\/.*ingot/,
         /embers:melting\/.*gear/,
         /embers:melting\/plates/,
         /embers:melting\/ingots/,
