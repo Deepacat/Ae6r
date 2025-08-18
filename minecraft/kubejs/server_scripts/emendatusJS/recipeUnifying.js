@@ -82,6 +82,10 @@ function smeltingRecipes(e, materialName, gemOrIngot, ore, smeltable) {
             .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
         if (toSmelt.includes('raw') && !toSmelt.includes('raw_redstone')) { smelt.xp(0.7) }
         if (toSmelt.includes('ores')) { smelt.xp(2) }
+        e.recipes.mekanism.smelting(gemOrIngotItem, toSmelt)
+            .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        e.recipes.thermal.furnace(gemOrIngotItem, toSmelt)
+            .id(`emendatus:thermal/furnace/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
     }
 }
 
