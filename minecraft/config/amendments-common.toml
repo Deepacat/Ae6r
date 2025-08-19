@@ -9,7 +9,7 @@
 
 [cauldron]
 	#Enables enhanced cauldron
-	enhanced_cauldron = true
+	enhanced_cauldron = false
 	#Allows crafting items using cauldrons by clicking on them
 	crafting = true
 	#Allows dying cauldron water bedrock style and mixing them too

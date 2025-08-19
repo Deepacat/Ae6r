@@ -133,7 +133,7 @@
 	#If true, Embers homing projectiles will go for neutral players.
 	everybodyIsEnemy = false
 	#Which domains are preferred for recipes with dynamic outputs.
-	tagPreferences = ["minecraft", "kubejs", "emendatus", "embers"]
+	tagPreferences = ["minecraft", "emendatus", "kubejs", "thermal", "create", "mekanism", "embers", "tconstruct", "tcintegrations", "immersiveengineering", "pneumaticcraft", "occultism", "industrialforegoing", "botania", "ars_nouveau", "quark", "pedestals", "appliedenergistics", "bloodmagic", "wizards_reborn", "eidolon", "mythicbotany", "undergarden", "miniutilities"]
 	#Which items are preferred as the result of breaking down a tool on an anvil.
 	itemPreferences = ["minecraft:oak_planks", "minecraft:cobblestone"]
 

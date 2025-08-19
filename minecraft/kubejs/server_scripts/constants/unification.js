@@ -1,15 +1,16 @@
 //priority: 1000
 // priority of which mod output should come from, if applicable
 const modPriorities = [
-    'kubejs',
-    'emendatus',
     'minecraft',
+    'emendatus',
+    'kubejs',
     'thermal',
     'create',
     'mekanism',
     'embers',
     'tconstruct',
     'tcintegrations',
+    'immersiveengineering',
     'pneumaticcraft',
     'occultism',
     'industrialforegoing',
@@ -18,22 +19,12 @@ const modPriorities = [
     'quark',
     'pedestals',
     'appliedenergistics',
-    // 'refinedstorage',
-    // 'mapperbase',
     'bloodmagic',
     'wizards_reborn',
     'eidolon',
-    // 'morevanillalib',
-    // 'titanium',
     'mythicbotany',
     'undergarden',
-    // 'byg',
-    // 'atum',
-    // 'betterendforge',
     'miniutilities',
-    // 'chipped',
-    // 'chisel',
-    'immersiveengineering'
 ]
 
 // priority of which mod output should come from, but for fluids
