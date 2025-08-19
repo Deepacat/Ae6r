@@ -23,11 +23,11 @@ ServerEvents.recipes(e => {
         ['tconstruct:nether_grout'])
         .id('kubejs:induction_smelter/scorched_brick_from_nether_grout')
 
-    e.recipes.thermal.smelter(Item.of('4x mekanism:alloy_reinforced'),
+    e.recipes.thermal.smelter('4x mekanism:alloy_reinforced',
         [Ingredient.of('#forge:dusts/lithium', 4), Ingredient.of('#forge:ingots/aluminum', 3), '#forge:ingots/copper'])
         .id('kubejs:induction_smelter/alloy_reinforced')
 
     e.recipes.thermal.smelter(Item.of('6x compactmachines:wall'),
-        [Item.of(/* 'ars_nouveau:' */ 'kubejs:replaceme'), 'immersiveengineering:coil_mv', Item.of('3x fluxnetworks:flux_dust')])
+        [Item.of(/* 'ars_nouveau:' */ 'kubejs:replaceme'), 'immersiveengineering:coil_mv', '3x fluxnetworks:flux_dust'])
         .id('kubejs:induction_smelter/cm_wall')
 })

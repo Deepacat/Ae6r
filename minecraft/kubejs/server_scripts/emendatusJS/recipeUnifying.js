@@ -90,6 +90,7 @@ ServerEvents.recipes(e => {
         materialCompacting(e, materialName, typesObj)
         scrapMelting(e, materialName, typesObj)
         materialScrapping(e, materialName, typesObj)
+        castingRecipes(e, materialName, typesObj)
     }
 })
 
@@ -327,7 +328,7 @@ function materialCompacting(e, materialName, typesObj) {
             I: gemOrIngotItem
         }).id(`emendatus:shaped/${materialName}_block`)
         e.shapeless(`9x ${gemOrIngotItem}`, block)
-            .id(`emendatus:shapeless/${materialName}_${gemOrIngotItem.split(':')[1]}`)
+            .id(`emendatus:shapeless/${gemOrIngotItem.split(':')[1]}`)
     }
     if (typesObj.gemOrIngot && typesObj.nugget) {
         let nugget = typesObj.nugget.item.id + ''
@@ -339,7 +340,7 @@ function materialCompacting(e, materialName, typesObj) {
             'III'
         ], {
             I: nugget
-        }).id(`emendatus:shaped/${materialName}_${gemOrIngotItem.split(':')[1]}`)
+        }).id(`emendatus:shaped/${gemOrIngotItem.split(':')[1]}`)
         e.shapeless(`9x ${nugget}`, gemOrIngotItem)
             .id(`emendatus:shapeless/${materialName}_${nugget.split(':')[1]}`)
     }
@@ -362,5 +363,9 @@ function scrapMelting(e, materialName, typesObj) {
 }
 
 function materialScrapping(e, materialName, typesObj) {
+
+}
+
+function castingRecipes(e, materialName, typesObj) {
 
 }
