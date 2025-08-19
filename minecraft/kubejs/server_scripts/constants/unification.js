@@ -9,6 +9,7 @@ const modPriorities = [
     'mekanism',
     'embers',
     'tconstruct',
+    'tcintegrations',
     'pneumaticcraft',
     'occultism',
     'industrialforegoing',
@@ -152,6 +153,18 @@ const metals = [
     'utherium',
     'zinc'
 ];
+
+// stores amounts and energy cost for scrap melting
+const meltingTypes = {
+    gemOrIngot: { amount: 90, energy: 2000 },
+    nugget: { amount: 10, energy: 250 },
+    block: { amount: 810, energy: 18000 },
+    plate: { amount: 90, energy: 2000 },
+    rod: { amount: 45, energy: 1000 },
+    gear: { amount: 360, energy: 8000 },
+    wire: { amount: 45, energy: 1000 },
+    dust: { amount: 90, energy: 2000 }
+}
 
 // Defines melting point of various materials
 const meltingPoints = {
