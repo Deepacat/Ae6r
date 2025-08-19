@@ -1,33 +1,41 @@
 //priority: 900
 ServerEvents.recipes(e => {
-    // replace output types
-    let unifyDataObj = {}
-    materialsToUnify.forEach((material) => {
-        typesToUnify.forEach((type) => {
-            if (!entryIsBlacklisted(material, type)) {
-                let tagString = `#forge:${type}s/${material}`
-                let tag = Ingredient.of(tagString)
-                if (!(tag.stacks.size() > 1)) { return }
-                // add tag and its items to datagen for future tag unifying
-                unifyDataObj[tagString] = {}
+    /* datagenning tag unification data, as this data will hide and remove tags from most items,
+    it will break recipes which rely on the tags without a datagen */
+    if (JsonIO.read('kubejs/datagen/tagUnificationData.json') == null) {
+        let tagDatagenObj = {}
+        materialsToUnify.forEach((material) => {
+            typesToUnify.forEach((type) => {
+                if (!entryIsBlacklisted(material, type)) {
+                    let tagString = `forge:${type}s/${material}`
+                    let tag = Ingredient.of(`#${tagString}`)
+                    if (!(tag.stacks.size() > 1)) { return }
+                    let prefItem = getPreferredItemInTag(tag)
 
-                let prefItem = getPreferredItemInTag(tag)
-                e.replaceOutput({}, tagString, prefItem)
-                unifyDataObj[tagString].prefItem = prefItem.id
-                unifyDataObj[tagString].toUnify = []
+                    tagDatagenObj[tagString] = {}
+                    tagDatagenObj[tagString].prefItem = prefItem.id
+                    tagDatagenObj[tagString].toUnify = []
 
-                for (let item of tag.itemIds) {
-                    if (item.includes('emendatus')) { continue }
-                    e.replaceOutput({}, item, prefItem)
-                    e.remove({ output: item })
-                    if (item == prefItem) { continue }
-                    unifyDataObj[tagString].toUnify.push(item)
+                    for (let item of tag.itemIds) {
+                        if (item == prefItem) { continue }
+                        tagDatagenObj[tagString].toUnify.push(item)
+                    }
                 }
-            }
+            })
         })
-    })
-    if (JsonIO.read('kubejs/datagen/unify.json') == null) {
-        JsonIO.write('kubejs/datagen/unify.json', unifyDataObj)
+        JsonIO.write('kubejs/datagen/tagUnificationData.json', tagDatagenObj)
+    }
+
+    let unifyTagData = JsonIO.read('kubejs/datagen/tagUnificationData.json')
+
+    for (let tagObj of Object.entries(unifyTagData)) {
+        if (tagObj[0].includes('ores')) { continue }
+        e.replaceOutput({}, `#${tagObj[0]}`, tagObj[1].prefItem)
+        for (let item of tagObj[1].toUnify) {
+            if (item.includes('emendatus')) { continue }
+            e.replaceOutput({}, item, tagObj[1].prefItem)
+            e.remove({ output: item })
+        }
     }
 
     // generating and removing un unified recipes
