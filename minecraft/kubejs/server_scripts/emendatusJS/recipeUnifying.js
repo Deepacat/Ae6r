@@ -47,6 +47,7 @@ ServerEvents.recipes(e => {
             gear: getTaggedItem(`forge:gears/${materialName}`),
             rod: getTaggedItem(`forge:rods/${materialName}`),
             plate: getTaggedItem(`forge:plates/${materialName}`),
+            wire: getTaggedItem(`forge:wires/${materialName}`),
             coin: getTaggedItem(`forge:coins/${materialName}`),
             // special
             fluid: getFluid(materialName),
@@ -55,14 +56,20 @@ ServerEvents.recipes(e => {
         typesObj['smeltable'] = [typesObj.raw_ore, typesObj.crushed_ore, typesObj.dust]
 
         ingotRecipes(e, materialName, typesObj) // gemOrIngot, fluid, ore, smeltable
-        // storageBlockRecipes(e, materialName, typesObj) // gemOrIngot, fluid, block, raw_ore_block
         plateRecipes(e, materialName, typesObj) // gemOrIngot, fluid, plate
         rodRecipes(e, materialName, typesObj) // gemOrIngot, fluid, rod
         gearRecipes(e, materialName, typesObj) // gemOrIngot, fluid, gear
-        // wireRecipes
-
+        wireRecipes(e, materialName, typesObj)
+        materialCompacting(e, materialName, typesObj)
+        meltingRecipes(e, materialName, typesObj)
     }
 })
+
+function smeltingXp(materialType, recipe) {
+    if (/raw.*block/.test(materialType) && !materialType.includes('raw_redstone')) { recipe.xp(6); return }
+    if (materialType.includes('raw') && !materialType.includes('raw_redstone')) { recipe.xp(0.7); return }
+    if (materialType.includes('ores')) { recipe.xp(2); return }
+}
 
 function ingotRecipes(e, materialName, typesObj) {
     // added to an empty string to convert to a normal js string instead of java
@@ -81,16 +88,31 @@ function ingotRecipes(e, materialName, typesObj) {
 
     for (let toSmelt of smeltableItems) {
         if (!toSmelt) { continue }
-        let smelt =
-            e.blasting(gemOrIngotItem, toSmelt)
-                .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
-        if (toSmelt.includes('raw') && !toSmelt.includes('raw_redstone')) { smelt.xp(0.7) }
-        if (toSmelt.includes('ores')) { smelt.xp(2) }
+
+        let blast = e.blasting(gemOrIngotItem, toSmelt)
+            .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        smeltingXp(toSmelt, blast)
+
+        let furnace = e.recipes.thermal.furnace(gemOrIngotItem, toSmelt)
+            .id(`emendatus:thermal/furnace/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        smeltingXp(toSmelt, furnace)
 
         e.recipes.mekanism.smelting(gemOrIngotItem, toSmelt)
             .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
-        e.recipes.thermal.furnace(gemOrIngotItem, toSmelt)
+    }
+
+    if (typesObj.raw_ore_block) {
+        let toSmelt = typesObj.raw_ore_block.item.id
+        let blast = e.blasting(`9x ${gemOrIngotItem}`, toSmelt)
+            .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        smeltingXp(toSmelt, blast)
+
+        let furnace = e.recipes.thermal.furnace(`9x ${gemOrIngotItem}`, toSmelt)
             .id(`emendatus:thermal/furnace/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
+        smeltingXp(toSmelt, furnace)
+
+        e.recipes.mekanism.smelting(`9x ${gemOrIngotItem}`, toSmelt)
+            .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
     }
 
     if (typesObj.fluid) {
@@ -101,10 +123,6 @@ function ingotRecipes(e, materialName, typesObj) {
             .id(`emendatus:thermal/chiller/${materialName}_ingot`)
         embersStamping(e, gemOrIngotItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:ingot_stamp')
             .id(`emendatus:embers/stamping/${materialName}_ingot`)
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gemOrIngotItem, 0, 2000)
-            .id(`emendatus:thermal/crucible/${materialName}_ingot`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), gemOrIngotItem)
-            .id(`emendatus:embers/melting/${materialName}_ingot`)
     }
 }
 
@@ -124,10 +142,6 @@ function plateRecipes(e, materialName, typesObj) {
             .id(`emendatus:thermal/chiller/${materialName}_plate`)
         embersStamping(e, plateItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:plate_stamp')
             .id(`emendatus:embers/stamping/${materialName}_plate`)
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), plateItem, 0, 2000)
-            .id(`emendatus:thermal/crucible/${materialName}_plate`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), plateItem)
-            .id(`emendatus:embers/melting/${materialName}_plate`)
     }
     e.recipes.create.pressing(plateItem, gemOrIngotItem)
         .id(`emendatus:create/pressing/${materialName}_plate`)
@@ -167,10 +181,6 @@ function rodRecipes(e, materialName, typesObj) {
             .id(`emendatus:thermal/chiller/${materialName}_rod`)
         embersStamping(e, rodItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'immersiveengineering:mold_rod')
             .id(`emendatus:embers/stamping/${materialName}_rod`)
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), rodItem, 0, 1000)
-            .id(`emendatus:thermal/crucible/${materialName}_rod`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), rodItem)
-            .id(`emendatus:embers/melting/${materialName}_rod`)
     }
 
     e.recipes.thermal.press(`2x ${rodItem}`, [gemOrIngotItem, 'immersiveengineering:mold_rod'])
@@ -215,10 +225,6 @@ function gearRecipes(e, materialName, typesObj) {
             .id(`emendatus:thermal/chiller/${materialName}_gear`)
         embersStamping(e, gearItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'embers:gear_stamp')
             .id(`emendatus:embers/stamping/${materialName}_gear`)
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gearItem, 0, 8000)
-            .id(`emendatus:thermal/crucible/${materialName}_gear`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), gearItem)
-            .id(`emendatus:embers/melting/${materialName}_gear`)
     }
 
     e.recipes.thermal.press(gearItem, [`4x ${gemOrIngotItem}`, 'immersiveengineering:mold_gear'])
@@ -235,5 +241,109 @@ function gearRecipes(e, materialName, typesObj) {
         I: gemOrIngotItem,
         P: '#forge:plates/iron_tin'
     }).id(`emendatus:shaped/${materialName}_gear`)
+
+}
+
+function wireRecipes(e, materialName, typesObj) {
+    if (!typesObj.wire || !typesObj.gemOrIngot) { return }
+
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+    let wireItem = typesObj.wire.item.id + ''
+
+    e.remove({ output: wireItem })
+
+    if (typesObj.fluid) {
+        let fluid = typesObj.fluid
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
+
+        e.recipes.thermal.chiller(wireItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+            .id(`emendatus:thermal/chiller/${materialName}_wire`)
+        embersStamping(e, wireItem, makeFluidJson(Fluid.of(fluid, fluidAmt)), 'immersiveengineering:mold_wire')
+            .id(`emendatus:embers/stamping/${materialName}_wire`)
+    }
+    e.recipes.thermal.press(`2x ${wireItem}`, [gemOrIngotItem, 'immersiveengineering:mold_wire'])
+        .id(`emendatus:thermal/press/${materialName}_wire`)
+    e.recipes.immersiveengineering.metal_press(`8x ${wireItem}`, `4x ${gemOrIngotItem}`, 'immersiveengineering:mold_wire')
+        .id(`emendatus:immersiveengineering/metalpress/${materialName}_wire`)
+    if (typesObj.plate) {
+        let plate = typesObj.plate.item.id + ''
+        e.recipes.create.cutting(`2x ${wireItem}`, plate)
+            .id(`emendatus:create/cutting/${materialName}_wire`)
+        e.custom({
+            type: "createdieselgenerators:wire_cutting",
+            ingredients: makeJsonIngredients(plate),
+            results: makeJsonIngredients(`2x ${wireItem}`)
+        }).id(`emendatus:createdieselgenerators/wire_cutting/${materialName}_wire`)
+        e.shaped(wireItem, [
+            'AB '
+        ], {
+            A: plate,
+            B: 'immersiveengineering:wirecutter'
+        }).id(`emendatus:shaped/${materialName}_wire`)
+    }
+}
+
+function materialCompacting(e, materialName, typesObj) {
+
+}
+
+function meltingRecipes(e, materialName, typesObj) {
+    if (!typesObj.fluid || !typesObj.gemOrIngot) { return }
+    let fluid = typesObj.fluid
+
+    if (typesObj.ingot) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
+        let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gemOrIngotItem, 0, 2000)
+            .id(`emendatus:thermal/crucible/${materialName}_ingot`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), gemOrIngotItem)
+            .id(`emendatus:embers/melting/${materialName}_ingot`)
+    }
+
+    if (typesObj.plate) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
+        let plateItem = typesObj.plate.item.id + ''
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), plateItem, 0, 2000)
+            .id(`emendatus:thermal/crucible/${materialName}_plate`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), plateItem)
+            .id(`emendatus:embers/melting/${materialName}_plate`)
+    }
+
+    if (typesObj.rod) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
+        let rodItem = typesObj.rod.item.id + ''
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), rodItem, 0, 1000)
+            .id(`emendatus:thermal/crucible/${materialName}_rod`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), rodItem)
+            .id(`emendatus:embers/melting/${materialName}_rod`)
+    }
+
+    if (typesObj.gear) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) * 4
+        let gearItem = typesObj.gear.item.id + ''
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gearItem, 0, 8000)
+            .id(`emendatus:thermal/crucible/${materialName}_gear`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), gearItem)
+            .id(`emendatus:embers/melting/${materialName}_gear`)
+    }
+
+    if (typesObj.wire) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
+        let wireItem = typesObj.wire.item.id + ''
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), wireItem, 0, 2000)
+            .id(`emendatus:thermal/crucible/${materialName}_wire`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), wireItem)
+            .id(`emendatus:embers/melting/${materialName}_wire`)
+    }
+
+    if (typesObj.dust) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
+        let dustItem = typesObj.dust.item.id + ''
+        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), dustItem, 0, 2000)
+            .id(`emendatus:thermal/crucible/${materialName}_dust`)
+        embersMelting(e, Fluid.of(fluid, fluidAmt), dustItem)
+            .id(`emendatus:embers/melting/${materialName}_dust`)
+    }
+
 
 }
