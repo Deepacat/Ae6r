@@ -628,12 +628,17 @@
 							DisplayScale: 1.0f
 							Item: {
 								Count: 1b
-								id: "kubejs:astronomy_mastery_token"
+								id: "kubejs:infernal_mastery_token"
 							}
-							Name: "Astronomy Mastery"
+							Name: "Infernal Mastery"
 						}
 					}
 				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "364C3C195CEB985C"
+				item: "kubejs:infernal_mastery_token"
 				type: "item"
 			}]
 			x: -1.5d
