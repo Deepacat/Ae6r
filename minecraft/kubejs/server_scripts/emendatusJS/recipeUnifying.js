@@ -34,6 +34,7 @@ ServerEvents.recipes(e => {
         for (let item of tagObj[1].toUnify) {
             if (item.includes('emendatus')) { continue }
             e.replaceOutput({}, item, tagObj[1].prefItem)
+            e.replaceInput({}, item, tagObj[1].prefItem)
             e.remove({ output: item })
         }
     }
