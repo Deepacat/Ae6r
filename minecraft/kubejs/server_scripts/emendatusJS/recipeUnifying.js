@@ -82,7 +82,7 @@ ServerEvents.recipes(e => {
         typesObj['gemOrIngot'] = typesObj.gem || typesObj.ingot
         typesObj['smeltable'] = [typesObj.raw_ore, typesObj.crushed_ore, typesObj.dust]
 
-        ingotRecipes(e, materialName, typesObj) // gemOrIngot, fluid, ore, smeltable
+        smeltingRecipes(e, materialName, typesObj) // gemOrIngot, fluid, ore, smeltable
         plateRecipes(e, materialName, typesObj) // gemOrIngot, fluid, plate
         rodRecipes(e, materialName, typesObj) // gemOrIngot, fluid, rod
         gearRecipes(e, materialName, typesObj) // gemOrIngot, fluid, gear
@@ -99,7 +99,7 @@ function smeltingXp(materialType, recipe) {
     if (materialType.includes('ores')) { recipe.xp(2); return }
 }
 
-function ingotRecipes(e, materialName, typesObj) {
+function smeltingRecipes(e, materialName, typesObj) {
     // added to an empty string to convert to a normal js string instead of java
     if (!typesObj.gemOrIngot) { return }
 
@@ -129,17 +129,18 @@ function ingotRecipes(e, materialName, typesObj) {
             .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
     }
 
-    if (typesObj.raw_ore_block) {
+    if (typesObj.raw_ore_block && typesObj.block) {
         let toSmelt = typesObj.raw_ore_block.item.id
-        let blast = e.blasting(`9x ${gemOrIngotItem}`, toSmelt)
+        let block = typesObj.block.item.id
+        let blast = e.blasting(block, toSmelt)
             .id(`emendatus:blasting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
         smeltingXp(toSmelt, blast)
 
-        let furnace = e.recipes.thermal.furnace(`9x ${gemOrIngotItem}`, toSmelt)
+        let furnace = e.recipes.thermal.furnace(block, toSmelt)
             .id(`emendatus:thermal/furnace/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
         smeltingXp(toSmelt, furnace)
 
-        e.recipes.mekanism.smelting(`9x ${gemOrIngotItem}`, toSmelt)
+        e.recipes.mekanism.smelting(block, toSmelt)
             .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
     }
 
@@ -312,7 +313,36 @@ function wireRecipes(e, materialName, typesObj) {
 }
 
 function materialCompacting(e, materialName, typesObj) {
-
+    if (!(typesObj.gemOrIngot)) { return }
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+    if (typesObj.gemOrIngot && typesObj.block) {
+        let block = typesObj.block.item.id + ''
+        e.remove({ output: block, input: gemOrIngotItem, type: 'minecraft:crafting' })
+        e.remove({ output: gemOrIngotItem, input: block, type: 'minecraft:crafting' })
+        e.shaped(block, [
+            'III',
+            'III',
+            'III'
+        ], {
+            I: gemOrIngotItem
+        }).id(`emendatus:shaped/${materialName}_block`)
+        e.shapeless(`9x ${gemOrIngotItem}`, block)
+            .id(`emendatus:shapeless/${materialName}_${gemOrIngotItem.split(':')[1]}`)
+    }
+    if (typesObj.gemOrIngot && typesObj.nugget) {
+        let nugget = typesObj.nugget.item.id + ''
+        e.remove({ output: gemOrIngotItem, input: typesObj.nugget.item.id + '', type: 'minecraft:crafting' })
+        e.remove({ output: typesObj.nugget.item.id + '', input: gemOrIngotItem, type: 'minecraft:crafting' })
+        e.shaped(gemOrIngotItem, [
+            'III',
+            'III',
+            'III'
+        ], {
+            I: nugget
+        }).id(`emendatus:shaped/${materialName}_${gemOrIngotItem.split(':')[1]}`)
+        e.shapeless(`9x ${nugget}`, gemOrIngotItem)
+            .id(`emendatus:shapeless/${materialName}_${nugget.split(':')[1]}`)
+    }
 }
 
 function scrapMelting(e, materialName, typesObj) {
