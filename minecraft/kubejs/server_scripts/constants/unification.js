@@ -90,25 +90,25 @@ const materialsToUnify = [
     'regalium',
     'utherium',
     'coal_coke',
-    'amber',
+    // 'amber',
     'cobalt',
     'queens_slime',
     'rose_gold',
-    'tinkers_bronze',
+    // 'tinkers_bronze',
     'knightslime',
     'slimesteel',
     'manyullyn',
     'hepatizon',
-    'thallasium',
-    'nebu',
-    'aeternium',
+    // 'thallasium',
+    // 'nebu',
+    // 'aeternium',
     'alfsteel',
     'elementium',
     'gaia_spirit',
     'infused_iron',
     'manasteel',
     'sky',
-    'terminite',
+    // 'terminite',
     'terrasteel',
     'energized_steel',
     'blazing',
@@ -117,7 +117,7 @@ const materialsToUnify = [
     'nitro',
     'arcane_gold',
     'dawnstone'
-];
+]
 
 // Used to determine which material types to unify
 const typesToUnify = ['nugget', 'ingot', 'gem', 'storage_block', 'ore', 'dust', 'gear', 'plate', 'rod', 'raw_block', 'raw_material']
@@ -143,7 +143,7 @@ const metals = [
     'uranium',
     'utherium',
     'zinc'
-];
+]
 
 // stores amounts and energy cost for scrap melting
 const meltingTypes = {
@@ -319,7 +319,7 @@ const gemProcessingProperties = {
     coal: {
         output: 'gem',
         stoneOutput: 'minecraft:cobblestone',
-        secondary: 'emendatusenigmatica:sulfur_dust',
+        secondary: 'emendatus:sulfur_dust',
         create: {
             primaryCount: 2,
             secondaryCount: 2,
@@ -426,7 +426,7 @@ const gemProcessingProperties = {
     lapis: {
         output: 'gem',
         stoneOutput: 'minecraft:cobblestone',
-        secondary: 'emendatusenigmatica:sulfur_dust',
+        secondary: 'emendatus:sulfur_dust',
         create: {
             primaryCount: 8,
             secondaryCount: 4,
@@ -463,7 +463,7 @@ const gemProcessingProperties = {
     quartz: {
         output: 'gem',
         stoneOutput: 'minecraft:netherrack',
-        secondary: 'emendatusenigmatica:sulfur_dust',
+        secondary: 'emendatus:sulfur_dust',
         create: {
             primaryCount: 2,
             secondaryCount: 4,

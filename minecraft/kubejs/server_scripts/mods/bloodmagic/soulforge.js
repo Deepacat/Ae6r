@@ -60,7 +60,7 @@ ServerEvents.recipes(e => {
         .id('kubejs:soulforge/greatertartaricgem')
 
     e.remove({ id: 'bloodmagic:soulforge/arcane_gold_ingot' })
-    e.recipes.bloodmagic.soulforge('eidolon:arcane_gold_block', [
+    e.recipes.bloodmagic.soulforge('wizards_reborn:arcane_gold_block', [
         '#forge:storage_blocks/gold',
         'eidolon:crimson_essence']
     ).minimumDrain(32.0)

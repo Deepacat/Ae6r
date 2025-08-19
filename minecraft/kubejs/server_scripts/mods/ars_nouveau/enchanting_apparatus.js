@@ -536,13 +536,13 @@ ServerEvents.recipes(e => {
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['#forge:ingots/gold', 'eidolon:enchanted_ash', '#forge:ingots/gold', '#forge:dusts/redstone', '#forge:dusts/redstone'],
         'eidolon:soul_shard',
-        Item.of('2x eidolon:arcane_gold_ingot'), 50
+        Item.of('2x wizards_reborn:arcane_gold_ingot'), 50
     ).id('kubejs:arcane_gold_ingot')
 
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['#forge:ingots/gold', 'eidolon:soul_shard', '#forge:ingots/gold', '#forge:dusts/redstone', '#forge:dusts/redstone'],
         'minecraft:conduit',
-        Item.of('2x eidolon:arcane_gold_ingot')
+        Item.of('2x wizards_reborn:arcane_gold_ingot')
     ).id('kubejs:arcane_gold_ingot_starter')
 
     e.recipes.ars_nouveau.enchanting_apparatus(

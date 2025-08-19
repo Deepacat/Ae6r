@@ -1683,19 +1683,19 @@
 	"forge:nuggets/arcane_gold": {
 		"prefItem": "wizards_reborn:arcane_gold_nugget",
 		"toUnify": [
-			"eidolon:arcane_gold_nugget"
+			"wizards_reborn:arcane_gold_nugget"
 		]
 	},
 	"forge:ingots/arcane_gold": {
 		"prefItem": "wizards_reborn:arcane_gold_ingot",
 		"toUnify": [
-			"eidolon:arcane_gold_ingot"
+			"wizards_reborn:arcane_gold_ingot"
 		]
 	},
 	"forge:storage_blocks/arcane_gold": {
 		"prefItem": "wizards_reborn:arcane_gold_block",
 		"toUnify": [
-			"eidolon:arcane_gold_block"
+			"wizards_reborn:arcane_gold_block"
 		]
 	},
 	"forge:ores/arcane_gold": {
