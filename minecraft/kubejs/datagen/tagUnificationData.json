@@ -281,6 +281,16 @@
 			"eidolon:raw_silver_block"
 		]
 	},
+	"forge:raw_materials/silver": {
+		"prefItem": "emendatus:raw_silver",
+		"toUnify": [
+			"thermal:raw_silver",
+			"immersiveengineering:raw_silver",
+			"embers:raw_silver",
+			"occultism:raw_silver",
+			"eidolon:raw_silver"
+		]
+	},
 	"forge:nuggets/zinc": {
 		"prefItem": "emendatus:zinc_nugget",
 		"toUnify": [
@@ -334,6 +344,12 @@
 		"prefItem": "emendatus:raw_zinc_block",
 		"toUnify": [
 			"create:raw_zinc_block"
+		]
+	},
+	"forge:raw_materials/zinc": {
+		"prefItem": "emendatus:raw_zinc",
+		"toUnify": [
+			"create:raw_zinc"
 		]
 	},
 	"forge:nuggets/brass": {
@@ -461,6 +477,16 @@
 			"eidolon:raw_lead_block"
 		]
 	},
+	"forge:raw_materials/lead": {
+		"prefItem": "emendatus:raw_lead",
+		"toUnify": [
+			"thermal:raw_lead",
+			"mekanism:raw_lead",
+			"immersiveengineering:raw_lead",
+			"embers:raw_lead",
+			"eidolon:raw_lead"
+		]
+	},
 	"forge:nuggets/tin": {
 		"prefItem": "emendatus:tin_nugget",
 		"toUnify": [
@@ -533,6 +559,13 @@
 		"toUnify": [
 			"thermal:raw_tin_block",
 			"mekanism:block_raw_tin"
+		]
+	},
+	"forge:raw_materials/tin": {
+		"prefItem": "emendatus:raw_tin",
+		"toUnify": [
+			"thermal:raw_tin",
+			"mekanism:raw_tin"
 		]
 	},
 	"forge:nuggets/nickel": {
@@ -610,6 +643,13 @@
 			"immersiveengineering:raw_block_nickel"
 		]
 	},
+	"forge:raw_materials/nickel": {
+		"prefItem": "emendatus:raw_nickel",
+		"toUnify": [
+			"thermal:raw_nickel",
+			"immersiveengineering:raw_nickel"
+		]
+	},
 	"forge:nuggets/aluminum": {
 		"prefItem": "emendatus:aluminum_nugget",
 		"toUnify": [
@@ -675,6 +715,12 @@
 		"prefItem": "emendatus:raw_aluminum_block",
 		"toUnify": [
 			"immersiveengineering:raw_block_aluminum"
+		]
+	},
+	"forge:raw_materials/aluminum": {
+		"prefItem": "emendatus:raw_aluminum",
+		"toUnify": [
+			"immersiveengineering:raw_aluminum"
 		]
 	},
 	"forge:nuggets/uranium": {
@@ -743,6 +789,13 @@
 		"toUnify": [
 			"mekanism:block_raw_uranium",
 			"immersiveengineering:raw_block_uranium"
+		]
+	},
+	"forge:raw_materials/uranium": {
+		"prefItem": "emendatus:raw_uranium",
+		"toUnify": [
+			"mekanism:raw_uranium",
+			"immersiveengineering:raw_uranium"
 		]
 	},
 	"forge:nuggets/bronze": {
@@ -975,6 +1028,12 @@
 		"prefItem": "emendatus:raw_osmium_block",
 		"toUnify": [
 			"mekanism:block_raw_osmium"
+		]
+	},
+	"forge:raw_materials/osmium": {
+		"prefItem": "emendatus:raw_osmium",
+		"toUnify": [
+			"mekanism:raw_osmium"
 		]
 	},
 	"forge:ores/diamond": {
@@ -1595,6 +1654,12 @@
 		"prefItem": "emendatus:raw_cobalt_block",
 		"toUnify": [
 			"tconstruct:raw_cobalt_block"
+		]
+	},
+	"forge:raw_materials/cobalt": {
+		"prefItem": "emendatus:raw_cobalt",
+		"toUnify": [
+			"tconstruct:raw_cobalt"
 		]
 	},
 	"forge:nuggets/rose_gold": {
