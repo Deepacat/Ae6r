@@ -292,7 +292,7 @@ global.emendatus_mats['osmium'].oreData = {
     }
 }
 
-// apatite cinnabar dimensional potassium_nitrate arcane certus_quartz fluorite 
+// apatite cinnabar dimensional potassium_nitrate arcane fluorite 
 // gems
 global.emendatus_mats['apatite'].oreData = {
     dropType: 'gem',

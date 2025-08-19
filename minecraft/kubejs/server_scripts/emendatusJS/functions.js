@@ -161,8 +161,7 @@ function getFluidAmountForType(type) {
     if (/gem/.test(type)) { return 100 }
     if (/dust/.test(type)) { return 100 }
     if (/ingot/.test(type)) { return 90 }
-    console.log(`Warning: can't get fluid amount for ${type}`)
-    return 69
+    return 90
 }
 
 /**

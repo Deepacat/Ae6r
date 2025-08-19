@@ -105,26 +105,6 @@ function lightningRecipe(e, id, inputs, posts, comment) {
     e.custom(recipe).id('kubejs:lychee/lightning/' + id)
 }
 
-// // in world fire crafting recipe builder
-// // [[Inputs], [Outputs]]
-// ServerEvents.recipes(e => fireRecipes.map(recipeArr =>
-//     e.custom({
-//         type: "lychee:item_inside",
-//         block_in: "fire",
-//         item_in: recipeArr[0].map(input => ({ item: input })),
-//         post: recipeArr[1].map(output => ({ type: "drop_item", item: output }))
-//     })
-// ))
-
-// ServerEvents.tags('item', e => fireRecipes.map(recipeArr => e.add('lychee:fire_immune', recipeArr[0])))
-
-// let fireRecipes = [
-//     [['kubejs:ceramic_ball_casting_mold', 'gtceu:glass_dust'], ['gtceu:glass_tube']],
-//     [['minecraft:clay_ball'], ['kubejs:ceramic_ball']],
-//     [['kubejs:clay_ball_casting_mold'], ['kubejs:ceramic_ball_casting_mold']],
-//     [['iron_ingot'], ['gtceu:wrought_iron_ingot']]
-// ]
-
 function insideBlock(e, post, inputs, insideBlock, id) {
     let recipe = {}
     recipe.type = "lychee:item_inside"

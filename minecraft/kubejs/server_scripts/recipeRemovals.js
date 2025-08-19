@@ -21,6 +21,8 @@ ServerEvents.recipes(e => {
         /createaddition:rolling\/.*ingot/,
         /createaddition:rolling\/.*plate/,
 
+        /createdieselgenerators:compat/,
+
         /immersiveengineering:crafting\/plate_/,
         /immersiveengineering:crafting\/stick_/,
         /immersiveengineering:metalpress\/.*plate/,
