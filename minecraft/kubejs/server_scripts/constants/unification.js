@@ -120,7 +120,7 @@ const materialsToUnify = [
 ];
 
 // Used to determine which material types to unify
-const typesToUnify = ['nugget', 'ingot', 'gem', 'storage_block', 'ore', 'dust', 'gear', 'plate', 'rod'];
+const typesToUnify = ['nugget', 'ingot', 'gem', 'storage_block', 'ore', 'dust', 'gear', 'plate', 'rod', 'raw_block']
 
 // Used for creating tags on custom ore processing materials
 const metals = [

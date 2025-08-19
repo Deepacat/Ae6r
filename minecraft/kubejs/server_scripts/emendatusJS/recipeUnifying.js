@@ -4,12 +4,14 @@ ServerEvents.recipes(e => {
     it will break recipes which rely on the tags without a datagen */
     if (JsonIO.read('kubejs/datagen/tagUnificationData.json') == null) {
         let tagDatagenObj = {}
-        materialsToUnify.forEach((material) => {
-            typesToUnify.forEach((type) => {
+        // materialsToUnify.forEach((material) => {
+        for (let material of materialsToUnify) {
+            for (let type of typesToUnify) {
                 if (!entryIsBlacklisted(material, type)) {
                     let tagString = `forge:${type}s/${material}`
+                    if (type == 'raw_block') { tagString = `forge:storage_blocks/raw_${material}` }
                     let tag = Ingredient.of(`#${tagString}`)
-                    if (!(tag.stacks.size() > 1)) { return }
+                    if (!(tag.stacks.size() > 1)) { continue }
                     let prefItem = getPreferredItemInTag(tag)
 
                     tagDatagenObj[tagString] = {}
@@ -21,8 +23,8 @@ ServerEvents.recipes(e => {
                         tagDatagenObj[tagString].toUnify.push(item)
                     }
                 }
-            })
-        })
+            }
+        }
         JsonIO.write('kubejs/datagen/tagUnificationData.json', tagDatagenObj)
     }
 
