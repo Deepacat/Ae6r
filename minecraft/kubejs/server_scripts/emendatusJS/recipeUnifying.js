@@ -1,18 +1,34 @@
 //priority: 900
 ServerEvents.recipes(e => {
     // replace output types
+    let unifyDataObj = {}
     materialsToUnify.forEach((material) => {
         typesToUnify.forEach((type) => {
             if (!entryIsBlacklisted(material, type)) {
-                var tagString = `#forge:${type}s/${material}`
-                var tag = Ingredient.of(tagString)
-                if (tag.stacks.size() > 1) {
-                    var prefItem = getPreferredItemInTag(tag)
-                    e.replaceOutput({}, tagString, prefItem)
+                let tagString = `#forge:${type}s/${material}`
+                let tag = Ingredient.of(tagString)
+                if (!(tag.stacks.size() > 1)) { return }
+                // add tag and its items to datagen for future tag unifying
+                unifyDataObj[tagString] = {}
+
+                let prefItem = getPreferredItemInTag(tag)
+                e.replaceOutput({}, tagString, prefItem)
+                unifyDataObj[tagString].prefItem = prefItem.id
+                unifyDataObj[tagString].toUnify = []
+
+                for (let item of tag.itemIds) {
+                    if (item.includes('emendatus')) { continue }
+                    e.replaceOutput({}, item, prefItem)
+                    e.remove({ output: item })
+                    if (item == prefItem) { continue }
+                    unifyDataObj[tagString].toUnify.push(item)
                 }
             }
         })
     })
+    if (JsonIO.read('kubejs/datagen/unify.json') == null) {
+        JsonIO.write('kubejs/datagen/unify.json', unifyDataObj)
+    }
 
     // generating and removing un unified recipes
     for (let materialName of materialsToUnify) {
@@ -61,7 +77,8 @@ ServerEvents.recipes(e => {
         gearRecipes(e, materialName, typesObj) // gemOrIngot, fluid, gear
         wireRecipes(e, materialName, typesObj)
         materialCompacting(e, materialName, typesObj)
-        meltingRecipes(e, materialName, typesObj)
+        scrapMelting(e, materialName, typesObj)
+        materialScrapping(e, materialName, typesObj)
     }
 })
 
@@ -287,63 +304,22 @@ function materialCompacting(e, materialName, typesObj) {
 
 }
 
-function meltingRecipes(e, materialName, typesObj) {
+function scrapMelting(e, materialName, typesObj) {
     if (!typesObj.fluid || !typesObj.gemOrIngot) { return }
     let fluid = typesObj.fluid
 
-    if (typesObj.ingot) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
-        let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gemOrIngotItem, 0, 2000)
-            .id(`emendatus:thermal/crucible/${materialName}_ingot`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), gemOrIngotItem)
-            .id(`emendatus:embers/melting/${materialName}_ingot`)
-    }
+    for (let itemType of Object.entries(meltingTypes)) {
+        if (!typesObj[itemType[0]]) { continue }
+        let item = typesObj[itemType[0]].item.id + ''
 
-    if (typesObj.plate) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
-        let plateItem = typesObj.plate.item.id + ''
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), plateItem, 0, 2000)
-            .id(`emendatus:thermal/crucible/${materialName}_plate`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), plateItem)
-            .id(`emendatus:embers/melting/${materialName}_plate`)
+        e.recipes.thermal.crucible(Fluid.of(fluid.id, itemType[1].amount), item, 0, itemType[1].energy)
+            .id(`emendatus:thermal/crucible/${item.split(':')[1]}`)
+        if (itemType[1].amount > 500) { continue }
+        embersMelting(e, Fluid.of(fluid.id, itemType[1].amount), item)
+            .id(`emendatus:embers/melting/${item.split(':')[1]}`)
     }
+}
 
-    if (typesObj.rod) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
-        let rodItem = typesObj.rod.item.id + ''
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), rodItem, 0, 1000)
-            .id(`emendatus:thermal/crucible/${materialName}_rod`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), rodItem)
-            .id(`emendatus:embers/melting/${materialName}_rod`)
-    }
-
-    if (typesObj.gear) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) * 4
-        let gearItem = typesObj.gear.item.id + ''
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), gearItem, 0, 8000)
-            .id(`emendatus:thermal/crucible/${materialName}_gear`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), gearItem)
-            .id(`emendatus:embers/melting/${materialName}_gear`)
-    }
-
-    if (typesObj.wire) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
-        let wireItem = typesObj.wire.item.id + ''
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), wireItem, 0, 2000)
-            .id(`emendatus:thermal/crucible/${materialName}_wire`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), wireItem)
-            .id(`emendatus:embers/melting/${materialName}_wire`)
-    }
-
-    if (typesObj.dust) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
-        let dustItem = typesObj.dust.item.id + ''
-        e.recipes.thermal.crucible(Fluid.of(fluid, fluidAmt), dustItem, 0, 2000)
-            .id(`emendatus:thermal/crucible/${materialName}_dust`)
-        embersMelting(e, Fluid.of(fluid, fluidAmt), dustItem)
-            .id(`emendatus:embers/melting/${materialName}_dust`)
-    }
-
+function materialScrapping(e, materialName, typesObj) {
 
 }
