@@ -1,5 +1,6 @@
+// priority 900
 ServerEvents.tags('item', e => {
-    let unifData = JsonIO.read('kubejs/datagen/tagUnificationData.json')
+    let unifData = JsonIO.read('kubejs/datagen/itemTagUnificationData.json')
     if (unifData == null) { return }
 
     for (let tag of Object.entries(unifData)) {

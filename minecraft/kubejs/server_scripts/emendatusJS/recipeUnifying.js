@@ -1,45 +1,35 @@
 //priority: 900
 ServerEvents.recipes(e => {
-    /* datagenning tag unification data, as this data will hide and remove tags from most items,
-    it will break recipes which rely on the tags without a datagen */
-    if (JsonIO.read('kubejs/datagen/tagUnificationData.json') == null) {
-        let tagDatagenObj = {}
-        // materialsToUnify.forEach((material) => {
-        for (let material of materialsToUnify) {
-            for (let type of typesToUnify) {
-                if (!entryIsBlacklisted(material, type)) {
-                    let tagString = `forge:${type}s/${material}`
-                    if (type == 'raw_block') { tagString = `forge:storage_blocks/raw_${material}` }
-                    let tag = Ingredient.of(`#${tagString}`)
-                    if (!(tag.stacks.size() > 1)) { continue }
-                    let prefItem = getPreferredItemInTag(tag)
-
-                    tagDatagenObj[tagString] = {}
-                    tagDatagenObj[tagString].prefItem = prefItem.id
-                    tagDatagenObj[tagString].toUnify = []
-
-                    for (let item of tag.itemIds) {
-                        if (item == prefItem) { continue }
-                        tagDatagenObj[tagString].toUnify.push(item)
-                    }
-                }
+    let itemUnifTagData = JsonIO.read('kubejs/datagen/itemTagUnificationData.json')
+    if (!(itemUnifTagData == null)) {
+        for (let tagObj of Object.entries(itemUnifTagData)) {
+            if (tagObj[0].includes('ores')) { continue }
+            e.replaceOutput({}, `#${tagObj[0]}`, tagObj[1].prefItem)
+            for (let item of tagObj[1].toUnify) {
+                if (item.includes('emendatus')) { continue }
+                e.replaceOutput({}, item, tagObj[1].prefItem)
+                e.replaceInput({}, item, tagObj[1].prefItem)
+                e.remove({ output: item })
             }
         }
-        JsonIO.write('kubejs/datagen/tagUnificationData.json', tagDatagenObj)
     }
-
-    let unifyTagData = JsonIO.read('kubejs/datagen/tagUnificationData.json')
-
-    for (let tagObj of Object.entries(unifyTagData)) {
-        if (tagObj[0].includes('ores')) { continue }
-        e.replaceOutput({}, `#${tagObj[0]}`, tagObj[1].prefItem)
-        for (let item of tagObj[1].toUnify) {
-            if (item.includes('emendatus')) { continue }
-            e.replaceOutput({}, item, tagObj[1].prefItem)
-            e.replaceInput({}, item, tagObj[1].prefItem)
-            e.remove({ output: item })
-        }
+    for (let recipe of e.findRecipes({ output: Fluid.of('embers:molten_brass')})){
+        console.log(recipe)
+        console.log(recipe.json)
     }
+    // basically just wanted this for embers sake but embers isnt kubejs plugin so replaces dont work :p
+    // let fluidUnifTagData = JsonIO.read('kubejs/datagen/fluidTagUnificationData.json')
+    // if (!(fluidUnifTagData == null)) {
+    //     for (let fluidObj of Object.entries(fluidUnifTagData)) {
+    //         for (let fluidToUnify of fluidObj[1].toUnify) {
+    //             console.log(`replacing ${fluidToUnify} with ${fluidObj[1].prefFluid}`)
+    //             e.replaceOutput({}, Fluid.of(fluidToUnify), Fluid.of(fluidObj[1].prefFluid))
+    //             e.replaceInput({}, Fluid.of(fluidToUnify), Fluid.of(fluidObj[1].prefFluid))
+    //             e.remove({ output: Fluid.of(fluidToUnify) })
+    //         }
+    //     }
+    // }
+
 
     // generating and removing un unified recipes
     for (let materialName of materialsToUnify) {

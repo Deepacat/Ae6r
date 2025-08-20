@@ -52,7 +52,7 @@ function makeJsonIngredients(inputs) {
  * @returns {object} - The converted fluid JSON object.
  */
 function makeFluidJson(fluidInput, amountForTag) {
-    if(amountForTag) {
+    if (amountForTag) {
         return { fluidTag: fluidInput, amount: amountForTag }
     }
     return { fluid: fluidInput.id, amount: fluidInput.amount }
@@ -150,6 +150,25 @@ function getFluid(materialName) {
             return Fluid.of(`${mod}:${materialName}`)
         }
     }
+}
+
+/**
+ * Retrieves all fluids associated with a given material name.
+ *
+ * @param {string} materialName - The material name to retrieve fluids for.
+ * @return {Object} An object containing the preferred fluid and an array of all fluids.
+ */
+function getFluidsOfMaterial(materialName) {
+    let fluids = []
+    for (let mod of modFluidPriorities) {
+        if (Fluid.exists(`${mod}:molten_${materialName}`)) {
+            fluids.push(`${mod}:molten_${materialName}`)
+        } else if (Fluid.exists(`${mod}:${materialName}`)) {
+            fluids.push(`${mod}:${materialName}`)
+        } else { continue }
+    }
+    if (1 >= fluids.length) { return }
+    return { prefFluid: fluids[0], allFluids: fluids, toUnify: fluids.slice(1, fluids.length) }
 }
 
 /**
