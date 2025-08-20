@@ -1,0 +1,7 @@
+{
+    "name": "Ae6r",
+    "version": "0.0.1",
+    "overrides": [
+        "config"
+    ]
+}
