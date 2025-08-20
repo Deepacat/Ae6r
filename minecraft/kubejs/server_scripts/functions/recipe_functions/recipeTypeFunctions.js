@@ -1,3 +1,4 @@
+//priority: 1000
 // custom event helpers for recipe types with no kube addon
 
 const farmersDelightTools = {
@@ -27,17 +28,41 @@ function embersMelting(e, fluidOutput, itemInput) {
     }
 }
 
-function embersStamping(e, itemOutput, fluidInput, stamp) {
-    const recipe = e.custom({
+/**
+ * Generates an Embers: Stamping recipe.
+ * @param {Object} event - The event object.
+ * @param {ItemStack} outputItem - The item to be generated.
+ * @param {Object[]} inputs - An array of objects containing the input items/tags/fluids.
+ * @param {ItemStack} [stampItem] - (Optional) A stamping item to be used for the recipe.
+ * @returns {Object} An object with the id function.
+ * @example
+ * embersStamping(event, Item.of('minecraft:gravel', 2), [Ingredient.of('#forge:cobblestone/normal'), Fluid.of('minecraft:water', 50)], '#forge:tools/pickaxes')
+ */
+function embersStamping(event, outputItem, inputs, stampItem) {
+    const recipeObj = {
         type: "embers:stamping",
-        fluid: fluidInput,
-        output: makeJsonIngredient(itemOutput),
-        stamp: makeJsonIngredient(stamp)
-    })
+        output: makeJsonIngredient(outputItem),
+    }
+
+    if (stampItem) { recipeObj.stamp = makeJsonIngredient(stampItem) }
+    if (!Array.isArray(inputs)) { inputs = [inputs] }
+
+    for (const input of inputs) {
+        if (input.fluid) {
+            recipeObj.fluid = makeFluidJson(input)
+        } else if (input.class || typeof input === "string" && input.startsWith('#')) {
+            recipeObj.input = makeJsonIngredient(input)
+        } else if (input.item || Item.of(input).id) {
+            recipeObj.input = makeJsonIngredient(input)
+        }
+    }
+
+    const recipe = event.custom(recipeObj)
+
     return {
         id: function (customId) {
-            recipe.id(customId ?? `kubejs:embers/stamping/${itemOutput.split(':')[1]}`)
-        }
+            recipe.id(customId ?? `kubejs:embers/stamping/${outputItem.split(':')[1]}`)
+        },
     }
 }
 

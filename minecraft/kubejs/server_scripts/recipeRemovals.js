@@ -10,7 +10,7 @@ ServerEvents.recipes(e => {
         'minecraft:stick',
         
         'thermal:invar_dust_3',
-        
+
         /bloodmagic:alchemytable\/melee_damage_anointment/,
 
         /compactmachines:machine_/,

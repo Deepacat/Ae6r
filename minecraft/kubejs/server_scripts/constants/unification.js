@@ -146,15 +146,16 @@ const metals = [
 ]
 
 // stores amounts and energy cost for scrap melting
-const meltingTypes = {
-    gemOrIngot: { amount: 90, energy: 2000 },
-    nugget: { amount: 10, energy: 250 },
-    block: { amount: 810, energy: 18000 },
-    plate: { amount: 90, energy: 2000 },
-    rod: { amount: 45, energy: 1000 },
-    gear: { amount: 360, energy: 8000 },
-    wire: { amount: 45, energy: 1000 },
-    dust: { amount: 90, energy: 2000 }
+function meltingValues(x) {
+    return {
+        nugget: { amount: x / 9, energy: 250 },
+        block: { amount: x * 9, energy: 18000 },
+        plate: { amount: x, energy: 2000 },
+        rod: { amount: x / 2, energy: 1000 },
+        gear: { amount: x / 4, energy: 8000 },
+        wire: { amount: x / 2, energy: 1000 },
+        dust: { amount: x, energy: 2000 }
+    }
 }
 
 // Defines melting point of various materials
