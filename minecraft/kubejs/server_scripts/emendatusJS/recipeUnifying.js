@@ -358,15 +358,18 @@ function scrapMelting(e, materialName, typesObj) {
     if (!typesObj.fluid || !typesObj.gemOrIngot) { return }
     let fluid = typesObj.fluid
 
-    for (let itemType of Object.entries(typesToUnify)) {
+    for (let itemType of typesToUnify) {
         if (!typesObj[itemType]) { continue }
+        let melt = meltingValues(getFluidAmountForType(typesObj.gemOrIngot.tag))[itemType]
+        if (!melt) { continue }
+
         let item = typesObj[itemType].item.id + ''
-        let fluidAmt = meltingValues(getFluidAmountForType(typesObj.gemOrIngot.tag))[itemType].amount
-        let energy = meltingValues(fluidAmt)[itemType].energy
+        let fluidAmt = melt.amount
+        let energy = melt.energy
 
         e.recipes.thermal.crucible(Fluid.of(fluid.id, fluidAmt), item, 0, energy)
             .id(`emendatus:thermal/crucible/${item.split(':')[1]}`)
-        if (500 >= fluidAmt) {
+        if (500 > fluidAmt) {
             embersMelting(e, Fluid.of(fluid.id, fluidAmt), item)
                 .id(`emendatus:embers/melting/${item.split(':')[1]}`)
         }

@@ -6,6 +6,7 @@ const modPriorities = [
     'kubejs',
     'thermal',
     'create',
+    'createaddition',
     'mekanism',
     'embers',
     'tconstruct',
@@ -120,7 +121,7 @@ const materialsToUnify = [
 ]
 
 // Used to determine which material types to unify
-const typesToUnify = ['nugget', 'ingot', 'gem', 'storage_block', 'ore', 'dust', 'gear', 'plate', 'rod', 'raw_block', 'raw_material']
+const typesToUnify = ['nugget', 'ingot', 'gem', 'block', 'storage_block', 'ore', 'wire', 'dust', 'gear', 'plate', 'rod', 'raw_block', 'raw_material']
 
 // Used for creating tags on custom ore processing materials
 const metals = [
@@ -148,11 +149,13 @@ const metals = [
 // stores amounts and energy cost for scrap melting
 function meltingValues(x) {
     return {
+        ingot: { amount: x, energy: 2000 },
+        gem: { amount: x, energy: 2000 },
         nugget: { amount: x / 9, energy: 250 },
         block: { amount: x * 9, energy: 18000 },
         plate: { amount: x, energy: 2000 },
         rod: { amount: x / 2, energy: 1000 },
-        gear: { amount: x / 4, energy: 8000 },
+        gear: { amount: x * 4, energy: 8000 },
         wire: { amount: x / 2, energy: 1000 },
         dust: { amount: x, energy: 2000 }
     }
