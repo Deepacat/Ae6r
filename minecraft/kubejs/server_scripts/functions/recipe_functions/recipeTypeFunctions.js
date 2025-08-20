@@ -19,7 +19,7 @@ function embersMelting(e, fluidOutput, itemInput) {
     const recipe = e.custom({
         type: "embers:melting",
         input: makeJsonIngredient(itemInput),
-        output: makeFluidJson(fluidOutput)
+        output: makeFluidStackJson(fluidOutput)
     })
     return {
         id: function (customId) {
@@ -47,21 +47,56 @@ function embersStamping(event, outputItem, inputs, stampItem) {
     if (stampItem) { recipeObj.stamp = makeJsonIngredient(stampItem) }
     if (!Array.isArray(inputs)) { inputs = [inputs] }
 
-    for (const input of inputs) {
-        if (input.fluid) {
-            recipeObj.fluid = makeFluidJson(input)
-        } else if (input.class || typeof input === "string" && input.startsWith('#')) {
+    for (let input of inputs) {
+        console.log(`${Object.entries(input)} for ${outputItem}`)
+        if (input.fluid) {// fluid stack
+            recipeObj.fluid = makeFluidStackJson(input)
+        } else if (input.class || typeof input === "string" && input.startsWith('#')) { // tagstack (ingredient)
             recipeObj.input = makeJsonIngredient(input)
-        } else if (input.item || Item.of(input).id) {
+        } else if (input.item) { // item stack
             recipeObj.input = makeJsonIngredient(input)
+        } else if (input.tag && input.amount) { // embers fluid tag input json
+            recipeObj.fluid = input
         }
     }
-
+    console.log(recipeObj)
     const recipe = event.custom(recipeObj)
 
     return {
         id: function (customId) {
             recipe.id(customId ?? `kubejs:embers/stamping/${outputItem.split(':')[1]}`)
+        },
+    }
+}
+
+// custom chiller recipe builder because the kube one has issues with fluid tag inputs
+function thermalChiller(event, outputItem, inputs) {
+    const recipeObj = {
+        type: "thermal:chiller",
+        result: makeJsonIngredient(outputItem),
+    }
+
+    if (!Array.isArray(inputs)) { inputs = [inputs] }
+
+    recipeObj.ingredients = []
+    console.log(Object.entries(inputs))
+    for (let input of inputs) {
+        console.log(`${input} for ${outputItem}`)
+        if (input.fluid) {// fluid stack
+            recipeObj.ingredients.push(makeFluidStackJson(input))
+        } else if (input.class || typeof input === "string" && input.startsWith('#')) { // tagstack (ingredient)
+            recipeObj.ingredients.push(makeJsonIngredient(input))
+        } else if (input.item) { // item stack
+            recipeObj.ingredients.push(makeJsonIngredient(input))
+        } else if (input.fluid_tag && input.amount) { // thermal fluid tag input json
+            recipeObj.ingredients.push(input)
+        }
+    }
+    const recipe = event.custom(recipeObj)
+
+    return {
+        id: function (customId) {
+            recipe.id(customId ?? `kubejs:thermal/chiller/${outputItem.split(':')[1]}`)
         },
     }
 }

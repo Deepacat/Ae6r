@@ -13,7 +13,7 @@ ServerEvents.recipes(e => {
             }
         }
     }
-    for (let recipe of e.findRecipes({ output: Fluid.of('embers:molten_brass')})){
+    for (let recipe of e.findRecipes({ output: Fluid.of('embers:molten_brass') })) {
         console.log(recipe)
         console.log(recipe.json)
     }
@@ -90,6 +90,25 @@ function smeltingXp(materialType, recipe) {
     if (materialType.includes('ores')) { recipe.xp(2); return }
 }
 
+// Gem and ingot recipes that aren't oreproc/smelting recipes
+function gemOrIngotRecipes(e, materialName, typesObj) {
+    if (!typesObj.gemOrIngot) { return }
+
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+    if (typesObj.dust) {
+        // e.recipes.
+    }
+    if (typesObj.fluid) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
+        let fluid = typesObj.fluid
+
+        thermalChiller(e, gemOrIngotItem, ['tconstruct:ingot_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
+            .id(`emendatus:thermal/chiller/${materialName}_ingot`)
+        embersStamping(e, gemOrIngotItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:ingot_stamp')
+            .id(`emendatus:embers/stamping/${materialName}_ingot`)
+    }
+}
+
 function smeltingRecipes(e, materialName, typesObj) {
     // added to an empty string to convert to a normal js string instead of java
     if (!typesObj.gemOrIngot) { return }
@@ -134,16 +153,6 @@ function smeltingRecipes(e, materialName, typesObj) {
         e.recipes.mekanism.smelting(block, toSmelt)
             .id(`emendatus:mekanism/smelting/${toSmelt.split(':')[1]}_to_${materialName}_ingot`)
     }
-
-    if (typesObj.fluid) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
-        let fluid = typesObj.fluid
-
-        e.recipes.thermal.chiller(gemOrIngotItem, ['tconstruct:ingot_cast', Fluid.of(fluid, fluidAmt)])
-            .id(`emendatus:thermal/chiller/${materialName}_ingot`)
-        embersStamping(e, gemOrIngotItem, Fluid.of(fluid, fluidAmt), 'embers:ingot_stamp')
-            .id(`emendatus:embers/stamping/${materialName}_ingot`)
-    }
 }
 
 function plateRecipes(e, materialName, typesObj) {
@@ -158,9 +167,9 @@ function plateRecipes(e, materialName, typesObj) {
         let fluid = typesObj.fluid
         let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
 
-        e.recipes.thermal.chiller(plateItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+        thermalChiller(e, plateItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_plate`)
-        embersStamping(e, plateItem, Fluid.of(fluid, fluidAmt), 'embers:plate_stamp')
+        embersStamping(e, plateItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:plate_stamp')
             .id(`emendatus:embers/stamping/${materialName}_plate`)
     }
     e.recipes.create.pressing(plateItem, gemOrIngotItem)
@@ -197,9 +206,9 @@ function rodRecipes(e, materialName, typesObj) {
         let fluid = typesObj.fluid
         let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
 
-        e.recipes.thermal.chiller(rodItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+        thermalChiller(e, rodItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_rod`)
-        embersStamping(e, rodItem, Fluid.of(fluid, fluidAmt), 'immersiveengineering:mold_rod')
+        embersStamping(e, rodItem, { tag: fluid.tag, amount: fluidAmt }, 'immersiveengineering:mold_rod')
             .id(`emendatus:embers/stamping/${materialName}_rod`)
     }
 
@@ -241,9 +250,9 @@ function gearRecipes(e, materialName, typesObj) {
         let fluid = typesObj.fluid
         let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) * 4
 
-        e.recipes.thermal.chiller(gearItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+        thermalChiller(e, gearItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_gear`)
-        embersStamping(e, gearItem, Fluid.of(fluid, fluidAmt), 'embers:gear_stamp')
+        embersStamping(e, gearItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:gear_stamp')
             .id(`emendatus:embers/stamping/${materialName}_gear`)
     }
 
@@ -276,9 +285,9 @@ function wireRecipes(e, materialName, typesObj) {
         let fluid = typesObj.fluid
         let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag) / 2
 
-        e.recipes.thermal.chiller(wireItem, ['tconstruct:plate_cast', Fluid.of(fluid, fluidAmt)])
+        thermalChiller(e, wireItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_wire`)
-        embersStamping(e, wireItem, Fluid.of(fluid, fluidAmt), 'immersiveengineering:mold_wire')
+        embersStamping(e, wireItem, { tag: fluid.tag, amount: fluidAmt }, 'immersiveengineering:mold_wire')
             .id(`emendatus:embers/stamping/${materialName}_wire`)
     }
     e.recipes.thermal.press(`2x ${wireItem}`, [gemOrIngotItem, 'immersiveengineering:mold_wire'])
@@ -356,18 +365,13 @@ function scrapMelting(e, materialName, typesObj) {
         let item = typesObj[itemType].item.id + ''
         let fluidAmt = melt.amount
         let energy = melt.energy
-
-        e.recipes.thermal.crucible(Fluid.of(fluid.id, fluidAmt), item, 0, energy)
+        e.recipes.thermal.crucible(Fluid.of(fluid.stack.id, fluidAmt), item, 0, energy)
             .id(`emendatus:thermal/crucible/${item.split(':')[1]}`)
         if (500 > fluidAmt) {
-            embersMelting(e, Fluid.of(fluid.id, fluidAmt), item)
+            embersMelting(e, Fluid.of(fluid.stack.id, fluidAmt), item)
                 .id(`emendatus:embers/melting/${item.split(':')[1]}`)
         }
     }
-}
-
-function materialScrapping(e, materialName, typesObj) {
-
 }
 
 function castingRecipes(e, materialName, typesObj) {

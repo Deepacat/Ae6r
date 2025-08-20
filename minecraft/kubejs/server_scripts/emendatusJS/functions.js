@@ -51,16 +51,13 @@ function makeJsonIngredients(inputs) {
  * @param {number} [amountForTag] - (Optional) The amount of fluid for the fluid tag, if provided.
  * @returns {object} - The converted fluid JSON object.
  */
-function makeFluidJson(fluidInput, amountForTag) {
-    if (amountForTag) {
-        return { fluidTag: fluidInput, amount: amountForTag }
-    }
+function makeFluidStackJson(fluidInput) {
     return { fluid: fluidInput.id, amount: fluidInput.amount }
 }
 
 /**
  * @param {string} str 
- * @returns 
+ * @returns
  */
 function titleCase(str) {
     return str.toLowerCase()
@@ -145,9 +142,9 @@ function getTaggedItem(tagPath) {
 function getFluid(materialName) {
     for (let mod of modFluidPriorities) {
         if (Fluid.exists(`${mod}:molten_${materialName}`)) {
-            return Fluid.of(`${mod}:molten_${materialName}`)
+            return { stack: Fluid.of(`${mod}:molten_${materialName}`), tag:`forge:molten_${materialName}` }
         } else if (Fluid.exists(`${mod}:${materialName}`)) {
-            return Fluid.of(`${mod}:${materialName}`)
+            return { stack: Fluid.of(`${mod}:${materialName}`), tag: `forge:${materialName}` }
         }
     }
 }
