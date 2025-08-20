@@ -763,7 +763,7 @@
 		#Can two Logs be used to craft 16 sticks?
 		"Easy Sticks" = true
 		#Can raw ore blocks be smelted, taking 9x the time a normal item?
-		"Smelt Raw Ore Blocks" = true
+		"Smelt Raw Ore Blocks" = false
 
 [world]
 	"Ancient Wood" = true
