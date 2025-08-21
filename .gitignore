@@ -3,6 +3,7 @@ instance.cfg
 mmc-pack.json
 modlist.html
 build/
+flame/
 
 !/minecraft/config*
 !/minecraft/defaultconfigs*
@@ -12,12 +13,14 @@ build/
 !/minecraft/mods/cc*.jar
 
 minecraft/config/alexsmobs/*
+minecraft/config/worldedit*
+minecraft/config/jei*
+minecraft/config/spark/tmp*
 minecraft/config/everycomp-hazardous.properties
 minecraft/config/konkrete/locals
-minecraft/config/jei*
 minecraft/config/emi.css
-minecraft/config/worldedit*
 minecraft/config/ae2/client.json
-minecraft/kubejs/server_scripts/example.js
 minecraft/config/spark/activity.json
+minecraft/config/embeddium-fingerprint.json
+minecraft/kubejs/server_scripts/example.js
 minecraft/kubejs/client_scripts/example.js
