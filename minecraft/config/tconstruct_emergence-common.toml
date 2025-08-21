@@ -1,0 +1,8 @@
+#Range: 0.0 ~ 1.0
+weaponChance = 0.1
+#Range: 0.0 ~ 1.0
+dropChanceOverride = 0.1
+#Range: 0 ~ 5
+maxMaterialTier = 3
+lockAdvancedMeleeWeapons = false
+
