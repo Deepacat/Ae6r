@@ -13,10 +13,6 @@ ServerEvents.recipes(e => {
             }
         }
     }
-    for (let recipe of e.findRecipes({ output: Fluid.of('embers:molten_brass') })) {
-        console.log(recipe)
-        console.log(recipe.json)
-    }
     // basically just wanted this for embers sake but embers isnt kubejs plugin so replaces dont work :p
     // let fluidUnifTagData = JsonIO.read('kubejs/datagen/fluidTagUnificationData.json')
     // if (!(fluidUnifTagData == null)) {
@@ -141,9 +137,7 @@ function plateRecipes(e, materialName, typesObj) {
     // added to an empty string to convert to a normal js string instead of java
     let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
     let plateItem = typesObj.plate.item.id + ''
-
-    e.remove({ output: plateItem })
-
+    e.remove({ output: plateItem, input: gemOrIngotItem })
     if (typesObj.fluid) {
         let fluid = typesObj.fluid
         let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
@@ -159,7 +153,6 @@ function plateRecipes(e, materialName, typesObj) {
         .id(`emendatus:thermal/press/${materialName}_plate`)
     e.recipes.immersiveengineering.metal_press(`4x ${plateItem}`, `4x ${gemOrIngotItem}`, 'immersiveengineering:mold_plate')
         .id(`emendatus:immersiveengineering/metalpress/${materialName}_plate`)
-
     e.custom({
         type: "createdieselgenerators:hammering",
         ingredients: makeJsonIngredients(gemOrIngotItem),

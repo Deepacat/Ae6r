@@ -110,15 +110,16 @@ ServerEvents.recipes(e => {
 
         { type: 'valhelsia_structures:axe_crafting' },
         { input: 'minecraft:fire_charge', mod: 'thermal', type: 'minecraft:crafting_shapeless' },
-        { type: 'pedestals:pedestal_crushing', output: '#forge:dyes' },
-        { type: 'create:milling', output: '#forge:dyes' },
-        { type: 'create:crushing', output: '#forge:dyes' },
-        { type: 'mekanism:enriching', output: '#forge:dyes' },
-        { type: 'thermal:centrifuge', output: '#forge:dyes' },
-        { type: 'immersiveengineering:crusher', output: '#forge:dyes' },
+        /* I honestly have no idea why e6e unifies logs and dyes so im gonna keep this normal for now */
+        // { type: 'pedestals:pedestal_crushing', output: '#forge:dyes' },
+        // { type: 'create:milling', output: '#forge:dyes' },
+        // { type: 'create:crushing', output: '#forge:dyes' },
+        // { type: 'mekanism:enriching', output: '#forge:dyes' },
+        // { type: 'thermal:centrifuge', output: '#forge:dyes' },
+        // { type: 'immersiveengineering:crusher', output: '#forge:dyes' },
 
-        { type: 'create:cutting', input: '#minecraft:logs' },
-        { type: 'immersiveengineering:sawmill', input: '#minecraft:logs' },
+        // { type: 'create:cutting', input: '#minecraft:logs' },
+        // { type: 'immersiveengineering:sawmill', input: '#minecraft:logs' },
 
         { type: 'mekanism:combining' },
         { type: 'minecraft:smelting', output: 'minecraft:obsidian' },
