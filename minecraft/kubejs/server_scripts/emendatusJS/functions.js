@@ -26,7 +26,7 @@ function makeJsonIngredient(input) {
     let obj = JSON.parse(ingredient.toJson())
     // Remove the ingredient part of the obj since recipes don't often use that
     obj = Object.assign(obj, obj.ingredient)
-    delete obj.ingredient;
+    delete obj.ingredient
     return obj
 }
 

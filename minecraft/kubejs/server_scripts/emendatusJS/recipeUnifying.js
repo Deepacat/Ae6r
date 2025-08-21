@@ -380,7 +380,7 @@ function materialScrapping(e, materialName, typesObj) {
         }).id(`emendatus:crushing/hammer/${itemToCrush.split(':')[1]}_to_dust`)
 
         e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: dustItem })
-        immersiveEngineeringCrushing(e, `4x ${dustItem}`, `4x ${itemToCrush}`, 2400, [])
+        immersiveEngineeringCrushing(e, dustItem, itemToCrush, 2400, [])
             .id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
 
         e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: dustItem })
