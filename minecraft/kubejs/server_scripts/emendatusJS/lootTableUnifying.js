@@ -1,7 +1,5 @@
-const lootTypes = [LootType.CHEST, LootType.ENTITY, LootType.BLOCK]
-
 LootJS.modifiers(e => {
-    let unifData = JsonIO.read('kubejs/datagen/tagUnificationData.json')
+    let unifData = JsonIO.read('kubejs/datagen/itemTagUnificationData.json')
     if (unifData == null) { return }
 
     for (let tag of Object.entries(unifData)) {
@@ -11,11 +9,7 @@ LootJS.modifiers(e => {
         if (tagId.includes('ores')) { continue }
 
         for (let item of toUnify) {
-            e.addLootTypeModifier(LootType.CHEST)
-                .replaceLoot(item, prefItem, true)
-            e.addLootTypeModifier(LootType.ENTITY)
-                .replaceLoot(item, prefItem, true)
-            e.addLootTypeModifier(LootType.BLOCK)
+            e.addLootTableModifier(/.*/)
                 .replaceLoot(item, prefItem, true)
         }
     }
