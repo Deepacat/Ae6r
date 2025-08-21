@@ -48,7 +48,6 @@ function embersStamping(event, outputItem, inputs, stampItem) {
     if (!Array.isArray(inputs)) { inputs = [inputs] }
 
     for (let input of inputs) {
-        console.log(`${Object.entries(input)} for ${outputItem}`)
         if (input.fluid) {// fluid stack
             recipeObj.fluid = makeFluidStackJson(input)
         } else if (input.class || typeof input === "string" && input.startsWith('#')) { // tagstack (ingredient)
@@ -59,7 +58,6 @@ function embersStamping(event, outputItem, inputs, stampItem) {
             recipeObj.fluid = input
         }
     }
-    console.log(recipeObj)
     const recipe = event.custom(recipeObj)
 
     return {
@@ -69,50 +67,40 @@ function embersStamping(event, outputItem, inputs, stampItem) {
     }
 }
 // custom ie crusher builder bc the kube addon is broken
-function immersiveEngineeringCrushing(e, output, input, secondaries) {
-    // ServerEvents.recipes(event => {
-    //     event.custom({
-    //         type: "immersiveengineering:crusher",
-    //         energy: 2400,
-    //         input: { item: 'minecraft:raw_iron' },
-    //         result: { item: 'create:crushed_raw_iron' },
-    //         secondaries: [
-    //             { chance: 0.5, output: { item: 'minecraft:stone' } }
-    //         ]
-    //     })
-    // })
+function immersiveEngineeringCrushing(e, output, input, energy, secondaries) {
     const recipeObj = {
         type: "immersiveengineering:crusher",
-        energy: 2400,
+        energy: energy,
         input: makeJsonIngredient(input),
         result: makeJsonIngredient(output),
     }
 
-    // if (secondaries) {
-    //     recipeObj.secondaries = []
-    //     for (let secondary of secondaries) {
-    //         if (secondary.chance) { // check if direct json input
-    //             let itemObj = makeJsonIngredient(secondary.output)
-    //         } if else () { // check if object
-    //             let itemObj = makeJsonIngredient(secondary.output)
-    //             itemObj.chance = secondary.chance
-    //             recipeObj.secondary.push(itemObj)
-    //         }
-    //     }
-    // }
-
+    if (secondaries != undefined) {
+        recipeObj.secondaries = []
+        for (let secondary of secondaries) {
+            if (secondary.output) { // check if direct json input
+                recipeObj.secondaries.push(secondary)
+            } else if (secondary.item || Item.of(secondary.item)) { // check if itemstack or convertable to one (string)
+                let item = makeJsonIngredient(Item.of(secondary))
+                let itemObj = { output: item }
+                if (secondary.chance) { itemObj.chance = secondary.chance }
+                recipeObj.secondaries.push(itemObj)
+            }
+        }
+    }
 
     const recipe = e.custom(recipeObj)
 
     return {
         id: function (customId) {
-            recipe.id(customId ?? `kubejs:thermal/chiller/${outputItem.split(':')[1]}`)
+            recipe.id(customId ?? `kubejs:immersiveengineering/crushing/${output.split(':')[1]}`)
         },
     }
 }
 
 ServerEvents.recipes(e => {
-    immersiveEngineeringCrushing(e, 'minecraft:stone', 'minecraft:raw_iron', [{ chance: 0.5, output: { item: 'minecraft:stone' } }])
+    immersiveEngineeringCrushing(e, 'minecraft:gravel', 'minecraft:cobblestone', 2400, [{ chance: 0.5, output: { item: 'minecraft:gravel' } }])
+    immersiveEngineeringCrushing(e, 'minecraft:sand', 'minecraft:gravel', 2400, [Item.of('minecraft:sand').withChance(0.5)])
 })
 
 // custom chiller recipe builder because the kube one has issues with fluid tag inputs
