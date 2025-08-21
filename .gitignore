@@ -24,5 +24,4 @@ minecraft/config/emi.css
 minecraft/config/ae2/client.json
 minecraft/config/spark/activity.json
 minecraft/config/embeddium-fingerprint.json
-minecraft/kubejs/server_scripts/example.js
-minecraft/kubejs/client_scripts/example.js
+minecraft/kubejs/*/example.js
