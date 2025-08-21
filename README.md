@@ -13,8 +13,6 @@ https://github.com/EnigmaticaModpacks
 
 Contributing guide (Only supports prism):
 1. [Install pakku](https://juraj-hrivnak.github.io/Pakku/installing-pakku.html) through [Scoop](https://scoop.sh/) (on windows) or [another method](https://juraj-hrivnak.github.io/Pakku/installing-pakku.html) (mac/linux)
-2. Clone the git repository and open the cloned repo (```git clone https://github.com/Deepacat/Ae6r.git```)
-3. Zip all files in the repo directory to a .zip archive
-4. Import the zip archive of the repo to prism (Import feature or drag into the window on prism)
-5. Open the instance minecraft folder in cmd/prefered terminal, and run ```pakku fetch``` to install mods from pakku manifest
-6. Open the instance folder in vscode or another IDE to work in and commit from 
+2. Open your prism instances folder in cmd/preferred terminal, and clone the repo to your instances (```git clone https://github.com/Deepacat/Ae6r.git```)
+3. Open the instance minecraft folder in cmd/prefered terminal, and run ```pakku fetch``` to install mods from pakku manifest
+4. Open the instance folder in vscode or another IDE to work in and commit from 
