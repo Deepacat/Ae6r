@@ -115,6 +115,18 @@ ServerEvents.tags('item', e => {
     ])
     e.add('forge:gems/mana', '#forge:gems/source')
     e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
+
+    e.add('forge:ammo', 'immersiveengineering:casull')
+    e.add('forge:ammo', 'immersiveengineering:armor_piercing')
+    e.add('forge:ammo', 'immersiveengineering:buckshot')
+    e.add('forge:ammo', 'immersiveengineering:he')
+    e.add('forge:ammo', 'immersiveengineering:silver')
+    e.add('forge:ammo', 'immersiveengineering:dragons_breath')
+    e.add('forge:ammo', 'immersiveengineering:potion')
+    e.add('forge:ammo', 'immersiveengineering:flare')
+    e.add('forge:ammo', 'immersiveengineering:firework')
+    e.add('forge:ammo', 'immersiveengineering:homing')
+    e.add('forge:ammo', 'immersiveengineering:wolfpack')
 })
 
 ServerEvents.tags('block', e => {

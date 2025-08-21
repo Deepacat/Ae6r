@@ -1526,8 +1526,8 @@
 			dependencies: ["00000000000003D5"]
 			description: ["Ars Nouveau has several tiers of armor to assist the aspiring caster. Each permits the wearer to access more mana and regenerate spent mana faster."]
 			icon: {
-				Count: 1b
-				id: "ars_nouveau:archmage_hood"
+				Count: 1
+				id: "ars_nouveau:battlemage_hood"
 				tag: {
 					Damage: 0
 				}
@@ -1567,8 +1567,8 @@
 				{
 					id: "0000000000000487"
 					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_hood"
+						Count: 1
+						id: "ars_nouveau:battlemage_hood"
 						tag: {
 							Damage: 0
 						}
@@ -1578,8 +1578,8 @@
 				{
 					id: "000000000000048A"
 					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_robes"
+						Count: 1
+						id: "ars_nouveau:battlemage_robes"
 						tag: {
 							Damage: 0
 						}
@@ -1589,8 +1589,8 @@
 				{
 					id: "000000000000048B"
 					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_leggings"
+						Count: 1
+						id: "ars_nouveau:battlemage_leggings"
 						tag: {
 							Damage: 0
 						}
@@ -1600,8 +1600,8 @@
 				{
 					id: "000000000000048C"
 					item: {
-						Count: 1b
-						id: "ars_nouveau:archmage_boots"
+						Count: 1
+						id: "ars_nouveau:battlemage_boots"
 						tag: {
 							Damage: 0
 						}
@@ -1609,7 +1609,7 @@
 					type: "item"
 				}
 			]
-			title: "Archmage's Arcana"
+			title: "Battlemage's Arcana"
 			x: -1.0d
 			y: -16.0d
 		}
@@ -1966,7 +1966,7 @@
 			subtitle: "Chiseled like a Greek God"
 			tasks: [{
 				id: "0000000000000AF8"
-				item: "portable_stonecutter:portable_stonecutter"
+				item: "crafting_on_a_stick:stonecutter"
 				type: "item"
 			}]
 			x: -9.5d
@@ -2462,55 +2462,10 @@
 				count: 24L
 				id: "3E8BA9F57E3C4452"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "immersiveengineering:casull"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:armor_piercing"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:buckshot"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:he"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:silver"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:dragons_breath"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:potion"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:flare"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:firework"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:homing"
-							}
-							{
-								Count: 1b
-								id: "immersiveengineering:wolfpack"
-							}
-						]
+						"ftbfiltersystem:filter": "item_tag(forge:ammo)"
 					}
 				}
 				title: "Ammo Cartridges"
@@ -2752,11 +2707,9 @@
 			tasks: [{
 				id: "4D29649F3F51D7D3"
 				item: {
-					Count: 1b
-					id: "tiab:timeinabottle"
-					tag: {
-						timeData: { }
-					}
+					Count: 1
+					id: "tiab:time_in_a_bottle"
+					tag: { }
 				}
 				type: "item"
 			}]
