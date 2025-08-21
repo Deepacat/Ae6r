@@ -12,6 +12,7 @@ flame/
 !/minecraft/config/icon.png
 !/minecraft/*pakku*
 
+minecraft/.pakku/docs
 minecraft/config/alexsmobs/*
 minecraft/config/worldedit*
 minecraft/config/jei*

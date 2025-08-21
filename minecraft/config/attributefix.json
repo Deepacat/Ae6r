@@ -605,6 +605,17 @@
         "value": 1000
       }
     },
+    "tinkersjewelry:fortune": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 10,
+        "value": 10
+      }
+    },
     "additionalentityattributes:generic.water_speed": {
       "enabled": false,
       "min": {
@@ -803,6 +814,17 @@
         "value": 1024
       }
     },
+    "tinkersjewelry:silk": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 10,
+        "value": 10
+      }
+    },
     "eidolon:magic_power": {
       "enabled": false,
       "min": {
@@ -834,6 +856,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "tinkersjewelry:subspace": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 6,
+        "value": 6
       }
     },
     "malum:reserve_staff_charges": {
@@ -1043,6 +1076,17 @@
       "max": {
         "default": 1024,
         "value": 1024
+      }
+    },
+    "tinkersjewelry:trade": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 100,
+        "value": 100
       }
     },
     "spectrum:mental_presence": {
