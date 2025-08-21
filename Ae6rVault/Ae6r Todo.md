@@ -1,0 +1,29 @@
+- [x] Figure out how the FUCK e6es unification works and how to work it into emendatusjs (it does shit like unify ender pearl to dust and arcane gem to botania mana dust)
+	- [ ] refactor emendatusjs again to use more e6e like recipe unifying
+		- [x] basic material flags like rods gears plates ingots
+		- [x] ores smelting
+		- [x] melting metal items back to fluids
+		- [x] Remake tag unifying (Probably can datagen items per tag in recipes)
+			- [x] this caused recipe gen to fuck up since im removing the tags it relies on, uhhh go fix that to use a datagen too thx <3
+		- [ ] ore processing
+		- [ ] scrub materials to unify list of e6e 
+		- [x] Make my melting builder smarter (instead of doing the same bit 15 times)
+		- [ ] add tinkers casting and melting recipes (make builders first please)
+		- [x] crushing recipes (not oreproc just dust making from comps)
+			- [ ] i did all of them except ars glyph too tired
+		- [x] Compacting recipes
+		- [x] loot table unification
+- [x] move pakku to mc folder
+- [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn)
+- [ ] make recipe builders for diesel gens and create c&a (or find others better ones)
+- [ ] make tinkers recipe builders
+- [x] remove sulfur ore (and others actually)
+- [x] Port fluid combining recipes to lychee
+- [x] Port occultism shaped and spiritfire recipes
+- [ ] Double check that alchemy array recipes match up
+- [ ] Fix superheated steel and iron recipes (Double check e6e)
+- [x] Unify arcane gold
+- [ ] Port natures aura recipes
+- [ ] Hide dumb recipe categories like shapeless mixing and shaped mechanical crafting, grindstone
+- [x] Fix recipes that used ars clays in e6e
+- [ ] Replace recipes using ars nouveau clays with ars imbued essences? ars clays are the old style but serve as a better gate than essences for now
