@@ -1286,6 +1286,43 @@
             ]
         },
         {
+            "pakku_id": "x9rGdTyUUiiM7HPq",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "borderless"
+            },
+            "name": {
+                "curseforge": "Borderless Window"
+            },
+            "id": {
+                "curseforge": "378979"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "BorderlessWindow-1.20-1.6.0.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4575/494/BorderlessWindow-1.20-1.6.0.jar",
+                    "id": "4575494",
+                    "parent_id": "378979",
+                    "hashes": {
+                        "sha1": "2dc2dca0371065bf384b6486827451da441b5471",
+                        "md5": "da915b654d2997e26e26b461644ff8e9"
+                    },
+                    "required_dependencies": [],
+                    "size": 44027,
+                    "date_published": "2023-06-09T09:13:03.900Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ir2Lbd6G86LMn7aF",
             "pakku_links": [
                 "Es8hm1LMMRUEyWq3",
@@ -2431,6 +2468,48 @@
                     "required_dependencies": [],
                     "size": 90764,
                     "date_published": "2025-07-20T02:27:46.810Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "NblQvQjDZ54Uq2mV",
+            "pakku_links": [
+                "q7plshbA1OZ99MmS"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "crafting-tweaks"
+            },
+            "name": {
+                "curseforge": "Crafting Tweaks"
+            },
+            "id": {
+                "curseforge": "233071"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "craftingtweaks-forge-1.20.1-18.2.6.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6784/525/craftingtweaks-forge-1.20.1-18.2.6.jar",
+                    "id": "6784525",
+                    "parent_id": "233071",
+                    "hashes": {
+                        "sha1": "a4742067cceea47f4f8f7d25822b0ff8a8fa6268",
+                        "md5": "4cc9afa7848e639cd7e0f1b250925247"
+                    },
+                    "required_dependencies": [
+                        "531761"
+                    ],
+                    "size": 230973,
+                    "date_published": "2025-07-18T18:08:51.337Z"
                 }
             ]
         },
@@ -7612,6 +7691,44 @@
             ]
         },
         {
+            "pakku_id": "4CZ8v01qfe5NrlkE",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "nolijium"
+            },
+            "name": {
+                "curseforge": "Nolijium"
+            },
+            "id": {
+                "curseforge": "969602"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "nolijium-0.5.6.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6264/798/nolijium-0.5.6.jar",
+                    "id": "6264798",
+                    "parent_id": "969602",
+                    "hashes": {
+                        "sha1": "7074fda15f70440eb1e30f74a7dc70feadd49592",
+                        "md5": "98b9dae55b041643bcc4cb965c6061e8"
+                    },
+                    "required_dependencies": [],
+                    "size": 362983,
+                    "date_published": "2025-03-04T19:52:07.150Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "KPJDTBc5sxVhfpYc",
             "pakku_links": [
                 "l2lMsZQpOKYa4u0y",
@@ -7691,6 +7808,43 @@
                     ],
                     "size": 470536,
                     "date_published": "2024-08-19T06:49:09.183Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "TTANqbobciGoxmxo",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "obsidianui"
+            },
+            "name": {
+                "curseforge": "ObsidianUI"
+            },
+            "id": {
+                "curseforge": "684718"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ObsidianUI-forge-0.2.3+mc1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/5279/713/ObsidianUI-forge-0.2.3+mc1.20.1.jar",
+                    "id": "5279713",
+                    "parent_id": "684718",
+                    "hashes": {
+                        "sha1": "aaa69c42410847ac5d13034fba9d519e0afd0abf",
+                        "md5": "323ee5036a5113c1529520430e7b6a04"
+                    },
+                    "required_dependencies": [],
+                    "size": 212286,
+                    "date_published": "2024-04-21T14:14:57.107Z"
                 }
             ]
         },
@@ -9185,6 +9339,48 @@
             ]
         },
         {
+            "pakku_id": "hWKCoBr7FLXx9SWy",
+            "pakku_links": [
+                "TTANqbobciGoxmxo"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "ryoamiclights"
+            },
+            "name": {
+                "curseforge": "RyoamicLights"
+            },
+            "id": {
+                "curseforge": "913587"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "RyoamicLights-forge-0.2.3+mc1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/5353/333/RyoamicLights-forge-0.2.3+mc1.20.1.jar",
+                    "id": "5353333",
+                    "parent_id": "913587",
+                    "hashes": {
+                        "sha1": "1850d6b47b39ed439c8e9f85caf6cbe88df817c3",
+                        "md5": "f90749d92767a42c3cf8df3d95cc1067"
+                    },
+                    "required_dependencies": [
+                        "684718"
+                    ],
+                    "size": 160055,
+                    "date_published": "2024-05-18T15:03:19.660Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "5JtcHyPYwdx4xRvb",
             "type": "MOD",
             "slug": {
@@ -9401,130 +9597,6 @@
                     "required_dependencies": [],
                     "size": 362338,
                     "date_published": "2024-08-23T04:23:38.737Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "ClFZDNVaSMaCr2rT",
-            "pakku_links": [
-                "lnmvZLOM9d011Otj"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "dynamiclights-reforged"
-            },
-            "name": {
-                "curseforge": "Sodium/Embeddium Dynamic Lights"
-            },
-            "id": {
-                "curseforge": "551736"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "sodiumdynamiclights-forge-1.0.10-1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6044/481/sodiumdynamiclights-forge-1.0.10-1.20.1.jar",
-                    "id": "6044481",
-                    "parent_id": "551736",
-                    "hashes": {
-                        "sha1": "d27524e85bed0f0af83c03be46f9ca3eb02a1be9",
-                        "md5": "687c18cefa558ca8101ef97914d9ba6b"
-                    },
-                    "required_dependencies": [
-                        "1103431"
-                    ],
-                    "size": 511601,
-                    "date_published": "2025-01-02T01:22:43.027Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "cXB8GSD80jG3rbuu",
-            "pakku_links": [
-                "lnmvZLOM9d011Otj"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "magnesium-extras"
-            },
-            "name": {
-                "curseforge": "Sodium/Embeddium Extras"
-            },
-            "id": {
-                "curseforge": "558905"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "sodiumextras-forge-1.0.7-1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6041/697/sodiumextras-forge-1.0.7-1.20.1.jar",
-                    "id": "6041697",
-                    "parent_id": "558905",
-                    "hashes": {
-                        "sha1": "7603f44bc4750774fbbdc07a3153c391650fcf3d",
-                        "md5": "823adea3bcfd64dbdbaec46950cf4108"
-                    },
-                    "required_dependencies": [
-                        "1103431",
-                        "908741"
-                    ],
-                    "size": 438540,
-                    "date_published": "2025-01-01T04:39:13.763Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "lnmvZLOM9d011Otj",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "sodium-options-api"
-            },
-            "name": {
-                "curseforge": "Sodium/Embeddium Options API"
-            },
-            "id": {
-                "curseforge": "1103431"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1",
-                        "1.20"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6100/812/sodiumoptionsapi-forge-1.0.10-1.20.1.jar",
-                    "id": "6100812",
-                    "parent_id": "1103431",
-                    "hashes": {
-                        "sha1": "7529fbf938787ed13a251cbf40936f8c29ec4b6c",
-                        "md5": "75807590ae2648ecdeb855705868ce59"
-                    },
-                    "required_dependencies": [
-                        "908741"
-                    ],
-                    "size": 443978,
-                    "date_published": "2025-01-18T20:48:18.013Z"
                 }
             ]
         },
@@ -11381,6 +11453,54 @@
                     "required_dependencies": [],
                     "size": 1006574,
                     "date_published": "2025-04-17T13:20:48.953Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "LMCK6QDiAUXsKEcr",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "zume"
+            },
+            "name": {
+                "curseforge": "Zume"
+            },
+            "id": {
+                "curseforge": "927564"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "zume-1.1.4.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.5",
+                        "1.20.2-Snapshot",
+                        "1.20.5-Snapshot",
+                        "1.20.3-Snapshot",
+                        "1.20.3",
+                        "1.20.1",
+                        "1.20",
+                        "1.20.6",
+                        "1.20.4",
+                        "1.20-Snapshot"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5861/244/zume-1.1.4.jar",
+                    "id": "5861244",
+                    "parent_id": "927564",
+                    "hashes": {
+                        "sha1": "e38c66e88e30625475fca7fbf89b11d7d5ba1030",
+                        "md5": "facef56d678a6a85c036440e69a2753c"
+                    },
+                    "required_dependencies": [],
+                    "size": 97235,
+                    "date_published": "2024-10-30T21:45:06.903Z"
                 }
             ]
         },
