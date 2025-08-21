@@ -97,12 +97,6 @@ function immersiveEngineeringCrushing(e, output, input, energy, secondaries) {
         },
     }
 }
-
-ServerEvents.recipes(e => {
-    immersiveEngineeringCrushing(e, 'minecraft:gravel', 'minecraft:cobblestone', 2400, [{ chance: 0.5, output: { item: 'minecraft:gravel' } }])
-    immersiveEngineeringCrushing(e, 'minecraft:sand', 'minecraft:gravel', 2400, [Item.of('minecraft:sand').withChance(0.5)])
-})
-
 // custom chiller recipe builder because the kube one has issues with fluid tag inputs
 function thermalChiller(event, outputItem, inputs) {
     const recipeObj = {

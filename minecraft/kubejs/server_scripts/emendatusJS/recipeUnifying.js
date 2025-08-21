@@ -407,9 +407,9 @@ function materialScrapping(e, materialName, typesObj) {
         e.recipes.occultism.crushing(dustItem, itemToCrush)
             .id(`emendatus:crushing/occultism/crushing/${itemToCrush.split(':')[1]}_to_dust`)
 
-        // e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: dustItem })
-        // e.recipes.ars_nouveau.crush(dustItem, itemToCrush)
-        //     .id(`emendatus:crushing/ars_nouveau/crush/${itemToCrush.split(':')[1]}_to_dust`)
+        e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: dustItem })
+        e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(dustItem).withChance(1))
+            .id(`emendatus:crushing/ars_nouveau/crush/${itemToCrush.split(':')[1]}_to_dust`)
     }
 }
 

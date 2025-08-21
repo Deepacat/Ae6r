@@ -10,7 +10,7 @@
 		- [x] Make my melting builder smarter (instead of doing the same bit 15 times)
 		- [ ] add tinkers casting and melting recipes (make builders first please)
 		- [x] crushing recipes (not oreproc just dust making from comps)
-			- [ ] i did all of them except ars glyph too tired
+			- [x] i did all of them except ars glyph too tired (did this)
 		- [x] Compacting recipes
 		- [x] loot table unification
 - [x] move pakku to mc folder
