@@ -380,13 +380,8 @@ function materialScrapping(e, materialName, typesObj) {
         }).id(`emendatus:crushing/hammer/${itemToCrush.split(':')[1]}_to_dust`)
 
         e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: dustItem })
-        // e.recipes.immersiveengineering.crusher(Item.of(dustItem, 4), Item.of(itemToCrush, 4))
-        //     .id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
-        // e.recipes.immersiveengineering.crusher({
-        //     input: { item: itemToCrush, count: 4 },
-        //     result: { id: dustItem, count: 4 },
-        //     secondaries: []
-        // }).id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
+        immersiveEngineeringCrushing(e, `4x ${dustItem}`, `4x ${itemToCrush}`, 2400, [])
+            .id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
 
         e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: dustItem })
         e.recipes.mekanism.crushing(dustItem, itemToCrush)
