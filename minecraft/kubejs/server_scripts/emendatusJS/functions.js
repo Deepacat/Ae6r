@@ -6,8 +6,9 @@
  */
 function makeJsonIngredient(input) {
     let ingredient = ''
+
     // Check if the input is an Ingredient stack
-    if (typeof input === "object" && input.class) {
+    if (input.class) {
         ingredient = input;
         // If the input is a string, it's likely just a item string e.g. '4x minecraft:dirt', convert it to an itemstack then ingredient
     } else if (typeof input === "string") {
@@ -142,7 +143,7 @@ function getTaggedItem(tagPath) {
 function getFluid(materialName) {
     for (let mod of modFluidPriorities) {
         if (Fluid.exists(`${mod}:molten_${materialName}`)) {
-            return { stack: Fluid.of(`${mod}:molten_${materialName}`), tag:`forge:molten_${materialName}` }
+            return { stack: Fluid.of(`${mod}:molten_${materialName}`), tag: `forge:molten_${materialName}` }
         } else if (Fluid.exists(`${mod}:${materialName}`)) {
             return { stack: Fluid.of(`${mod}:${materialName}`), tag: `forge:${materialName}` }
         }

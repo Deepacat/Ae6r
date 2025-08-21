@@ -80,7 +80,7 @@ ServerEvents.recipes(e => {
         materialCompacting(e, materialName, typesObj)
         scrapMelting(e, materialName, typesObj)
         materialScrapping(e, materialName, typesObj)
-        castingRecipes(e, materialName, typesObj)
+        fluidToItemRecipes(e, materialName, typesObj)
     }
 })
 
@@ -88,25 +88,6 @@ function smeltingXp(materialType, recipe) {
     if (/raw.*block/.test(materialType) && !materialType.includes('raw_redstone')) { recipe.xp(6); return }
     if (materialType.includes('raw') && !materialType.includes('raw_redstone')) { recipe.xp(0.7); return }
     if (materialType.includes('ores')) { recipe.xp(2); return }
-}
-
-// Gem and ingot recipes that aren't oreproc/smelting recipes
-function gemOrIngotRecipes(e, materialName, typesObj) {
-    if (!typesObj.gemOrIngot) { return }
-
-    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
-    if (typesObj.dust) {
-        // e.recipes.
-    }
-    if (typesObj.fluid) {
-        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
-        let fluid = typesObj.fluid
-
-        thermalChiller(e, gemOrIngotItem, ['tconstruct:ingot_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
-            .id(`emendatus:thermal/chiller/${materialName}_ingot`)
-        embersStamping(e, gemOrIngotItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:ingot_stamp')
-            .id(`emendatus:embers/stamping/${materialName}_ingot`)
-    }
 }
 
 function smeltingRecipes(e, materialName, typesObj) {
@@ -374,6 +355,81 @@ function scrapMelting(e, materialName, typesObj) {
     }
 }
 
-function castingRecipes(e, materialName, typesObj) {
+function materialScrapping(e, materialName, typesObj) {
+    const crushable = ['gemOrIngot', 'plate']
+    // SHAPED HAMMER, IE CRUSHER, MEK CRUSHER, PEDESTALS CRUSHER UPGRADE?, THERMAL PULVERIZER, BLOODMAGIC ARC,
+    //  CREATE CRUSHING, CREATE MILLING, OCCULTISM CRUSHER, ARS CRUSH GLYPH
 
+    if (!typesObj.gemOrIngot) { return }
+    if (!typesObj.dust) { return }
+
+    let dustItem = typesObj.dust.item.id + ''
+    // e.remove({ type: recipesTypes, input: gemOrIngotItem, output: dustItem })
+
+    for (let type of crushable) {
+        if (!typesObj[type]) { continue }
+        let itemToCrush = typesObj[type].item.id + ''
+
+        e.remove({ type: 'minecraft:crafting', input: itemToCrush, output: dustItem })
+        e.shaped(dustItem, [
+            'H  ',
+            'I  '
+        ], {
+            H: 'immersiveengineering:hammer',
+            I: itemToCrush
+        }).id(`emendatus:crushing/hammer/${itemToCrush.split(':')[1]}_to_dust`)
+
+        e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: dustItem })
+        // e.recipes.immersiveengineering.crusher(Item.of(dustItem, 4), Item.of(itemToCrush, 4))
+        //     .id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
+        // e.recipes.immersiveengineering.crusher({
+        //     input: { item: itemToCrush, count: 4 },
+        //     result: { id: dustItem, count: 4 },
+        //     secondaries: []
+        // }).id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
+
+        e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: dustItem })
+        e.recipes.mekanism.crushing(dustItem, itemToCrush)
+            .id(`emendatus:crushing/mekanism/crusher/${itemToCrush.split(':')[1]}_to_dust`)
+        //pedestals
+        e.remove({ type: 'thermal:pulvizer', input: itemToCrush, output: dustItem })
+        e.recipes.thermal.pulverizer(dustItem, itemToCrush)
+            .id(`emendatus:crushing/thermal/pulverizer/${itemToCrush.split(':')[1]}_to_dust`)
+
+        e.remove({ type: 'bloodmagic:arc', input: itemToCrush, output: dustItem })
+        e.recipes.bloodmagic.arc(dustItem, itemToCrush, '#bloodmagic:arc/explosive')
+            .id(`emendatus:crushing/bloodmagic/arc/${itemToCrush.split(':')[1]}_to_dust`)
+
+        e.remove({ type: 'create:crushing', input: itemToCrush, output: dustItem })
+        e.recipes.create.crushing(dustItem, itemToCrush)
+            .id(`emendatus:crushing/create/crushing/${itemToCrush.split(':')[1]}_to_dust`)
+
+        e.remove({ type: 'create:milling', input: itemToCrush, output: dustItem })
+        e.recipes.create.milling(dustItem, itemToCrush)
+            .id(`emendatus:crushing/create/milling/${itemToCrush.split(':')[1]}_to_dust`)
+
+        e.remove({ type: 'occultism:crushing', input: itemToCrush, output: dustItem })
+        e.recipes.occultism.crushing(dustItem, itemToCrush)
+            .id(`emendatus:crushing/occultism/crushing/${itemToCrush.split(':')[1]}_to_dust`)
+
+        // e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: dustItem })
+        // e.recipes.ars_nouveau.crush(dustItem, itemToCrush)
+        //     .id(`emendatus:crushing/ars_nouveau/crush/${itemToCrush.split(':')[1]}_to_dust`)
+    }
+}
+
+function fluidToItemRecipes(e, materialName, typesObj) {
+    if (!typesObj.gemOrIngot) { return }
+
+    let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
+
+    if (typesObj.fluid) {
+        let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
+        let fluid = typesObj.fluid
+
+        thermalChiller(e, gemOrIngotItem, ['tconstruct:ingot_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
+            .id(`emendatus:thermal/chiller/${materialName}_ingot`)
+        embersStamping(e, gemOrIngotItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:ingot_stamp')
+            .id(`emendatus:embers/stamping/${materialName}_ingot`)
+    }
 }

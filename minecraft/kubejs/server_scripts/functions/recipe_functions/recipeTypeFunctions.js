@@ -68,6 +68,52 @@ function embersStamping(event, outputItem, inputs, stampItem) {
         },
     }
 }
+// custom ie crusher builder bc the kube addon is broken
+function immersiveEngineeringCrushing(e, output, input, secondaries) {
+    // ServerEvents.recipes(event => {
+    //     event.custom({
+    //         type: "immersiveengineering:crusher",
+    //         energy: 2400,
+    //         input: { item: 'minecraft:raw_iron' },
+    //         result: { item: 'create:crushed_raw_iron' },
+    //         secondaries: [
+    //             { chance: 0.5, output: { item: 'minecraft:stone' } }
+    //         ]
+    //     })
+    // })
+    const recipeObj = {
+        type: "immersiveengineering:crusher",
+        energy: 2400,
+        input: makeJsonIngredient(input),
+        result: makeJsonIngredient(output),
+    }
+
+    // if (secondaries) {
+    //     recipeObj.secondaries = []
+    //     for (let secondary of secondaries) {
+    //         if (secondary.chance) { // check if direct json input
+    //             let itemObj = makeJsonIngredient(secondary.output)
+    //         } if else () { // check if object
+    //             let itemObj = makeJsonIngredient(secondary.output)
+    //             itemObj.chance = secondary.chance
+    //             recipeObj.secondary.push(itemObj)
+    //         }
+    //     }
+    // }
+
+
+    const recipe = e.custom(recipeObj)
+
+    return {
+        id: function (customId) {
+            recipe.id(customId ?? `kubejs:thermal/chiller/${outputItem.split(':')[1]}`)
+        },
+    }
+}
+
+ServerEvents.recipes(e => {
+    immersiveEngineeringCrushing(e, 'minecraft:stone', 'minecraft:raw_iron', [{ chance: 0.5, output: { item: 'minecraft:stone' } }])
+})
 
 // custom chiller recipe builder because the kube one has issues with fluid tag inputs
 function thermalChiller(event, outputItem, inputs) {
@@ -79,9 +125,7 @@ function thermalChiller(event, outputItem, inputs) {
     if (!Array.isArray(inputs)) { inputs = [inputs] }
 
     recipeObj.ingredients = []
-    console.log(Object.entries(inputs))
     for (let input of inputs) {
-        console.log(`${input} for ${outputItem}`)
         if (input.fluid) {// fluid stack
             recipeObj.ingredients.push(makeFluidStackJson(input))
         } else if (input.class || typeof input === "string" && input.startsWith('#')) { // tagstack (ingredient)
