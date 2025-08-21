@@ -1,0 +1,106 @@
+
+[light_sources]
+	water_sensitive_check = true
+	block_entities = true
+	entities = true
+	self = true
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				chicken = true
+				axolotl = true
+				bee = true
+				arrow = true
+				fox = true
+				tropical_fish = true
+				pig = true
+				slime = true
+				skeleton = true
+				bat = true
+				rabbit = true
+				zombie = true
+				silverfish = true
+				armor_stand = true
+				drowned = true
+				sheep = true
+				experience_orb = true
+				player = true
+				item = true
+				wolf = true
+				skeleton_horse = true
+				salmon = true
+				zombie_villager = true
+				item_frame = true
+				horse = true
+				vindicator = true
+				phantom = true
+				painting = true
+				witch = true
+				glow_squid = true
+				squid = true
+				spider = true
+				creeper = true
+				enderman = true
+
+			[light_sources.settings.entities.aquaculture]
+				bluegill = true
+				muskellunge = true
+				catfish = true
+				brown_shrooma = true
+				carp = true
+				rainbow_trout = true
+				red_shrooma = true
+				gar = true
+				perch = true
+				brown_trout = true
+				smallmouth_bass = true
+				minnow = true
+
+			[light_sources.settings.entities.ars_nouveau]
+				whirlisprig = true
+
+			[light_sources.settings.entities.environmental]
+				deer = true
+
+			[light_sources.settings.entities.alexsmobs]
+				crocodile = true
+				cockroach = true
+				murmur = true
+				murmur_head = true
+				grizzly_bear = true
+				blue_jay = true
+				centipede_body = true
+				rocky_roller = true
+				centipede_head = true
+				catfish = true
+				raccoon = true
+				fly = true
+				centipede_tail = true
+				crow = true
+				underminer = true
+				terrapin = true
+
+			[light_sources.settings.entities.quark]
+				wraith = true
+				forgotten = true
+				toretoise = true
+				stoneling = true
+
+			[light_sources.settings.entities.eidolon]
+				wraith = true
+				slimy_slug = true
+				raven = true
+				zombie_brute = true
+
+			[light_sources.settings.entities.embers]
+				ancient_golem = true
+
+			[light_sources.settings.entities.lootr]
+				lootr_minecart = true
+
+			[light_sources.settings.entities.artifacts]
+				mimic = true
+
