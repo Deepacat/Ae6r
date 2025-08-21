@@ -655,7 +655,14 @@
 			]
 			tasks: [{
 				id: "0219B24A8CA05EB7"
-				item: "tconstruct:blank_cast"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "item_tag(tconstruct:casts/gold)"
+					}
+				}
+				title: "Any Gold Cast"
 				type: "item"
 			}]
 			title: "Permanent Casts"
@@ -3094,15 +3101,15 @@
 			}]
 			tasks: [{
 				count: 3L
-				id: "7C1FCB8F38A3F12E"
+				id: "795FF0ADE8B6BD8B"
 				item: {
-					Count: 1b
-					id: "itemfilters:tag"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						value: "forge:bones/wither"
+						"ftbfiltersystem:filter": "item_tag(forge:bones/wither)"
 					}
 				}
-				title: "Necrotic Bones"
+				title: "Necrotic Bone"
 				type: "item"
 			}]
 			title: "Withering Bones"
@@ -3133,7 +3140,7 @@
 		{
 			dependencies: ["155CE535A506F2D4"]
 			description: [
-				"The boring, old flint and steel lights single blocks on fire, and once it’s used up, it’s gone. Enter the Flint and Bronze."
+				"The boring, old flint and steel lights single blocks on fire, and once it’s used up, it’s gone. Enter the Flint and Brick."
 				""
 				"This tool has more durability than a typical flint and steel and has the added benefit of accepting abilities and upgrades. Light more than a single tile! Burn parts off of mobs with severing!"
 			]
@@ -3148,35 +3155,37 @@
 			tasks: [{
 				id: "695EB3346312D3B2"
 				item: {
-					Count: 1b
-					id: "tconstruct:flint_and_bronze"
+					Count: 1
+					id: "tconstruct:flint_and_brick"
 					tag: {
 						Damage: 0
-						HideFlags: 3
 						tic_broken: 0b
 						tic_modifiers: [
 							{
-								level: 1s
+								level: 1
+								name: "tconstruct:firestarter"
+							}
+							{
+								level: 1
 								name: "tconstruct:fiery"
 							}
 							{
-								level: 1s
-								name: "tconstruct:firestarter_hidden"
+								level: 1
+								name: "tconstruct:scorching"
 							}
 						]
-						tic_multipliers: { }
-						tic_persistent_data: {
-							abilities: 0
-							upgrades: 1
-						}
+						tic_persistent: { }
 						tic_stats: {
 							"tconstruct:durability": 100.0f
+						}
+						tic_volatile_data: {
+							upgrades: 1
 						}
 					}
 				}
 				type: "item"
 			}]
-			title: "Tinkers Flint and Bronze"
+			title: "Tinkers Flint and Brick"
 			x: -1.5d
 			y: 4.5d
 		}
@@ -3195,10 +3204,10 @@
 				count: 3L
 				id: "45D7DCB514F39202"
 				item: {
-					Count: 1b
-					id: "itemfilters:tag"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						value: "tconstruct:anvil_metal"
+						"ftbfiltersystem:filter": "item_tag(tconstruct:anvil_metal)"
 					}
 				}
 				title: "Any #tconstruct:anvil_metal"
