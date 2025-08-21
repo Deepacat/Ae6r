@@ -1,3 +1,4 @@
+// priority: 999
 /* 
     obj[0] = gets the name of material object
     obj[1] = gets the material object, letting you access the data like .type
