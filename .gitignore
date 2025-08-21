@@ -2,7 +2,7 @@ minecraft/*
 instance.cfg
 mmc-pack.json
 modlist.html
-build/
+minecraft/build/
 flame/
 
 !/minecraft/config*
@@ -10,7 +10,7 @@ flame/
 !/minecraft/kubejs*
 !/minecraft/config/emi.json
 !/minecraft/config/icon.png
-!/minecraft/mods/cc*.jar
+!/minecraft/*pakku*
 
 minecraft/config/alexsmobs/*
 minecraft/config/worldedit*
