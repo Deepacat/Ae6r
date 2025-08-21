@@ -8,7 +8,7 @@ ServerEvents.recipes(e => {
     const idRemovals = [
         'quark:tweaks/crafting/utility/misc/easy_sticks',
         'minecraft:stick',
-        
+
         'thermal:invar_dust_3',
 
         /bloodmagic:alchemytable\/melee_damage_anointment/,
@@ -56,16 +56,16 @@ ServerEvents.recipes(e => {
         /create:blasting\/ingot_\w+_compat/,
         /create:blasting\/\w+_ingot_compat/,
         /create:compat\/thermal\/crushing\/\w+_ore/,
-        
+
         /thermal:compat\/\w+\/\w+_ore/,
-        
+
         /mekanism:storage_blocks\/\w+/,
         /mekanism:nuggets\/\w+/,
         /mekanism:processing\/\w+\/storage_blocks\/from_ingots/,
         /mekanism:processing\/\w+\/ingot\/from_block/,
         /mekanism:processing\/\w+\/ingot\/from_nuggets/,
         /mekanism:processing\/\w+\/nugget\/from_ingot/,
-        
+
         /thermal:storage\/\w+_block/,
         /thermal:storage\/\w+_ingot_from_nuggets/,
         /thermal:storage\/\w+_nugget_from_ingot/,
@@ -90,34 +90,26 @@ ServerEvents.recipes(e => {
         /occultism:crafting\/\w+_ingot_from_nuggets/
     ]
 
+    // todo organize this LMAO (also move id removals to respective recipes...?)
     const recipeFilterRemovals = [
-        {
-            output: 'mekanism:sawdust',
-            mod: 'mekanism',
-            type: 'mekanism:sawing'
-        },
-        {
-            output: '/\\w+:\\w+_gear$/',
-            type: 'minecraft:crafting_shaped'
-        },
-        {
-            mod: 'occultism',
-            type: 'occultism:miner'
-        },
-        {
-            output: '/powah:\\w+_starter/',
-            mod: 'powah'
-        },
+        { output: 'mekanism:sawdust', mod: 'mekanism', type: 'mekanism:sawing' },
+
+        { output: 'botania:mana_powder', mod: 'botania' },
+        
+        { output: '/\\w+:\\w+_gear$/', type: 'minecraft:crafting_shaped' },
+
+        { mod: 'occultism', type: 'occultism:miner' },
+
+        { output: '/powah:\\w+_starter/', mod: 'powah' },
         { type: 'botanypots:crop' },
+
         { type: 'botanypots:soil' },
+
         { type: 'thermal:insolator' },
         { type: 'immersiveengineering:cloche' },
+
         { type: 'valhelsia_structures:axe_crafting' },
-        {
-            input: 'minecraft:fire_charge',
-            mod: 'thermal',
-            type: 'minecraft:crafting_shapeless'
-        },
+        { input: 'minecraft:fire_charge', mod: 'thermal', type: 'minecraft:crafting_shapeless' },
         { type: 'pedestals:pedestal_crushing', output: '#forge:dyes' },
         { type: 'create:milling', output: '#forge:dyes' },
         { type: 'create:crushing', output: '#forge:dyes' },
@@ -147,8 +139,10 @@ ServerEvents.recipes(e => {
         { mod: 'theoneprobe' },
 
         { type: 'thermal:compression_fuel' },
+
         { type: 'eidolon:worktable' },
         { type: 'eidolon:crucible' },
+
         { output: 'apotheosis:hellshelf', id: 'apotheosis:hellshelf' },
         { output: 'apotheosis:seashelf', id: 'apotheosis:seashelf' },
         { output: 'apotheosis:endshelf', id: 'apotheosis:endshelf' },
@@ -183,7 +177,8 @@ ServerEvents.recipes(e => {
         { output: 'ars_nouveau:archmage_robes', id: 'ars_nouveau:archmage_robes' },
         { output: 'ars_nouveau:archmage_leggings', id: 'ars_nouveau:archmage_leggings' },
         { output: 'ars_nouveau:archmage_boots', id: 'ars_nouveau:archmage_boots' },
-
+        
+        // why does e6e remove like this why dont they just do id removals what even
         { output: 'bloodmagic:soulforge', id: 'bloodmagic:soul_forge' },
         { output: 'bloodmagic:ritualdiviner', id: 'bloodmagic:ritual_diviner_0' },
         { output: 'bloodmagic:blankrune', id: 'bloodmagic:blood_rune_blank' },
