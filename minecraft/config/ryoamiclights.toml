@@ -14,13 +14,16 @@
 				axolotl = true
 				bee = true
 				arrow = true
+				cow = true
 				fox = true
 				tropical_fish = true
 				pig = true
 				slime = true
 				skeleton = true
+				iron_golem = true
 				bat = true
 				rabbit = true
+				cat = true
 				zombie = true
 				silverfish = true
 				armor_stand = true
@@ -28,8 +31,10 @@
 				sheep = true
 				experience_orb = true
 				player = true
+				dolphin = true
 				item = true
 				wolf = true
+				villager = true
 				skeleton_horse = true
 				salmon = true
 				zombie_villager = true
@@ -40,16 +45,60 @@
 				painting = true
 				witch = true
 				glow_squid = true
+				cod = true
 				squid = true
 				spider = true
 				creeper = true
 				enderman = true
 
+			[light_sources.settings.entities.environmental]
+				deer = true
+
+			[light_sources.settings.entities.alexsmobs]
+				crocodile = true
+				flying_fish = true
+				cockroach = true
+				murmur = true
+				murmur_head = true
+				lobster = true
+				grizzly_bear = true
+				blue_jay = true
+				centipede_body = true
+				rocky_roller = true
+				centipede_head = true
+				catfish = true
+				seagull = true
+				raccoon = true
+				fly = true
+				tasmanian_devil = true
+				centipede_tail = true
+				crow = true
+				underminer = true
+				terrapin = true
+				sugar_glider = true
+
+			[light_sources.settings.entities.eidolon]
+				wraith = true
+				slimy_slug = true
+				raven = true
+				zombie_brute = true
+
+			[light_sources.settings.entities.embers]
+				ember_projectile = true
+				ancient_golem = true
+
+			[light_sources.settings.entities.lootr]
+				lootr_minecart = true
+
 			[light_sources.settings.entities.aquaculture]
+				atlantic_halibut = true
+				jellyfish = true
 				bluegill = true
+				red_grouper = true
 				muskellunge = true
 				catfish = true
 				brown_shrooma = true
+				atlantic_herring = true
 				carp = true
 				rainbow_trout = true
 				red_shrooma = true
@@ -59,47 +108,25 @@
 				smallmouth_bass = true
 				minnow = true
 
+			[light_sources.settings.entities.botania]
+				mana_burst = true
+
 			[light_sources.settings.entities.ars_nouveau]
+				starbuncle = true
+				bookwyrm = true
 				whirlisprig = true
 
-			[light_sources.settings.entities.environmental]
-				deer = true
+			[light_sources.settings.entities.upgrade_aquatic]
+				nautilus = true
 
-			[light_sources.settings.entities.alexsmobs]
-				crocodile = true
-				cockroach = true
-				murmur = true
-				murmur_head = true
-				grizzly_bear = true
-				blue_jay = true
-				centipede_body = true
-				rocky_roller = true
-				centipede_head = true
-				catfish = true
-				raccoon = true
-				fly = true
-				centipede_tail = true
-				crow = true
-				underminer = true
-				terrapin = true
+			[light_sources.settings.entities.thermal]
+				blitz = true
 
 			[light_sources.settings.entities.quark]
 				wraith = true
 				forgotten = true
 				toretoise = true
 				stoneling = true
-
-			[light_sources.settings.entities.eidolon]
-				wraith = true
-				slimy_slug = true
-				raven = true
-				zombie_brute = true
-
-			[light_sources.settings.entities.embers]
-				ancient_golem = true
-
-			[light_sources.settings.entities.lootr]
-				lootr_minecart = true
 
 			[light_sources.settings.entities.artifacts]
 				mimic = true

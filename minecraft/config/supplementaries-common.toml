@@ -191,7 +191,8 @@
 	[functional.cannon]
 		enabled = true
 		#Makes TNT-like block shot from a cannon explode on impact
-		explode_tnt = true
+		#Allowed Values: IGNITE, IGNITE_ON_IMPACT, NONE
+		explode_tnt = "IGNITE"
 		#Cannon fire power multiplier
 		#Range: 0.0 ~ 5.0
 		fire_power = 0.6
