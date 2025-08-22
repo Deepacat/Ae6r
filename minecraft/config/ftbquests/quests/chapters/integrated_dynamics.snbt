@@ -407,23 +407,10 @@
 			tasks: [{
 				id: "22CA50E3B6CE7873"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "integratedtunnels:part_exporter_world_item"
-							}
-							{
-								Count: 1b
-								id: "integratedtunnels:part_exporter_world_fluid"
-							}
-							{
-								Count: 1b
-								id: "integratedtunnels:part_exporter_world_energy"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(integratedtunnels:part_exporter_world_energy)item(integratedtunnels:part_exporter_world_item)item(integratedtunnels:part_exporter_world_fluid)item(integratedtunnels:part_exporter_world_block))"
 					}
 				}
 				title: "Exporters"
@@ -448,23 +435,10 @@
 			tasks: [{
 				id: "4647A50833440DED"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "integratedtunnels:part_importer_world_item"
-							}
-							{
-								Count: 1b
-								id: "integratedtunnels:part_importer_world_fluid"
-							}
-							{
-								Count: 1b
-								id: "integratedtunnels:part_importer_world_energy"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(integratedtunnels:part_importer_world_energy)item(integratedtunnels:part_importer_world_item)item(integratedtunnels:part_importer_world_fluid)item(integratedtunnels:part_importer_world_block))"
 					}
 				}
 				title: "Importers"
@@ -482,51 +456,10 @@
 			tasks: [{
 				id: "3526F3A4F711D7E1"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "integrateddynamics:part_audio_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_block_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_entity_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_extradimensional_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_fluid_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_inventory_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_machine_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_network_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_redstone_reader"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_world_reader"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(integrateddynamics:part_audio_reader)item(integrateddynamics:part_block_reader)item(integrateddynamics:part_entity_reader)item(integrateddynamics:part_extradimensional_reader)item(integrateddynamics:part_fluid_reader)item(integrateddynamics:part_inventory_reader)item(integrateddynamics:part_machine_reader)item(integrateddynamics:part_network_reader)item(integrateddynamics:part_redstone_reader)item(integrateddynamics:part_world_reader))"
 					}
 				}
 				title: "Readers"
@@ -543,27 +476,10 @@
 			tasks: [{
 				id: "2BAF749D34AB438F"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "integrateddynamics:part_audio_writer"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_effect_writer"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_inventory_writer"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_redstone_writer"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(integrateddynamics:part_audio_writer)item(integrateddynamics:part_effect_writer)item(integrateddynamics:part_entity_writer)item(integrateddynamics:part_machine_writer)item(integrateddynamics:part_inventory_writer)item(integrateddynamics:part_redstone_writer)item(integratedcrafting:part_crafting_writer))"
 					}
 				}
 				title: "Writers"
@@ -583,19 +499,10 @@
 			tasks: [{
 				id: "6465225AA0D53CFB"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "integrateddynamics:part_connector_mono_directional"
-							}
-							{
-								Count: 1b
-								id: "integrateddynamics:part_connector_omni_directional"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(integrateddynamics:part_connector_mono_directional)item(integrateddynamics:part_connector_omni_directional))"
 					}
 				}
 				title: "Directional Connectors"
