@@ -85,7 +85,7 @@
 				""
 				"Note: The Gas-Burning Generator quest must be completed before proceeding."
 			]
-			icon: "engineersdecor:sign_hotwire"
+			icon: "architects_palette:hazard_sign"
 			id: "00000000000006A7"
 			rewards: [{
 				id: "0000000000000817"
@@ -290,6 +290,7 @@
 				""
 				"Consider building multiple Infusers, one per type. Automatic a single infuser for all types is quite possible, but requires a fair amount more effort while being slower than independent processing lines. "
 			]
+			icon: "mekanism:metallurgic_infuser"
 			id: "00000000000006BD"
 			rewards: [
 				{
@@ -310,31 +311,10 @@
 			tasks: [{
 				id: "00000000000006BE"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "mekanism:metallurgic_infuser"
-							}
-							{
-								Count: 1b
-								id: "mekanism:basic_infusing_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:advanced_infusing_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:elite_infusing_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:ultimate_infusing_factory"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(mekanism:metallurgic_infuser)item(mekanism:basic_infusing_factory)item(mekanism:advanced_infusing_factory)item(mekanism:elite_infusing_factory)item(mekanism:ultimate_infusing_factory))"
 					}
 				}
 				title: "Metallurgic Infuser"
@@ -354,6 +334,7 @@
 				""
 				"For example, a single Redstone will make a single Infused Alloy, however a single Enriched Redstone will make eight Alloys. It is therefore well worth the effort to enrich these items. "
 			]
+			icon: "mekanism:enrichment_chamber"
 			id: "00000000000006BF"
 			rewards: [
 				{
@@ -382,31 +363,10 @@
 			tasks: [{
 				id: "00000000000006C0"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "mekanism:enrichment_chamber"
-							}
-							{
-								Count: 1b
-								id: "mekanism:basic_enriching_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:advanced_enriching_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:elite_enriching_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:ultimate_enriching_factory"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(mekanism:enrichment_chamber)item(mekanism:basic_enriching_factory)item(mekanism:advanced_enriching_factory)item(mekanism:elite_enriching_factory)item(mekanism:ultimate_enriching_factory))"
 					}
 				}
 				title: "Enrichment Chamber"
@@ -418,6 +378,7 @@
 		{
 			dependencies: ["00000000000006BF"]
 			description: ["The crusher is an integral machine to advanced ore processing methods, but it can also be used to mash up organics to make Bio Fuel, which can be further refined into Ethylene. "]
+			icon: "mekanism:crusher"
 			id: "00000000000006C1"
 			rewards: [
 				{
@@ -430,7 +391,7 @@
 				{
 					count: 16
 					id: "000000000000082C"
-					item: "simplefarming:orange"
+					item: "atmospheric:orange"
 					title: "Orange"
 					type: "item"
 				}
@@ -439,31 +400,10 @@
 			tasks: [{
 				id: "00000000000006C2"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "mekanism:crusher"
-							}
-							{
-								Count: 1b
-								id: "mekanism:basic_crushing_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:advanced_crushing_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:elite_crushing_factory"
-							}
-							{
-								Count: 1b
-								id: "mekanism:ultimate_crushing_factory"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(mekanism:crusher)item(mekanism:basic_crushing_factory)item(mekanism:advanced_crushing_factory)item(mekanism:elite_crushing_factory)item(mekanism:ultimate_crushing_factory))"
 					}
 				}
 				title: "Crusher"
@@ -870,51 +810,51 @@
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:aluminum_clump"
+									id: "emendatus:aluminum_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:silver_clump"
+									id: "emendatus:silver_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:nickel_clump"
+									id: "emendatus:nickel_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:zinc_clump"
+									id: "emendatus:zinc_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:cobalt_clump"
+									id: "emendatus:cobalt_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:thallasium_clump"
+									id: "emendatus:thallasium_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:iesnium_clump"
+									id: "emendatus:iesnium_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:regalium_clump"
+									id: "emendatus:regalium_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:utherium_clump"
+									id: "emendatus:utherium_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:froststeel_clump"
+									id: "emendatus:froststeel_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:cloggrum_clump"
+									id: "emendatus:cloggrum_clump"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:nebu_clump"
+									id: "emendatus:nebu_clump"
 								}
 							]
 						}
@@ -936,12 +876,12 @@
 				""
 				"This may then be processed in a Chemical Crystallizer to produce a solid form of the element."
 			]
-			icon: "emendatusenigmatica:lithium_dust"
+			icon: "mekanism:dust_lithium"
 			id: "0000000000000709"
 			rewards: [{
 				count: 16
 				id: "000000000000070C"
-				item: "emendatusenigmatica:lithium_dust"
+				item: "mekanism:dust_lithium"
 				title: "Lithium Dust"
 				type: "item"
 			}]
@@ -959,7 +899,7 @@
 				}
 				{
 					id: "65ABA5E4FB3C53C2"
-					item: "emendatusenigmatica:lithium_dust"
+					item: "mekanism:dust_lithium"
 					type: "item"
 				}
 			]
@@ -969,7 +909,7 @@
 		}
 		{
 			dependencies: ["0000000000000764"]
-			icon: "emendatusenigmatica:sulfur_dust"
+			icon: "emendatus:sulfur_dust"
 			id: "000000000000072B"
 			optional: true
 			shape: "rsquare"
@@ -984,7 +924,7 @@
 		}
 		{
 			dependencies: ["0000000000000765"]
-			icon: "emendatusenigmatica:uranium_ingot"
+			icon: "emendatus:uranium_ingot"
 			id: "000000000000072D"
 			optional: true
 			shape: "rsquare"
@@ -1215,7 +1155,7 @@
 		}
 		{
 			dependencies: ["0000000000000765"]
-			icon: "emendatusenigmatica:fluorite_gem"
+			icon: "emendatus:fluorite_gem"
 			id: "000000000000074F"
 			optional: true
 			shape: "rsquare"
@@ -1792,7 +1732,7 @@
 				{
 					count: 64
 					id: "00000000000007D9"
-					item: "emendatusenigmatica:uranium_ore"
+					item: "emendatus:uranium_ore"
 					title: "Uranium Ore"
 					type: "item"
 				}
@@ -2346,27 +2286,10 @@
 			tasks: [{
 				id: "487EEDB965838B35"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "mekanism:basic_tier_installer"
-							}
-							{
-								Count: 1b
-								id: "mekanism:advanced_tier_installer"
-							}
-							{
-								Count: 1b
-								id: "mekanism:elite_tier_installer"
-							}
-							{
-								Count: 1b
-								id: "mekanism:ultimate_tier_installer"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(mekanism:basic_tier_installer)item(mekanism:advanced_tier_installer)item(mekanism:elite_tier_installer)item(mekanism:ultimate_tier_installer))"
 					}
 				}
 				title: "Tier Installers"
@@ -2426,51 +2349,51 @@
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:aluminum_shard"
+									id: "emendatus:aluminum_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:silver_shard"
+									id: "emendatus:silver_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:nickel_shard"
+									id: "emendatus:nickel_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:zinc_shard"
+									id: "emendatus:zinc_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:cobalt_shard"
+									id: "emendatus:cobalt_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:thallasium_shard"
+									id: "emendatus:thallasium_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:iesnium_shard"
+									id: "emendatus:iesnium_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:regalium_shard"
+									id: "emendatus:regalium_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:utherium_shard"
+									id: "emendatus:utherium_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:froststeel_shard"
+									id: "emendatus:froststeel_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:cloggrum_shard"
+									id: "emendatus:cloggrum_shard"
 								}
 								{
 									Count: 1b
-									id: "emendatusenigmatica:nebu_shard"
+									id: "emendatus:nebu_shard"
 								}
 							]
 						}
@@ -2494,7 +2417,7 @@
 				""
 				"Mekanism’s highest form of ore processing ends at quintupling and requires a hefty amount of infrastructure to access. As with quadrupling, the exact process can be determined from JEI by looking at metal crystals. "
 			]
-			icon: "emendatusenigmatica:fluorite_gem"
+			icon: "emendatus:fluorite_gem"
 			id: "1BA848F73C707DCC"
 			rewards: [{
 				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_mekanism_loot_legendary"
@@ -2541,51 +2464,51 @@
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:aluminum_crystal"
+								id: "emendatus:aluminum_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:silver_crystal"
+								id: "emendatus:silver_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:nickel_crystal"
+								id: "emendatus:nickel_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:zinc_crystal"
+								id: "emendatus:zinc_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:cobalt_crystal"
+								id: "emendatus:cobalt_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:thallasium_crystal"
+								id: "emendatus:thallasium_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:iesnium_crystal"
+								id: "emendatus:iesnium_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:regalium_crystal"
+								id: "emendatus:regalium_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:utherium_crystal"
+								id: "emendatus:utherium_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:froststeel_crystal"
+								id: "emendatus:froststeel_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:cloggrum_crystal"
+								id: "emendatus:cloggrum_crystal"
 							}
 							{
 								Count: 1b
-								id: "emendatusenigmatica:nebu_crystal"
+								id: "emendatus:nebu_crystal"
 							}
 						]
 					}

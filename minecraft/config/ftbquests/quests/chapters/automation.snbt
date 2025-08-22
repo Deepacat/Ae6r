@@ -49,27 +49,10 @@
 			tasks: [{
 				id: "523B5EFA6AB455D2"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "mekanism:basic_logistical_transporter"
-							}
-							{
-								Count: 1b
-								id: "mekanism:advanced_logistical_transporter"
-							}
-							{
-								Count: 1b
-								id: "mekanism:elite_logistical_transporter"
-							}
-							{
-								Count: 1b
-								id: "mekanism:ultimate_logistical_transporter"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(mekanism:basic_logistical_transporter)item(mekanism:advanced_logistical_transporter)item(mekanism:elite_logistical_transporter)item(mekanism:ultimate_logistical_transporter))"
 					}
 				}
 				title: "Any Logistical Transporter"
@@ -177,7 +160,7 @@
 				""
 				"There is also a mod guidebook \"Modular Routers Manual\", which will have details on everything."
 			]
-			icon: "modularrouters:item_router"
+			icon: "modularrouters:modular_router"
 			id: "15E49A6B00BE744C"
 			rewards: [{
 				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_miners_delight"
@@ -189,7 +172,7 @@
 			subtitle: "Have you tried turning it off and on again?"
 			tasks: [{
 				id: "366C08F8F32D7E4B"
-				item: "modularrouters:item_router"
+				item: "modularrouters:modular_router"
 				type: "item"
 			}]
 			title: "Item Router"
@@ -307,7 +290,7 @@
 		}
 		{
 			dependencies: ["30AA6A8DF0B65273"]
-			description: ["Magic mods can have their item transportation fun too! Carbuncles will helpfully collect items and store them into inventories for you."]
+			description: ["Magic mods can have their item transportation fun too! Starbuncles will helpfully collect items and store them into inventories for you."]
 			id: "2831B38150565AEF"
 			rewards: [{
 				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_sorcerers_delight"
@@ -318,10 +301,10 @@
 			}]
 			tasks: [{
 				id: "6895F42F97F55A26"
-				item: "ars_nouveau:carbuncle_charm"
+				item: "ars_nouveau:starbuncle_charm"
 				type: "item"
 			}]
-			title: "Carbuncle"
+			title: "Starbuncle"
 			x: 8.0d
 			y: 1.5d
 		}
@@ -677,34 +660,10 @@
 			tasks: [{
 				id: "6F58BD0AC1F29AD4"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "modularrouters:fluid_module"
-								tag: {
-									modularrouters: {
-										Direction: "NONE"
-										FluidDir: 0b
-										MaxTransfer: 1000
-										ModuleFilter: { }
-									}
-								}
-							}
-							{
-								Count: 1b
-								id: "modularrouters:fluid_module_2"
-								tag: {
-									modularrouters: {
-										FluidDir: 0b
-										MaxTransfer: 1000
-										ModuleFilter: { }
-									}
-								}
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(modularrouters:fluid_module)item(modularrouters:fluid_module_2))"
 					}
 				}
 				title: "Fluid Modules"
@@ -756,31 +715,10 @@
 				{
 					id: "4ABEFC9942D16386"
 					item: {
-						Count: 1b
-						id: "itemfilters:or"
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "pneumaticcraft:logistics_frame_requester"
-								}
-								{
-									Count: 1b
-									id: "pneumaticcraft:logistics_frame_storage"
-								}
-								{
-									Count: 1b
-									id: "pneumaticcraft:logistics_frame_default_storage"
-								}
-								{
-									Count: 1b
-									id: "pneumaticcraft:logistics_frame_passive_provider"
-								}
-								{
-									Count: 1b
-									id: "pneumaticcraft:logistics_frame_active_provider"
-								}
-							]
+							"ftbfiltersystem:filter": "or(item(pneumaticcraft:logistics_frame_requester)item(pneumaticcraft:logistics_frame_storage)item(pneumaticcraft:logistics_frame_default_storage)item(pneumaticcraft:logistics_frame_passive_provider)item(pneumaticcraft:logistics_frame_active_provider))"
 						}
 					}
 					title: "Any logistics network frame"
@@ -1617,12 +1555,12 @@
 			id: "26365967FDE026B6"
 			rewards: [{
 				id: "2E26D4A73E250301"
-				item: "create:adjustable_pulse_repeater"
+				item: "create:pulse_repeater"
 				type: "item"
 			}]
 			tasks: [{
 				id: "1E9609D8328D536F"
-				item: "create:adjustable_pulse_repeater"
+				item: "create:pulse_repeater"
 				type: "item"
 			}]
 			x: -4.5d
@@ -2597,30 +2535,10 @@
 			tasks: [{
 				id: "659E378856A13D06"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "modularrouters:puller_module_1"
-								tag: {
-									modularrouters: {
-										Direction: "NONE"
-										ModuleFilter: { }
-									}
-								}
-							}
-							{
-								Count: 1b
-								id: "modularrouters:puller_module_2"
-								tag: {
-									modularrouters: {
-										ModuleFilter: { }
-									}
-								}
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(modularrouters:puller_module_1)item(modularrouters:puller_module_2))"
 					}
 				}
 				title: "Puller Modules"
@@ -2654,39 +2572,10 @@
 			tasks: [{
 				id: "5CFF2A9710804BFA"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "modularrouters:sender_module_1"
-								tag: {
-									modularrouters: {
-										Direction: "NONE"
-										ModuleFilter: { }
-									}
-								}
-							}
-							{
-								Count: 1b
-								id: "modularrouters:sender_module_2"
-								tag: {
-									modularrouters: {
-										ModuleFilter: { }
-									}
-								}
-							}
-							{
-								Count: 1b
-								id: "modularrouters:sender_module_3"
-								tag: {
-									modularrouters: {
-										ModuleFilter: { }
-									}
-								}
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(modularrouters:sender_module_1)item(modularrouters:sender_module_2)item(modularrouters:sender_module_3))"
 					}
 				}
 				title: "Sender Modules"
@@ -2871,31 +2760,10 @@
 			tasks: [{
 				id: "0F3A18E0B4440919"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "modularrouters:extruder_module_1"
-								tag: {
-									modularrouters: {
-										Direction: "NONE"
-										ModuleFilter: { }
-									}
-								}
-							}
-							{
-								Count: 1b
-								id: "modularrouters:extruder_module_2"
-								tag: {
-									modularrouters: {
-										Direction: "NONE"
-										ModuleFilter: { }
-									}
-								}
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(modularrouters:extruder_module_1)item(modularrouters:extruder_module_2))"
 					}
 				}
 				title: "Extruder Module"

@@ -21,9 +21,9 @@
 			rewards: [{
 				count: 4
 				id: "4623F41B74F1829E"
-				item: "emendatusenigmatica:iron_chunk"
+				item: "minecraft:raw_iron"
 				random_bonus: 8
-				title: "Iron Chunk"
+				title: "Raw Iron"
 				type: "item"
 			}]
 			shape: "gear"
@@ -222,7 +222,7 @@
 			subtitle: "Bootstrapping Technology"
 			tasks: [{
 				id: "00000000000004AE"
-				item: "emendatusenigmatica:invar_dust"
+				item: "emendatus:invar_dust"
 				type: "item"
 			}]
 			x: 6.0d

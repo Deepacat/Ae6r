@@ -28,7 +28,7 @@
 				}
 				{
 					id: "7D6B5C1ED8564A15"
-					item: "emendatusenigmatica:invar_dust"
+					item: "emendatus:invar_dust"
 					type: "item"
 				}
 			]
@@ -54,7 +54,7 @@
 					id: "1A9617FC53ED59BE"
 					item: {
 						Count: 1b
-						id: "emendatusenigmatica:enigmatic_hammer"
+						id: "immersive_engineering:hammer"
 						tag: {
 							Damage: 0
 						}
@@ -159,7 +159,7 @@
 			shape: "diamond"
 			tasks: [{
 				id: "2B77C401C033F97D"
-				item: "emendatusenigmatica:brass_ingot"
+				item: "emendatus:brass_ingot"
 				type: "item"
 			}]
 			x: 1.5d
@@ -754,7 +754,7 @@
 			shape: "diamond"
 			tasks: [{
 				id: "01569489009ABEDD"
-				item: "emendatusenigmatica:steel_ingot"
+				item: "emendatus:steel_ingot"
 				type: "item"
 			}]
 			x: 4.0d

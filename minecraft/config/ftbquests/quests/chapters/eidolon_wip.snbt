@@ -594,7 +594,7 @@
 				""
 				"If you want a more challenging recipe, try crafting a Shadow Gem too! It’ll be used in the more powerful and advanced recipes."
 			]
-			icon: "wizardsreborn:arcane_gold_ingot"
+			icon: "wizards_reborn:arcane_gold_ingot"
 			id: "0000000000000EAA"
 			rewards: [
 				{
@@ -617,7 +617,7 @@
 				{
 					count: 4L
 					id: "0000000000000EAB"
-					item: "wizardsreborn:arcane_gold_ingot"
+					item: "wizards_reborn:arcane_gold_ingot"
 					type: "item"
 				}
 				{

@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "ars_nouveau"
 	group: "5A8B89F87F77CF4C"
-	icon: "ars_nouveau:mana_gem"
+	icon: "ars_nouveau:source_gem"
 	id: "00000000000003AB"
 	order_index: 0
 	quest_links: [ ]
@@ -66,7 +66,7 @@
 				""
 				"Most Sourcelinks absorb within a 10 to 15 block radius. "
 			]
-			icon: "ars_nouveau:mana_gem"
+			icon: "ars_nouveau:source_gem"
 			id: "00000000000003B6"
 			rewards: [
 				{
@@ -111,7 +111,7 @@
 			tasks: [{
 				count: 8L
 				id: "00000000000003C0"
-				item: "ars_nouveau:magic_clay"
+				item: "kubejs:magic_clay"
 				type: "item"
 			}]
 			title: "Magic Clay"
@@ -121,7 +121,7 @@
 		{
 			dependencies: ["00000000000003BE"]
 			description: ["Marvelous Clay unlocks the creation of Tier 2 spells. These also require an Apprentice's Spellbook to cast. "]
-			icon: "ars_nouveau:marvelous_clay"
+			icon: "kubejs:marvelous_clay"
 			id: "00000000000003C2"
 			rewards: [{
 				id: "0000000000000669"
@@ -134,7 +134,7 @@
 				{
 					count: 8L
 					id: "00000000000003C3"
-					item: "ars_nouveau:marvelous_clay"
+					item: "kubejs:marvelous_clay"
 					type: "item"
 				}
 				{
@@ -150,7 +150,7 @@
 		{
 			dependencies: ["00000000000003C2"]
 			description: ["Mythical Clay unlocks the creation of Tier 3 spells. These also require an Archmage's Spellbook to cast. "]
-			icon: "ars_nouveau:mythical_clay"
+			icon: "kubejs:mythical_clay"
 			id: "00000000000003C4"
 			rewards: [{
 				id: "0000000000000668"
@@ -163,7 +163,7 @@
 				{
 					count: 2L
 					id: "00000000000003C5"
-					item: "ars_nouveau:mythical_clay"
+					item: "kubejs:mythical_clay"
 					type: "item"
 				}
 				{
@@ -311,7 +311,7 @@
 		{
 			dependencies: ["00000000000003D7"]
 			description: [
-				"The Mana Bloom sits at the border between the mundane and the magical. It grows as any other plant, but its roots reach through the veil, soaking in more of the Source that infuses the earth."
+				"The Magebloom sits at the border between the mundane and the magical. It grows as any other plant, but its roots reach through the veil, soaking in more of the Source that infuses the earth."
 				""
 				"Growing these will serve two purposes to a budding practitioner. First, they produce more Source than any mundane plants when grown. Second, they can be woven into a fabric that intertwines itself with wearer's Source, expanding the practitioner's reserves.  "
 			]
@@ -325,7 +325,7 @@
 			subtitle: "Putting Down Roots"
 			tasks: [{
 				id: "00000000000003D6"
-				item: "ars_nouveau:mana_bloom_crop"
+				item: "ars_nouveau:magebloom_crop"
 				type: "item"
 			}]
 			x: 0.5d
@@ -453,7 +453,7 @@
 			subtitle: "Witches Abroad"
 			tasks: [{
 				id: "00000000000003EC"
-				item: "ars_nouveau:arcane_relay"
+				item: "ars_nouveau:relay"
 				type: "item"
 			}]
 			x: -1.5d
@@ -473,7 +473,7 @@
 			subtitle: "Equal Rites"
 			tasks: [{
 				id: "00000000000003EE"
-				item: "ars_nouveau:arcane_relay_splitter"
+				item: "ars_nouveau:relay_splitter"
 				type: "item"
 			}]
 			x: -3.0d
@@ -498,7 +498,7 @@
 			subtitle: "Boop the Snoot"
 			tasks: [{
 				id: "00000000000003F1"
-				item: "ars_nouveau:whelp_charm"
+				item: "ars_nouveau:bookwyrm_charm"
 				type: "item"
 			}]
 			x: 5.5d
@@ -507,11 +507,11 @@
 		{
 			dependencies: ["00000000000009ED"]
 			description: [
-				"Carbuncles are curious forest critters with a love for all things shiny. Gold, in particular. They may be befriended by tossing them a small amount of gold. Once befriended, they will assist by collecting items and moving them to inventories. "
+				"Starbuncles are curious forest critters with a love for all things shiny. Gold, in particular. They may be befriended by tossing them a small amount of gold. Once befriended, they will assist by collecting items and moving them to inventories. "
 				""
-				"To tell a Carbuncle where to store items, Right-Click it with a Dominion Wand and then Sneak Right-Click any inventory with the wand."
+				"To tell a Starbuncle where to store items, Right-Click it with a Dominion Wand and then Sneak Right-Click any inventory with the wand."
 				""
-				"Refer to the Worn Notebook for an in-depth guide on using Carbuncles."
+				"Refer to the Worn Notebook for an in-depth guide on using Starbuncles."
 				""
 				"These critters can be an uncommon sight even in ancient forests. If none can be found, consider summoning them with the Altar of Birthing."
 			]
@@ -534,7 +534,7 @@
 			subtitle: "In Search of the Golden Acorn"
 			tasks: [{
 				id: "00000000000003F3"
-				item: "ars_nouveau:carbuncle_charm"
+				item: "ars_nouveau:starbuncle_charm"
 				type: "item"
 			}]
 			x: 6.5d
@@ -543,11 +543,11 @@
 		{
 			dependencies: ["00000000000009ED"]
 			description: [
-				"Sylphs are the care-takers of the forest, helping new growth to flourish. They will come with you willingly if you honor them by planting a tree in their stead. Once befriended, a Sylph will tend to a small area and gift you with their bounty. Plant down trees, crops, flowers, and other natural items and over time the Sylph will grow more of these and offer them to you."
+				"Whirlisprigs are the care-takers of the forest, helping new growth to flourish. They will come with you willingly if you honor them by planting a tree in their stead. Once befriended, a Whirlisprig will tend to a small area and gift you with their bounty. Plant down trees, crops, flowers, and other natural items and over time the Whirlisprig will grow more of these and offer them to you."
 				""
-				"Refer to the Worn Notebook for an in-depth guide on using Sylphs."
+				"Refer to the Worn Notebook for an in-depth guide on using Whirlisprigs."
 				""
-				"The number of wild Sylphs has dwindled in recent times. If none can be found, consider summoning them with the Altar of Birthing."
+				"The number of wild Whirlisprigs has dwindled in recent times. If none can be found, consider summoning them with the Altar of Birthing."
 			]
 			id: "00000000000003F4"
 			rewards: [
@@ -584,7 +584,7 @@
 			subtitle: "Whispering Winds"
 			tasks: [{
 				id: "00000000000003F5"
-				item: "ars_nouveau:sylph_charm"
+				item: "ars_nouveau:whirlisprig_charm"
 				type: "item"
 			}]
 			x: 4.5d
@@ -788,6 +788,7 @@
 				"00000000000003BE"
 			]
 			description: ["Source isn't the only well of power in this world, and some clever Sanguimancers have found a way to bind a spellbook to their Soul Network, allowing them to draw on a deeper well of power to cast their spells. "]
+			icon: "tomeofblood:archmage_tome_of_blood"
 			id: "221C600F3E3C813C"
 			rewards: [{
 				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_blood_magic_loot_epic"
@@ -800,35 +801,10 @@
 			tasks: [{
 				id: "106C65C1B54C90C6"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "tomeofblood:blood_tome_one"
-								tag: {
-									mode: 0
-									spells: ",touch,harm,break,self,projectile"
-								}
-							}
-							{
-								Count: 1b
-								id: "tomeofblood:blood_tome_two"
-								tag: {
-									mode: 0
-									spells: ",touch,harm,break,self,projectile"
-								}
-							}
-							{
-								Count: 1b
-								id: "tomeofblood:blood_tome_three"
-								tag: {
-									mode: 0
-									spells: ",touch,harm,break,self,projectile"
-								}
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(tomeofblood:novice_tome_of_blood)item(tomeofblood:apprentice_tome_of_blood)item(tomeofblood:archmage_tome_of_blood))"
 					}
 				}
 				title: "Tome of Blood"
@@ -1020,7 +996,7 @@
 			subtitle: "I Love the Smell of Napalm in the Morning"
 			tasks: [{
 				id: "729AECF6F582CCBA"
-				item: "ars_nouveau:ritual"
+				item: "ars_nouveau:ritual_brazier"
 				type: "item"
 			}]
 			x: 10.5d
@@ -1531,7 +1507,7 @@
 			subtitle: "Don't You Crittersize Me!"
 			tasks: [{
 				id: "0529231F83AA9DF1"
-				item: "ars_nouveau:familiar_carbuncle"
+				item: "ars_nouveau:familiar_starbuncle"
 				type: "item"
 			}]
 			x: 11.0d
@@ -1611,7 +1587,7 @@
 			subtitle: "The Queen of Sauce"
 			tasks: [{
 				id: "02FA381E42107A74"
-				item: "ars_nouveau:familiar_sylph"
+				item: "ars_nouveau:familiar_whirlisprig"
 				type: "item"
 			}]
 			x: 10.5d

@@ -285,13 +285,13 @@
 				{
 					id: "0000000000000DF3"
 					item: {
-						Count: 1b
-						id: "itemfilters:tag"
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
 						tag: {
-							value: "forge:candles"
+							"ftbfiltersystem:filter": "or(item_tag(minecraft:candles))"
 						}
 					}
-					title: "Any #forge:candles"
+					title: "Any #minecraft:candles"
 					type: "item"
 				}
 				{
