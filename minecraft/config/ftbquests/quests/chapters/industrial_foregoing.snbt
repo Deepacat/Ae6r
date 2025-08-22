@@ -45,6 +45,7 @@
 		{
 			dependencies: ["000000000000004A"]
 			description: ["The Fluid Extractor, shockingly, extracts fluid. Place one facing a log block, and it will slowly break down the log while producing Latex. Power is optional, but speeds up the process by a factor of 2.5. Acacia logs give the best yield."]
+			icon: "industrialforegoing:fluid_extractor"
 			id: "000000000000004B"
 			rewards: [
 				{
@@ -65,19 +66,10 @@
 			tasks: [{
 				id: "000000000000004C"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "industrialforegoing:fluid_extractor"
-							}
-							{
-								Count: 1b
-								id: "thermal:device_tree_extractor"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(industrialforegoing:fluid_extractor)item(thermal:device_tree_extractor))"
 					}
 				}
 				title: "Fluid Extractor"
@@ -89,6 +81,7 @@
 		{
 			dependencies: ["000000000000004B"]
 			description: ["The Latex Processing Unit takes latex, water, and power as inputs to produce Tiny Dry Rubber. This can be crafted into Dry Rubber, which in turn is smelted into Plastic, a critical resource."]
+			icon: "industrialforegoing:latex_processing_unit"
 			id: "000000000000004F"
 			rewards: [{
 				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_industrial_foregoing_loot_rare"
@@ -100,19 +93,10 @@
 			tasks: [{
 				id: "0000000000000050"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "industrialforegoing:latex_processing_unit"
-							}
-							{
-								Count: 1b
-								id: "thermal:machine_refinery"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(industrialforegoing:latex_processing_unit)item(thermal:device_tree_extractor))"
 					}
 				}
 				title: "Latex Processing Unit"

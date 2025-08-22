@@ -988,31 +988,10 @@
 			tasks: [{
 				id: "4EF603DCA2692FFD"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "bloodmagic:rawcatalyst"
-							}
-							{
-								Count: 1b
-								id: "bloodmagic:corrosivecatalyst"
-							}
-							{
-								Count: 1b
-								id: "bloodmagic:destructivecatalyst"
-							}
-							{
-								Count: 1b
-								id: "bloodmagic:steadfastcatalyst"
-							}
-							{
-								Count: 1b
-								id: "bloodmagic:vengefulcatalyst"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(bloodmagic:rawcatalyst)item(bloodmagic:corrosivecatalyst)item(bloodmagic:destructivecatalyst)item(bloodmagic:steadfastcatalyst)item(bloodmagic:vengefulcatalyst))"
 					}
 				}
 				title: "Crystal Growth Catalysts"
@@ -1051,6 +1030,13 @@
 				""
 				"If desired, the Alchemist may even merge effects by way of a Combinational Catalyst to create entirely new potions, such as mixing Suspended and Levitation to obtain Flight potions. "
 			]
+			icon: {
+				Count: 1
+				id: "bloodmagic:alchemy_flask"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "6510633E59CA3D11"
 			rewards: [{
 				id: "213C367F254BD990"

@@ -16,9 +16,9 @@
 			rewards: [{
 				count: 3
 				id: "7B54B7BEEA99667F"
-				item: "emendatusenigmatica:copper_chunk"
+				item: "minecraft:raw_copper"
 				random_bonus: 5
-				title: "Copper Chunk"
+				title: "Raw Copper"
 				type: "item"
 			}]
 			shape: "gear"
@@ -83,7 +83,7 @@
 			rewards: [{
 				count: 8
 				id: "000000000000060A"
-				item: "emendatusenigmatica:coke_gem"
+				item: "emendatus:coke_gem"
 				title: "Coal Coke"
 				type: "item"
 			}]
@@ -175,7 +175,7 @@
 			rewards: [{
 				count: 8
 				id: "0000000000000613"
-				item: "emendatusenigmatica:steel_ingot"
+				item: "emendatus:steel_ingot"
 				title: "Steel Ingot"
 				type: "item"
 			}]
@@ -381,14 +381,14 @@
 				{
 					count: 8
 					id: "000000000000061E"
-					item: "emendatusenigmatica:iron_plate"
+					item: "emendatus:iron_plate"
 					title: "Iron Plate"
 					type: "item"
 				}
 				{
 					count: 4
 					id: "000000000000061F"
-					item: "emendatusenigmatica:steel_plate"
+					item: "emendatus:steel_plate"
 					title: "Steel Plate"
 					type: "item"
 				}
@@ -467,7 +467,7 @@
 			rewards: [{
 				count: 8
 				id: "0000000000000608"
-				item: "emendatusenigmatica:copper_ingot"
+				item: "emendatus:copper_ingot"
 				title: "Copper Ingot"
 				type: "item"
 			}]

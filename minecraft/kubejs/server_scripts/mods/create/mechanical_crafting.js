@@ -163,7 +163,7 @@ ServerEvents.recipes(e => {
         B: '#forge:rods/brass',
         C: '#forge:gears/enderium',
         D: 'create:brass_casing',
-        E: 'ars_nouveau:carbuncle_charm'
+        E: 'ars_nouveau:starbuncle_charm'
     }).id('kubejs:create_mechanical_crafting/flywheel')
 
     e.remove({ id: "integrateddynamics:crafting/logic_programmer" })
