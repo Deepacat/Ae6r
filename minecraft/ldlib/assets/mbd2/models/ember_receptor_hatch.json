@@ -1,0 +1,107 @@
+{
+  "parent": "block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "particle": "embers:block/archaic_edge",
+    "end": "mbd2:block/ember_receptor_hatch_end",
+    "side": "mbd2:block/ember_receptor_hatch_side",
+    "overlay_side": "mbd2:block/ember_receptor_hatch_overlay_side",
+    "overlay_end": "mbd2:block/ember_receptor_hatch_overlay_end"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#end",
+          "cullface": "down"
+        },
+        "up": {
+          "texture": "#end",
+          "cullface": "up"
+        },
+        "north": {
+          "texture": "#side",
+          "cullface": "north"
+        },
+        "south": {
+          "texture": "#side",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#side",
+          "cullface": "west"
+        },
+        "east": {
+          "texture": "#side",
+          "cullface": "east"
+        }
+      }
+    },
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "down": {
+          "texture": "#overlay_end",
+          "cullface": "down",
+          "forge_data": {
+            "block_light": 12
+          }
+        },
+        "up": {
+          "texture": "#overlay_end",
+          "cullface": "up",
+          "forge_data": {
+            "block_light": 12
+          }
+        },
+        "north": {
+          "texture": "#overlay_side",
+          "cullface": "north",
+          "forge_data": {
+            "block_light": 12
+          }
+        },
+        "south": {
+          "texture": "#overlay_side",
+          "cullface": "south",
+          "forge_data": {
+            "block_light": 12
+          }
+        },
+        "west": {
+          "texture": "#overlay_side",
+          "cullface": "west",
+          "forge_data": {
+            "block_light": 12
+          }
+        },
+        "east": {
+          "texture": "#overlay_side",
+          "cullface": "east",
+          "forge_data": {
+            "block_light": 12
+          }
+        }
+      }
+    }
+  ]
+}
