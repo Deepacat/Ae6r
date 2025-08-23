@@ -336,14 +336,14 @@ global.emendatus_mats['potassium_nitrate'].oreData = {
 global.emendatus_mats['source'].oreData = {
     dropType: 'gem',
     overrideDrop: 'ars_nouveau:source_gem',
-    dropCountRange: [1, 2],
+    dropCountRange: [2, 3],
     veins: {
         "source_overworld": {
             dimension: 'minecraft:overworld',
             airDiscardChance: 0,
             range: [-60, -10],
             count: 8,
-            size: 4
+            size: 6
         }
     }
 }

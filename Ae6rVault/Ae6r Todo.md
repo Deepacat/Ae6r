@@ -13,6 +13,8 @@
 			- [x] i did all of them except ars glyph too tired (did this)
 		- [x] Compacting recipes
 		- [x] loot table unification
+- [x] Port base recipe replacements from e6e for stuff like niter 
+	- [x] THIS WAS A WHOLE RABBIT HOLE OF UNIFICATION BULLSHIT
 - [x] move pakku to mc folder
 - [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn)
 - [ ] make recipe builders for diesel gens and create c&a (or find others better ones)

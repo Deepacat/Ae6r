@@ -76,13 +76,19 @@ function randomOf(array) {
     return Utils.randomOf(Utils.getRandom(), array)
 }
 
+const unificationBlacklist = [
+    unificationBlacklistEntry('quartz', 'gem'),
+    unificationBlacklistEntry('quartz', 'storage_block'),
+    unificationBlacklistEntry('certus_quartz', 'gem')
+];
+
 /**
  * @param {string} material 
  * @param {string} type 
  * @see unificationBlacklist
  */
 function unificationBlacklistEntry(material, type) {
-    return { material: material, type: type };
+    return {material: material, type: type}
 }
 
 /**
@@ -92,7 +98,7 @@ function unificationBlacklistEntry(material, type) {
  */
 function entryIsBlacklisted(material, type) {
     for (let blackList of unificationBlacklist) {
-        if (blackList.material == material && blackList.type == type) {
+        if (blackList.material == material && blackList.type) {
             return true
         }
     }
@@ -209,12 +215,6 @@ function getStrippedLogFrom(logBlock) {
     }
     return air;
 }
-
-const unificationBlacklist = [
-    unificationBlacklistEntry('quartz', 'gem'),
-    unificationBlacklistEntry('quartz', 'storage_block'),
-    unificationBlacklistEntry('certus_quartz', 'gem')
-];
 
 /**
  * @param {$IngredientJS_} item 

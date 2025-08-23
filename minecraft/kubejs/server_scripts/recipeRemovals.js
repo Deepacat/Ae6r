@@ -31,6 +31,7 @@ ServerEvents.recipes(e => {
 
         /embers:.*hammering/,
         /embers:stamping\/.*ingot/,
+        /embers:stamping\/.*plates/,
         /embers:melting\/.*gear/,
         /embers:melting\/plates/,
         /embers:melting\/ingots/,
@@ -110,6 +111,7 @@ ServerEvents.recipes(e => {
 
         { type: 'valhelsia_structures:axe_crafting' },
         { input: 'minecraft:fire_charge', mod: 'thermal', type: 'minecraft:crafting_shapeless' },
+
         /* I honestly have no idea why e6e unifies logs and dyes so im gonna keep this normal for now */
         // { type: 'pedestals:pedestal_crushing', output: '#forge:dyes' },
         // { type: 'create:milling', output: '#forge:dyes' },

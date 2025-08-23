@@ -22,6 +22,10 @@ StartupEvents.registry('item', e => {
             // add tags from object for the items type
             for (let tag of global.emendatus_all_types[itemFlag].tags) {
                 item.tag(global.emenGetReplace(tag, matName))
+                if (!matObj[1].tagMaterials) { continue }
+                for (let mat of matObj[1].tagMaterials) {
+                    item.tag(global.emenGetReplace(tag, mat))
+                }
             }
         }
     }
@@ -50,49 +54,64 @@ StartupEvents.registry('block', e => {
                             `emendatus:${blockSplit[1]}_${replaceableId}` :
                             `emendatus:${strataType}_${replaceableId}`
                         if (registeredOres[blockId]) { continue }
-                        e.create(blockId)
+                        let b = e.create(blockId)
                             // .soundType(global.emendatus_all_types[blockType].oreData.sound)
                             .hardness(3)
                             .requiresTool()
-                            .tagBoth('forge:ores')
-                            .tagBoth(`forge:ores/${matName}`)
                             .tagBlock('minecraft:mineable/pickaxe')
                             .tagBlock(`minecraft:needs_${matObj[1].toolLvl}_tool`)
-                            .modelJson = oreModel(strataType, texturePath)
+                        b.modelJson = oreModel(strataType, texturePath)
+                        for (let tag of global.emendatus_all_types[blockFlag].tags) {
+                            b.tagBoth(global.emenGetReplace(tag, matName))
+                            if (!matObj[1].tagMaterials) { continue }
+                            for (let mat of matObj[1].tagMaterials) {
+                                b.tagBoth(global.emenGetReplace(tag, mat))
+                            }
+                        }
                         registeredOres[blockId] = true
                     }
                 }
                 continue
             }
-
             if (blockFlag == 'raw_block') {
                 let texturePath = `emendatus:block/raw_${matName}_block`
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
-                e.create(`emendatus:${replaceableId}`)
+                let b = e.create(`emendatus:${replaceableId}`)
                     .soundType('stone')
                     .textureAll(texturePath)
                     .hardness(5)
                     .requiresTool()
-                    .tagBoth('forge:storage_blocks')
-                    .tagBoth(`forge:storage_blocks/raw_${matName}`)
                     .tagBlock('minecraft:mineable/pickaxe')
+                for (let tag of global.emendatus_all_types[blockFlag].tags) {
+                    b.tagBoth(global.emenGetReplace(tag, matName))
+                    if (!matObj[1].tagMaterials) { continue }
+                    for (let mat of matObj[1].tagMaterials) {
+                        b.tagBoth(global.emenGetReplace(tag, mat))
+                    }
+                }
                 continue
             }
             // else generation should just be full storage blocks
             if (blockFlag == 'storage_block') {
                 let texturePath = `emendatus:block/${replaceableId}`
                 console.log(`Registering ${replaceableId} with texture ${texturePath}`)
-                e.create(`emendatus:${replaceableId}`)
+                let b = e.create(`emendatus:${replaceableId}`)
                     .soundType('metal')
                     .textureAll(texturePath)
                     .hardness(5)
                     .requiresTool()
-                    .tagBoth('forge:storage_blocks')
-                    .tagBoth(`forge:storage_blocks/${matName}`)
                     .tagBlock('minecraft:mineable/pickaxe')
+                for (let tag of global.emendatus_all_types[blockFlag].tags) {
+                    b.tagBoth(global.emenGetReplace(tag, matName))
+                    if (!matObj[1].tagMaterials) { continue }
+                    for (let mat of matObj[1].tagMaterials) {
+                        b.tagBoth(global.emenGetReplace(tag, mat))
+                    }
+                }
             }
         }
     }
+    registeredOres = null
 })
 
 

@@ -96,14 +96,14 @@ global.gem_mats = {
     // diopside: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     // moonstone: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     potassium_nitrate: {
-        type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [],
+        type: 'gem', toolLvl: 'stone', tagMaterials: ['niter', 'saltpeter'], addFlags: [], delFlags: [],
     },
     // pyrope: { type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     sapphire: {
         type: 'gem', toolLvl: 'iron', addFlags: ['ore'], delFlags: [],
     },
     source: {
-        type: 'other', toolLvl: 'iron', addFlags: ['ore'], delFlags: [],
+        type: 'other', toolLvl: 'iron', tagMaterials: ['mana'], addFlags: ['ore'], delFlags: [],
     },
     sulfur: {
         type: 'gem', toolLvl: 'stone', addFlags: [], delFlags: [],
