@@ -64,6 +64,8 @@ const industrialforegoing = {
     }
 }
 
+const recipes = []
+
 // const powahTiers = ['starter', 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro'];
 
 // powahTiers.forEach(function (tier) {
@@ -150,7 +152,7 @@ recipes.forEach((recipe) => {
     .id('${recipe.id.replace(/.*:/g, "kubejs:")}')\n`)
 }) */
 
-// shapeless
+/* // shapeless
 recipes.forEach(recipe => {
     recipe.id = recipe.id ? recipe.id :
         typeof (recipe.output) == 'object' ?
@@ -158,9 +160,9 @@ recipes.forEach(recipe => {
 
     recipe.id = recipe.id.replace(/.*:/g, "kubejs:shapeless/")
     console.log(`${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n'}e.shapeless(${getString(recipe.output)},
-	[${recipe.inputs.map(getString).join(", ")}]
+    [${recipe.inputs.map(getString).join(", ")}]
 ).id('${recipe.id}')\n`)
-})
+}) */
 
 /* // botania runic altar
 recipes.forEach((recipe) => {
@@ -188,7 +190,7 @@ recipes.forEach((recipe) => {
 ).id('${recipe.id}')\n`)
 }) */
 
-/* // shaped
+// shaped
 recipes.forEach(recipe => {
     let finalOut = getString(recipe.output)
     let finalPattern = recipe.pattern.map(getString).join(",\n\t")
@@ -201,7 +203,7 @@ e.shaped(${finalOut}, [
     ${finalKey}
 }).id(${finalId}\n`
     )
-}) */
+})
 
 /* // bloodmagic arc
 recipes.forEach((recipe) => {
