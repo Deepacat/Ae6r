@@ -1,19 +1,18 @@
 ServerEvents.tags('item', e => {
-    // TODO: Port substituion material stuff from e6e
-    e.add('forge:ingots/gold_brass', ['#forge:ingots/gold', '#forge:ingots/brass'])
-    e.add('forge:nuggets/gold_brass', ['#forge:nuggets/gold', '#forge:nuggets/brass'])
-    e.add('forge:storage_blocks/gold_brass', ['#forge:storage_blocks/gold', '#forge:storage_blocks/brass'])
-
-    e.add('forge:ingots/iron_aluminum', ['#forge:ingots/iron', '#forge:ingots/aluminum'])
-    e.add('forge:nuggets/iron_aluminum', ['#forge:nuggets/iron', '#forge:nuggets/aluminum'])
-    e.add('forge:storage_blocks/iron_aluminum', ['#forge:storage_blocks/iron', '#forge:storage_blocks/aluminum'])
-    e.add('forge:plates/iron_aluminum', ['#forge:plates/iron', '#forge:plates/aluminum'])
-    e.add('forge:gears/iron_aluminum', ['#forge:gears/iron', '#forge:gears/aluminum'])
-
-    e.add('forge:ingots/iron_tin', ['#forge:ingots/iron', '#forge:ingots/tin'])
-    e.add('forge:nuggets/iron_tin', ['#forge:nuggets/iron', '#forge:nuggets/tin'])
-    e.add('forge:storage_blocks/iron_tin', ['#forge:storage_blocks/iron', '#forge:storage_blocks/tin'])
-    e.add('forge:plates/iron_tin', ['#forge:plates/iron', '#forge:plates/tin'])
+    const substitutions = [
+        ['gold', 'brass'],
+        ['iron', 'aluminum'],
+        ['iron', 'tin'],
+        ['iron', 'copper']
+    ]
+    for (let mats of substitutions) {
+        e.add(`#forge:ingots/${mats[0]}_${mats[1]}`, [`#forge:ingots/${mats[0]}`, `#forge:ingots/${mats[1]}`])
+        e.add(`#forge:nuggets/${mats[0]}_${mats[1]}`, [`#forge:nuggets/${mats[0]}`, `#forge:nuggets/${mats[1]}`])
+        e.add(`#forge:storage_blocks/${mats[0]}_${mats[1]}`, [`#forge:storage_blocks/${mats[0]}`, `#forge:storage_blocks/${mats[1]}`])
+        e.add(`#forge:plates/${mats[0]}_${mats[1]}`, [`#forge:plates/${mats[0]}`, `#forge:plates/${mats[1]}`])
+        e.add(`#forge:gears/${mats[0]}_${mats[1]}`, [`#forge:gears/${mats[0]}`, `#forge:gears/${mats[1]}`])
+        e.add(`#forge:rods/${mats[0]}_${mats[1]}`, [`#forge:rods/${mats[0]}`, `#forge:rods/${mats[1]}`])
+    }
 
     e.add('forge:rods/basalz', 'thermal:basalz_rod')
     e.add('forge:rods/blitz', 'thermal:blitz_rod')
@@ -74,7 +73,7 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/energized_steel', 'powah:steel_energized');
     e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium']);
 
-    e.add('quark:runes', [ 'kubejs:white_rune', 'kubejs:light_gray_rune', 'kubejs:gray_rune',
+    e.add('quark:runes', ['kubejs:white_rune', 'kubejs:light_gray_rune', 'kubejs:gray_rune',
         'kubejs:black_rune', 'kubejs:brown_rune', 'kubejs:red_rune', 'kubejs:orange_rune',
         'kubejs:yellow_rune', 'kubejs:lime_rune', 'kubejs:green_rune', 'kubejs:cyan_rune',
         'kubejs:light_blue_rune', 'kubejs:blue_rune', 'kubejs:purple_rune', 'kubejs:magenta_rune',
