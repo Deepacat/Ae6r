@@ -10,9 +10,12 @@
 	#Forge tags are supported
 	[general.lists]
 		#Cobble gen
-		block_list_cobble = []		#Stone gen
-		block_list_stone = []		#Basalt gen
+		block_list_cobble = []
+		#Stone gen
+		block_list_stone = []
+		#Basalt gen
 		block_list_basalt = []
+
 		#Custom settings
 		[general.lists.custom]
 			#Custom generators

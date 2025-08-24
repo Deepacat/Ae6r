@@ -44,12 +44,9 @@ function makeJsonIngredients(inputs) {
 }
 
 /**
- * Converts a fluid stack to a JSON object representing a fluid stack or fluid tag.
- * If the `amountForTag` parameter is provided, the returned object will be a fluid tag.
- * Otherwise, the returned object will be a fluid stack.
- *
+ * Converts a fluid stack to a JSON object representing a fluid stack.
  * @param {Fluid} fluidInput - The fluid stack to convert.
- * @param {number} [amountForTag] - (Optional) The amount of fluid for the fluid tag, if provided.
+ * @param {number} - The amount of fluid for the fluid tag.
  * @returns {object} - The converted fluid JSON object.
  */
 function makeFluidStackJson(fluidInput) {

@@ -662,7 +662,7 @@
 			id: "7C0943FD8F8A0D69"
 			tasks: [{
 				id: "0B1FB01E3D6A63F8"
-				item: "masterfulmachinery:enigmatic_tree_of_life_controller"
+				item: "mbd2:enigmatic_tree_of_life"
 				type: "item"
 			}]
 			title: "Bragging Rights"
