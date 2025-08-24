@@ -9,7 +9,7 @@ ServerEvents.recipes(e => {
         .energy(10000)
         .id(`kubejs:bottler/foundry_controller`)
     e.recipes.thermal.bottler('pneumaticcraft:reinforced_stone',
-        [Fluid.of('kubejs:molten_compressed_iron', 18), '#minecraft:light_gray_concrete_powder'])
+        [Fluid.of('kubejs:molten_compressed_iron', 18), 'minecraft:light_gray_concrete_powder'])
         .energy(8000)
         .id(`kubejs:bottler/reinforced_stone`)
     e.recipes.thermal.bottler('kubejs:memory_basic_filled',
