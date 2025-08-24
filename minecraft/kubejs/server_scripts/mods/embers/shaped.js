@@ -1,22 +1,32 @@
 ServerEvents.recipes(e => {
     e.remove({ id: 'embers:item_extractor' })
+    e.shaped('embers:item_extractor', [
+        ' B ',
+        'CAC',
+        ' B '
+    ], {
+        A: 'thermal:redstone_servo',
+        B: 'embers:item_pipe',
+        C: 'embers:caminite_plate',
+    }).id('kubejs:shaped/embers_item_extractor_servo')
+
     e.shaped('4x embers:item_extractor', [
         ' B ',
         'CAC',
-        ' D '
+        ' B '
     ], {
         A: 'create:precision_mechanism',
         B: 'embers:item_pipe',
         C: 'embers:caminite_plate',
-        D: '#forge:storage_blocks/redstone'
-    }).id('kubejs:shaped/embers_item_extractor')
+    }).id('kubejs:shaped/embers_item_extractor_mechanism')
 
     e.remove({ id: 'embers:item_pipe' })
-    e.shaped('8x embers:item_pipe', [
+    e.shaped('5x embers:item_pipe', [
         ' A ',
-        'CBC'
+        'CBC',
+        ' A '
     ], {
-        A: '#forge:plates/brass',
+        A: '#forge:plates/gold_brass',
         B: '#forge:plates/lead',
         C: 'embers:caminite_plate'
     }).id('kubejs:shaped/embers_item_pipe')
@@ -53,7 +63,7 @@ ServerEvents.recipes(e => {
         A: 'minecraft:hopper',
         B: '#forge:plates/lead',
         C: '#forge:ingots/invar',
-        D: 'embers:item_pipe'
+        D: 'embers:item_extractor'
     }).id('kubejs:shaped/embers_item_transfer')
 
     e.remove({ id: 'embers:fluid_extractor' })
@@ -66,14 +76,26 @@ ServerEvents.recipes(e => {
         B: 'create:mechanical_pump',
         C: 'embers:caminite_plate',
         D: '#forge:plates/lead'
-    }).id('kubejs:shaped/embers_fluid_extractor')
+    }).id('kubejs:shaped/embers_fluid_extractor_conduit')
+
+    e.shaped('embers:fluid_extractor', [
+        ' B ',
+        'CDC',
+        ' A '
+    ], {
+        A: 'thermal:cured_rubber',
+        B: 'thermal:redstone_servo',
+        C: 'embers:caminite_plate',
+        D: '#forge:plates/lead'
+    }).id('kubejs:shaped/embers_fluid_extractor_rubber')
 
     e.remove({ id: 'embers:fluid_pipe' })
-    e.shaped('4x embers:fluid_pipe', [
+    e.shaped('5x embers:fluid_pipe', [
         ' A ',
-        'CBC'
+        'CBC',
+        ' A '
     ], {
-        A: '#forge:plates/copper',
+        A: '#forge:plates/copper_tin',
         B: '#forge:plates/lead',
         C: 'embers:caminite_plate'
     }).id('kubejs:shaped/embers_fluid_pipe')

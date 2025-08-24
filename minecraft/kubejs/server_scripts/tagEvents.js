@@ -4,7 +4,8 @@ ServerEvents.tags('item', e => {
         ['gold', 'brass'],
         ['iron', 'aluminum'],
         ['iron', 'tin'],
-        ['iron', 'copper']
+        ['iron', 'copper'],
+        ['copper', 'tin'],
     ]
     for (let mats of substitutions) {
         e.add(`forge:ingots/${mats[0]}_${mats[1]}`, [`#forge:ingots/${mats[0]}`, `#forge:ingots/${mats[1]}`])
