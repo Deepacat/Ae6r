@@ -127,6 +127,36 @@ function thermalChiller(event, outputItem, inputs) {
     }
 }
 
+function tinkersCasting(event, outputItem, inputFluid, castItem, coolingTime) {
+    const recipeObj = {
+        type: "tconstruct:casting_table",
+        cast: makeJsonIngredient(castItem),
+        cooling_time: coolingTime,
+        fluid: inputFluid.tag ? inputFluid : makeFluidStackJson(inputFluid),
+        result: makeJsonIngredient(outputItem),
+    }
+    recipeObj.cast_consumed = true
+    if (makeJsonIngredient(castItem).item && Item.of(castItem).hasTag('tconstruct:patterns/reusable')) {
+        recipeObj.cast_consumed = false
+    }
+    const recipe = event.custom(recipeObj)
+    return {
+        id: function (customId) {
+            recipe.id(customId ?? `kubejs:tconstruct/casting_table/${outputItem.split(':')[1]}`)
+        },
+    }
+}
+
+// ServerEvents.recipes(e => {
+//     tinkersCasting(e, 'minecraft:ender_eye', { tag: 'forge:ender', amount: 250 }, 'minecraft:blaze_powder', 82)
+//         .id('kubejs:tconstruct/casting_table/ender_eye')
+//     tinkersCasting(e, 'minecraft:dirt', { tag: 'forge:molten_copper', amount: 250 }, '#forge:sand', 82)
+//         .id('kubejs:tconstruct/casting_table/dirt')
+//     tinkersCasting(e, 'minecraft:stone', Fluid.of('minecraft:water', 69), '#forge:cobblestone', 82)
+//         .id('kubejs:tconstruct/casting_table/stone')
+//     tinkersCasting(e, 'minecraft:oak_pressure_plate', Fluid.of('minecraft:water', 69), 'tconstruct:large_plate_cast', 82)
+// })
+
 // lychee exploding recipe helper
 function explosionRecipe(e, id, inputs, posts, comment) {
     /* lychee apparently doesn't do itemstacks, only ingredient,

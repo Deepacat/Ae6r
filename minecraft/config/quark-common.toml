@@ -755,7 +755,7 @@
 		#Can torches can be used as fuel in furnaces?
 		"Torches Burn" = true
 		#Can bones be smelted down to bone meal?
-		"Bone Meal Utility" = true
+		"Bone Meal Utility" = false
 		#Can Charcoal be crafted into Black Dye?
 		"Charcoal To Black Dye" = true
 		#Can two Logs be used instead of a Chest to make a Hopper?
