@@ -30,3 +30,5 @@
 - [ ] Hide dumb recipe categories like shapeless mixing and shaped mechanical crafting, grindstone
 - [x] Fix recipes that used ars clays in e6e
 - [ ] Replace recipes using ars nouveau clays with ars imbued essences? ars clays are the old style but serve as a better gate than essences for now
+- [ ] Fix raw ore block smelting recipes being too quick
+- [ ] Meka biomass from other mods' crops (currently only MC)
