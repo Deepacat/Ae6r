@@ -11,9 +11,35 @@ ServerEvents.recipes(e => {
 
         'thermal:invar_dust_3',
 
+        'architects_palette:sunstone',
+
+        'ars_nouveau:dull_trinket',
+        'ars_nouveau:mundane_belt',
+        'ars_nouveau:ring_of_potential',
+
+        'bloodmagic:arc/weakbloodshard_tau',
         /bloodmagic:alchemytable\/melee_damage_anointment/,
 
+        'botania:mana_infusion/mana_diamond_block',
+
         /compactmachines:machine_/,
+
+        'computercraft:turtle_normal',
+        'computercraft:turtle_advanced',
+        'computercraft:pocket_computer_normal',
+        'computercraft:pocket_computer_advanced',
+
+        /create:crafting\/materials\/andesite_alloy/,
+        /create:\w+\/bread/,
+        /create:crafting\/materials\/\w+_block_from_compacting/,
+        /create:crafting\/materials\/\w+_ingot_from_compacting/,
+        /create:crafting\/materials\/\w+_ingot_from_decompacting/,
+        /create:crafting\/materials\/\w+_nugget_from_decompacting/,
+        /create:smelting\/ingot_\w+_compat/,
+        /create:smelting\/\w+_ingot_compat/,
+        /create:blasting\/ingot_\w+_compat/,
+        /create:blasting\/\w+_ingot_compat/,
+        /create:compat\/thermal\/crushing\/\w+_ore/,
 
         /createaddition:compat/,
         /createaddition:pressing/,
@@ -23,11 +49,7 @@ ServerEvents.recipes(e => {
 
         /createdieselgenerators:compat/,
 
-        /immersiveengineering:crafting\/plate_/,
-        /immersiveengineering:crafting\/stick_/,
-        /immersiveengineering:metalpress\/.*plate/,
-        /immersiveengineering:metalpress\/.*rod/,
-        /immersiveengineering:metalpress\/.*gear/,
+        /compactmachines:machine_/,
 
         /embers:.*hammering/,
         /embers:stamping\/.*ingot/,
@@ -40,26 +62,57 @@ ServerEvents.recipes(e => {
         /embers:melting\/raw_materials/,
         /embers:melting\/ores/,
 
+        'eidolon:crucible',
+        'eidolon:wooden_brewing_stand',
+        'eidolon:worktable',
+
+        'farmersdelight:book_from_canvas',
+
+        'fluxnetworks:fluxcontroller',
+        'fluxnetworks:fluxplug',
+        'fluxnetworks:fluxpoint',
+
+        'immersiveengineering:crafting/component_iron',
+        'immersiveengineering:crafting/component_steel',
+        'immersiveengineering:crafting/concrete',
+        'immersiveengineering:mixer/concrete',
+        /immersiveengineering:crafting\/(coke|blast|alloy)brick/,
+        /immersiveengineering:crafting\/ingot_\w+_to_storage_\w+/,
+        /immersiveengineering:crafting\/ingot_\w+_to_nugget_\w+/,
+        /immersiveengineering:crafting\/nugget_\w+_to_ingot_\w+/,
+        /immersiveengineering:crafting\/storage_\w+_to_ingot_\w+/,
+        /immersiveengineering:crafting\/plate_/,
+        /immersiveengineering:crafting\/stick_/,
+        /immersiveengineering:metalpress\/.*plate/,
+        /immersiveengineering:metalpress\/.*rod/,
+        /immersiveengineering:metalpress\/.*gear/,
+
+        'industrialforegoing:mob_slaughter_factory',
         /industrialforegoing:mycelial/,
+        'industrialforegoing:dissolution_chamber/mycelial_reactor',
 
+        'integrateddynamics:crafting/cable',
+        'integrateddynamics:crafting/cable_rotated',
+        'integrateddynamics:crafting/energy_battery',
+        'integrateddynamics:crafting/mechanical_drying_basin',
+        'integrateddynamics:crafting/mechanical_squeezer',
+        'integrateddynamics:crafting/drying_basin',
+        'integrateddynamics:crafting/squeezer',
+        'integrateddynamics:crafting/coal_generator',
+        'integrateddynamics:crafting/logic_director',
+        'integrateddynamics:crafting/variable_transformer_output',
+        'integrateddynamics:crafting/variable_transformer_input',
+
+        'mekanism:metallurgic_infusing/alloy/reinforced',
+        'mekanism:metallurgic_infusing/alloy/atomic',
+        'mekanism:enriching/conversion/basalt_to_polished_basalt',
+        'mekanism:processing/refined_glowstone/ingot_to_dust',
+        'mekanism:processing/refined_obsidian/dust/from_ingot',
+        'mekanism:osmium_compressor',
         /mekanism:factory/,
+        'mekanism:robit',
         /mekanism:mekasuit/,
-
-        /naturesaura:animal_spawner\/sheep_/,
-
-        /powah:crafting\/cable_/,
-
-        /create:crafting\/materials\/andesite_alloy/,
-        /create:\w+\/bread/,
-
-        /create:smelting\/ingot_\w+_compat/,
-        /create:smelting\/\w+_ingot_compat/,
-        /create:blasting\/ingot_\w+_compat/,
-        /create:blasting\/\w+_ingot_compat/,
-        /create:compat\/thermal\/crushing\/\w+_ore/,
-
-        /thermal:compat\/\w+\/\w+_ore/,
-
+        'mekanism:upgrade/filter',
         /mekanism:storage_blocks\/\w+/,
         /mekanism:nuggets\/\w+/,
         /mekanism:processing\/\w+\/storage_blocks\/from_ingots/,
@@ -67,28 +120,78 @@ ServerEvents.recipes(e => {
         /mekanism:processing\/\w+\/ingot\/from_nuggets/,
         /mekanism:processing\/\w+\/nugget\/from_ingot/,
 
-        /thermal:storage\/\w+_block/,
-        /thermal:storage\/\w+_ingot_from_nuggets/,
-        /thermal:storage\/\w+_nugget_from_ingot/,
+        'mekanismgenerators:separator/heavy_water',
+        'mekanismgenerators:activating/tritium',
 
+        'minecraft:book',
+        'minecraft:stick',
+        'minecraft:golden_carrot',
+        'minecraft:glistering_melon_slice',
+        'minecraft:golden_apple',
+        'minecraft:lodestone',
+
+        'mininggadgets:upgrade_empty',
+
+        'modularrouters:energy_upgrade',
+        'modularrouters:sender_module_1_alt',
+
+        /naturesaura:animal_spawner\/sheep_/,
+
+        /occultism:crafting\/\w+_block/,
+        /occultism:crafting\/\w+_nugget/,
+        /occultism:crafting\/\w+_ingot_from_nuggets/,
+
+        'pedestals:upgrades/recycler',
+
+        'pneumaticcraft:explosion_crafting/compressed_iron_block',
+        'pneumaticcraft:explosion_crafting/compressed_iron_ingot',
+        'pneumaticcraft:speed_upgrade',
+        'pneumaticcraft:reinforced_stone', // note: there is a glycerol variant of this recipe, check if exists in original
+
+        'powah:crafting/dielectric_paste_2',
+        'powah:energizing/blazing_crystal_2',
+        'powah:crafting/capacitor_basic',
+        'powah:crafting/capacitor_basic_tiny',
+        /powah:crafting\/cable_/,
+
+        'quark:building/crafting/red_nether_bricks_util',
+
+        'rftoolscontrol:cpu_core_500',
+        'rftoolscontrol:cpu_core_1000',
+        'rftoolscontrol:cpu_core_2000',
+
+        'sophisticatedbackpacks:feeding_upgrade',
+        'sophisticatedbackpacks:advanced_feeding_upgrade',
+        'sophisticatedbackpacks:auto_smelting_upgrade',
+        'sophisticatedbackpacks:pump_upgrade',
+        'sophisticatedbackpacks:advanced_pump_upgrade',
+        'sophisticatedbackpacks:xp_pump_upgrade',
+        'sophisticatedbackpacks:advanced_compacting_upgrade',
+        'sophisticatedbackpacks:tool_swapper_upgrade',
+        'sophisticatedbackpacks:advanced_tool_swapper_upgrade',
+        'sophisticatedbackpacks:refill_upgrade',
+
+        'tconstruct:smeltery/alloys/molten_refined_obsidian',
+        'tconstruct:smeltery/melting/metal/netherite/lodestone',
+        'tconstruct:smeltery/melting/metal/gold/produce',
+        'tconstruct:smeltery/scorched/scorched_brick',
+        'tconstruct:smeltery/seared/melter',
+        'tconstruct:smeltery/seared/seared_brick',
+        'tconstruct:compat/refined_glowstone_ingot',
+        'tconstruct:compat/refined_obsidian_ingot',
         /tconstruct:common\/materials\/\w+_block_from_ingots/,
         /tconstruct:common\/materials\/\w+_ingot_from_block/,
         /tconstruct:common\/materials\/\w+_ingot_from_nuggets/,
         /tconstruct:common\/materials\/\w+_nugget_from_ingot/,
 
-        /immersiveengineering:crafting\/ingot_\w+_to_storage_\w+/,
-        /immersiveengineering:crafting\/ingot_\w+_to_nugget_\w+/,
-        /immersiveengineering:crafting\/nugget_\w+_to_ingot_\w+/,
-        /immersiveengineering:crafting\/storage_\w+_to_ingot_\w+/,
+        /thermal:compat\/\w+\/\w+_ore/,
+        /thermal:storage\/\w+_block/,
+        /thermal:storage\/\w+_ingot_from_nuggets/,
+        /thermal:storage\/\w+_nugget_from_ingot/,
 
-        /create:crafting\/materials\/\w+_block_from_compacting/,
-        /create:crafting\/materials\/\w+_ingot_from_compacting/,
-        /create:crafting\/materials\/\w+_ingot_from_decompacting/,
-        /create:crafting\/materials\/\w+_nugget_from_decompacting/,
+        'tomeofblood:glyph_sentientharm',
 
-        /occultism:crafting\/\w+_block/,
-        /occultism:crafting\/\w+_nugget/,
-        /occultism:crafting\/\w+_ingot_from_nuggets/
+        'waystones:warp_dust',
     ]
 
     // todo organize this LMAO (also move id removals to respective recipes...?)

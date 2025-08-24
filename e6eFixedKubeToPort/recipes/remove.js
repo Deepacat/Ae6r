@@ -1,14 +1,5 @@
 ServerEvents.recipes(event => {
     const idRemovals = [
-        'architects_palette:sunstone',
-
-        'ars_nouveau:dull_trinket',
-        'ars_nouveau:moonfall_2',
-        'ars_nouveau:mundane_belt',
-        'ars_nouveau:ring_of_potential',
-        'ars_nouveau:stone_2',
-        'ars_nouveau:sunrise_2',
-
         /*'astralsorcery:'*/ 'kubejs:replaceme',
         /*'astralsorcery:'*/ 'kubejs:replaceme',
         /*'astralsorcery:'*/ 'kubejs:replaceme',
@@ -20,21 +11,12 @@ ServerEvents.recipes(event => {
         /*'betterendforge:'*/ 'kubejs:replaceme',
         /*'betterendforge:'*/ 'kubejs:replaceme',
 
-        'bloodmagic:arc/weakbloodshard_tau',
-        /bloodmagic:alchemytable\/melee_damage_anointment/,
-
-        'botania:mana_infusion/mana_diamond_block',
         /*'byg:'*/ 'kubejs:replaceme',
 
         'computercraft:computer_advanced_upgrade',
         'computercraft:turtle_advanced_upgrade',
-        'computercraft:turtle_normal',
-        'computercraft:turtle_advanced',
-        'computercraft:pocket_computer_normal',
-        'computercraft:pocket_computer_advanced',
         'computercraft:pocket_computer_advanced_upgrade',
 
-        /compactmachines:machine_/,
         /create:pressing\/\w*_ingot/,
 
         /dankstorage:\w_to_\w/,
@@ -47,92 +29,22 @@ ServerEvents.recipes(event => {
         'eidolon:wooden_brewing_stand',
         'eidolon:worktable',
 
-        'farmersdelight:book_from_canvas',
-
-        'fluxnetworks:fluxcontroller',
-        'fluxnetworks:fluxplug',
-        'fluxnetworks:fluxpoint',
-
-        'immersiveengineering:crafting/component_iron',
-        'immersiveengineering:crafting/component_steel',
-        'immersiveengineering:crafting/concrete',
         'immersiveengineering:crafting/concrete2',
-        'immersiveengineering:mixer/concrete',
         /immersiveengineering:crafting\/plate_/,
-        'immersiveengineering:crafting/cokebrick',
-        'immersiveengineering:crafting/blastbrick',
-        'immersiveengineering:crafting/alloybrick',
         'immersiveengineering:generator_fuel/biodiesel',
         'immersiveengineering:generator_fuel/creosote',
 
-        'industrialforegoing:mob_slaughter_factory',
-        /industrialforegoing:mycelial/,
-        'industrialforegoing:dissolution_chamber/mycelial_reactor',
-
-        'integrateddynamics:crafting/cable',
-        'integrateddynamics:crafting/cable_rotated',
-        'integrateddynamics:crafting/energy_battery',
-        'integrateddynamics:crafting/mechanical_drying_basin',
-        'integrateddynamics:crafting/mechanical_squeezer',
-        'integrateddynamics:crafting/drying_basin',
-        'integrateddynamics:crafting/squeezer',
-        'integrateddynamics:crafting/coal_generator',
-        'integrateddynamics:crafting/logic_director',
-        'integrateddynamics:crafting/variable_transformer_output',
-        'integrateddynamics:crafting/variable_transformer_input',
-
         /* 'materialis:' */ 'kubejs:replaceme',
 
-        'mekanism:metallurgic_infusing/alloy/reinforced',
-        'mekanism:metallurgic_infusing/alloy/atomic',
-        'mekanism:enriching/conversion/basalt_to_polished_basalt',
-        'mekanism:processing/refined_glowstone/ingot_to_dust',
-        'mekanism:processing/refined_obsidian/dust/from_ingot',
-        'mekanism:osmium_compressor',
-        /mekanism:factory/,
-        'mekanism:robit',
-        /mekanism:mekasuit/,
-        'mekanism:upgrade/filter',
-
-        'mekanismgenerators:separator/heavy_water',
-        'mekanismgenerators:activating/tritium',
-
-        'minecraft:book',
         'minecraft:leather_to_stripes',
-        'minecraft:stick',
-        'minecraft:golden_carrot',
-        'minecraft:glistering_melon_slice',
-        'minecraft:golden_apple',
-        'minecraft:lodestone',
-
-        'mininggadgets:upgrade_empty',
-
-        'modularrouters:energy_upgrade',
-        'modularrouters:sender_module_1_alt',
-
-        /naturesaura:animal_spawner\/sheep_/,
 
         'pedestals:ingot_gold_from_upgrades',
         'pedestals:upgrades/breaker2',
         'pedestals:upgrades/crafter1mk2',
-        'pedestals:upgrades/recycler',
         'pedestals:upgrades/rfexpgen',
         'pedestals:upgrades/rffuelgen',
 
-        'pneumaticcraft:explosion_crafting/compressed_iron_block',
-        'pneumaticcraft:explosion_crafting/compressed_iron_ingot',
-        'pneumaticcraft:speed_upgrade',
-        'pneumaticcraft:reinforced_stone',
-
-        'powah:crafting/dielectric_paste_2',
-        'powah:energizing/blazing_crystal_2',
-        'powah:crafting/capacitor_basic',
-        'powah:crafting/capacitor_basic_tiny',
-        'powah:crafting/thermoelectric_plate',
-        /powah:crafting\/cable_/,
-
         'quark:building/crafting/candles/candle_basic',
-        'quark:building/crafting/red_nether_bricks_util',
         'quark:tools/crafting/runes/rainbow_rune',
 
         /*'refinedstorage:'*/ 'kubejs:replaceme',
@@ -141,38 +53,11 @@ ServerEvents.recipes(event => {
         /*'refinedstorage:'*/ 'kubejs:replaceme',
         /*'refinedstorage:'*/ 'kubejs:replaceme',
 
-        'rftoolscontrol:cpu_core_500',
-        'rftoolscontrol:cpu_core_1000',
-        'rftoolscontrol:cpu_core_2000',
-
-        'sophisticatedbackpacks:feeding_upgrade',
-        'sophisticatedbackpacks:advanced_feeding_upgrade',
-        'sophisticatedbackpacks:auto_smelting_upgrade',
-        'sophisticatedbackpacks:pump_upgrade',
-        'sophisticatedbackpacks:advanced_pump_upgrade',
-        'sophisticatedbackpacks:xp_pump_upgrade',
-        'sophisticatedbackpacks:advanced_compacting_upgrade',
-        'sophisticatedbackpacks:tool_swapper_upgrade',
-        'sophisticatedbackpacks:advanced_tool_swapper_upgrade',
-        'sophisticatedbackpacks:refill_upgrade',
-
-        'tconstruct:smeltery/scorched/scorched_brick',
         'tconstruct:smeltery/scorched/scorched_brick_kiln',
-        'tconstruct:smeltery/seared/melter',
-        'tconstruct:smeltery/seared/seared_brick',
         'tconstruct:smeltery/seared/seared_brick_kiln',
         'tconstruct:tables/book_substitute',
-        'tconstruct:smeltery/melting/metal/netherite/lodestone',
-        'tconstruct:compat/refined_obsidian_ingot',
-        'tconstruct:smeltery/alloys/molten_refined_obsidian',
-        'tconstruct:compat/refined_glowstone_ingot',
-        'tconstruct:smeltery/melting/metal/gold/produce',
 
         'thermal:compat/refinedstorage/smelter_refinedstorage_alloy_quartz_enriched_iron',
-
-        'tomeofblood:glyph_sentientharm',
-
-        'waystones:warp_dust',
 
         /create:crafting\/materials\/andesite_alloy/,
         /emendatus:alloy_dust/
