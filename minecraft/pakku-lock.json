@@ -271,6 +271,45 @@
             ]
         },
         {
+            "pakku_id": "L7MkDRvz2HyKFLrB",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "aetherworks-refracted"
+            },
+            "name": {
+                "curseforge": "Aetherworks Refracted"
+            },
+            "id": {
+                "curseforge": "1071794"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "aetherworks-1.20.1-1.1.5.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6513/712/aetherworks-1.20.1-1.1.5.jar",
+                    "id": "6513712",
+                    "parent_id": "1071794",
+                    "hashes": {
+                        "sha1": "a2a7ee453dbfb70baae8fb828f89e7fc837d2c8a",
+                        "md5": "cec661a3445c66c7e30b9d78c907c0eb"
+                    },
+                    "required_dependencies": [
+                        "300777"
+                    ],
+                    "size": 1784240,
+                    "date_published": "2025-05-09T20:37:16.137Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "iRmi4ugmYTfQVnxo",
             "type": "MOD",
             "slug": {
@@ -3467,6 +3506,46 @@
                     "required_dependencies": [],
                     "size": 15487193,
                     "date_published": "2025-07-20T15:38:50.673Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "tCFjJFJ0UJdNMC3M",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "embers-delight"
+            },
+            "name": {
+                "curseforge": "Embers' Delight"
+            },
+            "id": {
+                "curseforge": "1220380"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "embersdelight-1.20.1-1.0.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6304/909/embersdelight-1.20.1-1.0.0.jar",
+                    "id": "6304909",
+                    "parent_id": "1220380",
+                    "hashes": {
+                        "sha1": "4be017073c7541e83efa11677b3d272aafd04091",
+                        "md5": "85c0945a487399252b8ae6b4ad231893"
+                    },
+                    "required_dependencies": [
+                        "398521",
+                        "300777"
+                    ],
+                    "size": 748968,
+                    "date_published": "2025-03-14T22:29:28.687Z"
                 }
             ]
         },
@@ -8305,6 +8384,44 @@
             ]
         },
         {
+            "pakku_id": "6vTuCXUcxQXX5zh2",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "plonk"
+            },
+            "name": {
+                "curseforge": "Plonk"
+            },
+            "id": {
+                "curseforge": "345779"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "plonk-1.20.1-10.0.5-forge.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5095/685/plonk-1.20.1-10.0.5-forge.jar",
+                    "id": "5095685",
+                    "parent_id": "345779",
+                    "hashes": {
+                        "sha1": "ae6401fc5f277f2c80abedc46f0267d23582e59e",
+                        "md5": "c59949bc880bb748900a0eba4f76d6ff"
+                    },
+                    "required_dependencies": [],
+                    "size": 151684,
+                    "date_published": "2024-02-10T11:17:01.817Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "yXz34K9z7omTLcTV",
             "type": "MOD",
             "slug": {
@@ -10404,45 +10521,6 @@
                     ],
                     "size": 19792115,
                     "date_published": "2025-07-16T23:54:00.540Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "wG4VgrWyxCItNDcf",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "tinkers-construct-emergence"
-            },
-            "name": {
-                "curseforge": "Tinkers Construct: Emergence"
-            },
-            "id": {
-                "curseforge": "1214988"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "tconstruct_emergence-1.0.1.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6462/43/tconstruct_emergence-1.0.1.jar",
-                    "id": "6462043",
-                    "parent_id": "1214988",
-                    "hashes": {
-                        "sha1": "0d4edcbc45ba9d4fa9957dbac24ca5a887b756ae",
-                        "md5": "dc5386393fe7b02992bc9961d30dff98"
-                    },
-                    "required_dependencies": [
-                        "74072"
-                    ],
-                    "size": 421616,
-                    "date_published": "2025-04-25T06:00:26.297Z"
                 }
             ]
         },

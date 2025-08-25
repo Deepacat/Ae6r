@@ -1,0 +1,10 @@
+
+#Settings for machine parameters
+[parameters]
+
+	[parameters.cutter]
+		#The time in ticks it takes to process one recipe.
+		processTime = 15
+		#The ember cost per tick.
+		cost = 1.0
+
