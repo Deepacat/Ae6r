@@ -39,30 +39,21 @@ ServerEvents.tags('item', e => {
         e.add(`botania:runes/${rune}`, `mythicbotany:${rune}_rune`)
     }
 
+    // ritua is not a typo
     e.add('mythicbotany:ritua_runes', [
         // /*'astralsorcery:'*/ 'kubejs:replaceme',
         // /*'astralsorcery:'*/ 'kubejs:replaceme',
-        'ars_nouveau:ritual_sunrise',
-        'ars_nouveau:ritual_moonfall',
-        'ars_nouveau:ritual_awakening',
-        'botania:livingwood',
-        'mythicbotany:yggdrasil_branch',
-        'kubejs:crystalline_oak_leaves',
-        'kubejs:crystalline_flowering_palo_verde_leaves',
-        'naturesaura:generator_limit_remover',
-        'quark:root_item',
-        'mekanism:pellet_antimatter',
-        'mekanism:ultimate_control_circuit',
-        'kubejs:laputian_ingot',
-        'botania:mana_diamond_block',
-        'botania:dragonstone_block',
+        'ars_nouveau:ritual_sunrise', 'ars_nouveau:ritual_moonfall', 'ars_nouveau:ritual_awakening',
+        'botania:livingwood', 'mythicbotany:yggdrasil_branch', 'kubejs:crystalline_oak_leaves',
+        'kubejs:crystalline_flowering_palo_verde_leaves', 'naturesaura:generator_limit_remover',
+        'quark:root_item', 'mekanism:pellet_antimatter', 'mekanism:ultimate_control_circuit',
+        'kubejs:laputian_ingot', 'botania:mana_diamond_block', 'botania:dragonstone_block',
         'powah:ender_core'
     ])
 
     e.add('forge:ingots/gaia', 'botania:gaia_ingot')
     e.add('forge:ingots/gaia_spirit', 'botania:gaia_ingot')
     e.add('forge:ingots/alfsteel', 'mythicbotany:alfsteel_ingot')
-
 
     e.add('forge:ingots/sky', ['naturesaura:sky_ingot'])
     e.add('forge:ingots/tainted_gold', ['naturesaura:tainted_gold'])
@@ -118,17 +109,26 @@ ServerEvents.tags('item', e => {
     e.add('forge:gems/mana', '#forge:gems/source')
     e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
 
-    e.add('forge:ammo', 'immersiveengineering:casull')
-    e.add('forge:ammo', 'immersiveengineering:armor_piercing')
-    e.add('forge:ammo', 'immersiveengineering:buckshot')
-    e.add('forge:ammo', 'immersiveengineering:he')
-    e.add('forge:ammo', 'immersiveengineering:silver')
-    e.add('forge:ammo', 'immersiveengineering:dragons_breath')
-    e.add('forge:ammo', 'immersiveengineering:potion')
-    e.add('forge:ammo', 'immersiveengineering:flare')
-    e.add('forge:ammo', 'immersiveengineering:firework')
-    e.add('forge:ammo', 'immersiveengineering:homing')
-    e.add('forge:ammo', 'immersiveengineering:wolfpack')
+    e.add('forge:ammo', [
+        'immersiveengineering:casull', 'immersiveengineering:armor_piercing', 'immersiveengineering:buckshot',
+        'immersiveengineering:he', 'immersiveengineering:silver', 'immersiveengineering:dragons_breath',
+        'immersiveengineering:potion', 'immersiveengineering:flare', 'immersiveengineering:firework',
+        'immersiveengineering:homing', 'immersiveengineering:wolfpack'
+    ])
+
+    // rename this to like kubejs namespace when recipe porting is done lol
+    e.add('enigmatica:crafting_slabs', [
+        'quark:smooth_basalt_slab', 'quark:polished_basalt_slab', 'quark:basalt_slab',
+        'quark:deepslate_tiles_slab', 'quark:polished_deepslate_slab', 'quark:polished_slate_slab',
+        'quark:slate_slab', 'quark:polished_jasper_slab', 'quark:jasper_slab',
+        'quark:polished_marble_slab', 'quark:marble_slab', 'architects_palette:limestone_slab',
+        'create:polished_weathered_limestone_slab', 'create:polished_limestone_slab',
+        'quark:polished_limestone_slab', 'quark:limestone_slab', 'create:polished_dolomite_slab',
+        'create:polished_gabbro_slab', 'create:polished_dark_scoria_slab', 'create:polished_scoria_slab',
+        'quark:basalt', 'minecraft:polished_diorite_slab', 'minecraft:diorite_slab',
+        'minecraft:polished_granite_slab', 'minecraft:granite_slab', 'minecraft:polished_andesite_slab',
+        'minecraft:andesite_slab', 'minecraft:smooth_stone_slab', 'minecraft:stone_slab'
+    ])
 })
 
 ServerEvents.tags('block', e => {
