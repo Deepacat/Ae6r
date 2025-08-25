@@ -187,7 +187,7 @@ ServerEvents.recipes(e => {
         'AB',
         'BA'
     ], {
-        A: 'minecraft:sand',
+        A: 'aether:quicksoil',
         B: 'minecraft:clay'
     }).id('kubejs:marl')
 })
