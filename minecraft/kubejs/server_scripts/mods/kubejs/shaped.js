@@ -183,7 +183,7 @@ ServerEvents.recipes(e => {
         I: Item.of('kubejs:replaceme', '{astralsorcery:{constellationName:"astralsorcery:pelotrio"}}').weakNBT()
     }).id('kubejs:kubejs_dim_constellation_box')
 
-    e.shaped('kubejs:marl' [
+    e.shaped('kubejs:marl', [
         'AB',
         'BA'
     ], {
