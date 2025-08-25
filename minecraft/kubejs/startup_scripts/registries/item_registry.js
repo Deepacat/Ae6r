@@ -80,7 +80,6 @@ StartupEvents.registry('item', event => {
         'cpu_core_mk_1026',
         'cpu_core_eg_28222',
         'cpu_core_as_81221',
-        'marl',
 
         // mastery shards
         'automation_mastery_shard',

@@ -14,11 +14,16 @@ StartupEvents.registry('block', event => {
             material: 'glass',
             hardness: 2.0,
             leaves: true
-        }
+        },
+        { name: 'marl', material: 'sand', hardness: 1, mineable: 'shovel' }
     ]
 
     blocks.forEach((block) => {
         const block_event = event.create(block.name).soundType(block.material).hardness(block.hardness)
+
+        if (block.mineable) {
+            block_event.tagBlock(`minecraft:mineable/${block.mineable}`)
+        }
 
         if (block.leaves == true) {
             block_event
