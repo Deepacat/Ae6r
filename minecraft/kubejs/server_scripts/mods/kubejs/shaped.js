@@ -182,4 +182,12 @@ ServerEvents.recipes(e => {
         H: Item.of('kubejs:replaceme', '{astralsorcery:{constellationName:"astralsorcery:fornax"}}').weakNBT(),
         I: Item.of('kubejs:replaceme', '{astralsorcery:{constellationName:"astralsorcery:pelotrio"}}').weakNBT()
     }).id('kubejs:kubejs_dim_constellation_box')
+
+    e.shaped('kubejs:marl' [
+        'AB',
+        'BA'
+    ], {
+        A: 'minecraft:sand',
+        B: 'minecraft:clay'
+    }).id('kubejs:marl')
 })

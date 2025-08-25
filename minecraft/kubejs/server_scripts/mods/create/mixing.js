@@ -67,7 +67,7 @@ ServerEvents.recipes(e => {
         .id(`kubejs:create/mixing/coke_brick_blend`)
 
     e.recipes.create.mixing(Item.of('kubejs:blast_brick_blend', 4), [
-            /*'atum:'*/ 'kubejs:replaceme',
+        'kubejs:marl',
         '#forge:dusts/coal_coke',
         '#forge:dusts/coal_coke',
         '#forge:dusts/coal_coke',
