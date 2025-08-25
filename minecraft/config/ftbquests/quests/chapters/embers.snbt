@@ -1,0 +1,263 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "embers"
+	group: "5A8B89F87F77CF4C"
+	id: "588804AA09D9FD0B"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "embers:ancient_codex"
+			id: "76690B7C4203D15B"
+			tasks: [{
+				id: "68806F55C59ED1CD"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(item(embers:caminite_blend)item(embers:ancient_codex)item(embers:archaic_brick)item(embers:ancient_motive_core))"
+					}
+				}
+				type: "item"
+			}]
+			x: -3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3647B1704FF7952F"]
+			id: "29F9DE4543CB82D8"
+			tasks: [{
+				id: "05DF26FA8357A981"
+				item: "embers:ember_bore"
+				type: "item"
+			}]
+			x: -3.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["76690B7C4203D15B"]
+			id: "3647B1704FF7952F"
+			tasks: [{
+				id: "2D5ACC66A3FAA707"
+				item: "embers:caminite_blend"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["29F9DE4543CB82D8"]
+			id: "09C4ABB870AD61BF"
+			tasks: [{
+				id: "44EFE131DB97E886"
+				item: "embers:ember_shard"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["09C4ABB870AD61BF"]
+			id: "73818CC27A06CD21"
+			tasks: [{
+				id: "2A457C21A54D399A"
+				item: "embers:ember_activator"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["73818CC27A06CD21"]
+			id: "3973C0D1B04B1324"
+			tasks: [
+				{
+					id: "2D771E5389E8D185"
+					item: "embers:ember_emitter"
+					type: "item"
+				}
+				{
+					id: "1FA0159084B5C0AE"
+					item: "embers:ember_receiver"
+					type: "item"
+				}
+				{
+					id: "69FEBA0C6D8909EB"
+					item: "embers:ember_relay"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["73818CC27A06CD21"]
+			id: "52302D0D8AC05DE8"
+			tasks: [
+				{
+					id: "0CAC8E9008A5342C"
+					item: "embers:stamper"
+					type: "item"
+				}
+				{
+					id: "0C4BB6A1FFC2B614"
+					item: "embers:stamp_base"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["73818CC27A06CD21"]
+			id: "29488BCB303B32C2"
+			tasks: [{
+				id: "751F35E2A9193A1B"
+				item: "embers:mixer_centrifuge"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["73818CC27A06CD21"]
+			id: "77DE111AA48781EC"
+			tasks: [
+				{
+					id: "45F434F56163E980"
+					item: "embers:melter"
+					type: "item"
+				}
+				{
+					id: "0D4B25CD64E07C6A"
+					item: "embers:geologic_separator"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["29488BCB303B32C2"]
+			id: "7EE6B8AEFCDA0A93"
+			tasks: [{
+				id: "2474A374FE2F2343"
+				item: "embers:dawnstone_ingot"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["7EE6B8AEFCDA0A93"]
+			id: "731976A697931640"
+			tasks: [{
+				id: "0AE1C1A2ED908C02"
+				item: "embers:dawnstone_anvil"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["73818CC27A06CD21"]
+			icon: {
+				Count: 1
+				ForgeCaps: {
+					Parent: {
+						"embers:ember": 0.0d
+						"embers:ember_capacity": 24000.0d
+					}
+				}
+				id: "embers:copper_cell"
+				tag: {
+					ForgeCaps: {
+						"embers:ember": 24000.0d
+						"embers:ember_capacity": 24000.0d
+					}
+				}
+			}
+			id: "2170974D7D281885"
+			tasks: [{
+				id: "718AE0FE60637B54"
+				item: {
+					Count: 1
+					ForgeCaps: {
+						Parent: {
+							"embers:ember": 0.0d
+							"embers:ember_capacity": 24000.0d
+						}
+					}
+					id: "embers:copper_cell"
+					tag: {
+						ForgeCaps: {
+							"embers:ember_capacity": 24000.0d
+						}
+					}
+				}
+				match_nbt: false
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["5FE5B826AE61C62A"]
+			id: "56E82C7990716587"
+			tasks: [
+				{
+					id: "249A5FBC07811046"
+					item: "embers:beam_cannon"
+					type: "item"
+				}
+				{
+					id: "32D935EEBE0D9032"
+					item: "embers:alchemy_tablet"
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			id: "692EBD8E943A237A"
+			tasks: [
+				{
+					id: "4FCBC0E86F9432F0"
+					item: "embers:copper_crystal_seed"
+					type: "item"
+				}
+				{
+					id: "7E26D1718EF439B4"
+					item: "embers:ember_injector"
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: 4.0d
+		}
+		{
+			id: "5FE5B826AE61C62A"
+			tasks: [{
+				id: "33778118F425C4E3"
+				item: "embers:mnemonic_inscriber"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["5FE5B826AE61C62A"]
+			id: "23691B3EDB16F480"
+			tasks: [{
+				id: "436F5A2CC94B2859"
+				item: "embers:entropic_enumerator"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.5d
+		}
+	]
+	title: "Embers"
+}

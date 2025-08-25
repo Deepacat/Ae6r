@@ -5,7 +5,7 @@
 	group: "5A8B89F87F77CF4C"
 	icon: "minecraft:honeycomb"
 	id: "000000000000070D"
-	order_index: 6
+	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
