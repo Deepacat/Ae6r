@@ -1,0 +1,27 @@
+{
+    "content": {
+        "bellethorn": { "type": "item", "content": "botania:bellethorn", "amount": {"min": 1, "max": 1}, "unitWorth": 40, "weight":20},
+        "endoflame": { "type": "item", "content": "botania:endoflame", "amount": {"min": 1, "max": 1}, "unitWorth": 40, "weight":20},
+        "fortress_finder": { "type": "item", "content": "naturesaura:fortress_finder", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "blaze_spawn_egg": { "type": "item", "content": "minecraft:blaze_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 20, "weight":10},
+        "ghast_spawn_egg": { "type": "item", "content": "minecraft:ghast_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 20, "weight":10},
+        "mosquito_proboscis": { "type": "item", "content": "alexsmobs:mosquito_proboscis", "amount": {"min": 1, "max": 1}, "unitWorth": 40, "weight":20},
+        "blood_sac": { "type": "item", "content": "alexsmobs:blood_sac", "amount": {"min": 1, "max": 1}, "unitWorth": 40, "weight":20},
+        "book_runelic": { "type": "item", "content": "darkutils:book_runelic", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "ghast_tear": { "type": "item", "content": "minecraft:ghast_tear", "amount": {"min": 1, "max": 4}, "unitWorth": 200, "weight":100},
+        "weakbloodshard": { "type": "item", "content": "bloodmagic:weakbloodshard", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "weight":1},
+        "infusedslate": { "type": "item", "content": "bloodmagic:infusedslate", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "gold_ingot": { "type": "item", "content": "minecraft:gold_ingot", "amount": {"min": 2, "max": 16}, "unitWorth": 200, "weight":100},
+        "golden_apple": { "type": "item", "content": "minecraft:golden_apple", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "netherite_scrap": { "type": "item", "content": "minecraft:netherite_scrap", "amount": {"min": 1, "max": 4}, "unitWorth": 500, "weight":100},
+        "refined_glowstone_boots": { "type": "item", "content": "mekanismtools:refined_glowstone_boots", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_leggings": { "type": "item", "content": "mekanismtools:refined_glowstone_leggings", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_chestplate": { "type": "item", "content": "mekanismtools:refined_glowstone_chestplate", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_helmet": { "type": "item", "content": "mekanismtools:refined_glowstone_helmet", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_sword": { "type": "item", "content": "mekanismtools:refined_glowstone_sword", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_shovel": { "type": "item", "content": "mekanismtools:refined_glowstone_shovel", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_axe": { "type": "item", "content": "mekanismtools:refined_glowstone_axe", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "refined_glowstone_pickaxe": { "type": "item", "content": "mekanismtools:refined_glowstone_pickaxe", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "weight":100},
+        "blaze_arrow": { "type": "item", "content": "archers_paradox:blaze_arrow", "amount": {"min": 32, "max": 64}, "unitWorth": 200, "weight":100}
+    }
+}

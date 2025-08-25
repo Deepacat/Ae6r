@@ -1,0 +1,25 @@
+{
+    "content": {
+        "slime_tnt": { "type": "item", "content": "thermal:slime_tnt", "amount": {"min": 6, "max": 12}, "unitWorth": 400, "weight":200},
+        "redstone_tnt": { "type": "item", "content": "thermal:redstone_tnt", "amount": {"min": 6, "max": 12}, "unitWorth": 400, "weight":200},
+        "glowstone_tnt": { "type": "item", "content": "thermal:glowstone_tnt", "amount": {"min": 6, "max": 12}, "unitWorth": 400, "weight":200},
+        "ender_tnt": { "type": "item", "content": "thermal:ender_tnt", "amount": {"min": 3, "max": 6}, "unitWorth": 800, "weight":100},
+        "earth_tnt": { "type": "item", "content": "thermal:earth_tnt", "amount": {"min": 1, "max": 4}, "unitWorth": 1000, "weight":50},
+        "fire_tnt": { "type": "item", "content": "thermal:fire_tnt", "amount": {"min": 1, "max": 4}, "unitWorth": 1000, "weight":50},
+        "ice_tnt": { "type": "item", "content": "thermal:ice_tnt", "amount": {"min": 3, "max": 6}, "unitWorth": 800, "weight":100},
+        "lightning_tnt": { "type": "item", "content": "thermal:lightning_tnt", "amount": {"min": 3, "max": 6}, "unitWorth": 800, "weight":100},
+        "detonator": { "type": "item", "content": "thermal:detonator", "amount": {"min": 1, "max": 1}, "unitWorth": 600, "weight":75},
+        "explosive_grenade": { "type": "item", "content": "thermal:explosive_grenade", "amount": {"min": 8, "max": 16}, "unitWorth": 400, "weight":200},
+        "slime_grenade": { "type": "item", "content": "thermal:slime_grenade", "amount": {"min": 6, "max": 12}, "unitWorth": 400, "weight":200},
+        "redstone_grenade": { "type": "item", "content": "thermal:redstone_grenade", "amount": {"min": 6, "max": 12}, "unitWorth": 400, "weight":200},
+        "glowstone_grenade": { "type": "item", "content": "thermal:glowstone_grenade", "amount": {"min": 6, "max": 12}, "unitWorth": 400, "weight":200},
+        "ender_grenade": { "type": "item", "content": "thermal:ender_grenade", "amount": {"min": 3, "max": 6}, "unitWorth": 800, "weight":100},
+        "earth_grenade": { "type": "item", "content": "thermal:earth_grenade", "amount": {"min": 1, "max": 4}, "unitWorth": 1000, "weight":50},
+        "fire_grenade": { "type": "item", "content": "thermal:fire_grenade", "amount": {"min": 1, "max": 4}, "unitWorth": 1000, "weight":50},
+        "ice_grenade": { "type": "item", "content": "thermal:ice_grenade", "amount": {"min": 3, "max": 6}, "unitWorth": 800, "weight":100},
+        "lightning_grenade": { "type": "item", "content": "thermal:lightning_grenade", "amount": {"min": 3, "max": 6}, "unitWorth": 800, "weight":100},
+        "tnt1": { "type": "item", "content": "minecraft:tnt", "amount": {"min": 16, "max": 32}, "unitWorth": 600, "weight":200},
+        "tnt2": { "type": "item", "content": "minecraft:tnt", "amount": {"min": 4, "max": 16}, "unitWorth": 250, "weight":200},
+        "efln_ball": { "type": "item", "content": "tconstruct:efln_ball", "amount": {"min": 1, "max": 4}, "unitWorth": 400, "weight":50}
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "witch",
+    "spawnsInBoard": true,
+    "objectives": [
+        "witch_objs"
+    ],
+    "rewards": [
+        "witch_rews"
+    ]
+  }

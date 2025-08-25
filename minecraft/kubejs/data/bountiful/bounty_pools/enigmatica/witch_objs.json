@@ -1,0 +1,20 @@
+{
+    "content": {
+        "creeper": { "type": "item", "content": "minecraft:creeper", "amount": {"min": 1, "max": 6}, "unitWorth": 250, "weight":200, "timeMult": 3.0},
+        "enderman": { "type": "item", "content": "minecraft:enderman", "amount": {"min": 1, "max": 3}, "unitWorth": 400, "weight":50, "timeMult": 3.0},
+        "phantom": { "type": "item", "content": "minecraft:phantom", "amount": {"min": 1, "max": 6}, "unitWorth": 750, "weight":50, "timeMult": 7.5},
+        "skeleton": { "type": "item", "content": "minecraft:skeleton", "amount": {"min": 1, "max": 6}, "unitWorth": 250, "weight":200, "timeMult": 3.0},
+        "spider": { "type": "item", "content": "minecraft:spider", "amount": {"min": 1, "max": 6}, "unitWorth": 250, "weight":200, "timeMult": 3.0},
+        "witch": { "type": "item", "content": "minecraft:witch", "amount": {"min": 1, "max": 3}, "unitWorth": 400, "weight":50, "timeMult": 3.0},
+        "zombie": { "type": "item", "content": "minecraft:zombie", "amount": {"min": 1, "max": 6}, "unitWorth": 50, "weight":200, "timeMult": 3.0},
+        "wilden_hunter": { "type": "item", "content": "ars_nouveau:wilden_hunter", "amount": {"min": 1, "max": 6}, "unitWorth": 400, "weight":100, "timeMult": 3.0},
+        "wilden_guardian": { "type": "item", "content": "ars_nouveau:wilden_guardian", "amount": {"min": 1, "max": 6}, "unitWorth": 550, "weight":50, "timeMult": 3.0},
+        "wilden_stalker": { "type": "item", "content": "ars_nouveau:wilden_stalker", "amount": {"min": 1, "max": 6}, "unitWorth": 325, "weight":100, "timeMult": 3.0},
+        "wraith": { "type": "item", "content": "eidolon:wraith", "amount": {"min": 1, "max": 6}, "unitWorth": 325, "weight":100, "timeMult": 3.0},
+        "zombie_brute": { "type": "item", "content": "eidolon:zombie_brute", "amount": {"min": 1, "max": 6}, "unitWorth": 325, "weight":50, "timeMult": 3.0},
+        "rotten_flesh": { "type": "item", "content": "minecraft:rotten_flesh", "amount": {"min": 2, "max": 4}, "unitWorth": 100, "weight":200},
+        "bone": { "type": "item", "content": "minecraft:bone", "amount": {"min": 2, "max": 4}, "unitWorth": 100, "weight":200},
+        "gunpowder": { "type": "item", "content": "minecraft:gunpowder", "amount": {"min": 2, "max": 4}, "unitWorth": 150, "weight":200},
+        "blood_bucket": { "type": "item", "content": "tconstruct:blood_bucket", "amount": {"min": 1, "max": 1}, "unitWorth": 1000, "weight":25}        
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "content": {
+        "smithing_template_rune": { "type": "item", "content": "quark:smithing_template_rune", "amount": {"min": 1, "max": 1}, "unitWorth": 50, "weight":8},
+        "soul_lantern": { "type": "item", "content": "minecraft:soul_lantern", "amount": {"min": 4, "max": 16}, "unitWorth": 50, "weight":100},
+        "gold_nugget": { "type": "item", "content": "minecraft:gold_nugget", "amount": {"min": 8, "max": 20}, "unitWorth": 50, "weight":100},
+        "soul_bead": { "type": "item", "content": "quark:soul_bead", "amount": {"min": 1, "max": 1}, "unitWorth": 10, "weight":20},
+        "soul_sand": { "type": "item", "content": "minecraft:soul_sand", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "nether_wart": { "type": "item", "content": "minecraft:nether_wart", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "nether_brick": { "type": "item", "content": "minecraft:nether_brick", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "golden_carrot": { "type": "item", "content": "minecraft:golden_carrot", "amount": {"min": 4, "max": 12}, "unitWorth": 25, "weight":50},
+        "leather": { "type": "item", "content": "minecraft:leather", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "string": { "type": "item", "content": "minecraft:string", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "warped_nylium": { "type": "item", "content": "minecraft:warped_nylium", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "warped_sprouts": { "type": "item", "content": "eidolon:warped_sprouts", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "crimson_nylium": { "type": "item", "content": "minecraft:crimson_nylium", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "warped_fungus": { "type": "item", "content": "minecraft:warped_fungus", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "crimson_fungus": { "type": "item", "content": "minecraft:crimson_fungus", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "cosmetic_eerie_mask": { "type": "item", "content": "botania:cosmetic_eerie_mask", "amount": {"min": 1, "max": 1}, "unitWorth": 50, "weight":10},
+        "cosmetic_ancient_mask": { "type": "item", "content": "botania:cosmetic_ancient_mask", "amount": {"min": 1, "max": 1}, "unitWorth": 50, "weight":10},
+        "deforester_charge": { "type": "item", "content": "bloodmagic:deforester_charge", "amount": {"min": 4, "max": 30}, "unitWorth": 50, "weight":100},
+        "shaped_charge": { "type": "item", "content": "bloodmagic:shaped_charge", "amount": {"min": 4, "max": 30}, "unitWorth": 50, "weight":100},
+        "reinforcedslate": { "type": "item", "content": "bloodmagic:reinforcedslate", "amount": {"min": 4, "max": 6}, "unitWorth": 50, "weight":100},
+        "blankslate": { "type": "item", "content": "bloodmagic:blankslate", "amount": {"min": 4, "max": 6}, "unitWorth": 50, "weight":100},
+        "fire_charge": { "type": "item", "content": "minecraft:fire_charge", "amount": {"min": 4, "max": 12}, "unitWorth": 50, "weight":100},
+        "gilded_blackstone": { "type": "item", "content": "minecraft:gilded_blackstone", "amount": {"min": 4, "max": 8}, "unitWorth": 50, "weight":100},
+        "soul_brazier": { "type": "item", "content": "decorative_blocks:soul_brazier", "amount": {"min": 1, "max": 1}, "unitWorth": 50, "weight":100},
+        "glowstone_dust": { "type": "item", "content": "minecraft:glowstone_dust", "amount": {"min": 8, "max": 12}, "unitWorth": 50, "weight":100},
+        "obsidian": { "type": "item", "content": "minecraft:obsidian", "amount": {"min": 4, "max": 8}, "unitWorth": 50, "weight":100},
+        "crying_obsidian": { "type": "item", "content": "minecraft:crying_obsidian", "amount": {"min": 4, "max": 8}, "unitWorth": 50, "weight":100},
+        "quartz": { "type": "item", "content": "minecraft:quartz", "amount": {"min": 4, "max": 16}, "unitWorth": 50, "weight":100},
+        "blaze_powder": { "type": "item", "content": "minecraft:blaze_powder", "amount": {"min": 1, "max": 4}, "unitWorth": 50, "weight":100}
+    }
+}

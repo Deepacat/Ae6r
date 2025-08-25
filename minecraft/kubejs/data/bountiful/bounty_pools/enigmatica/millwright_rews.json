@@ -1,0 +1,27 @@
+{
+    "content": {
+        "shaft": { "type": "item", "content": "create:shaft", "amount": {"min": 24, "max": 48}, "unitWorth": 250, "weight":200},
+        "cogwheel": { "type": "item", "content": "create:cogwheel", "amount": {"min": 8, "max": 16}, "unitWorth": 250, "weight":200},
+        "large_cogwheel": { "type": "item", "content": "create:large_cogwheel", "amount": {"min": 4, "max": 8}, "unitWorth": 250, "weight":200},
+        "gearbox": { "type": "item", "content": "create:gearbox", "amount": {"min": 2, "max": 4}, "unitWorth": 500, "weight":200},
+        "clutch": { "type": "item", "content": "create:clutch", "amount": {"min": 2, "max": 4}, "unitWorth": 500, "weight":200},
+        "gearshift": { "type": "item", "content": "create:gearshift", "amount": {"min": 2, "max": 4}, "unitWorth": 500, "weight":200},
+        "encased_chain_drive": { "type": "item", "content": "create:encased_chain_drive", "amount": {"min": 2, "max": 4}, "unitWorth": 650, "weight":200},
+        "adjustable_chain_gearshift": { "type": "item", "content": "create:adjustable_chain_gearshift", "amount": {"min": 2, "max": 8}, "unitWorth": 750, "weight":200},
+        "speedometer": { "type": "item", "content": "create:speedometer", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "weight":200},
+        "controller_rail": { "type": "item", "content": "create:controller_rail", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "weight":200},
+        "redstone_contact": { "type": "item", "content": "create:redstone_contact", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "weight":200},
+        "white_seat": { "type": "item", "content": "create:white_seat", "amount": {"min": 16, "max": 32}, "unitWorth": 350, "weight":200},
+        "white_toolbox": { "type": "item", "content": "create:white_toolbox", "amount": {"min": 1, "max": 1}, "unitWorth": 450, "weight":75},
+        "sticky_mechanical_piston": { "type": "item", "content": "create:sticky_mechanical_piston", "amount": {"min": 2, "max": 4}, "unitWorth": 500, "weight":100},
+        "gantry_carriage": { "type": "item", "content": "create:gantry_carriage", "amount": {"min": 1, "max": 1}, "unitWorth": 400, "weight":100},
+        "gantry_shaft": { "type": "item", "content": "create:gantry_shaft", "amount": {"min": 16, "max": 32}, "unitWorth": 400, "weight":100},
+        "clockwork_bearing": { "type": "item", "content": "create:clockwork_bearing", "amount": {"min": 1, "max": 1}, "unitWorth": 400, "weight":100},
+        "crafter_slot_cover": { "type": "item", "content": "create:crafter_slot_cover", "amount": {"min": 8, "max": 16}, "unitWorth": 250, "weight":100},
+        "brass_hand": { "type": "item", "content": "create:brass_hand", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "weight":100},
+        "belt_connector": { "type": "item", "content": "create:belt_connector", "amount": {"min": 4, "max": 8}, "unitWorth": 500, "weight":100},
+        "builders_tea": { "type": "item", "content": "create:builders_tea", "amount": {"min": 16, "max": 32}, "unitWorth": 350, "weight":100},
+        "metal_bracket": { "type": "item", "content": "create:metal_bracket", "amount": {"min": 8, "max": 16}, "unitWorth": 250, "weight":100},
+        "chute": { "type": "item", "content": "create:chute", "amount": {"min": 8, "max": 16}, "unitWorth": 250, "weight":100}
+    }
+}

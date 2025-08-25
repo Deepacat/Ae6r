@@ -1,0 +1,10 @@
+{
+    "name": "machinist",
+    "spawnsInBoard": true,
+    "objectives": [
+        "machinist_objs"
+    ],
+    "rewards": [
+        "machinist_rews"
+    ]
+  }

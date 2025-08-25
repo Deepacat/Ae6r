@@ -1,0 +1,10 @@
+{
+  "name": "millwright",
+  "spawnsInBoard": true,
+  "objectives": [
+    "millwright_objs"
+  ],
+  "rewards": [
+    "millwright_rews"
+  ]
+}

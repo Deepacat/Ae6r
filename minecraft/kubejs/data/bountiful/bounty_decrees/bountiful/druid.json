@@ -1,0 +1,10 @@
+{
+    "name": "druid",
+    "spawnsInBoard": true,
+    "objectives": [
+        "druid_objs"
+    ],
+    "rewards": [
+        "druid_rews"
+    ]
+  }

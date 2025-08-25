@@ -1,0 +1,17 @@
+{
+    "content": {
+        "iron_ingot": { "type": "item", "content": "minecraft:iron_ingot", "amount": {"min": 6, "max": 12}, "unitWorth": 50, "weight":200},
+        "gold_ingot": { "type": "item", "content": "minecraft:gold_ingot", "amount": {"min": 3, "max": 6}, "unitWorth": 150, "weight":100},
+        "redstone": { "type": "item", "content": "minecraft:redstone", "amount": {"min": 8, "max": 16}, "unitWorth": 100, "weight":200},
+        "coal": { "type": "item", "content": "minecraft:coal", "amount": {"min": 8, "max": 16}, "unitWorth": 100, "weight":200},
+        "diamond": { "type": "item", "content": "minecraft:diamond", "amount": {"min": 1, "max": 4}, "unitWorth": 175, "weight":50},
+        "obsidian": { "type": "item", "content": "minecraft:obsidian", "amount": {"min": 1, "max": 4}, "unitWorth": 175, "weight":50},
+        "copper_ingot": { "type": "item", "content": "emendatus:copper_ingot", "amount": {"min": 6, "max": 12}, "unitWorth": 75, "weight":200},
+        "osmium_ingot": { "type": "item", "content": "emendatus:osmium_ingot", "amount": {"min": 3, "max": 6}, "unitWorth": 150, "weight":100},
+        "tin_ingot": { "type": "item", "content": "emendatus:tin_ingot", "amount": {"min": 3, "max": 6}, "unitWorth": 150, "weight":100},
+        "lead_ingot": { "type": "item", "content": "emendatus:lead_ingot", "amount": {"min": 3, "max": 6}, "unitWorth": 150, "weight":100},
+        "silver_ingot": { "type": "item", "content": "emendatus:silver_ingot", "amount": {"min": 3, "max": 6}, "unitWorth": 150, "weight":100},
+        "nickel_ingot": { "type": "item", "content": "emendatus:nickel_ingot", "amount": {"min": 3, "max": 6}, "unitWorth": 150, "weight":100},
+        "uranium_ingot": { "type": "item", "content": "emendatus:uranium_ingot", "amount": {"min": 1, "max": 4}, "unitWorth": 250, "weight":50}        
+    }
+}

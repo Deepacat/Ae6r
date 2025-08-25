@@ -1,0 +1,22 @@
+{
+    "content": {
+        "silver_coin": { "type": "item", "content": "thermal:silver_coin", "amount": {"min": 10, "max": 20}, "unitWorth": 50, "weight":100},
+        "gold_coin": { "type": "item", "content": "thermal:gold_coin", "amount": {"min": 10, "max": 20}, "unitWorth": 50, "weight":100},
+        "ice_grenade": { "type": "item", "content": "thermal:ice_grenade", "amount": {"min": 1, "max": 5}, "unitWorth": 50, "weight":100},
+        "mana_bottle": { "type": "item", "content": "botania:mana_bottle", "amount": {"min": 1, "max": 2}, "unitWorth": 50, "weight":100},
+        "mana_cookie": { "type": "item", "content": "botania:mana_cookie", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100},
+        "double_hook": { "type": "item", "content": "aquaculture:double_hook", "amount": {"min": 1, "max": 1}, "unitWorth": 25, "weight":50},
+        "black_rune": { "type": "item", "content": "quark:smithing_template_rune", "amount": {"min": 1, "max": 1}, "unitWorth": 4, "weight":7},
+        "clay": { "type": "item", "content": "minecraft:clay", "amount": {"min": 6, "max": 20}, "unitWorth": 50, "weight":100},
+        "prismarine_crystals": { "type": "item", "content": "minecraft:prismarine_crystals", "amount": {"min": 10, "max": 20}, "unitWorth": 50, "weight":100},
+        "prismarine_shard": { "type": "item", "content": "minecraft:prismarine_shard", "amount": {"min": 5, "max": 10}, "unitWorth": 50, "weight":100},
+        "glowing_ink_sac": { "type": "item", "content": "upgrade_aquatic:glowing_ink_sac", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100},
+        "ink_sac": { "type": "item", "content": "minecraft:ink_sac", "amount": {"min": 8, "max": 16}, "unitWorth": 50, "weight":100},
+        "prismarine_arrow": { "type": "item", "content": "archers_paradox:prismarine_arrow", "amount": {"min": 32, "max": 64}, "unitWorth": 13, "weight":25},
+        "squid_ink_pasta": { "type": "item", "content": "farmersdelight:squid_ink_pasta", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100},
+        "sushi": { "type": "item", "content": "simplefarming:sushi", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100},
+        "slime_ball": { "type": "item", "content": "minecraft:slime_ball", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100},
+        "thrasher_tooth": { "type": "item", "content": "upgrade_aquatic:thrasher_tooth", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100},
+        "fish_oil": { "type": "item", "content": "alexsmobs:fish_oil", "amount": {"min": 1, "max": 3}, "unitWorth": 50, "weight":100}
+    }
+}

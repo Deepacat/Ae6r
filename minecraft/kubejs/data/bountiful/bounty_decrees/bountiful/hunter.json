@@ -1,0 +1,12 @@
+{
+    "name": "hunter",
+    "spawnsInBoard": true,
+    "objectives": [
+        "hunter_objs",
+        "combat_objs"
+    ],
+    "rewards": [
+        "exotichunter_rews",
+        "monsterhunter_rews"
+    ]
+  }

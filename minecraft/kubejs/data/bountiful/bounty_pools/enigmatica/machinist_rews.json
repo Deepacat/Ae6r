@@ -1,0 +1,30 @@
+{
+    "content": {
+        "straw": { "type": "item", "content": "industrialforegoing:straw", "amount": {"min": 1, "max": 1}, "unitWorth": 225, "weight":225},
+        "conveyor": { "type": "item", "content": "industrialforegoing:conveyor", "amount": {"min": 8, "max": 16}, "unitWorth": 300, "weight":200},
+        "dark_glass": { "type": "item", "content": "industrialforegoing:dark_glass", "amount": {"min": 16, "max": 32}, "unitWorth": 250, "weight":200},
+        "fertilizier": { "type": "item", "content": "industrialforegoing:fertilizier", "amount": {"min": 24, "max": 48}, "unitWorth": 225, "weight":200},
+        "common_black_hole_unit": { "type": "item", "content": "industrialforegoing:common_black_hole_unit", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "weight":225},
+        "common_black_hole_tank": { "type": "item", "content": "industrialforegoing:common_black_hole_tank", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "weight":225},
+        "basic_bin": { "type": "item", "content": "mekanism:basic_bin", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "weight":225},
+        "alloy_infused": { "type": "item", "content": "mekanism:alloy_infused", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "weight":200},
+        "alloy_reinforced": { "type": "item", "content": "mekanism:alloy_reinforced", "amount": {"min": 4, "max": 8}, "unitWorth": 400, "weight":100},
+        "alloy_atomic": { "type": "item", "content": "mekanism:alloy_atomic", "amount": {"min": 1, "max": 4}, "unitWorth": 800, "weight":50},
+        "basic_control_circuit": { "type": "item", "content": "mekanism:basic_control_circuit", "amount": {"min": 4, "max": 8}, "unitWorth": 300, "weight":200},
+        "advanced_control_circuit": { "type": "item", "content": "mekanism:advanced_control_circuit", "amount": {"min": 3, "max": 6}, "unitWorth": 600, "weight":100},
+        "hdpe_sheet": { "type": "item", "content": "mekanism:hdpe_sheet", "amount": {"min": 8, "max": 16}, "unitWorth": 750, "weight":100},
+        "industrial_alarm": { "type": "item", "content": "mekanism:industrial_alarm", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "weight":225},
+        "bio_fuel": { "type": "item", "content": "mekanism:bio_fuel", "amount": {"min": 24, "max": 48}, "unitWorth": 200, "weight":200},
+        "blue_shield_template_block": { "type": "item", "content": "rftoolsbuilder:blue_shield_template_block", "amount": {"min": 8, "max": 16}, "unitWorth": 400, "weight":200},
+        "card_base": { "type": "item", "content": "rftoolscontrol:card_base", "amount": {"min": 1, "max": 4}, "unitWorth": 250, "weight":50},
+        "storage_module0": { "type": "item", "content": "rftoolsstorage:storage_module0", "amount": {"min": 1, "max": 1}, "unitWorth": 600, "weight":100},
+        "module_template": { "type": "item", "content": "rftoolsutility:module_template", "amount": {"min": 1, "max": 1}, "unitWorth": 1375, "weight":75},
+        "diving_fabric": { "type": "item", "content": "thermal:diving_fabric", "amount": {"min": 2, "max": 4}, "unitWorth": 200, "weight":100},
+        "xp_crystal": { "type": "item", "content": "thermal:xp_crystal", "amount": {"min": 1, "max": 1}, "unitWorth": 750, "weight":75},
+        "phytogro": { "type": "item", "content": "thermal:phytogro", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "weight":100},
+        "prismarine_rail": { "type": "item", "content": "thermal:prismarine_rail", "amount": {"min": 8, "max": 16}, "unitWorth": 300, "weight":200},
+        "underwater_minecart": { "type": "item", "content": "thermal:underwater_minecart", "amount": {"min": 1, "max": 1}, "unitWorth": 150, "weight":75},
+        "redstone_servo": { "type": "item", "content": "thermal:redstone_servo", "amount": {"min": 4, "max": 8}, "unitWorth": 300, "weight":200},
+        "rf_coil": { "type": "item", "content": "thermal:rf_coil", "amount": {"min": 3, "max": 6}, "unitWorth": 600, "weight":100}
+    }
+}

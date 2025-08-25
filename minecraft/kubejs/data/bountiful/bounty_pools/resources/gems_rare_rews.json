@@ -1,0 +1,14 @@
+{
+    "content": {
+        "redstone": { "type": "item", "content": "minecraft:redstone", "amount": {"min": 8, "max": 32}, "unitWorth": 250, "weight":100},
+        "coal": { "type": "item", "content": "minecraft:coal", "amount": {"min": 8, "max": 32}, "unitWorth": 150, "weight":100},
+        "diamond": { "type": "item", "content": "minecraft:diamond", "amount": {"min": 8, "max": 32}, "unitWorth": 500, "weight":100},
+        "lapis_lazuli": { "type": "item", "content": "minecraft:lapis_lazuli", "amount": {"min": 8, "max": 32}, "unitWorth": 300, "weight":100},
+        "salt": { "type": "item", "content": "mekanism:salt", "amount": {"min": 8, "max": 32}, "unitWorth": 150, "weight":100},
+        "flourite_gem": { "type": "item", "content": "emendatus:flourite_gem", "amount": {"min": 8, "max": 32}, "unitWorth": 350, "weight":100},
+        "bitumen": { "type": "item", "content": "thermal:bitumen", "amount": {"min": 8, "max": 32}, "unitWorth": 200, "weight":100},
+        "apatite_gem": { "type": "item", "content": "emendatus:apatite_gem", "amount": {"min": 8, "max": 32}, "unitWorth": 150, "weight":100},
+        "sulfur_gem": { "type": "item", "content": "emendatus:sulfur_gem", "amount": {"min": 8, "max": 32}, "unitWorth": 400, "weight":100},
+        "potassium_nitrate_gem": { "type": "item", "content": "emendatus:potassium_nitrate_gem", "amount": {"min": 8, "max": 32}, "unitWorth": 400, "weight":100}
+    }
+}

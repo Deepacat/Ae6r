@@ -1,0 +1,9 @@
+{
+    "content": {
+        "coal": { "type": "item", "content": "minecraft:coal", "amount": {"min": 4, "max": 16}, "unitWorth": 100, "weight":100},
+        "bitumen_gem": { "type": "item", "content": "thermal:bitumen", "amount": {"min": 4, "max": 16}, "unitWorth": 150, "weight":100},
+        "apatite_gem": { "type": "item", "content": "emendatus:apatite_gem", "amount": {"min": 4, "max": 16}, "unitWorth": 150, "weight":100},
+        "salt": { "type": "item", "content": "mekanism:salt", "amount": {"min": 4, "max": 16}, "unitWorth": 100, "weight":100}
+
+    }
+}

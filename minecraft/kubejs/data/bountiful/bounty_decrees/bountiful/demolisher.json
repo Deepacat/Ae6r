@@ -1,0 +1,10 @@
+{
+    "name": "demolisher",
+    "spawnsInBoard": true,
+    "objectives": [
+        "demolisher_objs"
+    ],
+    "rewards": [
+        "demolisher_rews"
+    ]
+  }
