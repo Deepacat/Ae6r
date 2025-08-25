@@ -1,4 +1,43 @@
 ServerEvents.recipes(e => {
+    e.remove({ id: 'industrialforegoing:item_transporter_type' })
+    e.shaped('4x industrialforegoing:item_transporter_type', [
+        'ABA',
+        'CEC',
+        'ADA'
+    ], {
+        A: 'minecraft:redstone',
+        B: 'minecraft:ender_pearl',
+        C: 'minecraft:gold_ingot',
+        D: 'minecraft:piston',
+        E: 'thermal:machine_frame',
+    })
+
+    e.remove({ id: 'industrialforegoing:fluid_transporter_type' })
+    e.shaped('4x industrialforegoing:fluid_transporter_type', [
+        'ABA',
+        'CEC',
+        'ADA'
+    ], {
+        A: 'minecraft:redstone',
+        B: 'minecraft:ender_pearl',
+        C: 'minecraft:lapis_lazuli',
+        D: 'minecraft:piston',
+        E: 'thermal:machine_frame',
+    })
+
+    e.remove({ id: 'industrialforegoing:world_transporter_type' })
+    e.shaped('4x industrialforegoing:world_transporter_type', [
+        'ABA',
+        'CEC',
+        'ADA'
+    ], {
+        A: 'minecraft:redstone',
+        B: 'minecraft:ender_pearl',
+        C: 'minecraft:hopper',
+        D: 'minecraft:dropper',
+        E: 'thermal:machine_frame',
+    })
+
     e.remove({ id: 'industrialforegoing:machine_frame_pity' })
     e.shaped('industrialforegoing:machine_frame_pity', [
         'CDC',
