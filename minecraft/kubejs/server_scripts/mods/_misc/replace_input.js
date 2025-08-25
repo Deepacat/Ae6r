@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
     e.replaceInput({ id: 'create:crafting/kinetics/mechanical_piston' }, '#minecraft:planks', ['minecraft:piston', 'minecraft:sticky_piston'])
-    e.replaceInput({ id: 'occultism:crafting/goggles' }, 'minecraft:leather', 'betterendforge:leather_stripe')
+    e.replaceInput({ id: 'occultism:crafting/goggles' }, 'minecraft:leather', 'kubejs:leather_stripe')
     e.replaceInput({ id: 'occultism:crafting/storage_remote_inert' }, '#forge:ingots/gold', '#forge:ingots/nebu')
     e.replaceInput({ id: 'glassential:glass_ghostly' }, 'minecraft:ender_pearl', Item.of('naturesaura:aura_bottle', { stored_type: 'naturesaura:nether' }))
     e.replaceInput({ id: 'occultism:crafting/storage_remote_inert' }, '#forge:ingots/gold', '#forge:ingots/nebu')
