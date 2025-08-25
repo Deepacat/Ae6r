@@ -40,3 +40,5 @@
 - [ ] Fix raw ore block smelting recipes being too quick
 - [ ] Meka biomass from other mods' crops (currently only MC)
 - [ ] Fix lootbox rewards in qb
+- [ ] (For specifically deepa) port my iron spells/apoth rework from a concept I made
+- [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
