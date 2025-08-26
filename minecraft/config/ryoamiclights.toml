@@ -74,6 +74,7 @@
 				centipede_tail = true
 				crow = true
 				underminer = true
+				bison = true
 				terrapin = true
 				sugar_glider = true
 
@@ -113,7 +114,9 @@
 
 			[light_sources.settings.entities.ars_nouveau]
 				starbuncle = true
+				gift_starby = true
 				bookwyrm = true
+				drygmy = true
 				whirlisprig = true
 
 			[light_sources.settings.entities.upgrade_aquatic]

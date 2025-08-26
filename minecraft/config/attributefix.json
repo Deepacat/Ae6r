@@ -561,6 +561,17 @@
         "value": 100
       }
     },
+    "caelus:fall_flying": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
+      }
+    },
     "botania:pixie_spawn_chance": {
       "enabled": false,
       "min": {
