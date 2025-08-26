@@ -2,6 +2,7 @@
 	"entity": "irons_spellbooks:archevoker",
 	"weight": 1,
 	"quality": 2,
+	"stages": [ "rare_apoth_wizards" ],
 	"size": {
 		"width": 1,
 		"height": 2
@@ -17,12 +18,12 @@
 	"stats": {
 		"uncommon": {
 			"enchant_chance": 0.25,
-			"enchantment_levels": [12, 8, 20, 14],
-			"effects": [{
-				"effect": "minecraft:fire_resistance",
-				"chance": 1.0
-			}],
-			"attribute_modifiers": [{
+			"enchantment_levels": [ 12, 8, 20, 14 ],
+			"effects": [ {
+					"effect": "minecraft:fire_resistance",
+					"chance": 1.0
+				} ],
+			"attribute_modifiers": [ {
 					"attribute": "minecraft:generic.max_health",
 					"operation": "ADDITION",
 					"value": {
@@ -85,12 +86,12 @@
 		},
 		"rare": {
 			"enchant_chance": 0.35,
-			"enchantment_levels": [15, 10, 23, 17],
-			"effects": [{
-				"effect": "minecraft:fire_resistance",
-				"chance": 1.0
-			}],
-			"attribute_modifiers": [{
+			"enchantment_levels": [ 15, 10, 23, 17 ],
+			"effects": [ {
+					"effect": "minecraft:fire_resistance",
+					"chance": 1.0
+				} ],
+			"attribute_modifiers": [ {
 					"attribute": "minecraft:generic.max_health",
 					"operation": "ADDITION",
 					"value": {
@@ -153,12 +154,12 @@
 		},
 		"epic": {
 			"enchant_chance": 0.35,
-			"enchantment_levels": [15, 10, 23, 17],
-			"effects": [{
-				"effect": "minecraft:fire_resistance",
-				"chance": 1.0
-			}],
-			"attribute_modifiers": [{
+			"enchantment_levels": [ 15, 10, 23, 17 ],
+			"effects": [ {
+					"effect": "minecraft:fire_resistance",
+					"chance": 1.0
+				} ],
+			"attribute_modifiers": [ {
 					"attribute": "minecraft:generic.max_health",
 					"operation": "ADDITION",
 					"value": {
