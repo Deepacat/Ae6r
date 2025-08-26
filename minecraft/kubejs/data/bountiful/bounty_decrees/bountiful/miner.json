@@ -1,6 +1,5 @@
 {
     "name": "miner",
-    "spawnsInBoard": true,
     "objectives": [
         "mining_objs",
         "utility_objs"

@@ -1,6 +1,5 @@
 {
     "name": "electrician",
-    "spawnsInBoard": true,
     "objectives": [
         "electrician_objs"
     ],

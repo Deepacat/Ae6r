@@ -1,6 +1,5 @@
 {
     "name": "druid",
-    "spawnsInBoard": true,
     "objectives": [
         "druid_objs"
     ],

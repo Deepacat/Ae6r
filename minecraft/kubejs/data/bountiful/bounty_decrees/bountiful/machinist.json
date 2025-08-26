@@ -1,6 +1,5 @@
 {
     "name": "machinist",
-    "spawnsInBoard": true,
     "objectives": [
         "machinist_objs"
     ],

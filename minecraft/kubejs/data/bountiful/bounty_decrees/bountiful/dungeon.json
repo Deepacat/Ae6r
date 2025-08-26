@@ -1,6 +1,5 @@
 {
     "name": "dungeondweller",
-    "spawnsInBoard": true,
     "objectives": [
         "dungeon_objs",
         "utility_objs",
