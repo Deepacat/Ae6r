@@ -29,7 +29,7 @@ ServerEvents.recipes(e => {
         .heated()
         .id(`kubejs:create/mixing/end_fiber`)
 
-    e.recipes.create.mixing(Item.of('kubejs:chromatic_compound', 2), [
+    e.recipes.create.mixing(Item.of('create:chromatic_compound', 2), [
             /*'astralsorcery:'*/ 'kubejs:replaceme',
             /*'astralsorcery:'*/ 'kubejs:replaceme',
             /*'astralsorcery:'*/ 'kubejs:replaceme',

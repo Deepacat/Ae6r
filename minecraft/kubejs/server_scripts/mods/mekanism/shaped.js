@@ -341,7 +341,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:gears/aluminum',
         B: '#forge:plates/signalum',
-        C: ['mekanismtools:steel_chestplate', 'immersiveengineering:armor_steel_chest'],
+        C: ['mekanismtools:steel_chestplate', 'immersiveengineering:armor_steel_chestplate'],
         D: 'mekanism:jetpack'
     }).id('kubejs:mekanism_jetpack_armored')
 

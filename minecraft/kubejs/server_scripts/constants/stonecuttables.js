@@ -693,7 +693,10 @@ const stonecuttables = [
     },
     {
         name: 'elder_prismarine',
-        stones: ['quark:elder_prismarine', 'quark:elder_prismarine_bricks'],
+        stones: [
+            'upgrade_aquatic:elder_prismarine_coralstone',
+            'upgrade_aquatic:chiseled_elder_prismarine_coralstone'
+        ],
         onlyAsOutput: [],
         onlyAsInput: []
     },
