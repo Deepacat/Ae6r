@@ -1,0 +1,32 @@
+{
+    "content": {
+        "elder_eye": { "type": "item", "content": "upgrade_aquatic:elder_eye", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "rarity": "EPIC"},
+        "slime_spawn_egg": { "type": "item", "content": "minecraft:slime_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "rarity": "EPIC"},
+        "guardian_spawn_egg": { "type": "item", "content": "minecraft:guardian_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "rarity": "EPIC"},
+        "drowned_spawn_egg": { "type": "item", "content": "minecraft:drowned_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "rarity": "EPIC"},
+        "glow_squid_spawn_egg": { "type": "item", "content": "upgrade_aquatic:glow_squid_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "squid_spawn_egg": { "type": "item", "content": "minecraft:squid_spawn_egg", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "outpost_finder": { "type": "item", "content": "naturesaura:outpost_finder", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "lucky_scarf": { "type": "item", "content": "artifacts:lucky_scarf", "amount": {"min": 1, "max": 1}, "unitWorth": 250, "rarity": "EPIC"},
+        "snorkel": { "type": "item", "content": "artifacts:snorkel", "amount": {"min": 1, "max": 1}, "unitWorth": 250, "rarity": "EPIC"},
+        "flippers": { "type": "item", "content": "artifacts:flippers", "amount": {"min": 1, "max": 1}, "unitWorth": 250, "rarity": "EPIC"},
+        "golden_hook": { "type": "item", "content": "artifacts:golden_hook", "amount": {"min": 1, "max": 1}, "unitWorth": 250, "rarity": "EPIC"},
+        "neptunium_fishing_rod": { "type": "item", "content": "aquaculture:neptunium_fishing_rod", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_boots": { "type": "item", "content": "aquaculture:neptunium_boots", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_leggings": { "type": "item", "content": "aquaculture:neptunium_leggings", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_chestplate": { "type": "item", "content": "aquaculture:neptunium_chestplate", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_helmet": { "type": "item", "content": "aquaculture:neptunium_helmet", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_bow": { "type": "item", "content": "aquaculture:neptunium_bow", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_sword": { "type": "item", "content": "aquaculture:neptunium_sword", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_hoe": { "type": "item", "content": "aquaculture:neptunium_hoe", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_axe": { "type": "item", "content": "aquaculture:neptunium_axe", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_shovel": { "type": "item", "content": "aquaculture:neptunium_shovel", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "neptunium_pickaxe": { "type": "item", "content": "aquaculture:neptunium_pickaxe", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "nether_star_hook": { "type": "item", "content": "aquaculture:nether_star_hook", "amount": {"min": 1, "max": 1}, "unitWorth": 250, "rarity": "EPIC"},
+        "spiked_turtle_shell": { "type": "item", "content": "alexsmobs:spiked_turtle_shell", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "EPIC"},
+        "iesnium_ingot": { "type": "item", "content": "occultism:iesnium_ingot", "amount": {"min": 1, "max": 3}, "unitWorth": 200, "rarity": "EPIC"},
+        "lightning_arrow": { "type": "item", "content": "archers_paradox:lightning_arrow", "amount": {"min": 32, "max": 64}, "unitWorth": 10, "rarity": "EPIC"},
+        "conduit": { "type": "item", "content": "minecraft:conduit", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "water_ring": { "type": "item", "content": "botania:water_ring", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"}
+    }
+}

@@ -132,5 +132,9 @@ ServerEvents.tags('item', e => {
 })
 
 ServerEvents.tags('block', e => {
-
+    // Mineable tags
+    e.add('minecraft:mineable/axe', ['bountiful:bountyboard'])
+    e.add('minecraft:mineable/pickaxe', [''])
+    e.add('minecraft:mineable/shovel', [''])
+    e.add('minecraft:mineable/hoe', [''])
 })

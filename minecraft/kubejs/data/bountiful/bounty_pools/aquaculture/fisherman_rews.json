@@ -1,0 +1,84 @@
+{
+    "content": {
+        "iron_hook": {
+            "type": "item",
+            "content": "aquaculture:iron_hook",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 500,
+            "rarity": "COMMON"
+        },
+        "heavy_hook": {
+            "type": "item",
+            "content": "aquaculture:heavy_hook",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 800,
+            "rarity": "COMMON"
+        },
+        "double_hook": {
+            "type": "item",
+            "content": "aquaculture:double_hook",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 800,
+            "rarity": "UNCOMMON"
+        },
+        "redstone_hook": {
+            "type": "item",
+            "content": "aquaculture:redstone_hook",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 1250,
+            "rarity": "UNCOMMON"
+        },
+        "gold_hook": {
+            "type": "item",
+            "content": "aquaculture:gold_hook",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 1000,
+            "rarity": "UNCOMMON"
+        },
+        "diamond_hook": {
+            "type": "item",
+            "content": "aquaculture:diamond_hook",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 7500,
+            "rarity": "LEGENDARY"
+        },
+        "iron_knife": {
+            "type": "item",
+            "content": "farmersdelight:iron_knife",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 1600,
+            "rarity": "COMMON"
+        },
+        "gold_knife": {
+            "type": "item",
+            "content": "farmersdelight:gold_knife",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 2000,
+            "rarity": "RARE"
+        }
+    }
+}

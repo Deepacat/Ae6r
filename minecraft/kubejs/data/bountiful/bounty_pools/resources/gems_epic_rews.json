@@ -1,0 +1,15 @@
+{
+    "content": {
+        "redstone": { "type": "item", "content": "minecraft:redstone", "amount": {"min": 16, "max": 64}, "unitWorth": 350, "rarity": "EPIC"},
+        "coal": { "type": "item", "content": "minecraft:coal", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "rarity": "EPIC"},
+        "diamond": { "type": "item", "content": "minecraft:diamond", "amount": {"min": 16, "max": 64}, "unitWorth": 750, "rarity": "EPIC"},
+        "lapis_lazuli": { "type": "item", "content": "minecraft:lapis_lazuli", "amount": {"min": 16, "max": 64}, "unitWorth": 550, "rarity": "EPIC"},
+        "emerald": { "type": "item", "content": "minecraft:emerald", "amount": {"min": 16, "max": 64}, "unitWorth": 500, "rarity": "EPIC"},
+        "salt": { "type": "item", "content": "mekanism:salt", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "rarity": "EPIC"},
+        "fluorite_gem": { "type": "item", "content": "emendatus:fluorite_gem", "amount": {"min": 16, "max": 64}, "unitWorth": 500, "rarity": "EPIC"},
+        "bitumen_gem": { "type": "item", "content": "thermal:bitumen", "amount": {"min": 16, "max": 64}, "unitWorth": 350, "rarity": "EPIC"},
+        "apatite_gem": { "type": "item", "content": "emendatus:apatite_gem", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "rarity": "EPIC"},
+        "sulfur_gem": { "type": "item", "content": "emendatus:sulfur_gem", "amount": {"min": 16, "max": 64}, "unitWorth": 400, "rarity": "EPIC"},
+        "potassium_nitrate_gem": { "type": "item", "content": "emendatus:potassium_nitrate_gem", "amount": {"min": 16, "max": 64}, "unitWorth": 500, "rarity": "EPIC"}
+    }
+}

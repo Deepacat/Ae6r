@@ -1,0 +1,11 @@
+{
+    "content": {
+        "creeper": { "type": "entity", "content": "minecraft:creeper", "amount": {"min": 3, "max": 6}, "unitWorth": 400, "rarity": "UNCOMMON", "timeMult": 3.0},
+        "gunpowder": { "type": "item", "content": "minecraft:gunpowder", "amount": {"min": 4, "max": 8}, "unitWorth": 100, "rarity": "COMMON"},
+        "sand": { "type": "item", "content": "minecraft:sand", "amount": {"min": 24, "max": 48}, "unitWorth": 150, "rarity": "COMMON"},
+        "slimeballs": { "type": "item-tag", "content": "forge:slimeballs", "amount": {"min": 4, "max": 8}, "unitWorth": 200, "rarity": "UNCOMMON"},
+        "glowstone": { "type": "item", "content": "minecraft:glowstone", "amount": {"min": 4, "max": 8}, "unitWorth": 200, "rarity": "UNCOMMON"},
+        "ice": { "type": "item", "content": "minecraft:ice", "amount": {"min": 1, "max": 4}, "unitWorth": 400, "rarity": "RARE"},
+        "ender_pearl": { "type": "item", "content": "minecraft:ender_pearl", "amount": {"min": 1, "max": 4}, "unitWorth": 400, "rarity": "RARE"}        
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "content": {
+        "apple_crate": { "type": "item", "content": "quark:apple_crate", "amount": { "min": 1, "max": 5 }, "unitWorth": 1500, "rarity": "COMMON" },
+        "beetroot_crate": { "type": "item", "content": "farmersdelight:beetroot_crate", "amount": { "min": 1, "max": 5 }, "unitWorth": 1000, "rarity": "COMMON" },
+        "potato_crate": { "type": "item", "content": "farmersdelight:potato_crate", "amount": { "min": 1, "max": 5 }, "unitWorth": 1000, "rarity": "COMMON" }
+    }
+}

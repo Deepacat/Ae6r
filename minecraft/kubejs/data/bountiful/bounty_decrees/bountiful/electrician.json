@@ -1,0 +1,9 @@
+{
+    "name": "Electrician",
+    "objectives": [
+        "electrician_objs"
+    ],
+    "rewards": [
+        "electrician_rews"
+    ]
+  }

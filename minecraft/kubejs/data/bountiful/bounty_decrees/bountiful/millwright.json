@@ -1,0 +1,9 @@
+{
+  "name": "Millwright",
+  "objectives": [
+    "millwright_objs"
+  ],
+  "rewards": [
+    "millwright_rews"
+  ]
+}

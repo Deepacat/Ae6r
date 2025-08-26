@@ -1,0 +1,30 @@
+{
+    "content": {
+        "straw": { "type": "item", "content": "industrialforegoing:straw", "amount": {"min": 1, "max": 1}, "unitWorth": 225, "rarity": "COMMON"},
+        "conveyor": { "type": "item", "content": "industrialforegoing:conveyor", "amount": {"min": 8, "max": 16}, "unitWorth": 300, "rarity": "COMMON"},
+        "dark_glass": { "type": "item", "content": "industrialforegoing:dark_glass", "amount": {"min": 16, "max": 32}, "unitWorth": 250, "rarity": "COMMON"},
+        "fertilizier": { "type": "item", "content": "industrialforegoing:fertilizier", "amount": {"min": 24, "max": 48}, "unitWorth": 225, "rarity": "COMMON"},
+        "common_black_hole_unit": { "type": "item", "content": "industrialforegoing:common_black_hole_unit", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "COMMON"},
+        "common_black_hole_tank": { "type": "item", "content": "industrialforegoing:common_black_hole_tank", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "COMMON"},
+        "basic_bin": { "type": "item", "content": "mekanism:basic_bin", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "COMMON"},
+        "alloy_infused": { "type": "item", "content": "mekanism:alloy_infused", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "rarity": "COMMON"},
+        "alloy_reinforced": { "type": "item", "content": "mekanism:alloy_reinforced", "amount": {"min": 4, "max": 8}, "unitWorth": 400, "rarity": "UNCOMMON"},
+        "alloy_atomic": { "type": "item", "content": "mekanism:alloy_atomic", "amount": {"min": 1, "max": 4}, "unitWorth": 800, "rarity": "EPIC"},
+        "basic_control_circuit": { "type": "item", "content": "mekanism:basic_control_circuit", "amount": {"min": 4, "max": 8}, "unitWorth": 300, "rarity": "COMMON"},
+        "advanced_control_circuit": { "type": "item", "content": "mekanism:advanced_control_circuit", "amount": {"min": 3, "max": 6}, "unitWorth": 600, "rarity": "UNCOMMON"},
+        "hdpe_sheet": { "type": "item", "content": "mekanism:hdpe_sheet", "amount": {"min": 8, "max": 16}, "unitWorth": 750, "rarity": "UNCOMMON"},
+        "industrial_alarm": { "type": "item", "content": "mekanism:industrial_alarm", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "COMMON"},
+        "bio_fuel": { "type": "item", "content": "mekanism:bio_fuel", "amount": {"min": 24, "max": 48}, "unitWorth": 200, "rarity": "COMMON"},
+        "blue_shield_template_block": { "type": "item", "content": "rftoolsbuilder:blue_shield_template_block", "amount": {"min": 8, "max": 16}, "unitWorth": 400, "rarity": "COMMON"},
+        "card_base": { "type": "item", "content": "rftoolscontrol:card_base", "amount": {"min": 1, "max": 4}, "unitWorth": 250, "rarity": "EPIC"},
+        "storage_module0": { "type": "item", "content": "rftoolsstorage:storage_module0", "amount": {"min": 1, "max": 1}, "unitWorth": 600, "rarity": "UNCOMMON"},
+        "module_template": { "type": "item", "content": "rftoolsutility:module_template", "amount": {"min": 1, "max": 1}, "unitWorth": 1375, "rarity": "RARE"},
+        "diving_fabric": { "type": "item", "content": "thermal:diving_fabric", "amount": {"min": 2, "max": 4}, "unitWorth": 200, "rarity": "UNCOMMON"},
+        "xp_crystal": { "type": "item", "content": "thermal:xp_crystal", "amount": {"min": 1, "max": 1}, "unitWorth": 750, "rarity": "RARE"},
+        "phytogro": { "type": "item", "content": "thermal:phytogro", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "rarity": "UNCOMMON"},
+        "prismarine_rail": { "type": "item", "content": "thermal:prismarine_rail", "amount": {"min": 8, "max": 16}, "unitWorth": 300, "rarity": "COMMON"},
+        "underwater_minecart": { "type": "item", "content": "thermal:underwater_minecart", "amount": {"min": 1, "max": 1}, "unitWorth": 150, "rarity": "RARE"},
+        "redstone_servo": { "type": "item", "content": "thermal:redstone_servo", "amount": {"min": 4, "max": 8}, "unitWorth": 300, "rarity": "COMMON"},
+        "rf_coil": { "type": "item", "content": "thermal:rf_coil", "amount": {"min": 3, "max": 6}, "unitWorth": 600, "rarity": "UNCOMMON"}
+    }
+}

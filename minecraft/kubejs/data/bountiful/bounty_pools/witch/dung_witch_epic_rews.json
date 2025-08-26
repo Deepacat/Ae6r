@@ -1,0 +1,25 @@
+{
+    "content": {
+        "wither_skeleton_skull": { "type": "item", "content": "minecraft:wither_skeleton_skull", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "rarity": "EPIC"},
+        "chalk_red": { "type": "item", "content": "occultism:chalk_red", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "EPIC"},
+        "miner_djinni_ores": { "type": "item", "content": "occultism:miner_djinni_ores", "amount": {"min": 1, "max": 1}, "unitWorth": 1000, "rarity": "EPIC"},
+        "ender_air_bottle": { "type": "item", "content": "botania:ender_air_bottle", "amount": {"min": 8, "max": 16}, "unitWorth": 150, "rarity": "EPIC"},
+        "third_eye": { "type": "item", "content": "botania:third_eye", "amount": {"min": 1, "max": 1}, "unitWorth": 750, "rarity": "EPIC"},
+        "vinculotus": { "type": "item", "content": "botania:vinculotus", "amount": {"min": 1, "max": 1}, "unitWorth": 750, "rarity": "EPIC"},
+        "dirt_rod": { "type": "item", "content": "botania:dirt_rod", "amount": {"min": 1, "max": 1}, "unitWorth": 750, "rarity": "EPIC"},
+        "water_rod": { "type": "item", "content": "botania:water_rod", "amount": {"min": 1, "max": 1}, "unitWorth": 750, "rarity": "EPIC"},
+        "loot_finder": { "type": "item", "content": "naturesaura:loot_finder", "amount": {"min": 1, "max": 1}, "unitWorth": 400, "rarity": "EPIC"},
+        "light_staff": { "type": "item", "content": "naturesaura:light_staff", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "shockwave_creator": { "type": "item", "content": "naturesaura:shockwave_creator", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "cave_finder": { "type": "item", "content": "naturesaura:cave_finder", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "wixie_charm": { "type": "item", "content": "ars_nouveau:wixie_charm", "amount": {"min": 1, "max": 1}, "unitWorth": 250, "rarity": "EPIC"},
+        "archmage_hood": { "type": "item", "content": "ars_nouveau:battlemage_hood", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "archmage_robes": { "type": "item", "content": "ars_nouveau:battlemage_robes", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "archmage_leggings": { "type": "item", "content": "ars_nouveau:battlemage_leggings", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "archmage_boots": { "type": "item", "content": "ars_nouveau:battlemage_boots", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "wand": { "type": "item", "content": "ars_nouveau:wand", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"},
+        "soul_enchanter": { "type": "item", "content": "eidolon:soul_enchanter", "amount": {"min": 1, "max": 1}, "unitWorth": 1250, "rarity": "EPIC"},
+        "mimicream": { "type": "item", "content": "alexsmobs:mimicream", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "experiencebook": { "type": "item", "content": "bloodmagic:experiencebook", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "EPIC"}
+    }
+} 

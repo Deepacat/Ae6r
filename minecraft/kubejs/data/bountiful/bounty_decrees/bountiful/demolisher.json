@@ -1,0 +1,9 @@
+{
+    "name": "Demolisher",
+    "objectives": [
+        "demolisher_objs"
+    ],
+    "rewards": [
+        "demolisher_rews"
+    ]
+  }

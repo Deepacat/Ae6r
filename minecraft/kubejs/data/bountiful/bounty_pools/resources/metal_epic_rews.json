@@ -1,0 +1,15 @@
+{
+    "content": {
+        "gold_block": { "type": "item", "content": "minecraft:gold_block", "amount": {"min": 4, "max": 16}, "unitWorth": 800, "rarity": "EPIC"},
+        "iron_block": { "type": "item", "content": "minecraft:iron_block", "amount": {"min": 4, "max": 16}, "unitWorth": 800, "rarity": "EPIC"},
+        "copper_block": { "type": "item", "content": "emendatus:copper_block", "amount": {"min": 4, "max": 16}, "unitWorth": 800, "rarity": "EPIC"},
+        "aluminum_block": { "type": "item", "content": "emendatus:aluminum_block", "amount": {"min": 4, "max": 16}, "unitWorth": 800, "rarity": "EPIC"},
+        "silver_block": { "type": "item", "content": "emendatus:silver_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1000, "rarity": "EPIC"},
+        "lead_block": { "type": "item", "content": "emendatus:lead_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1000, "rarity": "EPIC"},
+        "nickel_block": { "type": "item", "content": "emendatus:nickel_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1000, "rarity": "EPIC"},
+        "uranium_block": { "type": "item", "content": "emendatus:uranium_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1200, "rarity": "EPIC"},
+        "osmium_block": { "type": "item", "content": "emendatus:osmium_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1200, "rarity": "EPIC"},
+        "tin_block": { "type": "item", "content": "emendatus:tin_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1000, "rarity": "EPIC"},
+        "zinc_block": { "type": "item", "content": "emendatus:zinc_block", "amount": {"min": 4, "max": 16}, "unitWorth": 1200, "rarity": "EPIC"}
+    }
+}

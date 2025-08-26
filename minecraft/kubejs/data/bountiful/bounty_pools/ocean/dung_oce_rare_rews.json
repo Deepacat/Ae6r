@@ -1,0 +1,23 @@
+{
+    "content": {
+        "diving_boots": { "type": "item", "content": "thermal:diving_boots", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "diving_leggings": { "type": "item", "content": "thermal:diving_leggings", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "diving_chestplate": { "type": "item", "content": "thermal:diving_chestplate", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "diving_helmet": { "type": "item", "content": "thermal:diving_helmet", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "book_restore": { "type": "item", "content": "darkutils:book_restore", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "book_runelic": { "type": "item", "content": "darkutils:book_runelic", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "gold_nugget": { "type": "item", "content": "minecraft:gold_nugget", "amount": {"min": 8, "max": 16}, "unitWorth": 25, "rarity": "RARE"},
+        "silver_nugget": { "type": "item", "content": "emendatus:silver_nugget", "amount": {"min": 8, "max": 16}, "unitWorth": 200, "rarity": "RARE"},
+        "zombie_heart": { "type": "item", "content": "eidolon:zombie_heart", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "neptunium_fillet_knife": { "type": "item", "content": "aquaculture:neptunium_fillet_knife", "amount": {"min": 1, "max": 1}, "unitWorth": 500, "rarity": "RARE"},
+        "neptunium_ingot": { "type": "item", "content": "aquaculture:neptunium_ingot", "amount": {"min": 1, "max": 3}, "unitWorth": 300, "rarity": "RARE"},
+        "diamond_hook": { "type": "item", "content": "aquaculture:diamond_hook", "amount": {"min": 1, "max": 1}, "unitWorth": 100, "rarity": "RARE"},
+        "turtle_helmet": { "type": "item", "content": "minecraft:turtle_helmet", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "soul_gem": { "type": "item", "content": "occultism:soul_gem", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "bubbell": { "type": "item", "content": "botania:bubbell", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "trident": { "type": "item", "content": "minecraft:trident", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "heart_of_the_sea": { "type": "item", "content": "minecraft:heart_of_the_sea", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "prismatic_web": { "type": "item", "content": "apotheosis:prismatic_web", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"},
+        "nautilus_shell": { "type": "item", "content": "minecraft:nautilus_shell", "amount": {"min": 1, "max": 1}, "unitWorth": 200, "rarity": "RARE"}
+    }
+}

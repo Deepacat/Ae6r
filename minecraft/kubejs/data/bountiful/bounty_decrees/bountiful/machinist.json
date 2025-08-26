@@ -1,0 +1,9 @@
+{
+    "name": "Machinist",
+    "objectives": [
+        "machinist_objs"
+    ],
+    "rewards": [
+        "machinist_rews"
+    ]
+  }

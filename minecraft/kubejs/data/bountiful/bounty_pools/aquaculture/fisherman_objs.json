@@ -1,0 +1,112 @@
+{
+    "content": {
+        "flint_knife": {
+            "type": "item",
+            "content": "farmersdelight:flint_knife",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 1000
+        },
+        "atlantic_cod": {
+            "type": "item",
+            "content": "aquaculture:atlantic_cod",
+            "amount": {
+                "min": 2,
+                "max": 8
+            },
+            "unitWorth": 100
+        },
+        "blackfish": {
+            "type": "item",
+            "content": "aquaculture:blackfish",
+            "amount": {
+                "min": 2,
+                "max": 8
+            },
+            "unitWorth": 125
+        },
+        "pacific_halibut": {
+            "type": "item",
+            "content": "aquaculture:pacific_halibut",
+            "amount": {
+                "min": 2,
+                "max": 8
+            },
+            "unitWorth": 150
+        },
+        "atlantic_halibut": {
+            "type": "item",
+            "content": "aquaculture:atlantic_halibut",
+            "amount": {
+                "min": 2,
+                "max": 8
+            },
+            "unitWorth": 125
+        },
+        "tackle_box": {
+            "type": "item",
+            "content": "aquaculture:tackle_box",
+            "amount": {
+                "min": 1,
+                "max": 1
+            },
+            "unitWorth": 12250
+        },
+        "capitaine": {
+            "type": "item",
+            "content": "aquaculture:capitaine",
+            "amount": {
+                "min": 2,
+                "max": 8
+            },
+            "unitWorth": 250
+        },
+        "catfish": {
+            "type": "item",
+            "content": "aquaculture:catfish",
+            "amount": {
+                "min": 2,
+                "max": 8
+            },
+            "unitWorth": 250
+        },
+        "gar": {
+            "type": "item",
+            "content": "aquaculture:gar",
+            "amount": {
+                "min": 2,
+                "max": 16
+            },
+            "unitWorth": 150
+        },
+        "minnow": {
+            "type": "item",
+            "content": "aquaculture:minnow",
+            "amount": {
+                "min": 3,
+                "max": 18
+            },
+            "unitWorth": 80
+        },
+        "perch": {
+            "type": "item",
+            "content": "aquaculture:perch",
+            "amount": {
+                "min": 3,
+                "max": 18
+            },
+            "unitWorth": 80
+        },
+        "fish_fillet_raw": {
+            "type": "item",
+            "content": "aquaculture:fish_fillet_raw",
+            "amount": {
+                "min": 4,
+                "max": 64
+            },
+            "unitWorth": 40
+        }
+    }
+}

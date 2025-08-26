@@ -1,0 +1,15 @@
+{
+    "content": {
+        "gold_ingot": { "type": "item", "content": "minecraft:gold_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 400, "rarity": "RARE"},
+        "iron_ingot": { "type": "item", "content": "minecraft:iron_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 400, "rarity": "RARE"},
+        "copper_ingot": { "type": "item", "content": "emendatus:copper_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 400, "rarity": "RARE"},
+        "aluminum_ingot": { "type": "item", "content": "emendatus:aluminum_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 400, "rarity": "RARE"},
+        "silver_ingot": { "type": "item", "content": "emendatus:silver_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 500, "rarity": "RARE"},
+        "lead_ingot": { "type": "item", "content": "emendatus:lead_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 500, "rarity": "RARE"},
+        "nickel_ingot": { "type": "item", "content": "emendatus:nickel_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 500, "rarity": "RARE"},
+        "uranium_ingot": { "type": "item", "content": "emendatus:uranium_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 600, "rarity": "RARE"},
+        "osmium_ingot": { "type": "item", "content": "emendatus:osmium_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 600, "rarity": "RARE"},
+        "tin_ingot": { "type": "item", "content": "emendatus:tin_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 500, "rarity": "RARE"},
+        "zinc_ingot": { "type": "item", "content": "emendatus:zinc_ingot", "amount": {"min": 8, "max": 32}, "unitWorth": 600, "rarity": "RARE"}
+    }
+}

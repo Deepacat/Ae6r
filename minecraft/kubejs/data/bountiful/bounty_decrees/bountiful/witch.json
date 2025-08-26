@@ -1,0 +1,9 @@
+{
+    "name": "Witch",
+    "objectives": [
+        "witch_objs"
+    ],
+    "rewards": [
+        "witch_rews"
+    ]
+  }

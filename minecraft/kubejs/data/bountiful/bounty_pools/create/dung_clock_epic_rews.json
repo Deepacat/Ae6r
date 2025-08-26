@@ -1,0 +1,14 @@
+{
+    "content": {
+        "pocket_piston": { "type": "item", "content": "artifacts:pocket_piston", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "lucky_scarf": { "type": "item", "content": "artifacts:lucky_scarf", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "universal_attractor": { "type": "item", "content": "artifacts:universal_attractor", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "power_glove": { "type": "item", "content": "artifacts:power_glove", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "railgun": { "type": "item", "content": "immersiveengineering:railgun", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "dragons_breath": { "type": "item", "content": "immersiveengineering:dragons_breath", "amount": {"min": 32, "max": 64}, "unitWorth": 500, "rarity": "EPIC"},
+        "wolfpack": { "type": "item", "content": "immersiveengineering:wolfpack", "amount": {"min": 32, "max": 64}, "unitWorth": 500, "rarity": "EPIC"},
+        "extendo_grip": { "type": "item", "content": "create:extendo_grip", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "refined_radiance": { "type": "item", "content": "create:refined_radiance", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"},
+        "shadow_steel": { "type": "item", "content": "create:shadow_steel", "amount": {"min": 1, "max": 1}, "unitWorth": 300, "rarity": "EPIC"}
+    }
+}

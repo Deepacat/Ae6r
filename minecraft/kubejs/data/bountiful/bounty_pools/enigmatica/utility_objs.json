@@ -1,0 +1,10 @@
+{
+    "content": {
+        "rope": { "type": "item", "content": "farmersdelight:rope", "amount": {"min": 32, "max": 64}, "unitWorth": 150, "rarity": "RARE"},
+        "torch": { "type": "item", "content": "minecraft:torch", "amount": {"min": 32, "max": 64}, "unitWorth": 100, "rarity": "UNCOMMON"},
+        "cooked_porkchop": { "type": "item", "content": "minecraft:cooked_porkchop", "amount": {"min": 16, "max": 32}, "unitWorth": 100, "rarity": "UNCOMMON"},
+        "cooked_beef": { "type": "item", "content": "minecraft:cooked_beef", "amount": {"min": 8, "max": 32}, "unitWorth": 125, "rarity": "UNCOMMON"},
+        "cooked_chicken": { "type": "item", "content": "minecraft:cooked_chicken", "amount": {"min": 16, "max": 32}, "unitWorth": 75, "rarity": "UNCOMMON"},
+        "baked_potato": { "type": "item", "content": "minecraft:baked_potato", "amount": {"min": 16, "max": 32}, "unitWorth": 50, "rarity": "UNCOMMON"}        
+    }
+}
