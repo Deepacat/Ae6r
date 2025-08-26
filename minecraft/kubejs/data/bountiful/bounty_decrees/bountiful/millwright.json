@@ -1,6 +1,5 @@
 {
   "name": "millwright",
-  "spawnsInBoard": true,
   "objectives": [
     "millwright_objs"
   ],
