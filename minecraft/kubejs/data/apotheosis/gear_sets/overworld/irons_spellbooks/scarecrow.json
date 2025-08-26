@@ -1,0 +1,55 @@
+{
+	"conditions": [{
+		"type": "forge:mod_loaded",
+		"modid": "irons_spellbooks"
+	}],
+	"weight": 40,
+	"quality": 3,
+	"mainhands": [{
+			"weight": 3,
+			"stack": {
+				"item": "irons_spellbooks:artificer_cane"
+			}
+		},
+		{
+			"weight": 3,
+			"stack": {
+				"item": "irons_spellbooks:graybeard_staff"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:scarecrow_boots"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:scarecrow_leggings"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:scarecrow_chestplate"
+		}
+	}],
+	"helmets": [{
+		"weight": 3,
+		"stack": {
+			"item": "irons_spellbooks:scarecrow_helmet"
+		}
+	}],
+	"tags": [
+		"overworld",
+        "nether",
+        "irons_spellbooks",
+        "uncommon",
+        "wizard_gear",
+        "scarecrow",
+		"iss_apoth_gear_overworld"
+	]
+}

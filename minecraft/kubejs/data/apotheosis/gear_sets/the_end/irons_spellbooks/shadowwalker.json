@@ -1,0 +1,48 @@
+{
+    "conditions": [{
+		"type": "forge:mod_loaded",
+		"modid": "irons_spellbooks"
+	}],
+	"weight": 10,
+	"quality": 7,
+	"mainhands": [{
+			"weight": 9,
+			"stack": {
+				"item": "irons_spellbooks:amethyst_rapier"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:shadowwalker_boots"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:shadowwalker_leggings"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:shadowwalker_chestplate"
+		}
+	}],
+	"helmets": [{
+		"weight": 3,
+		"stack": {
+			"item": "irons_spellbooks:shadowwalker_helmet"
+		}
+	}],
+	"tags": [
+        "the_end",
+        "irons_spellbooks",
+        "rare",
+        "wizard_gear",
+        "shadowwalker",
+		"iss_apoth_gear_end"
+	]
+}

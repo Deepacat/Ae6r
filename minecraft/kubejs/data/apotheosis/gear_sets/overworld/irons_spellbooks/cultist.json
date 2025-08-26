@@ -1,0 +1,56 @@
+{
+	"conditions": [{
+		"type": "forge:mod_loaded",
+		"modid": "irons_spellbooks"
+	}],
+	"weight": 10,
+	"quality": 7,
+	"mainhands": [{
+			"weight": 9,
+			"stack": {
+				"item": "irons_spellbooks:blood_staff"
+			}
+		},
+		{
+			"weight": 1,
+			"stack": {
+				"item": "irons_spellbooks:keeper_flamberge"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:cultist_boots"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:cultist_leggings"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:cultist_chestplate"
+		}
+	}],
+	"helmets": [{
+		"weight": 3,
+		"stack": {
+			"item": "irons_spellbooks:cultist_helmet"
+		}
+	}],
+	"tags": [
+		"overworld",
+        "the_nether",
+        "irons_spellbooks",
+        "rare",
+        "wizard_gear",
+        "cultist",
+		"iron_overworld",
+		"iss_apoth_gear_nether"
+	]
+}

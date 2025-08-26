@@ -1,0 +1,25 @@
+
+["Mod Config"]
+	#Enable gem socket injection into items via loot modifier
+	enableSocketGemInjector = true
+	#Chance to insert a random gem into each socket slot, 1.0 means 100%
+	#Range: 0.0 ~ 1.0
+	socketGemChance = 0.3
+	#Enable the SocketHelperMixin that allows gaps between sockets
+	enableSocketHelperMixin = true
+	#Switch the implementation type of PermanentEffectBonus
+	#If true, switches to Player Tick event. Better compatibility, worse performance.
+	#If false, uses default impl. More performant, less compatible.
+	permanentEffectUseTickEvent = false
+	#If false, Adaptive Spell Power Affixes can apply to any compatible item regardless of spell school.
+	#If true, affixes will only apply to items that already grant spell power of the matching school.
+	strictSpellSchoolMatching = true
+	#If true, applies Spell Power attributes to Celestisynth weapons via ItemAttributeModifierEvent.
+	enableCelestisynthAttributes = true
+	#If true, enables Celestisynth weapons patch to increase weapon damage when held, scaled by the respective Spell Power on the item
+	enableCelestisynthSpellPowerPatch = true
+	#Map of item Resource Locations to School Type IDs for Adaptive Spell Power Affixes
+	#Example: modid:itemid|modid:schoolid
+	#You can also set multiple schools: modid:itemid|modid:schoolid|modid:schoolid
+	irons_items = ["celestisynth:crescentia|irons_spellbooks:ender", "celestisynth:solaris|irons_spellbooks:fire", "celestisynth:aquaflora|irons_spellbooks:nature", "celestisynth:breezebreaker|irons_spellbooks:evocation", "celestisynth:poltergeist|irons_spellbooks:eldritch", "celestisynth:rainfall_serenity|irons_spellbooks:lightning", "celestisynth:keres|irons_spellbooks:blood", "celestisynth:frostbound|irons_spellbooks:ice"]
+

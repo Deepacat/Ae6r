@@ -1,0 +1,54 @@
+{
+    "conditions": [{
+		"type": "forge:mod_loaded",
+		"modid": "irons_spellbooks"
+	}],
+	"weight": 10,
+	"quality": 7,
+	"mainhands": [{
+			"weight": 9,
+			"stack": {
+				"item": "irons_spellbooks:graybeard_staff"
+			}
+		},
+		{
+			"weight": 1,
+			"stack": {
+				"item": "irons_spellbooks:keeper_flamberge"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:pyromancer_boots"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:pyromancer_leggings"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:pyromancer_chestplate"
+		}
+	}],
+	"helmets": [{
+		"weight": 3,
+		"stack": {
+			"item": "irons_spellbooks:pyromancer_helmet"
+		}
+	}],
+	"tags": [
+        "the_nether",
+        "irons_spellbooks",
+        "rare",
+        "wizard_gear",
+        "pyromancer",
+		"iss_apoth_gear_nether"
+	]
+}

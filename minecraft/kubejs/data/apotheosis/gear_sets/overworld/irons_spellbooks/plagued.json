@@ -1,0 +1,54 @@
+{
+	"conditions": [{
+		"type": "forge:mod_loaded",
+		"modid": "irons_spellbooks"
+	}],
+	"weight": 10,
+	"quality": 7,
+	"mainhands": [{
+			"weight": 5,
+			"stack": {
+				"item": "irons_spellbooks:amethyst_rapier"
+			}
+		},
+        {
+			"weight": 5,
+			"stack": {
+				"item": "irons_spellbooks:amethyst_rapier"
+			}
+		}
+	],
+	"offhands": [],
+	"boots": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:plagued_boots"
+		}
+	}],
+	"leggings": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:plagued_leggings"
+		}
+	}],
+	"chestplates": [{
+		"weight": 1,
+		"stack": {
+			"item": "irons_spellbooks:plagued_chestplate"
+		}
+	}],
+	"helmets": [{
+		"weight": 3,
+		"stack": {
+			"item": "irons_spellbooks:plagued_helmet"
+		}
+	}],
+	"tags": [
+        "overworld",
+        "irons_spellbooks",
+        "rare",
+        "wizard_gear",
+        "plagued",
+		"iss_apoth_gear_overworld"
+	]
+}
