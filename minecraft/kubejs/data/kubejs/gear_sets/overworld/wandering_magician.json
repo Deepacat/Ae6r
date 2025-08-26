@@ -44,11 +44,8 @@
 		}
 	}],
 	"tags": [
-		"overworld",
-        "irons_spellbooks",
-        "common",
-        "wizard_gear",
         "wandering_magician",
-		"necromancer_gear_overworld_common"
+		"necromancer_gear_overworld_common",
+		"necromancer_gear_overworld_uncommon"
 	]
 }

@@ -44,11 +44,8 @@
 		}
 	}],
 	"tags": [
-        "overworld",
-        "irons_spellbooks",
-        "rare",
-        "wizard_gear",
         "plagued",
-		"necromancer_gear_overworld_rare"
+		"necromancer_gear_overworld_rare",
+		"iss_apoth_gear_nether"
 	]
 }

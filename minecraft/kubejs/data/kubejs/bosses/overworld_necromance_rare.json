@@ -1,7 +1,7 @@
 {
 	"entity": "irons_spellbooks:necromancer",
 	"weight": 4,
-	"quality": 1,
+	"quality": 3,
 	"size": {
 		"width": 1,
 		"height": 2

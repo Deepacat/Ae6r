@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:zombified_piglin",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }

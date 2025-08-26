@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:stray",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }

@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:enderman",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }

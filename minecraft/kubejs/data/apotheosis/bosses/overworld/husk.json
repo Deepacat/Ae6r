@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:husk",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }

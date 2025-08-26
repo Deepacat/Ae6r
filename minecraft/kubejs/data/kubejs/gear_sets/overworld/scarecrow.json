@@ -22,33 +22,28 @@
 	"boots": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_boots"
+			"item": "irons_spellbooks:pumpkin_boots"
 		}
 	}],
 	"leggings": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_leggings"
+			"item": "irons_spellbooks:pumpkin_leggings"
 		}
 	}],
 	"chestplates": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_chestplate"
+			"item": "irons_spellbooks:pumpkin_chestplate"
 		}
 	}],
 	"helmets": [{
 		"weight": 3,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_helmet"
+			"item": "irons_spellbooks:pumpkin_helmet"
 		}
 	}],
 	"tags": [
-		"overworld",
-        "nether",
-        "irons_spellbooks",
-        "uncommon",
-        "wizard_gear",
         "scarecrow",
 		"necromancer_gear_overworld_common",
 		"necromancer_gear_overworld_uncommon"

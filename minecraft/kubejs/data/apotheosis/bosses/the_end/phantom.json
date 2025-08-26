@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:phantom",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }

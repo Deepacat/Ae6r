@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:zombie",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }

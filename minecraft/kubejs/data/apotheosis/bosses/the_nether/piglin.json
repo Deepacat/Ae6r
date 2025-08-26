@@ -1,4 +1,5 @@
 {
-	"entity": "minecraft:piglin",
-	"weight": 0
+    "conditions": [
+        { "type": "forge:false" }
+    ]
 }
