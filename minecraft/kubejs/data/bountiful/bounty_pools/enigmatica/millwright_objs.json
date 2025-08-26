@@ -1,10 +1,10 @@
 {
     "content": {
-        "andesite": { "type": "item", "content": "minecraft:andesite", "amount": {"min": 32, "max": 64}, "unitWorth": 300, "weight":200},
-        "iron_ingot": { "type": "item", "content": "minecraft:iron_ingot", "amount": {"min": 8, "max": 16}, "unitWorth": 250, "weight":100},
-        "copper_ingot": { "type": "item", "content": "emendatus:copper_ingot", "amount": {"min": 4, "max": 8}, "unitWorth": 300, "weight":100},
-        "zinc_ingot": { "type": "item", "content": "emendatus:zinc_ingot", "amount": {"min": 1, "max": 4}, "unitWorth": 175, "weight":50},
-        "coal": { "type": "item", "content": "minecraft:coal", "amount": {"min": 8, "max": 16}, "unitWorth": 150, "weight":200},
-        "redstone": { "type": "item", "content": "minecraft:redstone", "amount": {"min": 24, "max": 48}, "unitWorth": 150, "weight":200}        
+        "andesite": { "type": "item", "content": "minecraft:andesite", "amount": {"min": 32, "max": 64}, "unitWorth": 300, "rarity": "COMMON"},
+        "iron_ingot": { "type": "item", "content": "minecraft:iron_ingot", "amount": {"min": 8, "max": 16}, "unitWorth": 250, "rarity": "UNCOMMON"},
+        "copper_ingot": { "type": "item", "content": "emendatus:copper_ingot", "amount": {"min": 4, "max": 8}, "unitWorth": 300, "rarity": "UNCOMMON"},
+        "zinc_ingot": { "type": "item", "content": "emendatus:zinc_ingot", "amount": {"min": 1, "max": 4}, "unitWorth": 175, "rarity": "EPIC"},
+        "coal": { "type": "item", "content": "minecraft:coal", "amount": {"min": 8, "max": 16}, "unitWorth": 150, "rarity": "COMMON"},
+        "redstone": { "type": "item", "content": "minecraft:redstone", "amount": {"min": 24, "max": 48}, "unitWorth": 150, "rarity": "COMMON"}        
     }
 }

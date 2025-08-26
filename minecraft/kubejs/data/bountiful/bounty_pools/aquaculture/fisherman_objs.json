@@ -7,8 +7,7 @@
                 "min": 1,
                 "max": 1
             },
-            "unitWorth": 1000,
-            "weight": 1000
+            "unitWorth": 1000
         },
         "atlantic_cod": {
             "type": "item",
@@ -17,8 +16,7 @@
                 "min": 2,
                 "max": 8
             },
-            "unitWorth": 100,
-            "weight": 1000
+            "unitWorth": 100
         },
         "blackfish": {
             "type": "item",
@@ -27,8 +25,7 @@
                 "min": 2,
                 "max": 8
             },
-            "unitWorth": 125,
-            "weight": 1000
+            "unitWorth": 125
         },
         "pacific_halibut": {
             "type": "item",
@@ -37,8 +34,7 @@
                 "min": 2,
                 "max": 8
             },
-            "unitWorth": 150,
-            "weight": 1000
+            "unitWorth": 150
         },
         "atlantic_halibut": {
             "type": "item",
@@ -47,8 +43,7 @@
                 "min": 2,
                 "max": 8
             },
-            "unitWorth": 125,
-            "weight": 1000
+            "unitWorth": 125
         },
         "tackle_box": {
             "type": "item",
@@ -57,8 +52,7 @@
                 "min": 1,
                 "max": 1
             },
-            "unitWorth": 12250,
-            "weight": 1000
+            "unitWorth": 12250
         },
         "capitaine": {
             "type": "item",
@@ -67,8 +61,7 @@
                 "min": 2,
                 "max": 8
             },
-            "unitWorth": 250,
-            "weight": 1000
+            "unitWorth": 250
         },
         "catfish": {
             "type": "item",
@@ -77,8 +70,7 @@
                 "min": 2,
                 "max": 8
             },
-            "unitWorth": 250,
-            "weight": 1000
+            "unitWorth": 250
         },
         "gar": {
             "type": "item",
@@ -87,8 +79,7 @@
                 "min": 2,
                 "max": 16
             },
-            "unitWorth": 150,
-            "weight": 1000
+            "unitWorth": 150
         },
         "minnow": {
             "type": "item",
@@ -97,8 +88,7 @@
                 "min": 3,
                 "max": 18
             },
-            "unitWorth": 80,
-            "weight": 1000
+            "unitWorth": 80
         },
         "perch": {
             "type": "item",
@@ -107,8 +97,7 @@
                 "min": 3,
                 "max": 18
             },
-            "unitWorth": 80,
-            "weight": 1000
+            "unitWorth": 80
         },
         "fish_fillet_raw": {
             "type": "item",
@@ -117,8 +106,7 @@
                 "min": 4,
                 "max": 64
             },
-            "unitWorth": 40,
-            "weight": 1000
+            "unitWorth": 40
         }
     }
 }

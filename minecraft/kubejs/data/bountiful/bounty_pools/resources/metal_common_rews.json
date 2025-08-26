@@ -1,15 +1,15 @@
 {
     "content": {
-        "gold_nugget": { "type": "item", "content": "minecraft:gold_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "weight":100},
-        "iron_nugget": { "type": "item", "content": "minecraft:iron_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "weight":100},
-        "copper_nugget": { "type": "item", "content": "emendatus:copper_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "weight":100},
-        "aluminum_nugget": { "type": "item", "content": "emendatus:aluminum_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "weight":100},
-        "silver_nugget": { "type": "item", "content": "emendatus:silver_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "weight":100},
-        "lead_nugget": { "type": "item", "content": "emendatus:lead_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "weight":100},
-        "nickel_nugget": { "type": "item", "content": "emendatus:nickel_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "weight":100},
-        "uranium_nugget": { "type": "item", "content": "emendatus:uranium_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 300, "weight":100},
-        "osmium_nugget": { "type": "item", "content": "emendatus:osmium_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 300, "weight":100},
-        "tin_nugget": { "type": "item", "content": "emendatus:tin_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "weight":100},
-        "zinc_nugget": { "type": "item", "content": "emendatus:zinc_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 300, "weight":100}
+        "gold_nugget": { "type": "item", "content": "minecraft:gold_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "rarity": "COMMON"},
+        "iron_nugget": { "type": "item", "content": "minecraft:iron_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "rarity": "COMMON"},
+        "copper_nugget": { "type": "item", "content": "emendatus:copper_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "rarity": "COMMON"},
+        "aluminum_nugget": { "type": "item", "content": "emendatus:aluminum_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "rarity": "COMMON"},
+        "silver_nugget": { "type": "item", "content": "emendatus:silver_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "rarity": "COMMON"},
+        "lead_nugget": { "type": "item", "content": "emendatus:lead_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "rarity": "COMMON"},
+        "nickel_nugget": { "type": "item", "content": "emendatus:nickel_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 250, "rarity": "COMMON"},
+        "uranium_nugget": { "type": "item", "content": "emendatus:uranium_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 300, "rarity": "COMMON"},
+        "osmium_nugget": { "type": "item", "content": "emendatus:osmium_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 300, "rarity": "COMMON"},
+        "tin_nugget": { "type": "item", "content": "emendatus:tin_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 200, "rarity": "COMMON"},
+        "zinc_nugget": { "type": "item", "content": "emendatus:zinc_nugget", "amount": {"min": 16, "max": 64}, "unitWorth": 300, "rarity": "COMMON"}
     }
 }

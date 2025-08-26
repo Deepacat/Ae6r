@@ -8,7 +8,7 @@
                 "max": 1
             },
             "unitWorth": 500,
-            "weight": 1000
+            "rarity": "COMMON"
         },
         "heavy_hook": {
             "type": "item",
@@ -18,7 +18,7 @@
                 "max": 1
             },
             "unitWorth": 800,
-            "weight": 800
+            "rarity": "COMMON"
         },
         "double_hook": {
             "type": "item",
@@ -28,7 +28,7 @@
                 "max": 1
             },
             "unitWorth": 800,
-            "weight": 700
+            "rarity": "UNCOMMON"
         },
         "redstone_hook": {
             "type": "item",
@@ -38,7 +38,7 @@
                 "max": 1
             },
             "unitWorth": 1250,
-            "weight": 600
+            "rarity": "UNCOMMON"
         },
         "gold_hook": {
             "type": "item",
@@ -48,7 +48,7 @@
                 "max": 1
             },
             "unitWorth": 1000,
-            "weight": 750
+            "rarity": "UNCOMMON"
         },
         "diamond_hook": {
             "type": "item",
@@ -58,7 +58,7 @@
                 "max": 1
             },
             "unitWorth": 7500,
-            "weight": 100
+            "rarity": "LEGENDARY"
         },
         "iron_knife": {
             "type": "item",
@@ -68,7 +68,7 @@
                 "max": 1
             },
             "unitWorth": 1600,
-            "weight": 800
+            "rarity": "COMMON"
         },
         "gold_knife": {
             "type": "item",
@@ -78,7 +78,7 @@
                 "max": 1
             },
             "unitWorth": 2000,
-            "weight": 400
+            "rarity": "RARE"
         }
     }
 }
