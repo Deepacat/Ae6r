@@ -4,11 +4,17 @@
 		"modid": "irons_spellbooks"
 	}],
 	"weight": 10,
-	"quality": 7,
+	"quality": 2.5,
 	"mainhands": [{
 			"weight": 3,
 			"stack": {
-				"item": "irons_spellbooks:lightning_rod"
+				"item": "irons_spellbooks:artificer_cane"
+			}
+		},
+		{
+			"weight": 3,
+			"stack": {
+				"item": "irons_spellbooks:graybeard_staff"
 			}
 		}
 	],
@@ -16,33 +22,33 @@
 	"boots": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:electromancer_boots"
+			"item": "irons_spellbooks:wandering_magician_boots"
 		}
 	}],
 	"leggings": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:electromancer_leggings"
+			"item": "irons_spellbooks:wandering_magician_leggings"
 		}
 	}],
 	"chestplates": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:electromancer_chestplate"
+			"item": "irons_spellbooks:wandering_magician_chestplate"
 		}
 	}],
 	"helmets": [{
 		"weight": 3,
 		"stack": {
-			"item": "irons_spellbooks:electromancer_helmet"
+			"item": "irons_spellbooks:wandering_magician_helmet"
 		}
 	}],
 	"tags": [
 		"overworld",
         "irons_spellbooks",
-        "rare",
+        "common",
         "wizard_gear",
-        "electromancer",
-		"iss_apoth_gear_overworld"
+        "wandering_magician",
+		"necromancer_gear_overworld_common"
 	]
 }

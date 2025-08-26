@@ -3,8 +3,8 @@
 		"type": "forge:mod_loaded",
 		"modid": "irons_spellbooks"
 	}],
-	"weight": 70,
-	"quality": 2.5,
+	"weight": 8,
+	"quality": 3,
 	"mainhands": [{
 			"weight": 3,
 			"stack": {
@@ -22,33 +22,35 @@
 	"boots": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:wandering_magician_boots"
+			"item": "irons_spellbooks:scarecrow_boots"
 		}
 	}],
 	"leggings": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:wandering_magician_leggings"
+			"item": "irons_spellbooks:scarecrow_leggings"
 		}
 	}],
 	"chestplates": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:wandering_magician_chestplate"
+			"item": "irons_spellbooks:scarecrow_chestplate"
 		}
 	}],
 	"helmets": [{
 		"weight": 3,
 		"stack": {
-			"item": "irons_spellbooks:wandering_magician_helmet"
+			"item": "irons_spellbooks:scarecrow_helmet"
 		}
 	}],
 	"tags": [
 		"overworld",
+        "nether",
         "irons_spellbooks",
-        "common",
+        "uncommon",
         "wizard_gear",
-        "wandering_magician",
-		"iss_apoth_gear_overworld"
+        "scarecrow",
+		"necromancer_gear_overworld_common",
+		"necromancer_gear_overworld_uncommon"
 	]
 }

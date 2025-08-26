@@ -3,18 +3,12 @@
 		"type": "forge:mod_loaded",
 		"modid": "irons_spellbooks"
 	}],
-	"weight": 40,
-	"quality": 3,
+	"weight": 1,
+	"quality": 7,
 	"mainhands": [{
 			"weight": 3,
 			"stack": {
-				"item": "irons_spellbooks:artificer_cane"
-			}
-		},
-		{
-			"weight": 3,
-			"stack": {
-				"item": "irons_spellbooks:graybeard_staff"
+				"item": "irons_spellbooks:ice_staff"
 			}
 		}
 	],
@@ -22,34 +16,33 @@
 	"boots": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_boots"
+			"item": "irons_spellbooks:cryomancer_boots"
 		}
 	}],
 	"leggings": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_leggings"
+			"item": "irons_spellbooks:cryomancer_leggings"
 		}
 	}],
 	"chestplates": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_chestplate"
+			"item": "irons_spellbooks:cryomancer_chestplate"
 		}
 	}],
 	"helmets": [{
 		"weight": 3,
 		"stack": {
-			"item": "irons_spellbooks:scarecrow_helmet"
+			"item": "irons_spellbooks:cryomancer_helmet"
 		}
 	}],
 	"tags": [
 		"overworld",
-        "nether",
         "irons_spellbooks",
-        "uncommon",
+        "rare",
         "wizard_gear",
-        "scarecrow",
-		"iss_apoth_gear_overworld"
+        "cryomancer",
+		"necromancer_gear_overworld_rare"
 	]
 }

@@ -3,7 +3,7 @@
 		"type": "forge:mod_loaded",
 		"modid": "irons_spellbooks"
 	}],
-	"weight": 10,
+	"weight": 1,
 	"quality": 7,
 	"mainhands": [{
 			"weight": 3,
@@ -49,6 +49,6 @@
         "rare",
         "wizard_gear",
         "archevoker",
-		"iss_apoth_gear_overworld"
+		"necromancer_gear_overworld_rare"
 	]
 }

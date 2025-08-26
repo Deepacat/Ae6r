@@ -3,18 +3,12 @@
 		"type": "forge:mod_loaded",
 		"modid": "irons_spellbooks"
 	}],
-	"weight": 10,
+	"weight": 1,
 	"quality": 7,
 	"mainhands": [{
-			"weight": 5,
+			"weight": 3,
 			"stack": {
-				"item": "irons_spellbooks:amethyst_rapier"
-			}
-		},
-        {
-			"weight": 5,
-			"stack": {
-				"item": "irons_spellbooks:amethyst_rapier"
+				"item": "irons_spellbooks:lightning_rod"
 			}
 		}
 	],
@@ -22,33 +16,33 @@
 	"boots": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:plagued_boots"
+			"item": "irons_spellbooks:electromancer_boots"
 		}
 	}],
 	"leggings": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:plagued_leggings"
+			"item": "irons_spellbooks:electromancer_leggings"
 		}
 	}],
 	"chestplates": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:plagued_chestplate"
+			"item": "irons_spellbooks:electromancer_chestplate"
 		}
 	}],
 	"helmets": [{
 		"weight": 3,
 		"stack": {
-			"item": "irons_spellbooks:plagued_helmet"
+			"item": "irons_spellbooks:electromancer_helmet"
 		}
 	}],
 	"tags": [
-        "overworld",
+		"overworld",
         "irons_spellbooks",
         "rare",
         "wizard_gear",
-        "plagued",
-		"iss_apoth_gear_overworld"
+        "electromancer",
+		"necromancer_gear_overworld_rare"
 	]
 }

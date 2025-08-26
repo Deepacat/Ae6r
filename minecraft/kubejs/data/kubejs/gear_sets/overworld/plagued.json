@@ -3,12 +3,18 @@
 		"type": "forge:mod_loaded",
 		"modid": "irons_spellbooks"
 	}],
-	"weight": 10,
+	"weight": 2,
 	"quality": 7,
 	"mainhands": [{
-			"weight": 3,
+			"weight": 5,
 			"stack": {
-				"item": "irons_spellbooks:ice_staff"
+				"item": "irons_spellbooks:amethyst_rapier"
+			}
+		},
+        {
+			"weight": 5,
+			"stack": {
+				"item": "irons_spellbooks:amethyst_rapier"
 			}
 		}
 	],
@@ -16,33 +22,33 @@
 	"boots": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:cryomancer_boots"
+			"item": "irons_spellbooks:plagued_boots"
 		}
 	}],
 	"leggings": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:cryomancer_leggings"
+			"item": "irons_spellbooks:plagued_leggings"
 		}
 	}],
 	"chestplates": [{
 		"weight": 1,
 		"stack": {
-			"item": "irons_spellbooks:cryomancer_chestplate"
+			"item": "irons_spellbooks:plagued_chestplate"
 		}
 	}],
 	"helmets": [{
 		"weight": 3,
 		"stack": {
-			"item": "irons_spellbooks:cryomancer_helmet"
+			"item": "irons_spellbooks:plagued_helmet"
 		}
 	}],
 	"tags": [
-		"overworld",
+        "overworld",
         "irons_spellbooks",
         "rare",
         "wizard_gear",
-        "cryomancer",
-		"iss_apoth_gear_overworld"
+        "plagued",
+		"necromancer_gear_overworld_rare"
 	]
 }
