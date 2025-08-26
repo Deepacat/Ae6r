@@ -25,7 +25,10 @@ const modPriorities = [
     'eidolon',
     'mythicbotany',
     'undergarden',
-    'miniutilities',
+    'biomeswevegone',
+    'dungeons_plus',
+    'natures_spirit',
+    'miniutilities'
 ]
 
 // priority of which mod output should come from, but for fluids
