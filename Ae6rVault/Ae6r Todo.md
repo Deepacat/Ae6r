@@ -22,9 +22,8 @@
 	- [ ] DG hammering / wirecutting (grouped bc theyre like the same thing)
 	- [ ] CCA rolling
 	- [ ] CCA tesla charging
-	- [ ] 
 - [ ] make tinkers recipe builders
-	- [ ] casting table
+	- [x] casting table
 	- [ ] casting basin
 - [x] remove sulfur ore (and others actually)
 - [x] Port fluid combining recipes to lychee
@@ -36,10 +35,9 @@
 - [ ] Port natures aura recipes
 - [ ] Hide dumb recipe categories like shapeless mixing and shaped mechanical crafting, grindstone
 - [x] Fix recipes that used ars clays in e6e
-- [ ] Replace recipes using ars nouveau clays with ars imbued essences? ars clays are the old style but serve as a better gate than essences for now
 - [ ] Fix raw ore block smelting recipes being too quick
 - [ ] Meka biomass from other mods' crops (currently only MC)
 - [ ] Fix lootbox rewards in qb
-- [ ] (For specifically deepa) port my iron spells/apoth rework from a concept I made
+- [x] (For specifically deepa) port my iron spells/apoth rework from a concept I made
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
 - [ ] remove function/mana flora from flower tags (why are they even lmao) it makes them spawn in the stupid dungeon flower pots :skull:
