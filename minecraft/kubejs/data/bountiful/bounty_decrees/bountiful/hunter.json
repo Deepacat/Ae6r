@@ -1,5 +1,5 @@
 {
-    "name": "hunter",
+    "name": "Hunter",
     "objectives": [
         "hunter_objs",
         "combat_objs"

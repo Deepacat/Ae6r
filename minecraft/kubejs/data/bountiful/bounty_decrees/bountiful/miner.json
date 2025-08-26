@@ -1,5 +1,5 @@
 {
-    "name": "miner",
+    "name": "Miner",
     "objectives": [
         "mining_objs",
         "utility_objs"
