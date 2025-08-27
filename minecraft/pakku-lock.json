@@ -6043,42 +6043,6 @@
             ]
         },
         {
-            "pakku_id": "BI64gmUvPS27DQtV",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "kubejs-delight"
-            },
-            "name": {
-                "curseforge": "KubeJS Delight"
-            },
-            "id": {
-                "curseforge": "864875"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "kubejsdelight-1.1.2.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5586/257/kubejsdelight-1.1.2.jar",
-                    "id": "5586257",
-                    "parent_id": "864875",
-                    "hashes": {
-                        "sha1": "198fb6534973e04c353287de7234df557834ddc8",
-                        "md5": "f0362736a296e74a4765d8ac0c21ddf0"
-                    },
-                    "required_dependencies": [],
-                    "size": 13371,
-                    "date_published": "2024-08-01T07:25:04.183Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "iiQ3RxYC7ghjtkAY",
             "type": "MOD",
             "slug": {
@@ -6112,43 +6076,6 @@
                     "required_dependencies": [],
                     "size": 70124,
                     "date_published": "2025-03-09T21:48:13.953Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "gDfGkNySEtM0Et4M",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "kubejs-immersive-engineering-unofficial"
-            },
-            "name": {
-                "curseforge": "KubeJS Immersive Engineering UNOFFICIAL"
-            },
-            "id": {
-                "curseforge": "1141738"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "kubejs-immersive-engineering-2001.5.29-build.23.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6593/605/kubejs-immersive-engineering-2001.5.29-build.23.jar",
-                    "id": "6593605",
-                    "parent_id": "1141738",
-                    "hashes": {
-                        "sha1": "aa319636e1de4ce92a982a9fda1a954ed71f03a7",
-                        "md5": "147f72bc8586eae6228789b13a1d09fe"
-                    },
-                    "required_dependencies": [],
-                    "size": 52601,
-                    "date_published": "2025-05-29T11:34:11.613Z"
                 }
             ]
         },
