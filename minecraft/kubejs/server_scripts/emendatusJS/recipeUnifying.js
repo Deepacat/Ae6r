@@ -157,7 +157,8 @@ function plateRecipes(e, materialName, typesObj) {
         .id(`emendatus:create/pressing/${materialName}_plate`)
     e.recipes.thermal.press(plateItem, gemOrIngotItem)
         .id(`emendatus:thermal/press/${materialName}_plate`)
-    e.recipes.immersiveengineering.metal_press(`4x ${plateItem}`, `4x ${gemOrIngotItem}`, 'immersiveengineering:mold_plate')
+    e.recipes.immersiveengineering.metal_press(`4x ${plateItem}`, `4x ${gemOrIngotItem}`)
+        .mold('immersiveengineering:mold_plate')
         .id(`emendatus:immersiveengineering/metalpress/${materialName}_plate`)
     e.custom({
         type: "createdieselgenerators:hammering",
@@ -194,7 +195,8 @@ function rodRecipes(e, materialName, typesObj) {
 
     e.recipes.thermal.press(`2x ${rodItem}`, [gemOrIngotItem, 'immersiveengineering:mold_rod'])
         .id(`emendatus:thermal/press/${materialName}_rod`)
-    e.recipes.immersiveengineering.metal_press(`8x ${rodItem}`, `4x ${gemOrIngotItem}`, 'immersiveengineering:mold_rod')
+    e.recipes.immersiveengineering.metal_press(`8x ${rodItem}`, `4x ${gemOrIngotItem}`)
+        .mold('immersiveengineering:mold_rod')
         .id(`emendatus:immersiveengineering/metalpress/${materialName}_rod`)
 
     e.custom({
@@ -238,7 +240,8 @@ function gearRecipes(e, materialName, typesObj) {
 
     e.recipes.thermal.press(gearItem, [`4x ${gemOrIngotItem}`, 'immersiveengineering:mold_gear'])
         .id(`emendatus:thermal/press/${materialName}_gear`)
-    e.recipes.immersiveengineering.metal_press(`4x ${gearItem}`, `16x ${gemOrIngotItem}`, 'immersiveengineering:mold_gear')
+    e.recipes.immersiveengineering.metal_press(`4x ${gearItem}`, `16x ${gemOrIngotItem}`)
+        .mold('immersiveengineering:mold_gear')
         .id(`emendatus:immersiveengineering/metalpress/${materialName}_gear`)
 
     e.shaped(gearItem, [
@@ -272,7 +275,8 @@ function wireRecipes(e, materialName, typesObj) {
     }
     e.recipes.thermal.press(`2x ${wireItem}`, [gemOrIngotItem, 'immersiveengineering:mold_wire'])
         .id(`emendatus:thermal/press/${materialName}_wire`)
-    e.recipes.immersiveengineering.metal_press(`8x ${wireItem}`, `4x ${gemOrIngotItem}`, 'immersiveengineering:mold_wire')
+    e.recipes.immersiveengineering.metal_press(`8x ${wireItem}`, `4x ${gemOrIngotItem}`)
+        .mold('immersiveengineering:mold_wire')
         .id(`emendatus:immersiveengineering/metalpress/${materialName}_wire`)
     if (typesObj.plate) {
         let plate = typesObj.plate.item.id + ''
@@ -377,7 +381,7 @@ function materialCrushing(e, materialName, typesObj) {
         }).id(`emendatus:crushing/hammer/${itemToCrush.split(':')[1]}_to_dust`)
 
         e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: dustItem })
-        immersiveEngineeringCrushing(e, dustItem, itemToCrush, 2400, [])
+        e.recipes.immersiveengineering.crusher(dustItem, itemToCrush, [], 3000)
             .id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
 
         e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: dustItem })
@@ -387,7 +391,7 @@ function materialCrushing(e, materialName, typesObj) {
         e.remove({ type: 'thermal:pulvizer', input: itemToCrush, output: dustItem })
         e.recipes.thermal.pulverizer(dustItem, itemToCrush)
             .id(`emendatus:crushing/thermal/pulverizer/${itemToCrush.split(':')[1]}_to_dust`)
-
+            
         e.remove({ type: 'bloodmagic:arc', input: itemToCrush, output: dustItem })
         e.recipes.bloodmagic.arc(dustItem, itemToCrush, '#bloodmagic:arc/explosive')
             .id(`emendatus:crushing/bloodmagic/arc/${itemToCrush.split(':')[1]}_to_dust`)

@@ -48,7 +48,7 @@ function embersStamping(event, outputItem, inputs, stampItem) {
     if (!Array.isArray(inputs)) { inputs = [inputs] }
 
     for (let input of inputs) {
-        if (input.fluid) {// fluid stack
+        if (input.fluid) { // fluid stack
             recipeObj.fluid = makeFluidStackJson(input)
         } else if (input.class || typeof input === "string" && input.startsWith('#')) { // tagstack (ingredient)
             recipeObj.input = makeJsonIngredient(input)
@@ -66,37 +66,7 @@ function embersStamping(event, outputItem, inputs, stampItem) {
         },
     }
 }
-// custom ie crusher builder bc the kube addon is broken
-function immersiveEngineeringCrushing(e, output, input, energy, secondaries) {
-    const recipeObj = {
-        type: "immersiveengineering:crusher",
-        energy: energy,
-        input: makeJsonIngredient(input),
-        result: makeJsonIngredient(output),
-    }
 
-    if (secondaries != undefined) {
-        recipeObj.secondaries = []
-        for (let secondary of secondaries) {
-            if (secondary.output) { // check if direct json input
-                recipeObj.secondaries.push(secondary)
-            } else if (secondary.item || Item.of(secondary.item)) { // check if itemstack or convertable to one (string)
-                let item = makeJsonIngredient(Item.of(secondary))
-                let itemObj = { output: item }
-                if (secondary.chance) { itemObj.chance = secondary.chance }
-                recipeObj.secondaries.push(itemObj)
-            }
-        }
-    }
-
-    const recipe = e.custom(recipeObj)
-
-    return {
-        id: function (customId) {
-            recipe.id(customId ?? `kubejs:immersiveengineering/crushing/${output.split(':')[1]}`)
-        },
-    }
-}
 // custom chiller recipe builder because the kube one has issues with fluid tag inputs
 function thermalChiller(event, outputItem, inputs) {
     const recipeObj = {
