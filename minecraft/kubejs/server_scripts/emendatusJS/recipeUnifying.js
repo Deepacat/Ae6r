@@ -150,7 +150,7 @@ function plateRecipes(e, materialName, typesObj) {
         let fluidAmt = getFluidAmountForType(typesObj.gemOrIngot.tag)
         thermalChiller(e, plateItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_plate`)
-        embersStamping(e, plateItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:plate_stamp')
+        embersStamping(e, `3x ${plateItem}`, { tag: fluid.tag, amount: fluidAmt * 3 }, 'embers:plate_stamp')
             .id(`emendatus:embers/stamping/${materialName}_plate`)
     }
     e.recipes.create.pressing(plateItem, gemOrIngotItem)
@@ -189,7 +189,7 @@ function rodRecipes(e, materialName, typesObj) {
 
         thermalChiller(e, rodItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_rod`)
-        embersStamping(e, rodItem, { tag: fluid.tag, amount: fluidAmt }, 'immersiveengineering:mold_rod')
+        embersStamping(e, `3x ${rodItem}`, { tag: fluid.tag, amount: fluidAmt * 3 }, 'immersiveengineering:mold_rod')
             .id(`emendatus:embers/stamping/${materialName}_rod`)
     }
 
@@ -234,7 +234,7 @@ function gearRecipes(e, materialName, typesObj) {
 
         thermalChiller(e, gearItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_gear`)
-        embersStamping(e, gearItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:gear_stamp')
+        embersStamping(e, `3x ${gearItem}`, { tag: fluid.tag, amount: fluidAmt * 3 }, 'embers:gear_stamp')
             .id(`emendatus:embers/stamping/${materialName}_gear`)
     }
 
@@ -270,7 +270,7 @@ function wireRecipes(e, materialName, typesObj) {
 
         thermalChiller(e, wireItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_wire`)
-        embersStamping(e, wireItem, { tag: fluid.tag, amount: fluidAmt }, 'immersiveengineering:mold_wire')
+        embersStamping(e, `3x ${wireItem}`, { tag: fluid.tag, amount: fluidAmt * 3 }, 'immersiveengineering:mold_wire')
             .id(`emendatus:embers/stamping/${materialName}_wire`)
     }
     e.recipes.thermal.press(`2x ${wireItem}`, [gemOrIngotItem, 'immersiveengineering:mold_wire'])
@@ -391,7 +391,7 @@ function materialCrushing(e, materialName, typesObj) {
         e.remove({ type: 'thermal:pulvizer', input: itemToCrush, output: dustItem })
         e.recipes.thermal.pulverizer(dustItem, itemToCrush)
             .id(`emendatus:crushing/thermal/pulverizer/${itemToCrush.split(':')[1]}_to_dust`)
-            
+
         e.remove({ type: 'bloodmagic:arc', input: itemToCrush, output: dustItem })
         e.recipes.bloodmagic.arc(dustItem, itemToCrush, '#bloodmagic:arc/explosive')
             .id(`emendatus:crushing/bloodmagic/arc/${itemToCrush.split(':')[1]}_to_dust`)
@@ -425,7 +425,7 @@ function fluidToItemRecipes(e, materialName, typesObj) {
 
         thermalChiller(e, gemOrIngotItem, ['tconstruct:ingot_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${gemOrIngotItem.split(':')[1]}`)
-        embersStamping(e, gemOrIngotItem, { tag: fluid.tag, amount: fluidAmt }, 'embers:ingot_stamp')
+        embersStamping(e, `3x ${gemOrIngotItem}`, { tag: fluid.tag, amount: fluidAmt * 3 }, 'embers:ingot_stamp')
             .id(`emendatus:embers/stamping/${gemOrIngotItem.split(':')[1]}`)
     }
 }
