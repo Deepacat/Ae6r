@@ -129,6 +129,11 @@ ServerEvents.tags('item', e => {
         'minecraft:polished_granite_slab', 'minecraft:granite_slab', 'minecraft:polished_andesite_slab',
         'minecraft:andesite_slab', 'minecraft:smooth_stone_slab', 'minecraft:stone_slab'
     ])
+
+    e.remove('forge:rods', 'miniutilities:flame_lily')
+
+    e.add('forge:stone', 'natures_spirit:travertine ')
+    e.add('forge:cobblestone', 'natures_spirit:cobbled_travertine ')
 })
 
 ServerEvents.tags('block', e => {
