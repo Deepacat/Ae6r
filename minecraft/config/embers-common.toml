@@ -28,9 +28,9 @@
 
 	[parameters.melter]
 		#The time in ticks it takes to process one recipe.
-		processTime = 200
+		processTime = 40
 		#The ember cost per tick.
-		cost = 1.0
+		cost = 3.0
 		#How much fluid (in mb) fits into a Melter.
 		capacity = 4000
 
@@ -48,7 +48,7 @@
 
 	[parameters.fluidVessel]
 		#How much fluid (in mb) fits into the Fluid Vessel.
-		capacity = 16000
+		capacity = 4000
 
 	[parameters.ember_injector]
 		#The maximum distance that Ember Injectors can be placed from a crystal seed.
