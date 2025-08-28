@@ -56,8 +56,11 @@ function embersStamping(event, outputItem, inputs, stampItem) {
             recipeObj.input = makeJsonIngredient(input)
         } else if (input.tag && input.amount) { // embers fluid tag input json
             recipeObj.fluid = input
+        } else if (makeJsonIngredient(input).item) {
+            recipeObj.input = makeJsonIngredient(input)
         }
     }
+
     const recipe = event.custom(recipeObj)
 
     return {
