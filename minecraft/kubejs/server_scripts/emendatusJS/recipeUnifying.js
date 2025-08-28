@@ -85,8 +85,8 @@ ServerEvents.recipes(e => {
 })
 
 function smeltingXp(materialType, recipe) {
-    if (/raw.*block/.test(materialType) && !materialType.includes('raw_redstone')) { recipe.xp(6); return }
-    if (materialType.includes('raw') && !materialType.includes('raw_redstone')) { recipe.xp(0.7); return }
+    if (/raw.*block/.test(materialType)) { recipe.xp(6); return }
+    if (materialType.includes('raw')) { recipe.xp(0.7); return }
     if (materialType.includes('ores')) { recipe.xp(2); return }
 }
 

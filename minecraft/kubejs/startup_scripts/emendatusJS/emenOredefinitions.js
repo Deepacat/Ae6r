@@ -6,7 +6,7 @@ global.dimensionsOreData = {
         biomeTag: '#minecraft:is_overworld'
     },
     "minecraft:the_nether": {
-        strata: ['netherrack', 'basalt', 'blackstone', 'create:scorchia', 'regions_unexplored:raw_redstone_block'],
+        strata: ['netherrack', 'basalt', 'blackstone', 'create:scorchia'],
         biomeTag: '#minecraft:is_nether'
     },
     "minecraft:the_end": {
