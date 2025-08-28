@@ -134,6 +134,7 @@ ServerEvents.tags('item', e => {
 
     e.add('forge:stone', 'natures_spirit:travertine ')
     e.add('forge:cobblestone', 'natures_spirit:cobbled_travertine ')
+    e.add('forge:sand', 'natures_spirit:pink_sand ')
 })
 
 ServerEvents.tags('block', e => {
