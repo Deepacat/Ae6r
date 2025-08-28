@@ -1078,7 +1078,11 @@
 			dependencies: ["7039C8B5F77E2353"]
 			icon: "embers:archaic_bricks"
 			id: "45CFB6E5BAA062B8"
-			title: "mb2 machine/multi thats related to embers"
+			tasks: [{
+				id: "0BE9D0691AD24828"
+				item: "mbd2:ember_oven"
+				type: "item"
+			}]
 			x: 0.5d
 			y: 1.5d
 		}
