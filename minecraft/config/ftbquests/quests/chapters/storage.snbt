@@ -121,27 +121,10 @@
 			tasks: [{
 				id: "3635395991201030"
 				item: {
-					Count: 1b
-					id: "itemfilters:or"
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
 					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "mekanism:basic_bin"
-							}
-							{
-								Count: 1b
-								id: "mekanism:advanced_bin"
-							}
-							{
-								Count: 1b
-								id: "mekanism:elite_bin"
-							}
-							{
-								Count: 1b
-								id: "mekanism:ultimate_bin"
-							}
-						]
+						"ftbfiltersystem:filter": "or(item(mekanism:basic_bin)item(mekanism:advanced_bin)item(mekanism:elite_bin)item(mekanism:ultimate_bin))"
 					}
 				}
 				title: "Bins"
