@@ -291,6 +291,16 @@ StartupEvents.recipeSchemaRegistry(e => {
             }
         });
 
+        let ieSawSecondary = new $RecipeComponent({
+            componentClass: () => $KJSInputItem,
+            read: (recipe, from) => recipe.readInputItem(from),
+            write: (recipe, value) => {
+                let json = value.toJson(true).getAsJsonObject();
+                // json.add('base_ingredient', json.remove('ingredient'));
+                return json;
+            }
+        });
+
         let ieClocheRender =
             new $RecipeComponentBuilder(2) // https://github.com/BluSunrize/ImmersiveEngineering/blob/e63e4824800945eccf3684200a2c2270e2e1cdf2/src/api/java/blusunrize/immersiveengineering/api/crafting/ClocheRenderFunction.java#L57
                 .add(nonBlankString.key('type')) // generic | crop | stem | stacking | hemp
@@ -488,13 +498,34 @@ StartupEvents.recipeSchemaRegistry(e => {
             )
         )
 
+        let a = {
+            "type": "immersiveengineering:sawmill",
+            "energy": 800,
+            "input": {
+                "item": "minecraft:oak_door"
+            },
+            "result": {
+                "item": "minecraft:oak_planks"
+            },
+            "secondaries": [
+                {
+                    "output": {
+                        "tag": "forge:dusts/wood"
+                    },
+                    "stripping": false
+                }
+            ]
+        }
+
+
+
         e.register('immersiveengineering:sawmill',
             new $RecipeSchema(
                 outputItem.key('result'),
                 ieInputItem.key('input'),
-                inputItem.key('stripped'),
-                // .asArray().key(secondaries)? // this just takes in {stripping: true, output: 'item:id'} unsure how to do it rn
-                intNumber.key('energy').optional(1600).alwaysWrite()
+                intNumber.key('energy').optional(1600).alwaysWrite(),
+                ieSawSecondary.asArray().key('secondaries').defaultOptional(), // this just takes in {stripping: true, output: 'item:id'} unsure how to do it rn
+                inputItem.key('stripped').defaultOptional()
             )
         )
 
