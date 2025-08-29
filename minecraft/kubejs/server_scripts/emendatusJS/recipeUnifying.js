@@ -159,7 +159,7 @@ function plateRecipes(e, materialName, typesObj) {
     e.recipes.create.sequenced_assembly([plateItem], gemOrIngotItem, [
         e.recipes.create.pressing(plateItem, plateItem),
         e.recipes.create.pressing(plateItem, plateItem)
-    ], plateItem, 1)
+    ], gemOrIngotItem, 1)
         .id(`emendatus:create/pressing/${materialName}_plate`)
 
     e.recipes.thermal.press(plateItem, gemOrIngotItem)
