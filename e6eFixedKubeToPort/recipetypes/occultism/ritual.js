@@ -1511,7 +1511,7 @@ ServerEvents.recipes(event => {
             ingredients: [Item.of('eidolon:reaper_scythe', '{Damage:0}').weakNBT(), 'naturesaura:chorus_generator']
         },
         { name: 'frosty', ingredients: ['thermal:ice_tnt', /*'betterendforge:'*/ 'kubejs:replaceme'] },
-        { name: 'culinary', ingredients: ['create:builders_tea', 'nethers_delight:stuffed_hoglin_item'] },
+        { name: 'culinary', ingredients: ['create:builders_tea', 'nethersdelight:stuffed_hoglin_item'] },
         { name: 'pink', ingredients: ['industrialforegoing:pink_slime_ingot', 'botania:pinkinator'] },
         { name: 'furnace', ingredients: ['create:encased_fan', 'industrialforegoing:resourceful_furnace'] }
     ]

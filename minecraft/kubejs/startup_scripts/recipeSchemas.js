@@ -507,8 +507,6 @@ StartupEvents.recipeSchemaRegistry(e => {
             ]
         }
 
-
-
         e.register('immersiveengineering:sawmill',
             new $RecipeSchema(
                 // outputItem.key('result'),
@@ -543,5 +541,9 @@ StartupEvents.recipeSchemaRegistry(e => {
                 nonBlankString.key('biome').defaultOptional().exclude()
             )
         )
+    }
+
+    if(Platform.isLoaded('industrialforegoing')) {
+        // e.register('industrialforegoing:dissolution')
     }
 })
