@@ -8,9 +8,11 @@ ServerEvents.recipes(e => {
     //         id: `${id_prefix}blank_plate`
     //     }
     // ]
-    e.recipes.immersiveengineering.sawmill('8x darkutils:blank_plate',
-        'occultism:otherstone',
-        1600,
-        [{ stripping: false, output: Item.of('darkutils:blank_plate').withChance(0.5) }]
-    )
+    
+    // todo fix sawmill recipe schema
+    // e.recipes.immersiveengineering.sawmill('8x darkutils:blank_plate',
+    //     'occultism:otherstone',
+    //     1600,
+    //     [{ stripping: false, output: Item.of('darkutils:blank_plate').withChance(0.5) }]
+    // )
 })

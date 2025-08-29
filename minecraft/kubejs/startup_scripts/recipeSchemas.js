@@ -291,16 +291,6 @@ StartupEvents.recipeSchemaRegistry(e => {
             }
         });
 
-        let ieSawSecondary = new $RecipeComponent({
-            componentClass: () => $KJSInputItem,
-            read: (recipe, from) => recipe.readInputItem(from),
-            write: (recipe, value) => {
-                let json = value.toJson(true).getAsJsonObject();
-                // json.add('base_ingredient', json.remove('ingredient'));
-                return json;
-            }
-        });
-
         let ieClocheRender =
             new $RecipeComponentBuilder(2) // https://github.com/BluSunrize/ImmersiveEngineering/blob/e63e4824800945eccf3684200a2c2270e2e1cdf2/src/api/java/blusunrize/immersiveengineering/api/crafting/ClocheRenderFunction.java#L57
                 .add(nonBlankString.key('type')) // generic | crop | stem | stacking | hemp
@@ -521,29 +511,36 @@ StartupEvents.recipeSchemaRegistry(e => {
 
         e.register('immersiveengineering:sawmill',
             new $RecipeSchema(
-                outputItem.key('result'),
-                ieInputItem.key('input'),
-                intNumber.key('energy').optional(1600).alwaysWrite(),
-                ieSawSecondary.asArray().key('secondaries').defaultOptional(), // this just takes in {stripping: true, output: 'item:id'} unsure how to do it rn
-                inputItem.key('stripped').defaultOptional()
+                // outputItem.key('result'),
+                // ieInputItem.key('input'),
+                // intNumber.key('energy').optional(1600).alwaysWrite(),
+                // ieSawSecondary.asArray().key('secondaries').defaultOptional(), // this just takes in {stripping: true, output: 'item:id'} unsure how to do it rn
+                // ieInputItem.key('stripped').defaultOptional()
             )
         )
 
         e.register('immersiveengineering:squeezer',
             new $RecipeSchema(
-
+                ieInputItem.key('input'),
+                intNumber.key('energy').optional(6400).alwaysWrite(),
+                outputFluid.key('fluid').defaultOptional().exclude(), // use .fluid(outputFluid) after recipe
+                outputItem.key('result').defaultOptional().exclude() // use .result(outputItem) after recipe
             )
         )
 
         e.register('immersiveengineering:thermoelectric_source',
             new $RecipeSchema(
-
+                intNumber.key('tempKelvin'),
+                nonBlankString.key('blockTag').defaultOptional().exclude(),
+                nonBlankString.key('singleBlock').defaultOptional().exclude()
             )
         )
 
         e.register('immersiveengineering:windmill_biome',
             new $RecipeSchema(
-
+                intNumber.key('modifier'),
+                nonBlankString.key('biomeTag').defaultOptional().exclude(),
+                nonBlankString.key('biome').defaultOptional().exclude()
             )
         )
     }
