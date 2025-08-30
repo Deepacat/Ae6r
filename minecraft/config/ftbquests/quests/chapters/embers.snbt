@@ -123,18 +123,11 @@
 		{
 			dependencies: ["73818CC27A06CD21"]
 			id: "77DE111AA48781EC"
-			tasks: [
-				{
-					id: "45F434F56163E980"
-					item: "embers:melter"
-					type: "item"
-				}
-				{
-					id: "0D4B25CD64E07C6A"
-					item: "embers:geologic_separator"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "45F434F56163E980"
+				item: "embers:melter"
+				type: "item"
+			}]
 			x: -2.0d
 			y: 1.5d
 		}
@@ -325,6 +318,17 @@
 			}]
 			x: -5.0d
 			y: 4.5d
+		}
+		{
+			dependencies: ["77DE111AA48781EC"]
+			id: "5316953E1A1F185F"
+			tasks: [{
+				id: "540F996AD1A9D956"
+				item: "embers:geologic_separator"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
 		}
 	]
 	title: "Embers"
