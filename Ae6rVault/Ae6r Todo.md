@@ -13,7 +13,7 @@
 			- [x] i did all of them except ars glyph too tired (did this)
 		- [x] Compacting recipes
 		- [x] loot table unification
-		- [ ] investigate wtf happened to molten emerald recipes
+		- [x] investigate wtf happened to molten emerald recipes
 - [x] Port base recipe replacements from e6e for stuff like niter 
 	- [x] THIS WAS A WHOLE RABBIT HOLE OF UNIFICATION BULLSHIT
 - [x] move pakku to mc folder
