@@ -151,16 +151,17 @@ function plateRecipes(e, materialName, typesObj) {
         thermalChiller(e, plateItem, ['tconstruct:plate_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${materialName}_plate`)
         embersStamping(e, `4x ${plateItem}`, { tag: fluid.tag, amount: fluidAmt * 4 }, 'embers:plate_stamp')
-            .id(`emendatus:embers/stamping/${fluid.stack.id.split(':')[1]}_to_${plateItem.split(':')[1]}`)
+            .id(`emendatus:embers/stamping/${fluid.stack.id.split(':')[1]}_to_${plateItem.split(':')[1]}_4x`)
+        embersStamping(e, `9x ${plateItem}`, [{ tag: fluid.tag, amount: fluidAmt * 9 }, 'embers:plate_stamp'], 'embers:plate_stamp')
+            .id(`emendatus:embers/stamping/${fluid.stack.id.split(':')[1]}_to_${plateItem.split(':')[1]}_9x`)
     }
     // e.recipes.create.pressing(plateItem, gemOrIngotItem)
     //     .id(`emendatus:create/pressing/${materialName}_plate`)
 
     e.recipes.create.sequenced_assembly([plateItem], gemOrIngotItem, [
-        e.recipes.create.pressing(plateItem, plateItem),
         e.recipes.create.pressing(plateItem, plateItem)
-    ], gemOrIngotItem, 1)
-        .id(`emendatus:create/pressing/${materialName}_plate`)
+    ], gemOrIngotItem, 3
+    ).id(`emendatus:create/pressing/${materialName}_plate`)
 
     e.recipes.thermal.press(plateItem, gemOrIngotItem)
         .id(`emendatus:thermal/press/${materialName}_plate`)
@@ -357,10 +358,8 @@ function scrapMelting(e, materialName, typesObj) {
         let energy = melt.energy
         e.recipes.thermal.crucible(Fluid.of(fluid.stack.id, fluidAmt), item, 0, energy)
             .id(`emendatus:thermal/crucible/${item.split(':')[1]}`)
-        if (500 > fluidAmt) {
-            embersMelting(e, Fluid.of(fluid.stack.id, fluidAmt), item)
-                .id(`emendatus:embers/melting/${item.split(':')[1]}`)
-        }
+        embersMelting(e, Fluid.of(fluid.stack.id, fluidAmt), item)
+            .id(`emendatus:embers/melting/${item.split(':')[1]}`)
     }
 }
 

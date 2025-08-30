@@ -145,10 +145,11 @@ function getTaggedItem(tagPath) {
  */
 function getFluid(materialName) {
     for (let mod of modFluidPriorities) {
+        let tagprefix = mod == 'tconstruct' ? 'tconstruct' : 'forge'
         if (Fluid.exists(`${mod}:molten_${materialName}`)) {
-            return { stack: Fluid.of(`${mod}:molten_${materialName}`), tag: `forge:molten_${materialName}` }
+            return { stack: Fluid.of(`${mod}:molten_${materialName}`), tag: `${tagprefix}:molten_${materialName}` }
         } else if (Fluid.exists(`${mod}:${materialName}`)) {
-            return { stack: Fluid.of(`${mod}:${materialName}`), tag: `forge:${materialName}` }
+            return { stack: Fluid.of(`${mod}:${materialName}`), tag: `${tagprefix}:${materialName}` }
         }
     }
 }
