@@ -70,7 +70,7 @@ ServerEvents.recipes(e => {
     e.recipes.immersiveengineering.arc_furnace('kubejs:smoldering_lapis_lazuli_compound',
         'thermal:tar',
         [
-            /*'atum:'*/ 'kubejs:replaceme',
+            'aether:swet_ball',
             Ingredient.of('#forge:dusts/quartz', 2),
             Ingredient.of('#forge:dusts/lapis', 5)
         ],

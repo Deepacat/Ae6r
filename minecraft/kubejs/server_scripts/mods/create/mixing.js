@@ -13,7 +13,7 @@ ServerEvents.recipes(e => {
         [
             '#forge:dusts/lapis', '#forge:dusts/lapis', '#forge:dusts/lapis', '#forge:dusts/lapis',
             '#forge:dusts/lapis', '#forge:dusts/quartz', '#forge:dusts/quartz',
-            /*'atum:'*/ 'kubejs:replaceme',
+            'aether:swet_ball',
             '#forge:tar'
         ])
         .heated()
