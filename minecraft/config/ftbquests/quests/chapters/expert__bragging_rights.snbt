@@ -658,7 +658,7 @@
 				"Once built, the inputs and outputs may be found within the structure; an entrance awaits on the side."
 			]
 			hide_until_deps_visible: true
-			icon: "masterfulmachinery:enigmatic_tree_of_life_controller"
+			icon: "minecraft:cherry_sapling"
 			id: "7C0943FD8F8A0D69"
 			tasks: [{
 				id: "0B1FB01E3D6A63F8"
@@ -724,5 +724,5 @@
 			y: 0.5d
 		}
 	]
-	title: " Mastery"
+	title: " 4 - Mastery"
 }

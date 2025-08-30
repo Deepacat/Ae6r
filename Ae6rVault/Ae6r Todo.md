@@ -20,8 +20,8 @@
 - [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn)
 - [ ] make recipe builders for diesel gens and create c&a (or find others better ones)
 	- [ ] DG hammering / wirecutting (grouped bc theyre like the same thing)
-	- [ ] CCA rolling
-	- [ ] CCA tesla charging
+	- [x] CCA rolling
+	- [x] CCA tesla charging
 - [ ] make tinkers recipe builders
 	- [x] casting table
 	- [ ] casting basin

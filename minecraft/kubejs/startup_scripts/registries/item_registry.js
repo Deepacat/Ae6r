@@ -1,8 +1,8 @@
 StartupEvents.registry('item', event => {
     const generalItems = [
         // placeholder item for mod items that were removed
-        'replaceme',
-        // removed items from 1.16 e6e that need to be remade
+        'replaceme', // removed items from 1.16 e6e that need to be remade
+        
         'leather_stripe', // betterendforge
         'silk_fiber',
 
@@ -11,6 +11,8 @@ StartupEvents.registry('item', event => {
         'magic_clay',
         'marvelous_clay',
         'mythical_clay',
+
+        'congealed_blood', // tinkers
 
         'rainbow_rune', // quark
         'white_rune',
@@ -29,6 +31,7 @@ StartupEvents.registry('item', event => {
         'purple_rune',
         'magenta_rune',
         'pink_rune',
+        /* end placeholder items */
 
         // lootboxes
         'common_lootbox',
