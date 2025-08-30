@@ -157,7 +157,7 @@
 				item: "embers:dawnstone_anvil"
 				type: "item"
 			}]
-			x: -4.0d
+			x: -5.0d
 			y: 3.5d
 		}
 		{
@@ -234,7 +234,7 @@
 					type: "item"
 				}
 			]
-			x: -6.5d
+			x: -7.0d
 			y: 4.0d
 		}
 		{
@@ -255,7 +255,75 @@
 				item: "embers:entropic_enumerator"
 				type: "item"
 			}]
-			x: 0.0d
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			id: "579AF6A7E25E68A7"
+			tasks: [{
+				id: "629253DE58DBDE65"
+				item: "embers:mini_boiler"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6C07C3B2E18AA92C"]
+			id: "0C8F1E3931CE0C3A"
+			tasks: [{
+				id: "43439C638D5CE9A9"
+				item: "embers:catalytic_plug"
+				type: "item"
+			}]
+			x: -7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["579AF6A7E25E68A7"]
+			id: "6C07C3B2E18AA92C"
+			tasks: [
+				{
+					id: "2E1515AD499C156B"
+					item: "embers:dwarven_gas_bucket"
+					type: "item"
+				}
+				{
+					id: "2735950F821BADE6"
+					item: "embers:steam_bucket"
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7EE6B8AEFCDA0A93"]
+			id: "056380478D52DF7C"
+			tasks: [
+				{
+					id: "5E4D0DD7B959651A"
+					item: "embers:ember_ejector"
+					type: "item"
+				}
+				{
+					id: "51ED8628C4393135"
+					item: "embers:ember_funnel"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["731976A697931640"]
+			id: "31E32ACD1AF29632"
+			tasks: [{
+				id: "6B691A784BECDBFF"
+				item: "embers:automatic_hammer"
+				type: "item"
+			}]
+			x: -5.0d
 			y: 4.5d
 		}
 	]
