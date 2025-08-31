@@ -72,15 +72,23 @@ ServerEvents.recipes(e => {
         typesObj['gemOrIngot'] = typesObj.gem || typesObj.ingot
         typesObj['smeltable'] = [typesObj.raw_ore, typesObj.crushed_ore, typesObj.dust]
         // console.log(`material: ${materialName}`, Object.entries(typesObj).map(entry => `${entry[0]}: ${entry[1] == undefined ? 'undefined' : entry[1].item ? entry[1].item.id : entry[1]}`), ` - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - `)
-        smeltingRecipes(e, materialName, typesObj)
+        smeltingRecipes(e, materialName, typesObj) // ore, raw, dust smelting recipes
+        // component flag items
         plateRecipes(e, materialName, typesObj)
         rodRecipes(e, materialName, typesObj)
         gearRecipes(e, materialName, typesObj)
         wireRecipes(e, materialName, typesObj)
-        materialCompacting(e, materialName, typesObj)
-        scrapMelting(e, materialName, typesObj)
-        materialCrushing(e, materialName, typesObj)
-        fluidToItemRecipes(e, materialName, typesObj)
+        // other recipes
+        materialCompacting(e, materialName, typesObj) // compacting nuggets to ingots etc
+        scrapMelting(e, materialName, typesObj) // melting components, ingots, etc to fluids
+        materialCrushing(e, materialName, typesObj) // crushing ingots/gems to dust
+        fluidToItemRecipes(e, materialName, typesObj) // casting fluids to gems/ingots/blocks
+        // ore processing
+        // createOreProcessing()
+        // mekanismOreProcessing()
+        // bloodmagicOreProcessing()
+        // embersOreProcessing()
+        // enigmaticMagicOreProcessing()
     }
     // clear obj for memory sake or something
 })
@@ -448,9 +456,8 @@ function fluidToItemRecipes(e, materialName, typesObj) {
                 type: 'tconstruct:casting_basin',
                 output: blockItemId
             })
-            e.recipes.tconstruct.casting_basin(blockItemId, { tag: fluid.tag, amount: fluidAmt }, 60)
+            e.recipes.tconstruct.casting_basin(blockItemId, { tag: fluid.tag, amount: fluidAmt }, 120)
                 .id(`emendatus:tconstruct/casting_basin/${fluid.stack.id.split(':')[1]}_to_${blockItemId.split(':')[1]}`)
-
         }
     }
 }
