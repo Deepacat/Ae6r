@@ -330,6 +330,43 @@
 			x: -1.0d
 			y: 1.5d
 		}
+		{
+			id: "42BF50FBD3F46484"
+			tasks: [
+				{
+					id: "0E5C94E6BE7780BA"
+					item: "embers:ember_dial"
+					type: "item"
+				}
+				{
+					id: "07EAFB06FFC204B4"
+					item: "embers:item_dial"
+					type: "item"
+				}
+				{
+					id: "46B111EBA211134A"
+					item: "embers:fluid_dial"
+					type: "item"
+				}
+				{
+					id: "157C62FB6797AC53"
+					item: "embers:clockwork_attenuator"
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: 0.0d
+		}
+		{
+			id: "6387F9B9D8FE726C"
+			tasks: [{
+				id: "49807229F709ECF0"
+				item: "embers:tinker_lens"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
 	]
 	title: "Embers"
 }

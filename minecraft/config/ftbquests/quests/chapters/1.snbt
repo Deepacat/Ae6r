@@ -886,11 +886,23 @@
 		{
 			dependencies: ["00AA0E1E061988B5"]
 			id: "48D210C52F254D74"
-			tasks: [{
-				id: "28C5BD17651CEB6D"
-				item: "minecraft:dandelion"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "28C5BD17651CEB6D"
+					item: "minecraft:dandelion"
+					type: "item"
+				}
+				{
+					id: "4242698B913D333C"
+					item: "minecraft:vine"
+					type: "item"
+				}
+				{
+					id: "3FD8A9E4759AE9F4"
+					item: "thermal:device_tree_extractor"
+					type: "item"
+				}
+			]
 			title: "latex"
 			x: -4.5d
 			y: 0.5d

@@ -1,7 +1,7 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "pneumaticcraft_repressurized"
+	filename: "pneumaticcraft"
 	group: "72A9465344128AF9"
 	icon: "pneumaticcraft:pressure_gauge_module"
 	id: "00000000000000AE"
@@ -1697,5 +1697,5 @@
 			y: -9.5d
 		}
 	]
-	title: "PneumaticCraft: Repressurized"
+	title: "PneumaticCraft"
 }
