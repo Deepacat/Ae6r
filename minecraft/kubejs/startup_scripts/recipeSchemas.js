@@ -543,7 +543,32 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
     }
 
-    if(Platform.isLoaded('industrialforegoing')) {
+    if (Platform.isLoaded('industrialforegoing')) {
         // e.register('industrialforegoing:dissolution')
+    }
+
+    if (Platform.isLoaded('embers')) {
+
+    }
+
+    if (Platform.isLoaded('tconstruct')) {
+        e.register('tconstruct:casting_table',
+            new $RecipeSchema(
+                outputItem.key('result'),
+                fluidOrTagInput('tag').asArrayOrSelf().key('fluid'),
+                intNumber.key('cooling_time').optional(60).alwaysWrite(),
+                bool.key('cast_consumed').optional(true).alwaysWrite(),
+                inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
+            )
+        )
+        e.register('tconstruct:casting_basin',
+            new $RecipeSchema(
+                outputItem.key('result'),
+                fluidOrTagInput('tag').asArrayOrSelf().key('fluid'),
+                intNumber.key('cooling_time').optional(60).alwaysWrite(),
+                bool.key('cast_consumed').optional(true).alwaysWrite(),
+                inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
+            )
+        )
     }
 })

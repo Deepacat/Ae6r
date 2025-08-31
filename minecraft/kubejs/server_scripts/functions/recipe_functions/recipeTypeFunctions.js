@@ -108,34 +108,6 @@ function thermalChiller(event, outputItem, inputs) {
     }
 }
 
-/**
- * @param {{ custom: (arg0: { type: string; cast: any; cooling_time: any; fluid: any; result: any; }) => any; }} event
- * @param {string} outputItem
- * @param {Fluid} inputFluid
- * @param {any} castItem
- * @param {any} coolingTime
- */
-function tinkersCasting(event, outputItem, inputFluid, castItem, coolingTime) {
-    const recipeObj = {
-        type: "tconstruct:casting_table",
-        cast: makeJsonIngredient(castItem),
-        cooling_time: coolingTime,
-        // @ts-ignore
-        fluid: inputFluid.tag ? inputFluid : makeFluidStackJson(inputFluid),
-        result: makeJsonIngredient(outputItem),
-    }
-    recipeObj.cast_consumed = true
-    if (makeJsonIngredient(castItem).item && Item.of(castItem).hasTag('tconstruct:patterns/reusable')) {
-        recipeObj.cast_consumed = false
-    }
-    const recipe = event.custom(recipeObj)
-    return {
-        id: function (customId) {
-            recipe.id(customId ?? `kubejs:tconstruct/casting_table/${outputItem.split(':')[1]}`)
-        },
-    }
-}
-
 // lychee exploding recipe helper
 /**
  * @param {Internal.RecipesEventJS} event
