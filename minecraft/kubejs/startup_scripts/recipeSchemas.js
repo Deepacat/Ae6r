@@ -561,6 +561,7 @@ StartupEvents.recipeSchemaRegistry(e => {
                 inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
             )
         )
+        
         e.register('tconstruct:casting_basin',
             new $RecipeSchema(
                 outputItem.key('result'),
