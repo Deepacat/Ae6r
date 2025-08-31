@@ -1,3 +1,4 @@
+///@ts-check
 //priority: 1000
 // custom event helpers for recipe types with no kube addon
 
@@ -15,10 +16,16 @@ const farmersDelightTools = {
     }
 }
 
+/**
+ * @param {{ custom: (arg0: { type: string; input: any; output: any; }) => any; }} e
+ * @param {Fluid | Internal.FluidStackJS} fluidOutput
+ * @param {string} itemInput
+ */
 function embersMelting(e, fluidOutput, itemInput) {
     const recipe = e.custom({
         type: "embers:melting",
         input: makeJsonIngredient(itemInput),
+        // @ts-ignore
         output: makeFluidStackJson(fluidOutput)
     })
     return {
@@ -29,14 +36,10 @@ function embersMelting(e, fluidOutput, itemInput) {
 }
 
 /**
- * Generates an Embers: Stamping recipe.
- * @param {Object} event - The event object.
- * @param {ItemStack} outputItem - The item to be generated.
- * @param {Object[]} inputs - An array of objects containing the input items/tags/fluids.
- * @param {ItemStack} [stampItem] - (Optional) A stamping item to be used for the recipe.
- * @returns {Object} An object with the id function.
- * @example
- * embersStamping(event, Item.of('minecraft:gravel', 2), [Ingredient.of('#forge:cobblestone/normal'), Fluid.of('minecraft:water', 50)], '#forge:tools/pickaxes')
+ * @param {{ custom: (arg0: { type: string; output: any; }) => any; }} event
+ * @param {string} outputItem
+ * @param {any[]} inputs
+ * @param {string} stampItem
  */
 function embersStamping(event, outputItem, inputs, stampItem) {
     const recipeObj = {
@@ -71,6 +74,11 @@ function embersStamping(event, outputItem, inputs, stampItem) {
 }
 
 // custom chiller recipe builder because the kube one has issues with fluid tag inputs
+/**
+ * @param {{ custom: (arg0: { type: string; result: any; }) => any; }} event
+ * @param {string} outputItem
+ * @param {any[]} inputs
+ */
 function thermalChiller(event, outputItem, inputs) {
     const recipeObj = {
         type: "thermal:chiller",
@@ -100,11 +108,19 @@ function thermalChiller(event, outputItem, inputs) {
     }
 }
 
+/**
+ * @param {{ custom: (arg0: { type: string; cast: any; cooling_time: any; fluid: any; result: any; }) => any; }} event
+ * @param {string} outputItem
+ * @param {Fluid} inputFluid
+ * @param {any} castItem
+ * @param {any} coolingTime
+ */
 function tinkersCasting(event, outputItem, inputFluid, castItem, coolingTime) {
     const recipeObj = {
         type: "tconstruct:casting_table",
         cast: makeJsonIngredient(castItem),
         cooling_time: coolingTime,
+        // @ts-ignore
         fluid: inputFluid.tag ? inputFluid : makeFluidStackJson(inputFluid),
         result: makeJsonIngredient(outputItem),
     }
@@ -120,18 +136,15 @@ function tinkersCasting(event, outputItem, inputFluid, castItem, coolingTime) {
     }
 }
 
-// ServerEvents.recipes(e => {
-//     tinkersCasting(e, 'minecraft:ender_eye', { tag: 'forge:ender', amount: 250 }, 'minecraft:blaze_powder', 82)
-//         .id('kubejs:tconstruct/casting_table/ender_eye')
-//     tinkersCasting(e, 'minecraft:dirt', { tag: 'forge:molten_copper', amount: 250 }, '#forge:sand', 82)
-//         .id('kubejs:tconstruct/casting_table/dirt')
-//     tinkersCasting(e, 'minecraft:stone', Fluid.of('minecraft:water', 69), '#forge:cobblestone', 82)
-//         .id('kubejs:tconstruct/casting_table/stone')
-//     tinkersCasting(e, 'minecraft:oak_pressure_plate', Fluid.of('minecraft:water', 69), 'tconstruct:large_plate_cast', 82)
-// })
-
 // lychee exploding recipe helper
-function explosionRecipe(e, id, inputs, posts, comment) {
+/**
+ * @param {Internal.RecipesEventJS} event
+ * @param {string} id
+ * @param {({ tag: string; count: number; } | { tag: string; count?: undefined; })[] | ({ item: string; count?: undefined; } | { item: string; count: number; })[] | ({ item: string; count: number; tag?: undefined; } | { tag: string; count: number; item?: undefined; })[]} inputs
+ * @param {{ type: string; item: string; }[] | { type: string; item: string; count: number; }[] | { type: string; item: string; contextual: { type: string; chance: number; }; }[]} posts
+ * @param {string} [comment]
+ */
+function explosionRecipe(event, id, inputs, posts, comment) {
     /* lychee apparently doesn't do itemstacks, only ingredient,
     so I have to add these stupid items several times to replicate it
     it also doesn't like having over 27 inputs */
@@ -159,17 +172,26 @@ function explosionRecipe(e, id, inputs, posts, comment) {
 
     if (comment) { recipe.comment = comment }
 
-    e.custom(recipe).id('kubejs:lychee/exploding/' + id)
+    event.custom(recipe).id('kubejs:lychee/exploding/' + id)
 }
 
 // lychee lightning recipe helper
-function lightningRecipe(e, id, inputs, posts, comment) {
+/**
+ * @param {Internal.RecipesEventJS} event
+ * @param {string} id
+ * @param {({ item: string; count: number; tag?: undefined; } | { item: string; count?: undefined; tag?: undefined; } | { tag: string; item?: undefined; count?: undefined; })[] | ({ item: string; tag?: undefined; count?: undefined; } | { tag: string; count: number; item?: undefined; } | { item: string; count: number; tag?: undefined; })[] | ({ type: string; item: string; nbt: { stored_type: string; }; } | { item: string; type?: undefined; nbt?: undefined; })[] | ({ item: string; count: number; tag?: undefined; } | { tag: string; count: number; item?: undefined; } | { tag: string; item?: undefined; count?: undefined; })[]} inputs
+ * @param {{ type: string; item: string; count: number; }[] | { type: string; item: string; }[]} posts
+ * @param {undefined} [comment]
+ */
+function lightningRecipe(event, id, inputs, posts, comment) {
     /* lychee apparently doesn't do itemstacks, only ingredient,
     so I have to add these stupid items several times to replicate it
     it also doesn't like having over 27 inputs */
     let finalInputs = []
     for (let input of inputs) {
+        // @ts-ignore
         if (input.count > 0) {
+            // @ts-ignore
             for (let i = 0; i < input.count; i++) {
                 finalInputs.push(input)
             }
@@ -191,9 +213,16 @@ function lightningRecipe(e, id, inputs, posts, comment) {
 
     if (comment) { recipe.comment = comment }
 
-    e.custom(recipe).id('kubejs:lychee/lightning/' + id)
+    event.custom(recipe).id('kubejs:lychee/lightning/' + id)
 }
 
+/**
+ * @param {Internal.RecipesEventJS} e
+ * @param {{ type: string; item: string; count: number; }[]} post
+ * @param {any[]} inputs
+ * @param {string} insideBlock
+ * @param {string} id
+ */
 function insideBlock(e, post, inputs, insideBlock, id) {
     let recipe = {}
     recipe.type = "lychee:item_inside"
