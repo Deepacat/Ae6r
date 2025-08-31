@@ -28,9 +28,9 @@
 
 	[parameters.melter]
 		#The time in ticks it takes to process one recipe.
-		processTime = 40
+		processTime = 150
 		#The ember cost per tick.
-		cost = 3.0
+		cost = 2.0
 		#How much fluid (in mb) fits into a Melter.
 		capacity = 4000
 
@@ -40,7 +40,7 @@
 
 	[parameters.stamper]
 		#How much fluid (in mb) fits into the Stamp Base.
-		capacity = 1500
+		capacity = 1600
 
 	[parameters.charger]
 		#How much ember is transferred between item and charger per tick.
@@ -129,7 +129,7 @@
 #Miscellaneous settings
 [misc]
 	#Codex entries need to be completed before the next one unlocks.
-	codexProgression = false
+	codexProgression = true
 	#If true, Embers homing projectiles will go for neutral players.
 	everybodyIsEnemy = false
 	#Which domains are preferred for recipes with dynamic outputs.
