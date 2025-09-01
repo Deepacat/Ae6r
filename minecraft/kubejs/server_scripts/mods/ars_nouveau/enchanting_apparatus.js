@@ -22,7 +22,7 @@ ServerEvents.recipes(e => {
     e.remove({ id: 'undergarden:catalyst' })
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['eidolon:gold_inlay', '#forge:ingots/silver', 'eidolon:gold_inlay', '#forge:ingots/silver', '#forge:ingots/silver', 'eidolon:gold_inlay', '#forge:ingots/silver', 'eidolon:gold_inlay'],
-        'kubejs:replaceme',
+        'wizards_reborn:arcanum',
         'undergarden:catalyst', 5000
     ).id('kubejs:catalyst')
 
@@ -48,7 +48,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:vitalic_sourcelink' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/gold_brass', 'kubejs:replaceme', '#forge:nuggets/gold_brass', '#forge:ingots/gold_brass', '#forge:ingots/gold_brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
+        ['#forge:nuggets/gold_brass', 'minecraft:glistering_melon', '#forge:nuggets/gold_brass', '#forge:ingots/gold_brass', '#forge:ingots/gold_brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
         'minecraft:conduit',
         'ars_nouveau:vitalic_sourcelink'
     ).id('kubejs:vitalic_sourcelink')
@@ -62,13 +62,13 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:imbuement_chamber' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['eidolon:gold_inlay', 'kubejs:replaceme', 'eidolon:gold_inlay', '#forge:nuggets/arcane_gold', '#forge:nuggets/arcane_gold', 'eidolon:gold_inlay', 'kubejs:replaceme', 'eidolon:gold_inlay'],
+        ['eidolon:gold_inlay', 'kubejs:warding_stone', 'eidolon:gold_inlay', '#forge:nuggets/arcane_gold', '#forge:nuggets/arcane_gold', 'eidolon:gold_inlay', 'kubejs:warding_stone', 'eidolon:gold_inlay'],
         '#forge:gems/source',
         'ars_nouveau:imbuement_chamber'
     ).id('kubejs:imbuement_chamber_enchanting')
 
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:ingots/gold_brass', 'kubejs:replaceme', '#forge:ingots/gold_brass', 'ars_nouveau:glyph_extract', 'ars_nouveau:glyph_extract', 'kubejs:replaceme', 'kubejs:replaceme', 'kubejs:replaceme'],
+        ['#forge:ingots/gold_brass', 'kubejs:warding_stone', '#forge:ingots/gold_brass', 'ars_nouveau:glyph_extract', 'ars_nouveau:glyph_extract', 'kubejs:replaceme', 'kubejs:replaceme', 'kubejs:replaceme'],
         'ars_nouveau:potion_jar',
         'ars_nouveau:potion_melder', 10
     ).id('kubejs:potion_melder')
@@ -117,14 +117,14 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:belt_of_levitation' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:glyph_launch', 'kubejs:replaceme', 'kubejs:replaceme', 'kubejs:replaceme', 'kubejs:replaceme', 'quark:bottled_cloud', 'quark:bottled_cloud', 'quark:bottled_cloud'],
+        ['ars_nouveau:glyph_launch', 'kubejs:replaceme', 'kubejs:aer_aspectus_shard', 'kubejs:replaceme', 'kubejs:replaceme', 'quark:bottled_cloud', 'quark:bottled_cloud', 'quark:bottled_cloud'],
         'eidolon:basic_belt',
         'ars_nouveau:belt_of_levitation', 500
     ).id('kubejs:belt_of_levitation')
 
     e.remove({ id: 'ars_nouveau:belt_of_unstable_gifts' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['minecraft:sugar', '#forge:crops/nether_wart', '#forge:rods/blaze', '#forge:dusts/glowstone', 'minecraft:fermented_spider_eye', '#forge:dusts/redstone', 'kubejs:replaceme', '#forge:feathers'],
+        ['minecraft:sugar', '#forge:crops/nether_wart', '#forge:rods/blaze', '#forge:dusts/glowstone', 'minecraft:fermented_spider_eye', '#forge:dusts/redstone', 'kubejs:perditio_aspectus_shard', '#forge:feathers'],
         'eidolon:basic_belt',
         'ars_nouveau:belt_of_unstable_gifts', 500
     ).id('kubejs:belt_of_unstable_gifts')

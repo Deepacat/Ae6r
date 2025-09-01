@@ -95,7 +95,7 @@ ServerEvents.recipes(e => {
         ['#forge:ingots/alfsteel', '#forge:ingots/alfsteel', '#forge:ingots/alfsteel', '#forge:ingots/alfsteel', '#forge:ingots/alfsteel', '#forge:dusts/mana']
     ).id('kubejs:shapeless/quintuple_alfsteel_ingot')
 
-    e.shapeless(Item.of('minecraft:terracotta'),
+    e.shapeless('minecraft:terracotta',
         ['#enigmatica:washables/terracotta', 'minecraft:water_bucket']
     ).id('kubejs:shapeless/terracotta')
 
@@ -106,10 +106,6 @@ ServerEvents.recipes(e => {
     e.shapeless('mythicbotany:wither_aconite_floating',
         ['kubejs:disabled_recipe_indicator']
     ).id('kubejs:shapeless/wither_aconite_floating')
-
-    e.shapeless(Item.of('eidolon:pewter_blend', 2),
-        ['#forge:dusts/lead', '#forge:dusts/iron']
-    ).id('kubejs:shapeless/pewter_blend')
 
     e.shapeless(Item.of('minecraft:string', 3),
         ['#forge:crops/kenaf', '#forge:crops/kenaf', '#forge:crops/kenaf']

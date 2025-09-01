@@ -1,9 +1,12 @@
 ServerEvents.recipes(e => {
     /*
-    This file is moreso for mass removals of items via regex or recipe filters, 
-    if an item has one recipe then the recipe should be removed before it is created
-    if an item has no recipe, and should be entirely removed, -
-    it should be added to nuker instead to be hidden and removed
+    This file is moreso for mass removals of items via regex or recipe filters.
+    if an item has one recipe then the recipe should be removed before it is created.
+
+    if an item has no recipe, and should be entirely removed,
+    it should be added to nuker instead to be hidden and removed.
+    
+    if an item has multiple recipes that are not custom, they may be removed here.
     */
     const idRemovals = [
         'quark:tweaks/crafting/utility/misc/easy_sticks',
@@ -56,6 +59,7 @@ ServerEvents.recipes(e => {
         /embers:.*hammering/,
         /embers:stamping\/.*ingot/,
         /embers:stamping\/.*plates/,
+        /embers:stamping\/.*gears/,
         /embers:melting\/.*gear/,
         /embers:melting\/plates/,
         /embers:melting\/ingots/,
@@ -64,9 +68,12 @@ ServerEvents.recipes(e => {
         /embers:melting\/raw_materials/,
         /embers:melting\/ores/,
 
+        // move to nuke
         'eidolon:crucible',
         'eidolon:wooden_brewing_stand',
         'eidolon:worktable',
+        
+        'eidolon:smelt_pewter_blend',
 
         'farmersdelight:book_from_canvas',
 
