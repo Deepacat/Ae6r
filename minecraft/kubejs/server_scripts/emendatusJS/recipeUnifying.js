@@ -84,7 +84,7 @@ ServerEvents.recipes(e => {
         materialCrushing(e, materialName, typesObj) // crushing ingots/gems to dust
         fluidToItemRecipes(e, materialName, typesObj) // casting fluids to gems/ingots/blocks
         // ore processing
-        // createOreProcessing()
+        createOreProcessing(e, materialName, typesObj)
         // mekanismOreProcessing()
         // bloodmagicOreProcessing()
         // embersOreProcessing()
@@ -368,7 +368,7 @@ function scrapMelting(e, materialName, typesObj) {
     }
 }
 
-let crushable = ['gemOrIngot', 'plate']
+const crushable = ['gemOrIngot', 'plate']
 function materialCrushing(e, materialName, typesObj) {
     if (!typesObj.gemOrIngot) { return }
     if (!typesObj.dust) { return }
@@ -458,6 +458,48 @@ function fluidToItemRecipes(e, materialName, typesObj) {
             })
             e.recipes.tconstruct.casting_basin(blockItemId, { tag: fluid.tag, amount: fluidAmt }, 120)
                 .id(`emendatus:tconstruct/casting_basin/${fluid.stack.id.split(':')[1]}_to_${blockItemId.split(':')[1]}`)
+        }
+    }
+}
+
+function createOreProcessing(e, materialName, typesObj) {
+    // metal ore proc
+    if (typesObj.gemOrIngot && typesObj.ore && typesObj.crushed_ore) {
+        if (!oreProcessingSecondaries[materialName]) { return }
+
+        let materialProperties = oreProcessingSecondaries[materialName]
+        let crushedOreItem = typesObj.crushed_ore.item.id + ''
+        let oreItem = typesObj.ore.item.id + ''
+        let secondaryOutput = getTaggedItem(`forge:crushed_ores/${materialProperties.secondary}`).item.id + ''
+
+        let recipeTypes = [
+            { type: 'milling', primaryChance: 0.25, secondaryChance: 0.05 },
+            { type: 'crushing', primaryChance: 0.6, secondaryChance: 0.1 }
+        ]
+
+        for (let typeObj of recipeTypes) {
+            let outputs = [
+                Item.of(crushedOreItem), // guaranteed primary output
+                Item.of(crushedOreItem, 2).withChance(typeObj.primaryChance), // primary chanced extra output
+                Item.of(secondaryOutput, 2).withChance(typeObj.secondaryChance) // secondary chanced output
+            ]
+
+            if (typesObj.raw_ore) {
+                let rawOreItem = typesObj.raw_ore.item.id + ''
+                e.remove({ type: `create:${typeObj.type}`, input: rawOreItem, output: crushedOreItem })
+                e.remove({ type: `create:${typeObj.type}`, input: typesObj.raw_ore.tag, output: crushedOreItem })
+
+                e.recipes.create[typeObj.type](outputs, Ingredient.of('#' + typesObj.raw_ore.tag))
+                    .processingTime(materialProperties.createProcessingTime)
+                    .id(`emendatus:oreproc/create/${typeObj.type}/${rawOreItem.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
+            }
+
+            e.remove({ type: `create:${typeObj.type}`, input: oreItem, output: crushedOreItem })
+            e.remove({ type: `create:${typeObj.type}`, input: typesObj.ore.tag, output: crushedOreItem })
+
+            e.recipes.create[typeObj.type](outputs, Ingredient.of('#' + typesObj.ore.tag))
+                .processingTime(materialProperties.createProcessingTime)
+                .id(`emendatus:oreproc/create/${typeObj.type}/${typesObj.ore.tag.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
         }
     }
 }

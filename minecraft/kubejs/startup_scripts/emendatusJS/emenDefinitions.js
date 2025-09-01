@@ -13,7 +13,7 @@ global.vanilla_mats = {
         addFlags: ['ore'], delFlags: [],
     },
     copper: {
-        type: 'metal', toolLvl: 'stone', ignoreRegisterFlags: ['ingot', 'raw_ore', 'ore', 'raw_block', 'storage_block', 'crushed_ore'],
+        type: 'metal', toolLvl: 'stone', ignoreRegisterFlags: ['ingot', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
         addFlags: [], delFlags: [],
     },
     diamond: {
@@ -25,11 +25,11 @@ global.vanilla_mats = {
         addFlags: [], delFlags: [],
     },
     gold: {
-        type: 'metal', toolLvl: 'iron', ignoreRegisterFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block', 'crushed_ore'],
+        type: 'metal', toolLvl: 'iron', ignoreRegisterFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
         addFlags: [], delFlags: [],
     },
     iron: {
-        type: 'metal', toolLvl: 'stone', ignoreRegisterFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block', 'crushed_ore'],
+        type: 'metal', toolLvl: 'stone', ignoreRegisterFlags: ['ingot', 'nugget', 'raw_ore', 'ore', 'raw_block', 'storage_block'],
         addFlags: [], delFlags: [],
     },
     lapis: {
@@ -38,7 +38,7 @@ global.vanilla_mats = {
     },
     netherite: {
         type: 'metal', toolLvl: 'diamond', ignoreRegisterFlags: ['ingot', 'storage_block'],
-        addFlags: [], delFlags: ['raw_ore', 'shard', 'crushed_ore', 'ore', 'clump', 'crystal', 'dirty_dust', 'raw_block'],
+        addFlags: [], delFlags: ['raw_ore', 'shard', 'ore', 'clump', 'crystal', 'dirty_dust', 'raw_block'],
     },
     quartz: {
         type: 'gem', toolLvl: 'stone', ignoreRegisterFlags: ['gem', 'storage_block', 'ore'],
@@ -126,14 +126,14 @@ global.gem_mats = {
 global.metal_mats = {
     // - - metal - -
     aluminum: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],
     },
     arcane_gold: {
         type: 'other', toolLvl: 'iron', addFlags: [], delFlags: [],
     },
     // iridium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     lead: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard', 'crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'],
     },
     nickel: {
         type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],
@@ -156,7 +156,7 @@ global.metal_mats = {
         type: 'metal', toolLvl: 'iron', addFlags: [], delFlags: [],
     },
     cobalt: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],
     },
     // falsite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     // horizonite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
@@ -222,7 +222,7 @@ global.emendatus_base_flags = {
         block: ['storage_block', 'ore']
     },
     metal: {
-        item: ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment', 'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard', 'crushed_ore'],
+        item: ['clump', 'crystal', 'dirty_dust', 'dust', 'fragment', 'gear', 'gravel', 'ingot', 'nugget', 'plate', 'rod', 'raw_ore', 'shard'],
         block: ['storage_block', 'ore', 'raw_block']
     },
     other: {

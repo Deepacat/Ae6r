@@ -148,6 +148,17 @@ ServerEvents.tags('item', e => {
     e.add('forge:stone', 'natures_spirit:travertine')
     e.add('forge:cobblestone', 'natures_spirit:cobbled_travertine')
     e.add('forge:sand', 'natures_spirit:pink_sand')
+
+    // create raw material forge tags
+    let createOreMaterials = [
+        'copper', 'iron', 'gold', 'zinc',
+        'silver', 'lead', 'uranium', 'osmium',
+        'tin', 'aluminum', 'nickel'
+    ]
+    for (let material of createOreMaterials) {
+        e.add(`create:crushed_raw_materials/${material}`, `create:crushed_raw_${material}`)
+        e.add(`forge:crushed_ores/${material}`, `create:crushed_raw_${material}`)
+    }
 })
 
 ServerEvents.tags('block', e => {
