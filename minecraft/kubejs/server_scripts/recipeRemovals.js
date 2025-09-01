@@ -40,6 +40,8 @@ ServerEvents.recipes(e => {
         /create:blasting\/ingot_\w+_compat/,
         /create:blasting\/\w+_ingot_compat/,
         /create:compat\/thermal\/crushing\/\w+_ore/,
+        /create:crushing\/.*_ore/,
+        /create:crushing\/raw_\/\w+_block/,
 
         /createaddition:compat/,
         /createaddition:pressing/,

@@ -646,42 +646,7 @@ const gemProcessingProperties = {
         }
     },
     ender: {
-        output: 'shard',
-        stoneOutput: 'betterendforge:endstone_dust',
-        create: {
-            primaryCount: 2,
-            secondaryCount: 2,
-            secondaryChance: 0.25,
-            processingTime: 300
-        },
-        thermal: {
-            primaryCount: 2,
-            secondaryCount: 2,
-            secondaryChance: 0.25
-        },
-        ars_nouveau: {
-            primaryCount: 2,
-            secondaryCount: 2,
-            secondaryChance: 0.25
-        },
-        immersiveengineering: {
-            count: 3
-        },
-        occultism: {
-            count: 3
-        },
-        bloodmagic: {
-            count: 3
-        },
-        pedestals: {
-            count: 3
-        },
-        mekanism: {
-            count: 3
-        }
-    },
-    amber: {
-        output: 'shard',
+        output: 'dust',
         stoneOutput: 'betterendforge:endstone_dust',
         create: {
             primaryCount: 2,

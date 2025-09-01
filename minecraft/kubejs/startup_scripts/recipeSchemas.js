@@ -304,7 +304,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('time').optional(200).alwaysWrite()
             )
         )
-
         e.register('immersiveengineering:arc_furnace',
             new $RecipeSchema(
                 outputItem.asArray().key('results'),
@@ -315,7 +314,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
-
         e.register('immersiveengineering:blast_furnace',
             new $RecipeSchema(
                 outputItem.key('result'),
@@ -324,14 +322,12 @@ StartupEvents.recipeSchemaRegistry(e => {
                 inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
-
         e.register('immersiveengineering:blast_furnace_fuel',
             new $RecipeSchema(
                 inputItem.key('input'),
                 intNumber.key('time')
             )
         )
-
         e.register('immersiveengineering:blueprint',
             new $RecipeSchema(
                 outputItem.key('result'),
@@ -339,7 +335,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 nonBlankString.key('category').defaultOptional()
             )
         )
-
         e.register('immersiveengineering:bottling_machine',
             new $RecipeSchema(
                 outputItem.asArray().key('results'),
@@ -347,7 +342,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 fluidOrTagInput('tag').key('fluid')
             )
         )
-
         e.register('immersiveengineering:cloche',
             new $RecipeSchema(
                 outputItem.asArray().key('results'),
@@ -356,7 +350,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('time').optional(800).alwaysWrite()
             )
         )
-
         e.register('immersiveengineering:coke_oven',
             new $RecipeSchema(
                 outputItem.key('result'),
@@ -365,7 +358,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('creosote').defaultOptional()
             )
         )
-
         e.register('immersiveengineering:crusher',
             new $RecipeSchema(
                 outputItem.key('result'),
@@ -374,7 +366,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('energy').optional(1600).alwaysWrite()
             )
         )
-
         e.register('immersiveengineering:fermenter',
             new $RecipeSchema(
                 outputItem.key('result'),
@@ -383,21 +374,18 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('energy').optional(6400).alwaysWrite()
             )
         )
-
         e.register('immersiveengineering:fertilizer',
             new $RecipeSchema(
                 ieInputItem.key('input'),
                 intNumber.key('growthModifier')
             )
         )
-
         e.register('immersiveengineering:generator_fuel',
             new $RecipeSchema(
                 intNumber.key('burnTime'),
                 nonBlankString.key('fluidTag') // unsure how to do the fluidTag better rn
             )
         )
-
         e.register('immersiveengineering:metal_press',
             new $RecipeSchema(
                 outputItem.key('result'),
@@ -406,7 +394,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 nonBlankString.key('mold').defaultOptional().exclude() // use .mold(nonBlankString) after recipe
             )
         )
-
         /*         let a = {
                     "type": "immersiveengineering:mineral_mix",
                     "dimensions": [
@@ -468,7 +455,6 @@ StartupEvents.recipeSchemaRegistry(e => {
 
             )
         )
-
         e.register('immersiveengineering:mixer',
             new $RecipeSchema(
                 outputFluid.key('result'),
@@ -477,7 +463,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('energy').optional(3200).alwaysWrite()
             )
         )
-
         e.register('immersiveengineering:refinery',
             new $RecipeSchema(
                 outputFluid.key('result'),
@@ -487,7 +472,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 intNumber.key('energy').optional(80).alwaysWrite()
             )
         )
-
         let a = {
             "type": "immersiveengineering:sawmill",
             "energy": 800,
@@ -506,7 +490,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 }
             ]
         }
-
         e.register('immersiveengineering:sawmill',
             new $RecipeSchema(
                 // outputItem.key('result'),
@@ -516,7 +499,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 // ieInputItem.key('stripped').defaultOptional()
             )
         )
-
         e.register('immersiveengineering:squeezer',
             new $RecipeSchema(
                 ieInputItem.key('input'),
@@ -525,7 +507,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 outputItem.key('result').defaultOptional().exclude() // use .result(outputItem) after recipe
             )
         )
-
         e.register('immersiveengineering:thermoelectric_source',
             new $RecipeSchema(
                 intNumber.key('tempKelvin'),
@@ -533,7 +514,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 nonBlankString.key('singleBlock').defaultOptional().exclude()
             )
         )
-
         e.register('immersiveengineering:windmill_biome',
             new $RecipeSchema(
                 intNumber.key('modifier'),
@@ -561,7 +541,6 @@ StartupEvents.recipeSchemaRegistry(e => {
                 inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
             )
         )
-        
         e.register('tconstruct:casting_basin',
             new $RecipeSchema(
                 outputItem.key('result'),

@@ -118,6 +118,10 @@ ServerEvents.tags('item', e => {
         'kubejs:hot_compressed_iron_block'
     ])
 
+    // adding gem tag to coal for unification
+    e.add('forge:gems', 'minecraft:coal')
+    e.add('forge:gems/coal', 'minecraft:coal')
+
     // adding source to mana tag so they unify
     e.add('forge:gems/mana', '#forge:gems/source')
     e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
