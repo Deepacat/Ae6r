@@ -33,6 +33,17 @@ StartupEvents.registry('item', event => {
         'pink_rune',
         /* end placeholder items */
 
+        // aspectus shards
+        'aer_aspectus_shard',
+        'aqua_aspectus_shard',
+        'ignis_aspectus_shard',
+        'terra_aspectus_shard',
+        'ordo_aspectus_shard',
+        'perditio_aspectus_shard',
+        'mortuus_aspectus_shard',
+        'cognitio_aspectus_shard',
+        'praecantatio_aspectus_shard',
+
         // lootboxes
         'common_lootbox',
         'rare_lootbox',

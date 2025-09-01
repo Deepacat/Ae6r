@@ -218,7 +218,7 @@ global.emendatus_base_flags = {
         block: ['storage_block']
     },
     gem: {
-        item: ['clump', 'cluster_shard', 'crystal', 'gem', 'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
+        item: ['clump', /* 'cluster_shard', 'crystal', */ 'gem', 'gravel', 'plate', 'fragment', 'shard', 'gear', 'rod', 'dirty_dust', 'dust'],
         block: ['storage_block', 'ore']
     },
     metal: {
