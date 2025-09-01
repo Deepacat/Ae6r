@@ -463,11 +463,13 @@ function fluidToItemRecipes(e, materialName, typesObj) {
 }
 
 function createOreProcessing(e, materialName, typesObj) {
+    // metal ore milling/crushing
     if (oreProcessingSecondaries[materialName] && typesObj.crushed_ore && typesObj.ore) {
-        let materialProperties = oreProcessingSecondaries[materialName]
+        // material properties obj
+        let mat = oreProcessingSecondaries[materialName]
         let crushedOreItem = typesObj.crushed_ore.item.id + ''
         let oreItem = typesObj.ore.item.id + ''
-        let secondaryOutput = getTaggedItem(`forge:crushed_ores/${materialProperties.secondary}`).item.id + ''
+        let secondaryOutput = getTaggedItem(`forge:crushed_ores/${mat.secondary}`).item.id + ''
 
         let recipeTypes = [
             { type: 'milling', primaryChance: 0.25, secondaryChance: 0.05 },
@@ -487,7 +489,7 @@ function createOreProcessing(e, materialName, typesObj) {
                 e.remove({ type: `create:${typeObj.type}`, input: typesObj.raw_ore.tag, output: crushedOreItem })
 
                 e.recipes.create[typeObj.type](outputs, Ingredient.of('#' + typesObj.raw_ore.tag))
-                    .processingTime(materialProperties.createProcessingTime)
+                    .processingTime(mat.createProcessingTime)
                     .id(`emendatus:oreproc/create/${typeObj.type}/${rawOreItem.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
             }
 
@@ -495,11 +497,12 @@ function createOreProcessing(e, materialName, typesObj) {
             e.remove({ type: `create:${typeObj.type}`, input: typesObj.ore.tag, output: crushedOreItem })
 
             e.recipes.create[typeObj.type](outputs, Ingredient.of('#' + typesObj.ore.tag))
-                .processingTime(materialProperties.createProcessingTime)
+                .processingTime(mat.createProcessingTime)
                 .id(`emendatus:oreproc/create/${typeObj.type}/${typesObj.ore.tag.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
         }
     }
 
+    // gem ore crushing 
     if (gemProcessingProperties[materialName] && typesObj.ore && (typesObj.dust || typesObj.gem)) {
         // material properties obj
         let mat = gemProcessingProperties[materialName]
