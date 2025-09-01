@@ -2771,30 +2771,6 @@
 			y: -14.0d
 		}
 		{
-			dependencies: ["000000000000046F"]
-			description: [
-				"Playing on a server? Consider making some Clockout Blocks to disable machines while logged out. "
-				""
-				"The Clockout Block emits a redstone signal when the player who placed it is online. So simply toss one down and set up your automations to run only with redstone. "
-			]
-			id: "03CE9A1AE5E2538D"
-			rewards: [{
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
-				icon: "kubejs:scavengers_delight"
-				id: "1A05BF41EEF353BA"
-				title: "Scavenger's Delight"
-				type: "command"
-			}]
-			subtitle: "The lights are on, but nobody's home"
-			tasks: [{
-				id: "21050326FB2FBF70"
-				item: "clockout:clockout_block"
-				type: "item"
-			}]
-			x: -10.0d
-			y: -14.0d
-		}
-		{
 			dependencies: ["00000000000003FF"]
 			description: [
 				"Smaller, but equally strong? Impossible!"

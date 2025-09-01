@@ -130,11 +130,6 @@
 			id: "7039C8B5F77E2353"
 			tasks: [
 				{
-					id: "45F58F38A576A78E"
-					title: "a"
-					type: "checkmark"
-				}
-				{
 					id: "2BEA3E8B1CE97671"
 					item: "embers:mixer_centrifuge"
 					type: "item"
@@ -374,22 +369,21 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["00AA0E1E061988B5"]
+			dependency_requirement: "one_completed"
 			hide_dependency_lines: true
 			icon: "tconstruct:molten_copper_bucket"
 			id: "2A9F678F8A130296"
-			tasks: [
-				{
-					id: "0CEBB91E4BD5494D"
-					item: "embers:melter"
-					type: "item"
+			tasks: [{
+				id: "7FF23860E9E01AB5"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(item(embers:melter)item(thermal:machine_crucible))"
+					}
 				}
-				{
-					id: "194E87081E51E9FB"
-					item: "thermal:machine_crucible"
-					type: "item"
-				}
-			]
+				type: "item"
+			}]
 			x: -1.0d
 			y: 1.5d
 		}
@@ -902,11 +896,6 @@
 					item: "minecraft:vine"
 					type: "item"
 				}
-				{
-					id: "3FD8A9E4759AE9F4"
-					item: "thermal:device_tree_extractor"
-					type: "item"
-				}
 			]
 			title: "latex"
 			x: -4.5d
@@ -924,7 +913,7 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0E9DE9C7AD78C8A6"]
+			dependencies: ["43974FB2F5BB59AE"]
 			icon: "create:stock_ticker"
 			id: "48AD6CD8CFF92F93"
 			optional: true
@@ -934,8 +923,8 @@
 				item: "create:stock_ticker"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -0.5d
+			x: -3.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
