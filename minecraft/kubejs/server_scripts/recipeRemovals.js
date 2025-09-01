@@ -72,7 +72,7 @@ ServerEvents.recipes(e => {
         'eidolon:crucible',
         'eidolon:wooden_brewing_stand',
         'eidolon:worktable',
-        
+
         'eidolon:smelt_pewter_blend',
 
         'farmersdelight:book_from_canvas',

@@ -68,7 +68,7 @@ const materialsToUnify = [
     'coal',
     'charcoal',
     'obsidian',
-    'ender',
+    'ender_pearl',
     'fluix',
     'fluorite',
     'invar',

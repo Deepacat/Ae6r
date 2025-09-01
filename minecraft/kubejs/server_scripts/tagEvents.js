@@ -118,6 +118,11 @@ ServerEvents.tags('item', e => {
         'kubejs:hot_compressed_iron_block'
     ])
 
+    // ender pearl tag mixing for unif
+    e.add('forge:dusts/ender_pearl', '#forge:dusts/ender')
+    e.add('forge:dusts/ender_pearl', 'miniutilities:ender_dust')
+    e.add('forge:dusts/ender', '#forge:dusts/ender_pearl')
+
     // adding gem tag to coal for unification
     e.add('forge:gems', 'minecraft:coal')
     e.add('forge:gems/coal', 'minecraft:coal')
