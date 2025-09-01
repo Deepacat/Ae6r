@@ -131,29 +131,29 @@ global.metal_mats = {
     arcane_gold: {
         type: 'other', toolLvl: 'iron', addFlags: [], delFlags: [],
     },
-    // iridium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'],  },
+    // iridium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     lead: {
         type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard', 'crushed_ore'],
     },
     nickel: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],
     },
     // platinum: {
     //     type: 'metal', toolLvl: 'iron', addFlags: [], delFlags: [],  
     // },
     silver: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],
     },
     tin: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard', 'crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'],
     },
     // titanium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     // tungsten: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     uranium: {
-        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard', 'crushed_ore'],
+        type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['shard'],
     },
     zinc: {
-        type: 'metal', toolLvl: 'iron', addFlags: [], delFlags: ['crushed_ore'],
+        type: 'metal', toolLvl: 'iron', addFlags: [], delFlags: [],
     },
     cobalt: {
         type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: ['crushed_ore'],
@@ -161,7 +161,7 @@ global.metal_mats = {
     // falsite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     // horizonite: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     osmium: {
-        type: 'metal', toolLvl: 'iron', addFlags: [], delFlags: ['shard', 'crushed_ore'],
+        type: 'metal', toolLvl: 'iron', addFlags: [], delFlags: ['shard'],
     },
     // ventium: { type: 'metal', toolLvl: 'stone', addFlags: [], delFlags: [],  },
     // iesnium: {
