@@ -6,10 +6,12 @@ ServerEvents.tags('item', e => {
         ['iron', 'tin'],
         ['iron', 'copper'],
         ['copper', 'tin'],
-        ['gold', 'copper']
+        ['gold', 'copper'],
+        ['source', 'diamond']
     ]
     for (let mats of substitutions) {
         e.add(`forge:ingots/${mats[0]}_${mats[1]}`, [`#forge:ingots/${mats[0]}`, `#forge:ingots/${mats[1]}`])
+        e.add(`forge:gems/${mats[0]}_${mats[1]}`, [`#forge:gems/${mats[0]}`, `#forge:gems/${mats[1]}`])
         e.add(`forge:nuggets/${mats[0]}_${mats[1]}`, [`#forge:nuggets/${mats[0]}`, `#forge:nuggets/${mats[1]}`])
         e.add(`forge:storage_blocks/${mats[0]}_${mats[1]}`, [`#forge:storage_blocks/${mats[0]}`, `#forge:storage_blocks/${mats[1]}`])
         e.add(`forge:plates/${mats[0]}_${mats[1]}`, [`#forge:plates/${mats[0]}`, `#forge:plates/${mats[1]}`])
@@ -17,23 +19,23 @@ ServerEvents.tags('item', e => {
         e.add(`forge:rods/${mats[0]}_${mats[1]}`, [`#forge:rods/${mats[0]}`, `#forge:rods/${mats[1]}`])
     }
 
+    // thermal blaze rod tags
     e.add('forge:rods/basalz', 'thermal:basalz_rod')
     e.add('forge:rods/blitz', 'thermal:blitz_rod')
     e.add('forge:rods/blaze', 'minecraft:blaze_rod')
     e.add('forge:rods/blizz', 'thermal:blizz_rod')
 
-    e.add('forge:gems/source_diamond', ['ars_nouveau:source_gem', 'minecraft:diamond'])
+    // flame lily are basically natural blaze rods, should be in rod tag
+    e.remove('forge:rods', 'miniutilities:flame_lily')
+    e.remove('forge:rods/blaze', 'miniutilities:flame_lily')
 
-    e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
-
-    e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
-
+    // botania rune types
     const botaniaRunes = [
         'water', 'fire', 'earth', 'air', 'spring', 'summer', 'autumn', 'winter', 'mana',
         'lust', 'gluttony', 'greed', 'sloth', 'wrath', 'envy', 'pride',
         'asgard', 'vanaheim', 'alfheim', 'midgard', 'joetunheim', 'muspelheim', 'niflheim', 'nidavellir', 'helheim'
     ]
-
+    // botania rune tags
     for (let rune of botaniaRunes) {
         e.add(`botania:runes/${rune}`, `botania:rune_${rune}`)
         e.add(`botania:runes/${rune}`, `mythicbotany:${rune}_rune`)
@@ -51,22 +53,25 @@ ServerEvents.tags('item', e => {
         'powah:ender_core'
     ])
 
+    // ingot tags
+    e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
+    e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
     e.add('forge:ingots/gaia', 'botania:gaia_ingot')
     e.add('forge:ingots/gaia_spirit', 'botania:gaia_ingot')
     e.add('forge:ingots/alfsteel', 'mythicbotany:alfsteel_ingot')
-
     e.add('forge:ingots/sky', ['naturesaura:sky_ingot'])
     e.add('forge:ingots/tainted_gold', ['naturesaura:tainted_gold'])
     e.add('forge:ingots/infused_iron', ['naturesaura:infused_iron'])
     e.add('forge:ingots/sunmetal', ['architects_palette:sunmetal_brick'])
-
-    e.add('forge:inlays/arcane_gold', 'eidolon:gold_inlay')
-    e.add('forge:inlays/pewter', 'eidolon:pewter_inlay')
-
     e.add('forge:ingots/uraninite', 'powah:uraninite');
     e.add('forge:ingots/energized_steel', 'powah:steel_energized');
     e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium']);
 
+    // eidolon inlays tags
+    e.add('forge:inlays/arcane_gold', 'eidolon:gold_inlay')
+    e.add('forge:inlays/pewter', 'eidolon:pewter_inlay')
+
+    // quark color runes tag
     e.add('quark:runes', ['kubejs:white_rune', 'kubejs:light_gray_rune', 'kubejs:gray_rune',
         'kubejs:black_rune', 'kubejs:brown_rune', 'kubejs:red_rune', 'kubejs:orange_rune',
         'kubejs:yellow_rune', 'kubejs:lime_rune', 'kubejs:green_rune', 'kubejs:cyan_rune',
@@ -81,34 +86,43 @@ ServerEvents.tags('item', e => {
         "minecraft:shroomlight"
     ])
 
+    // powah block tags
     e.add('forge:storage_blocks/energized_steel', 'powah:energized_steel_block')
     e.add('forge:storage_blocks/blazing', 'powah:blazing_crystal_block')
     e.add('forge:storage_blocks/niotic', 'powah:niotic_crystal_block')
     e.add('forge:storage_blocks/spirited', 'powah:spirited_crystal_block')
     e.add('forge:storage_blocks/nitro', 'powah:nitro_crystal_block')
 
+    // powah gem tags
     e.add('forge:gems/blazing', 'powah:blazing_crystal')
     e.add('forge:gems/niotic', 'powah:niotic_crystal')
     e.add('forge:gems/spirited', 'powah:spirited_crystal')
     e.add('forge:gems/nitro', 'powah:nitro_crystal')
 
+    // powah energizing rod
     e.add('powah:energizing_rod', ['powah:energizing_rod_starter', 'powah:energizing_rod_basic', 'powah:energizing_rod_hardened',
         'powah:energizing_rod_blazing', 'powah:energizing_rod_niotic', 'powah:energizing_rod_spirited', 'powah:energizing_rod_nitro'])
 
+    // paper tag
     e.add('forge:paper', 'minecraft:paper')
 
+    // farmers delight in dough tag
     e.add('forge:dough', 'farmersdelight:wheat_dough')
     e.add('forge:doughs', 'farmersdelight:wheat_dough')
 
+    // hot items that burn you when in inventory
     e.add('kubejs:burning_hot', [
         'kubejs:hot_compressed_iron_ingot',
         'kubejs:superheated_steel_ingot',
         'kubejs:superheated_steel_block',
         'kubejs:hot_compressed_iron_block'
     ])
+
+    // adding source to mana tag so they unify
     e.add('forge:gems/mana', '#forge:gems/source')
     e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
 
+    // IE ammo tag
     e.add('forge:ammo', [
         'immersiveengineering:casull', 'immersiveengineering:armor_piercing', 'immersiveengineering:buckshot',
         'immersiveengineering:he', 'immersiveengineering:silver', 'immersiveengineering:dragons_breath',
@@ -130,11 +144,10 @@ ServerEvents.tags('item', e => {
         'minecraft:andesite_slab', 'minecraft:smooth_stone_slab', 'minecraft:stone_slab'
     ])
 
-    e.remove('forge:rods', 'miniutilities:flame_lily')
-
-    e.add('forge:stone', 'natures_spirit:travertine ')
-    e.add('forge:cobblestone', 'natures_spirit:cobbled_travertine ')
-    e.add('forge:sand', 'natures_spirit:pink_sand ')
+    // natures spirit blocks
+    e.add('forge:stone', 'natures_spirit:travertine')
+    e.add('forge:cobblestone', 'natures_spirit:cobbled_travertine')
+    e.add('forge:sand', 'natures_spirit:pink_sand')
 })
 
 ServerEvents.tags('block', e => {
