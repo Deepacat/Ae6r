@@ -552,7 +552,7 @@
 				"24AB682AD04896AD"
 				"2F9123AC966382F6"
 			]
-			icon: "naturesaura:gold_fiber"
+			icon: "naturesaura:gold_leaf"
 			id: "449EE23DBF791445"
 			tasks: [
 				{
@@ -596,17 +596,22 @@
 		}
 		{
 			dependencies: ["798F51A163767275"]
-			icon: "aether:enchanted_gravitite"
+			icon: "kubejs:aspectus_shard_block"
 			id: "2FE2EAE5D06AEA6E"
 			tasks: [
 				{
-					id: "62D6BB1482F9CEBF"
-					item: "aether:enchanted_gravitite"
+					id: "39839C9E6FBD5CF8"
+					item: "aether:altar"
 					type: "item"
 				}
 				{
-					id: "39839C9E6FBD5CF8"
-					item: "aether:altar"
+					id: "593907DB12B328FE"
+					item: "kubejs:aspectus_shard_block"
+					type: "item"
+				}
+				{
+					id: "3E79526752E50858"
+					item: "aether:enchanted_gravitite"
 					type: "item"
 				}
 			]

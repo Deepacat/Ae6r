@@ -367,6 +367,28 @@
 			x: 1.5d
 			y: 0.0d
 		}
+		{
+			id: "1B011132F727F1A8"
+			tasks: [
+				{
+					id: "0EF8B721C5DEC14D"
+					item: "embers:item_pipe"
+					type: "item"
+				}
+				{
+					id: "1CE2C2991F038AC8"
+					item: "embers:item_extractor"
+					type: "item"
+				}
+				{
+					id: "1E15B0ED3944CE46"
+					item: "embers:item_transfer"
+					type: "item"
+				}
+			]
+			x: -5.5d
+			y: -0.5d
+		}
 	]
 	title: "Embers"
 }
