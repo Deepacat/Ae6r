@@ -9,7 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["0000000000000FEB"]
 			description: ["Obtaining the Creative Worldshaper is the ultimate goal - Complete this quest and you complete the modpack!"]
 			hide_until_deps_visible: true
 			id: "6D3FE88DB30DEE00"
@@ -645,7 +644,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: ["0000000000000FEB"]
 			description: [
 				"Countless hours of research, experimentation, and hard work have led you to one final discovery in the notes left behind by those who came before; an immense interdimensional organism whose roots spread throughout the world: The Tree of Life."
 				""

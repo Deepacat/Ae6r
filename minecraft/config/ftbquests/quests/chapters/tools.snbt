@@ -1065,7 +1065,6 @@
 			y: -11.5d
 		}
 		{
-			dependencies: ["000000000000046C"]
 			description: [
 				"A powered tool capable of mining blocks from a distance. "
 				""
@@ -1420,7 +1419,6 @@
 			y: -12.0d
 		}
 		{
-			dependencies: ["00000000000004B3"]
 			description: ["Forged in ages past in the deepest depths. Neptunium armor grants it's wearer a taste of the unimaginable power of the Abyssal Depths."]
 			icon: {
 				Count: 1
@@ -1497,7 +1495,6 @@
 			y: -14.0d
 		}
 		{
-			dependencies: ["00000000000004B3"]
 			description: ["Neptunium Tools offer many benefits to those who spend most of their time under water. "]
 			id: "0000000000000480"
 			rewards: [{
@@ -1945,7 +1942,6 @@
 			y: -15.0d
 		}
 		{
-			dependencies: ["000000000000046E"]
 			description: [
 				"It cuts, it grinds, it chisels, polishes and and even cooks and cleans!"
 				""
@@ -2689,7 +2685,6 @@
 			y: -12.0d
 		}
 		{
-			dependencies: ["000000000000046D"]
 			description: [
 				"Save every day like a treasure and spend them on whatever you like."
 				""

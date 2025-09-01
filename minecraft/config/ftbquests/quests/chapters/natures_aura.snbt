@@ -892,7 +892,6 @@
 			y: -8.5d
 		}
 		{
-			dependencies: ["0000000000000329"]
 			description: [
 				"Ender Chests with a twist. Ender Crates can be assigned to a channel in an Anvil by simultaneously renaming them and combining them with an Eye of Ender."
 				""
@@ -970,10 +969,7 @@
 			y: -8.0d
 		}
 		{
-			dependencies: [
-				"00000000000002CB"
-				"0000000000000329"
-			]
+			dependencies: ["00000000000002CB"]
 			description: [
 				"A simple chunk loader powered by Aura. "
 				""

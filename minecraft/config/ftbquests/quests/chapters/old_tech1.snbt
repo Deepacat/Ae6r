@@ -672,7 +672,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000000000FEB"]
 			hide_until_deps_visible: true
 			icon: "create:large_cogwheel"
 			id: "1D574D041D9164AD"

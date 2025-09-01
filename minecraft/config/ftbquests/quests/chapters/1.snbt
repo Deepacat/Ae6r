@@ -215,11 +215,6 @@
 			id: "7B6DCBDD9A71FCE6"
 			tasks: [
 				{
-					id: "4FEB8F2217ED6302"
-					item: "ars_nouveau:imbuement_chamber"
-					type: "item"
-				}
-				{
 					id: "7C20238901930111"
 					item: "ars_nouveau:enchanting_apparatus"
 					type: "item"
@@ -412,11 +407,18 @@
 		{
 			dependencies: ["112AC64D8100972C"]
 			id: "29D38AAD3258BC8A"
-			tasks: [{
-				id: "66239B4CB26163EE"
-				item: "eidolon:gold_inlay"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0627EC16746750E6"
+					item: "wizards_reborn:arcane_gold_ingot"
+					type: "item"
+				}
+				{
+					id: "0A712444FB06964F"
+					item: "eidolon:gold_inlay"
+					type: "item"
+				}
+			]
 			x: 3.0d
 			y: 2.5d
 		}
