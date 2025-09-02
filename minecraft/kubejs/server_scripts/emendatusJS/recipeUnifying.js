@@ -507,20 +507,20 @@ function createOreProcessing(e, materialName, typesObj) {
         // material properties obj
         let mat = gemProcessingProperties[materialName]
         let outputItem = getTaggedItem(`forge:${mat.output}s/${materialName}`)
-        
-        if (!outputItem) { return }
 
-        outputItem = outputItem.item.id + ''
-        let inputItem = typesObj.ore
+        if (outputItem) {
+            outputItem = outputItem.item.id + ''
+            let inputItem = typesObj.ore
 
-        let outputs = [
-            Item.of(outputItem, mat.create.primaryCount), // guaranteed primary output
-            Item.of(outputItem, mat.create.secondaryCount) // secondary chanced output
-                .withChance(mat.create.secondaryChance)
-        ]
-        e.remove({ type: 'create:crushing', input: inputItem.tag, output: outputItem })
-        e.recipes.create.crushing(outputs, Ingredient.of('#' + inputItem.tag))
-            .processingTime(mat.create.processingTime)
-            .id(`emendatus:oreproc/create/crushing/${inputItem.tag.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+            let outputs = [
+                Item.of(outputItem, mat.create.primaryCount), // guaranteed primary output
+                Item.of(outputItem, mat.create.secondaryCount) // secondary chanced output
+                    .withChance(mat.create.secondaryChance)
+            ]
+            e.remove({ type: 'create:crushing', input: inputItem.tag, output: outputItem })
+            e.recipes.create.crushing(outputs, Ingredient.of('#' + inputItem.tag))
+                .processingTime(mat.create.processingTime)
+                .id(`emendatus:oreproc/create/crushing/${inputItem.tag.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+        }
     }
 }

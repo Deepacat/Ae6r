@@ -170,21 +170,8 @@ let a = {
     id: 'industrialforegoing:dissolution_chamber/pink_slime_ingot'
 }
 
-// e.custom({
-//     type: 'dissolution_chamber',
-//     inputs: [
-//         Ingredient.of('#forge:ingots/queens_slime'),
-//         Ingredient.of('#forge:ingots/slimesteel'),
-//         Ingredient.of('#forge:ingots/slimesteel'),
-//         Ingredient.of('#forge:ingots/slimesteel')
-//     ],
-//     inputFluid: { FluidName: 'industrialforegoing:pink_slime', Amount: 2000 },
-//     outputItem: { item: 'industrialforegoing:pink_slime_ingot', count: 4 },
-//     outputFluid: { FluidName: 'industrialforegoing:sludge', Amount: 500 },
-//     processingTime: 300
-// }).id('kubejs:dissolution_chamber/pink_slime_ingot')
 
-/* // industrial foregoing dissolution chamber 
+// industrial foregoing dissolution chamber 
 recipes.forEach((recipe) => {
     let ingredients = []
     recipe.inputs.forEach((input) => {
@@ -199,7 +186,7 @@ recipes.forEach((recipe) => {
         output: { item: '${recipe.outputItem.item}', count: ${recipe.outputItem.count} }, ${recipe.outputFluid ? `\n        outputFluid: \`{ FluidName: '${recipe.outputFluid}', Amount: ${recipe.outputFluidAmount} }\`,` : ""}
         processingTime: ${recipe.processingTime},
     }).id('${recipe.id.replace(/.*:/g, "kubejs:dissolution/")}')\n`)
-}) */
+})
 
 /* // shapeless
 recipes.forEach(recipe => {
