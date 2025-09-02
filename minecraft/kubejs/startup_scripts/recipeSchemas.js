@@ -550,5 +550,20 @@ StartupEvents.recipeSchemaRegistry(e => {
                 inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
             )
         )
+        e.register('tconstruct:melting',
+            new $RecipeSchema(
+                outputFluid.key('result'),
+                inputItem.key('ingredient'),
+                intNumber.key('temperature').optional(500).alwaysWrite(),
+                intNumber.key('time').optional(60).alwaysWrite()
+            )
+        )
+        e.register('tconstruct:alloy',
+            new $RecipeSchema(
+                outputFluid.key('result'),
+                inputFluid.asArray().key('inputs'),
+                intNumber.key('temperature').optional(500).alwaysWrite()
+            )
+        )
     }
 })
