@@ -203,3 +203,49 @@ function insideBlock(e, post, inputs, insideBlock, id) {
     recipe.post = post
     e.custom(recipe).id(`kubejs:lychee/inside_block/${id}`)
 }
+
+/**
+ * 1x item to 1x item crushing for all crushing recipe types
+ * @param {{remove: (arg0: {type: string;input: any;output: any;}) => void;shaped: (arg0: any, arg1: string[], arg2: {H: string;I: any;}) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};recipes: {immersiveengineering: {crusher: (arg0: any, arg1: any, arg2: any[], arg3: number) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};mekanism: {crushing: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};thermal: {pulverizer: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};bloodmagic: {arc: (arg0: any, arg1: any, arg2: string) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};create: {crushing: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};milling: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};occultism: {crushing: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};ars_nouveau: {crush: (arg0: Internal.ItemStack, arg1: OutputItem) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};};}} e
+ * @param {string} itemToCrush
+ * @param {any} outputItem
+ * @param {any} id
+ * @param {boolean} [remove]
+ */
+function allCrushing(e, outputItem, itemToCrush, id, remove) {
+    if (remove === true) {
+        e.remove({ type: 'minecraft:crafting', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'thermal:pulvizer', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'bloodmagic:arc', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'create:crushing', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'create:milling', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'occultism:crushing', input: itemToCrush, output: outputItem })
+        e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: outputItem })
+    }
+    e.shaped(outputItem, [
+        'H  ',
+        'I  '
+    ], {
+        H: 'immersiveengineering:hammer',
+        I: itemToCrush
+    }).id(`${id}/shaped/hammer_crushing/${itemToCrush.split(':')[1]}_to_dust`)
+
+    e.recipes.immersiveengineering.crusher(outputItem, itemToCrush, [], 3000)
+        .id(`${id}/crusher/immersiveengineering/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.mekanism.crushing(outputItem, itemToCrush)
+        .id(`${id}/crushing/mekanism/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.thermal.pulverizer(outputItem, itemToCrush)
+        .id(`${id}/pulverizer/thermal/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.bloodmagic.arc(outputItem, itemToCrush, '#bloodmagic:arc/explosive')
+        .id(`${id}/arc_crushing/bloodmagic/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.create.crushing(outputItem, itemToCrush)
+        .id(`${id}/crushing/create/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.create.milling(outputItem, itemToCrush)
+        .id(`${id}/milling/create/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.occultism.crushing(outputItem, itemToCrush)
+        .id(`${id}/occultism/crushing/${itemToCrush.split(':')[1]}_to_dust`)
+    e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(outputItem).withChance(1))
+        .id(`${id}/crush_glyph/ars_nouveau/${itemToCrush.split(':')[1]}_to_dust`)
+}

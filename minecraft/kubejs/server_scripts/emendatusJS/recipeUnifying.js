@@ -378,47 +378,7 @@ function materialCrushing(e, materialName, typesObj) {
     for (let type of crushable) {
         if (!typesObj[type]) { continue }
         let itemToCrush = typesObj[type].item.id + ''
-
-        e.remove({ type: 'minecraft:crafting', input: itemToCrush, output: dustItem })
-        e.shaped(dustItem, [
-            'H  ',
-            'I  '
-        ], {
-            H: 'immersiveengineering:hammer',
-            I: itemToCrush
-        }).id(`emendatus:crushing/hammer/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: dustItem })
-        e.recipes.immersiveengineering.crusher(dustItem, itemToCrush, [], 3000)
-            .id(`emendatus:crushing/immersiveengineering/crusher/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: dustItem })
-        e.recipes.mekanism.crushing(dustItem, itemToCrush)
-            .id(`emendatus:crushing/mekanism/crusher/${itemToCrush.split(':')[1]}_to_dust`)
-        //pedestals
-        e.remove({ type: 'thermal:pulvizer', input: itemToCrush, output: dustItem })
-        e.recipes.thermal.pulverizer(dustItem, itemToCrush)
-            .id(`emendatus:crushing/thermal/pulverizer/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'bloodmagic:arc', input: itemToCrush, output: dustItem })
-        e.recipes.bloodmagic.arc(dustItem, itemToCrush, '#bloodmagic:arc/explosive')
-            .id(`emendatus:crushing/bloodmagic/arc/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'create:crushing', input: itemToCrush, output: dustItem })
-        e.recipes.create.crushing(dustItem, itemToCrush)
-            .id(`emendatus:crushing/create/crushing/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'create:milling', input: itemToCrush, output: dustItem })
-        e.recipes.create.milling(dustItem, itemToCrush)
-            .id(`emendatus:crushing/create/milling/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'occultism:crushing', input: itemToCrush, output: dustItem })
-        e.recipes.occultism.crushing(dustItem, itemToCrush)
-            .id(`emendatus:crushing/occultism/crushing/${itemToCrush.split(':')[1]}_to_dust`)
-
-        e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: dustItem })
-        e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(dustItem).withChance(1))
-            .id(`emendatus:crushing/ars_nouveau/crush/${itemToCrush.split(':')[1]}_to_dust`)
+        allCrushing(e, dustItem, itemToCrush, 'emendatusjs:recipeunifying/materialcrushing/', true)
     }
 }
 
