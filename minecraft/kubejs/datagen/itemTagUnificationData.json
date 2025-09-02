@@ -60,10 +60,10 @@
 		]
 	},
 	"forge:ores/gold": {
-		"prefItem": "minecraft:deepslate_gold_ore",
+		"prefItem": "minecraft:gold_ore",
 		"toUnify": [
-			"minecraft:gold_ore",
 			"minecraft:nether_gold_ore",
+			"minecraft:deepslate_gold_ore",
 			"mythicbotany:gold_ore",
 			"natures_spirit:chert_gold_ore",
 			"undergarden:depthrock_gold_ore",
@@ -129,9 +129,9 @@
 		]
 	},
 	"forge:ores/copper": {
-		"prefItem": "minecraft:deepslate_copper_ore",
+		"prefItem": "minecraft:copper_ore",
 		"toUnify": [
-			"minecraft:copper_ore",
+			"minecraft:deepslate_copper_ore",
 			"natures_spirit:chert_copper_ore",
 			"emendatus:stone_copper_ore",
 			"emendatus:deepslate_copper_ore",
@@ -220,7 +220,7 @@
 		]
 	},
 	"forge:ores/silver": {
-		"prefItem": "emendatus:tuff_silver_ore",
+		"prefItem": "emendatus:dripstone_block_silver_ore",
 		"toUnify": [
 			"thermal:silver_ore",
 			"thermal:deepslate_silver_ore",
@@ -237,9 +237,9 @@
 			"emendatus:diorite_silver_ore",
 			"emendatus:granite_silver_ore",
 			"emendatus:andesite_silver_ore",
+			"emendatus:tuff_silver_ore",
 			"emendatus:calcite_silver_ore",
 			"emendatus:sandstone_silver_ore",
-			"emendatus:dripstone_block_silver_ore",
 			"emendatus:crimsite_silver_ore",
 			"emendatus:veridium_silver_ore",
 			"emendatus:ochrum_silver_ore",
@@ -311,10 +311,11 @@
 		]
 	},
 	"forge:ores/zinc": {
-		"prefItem": "emendatus:stone_zinc_ore",
+		"prefItem": "emendatus:limestone_zinc_ore",
 		"toUnify": [
 			"create:zinc_ore",
 			"create:deepslate_zinc_ore",
+			"emendatus:stone_zinc_ore",
 			"emendatus:deepslate_zinc_ore",
 			"emendatus:diorite_zinc_ore",
 			"emendatus:granite_zinc_ore",
@@ -328,7 +329,6 @@
 			"emendatus:ochrum_zinc_ore",
 			"emendatus:asurine_zinc_ore",
 			"emendatus:scoria_zinc_ore",
-			"emendatus:limestone_zinc_ore",
 			"emendatus:jasper_zinc_ore",
 			"emendatus:shale_zinc_ore"
 		]
@@ -412,7 +412,7 @@
 		]
 	},
 	"forge:ores/lead": {
-		"prefItem": "emendatus:scoria_lead_ore",
+		"prefItem": "emendatus:diorite_lead_ore",
 		"toUnify": [
 			"mekanism:lead_ore",
 			"mekanism:deepslate_lead_ore",
@@ -426,7 +426,6 @@
 			"eidolon:deep_lead_ore",
 			"emendatus:stone_lead_ore",
 			"emendatus:deepslate_lead_ore",
-			"emendatus:diorite_lead_ore",
 			"emendatus:granite_lead_ore",
 			"emendatus:andesite_lead_ore",
 			"emendatus:tuff_lead_ore",
@@ -437,6 +436,7 @@
 			"emendatus:veridium_lead_ore",
 			"emendatus:ochrum_lead_ore",
 			"emendatus:asurine_lead_ore",
+			"emendatus:scoria_lead_ore",
 			"emendatus:limestone_lead_ore",
 			"emendatus:jasper_lead_ore",
 			"emendatus:shale_lead_ore"
@@ -585,16 +585,16 @@
 		]
 	},
 	"forge:ores/nickel": {
-		"prefItem": "emendatus:deepslate_nickel_ore",
+		"prefItem": "emendatus:andesite_nickel_ore",
 		"toUnify": [
 			"thermal:nickel_ore",
 			"thermal:deepslate_nickel_ore",
 			"immersiveengineering:ore_nickel",
 			"immersiveengineering:deepslate_ore_nickel",
 			"emendatus:stone_nickel_ore",
+			"emendatus:deepslate_nickel_ore",
 			"emendatus:diorite_nickel_ore",
 			"emendatus:granite_nickel_ore",
-			"emendatus:andesite_nickel_ore",
 			"emendatus:tuff_nickel_ore",
 			"emendatus:calcite_nickel_ore",
 			"emendatus:sandstone_nickel_ore",
@@ -662,7 +662,7 @@
 		]
 	},
 	"forge:ores/aluminum": {
-		"prefItem": "emendatus:ochrum_aluminum_ore",
+		"prefItem": "emendatus:jasper_aluminum_ore",
 		"toUnify": [
 			"immersiveengineering:ore_aluminum",
 			"immersiveengineering:deepslate_ore_aluminum",
@@ -677,10 +677,10 @@
 			"emendatus:dripstone_block_aluminum_ore",
 			"emendatus:crimsite_aluminum_ore",
 			"emendatus:veridium_aluminum_ore",
+			"emendatus:ochrum_aluminum_ore",
 			"emendatus:asurine_aluminum_ore",
 			"emendatus:scoria_aluminum_ore",
 			"emendatus:limestone_aluminum_ore",
-			"emendatus:jasper_aluminum_ore",
 			"emendatus:shale_aluminum_ore"
 		]
 	},
@@ -736,7 +736,7 @@
 		]
 	},
 	"forge:ores/uranium": {
-		"prefItem": "emendatus:limestone_uranium_ore",
+		"prefItem": "emendatus:andesite_uranium_ore",
 		"toUnify": [
 			"mekanism:uranium_ore",
 			"mekanism:deepslate_uranium_ore",
@@ -746,7 +746,6 @@
 			"emendatus:deepslate_uranium_ore",
 			"emendatus:diorite_uranium_ore",
 			"emendatus:granite_uranium_ore",
-			"emendatus:andesite_uranium_ore",
 			"emendatus:tuff_uranium_ore",
 			"emendatus:calcite_uranium_ore",
 			"emendatus:sandstone_uranium_ore",
@@ -756,6 +755,7 @@
 			"emendatus:ochrum_uranium_ore",
 			"emendatus:asurine_uranium_ore",
 			"emendatus:scoria_uranium_ore",
+			"emendatus:limestone_uranium_ore",
 			"emendatus:jasper_uranium_ore",
 			"emendatus:shale_uranium_ore"
 		]
@@ -990,15 +990,15 @@
 		]
 	},
 	"forge:ores/osmium": {
-		"prefItem": "emendatus:deepslate_osmium_ore",
+		"prefItem": "emendatus:tuff_osmium_ore",
 		"toUnify": [
 			"mekanism:osmium_ore",
 			"mekanism:deepslate_osmium_ore",
 			"emendatus:stone_osmium_ore",
+			"emendatus:deepslate_osmium_ore",
 			"emendatus:diorite_osmium_ore",
 			"emendatus:granite_osmium_ore",
 			"emendatus:andesite_osmium_ore",
-			"emendatus:tuff_osmium_ore",
 			"emendatus:calcite_osmium_ore",
 			"emendatus:sandstone_osmium_ore",
 			"emendatus:dripstone_block_osmium_ore",
@@ -1031,9 +1031,9 @@
 		]
 	},
 	"forge:ores/diamond": {
-		"prefItem": "minecraft:diamond_ore",
+		"prefItem": "minecraft:deepslate_diamond_ore",
 		"toUnify": [
-			"minecraft:deepslate_diamond_ore",
+			"minecraft:diamond_ore",
 			"natures_spirit:chert_diamond_ore",
 			"undergarden:depthrock_diamond_ore",
 			"undergarden:shiverstone_diamond_ore",
@@ -1109,9 +1109,9 @@
 		]
 	},
 	"forge:ores/emerald": {
-		"prefItem": "minecraft:emerald_ore",
+		"prefItem": "minecraft:deepslate_emerald_ore",
 		"toUnify": [
-			"minecraft:deepslate_emerald_ore",
+			"minecraft:emerald_ore",
 			"natures_spirit:chert_emerald_ore",
 			"emendatus:stone_emerald_ore",
 			"emendatus:deepslate_emerald_ore",
@@ -1146,9 +1146,9 @@
 		]
 	},
 	"forge:ores/coal": {
-		"prefItem": "minecraft:coal_ore",
+		"prefItem": "minecraft:deepslate_coal_ore",
 		"toUnify": [
-			"minecraft:deepslate_coal_ore",
+			"minecraft:coal_ore",
 			"natures_spirit:chert_coal_ore",
 			"undergarden:depthrock_coal_ore",
 			"undergarden:shiverstone_coal_ore",
@@ -1218,7 +1218,7 @@
 		]
 	},
 	"forge:ores/fluorite": {
-		"prefItem": "emendatus:ochrum_fluorite_ore",
+		"prefItem": "emendatus:shale_fluorite_ore",
 		"toUnify": [
 			"mekanism:fluorite_ore",
 			"mekanism:deepslate_fluorite_ore",
@@ -1233,11 +1233,11 @@
 			"emendatus:dripstone_block_fluorite_ore",
 			"emendatus:crimsite_fluorite_ore",
 			"emendatus:veridium_fluorite_ore",
+			"emendatus:ochrum_fluorite_ore",
 			"emendatus:asurine_fluorite_ore",
 			"emendatus:scoria_fluorite_ore",
 			"emendatus:limestone_fluorite_ore",
-			"emendatus:jasper_fluorite_ore",
-			"emendatus:shale_fluorite_ore"
+			"emendatus:jasper_fluorite_ore"
 		]
 	},
 	"forge:dusts/fluorite": {
@@ -1431,9 +1431,9 @@
 		]
 	},
 	"forge:ores/cinnabar": {
-		"prefItem": "thermal:cinnabar_ore",
+		"prefItem": "thermal:deepslate_cinnabar_ore",
 		"toUnify": [
-			"thermal:deepslate_cinnabar_ore"
+			"thermal:cinnabar_ore"
 		]
 	},
 	"forge:dusts/cinnabar": {
@@ -1455,7 +1455,7 @@
 		]
 	},
 	"forge:ores/niter": {
-		"prefItem": "emendatus:limestone_potassium_nitrate_ore",
+		"prefItem": "emendatus:crimsite_potassium_nitrate_ore",
 		"toUnify": [
 			"thermal:niter_ore",
 			"thermal:deepslate_niter_ore",
@@ -1468,11 +1468,11 @@
 			"emendatus:calcite_potassium_nitrate_ore",
 			"emendatus:sandstone_potassium_nitrate_ore",
 			"emendatus:dripstone_block_potassium_nitrate_ore",
-			"emendatus:crimsite_potassium_nitrate_ore",
 			"emendatus:veridium_potassium_nitrate_ore",
 			"emendatus:ochrum_potassium_nitrate_ore",
 			"emendatus:asurine_potassium_nitrate_ore",
 			"emendatus:scoria_potassium_nitrate_ore",
+			"emendatus:limestone_potassium_nitrate_ore",
 			"emendatus:jasper_potassium_nitrate_ore",
 			"emendatus:shale_potassium_nitrate_ore"
 		]
@@ -1484,7 +1484,7 @@
 		]
 	},
 	"forge:ores/potassium_nitrate": {
-		"prefItem": "emendatus:dripstone_block_potassium_nitrate_ore",
+		"prefItem": "emendatus:sandstone_potassium_nitrate_ore",
 		"toUnify": [
 			"emendatus:stone_potassium_nitrate_ore",
 			"emendatus:deepslate_potassium_nitrate_ore",
@@ -1493,7 +1493,7 @@
 			"emendatus:andesite_potassium_nitrate_ore",
 			"emendatus:tuff_potassium_nitrate_ore",
 			"emendatus:calcite_potassium_nitrate_ore",
-			"emendatus:sandstone_potassium_nitrate_ore",
+			"emendatus:dripstone_block_potassium_nitrate_ore",
 			"emendatus:crimsite_potassium_nitrate_ore",
 			"emendatus:veridium_potassium_nitrate_ore",
 			"emendatus:ochrum_potassium_nitrate_ore",
@@ -1505,7 +1505,7 @@
 		]
 	},
 	"forge:ores/saltpeter": {
-		"prefItem": "emendatus:dripstone_block_potassium_nitrate_ore",
+		"prefItem": "emendatus:sandstone_potassium_nitrate_ore",
 		"toUnify": [
 			"emendatus:stone_potassium_nitrate_ore",
 			"emendatus:deepslate_potassium_nitrate_ore",
@@ -1514,7 +1514,7 @@
 			"emendatus:andesite_potassium_nitrate_ore",
 			"emendatus:tuff_potassium_nitrate_ore",
 			"emendatus:calcite_potassium_nitrate_ore",
-			"emendatus:sandstone_potassium_nitrate_ore",
+			"emendatus:dripstone_block_potassium_nitrate_ore",
 			"emendatus:crimsite_potassium_nitrate_ore",
 			"emendatus:veridium_potassium_nitrate_ore",
 			"emendatus:ochrum_potassium_nitrate_ore",
@@ -1545,7 +1545,7 @@
 		]
 	},
 	"forge:ores/apatite": {
-		"prefItem": "emendatus:crimsite_apatite_ore",
+		"prefItem": "emendatus:scoria_apatite_ore",
 		"toUnify": [
 			"thermal:apatite_ore",
 			"thermal:deepslate_apatite_ore",
@@ -1558,10 +1558,10 @@
 			"emendatus:calcite_apatite_ore",
 			"emendatus:sandstone_apatite_ore",
 			"emendatus:dripstone_block_apatite_ore",
+			"emendatus:crimsite_apatite_ore",
 			"emendatus:veridium_apatite_ore",
 			"emendatus:ochrum_apatite_ore",
 			"emendatus:asurine_apatite_ore",
-			"emendatus:scoria_apatite_ore",
 			"emendatus:limestone_apatite_ore",
 			"emendatus:jasper_apatite_ore",
 			"emendatus:shale_apatite_ore"
@@ -1574,9 +1574,9 @@
 		]
 	},
 	"forge:ores/redstone": {
-		"prefItem": "minecraft:deepslate_redstone_ore",
+		"prefItem": "minecraft:redstone_ore",
 		"toUnify": [
-			"minecraft:redstone_ore",
+			"minecraft:deepslate_redstone_ore",
 			"natures_spirit:chert_redstone_ore",
 			"emendatus:stone_redstone_ore",
 			"emendatus:deepslate_redstone_ore",
@@ -1598,7 +1598,7 @@
 		]
 	},
 	"forge:ores/mana": {
-		"prefItem": "emendatus:scoria_source_ore",
+		"prefItem": "emendatus:sandstone_source_ore",
 		"toUnify": [
 			"emendatus:stone_source_ore",
 			"emendatus:deepslate_source_ore",
@@ -1607,25 +1607,25 @@
 			"emendatus:andesite_source_ore",
 			"emendatus:tuff_source_ore",
 			"emendatus:calcite_source_ore",
-			"emendatus:sandstone_source_ore",
 			"emendatus:dripstone_block_source_ore",
 			"emendatus:crimsite_source_ore",
 			"emendatus:veridium_source_ore",
 			"emendatus:ochrum_source_ore",
 			"emendatus:asurine_source_ore",
+			"emendatus:scoria_source_ore",
 			"emendatus:limestone_source_ore",
 			"emendatus:jasper_source_ore",
 			"emendatus:shale_source_ore"
 		]
 	},
 	"forge:ores/dimensional": {
-		"prefItem": "emendatus:granite_dimensional_ore",
+		"prefItem": "emendatus:tuff_dimensional_ore",
 		"toUnify": [
 			"emendatus:stone_dimensional_ore",
 			"emendatus:deepslate_dimensional_ore",
 			"emendatus:diorite_dimensional_ore",
+			"emendatus:granite_dimensional_ore",
 			"emendatus:andesite_dimensional_ore",
-			"emendatus:tuff_dimensional_ore",
 			"emendatus:calcite_dimensional_ore",
 			"emendatus:sandstone_dimensional_ore",
 			"emendatus:dripstone_block_dimensional_ore",
@@ -1640,9 +1640,9 @@
 		]
 	},
 	"forge:ores/cloggrum": {
-		"prefItem": "undergarden:depthrock_cloggrum_ore",
+		"prefItem": "undergarden:shiverstone_cloggrum_ore",
 		"toUnify": [
-			"undergarden:shiverstone_cloggrum_ore"
+			"undergarden:depthrock_cloggrum_ore"
 		]
 	},
 	"forge:ores/regalium": {
@@ -1652,10 +1652,10 @@
 		]
 	},
 	"forge:ores/utherium": {
-		"prefItem": "undergarden:tremblecrust_utherium_ore",
+		"prefItem": "undergarden:shiverstone_utherium_ore",
 		"toUnify": [
 			"undergarden:depthrock_utherium_ore",
-			"undergarden:shiverstone_utherium_ore"
+			"undergarden:tremblecrust_utherium_ore"
 		]
 	},
 	"forge:storage_blocks/coal_coke": {
@@ -1740,9 +1740,9 @@
 		]
 	},
 	"forge:ores/arcane_gold": {
-		"prefItem": "wizards_reborn:deepslate_arcane_gold_ore",
+		"prefItem": "wizards_reborn:arcane_gold_ore",
 		"toUnify": [
-			"wizards_reborn:arcane_gold_ore",
+			"wizards_reborn:deepslate_arcane_gold_ore",
 			"wizards_reborn:nether_arcane_gold_ore"
 		]
 	}

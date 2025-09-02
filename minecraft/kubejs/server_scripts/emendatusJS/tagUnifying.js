@@ -1,4 +1,6 @@
-// priority 900
+// priority: 0
+// low priority since this should load after unification/datagen
+
 ServerEvents.tags('item', e => {
     let unifData = JsonIO.read('kubejs/datagen/itemTagUnificationData.json')
     if (unifData == null) { return }

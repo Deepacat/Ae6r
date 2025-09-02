@@ -1,4 +1,5 @@
-//priority: 0
+// priority: 1
+
 ServerEvents.recipes(e => {
     /*datagen is done in recipe events so that the item registry is always accessible
     datagen only runs if the files are already cleared since if they aren't clear then datagen

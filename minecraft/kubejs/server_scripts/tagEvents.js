@@ -1,3 +1,6 @@
+// priority: 1000
+// high priority so the tags load before unification (removals etc)
+
 ServerEvents.tags('item', e => {
     // Making material substitute tags
     const substitutions = [
