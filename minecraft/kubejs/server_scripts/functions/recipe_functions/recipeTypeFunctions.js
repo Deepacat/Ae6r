@@ -230,22 +230,22 @@ function allCrushing(e, outputItem, itemToCrush, id, remove) {
     ], {
         H: 'immersiveengineering:hammer',
         I: itemToCrush
-    }).id(`${id}/shaped/hammer_crushing/${itemToCrush.split(':')[1]}_to_dust`)
+    }).id(`${id}/shaped/hammer_crushing/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
 
     e.recipes.immersiveengineering.crusher(outputItem, itemToCrush, [], 3000)
-        .id(`${id}/crusher/immersiveengineering/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/crusher/immersiveengineering/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.mekanism.crushing(outputItem, itemToCrush)
-        .id(`${id}/crushing/mekanism/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/crushing/mekanism/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.thermal.pulverizer(outputItem, itemToCrush)
-        .id(`${id}/pulverizer/thermal/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/pulverizer/thermal/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.bloodmagic.arc(outputItem, itemToCrush, '#bloodmagic:arc/explosive')
-        .id(`${id}/arc_crushing/bloodmagic/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/arc_crushing/bloodmagic/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.create.crushing(outputItem, itemToCrush)
-        .id(`${id}/crushing/create/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/crushing/create/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.create.milling(outputItem, itemToCrush)
-        .id(`${id}/milling/create/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/milling/create/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.occultism.crushing(outputItem, itemToCrush)
-        .id(`${id}/occultism/crushing/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/occultism/crushing/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
     e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(outputItem).withChance(1))
-        .id(`${id}/crush_glyph/ars_nouveau/${itemToCrush.split(':')[1]}_to_dust`)
+        .id(`${id}/crush_glyph/ars_nouveau/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
 }
