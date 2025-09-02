@@ -29,7 +29,6 @@ global.dimensionsOreData = {
 
 // coal copper diamond emerald gold iron lapis quartz redstone
 // vanilla
-// TODO: allow adding additional biome flags
 global.emendatus_mats['coal'].oreData = {
     dropType: 'gem',
     overrideDrop: 'minecraft:coal',
