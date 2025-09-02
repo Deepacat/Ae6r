@@ -552,7 +552,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('tconstruct:melting',
             new $RecipeSchema(
-                outputFluid.key('result'),
+                fluidOrTagInput('tag').key('result'), // output uses input component to support tags
                 inputItem.key('ingredient'),
                 intNumber.key('temperature').optional(500).alwaysWrite(),
                 intNumber.key('time').optional(60).alwaysWrite()
@@ -560,8 +560,8 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('tconstruct:alloy',
             new $RecipeSchema(
-                outputFluid.key('result'),
-                inputFluid.asArray().key('inputs'),
+                fluidOrTagInput('tag').key('result'), // output uses input component to support tags
+                fluidOrTagInput('tag').asArray().key('inputs'),
                 intNumber.key('temperature').optional(500).alwaysWrite()
             )
         )
