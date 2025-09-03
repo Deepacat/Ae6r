@@ -1,7 +1,6 @@
 // priority: 0
 function recipeSchema_thermal(e, c) {
     if (Platform.isLoaded('thermal')) {
-
         e.register('thermal:bottler',
             new $RecipeSchema(
                 c.outputItem.key('result'),
@@ -75,6 +74,16 @@ function recipeSchema_thermal(e, c) {
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
+        e.register('thermal:pulverizer_catalyst',
+            new $RecipeSchema(
+                c.inputItem.key('ingredient'),
+                c.floatNumber.key('primary_mod').optional(1.5).alwaysWrite().exclude(), // use .primary_mod(float) after recipe
+                c.floatNumber.key('secondary_mod').optional(1.5).alwaysWrite().exclude(), // use .secondary_mod(float) after recipe
+                c.floatNumber.key('energy_mod').optional(1.5).alwaysWrite().exclude(), // use .energy_mod(float) after recipe
+                c.floatNumber.key('min_chance').optional(0.05).alwaysWrite().exclude(), // use .min_chance(float) after recipe
+                c.floatNumber.key('use_chance').optional(0.20).alwaysWrite().exclude(), // use .use_chance(float) after recipe
+            )
+        )
         e.register('thermal:pyrolyzer',
             new $RecipeSchema(
                 c.outputFluidOrItem.asArray().key('result'),
@@ -107,14 +116,17 @@ function recipeSchema_thermal(e, c) {
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
-        let a = {
-            "type": "thermal:compression_fuel",
-            "ingredient": {
-                "fluid_tag": "forge:creosote",
-                "amount": 1000
-            },
-            "energy": 20000
-        }
+        e.register('thermal:smelter_catalyst',
+            new $RecipeSchema(
+                c.inputItem.key('ingredient'),
+                c.floatNumber.key('primary_mod').optional(1.5).alwaysWrite().exclude(), // use .primary_mod(float) after recipe
+                c.floatNumber.key('secondary_mod').optional(1.5).alwaysWrite().exclude(), // use .secondary_mod(float) after recipe
+                c.floatNumber.key('energy_mod').optional(1.5).alwaysWrite().exclude(), // use .energy_mod(float) after recipe
+                c.floatNumber.key('min_chance').optional(0.05).alwaysWrite().exclude(), // use .min_chance(float) after recipe
+                c.floatNumber.key('use_chance').optional(0.20).alwaysWrite().exclude(), // use .use_chance(float) after recipe
+            )
+        )
+
         // fuels
         e.register('thermal:compression_fuel',
             new $RecipeSchema(

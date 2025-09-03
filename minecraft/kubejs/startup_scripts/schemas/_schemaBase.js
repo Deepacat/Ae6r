@@ -38,7 +38,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     comps.inputFluidOrItem = (tagKeyStr) =>
         comps.inputItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
 
-    let $HeatCondition, heatCondition
+    let $HeatCondition
     if (Platform.isLoaded('create')) {
         $HeatCondition = Java.loadClass('com.simibubi.create.content.processing.recipe.HeatCondition')
         comps.heatCondition = componentRegistry.get('enum')({ class: $HeatCondition })
