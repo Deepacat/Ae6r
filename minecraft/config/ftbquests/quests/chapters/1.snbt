@@ -12,11 +12,12 @@
 			dependencies: ["18909429C6F9FE62"]
 			icon: "create:wrench"
 			id: "61A49DF185789C50"
+			subtitle: "Without the consequences..."
 			tasks: [{
 				id: "05EECBFBB6A1F278"
 				type: "checkmark"
 			}]
-			title: "Technology | 1"
+			title: "Industrial Revolution!"
 			x: -3.0d
 			y: -2.5d
 		}
@@ -28,12 +29,13 @@
 				tag: { }
 			}
 			id: "09CC73450B191D9F"
+			subtitle: "Uncovering ancient arts"
 			tasks: [{
 				id: "78A8C313540AEFE6"
 				title: "magic"
 				type: "checkmark"
 			}]
-			title: "Magic | 1"
+			title: "Harnessing Magic"
 			x: 1.0d
 			y: -2.5d
 		}
@@ -41,6 +43,7 @@
 			dependencies: ["61A49DF185789C50"]
 			icon: "minecraft:tnt"
 			id: "0E9DE9C7AD78C8A6"
+			subtitle: "Claim your chunks..."
 			tasks: [
 				{
 					id: "6AE1C74F5F1793F7"
@@ -53,7 +56,7 @@
 					type: "item"
 				}
 			]
-			title: "explosive"
+			title: "Explosive Processing"
 			x: -2.5d
 			y: -1.5d
 		}
@@ -61,6 +64,7 @@
 			dependencies: ["61A49DF185789C50"]
 			icon: "thermal:dynamo_stirling"
 			id: "310E121655B252D7"
+			subtitle: "Fossil fuels :D"
 			tasks: [
 				{
 					id: "5AB4E2886A972C5E"
@@ -79,7 +83,7 @@
 					type: "item"
 				}
 			]
-			title: "first energy"
+			title: "Crudely Energetic"
 			x: -3.5d
 			y: -1.5d
 		}
@@ -87,6 +91,7 @@
 			dependencies: ["09CC73450B191D9F"]
 			icon: "thermal:lightning_charge"
 			id: "586CC55F42AABB1F"
+			subtitle: "Heavens wrath at your fingertips"
 			tasks: [{
 				id: "353D6044614A3436"
 				item: {
@@ -99,6 +104,7 @@
 				title: "Lightning producing item"
 				type: "item"
 			}]
+			title: "Channeling The Skies"
 			x: 1.5d
 			y: -1.5d
 		}
@@ -106,6 +112,7 @@
 			dependencies: ["09CC73450B191D9F"]
 			icon: "embers:ember_crystal"
 			id: "63C35E379745481B"
+			subtitle: "Rock and Stone!"
 			tasks: [
 				{
 					id: "25F9412924F491AC"
@@ -118,6 +125,7 @@
 					type: "item"
 				}
 			]
+			title: "Dwarven Depths"
 			x: 0.5d
 			y: -1.5d
 		}
@@ -128,6 +136,7 @@
 			]
 			icon: "embers:stamper"
 			id: "7039C8B5F77E2353"
+			subtitle: "Totally magical"
 			tasks: [
 				{
 					id: "2BEA3E8B1CE97671"
@@ -140,18 +149,27 @@
 					type: "item"
 				}
 			]
-			title: "Semi.. Magically processing"
+			title: "Semi... Magically processing"
 			x: 0.0d
 			y: 0.5d
 		}
 		{
 			dependencies: ["0E9DE9C7AD78C8A6"]
+			icon: "create:water_wheel"
 			id: "2547D66C228E76DA"
+			subtitle: "Can't wait to spam 200 waterwheels"
 			tasks: [{
-				id: "486E6E6A699AB04C"
-				item: "create:water_wheel"
+				id: "68B7529F801843D6"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "or(item(create:water_wheel)item(create:large_water_wheel)item(create:windmill_bearing))"
+					}
+				}
 				type: "item"
 			}]
+			title: "Kinetic Energy"
 			x: -3.0d
 			y: -0.5d
 		}
@@ -159,6 +177,7 @@
 			dependencies: ["2547D66C228E76DA"]
 			icon: "create:mechanical_press"
 			id: "43974FB2F5BB59AE"
+			subtitle: "What do you mean it takes 3 bonks"
 			tasks: [
 				{
 					id: "7DDFA6BE208A2819"
@@ -175,7 +194,7 @@
 					type: "checkmark"
 				}
 			]
-			title: "Mechanically processing"
+			title: "Mechanical Machinations"
 			x: -2.5d
 			y: 0.5d
 		}
@@ -195,17 +214,20 @@
 					type: "item"
 				}
 			]
+			title: "Ancient Relics of the Sea"
 			x: 2.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["2D9C8FB3247F30D9"]
 			id: "1D782A9EE5990A5E"
+			subtitle: "The ancients cooked with this one"
 			tasks: [{
 				id: "3A58B9D8C0D94E2E"
 				item: "minecraft:conduit"
 				type: "item"
 			}]
+			title: "A Truely Marvelous Construct"
 			x: 2.0d
 			y: 0.5d
 		}
@@ -213,6 +235,7 @@
 			dependencies: ["1D782A9EE5990A5E"]
 			icon: "ars_nouveau:arcane_core"
 			id: "7B6DCBDD9A71FCE6"
+			subtitle: "Magical enchantment at it's finest"
 			tasks: [
 				{
 					id: "7C20238901930111"
@@ -225,6 +248,7 @@
 					type: "item"
 				}
 			]
+			title: "Arcane Infusion"
 			x: 1.5d
 			y: 1.5d
 		}
@@ -232,6 +256,7 @@
 			dependencies: ["1D782A9EE5990A5E"]
 			icon: "eidolon:brazier"
 			id: "112AC64D8100972C"
+			subtitle: "Devious concoctions"
 			tasks: [
 				{
 					id: "3423C1A009CBE7BE"
@@ -249,6 +274,7 @@
 					type: "item"
 				}
 			]
+			title: "Witchcraft"
 			x: 2.5d
 			y: 1.5d
 		}
@@ -259,11 +285,13 @@
 			]
 			dependency_requirement: "one_completed"
 			id: "0EE8357B14D77784"
+			subtitle: "The creators best friend"
 			tasks: [{
 				id: "2837BB412E06A847"
 				item: "emendatus:brass_ingot"
 				type: "item"
 			}]
+			title: "The Brass Age"
 			x: -1.0d
 			y: 0.5d
 		}
@@ -272,7 +300,7 @@
 				"0EE8357B14D77784"
 				"43974FB2F5BB59AE"
 			]
-			icon: "create:crushing_wheel"
+			icon: "create:mechanical_crafter"
 			id: "7026C6F5506F40E7"
 			tasks: [
 				{
@@ -286,6 +314,7 @@
 					type: "item"
 				}
 			]
+			title: "The Peak of Mechanical Engineering"
 			x: -2.0d
 			y: 1.5d
 		}
@@ -294,6 +323,7 @@
 			description: [""]
 			icon: "embers:ember_activator"
 			id: "6D72206EAEBA46E0"
+			subtitle: "Ooo pretty effects"
 			tasks: [
 				{
 					id: "7370221C480E6593"
@@ -311,17 +341,20 @@
 					type: "item"
 				}
 			]
+			title: "Fueled By Flame"
 			x: 0.0d
 			y: -0.5d
 		}
 		{
 			dependencies: ["310E121655B252D7"]
 			id: "00AA0E1E061988B5"
+			subtitle: "Oh boy a grey box!"
 			tasks: [{
 				id: "62DC9AB9FFBA8A90"
 				item: "thermal:machine_smelter"
 				type: "item"
 			}]
+			title: "First Alloys!"
 			x: -4.0d
 			y: -0.5d
 		}
@@ -360,6 +393,7 @@
 				optional_task: true
 				type: "item"
 			}]
+			title: "Tinkers Smeltery"
 			x: -1.0d
 			y: 3.0d
 		}
@@ -379,6 +413,7 @@
 				}
 				type: "item"
 			}]
+			title: "Molten Melting"
 			x: -1.0d
 			y: 1.5d
 		}
@@ -406,6 +441,7 @@
 		}
 		{
 			dependencies: ["112AC64D8100972C"]
+			icon: "eidolon:gold_inlay"
 			id: "29D38AAD3258BC8A"
 			tasks: [
 				{
@@ -429,6 +465,7 @@
 			]
 			icon: "aether:aether_portal_frame"
 			id: "798F51A163767275"
+			subtitle: "As above, so below"
 			tasks: [
 				{
 					id: "3E34FBB4AEE00B61"
@@ -441,6 +478,7 @@
 					type: "item"
 				}
 			]
+			title: "Realms Beyond"
 			x: 2.0d
 			y: 3.0d
 		}
@@ -452,6 +490,7 @@
 				item: "bloodmagic:altar"
 				type: "item"
 			}]
+			title: "Embracing the Dark Arts"
 			x: 3.0d
 			y: 3.5d
 		}
@@ -463,6 +502,7 @@
 				item: "botania:apothecary_default"
 				type: "item"
 			}]
+			title: "Flower Power"
 			x: 1.0d
 			y: 3.5d
 		}
@@ -474,6 +514,7 @@
 				item: "botania:pure_daisy"
 				type: "item"
 			}]
+			title: "A Bloom of True Purity"
 			x: 0.0d
 			y: 4.0d
 		}
@@ -485,6 +526,7 @@
 				item: "bloodmagic:weakbloodorb"
 				type: "item"
 			}]
+			title: "Storing Life Itself"
 			x: 4.0d
 			y: 4.0d
 		}
@@ -825,7 +867,7 @@
 				id: "3142ECA350DD0BAA"
 				type: "checkmark"
 			}]
-			title: "The paths"
+			title: "The Split Arts"
 			x: -1.0d
 			y: -3.5d
 		}
@@ -843,21 +885,26 @@
 		}
 		{
 			dependencies: ["7026C6F5506F40E7"]
-			icon: "create:cinder_flour"
+			icon: "kubejs:coke_brick_blend"
 			id: "671903A25CFC2BC0"
 			tasks: [
 				{
-					id: "517D6FB47889F1AC"
+					id: "21331A62E5C75799"
+					item: "kubejs:coke_brick_blend"
+					type: "item"
+				}
+				{
+					id: "13AAE37A801B55E5"
 					item: "create:cinder_flour"
 					type: "item"
 				}
 				{
-					id: "40C8CB0562A131EF"
+					id: "72B7B91800569EC0"
 					item: "kubejs:basalt_powder"
 					type: "item"
 				}
 				{
-					id: "147A1769ED9BC164"
+					id: "600BE97E97E160E5"
 					item: "minecraft:clay_ball"
 					type: "item"
 				}
@@ -876,8 +923,8 @@
 					type: "item"
 				}
 				{
-					id: "44923CCAF6991C2D"
-					item: "kubejs:partial_cokebrick"
+					id: "24197C08288A746D"
+					item: "kubejs:coke_brick"
 					type: "item"
 				}
 			]
@@ -886,16 +933,30 @@
 		}
 		{
 			dependencies: ["00AA0E1E061988B5"]
+			icon: "thermal:latex_bucket"
 			id: "48D210C52F254D74"
 			tasks: [
 				{
-					id: "28C5BD17651CEB6D"
-					item: "minecraft:dandelion"
+					id: "4FE343191A155C56"
+					item: "thermal:latex_bucket"
 					type: "item"
 				}
 				{
-					id: "4242698B913D333C"
-					item: "minecraft:vine"
+					id: "7F81F9062BB7FBFB"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "and(or(item(minecraft:vine)item(minecraft:dandelion)))"
+						}
+					}
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "6172804F02CC6435"
+					item: "thermal:device_tree_extractor"
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -920,11 +981,13 @@
 			id: "48AD6CD8CFF92F93"
 			optional: true
 			shape: "hexagon"
+			subtitle: "Mechanically digital"
 			tasks: [{
 				id: "7ABF9092A783EC47"
 				item: "create:stock_ticker"
 				type: "item"
 			}]
+			title: "High Logistics"
 			x: -3.5d
 			y: 1.0d
 		}
@@ -936,11 +999,13 @@
 			id: "7678EEC915A4748F"
 			optional: true
 			shape: "hexagon"
+			subtitle: "EMI trees <3"
 			tasks: [{
 				id: "6C9CF12513742889"
 				item: "craftingstation:crafting_station"
 				type: "item"
 			}]
+			title: "Micro-Crafting Central"
 			x: -1.0d
 			y: -1.5d
 		}
@@ -981,6 +1046,7 @@
 		}
 		{
 			dependencies: ["6F2EF58A8DC63D5F"]
+			icon: "thermal:tar"
 			id: "2EF4805DA973D0CA"
 			shape: "circle"
 			tasks: [
@@ -1023,6 +1089,7 @@
 				item: "kubejs:superheated_steel_ingot"
 				type: "item"
 			}]
+			title: "It burns!!!"
 			x: -3.5d
 			y: 5.0d
 		}
@@ -1055,18 +1122,12 @@
 			dependencies: ["167BE86E3DE69218"]
 			id: "46483EEAF200D273"
 			shape: "pentagon"
-			tasks: [
-				{
-					id: "0202AD0BABDC9051"
-					item: "pneumaticcraft:ingot_iron_compressed"
-					type: "item"
-				}
-				{
-					id: "54242193974607D6"
-					item: "kubejs:hot_compressed_iron_ingot"
-					type: "item"
-				}
-			]
+			subtitle: "Why do the mages get more..."
+			tasks: [{
+				id: "0202AD0BABDC9051"
+				item: "pneumaticcraft:ingot_iron_compressed"
+				type: "item"
+			}]
 			x: -3.5d
 			y: 6.5d
 		}
@@ -1086,11 +1147,13 @@
 			dependencies: ["7039C8B5F77E2353"]
 			icon: "embers:archaic_bricks"
 			id: "45CFB6E5BAA062B8"
+			subtitle: "True Heat"
 			tasks: [{
 				id: "0BE9D0691AD24828"
 				item: "mbd2:ember_oven"
 				type: "item"
 			}]
+			title: "Infernal Alloying"
 			x: 0.5d
 			y: 1.5d
 		}
@@ -1112,8 +1175,10 @@
 		}
 		{
 			dependencies: ["310E121655B252D7"]
+			icon: "littlelogistics:fishing_barge"
 			id: "228A42320F11D892"
 			shape: "hexagon"
+			subtitle: "They're Soooo Cute!"
 			tasks: [
 				{
 					id: "5295C1FB5B39A502"
@@ -1126,6 +1191,7 @@
 					type: "item"
 				}
 			]
+			title: "Little Logistics"
 			x: -4.5d
 			y: -1.5d
 		}
