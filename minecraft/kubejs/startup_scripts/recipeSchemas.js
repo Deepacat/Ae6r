@@ -1,7 +1,4 @@
 // priority: 100
-
-import { errors } from "../../../../../../../Local/Microsoft/TypeScript/5.9/node_modules/undici-types/index"
-
 StartupEvents.recipeSchemaRegistry(e => {
     const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
     const $RecipeComponentBuilder = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilder')
@@ -24,15 +21,16 @@ StartupEvents.recipeSchemaRegistry(e => {
     const inputFluid = Components.get('inputFluid')()
     const fluidTag = Components.get('tag')({ registry: 'fluid' })
 
-    const fluidOrTagInput = (tagKeyId) => inputFluid.or(
+    const inputFluidOrFluidTag = (tagKeyStr) => inputFluid.or(
         new $RecipeComponentBuilder(2)
-            .add(fluidTag.key(tagKeyId))
+            .add(fluidTag.key(tagKeyStr))
             .add(intNumber.key('amount'))
             .inputRole()
     )
     const outputFluid = Components.get('outputFluid')()
 
-    const inputFluidOrItem = Components.get('inputFluidOrItem')()
+    // const inputFluidOrItem = Components.get('inputFluidOrItem')()
+    const inputFluidOrItem = (tagKeyStr) => inputItem.or(inputFluidOrFluidTag(tagKeyStr))
     const outputFluidOrItem = Components.get('outputFluidOrItem')()
 
     let $HeatCondition, heatCondition
@@ -75,7 +73,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('createaddition:liquid_burning',
             new $RecipeSchema(
-                fluidOrTagInput('fluidTag').key('input'),
+                inputFluidOrFluidTag('fluidTag').key('input'),
                 intNumber.key('burnTime'),
                 bool.key('superheated').optional(false)
             )
@@ -339,7 +337,7 @@ StartupEvents.recipeSchemaRegistry(e => {
             new $RecipeSchema(
                 outputItem.asArray().key('results'),
                 ieInputItem.asArray().key('inputs'),
-                fluidOrTagInput('tag').key('fluid')
+                inputFluidOrFluidTag('tag').key('fluid')
             )
         )
         e.register('immersiveengineering:cloche',
@@ -370,7 +368,7 @@ StartupEvents.recipeSchemaRegistry(e => {
             new $RecipeSchema(
                 outputItem.key('result'),
                 ieInputItem.key('input'),
-                fluidOrTagInput('tag').key('fluid'),
+                inputFluidOrFluidTag('tag').key('fluid'),
                 intNumber.key('energy').optional(6400).alwaysWrite()
             )
         )
@@ -459,15 +457,15 @@ StartupEvents.recipeSchemaRegistry(e => {
             new $RecipeSchema(
                 outputFluid.key('result'),
                 ieInputItem.asArray().key('inputs'),
-                fluidOrTagInput('tag').key('fluid'),
+                inputFluidOrFluidTag('tag').key('fluid'),
                 intNumber.key('energy').optional(3200).alwaysWrite()
             )
         )
         e.register('immersiveengineering:refinery',
             new $RecipeSchema(
                 outputFluid.key('result'),
-                fluidOrTagInput('tag').key('input0'),
-                fluidOrTagInput('tag').key('input1'),
+                inputFluidOrFluidTag('tag').key('input0'),
+                inputFluidOrFluidTag('tag').key('input1'),
                 ieInputItem.key('catalyst'),
                 intNumber.key('energy').optional(80).alwaysWrite()
             )
@@ -535,7 +533,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         e.register('tconstruct:casting_table',
             new $RecipeSchema(
                 outputItem.key('result'),
-                fluidOrTagInput('tag').asArrayOrSelf().key('fluid'),
+                inputFluidOrFluidTag('tag').asArrayOrSelf().key('fluid'),
                 intNumber.key('cooling_time').optional(60).alwaysWrite(),
                 bool.key('cast_consumed').optional(true).alwaysWrite(),
                 inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
@@ -544,7 +542,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         e.register('tconstruct:casting_basin',
             new $RecipeSchema(
                 outputItem.key('result'),
-                fluidOrTagInput('tag').asArrayOrSelf().key('fluid'),
+                inputFluidOrFluidTag('tag').asArrayOrSelf().key('fluid'),
                 intNumber.key('cooling_time').optional(60).alwaysWrite(),
                 bool.key('cast_consumed').optional(true).alwaysWrite(),
                 inputItem.key('cast').defaultOptional().exclude() // use .cast(inputItem) after recipe
@@ -552,7 +550,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('tconstruct:melting',
             new $RecipeSchema(
-                fluidOrTagInput('tag').key('result'), // output uses input component to support tags
+                inputFluidOrFluidTag('tag').key('result'), // output uses input component to support tags
                 inputItem.key('ingredient'),
                 intNumber.key('temperature').optional(500).alwaysWrite(),
                 intNumber.key('time').optional(60).alwaysWrite()
@@ -560,9 +558,117 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('tconstruct:alloy',
             new $RecipeSchema(
-                fluidOrTagInput('tag').key('result'), // output uses input component to support tags
-                fluidOrTagInput('tag').asArray().key('inputs'),
+                inputFluidOrFluidTag('tag').key('result'), // output uses input component to support tags
+                inputFluidOrFluidTag('tag').asArray().key('inputs'),
                 intNumber.key('temperature').optional(500).alwaysWrite()
+            )
+        )
+    }
+
+    if (Platform.isLoaded('thermal')) {
+        e.register('thermal:bottler',
+            new $RecipeSchema(
+                outputItem.key('result'),
+                inputFluidOrItem('fluid_tag').asArray().key('ingredients'),
+                intNumber.key('energy').optional(400).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:centrifuge',
+            new $RecipeSchema(
+                outputFluidOrItem.asArray().key('result'),
+                inputItem.key('ingredient'),
+                intNumber.key('energy').optional(2000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:chiller',
+            new $RecipeSchema(
+                outputFluidOrItem.asArray().key('result'),
+                inputFluidOrItem('fluid_tag').asArray().key('ingredients'),
+                intNumber.key('energy').optional(4000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:crucible',
+            new $RecipeSchema(
+                outputFluid.asArray().key('result'),
+                inputItem.key('ingredient'),
+                intNumber.key('energy').optional(40000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:crystallizer',
+            new $RecipeSchema(
+                outputItem.key('result'),
+                inputFluidOrItem('fluid_tag').asArray().key('ingredients'),
+                intNumber.key('energy').optional(20000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:furnace',
+            new $RecipeSchema(
+                outputItem.key('result').defaultOptional().exclude(), // use .result(outputItem) after recipe
+                inputItem.key('ingredient'),
+                floatNumber.key('energy_mod').optional(1).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:insolator',
+            new $RecipeSchema(
+                outputFluidOrItem.asArray().key('results'),
+                inputFluidOrItem('fluid_tag').key('ingredient'),
+                intNumber.key('water').optional(500).alwaysWrite(),
+                intNumber.key('energy').optional(20000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:press',
+            new $RecipeSchema(
+                outputFluidOrItem.asArray().key('result'),
+                inputItem.key('ingredient'),
+                intNumber.key('energy').optional(2400).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:pulverizer',
+            new $RecipeSchema(
+                outputItem.asArray().key('result'),
+                inputItem.key('ingredient'),
+                intNumber.key('energy').optional(4000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:pyrolyzer',
+            new $RecipeSchema(
+                outputFluidOrItem.asArray().key('result'),
+                inputItem.key('ingredient'),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude(),
+                intNumber.key('energy').optional(2000).alwaysWrite()
+            )
+        )
+        e.register('thermal:refinery',
+            new $RecipeSchema(
+                outputFluidOrItem.asArray().key('result'),
+                inputFluidOrFluidTag('fluid_tag').key('ingredient'),
+                intNumber.key('energy').optional(8000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:sawmill',
+            new $RecipeSchema(
+                outputItem.asArray().key('result'),
+                inputItem.key('ingredient'),
+                intNumber.key('energy').optional(2000).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        e.register('thermal:smelter',
+            new $RecipeSchema(
+                outputItem.key('result'),
+                inputItem.asArray().key('ingredients'),
+                intNumber.key('energy').optional(3200).alwaysWrite(),
+                floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
     }

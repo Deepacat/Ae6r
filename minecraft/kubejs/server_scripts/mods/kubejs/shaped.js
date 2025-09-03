@@ -1,4 +1,16 @@
 ServerEvents.recipes(e => {
+    e.shaped('kubejs:amadron_survey_tools', [
+        'ABA',
+        'CDE',
+        'AFA'
+    ], {
+        A: Item.of('pneumaticcraft:air_canister', '{"pneumaticcraft:air":30000}').weakNBT(),
+        B: 'pneumaticcraft:reinforced_chest',
+        C: Item.of('mekanismtools:steel_paxel', '{Damage:0}').weakNBT(),
+        D: 'mekanism:cardboard_box',
+        E: 'minecraft:compass',
+        F: 'immersiveengineering:survey_tools'
+    })
     e.remove({ id: 'kubejs:basic_circuit_package' })
     e.shaped('kubejs:basic_circuit_package', [
         'AA ',
