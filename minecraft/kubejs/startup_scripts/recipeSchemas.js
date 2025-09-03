@@ -608,7 +608,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('thermal:furnace',
             new $RecipeSchema(
-                outputItem.key('result').defaultOptional().exclude(), // use .result(outputItem) after recipe
+                outputItem.key('result'), // use .result(outputItem) after recipe
                 inputItem.key('ingredient'),
                 floatNumber.key('energy_mod').optional(1).alwaysWrite(),
                 floatNumber.key('experience').optional(0).alwaysWrite().exclude()
@@ -616,7 +616,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('thermal:insolator',
             new $RecipeSchema(
-                outputFluidOrItem.asArray().key('results'),
+                outputFluidOrItem.asArray().key('result'),
                 inputFluidOrItem('fluid_tag').key('ingredient'),
                 intNumber.key('water').optional(500).alwaysWrite(),
                 intNumber.key('energy').optional(20000).alwaysWrite(),
@@ -626,7 +626,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         e.register('thermal:press',
             new $RecipeSchema(
                 outputFluidOrItem.asArray().key('result'),
-                inputItem.key('ingredient'),
+                inputItem.asArray().key('ingredients'),
                 intNumber.key('energy').optional(2400).alwaysWrite(),
                 floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
@@ -669,6 +669,63 @@ StartupEvents.recipeSchemaRegistry(e => {
                 inputItem.asArray().key('ingredients'),
                 intNumber.key('energy').optional(3200).alwaysWrite(),
                 floatNumber.key('experience').optional(0).alwaysWrite().exclude()
+            )
+        )
+        let a = {
+            "type": "thermal:compression_fuel",
+            "ingredient": {
+                "fluid_tag": "forge:creosote",
+                "amount": 1000
+            },
+            "energy": 20000
+        }
+        // fuels
+        e.register('thermal:compression_fuel',
+            new $RecipeSchema(
+                inputFluidOrFluidTag('fluid_tag').key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:compression_fuel',
+            new $RecipeSchema(
+                inputFluidOrFluidTag('fluid_tag').key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:disenchantment_fuel',
+            new $RecipeSchema(
+                inputItem.key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:gourmand_fuel',
+            new $RecipeSchema(
+                inputItem.key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:lapidary_fuel',
+            new $RecipeSchema(
+                inputItem.key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:magmatic_fuel',
+            new $RecipeSchema(
+                inputFluidOrFluidTag('fluid_tag').key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:numismatic_fuel',
+            new $RecipeSchema(
+                inputItem.key('ingredient'),
+                intNumber.key('energy'),
+            )
+        )
+        e.register('thermal:stirling_fuel',
+            new $RecipeSchema(
+                inputItem.key('ingredient'),
+                intNumber.key('energy'),
             )
         )
     }
