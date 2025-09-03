@@ -107,8 +107,8 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('farmersdelight:cutting',
             new $RecipeSchema(
-                inputItem.asArray().key('ingredients'),
                 outputItem.asArray().key('result'),
+                inputItem.asArray().key('ingredients'),
                 itemOrAction.key('tool'),
                 anyString.key('sound').defaultOptional()
             )

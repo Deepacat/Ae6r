@@ -1,5 +1,5 @@
 ServerEvents.recipes(e => {
-    // const recipes = [
+    e.remove({ type: 'minecraft:crafting', output: 'industrialforegoing:dryrubber' })
     e.recipes.thermal.bottler('industrialforegoing:dryrubber',
         [Fluid.of('industrialforegoing:latex', 900), '#forge:dusts/sulfur'])
         .energy(12000)

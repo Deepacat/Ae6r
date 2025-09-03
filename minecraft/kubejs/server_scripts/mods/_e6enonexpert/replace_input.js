@@ -69,14 +69,11 @@ ServerEvents.recipes(e => {
     e.replaceInput({}, 'thermal:bitumen', '#forge:bitumen')
     e.replaceInput({}, 'thermal:coal_coke', '#forge:coal_coke')
     e.replaceInput({}, 'rftoolsbase:dimensionalshard', '#forge:gems/dimensional')
-    e.replaceInput({}, 'ars_nouveau:mana_gem', '#forge:gems/mana')
     e.replaceInput({}, 'immersiveengineering:slag', '#forge:slag')
     e.replaceInput({}, 'thermal:slag', '#forge:slag')
     e.replaceInput({}, 'farmersdelight:fried_egg', '#forge:cooked_eggs')
     e.replaceInput({}, 'farmersdelight:brown_mushroom_colony', '#forge:mushroom_colonies/brown')
     e.replaceInput({}, 'farmersdelight:red_mushroom_colony', '#forge:mushroom_colonies/red')
-    e.replaceInput({}, 'minecraft:iron_ore', '#forge:ores/iron')
-    e.replaceInput({}, 'minecraft:gold_ore', '#forge:ores/gold')
     e.replaceInput({}, 'upgrade_aquatic:beachgrass', '#forge:beach_grass')
     e.replaceInput({}, 'environmental:cattail', '#forge:cattails')
     e.replaceInput({}, 'pneumaticcraft:wheat_flour', '#forge:dusts/flour')
@@ -84,8 +81,6 @@ ServerEvents.recipes(e => {
     e.replaceInput({}, 'create:dough', '#forge:doughs')
     e.replaceInput({}, 'farmersdelight:wheat_dough', '#forge:doughs')
     e.replaceInput({}, 'create:bar_of_chocolate', '#forge:chocolate_bars')
-    e.replaceInput({}, 'tconstruct:cobalt_nugget', '#forge:nuggets/cobalt')
-    e.replaceInput({}, 'minecraft:nether_bricks', '#forge:netherbricks')
 
     // Replace inputs for powah tiers
     powahTiers.forEach(function (tier) {
