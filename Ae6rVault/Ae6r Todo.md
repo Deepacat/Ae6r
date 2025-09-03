@@ -1,14 +1,15 @@
+- [ ] Port the base non expert recipes from e6 :| (Theres more than I thought, how dare they make a good kitchen sink)
 - [x] Figure out how the FUCK e6es unification works and how to work it into emendatusjs (it does shit like unify ender pearl to dust and arcane gem to botania mana dust)
-	- [ ] refactor emendatusjs again to use more e6e like recipe unifying
+	- [x] refactor emendatusjs again to use more e6e like recipe unifying
 		- [x] basic material flags like rods gears plates ingots
 		- [x] ores smelting
 		- [x] melting metal items back to fluids
 		- [x] Remake tag unifying (Probably can datagen items per tag in recipes)
 			- [x] this caused recipe gen to fuck up since I'm removing the tags it relies on, uhhh go fix that to use a datagen too thx <3
 		- [ ] ore processing
-		- [ ] scrub materials to unify list of e6e 
+		- [x] scrub materials to unify list of e6e 
 		- [x] Make my melting builder smarter (instead of doing the same bit 15 times)
-		- [ ] add tinkers casting and melting recipes (make builders first please)
+		- [x] add tinkers casting and melting recipes (make builders first please)
 		- [x] crushing recipes (not oreproc just dust making from comps)
 			- [x] i did all of them except ars glyph too tired (did this)
 		- [x] Compacting recipes
@@ -30,12 +31,12 @@
 - [x] Port occultism shaped and spiritfire recipes
 - [ ] Double check that alchemy array recipes match up
 - [ ] Fix superheated steel and iron recipes (Double check e6e)
-- [ ] Fix alloy kiln reqs e.g. blast brick compound, smoldering lapis
+- [x] Fix alloy kiln reqs e.g. blast brick compound, smoldering lapis
 - [x] Unify arcane gold
 - [ ] Port natures aura recipes
 - [ ] Hide dumb recipe categories like shapeless mixing and shaped mechanical crafting, grindstone
 - [x] Fix recipes that used ars clays in e6e
-- [ ] Fix raw ore block smelting recipes being too quick
+- [ ] Fix raw ore block smelting recipes being too quick (or remove them lmao)
 - [ ] Meka biomass from other mods' crops (currently only MC)
 - [ ] Fix lootbox rewards in qb
 - [x] (For specifically deepa) port my iron spells/apoth rework from a concept I made
