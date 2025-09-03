@@ -1,119 +1,118 @@
-StartupEvents.recipeSchemaRegistry(e => {
+// priority: 0
+function recipeSchema_immersiveengineering(e, c) {
     if (Platform.isLoaded('immersiveengineering')) {
         // ie uses a special custom ingredient format for stacked inputs
-        let $RecipeComponent = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponent');
-        let $KJSInputItem = Java.loadClass('dev.latvian.mods.kubejs.item.InputItem');
         let ieInputItem = new $RecipeComponent({
             componentClass: () => $KJSInputItem,
             read: (recipe, from) => recipe.readInputItem(from),
             write: (recipe, value) => {
-                let json = value.toJson(true).getAsJsonObject();
-                json.add('base_ingredient', json.remove('ingredient'));
-                return json;
+                let json = value.toJson(true).getAsJsonObject()
+                json.add('base_ingredient', json.remove('ingredient'))
+                return json
             }
-        });
+        })
 
         let ieClocheRender =
             new $RecipeComponentBuilder(2) // https://github.com/BluSunrize/ImmersiveEngineering/blob/e63e4824800945eccf3684200a2c2270e2e1cdf2/src/api/java/blusunrize/immersiveengineering/api/crafting/ClocheRenderFunction.java#L57
-                .add(nonBlankString.key('type')) // generic | crop | stem | stacking | hemp
-                .add(nonBlankString.key('block'))
+                .add(c.nonBlankString.key('type')) // generic | crop | stem | stacking | hemp
+                .add(c.nonBlankString.key('block'))
 
         e.register('immersiveengineering:alloy',
             new $RecipeSchema(
-                outputItem.key('result'),
+                c.outputItem.key('result'),
                 ieInputItem.key('input0'),
                 ieInputItem.key('input1'),
-                intNumber.key('time').optional(200).alwaysWrite()
+                c.intNumber.key('time').optional(200).alwaysWrite()
             )
         )
         e.register('immersiveengineering:arc_furnace',
             new $RecipeSchema(
-                outputItem.asArray().key('results'),
-                inputItem.key('input'),
+                c.outputItem.asArray().key('results'),
+                c.inputItem.key('input'),
                 ieInputItem.asArray().key('additives').defaultOptional(),
-                intNumber.key('time').optional(100).alwaysWrite(),
-                intNumber.key('energy').optional(2400).alwaysWrite(),
-                inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
+                c.intNumber.key('time').optional(100).alwaysWrite(),
+                c.intNumber.key('energy').optional(2400).alwaysWrite(),
+                c.inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
         e.register('immersiveengineering:blast_furnace',
             new $RecipeSchema(
-                outputItem.key('result'),
-                inputItem.key('input'),
-                intNumber.key('time').optional(1200).alwaysWrite(),
-                inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
+                c.outputItem.key('result'),
+                c.inputItem.key('input'),
+                c.intNumber.key('time').optional(1200).alwaysWrite(),
+                c.inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
         e.register('immersiveengineering:blast_furnace_fuel',
             new $RecipeSchema(
-                inputItem.key('input'),
-                intNumber.key('time')
+                c.inputItem.key('input'),
+                c.intNumber.key('time')
             )
         )
         e.register('immersiveengineering:blueprint',
             new $RecipeSchema(
-                outputItem.key('result'),
+                c.outputItem.key('result'),
                 ieInputItem.asArray().key('inputs'),
-                nonBlankString.key('category').defaultOptional()
+                c.nonBlankString.key('category').defaultOptional()
             )
         )
         e.register('immersiveengineering:bottling_machine',
             new $RecipeSchema(
-                outputItem.asArray().key('results'),
+                c.outputItem.asArray().key('results'),
                 ieInputItem.asArray().key('inputs'),
-                inputFluidOrFluidTag('tag').key('fluid')
+                c.inputFluidOrFluidTag('tag').key('fluid')
             )
         )
         e.register('immersiveengineering:cloche',
             new $RecipeSchema(
-                outputItem.asArray().key('results'),
+                c.outputItem.asArray().key('results'),
                 ieInputItem.key('input'),
                 ieClocheRender.key('render'),
-                intNumber.key('time').optional(800).alwaysWrite()
+                c.intNumber.key('time').optional(800).alwaysWrite()
             )
         )
         e.register('immersiveengineering:coke_oven',
             new $RecipeSchema(
-                outputItem.key('result'),
+                c.outputItem.key('result'),
                 ieInputItem.key('input'),
-                intNumber.key('time').optional(900).alwaysWrite(),
-                intNumber.key('creosote').defaultOptional()
+                c.intNumber.key('time').optional(900).alwaysWrite(),
+                c.intNumber.key('creosote').defaultOptional()
             )
         )
         e.register('immersiveengineering:crusher',
             new $RecipeSchema(
-                outputItem.key('result'),
-                inputItem.key('input'),
-                outputItem.asArray().key('secondaries'),
-                intNumber.key('energy').optional(1600).alwaysWrite()
+                c.outputItem.key('result'),
+                c.inputItem.key('input'),
+                c.outputItem.asArray().key('secondaries'),
+                c.intNumber.key('energy').optional(1600).alwaysWrite()
             )
         )
         e.register('immersiveengineering:fermenter',
             new $RecipeSchema(
-                outputItem.key('result'),
+                c.outputItem.key('result'),
                 ieInputItem.key('input'),
-                inputFluidOrFluidTag('tag').key('fluid'),
-                intNumber.key('energy').optional(6400).alwaysWrite()
+                c.inputFluidOrFluidTag('tag').key('fluid'),
+                c.intNumber.key('energy').optional(6400).alwaysWrite()
             )
         )
         e.register('immersiveengineering:fertilizer',
             new $RecipeSchema(
                 ieInputItem.key('input'),
-                intNumber.key('growthModifier')
+                c.intNumber.key('growthModifier')
             )
         )
         e.register('immersiveengineering:generator_fuel',
             new $RecipeSchema(
-                intNumber.key('burnTime'),
-                nonBlankString.key('fluidTag') // unsure how to do the fluidTag better rn
+                c.intNumber.key('burnTime'),
+                c.nonBlankString.key('fluidTag') // unsure how to do the fluidTag better rn
             )
         )
         e.register('immersiveengineering:metal_press',
             new $RecipeSchema(
-                outputItem.key('result'),
+                c.outputItem.key('result'),
                 ieInputItem.key('input'),
-                intNumber.key('energy').optional(2400).alwaysWrite(),
-                nonBlankString.key('mold').defaultOptional().exclude() // use .mold(nonBlankString) after recipe
+                c.intNumber.key('energy').optional(2400).alwaysWrite(),
+                c.nonBlankString.key('mold').defaultOptional().exclude() // use .mold(nonBlankString) after recipe
             )
         )
         /*         let a = {
@@ -179,19 +178,19 @@ StartupEvents.recipeSchemaRegistry(e => {
         )
         e.register('immersiveengineering:mixer',
             new $RecipeSchema(
-                outputFluid.key('result'),
+                c.outputFluid.key('result'),
                 ieInputItem.asArray().key('inputs'),
-                inputFluidOrFluidTag('tag').key('fluid'),
-                intNumber.key('energy').optional(3200).alwaysWrite()
+                c.inputFluidOrFluidTag('tag').key('fluid'),
+                c.intNumber.key('energy').optional(3200).alwaysWrite()
             )
         )
         e.register('immersiveengineering:refinery',
             new $RecipeSchema(
-                outputFluid.key('result'),
-                inputFluidOrFluidTag('tag').key('input0'),
-                inputFluidOrFluidTag('tag').key('input1'),
+                c.outputFluid.key('result'),
+                c.inputFluidOrFluidTag('tag').key('input0'),
+                c.inputFluidOrFluidTag('tag').key('input1'),
                 ieInputItem.key('catalyst'),
-                intNumber.key('energy').optional(80).alwaysWrite()
+                c.intNumber.key('energy').optional(80).alwaysWrite()
             )
         )
         let a = {
@@ -224,24 +223,24 @@ StartupEvents.recipeSchemaRegistry(e => {
         e.register('immersiveengineering:squeezer',
             new $RecipeSchema(
                 ieInputItem.key('input'),
-                intNumber.key('energy').optional(6400).alwaysWrite(),
-                outputFluid.key('fluid').defaultOptional().exclude(), // use .fluid(outputFluid) after recipe
-                outputItem.key('result').defaultOptional().exclude() // use .result(outputItem) after recipe
+                c.intNumber.key('energy').optional(6400).alwaysWrite(),
+                c.outputFluid.key('fluid').defaultOptional().exclude(), // use .fluid(outputFluid) after recipe
+                c.outputItem.key('result').defaultOptional().exclude() // use .result(outputItem) after recipe
             )
         )
         e.register('immersiveengineering:thermoelectric_source',
             new $RecipeSchema(
-                intNumber.key('tempKelvin'),
-                nonBlankString.key('blockTag').defaultOptional().exclude(),
-                nonBlankString.key('singleBlock').defaultOptional().exclude()
+                c.intNumber.key('tempKelvin'),
+                c.nonBlankString.key('blockTag').defaultOptional().exclude(),
+                c.nonBlankString.key('singleBlock').defaultOptional().exclude()
             )
         )
         e.register('immersiveengineering:windmill_biome',
             new $RecipeSchema(
-                intNumber.key('modifier'),
-                nonBlankString.key('biomeTag').defaultOptional().exclude(),
-                nonBlankString.key('biome').defaultOptional().exclude()
+                c.intNumber.key('modifier'),
+                c.nonBlankString.key('biomeTag').defaultOptional().exclude(),
+                c.nonBlankString.key('biome').defaultOptional().exclude()
             )
         )
     }
-})
+}

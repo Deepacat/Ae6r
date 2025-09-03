@@ -1,33 +1,34 @@
-StartupEvents.recipeSchemaRegistry(e => {
+// priority: 0
+function recipeSchema_farmers_delight(e, c) {
     if (Platform.isLoaded('farmersdelight')) {
-        let itemOrAction = inputItem.or(
+        let itemOrAction = c.inputItem.or(
             new $RecipeComponentBuilder(2)
                 .add(
-                    anyString
+                    c.anyString
                         .key('type')
                         .alwaysWrite()
                         .optional('farmersdelight:tool_action')
                 )
-                .add(anyString.key('action'))
+                .add(c.anyString.key('action'))
         )
 
         e.register('farmersdelight:cooking',
             new $RecipeSchema(
-                inputItem.asArray().key('ingredients'),
-                outputItem.key('result'),
-                intNumber.key('cookingtime'),
-                floatNumber.key('experience').optional(1),
-                inputItem.key('container').defaultOptional(),
-                anyString.key('recipe_book_tab').optional('meals')
+                c.inputItem.asArray().key('ingredients'),
+                c.outputItem.key('result'),
+                c.intNumber.key('cookingtime'),
+                c.floatNumber.key('experience').optional(1),
+                c.inputItem.key('container').defaultOptional(),
+                c.anyString.key('recipe_book_tab').optional('meals')
             )
         )
         e.register('farmersdelight:cutting',
             new $RecipeSchema(
-                outputItem.asArray().key('result'),
-                inputItem.asArray().key('ingredients'),
+                c.outputItem.asArray().key('result'),
+                c.inputItem.asArray().key('ingredients'),
                 itemOrAction.key('tool'),
-                anyString.key('sound').defaultOptional()
+                c.anyString.key('sound').defaultOptional()
             )
         )
     }
-})
+}
