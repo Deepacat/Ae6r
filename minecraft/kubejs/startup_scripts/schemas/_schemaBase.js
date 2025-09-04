@@ -36,7 +36,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     )
 
     comps.inputFluidOrItem = (tagKeyStr) =>
-        comps.inputItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
+        comps.inputFluidOrFluidTag(tagKeyStr).or(comps.inputItem)
 
     let $HeatCondition
     if (Platform.isLoaded('create')) {

@@ -32,6 +32,6 @@ ServerEvents.recipes(e => {
     e.recipes.thermal.lapidary_fuel('#forge:gems/apatite', 40000 * 40)
         .id('kubejs:thermal/dynamo_fuels/lapidary_fuel/apatite')
 
-    e.recipes.thermal.lapidary_fuel('wizardsreborn:arcanum', 500000 * 40)
+    e.recipes.thermal.lapidary_fuel('#forge:gems/arcanum', 500000 * 40)
         .id('kubejs:thermal/dynamo_fuels/lapidary_fuel/arcanum')
 })

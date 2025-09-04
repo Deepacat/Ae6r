@@ -361,7 +361,8 @@ function scrapMelting(e, materialName, typesObj) {
         let item = typesObj[itemType].item.id + ''
         let fluidAmt = melt.amount
         let energy = melt.energy
-        e.recipes.thermal.crucible(Fluid.of(fluid.stack.id, fluidAmt), item, energy)
+        e.recipes.thermal.crucible(Fluid.of(fluid.stack.id, fluidAmt), item)
+            .energy(energy)
             .id(`emendatus:thermal/crucible/${item.split(':')[1]}`)
         embersMelting(e, Fluid.of(fluid.stack.id, fluidAmt), item)
             .id(`emendatus:embers/melting/${item.split(':')[1]}`)

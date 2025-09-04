@@ -86,3 +86,7 @@ ServerEvents.tags('block', e => {
     e.add('minecraft:mineable/shovel', [''])
     e.add('minecraft:mineable/hoe', [''])
 })
+
+ServerEvents.tags('fluid', e => {
+    e.add('c:hidden_from_recipe_viewers', ['thermal:latex'])
+})

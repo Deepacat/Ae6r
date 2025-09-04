@@ -53,3 +53,7 @@ ServerEvents.tags('item', e => {
 
     e.add('thermal:crafting/casts', ['#tconstruct:casts/multi_use'])
 })
+
+ServerEvents.tags('fluid', e => {
+    e.remove('forge:latex', 'thermal:latex')
+})

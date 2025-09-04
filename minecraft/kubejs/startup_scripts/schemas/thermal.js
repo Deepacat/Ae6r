@@ -5,7 +5,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputItem.key('result'),
                 c.inputFluidOrItem('fluid_tag').asArray().key('ingredients'),
-                c.intNumber.key('energy').optional(400).alwaysWrite(),
+                c.intNumber.key('energy').optional(400).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -13,7 +13,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputFluidOrItem.asArray().key('result'),
                 c.inputItem.key('ingredient'),
-                c.intNumber.key('energy').optional(2000).alwaysWrite(),
+                c.intNumber.key('energy').optional(2000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -21,7 +21,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputFluidOrItem.asArray().key('result'),
                 c.inputFluidOrItem('fluid_tag').asArray().key('ingredients'),
-                c.intNumber.key('energy').optional(4000).alwaysWrite(),
+                c.intNumber.key('energy').optional(4000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -29,7 +29,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputFluid.asArray().key('result'),
                 c.inputItem.key('ingredient'),
-                c.intNumber.key('energy').optional(40000).alwaysWrite(),
+                c.intNumber.key('energy').optional(40000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -37,7 +37,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputItem.key('result'),
                 c.inputFluidOrItem('fluid_tag').asArray().key('ingredients'),
-                c.intNumber.key('energy').optional(20000).alwaysWrite(),
+                c.intNumber.key('energy').optional(20000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -54,7 +54,7 @@ function recipeSchema_thermal(e, c) {
                 c.outputFluidOrItem.asArray().key('result'),
                 c.inputFluidOrItem('fluid_tag').key('ingredient'),
                 c.intNumber.key('water').optional(500).alwaysWrite(),
-                c.intNumber.key('energy').optional(20000).alwaysWrite(),
+                c.intNumber.key('energy').optional(20000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -62,7 +62,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputFluidOrItem.asArray().key('result'),
                 c.inputItem.asArray().key('ingredients'),
-                c.intNumber.key('energy').optional(2400).alwaysWrite(),
+                c.intNumber.key('energy').optional(2400).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -70,7 +70,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputItem.asArray().key('result'),
                 c.inputItem.key('ingredient'),
-                c.intNumber.key('energy').optional(4000).alwaysWrite(),
+                c.intNumber.key('energy').optional(4000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -89,14 +89,14 @@ function recipeSchema_thermal(e, c) {
                 c.outputFluidOrItem.asArray().key('result'),
                 c.inputItem.key('ingredient'),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude(),
-                c.intNumber.key('energy').optional(2000).alwaysWrite()
+                c.intNumber.key('energy').optional(2000).alwaysWrite().exclude()
             )
         )
         e.register('thermal:refinery',
             new $RecipeSchema(
                 c.outputFluidOrItem.asArray().key('result'),
                 c.inputFluidOrFluidTag('fluid_tag').key('ingredient'),
-                c.intNumber.key('energy').optional(8000).alwaysWrite(),
+                c.intNumber.key('energy').optional(8000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -104,7 +104,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputItem.asArray().key('result'),
                 c.inputItem.key('ingredient'),
-                c.intNumber.key('energy').optional(2000).alwaysWrite(),
+                c.intNumber.key('energy').optional(2000).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )
@@ -112,7 +112,7 @@ function recipeSchema_thermal(e, c) {
             new $RecipeSchema(
                 c.outputItem.key('result'),
                 c.inputItem.asArray().key('ingredients'),
-                c.intNumber.key('energy').optional(3200).alwaysWrite(),
+                c.intNumber.key('energy').optional(3200).alwaysWrite().exclude(),
                 c.floatNumber.key('experience').optional(0).alwaysWrite().exclude()
             )
         )

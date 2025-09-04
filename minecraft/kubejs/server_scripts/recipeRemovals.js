@@ -208,7 +208,7 @@ ServerEvents.recipes(e => {
         { output: 'mekanism:sawdust', mod: 'mekanism', type: 'mekanism:sawing' },
 
         { output: 'botania:mana_powder', mod: 'botania' },
-        
+
         { output: '/\\w+:\\w+_gear$/', type: 'minecraft:crafting_shaped' },
 
         { mod: 'occultism', type: 'occultism:miner' },
@@ -283,7 +283,7 @@ ServerEvents.recipes(e => {
         { output: 'ars_nouveau:battlemage_robes', id: 'ars_nouveau:battlemage_robes' },
         { output: 'ars_nouveau:battlemage_leggings', id: 'ars_nouveau:battlemage_leggings' },
         { output: 'ars_nouveau:battlemage_boots', id: 'ars_nouveau:battlemage_boots' },
-        
+
         // why does e6e remove like this why dont they just do id removals what even
         { output: 'bloodmagic:soulforge', id: 'bloodmagic:soul_forge' },
         { output: 'bloodmagic:ritualdiviner', id: 'bloodmagic:ritual_diviner_0' },
