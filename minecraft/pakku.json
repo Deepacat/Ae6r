@@ -4,6 +4,7 @@
     "overrides": [
         "config",
         "kubejs",
+        "!kubejs/probe",
         "ldlib",
         "defaultconfigs"
     ]

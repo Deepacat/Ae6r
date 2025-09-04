@@ -1,0 +1,7 @@
+
+[mobs]
+
+	[mobs.chicken]
+		#If Chickens have a different texture when they are babies
+		"Baby chicken texture" = true
+

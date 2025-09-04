@@ -77,17 +77,6 @@
         "value": 100
       }
     },
-    "additionalentityattributes:player.collection_range": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 64,
-        "value": 64
-      }
-    },
     "irons_spellbooks:nature_magic_resist": {
       "enabled": false,
       "min": {
@@ -119,17 +108,6 @@
       "max": {
         "default": 100,
         "value": 100
-      }
-    },
-    "malum:soul_ward_recovery_rate": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
       }
     },
     "minecraft:generic.luck": {
@@ -198,39 +176,6 @@
         "value": 100
       }
     },
-    "additionalentityattributes:player.lava_visibility": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
-    "additionalentityattributes:player.dropped_experience": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
-    "additionalentityattributes:generic.magic_protection": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "miniutilities:soul_damage": {
       "enabled": false,
       "min": {
@@ -286,17 +231,6 @@
         "value": 1000000
       }
     },
-    "malum:scythe_proficiency": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
-      }
-    },
     "ars_nouveau:ars_elemental.perk.summon_power": {
       "enabled": false,
       "min": {
@@ -306,17 +240,6 @@
       "max": {
         "default": 10000,
         "value": 10000
-      }
-    },
-    "additionalentityattributes:player.bonus_loot_count_rolls": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 128,
-        "value": 128
       }
     },
     "irons_spellbooks:holy_spell_power": {
@@ -339,17 +262,6 @@
       "max": {
         "default": 100,
         "value": 100
-      }
-    },
-    "reach-entity-attributes:reach": {
-      "enabled": false,
-      "min": {
-        "default": -1024,
-        "value": -1024
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
       }
     },
     "irons_spellbooks:evocation_magic_resist": {
@@ -495,17 +407,6 @@
         "value": 1024
       }
     },
-    "additionalentityattributes:generic.jump_height": {
-      "enabled": false,
-      "min": {
-        "default": -1024,
-        "value": -1024
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "irons_spellbooks:lightning_spell_power": {
       "enabled": false,
       "min": {
@@ -559,17 +460,6 @@
       "max": {
         "default": 100,
         "value": 100
-      }
-    },
-    "caelus:fall_flying": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1,
-        "value": 1
       }
     },
     "botania:pixie_spawn_chance": {
@@ -748,28 +638,6 @@
         "value": 10
       }
     },
-    "additionalentityattributes:player.critical_bonus_damage": {
-      "enabled": false,
-      "min": {
-        "default": -1,
-        "value": -1
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
-    "additionalentityattributes:generic.lung_capacity": {
-      "enabled": false,
-      "min": {
-        "default": -40000,
-        "value": -40000
-      },
-      "max": {
-        "default": 40000,
-        "value": 40000
-      }
-    },
     "attributeslib:overheal": {
       "enabled": false,
       "min": {
@@ -779,28 +647,6 @@
       "max": {
         "default": 10,
         "value": 10
-      }
-    },
-    "additionalentityattributes:player.bonus_rare_loot_rolls": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 128,
-        "value": 128
-      }
-    },
-    "malum:soul_ward_capacity": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
       }
     },
     "attributeslib:healing_received": {
@@ -825,17 +671,6 @@
         "value": 10
       }
     },
-    "additionalentityattributes:generic.water_speed": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1,
-        "value": 1
-      }
-    },
     "forge:entity_gravity": {
       "enabled": false,
       "min": {
@@ -845,17 +680,6 @@
       "max": {
         "default": 8,
         "value": 8
-      }
-    },
-    "additionalentityattributes:player.dig_speed": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
       }
     },
     "irons_spellbooks:holy_magic_resist": {
@@ -913,17 +737,6 @@
         "value": 1000
       }
     },
-    "malum:malignant_conversion": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1,
-        "value": 1
-      }
-    },
     "tconstruct:generic.bad_effect_duration_multiplier": {
       "enabled": false,
       "min": {
@@ -979,17 +792,6 @@
         "value": 100
       }
     },
-    "additionalentityattributes:player.water_visibility": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "irons_spellbooks:cooldown_reduction": {
       "enabled": false,
       "min": {
@@ -1021,17 +823,6 @@
       "max": {
         "default": 1,
         "value": 1
-      }
-    },
-    "stepheightentityattribute:stepheight": {
-      "enabled": false,
-      "min": {
-        "default": -1024,
-        "value": -1024
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
       }
     },
     "wizards_reborn:wissen_discount": {
@@ -1155,28 +946,6 @@
         "value": 100
       }
     },
-    "reach-entity-attributes:attack_range": {
-      "enabled": false,
-      "min": {
-        "default": -1024,
-        "value": -1024
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
-    "malum:soul_ward_integrity": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
-      }
-    },
     "tinkersjewelry:subspace": {
       "enabled": false,
       "min": {
@@ -1186,17 +955,6 @@
       "max": {
         "default": 6,
         "value": 6
-      }
-    },
-    "malum:reserve_staff_charges": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
       }
     },
     "irons_spellbooks:ender_spell_power": {
@@ -1274,28 +1032,6 @@
       "max": {
         "default": 10,
         "value": 10
-      }
-    },
-    "additionalentityattributes:generic.lava_speed": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1,
-        "value": 1
-      }
-    },
-    "malum:spirit_spoils": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
       }
     },
     "ars_nouveau:ars_nouveau.perk.mana_regen": {
@@ -1397,17 +1133,6 @@
         "value": 100
       }
     },
-    "malum:arcane_resonance": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2048,
-        "value": 2048
-      }
-    },
     "attributeslib:current_hp_damage": {
       "enabled": false,
       "min": {
@@ -1452,17 +1177,6 @@
         "value": 100
       }
     },
-    "additionalentityattributes:generic.mob_detection_range": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "tinkersjewelry:trade": {
       "enabled": false,
       "min": {
@@ -1472,17 +1186,6 @@
       "max": {
         "default": 100,
         "value": 100
-      }
-    },
-    "spectrum:mental_presence": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
       }
     },
     "tconstruct:generic.protection_cap": {

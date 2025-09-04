@@ -75,7 +75,7 @@
 			chain_range = 16.0
 
 	[tool.crown]
-		#Cube radius of the area of effect the Aetherium Crown applies to. [default: 8.0
+		#Cube radius of the area of effect the Aetherium Crown applies to. [default: 8.0]
 		radius = 8.0
 		#Syntax is ( original|replacement ). Effects that should be replaced with another when put into a Vessel Gem.
 		potion_banned = ["minecraft:instant_health|minecraft:regeneration", "minecraft:instant_damage|minecraft:wither"]
@@ -83,6 +83,8 @@
 	[tool.tuning_cylinder]
 		#Base chance (1/X) per level to drop a geode when using the Tuning Cylinder augment. [default: 32]
 		chance = 32
+		#List of blocks that can drop geodes when using the Tuning Cylinder augment.
+		allowed = ["#minecraft:base_stone_overworld", "#minecraft:base_stone_nether", "#minecraft:nylium", "#forge:sandstone", "minecraft:dripstone_block", "minecraft:calcite", "minecraft:smooth_basalt", "minecraft:basalt", "minecraft:end_stone", "minecraft:obsidian", "aetherworks:suevite"]
 
 #Settings for block parameters
 [block]
