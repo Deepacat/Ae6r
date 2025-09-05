@@ -23,7 +23,7 @@
 	- [ ] DG hammering / wirecutting (grouped bc theyre like the same thing)
 	- [x] CCA rolling
 	- [x] CCA tesla charging
-- [ ] make tinkers recipe builders
+- [x] make tinkers recipe builders
 	- [x] casting table
 	- [ ] casting basin
 - [x] remove sulfur ore (and others actually)

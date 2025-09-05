@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
     e.remove({ id: 'embers:item_extractor' })
-    e.shaped('embers:item_extractor', [
+    e.shaped('2x embers:item_extractor', [
         ' B ',
         'CAC',
         ' B '
@@ -10,7 +10,7 @@ ServerEvents.recipes(e => {
         C: 'embers:caminite_plate',
     }).id('kubejs:shaped/embers_item_extractor_servo')
 
-    e.shaped('4x embers:item_extractor', [
+    e.shaped('1x embers:item_extractor', [
         ' B ',
         'CAC',
         ' B '
@@ -21,7 +21,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_item_extractor_mechanism')
 
     e.remove({ id: 'embers:item_pipe' })
-    e.shaped('5x embers:item_pipe', [
+    e.shaped('8x embers:item_pipe', [
         ' A ',
         'CBC',
         ' A '
@@ -42,7 +42,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_item_dropper')
 
     e.remove({ id: 'embers:item_vacuum' })
-    e.shaped('embers:item_vacuum', [
+    e.shaped('2x embers:item_vacuum', [
         'DBB',
         'CA ',
         'DBB'
@@ -55,7 +55,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_item_vacuum')
 
     e.remove({ id: 'embers:item_transfer' })
-    e.shaped('2x embers:item_transfer', [
+    e.shaped('4x embers:item_transfer', [
         'BDB',
         'CAC',
         'C C'
@@ -67,7 +67,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_item_transfer')
 
     e.remove({ id: 'embers:fluid_extractor' })
-    e.shaped('4x embers:fluid_extractor', [
+    e.shaped('8x embers:fluid_extractor', [
         ' B ',
         'CDC',
         ' A '
@@ -78,7 +78,7 @@ ServerEvents.recipes(e => {
         D: '#forge:plates/lead'
     }).id('kubejs:shaped/embers_fluid_extractor_conduit')
 
-    e.shaped('embers:fluid_extractor', [
+    e.shaped('2x embers:fluid_extractor', [
         ' B ',
         'CDC',
         ' A '
@@ -90,7 +90,7 @@ ServerEvents.recipes(e => {
     }).id('kubejs:shaped/embers_fluid_extractor_rubber')
 
     e.remove({ id: 'embers:fluid_pipe' })
-    e.shaped('5x embers:fluid_pipe', [
+    e.shaped('12x embers:fluid_pipe', [
         ' A ',
         'CBC',
         ' A '
@@ -122,4 +122,8 @@ ServerEvents.recipes(e => {
         C: '#forge:ingots/lead',
         D: 'embers:fluid_pipe'
     }).id('kubejs:shaped/embers_fluid_transfer')
+
+    e.remove({ output: 'embers:ember_funnel'})
+    e.remove({ output: 'embers:ember_ejector'})
+
 })
