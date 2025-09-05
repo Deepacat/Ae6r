@@ -358,6 +358,7 @@
 				item: "thermal:white_rockwool"
 				type: "item"
 			}]
+			title: "Rockwool"
 			x: -5.0d
 			y: -0.5d
 		}
@@ -906,6 +907,7 @@
 					type: "item"
 				}
 			]
+			title: "Coke Blends"
 			x: -3.0d
 			y: 2.0d
 		}
@@ -925,19 +927,16 @@
 					type: "item"
 				}
 			]
+			title: "Coke Bricks"
 			x: -2.5d
 			y: 3.0d
 		}
 		{
 			dependencies: ["00AA0E1E061988B5"]
-			icon: "thermal:latex_bucket"
+			dependency_requirement: "one_completed"
+			icon: "thermal:device_tree_extractor"
 			id: "48D210C52F254D74"
 			tasks: [
-				{
-					id: "4FE343191A155C56"
-					item: "thermal:latex_bucket"
-					type: "item"
-				}
 				{
 					id: "7F81F9062BB7FBFB"
 					item: {
@@ -948,27 +947,51 @@
 						}
 					}
 					optional_task: true
+					title: "The Pressing Route"
 					type: "item"
 				}
 				{
 					id: "6172804F02CC6435"
 					item: "thermal:device_tree_extractor"
 					optional_task: true
+					title: "The Extractor Route"
+					type: "item"
+				}
+				{
+					id: "702024EECDC15930"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "or(item(biomeswevegone:mahogany_sapling)item(biomeswevegone:baobab_sapling)item(minecraft:jungle_sapling)item(minecraft:acacia_sapling)item(biomeswevegone:rainbow_eucalyptus_sapling))"
+						}
+					}
+					optional_task: true
+					title: "Extractable Trees"
 					type: "item"
 				}
 			]
-			title: "latex"
+			title: "Latex Harvesting"
 			x: -4.5d
 			y: 0.5d
 		}
 		{
 			dependencies: ["48D210C52F254D74"]
+			icon: "thermal:machine_bottler"
 			id: "7C116C2EEE83B018"
-			tasks: [{
-				id: "230A3AF5D61E1AEE"
-				item: "thermal:machine_bottler"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "230A3AF5D61E1AEE"
+					item: "thermal:machine_bottler"
+					type: "item"
+				}
+				{
+					id: "524E0627F90A0F68"
+					item: "industrialforegoing:latex_bucket"
+					type: "item"
+				}
+			]
+			title: "Latex Processing"
 			x: -5.0d
 			y: 1.5d
 		}
@@ -1009,11 +1032,20 @@
 		{
 			dependencies: ["7C116C2EEE83B018"]
 			id: "32641439DB4C18EC"
-			tasks: [{
-				id: "6B99E280BE8DC50E"
-				item: "industrialforegoing:dryrubber"
-				type: "item"
-			}]
+			subtitle: "Rubber? I barely"
+			tasks: [
+				{
+					id: "6B99E280BE8DC50E"
+					item: "industrialforegoing:dryrubber"
+					type: "item"
+				}
+				{
+					id: "388B963D5BC1B6D3"
+					item: "thermal:cured_rubber"
+					type: "item"
+				}
+			]
+			title: "Industrial Grade Rubbers"
 			x: -4.0d
 			y: 2.0d
 		}
@@ -1071,11 +1103,13 @@
 			dependencies: ["7829357FC39DE238"]
 			id: "74C7C15846895392"
 			shape: "circle"
+			subtitle: "*GT:NH Flashbacks*"
 			tasks: [{
 				id: "1D7E4FAB5E23DC04"
 				item: "emendatus:steel_ingot"
 				type: "item"
 			}]
+			title: "Steel Blasting"
 			x: -3.0d
 			y: 4.0d
 		}
