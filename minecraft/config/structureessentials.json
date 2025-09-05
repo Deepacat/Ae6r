@@ -13,7 +13,7 @@
   },
   "mapSearchRadius": {
     "desc:": "Specifies the maximum radius map items can search for structures. Lowering this value reduces the time structure searches stall the server but decreases the range in which structures are found. Vanilla: 50, Default: 40",
-    "mapSearchRadius": 40
+    "mapSearchRadius": 50
   },
   "locateSearchRadius": {
     "desc:": "Sets the search radius for the locate structure command. Vanilla: 100, Default: 110",
