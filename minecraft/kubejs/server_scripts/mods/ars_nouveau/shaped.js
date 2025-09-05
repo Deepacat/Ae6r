@@ -6,8 +6,8 @@ ServerEvents.recipes(e => {
         'CAC'
     ], {
         A: 'kubejs:warding_stone',
-        B: '#forge:nuggets/gold_brass',
-        C: '#forge:ingots/gold_brass',
+        B: '#forge:nuggets/brass',
+        C: '#forge:ingots/brass',
         D: ['#forge:storage_blocks/lapis', '#forge:storage_blocks/fluorite']
     }).id('kubejs:arcane_core')
 
@@ -27,8 +27,8 @@ ServerEvents.recipes(e => {
         'CDC'
     ], {
         A: 'ars_nouveau:arcane_stone',
-        B: '#forge:nuggets/gold_brass',
-        C: '#forge:ingots/gold_brass',
+        B: '#forge:nuggets/brass',
+        C: '#forge:ingots/brass',
         D: ['#forge:gems/lapis', '#forge:gems/fluorite']
     }).id('kubejs:arcane_pedestal')
 
@@ -39,8 +39,8 @@ ServerEvents.recipes(e => {
         'CAC'
     ], {
         A: 'kubejs:warding_stone',
-        B: '#forge:nuggets/gold_brass',
-        C: '#forge:ingots/gold_brass',
+        B: '#forge:nuggets/brass',
+        C: '#forge:ingots/brass',
         D: 'minecraft:conduit'
     }).id('kubejs:enchanting_apparatus')
 
@@ -50,8 +50,8 @@ ServerEvents.recipes(e => {
         'BCB',
         'ADA'
     ], {
-        A: '#forge:nuggets/gold_brass',
-        B: '#forge:ingots/gold_brass',
+        A: '#forge:nuggets/brass',
+        B: '#forge:ingots/brass',
         C: 'supplementaries:jar',
         D: 'kubejs:warding_stone'
     }).id('kubejs:source_jar')

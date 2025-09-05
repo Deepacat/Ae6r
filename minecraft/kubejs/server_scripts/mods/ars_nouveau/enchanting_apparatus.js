@@ -34,28 +34,28 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:volcanic_sourcelink' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/gold_brass', 'bloodmagic:lavacrystal', '#forge:nuggets/gold_brass', '#forge:ingots/gold_brass', '#forge:ingots/gold_brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
+        ['#forge:nuggets/brass', 'bloodmagic:lavacrystal', '#forge:nuggets/brass', '#forge:ingots/brass', '#forge:ingots/brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
         'minecraft:conduit',
         'ars_nouveau:volcanic_sourcelink'
     ).id('kubejs:volcanic_sourcelink')
 
     e.remove({ id: 'ars_nouveau:mycelial_sourcelink' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/gold_brass', 'eidolon:fungus_sprouts', '#forge:nuggets/gold_brass', '#forge:ingots/gold_brass', '#forge:ingots/gold_brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
+        ['#forge:nuggets/brass', 'eidolon:fungus_sprouts', '#forge:nuggets/brass', '#forge:ingots/brass', '#forge:ingots/brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
         'minecraft:conduit',
         'ars_nouveau:mycelial_sourcelink'
     ).id('kubejs:mycelial_sourcelink')
 
     e.remove({ id: 'ars_nouveau:vitalic_sourcelink' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/gold_brass', 'minecraft:glistering_melon', '#forge:nuggets/gold_brass', '#forge:ingots/gold_brass', '#forge:ingots/gold_brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
+        ['#forge:nuggets/brass', 'minecraft:glistering_melon', '#forge:nuggets/brass', '#forge:ingots/brass', '#forge:ingots/brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
         'minecraft:conduit',
         'ars_nouveau:vitalic_sourcelink'
     ).id('kubejs:vitalic_sourcelink')
 
     e.remove({ id: 'ars_nouveau:alchemical_sourcelink' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/gold_brass', 'minecraft:brewing_stand', '#forge:nuggets/gold_brass', '#forge:ingots/gold_brass', '#forge:ingots/gold_brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
+        ['#forge:nuggets/brass', 'minecraft:brewing_stand', '#forge:nuggets/brass', '#forge:ingots/brass', '#forge:ingots/brass', 'eidolon:gold_inlay', 'eidolon:gold_inlay', 'eidolon:gold_inlay'],
         'minecraft:conduit',
         'ars_nouveau:alchemical_sourcelink'
     ).id('kubejs:alchemical_sourcelink')
@@ -68,14 +68,14 @@ ServerEvents.recipes(e => {
     ).id('kubejs:imbuement_chamber_enchanting')
 
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:ingots/gold_brass', 'kubejs:warding_stone', '#forge:ingots/gold_brass', 'ars_nouveau:glyph_extract', 'ars_nouveau:glyph_extract', 'kubejs:replaceme', 'kubejs:replaceme', 'kubejs:replaceme'],
+        ['#forge:ingots/brass', 'kubejs:warding_stone', '#forge:ingots/brass', 'ars_nouveau:glyph_extract', 'ars_nouveau:glyph_extract', 'kubejs:replaceme', 'kubejs:replaceme', 'kubejs:replaceme'],
         'ars_nouveau:potion_jar',
         'ars_nouveau:potion_melder', 10
     ).id('kubejs:potion_melder')
 
     e.remove({ id: 'ars_nouveau:wand' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:ingots/gold_brass', 'ars_nouveau:glyph_projectile', 'minecraft:conduit', '#forge:gems/source', 'ars_nouveau:glyph_accelerate', 'ars_nouveau:spell_parchment', '#forge:gems/source', '#forge:ingots/gold_brass'],
+        ['#forge:ingots/brass', 'ars_nouveau:glyph_projectile', 'minecraft:conduit', '#forge:gems/source', 'ars_nouveau:glyph_accelerate', 'ars_nouveau:spell_parchment', '#forge:gems/source', '#forge:ingots/brass'],
         'botania:livingwood',
         'ars_nouveau:wand', 6000
     ).id('kubejs:wand')
@@ -145,7 +145,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:spell_bow' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:storage_blocks/source', '#forge:storage_blocks/gold_brass', 'ars_nouveau:glyph_projectile', 'botania:rune_air', 'botania:rune_air'],
+        ['#forge:storage_blocks/source', '#forge:storage_blocks/brass', 'ars_nouveau:glyph_projectile', 'botania:rune_air', 'botania:rune_air'],
         Item.of('botania:livingwood_bow', '{Damage:0}').weakNBT(),
         'ars_nouveau:spell_bow', 10000
     ).id('kubejs:spell_bow')

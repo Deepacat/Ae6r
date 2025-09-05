@@ -64,12 +64,12 @@ ServerEvents.recipes(e => {
         'tconstruct:sky_slime_crystal'
     ).id(`kubejs:alloy_kiln/improved_scrap_tome`)
 
-    e.recipes.immersiveengineering.alloy('2x emendatus:enderium_ingot',
+    e.recipes.immersiveengineering.alloy('2x thermal:enderium_ingot',
         '2x #forge:ingots/terminite',
         '#forge:dusts/diamond'
     ).id(`kubejs:alloy_kiln/enderium_ingot`)
     
-    e.recipes.immersiveengineering.alloy('2x emendatus:enderium_block',
+    e.recipes.immersiveengineering.alloy('2x thermal:enderium_block',
         '2x #forge:storage_blocks/terminite',
         '9x #forge:dusts/diamond'
     ).id(`kubejs:alloy_kiln/enderium_block`)

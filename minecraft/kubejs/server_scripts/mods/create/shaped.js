@@ -33,6 +33,17 @@ ServerEvents.recipes(e => {
         B: '#forge:plates/invar',
     }).id('kubejs:shaped/whisk')
 
+    e.remove({ id: 'create:crafting/kinetics/empty_blaze_burner'})
+    e.shaped('create:empty_blaze_burner', [
+        'CBC',
+        'BAB',
+        'CBC'
+    ], {
+        A: '#forge:ingots/lumium',
+        B: 'tconstruct:scorched_brick',
+        C: 'minecraft:iron_bars'
+    })
+
     e.remove({ id: 'create:crafting/kinetics/millstone' })
     e.shaped('create:millstone', [
         ' A ',
@@ -88,16 +99,6 @@ ServerEvents.recipes(e => {
         A: 'create:turntable',
         B: 'minecraft:sticky_piston',
         C: 'create:shaft'
-    })
-
-    e.remove({ id: 'create:crafting/kinetics/white_sail' })
-    e.shaped(Item.of('create:white_sail', 8), [
-        'AAA',
-        'ABA',
-        'AAA'
-    ], {
-        A: 'create:sail_frame',
-        B: '#thermal:rockwool'
     })
 
     e.remove({ id: 'create:crafting/kinetics/encased_chain_drive' })
