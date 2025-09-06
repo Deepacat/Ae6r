@@ -33,8 +33,12 @@ StartupEvents.recipeSchemaRegistry(e => {
 
     comps.inputStackedItem = new $RecipeComponent({
         componentClass: () => $KJSInputItem,
-        read: (recipe, from) => recipe.readInputItem(from),
-        write: (recipe, value) => {
+        read: (recipe, from) => {
+            let result = recipe.readInputItem(from);
+            if (result.isEmpty()) throw new Error("item doesn't exist");
+            return result;
+        },
+        write: (_, value) => {
             let json = value.toJson(true).getAsJsonObject()
             let result = json.remove('ingredient').getAsJsonObject()
             result.add('count', json.remove('count'))
@@ -50,10 +54,10 @@ StartupEvents.recipeSchemaRegistry(e => {
     )
 
     comps.inputFluidOrItem = (tagKeyStr) =>
-        comps.inputFluidOrFluidTag(tagKeyStr).or(comps.inputItem)
+        comps.inputItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
 
     comps.inputFluidOrStackedItem = (tagKeyStr) =>
-        comps.inputFluidOrFluidTag(tagKeyStr).or(comps.inputStackedItem)
+        comps.inputStackedItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
 
     let $HeatCondition
     if (Platform.isLoaded('create')) {
