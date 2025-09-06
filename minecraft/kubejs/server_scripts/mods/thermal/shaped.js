@@ -42,7 +42,6 @@ ServerEvents.recipes(e => {
         B: '#forge:rods/gold_copper',
         C: '#forge:nuggets/gold'
     })
-    //     {
 
     e.remove({ id: 'thermal:redstone_servo' })
     e.shaped('thermal:redstone_servo', [
@@ -75,7 +74,7 @@ ServerEvents.recipes(e => {
         D: '#forge:ingots/lead'
     })
 
-    e.remove({ id: 'thermal:upgrade_augment_1' })
+    e.remove({ id: 'thermal:augments/upgrade_augment_1' })
     e.shaped('thermal:upgrade_augment_1', [
         'ABA',
         'CDC',
@@ -84,11 +83,11 @@ ServerEvents.recipes(e => {
         A: '#forge:gears/invar',
         B: Item.of('thermal:energy_cell'),
         C: '#xnet:connectors',
-        D: 'kubejs:replaceme'/*pncadvancedpcb*/,
+        D: 'pneumaticcraft:module_expansion_card',
         E: Item.of('thermal:fluid_cell')
     })
 
-    e.remove({ id: 'thermal:upgrade_augment_2' })
+    e.remove({ id: 'thermal:augments/upgrade_augment_2' })
     e.shaped('thermal:upgrade_augment_2', [
         'ABA',
         'CDC',
@@ -101,7 +100,7 @@ ServerEvents.recipes(e => {
         E: 'powah:capacitor_hardened'
     })
 
-    e.remove({ id: 'thermal:upgrade_augment_3' })
+    e.remove({ id: 'thermal:augments/upgrade_augment_3' })
     e.shaped('thermal:upgrade_augment_3', [
         'ABA',
         'CDC',
