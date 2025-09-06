@@ -9,7 +9,7 @@ ServerEvents.recipes(e => {
         B: 'pneumaticcraft:printed_circuit_board',
         C: Item.of('pneumaticcraft:compressed_iron_helmet', '{Damage:0}').weakNBT(),
         D: 'mekanism:cardboard_box'
-    }).id('kubejs:pneumaticcraft_pneumatic_helmet')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pneumatic_helmet')
 
     e.remove({ id: 'pneumaticcraft:pneumatic_chestplate' })
     e.shaped('kubejs:pneumatic_chestplate_package', [
@@ -21,7 +21,7 @@ ServerEvents.recipes(e => {
         B: 'pneumaticcraft:printed_circuit_board',
         C: Item.of('pneumaticcraft:compressed_iron_chestplate', '{Damage:0}').weakNBT(),
         D: 'mekanism:cardboard_box'
-    }).id('kubejs:pneumaticcraft_pneumatic_chestplate')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pneumatic_chestplate')
 
     e.remove({ id: 'pneumaticcraft:pneumatic_leggings' })
     e.shaped('kubejs:pneumatic_leggings_package', [
@@ -33,7 +33,7 @@ ServerEvents.recipes(e => {
         B: 'pneumaticcraft:printed_circuit_board',
         C: Item.of('pneumaticcraft:compressed_iron_leggings', '{Damage:0}').weakNBT(),
         D: 'mekanism:cardboard_box'
-    }).id('kubejs:pneumaticcraft_pneumatic_leggings')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pneumatic_leggings')
 
     e.remove({ id: 'pneumaticcraft:pneumatic_boots' })
     e.shaped('kubejs:pneumatic_boots_package', [
@@ -45,7 +45,7 @@ ServerEvents.recipes(e => {
         B: 'pneumaticcraft:printed_circuit_board',
         C: Item.of('pneumaticcraft:compressed_iron_boots', '{Damage:0}').weakNBT(),
         D: 'mekanism:cardboard_box'
-    }).id('kubejs:pneumaticcraft_pneumatic_boots')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pneumatic_boots')
 
     e.remove({ id: 'pneumaticcraft:armor_upgrade' })
     e.shaped('pneumaticcraft:armor_upgrade', [
@@ -56,7 +56,7 @@ ServerEvents.recipes(e => {
         A: '#pneumaticcraft:upgrade_components',
         B: '#mekanism:enriched/diamond',
         C: '#forge:ingots/compressed_iron'
-    }).id('kubejs:pneumaticcraft_armor_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_armor_upgrade')
 
     e.remove({ id: 'pneumaticcraft:flippers_upgrade' })
     e.shaped('pneumaticcraft:flippers_upgrade', [
@@ -67,7 +67,7 @@ ServerEvents.recipes(e => {
         A: '#pneumaticcraft:upgrade_components',
         B: '#pneumaticcraft:plastic_sheets',
         C: Item.of('thermal:diving_boots', '{Damage:0}').weakNBT()
-    }).id('kubejs:pneumaticcraft_flippers_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_flippers_upgrade')
 
     e.remove({ id: 'pneumaticcraft:magnet_upgrade' })
     e.shaped('pneumaticcraft:magnet_upgrade', [
@@ -78,7 +78,7 @@ ServerEvents.recipes(e => {
         A: '#pneumaticcraft:upgrade_components',
         B: '#pneumaticcraft:plastic_sheets',
         C: 'thermal:flux_magnet'
-    }).id('kubejs:pneumaticcraft_magnet_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_magnet_upgrade')
 
     e.remove({ id: 'pneumaticcraft:liquid_compressor' })
     e.shaped(Item.of('pneumaticcraft:liquid_compressor', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
@@ -92,7 +92,7 @@ ServerEvents.recipes(e => {
         D: 'thermal:machine_frame',
         E: 'pneumaticcraft:pressure_tube',
         F: 'thermal:upgrade_augment_1'
-    }).id('kubejs:pneumaticcraft_liquid_compressor')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_liquid_compressor')
 
     e.remove({ id: 'pneumaticcraft:pressure_tube' })
     e.shaped(Item.of('12x pneumaticcraft:pressure_tube'), [
@@ -100,7 +100,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:ingots/compressed_iron',
         B: '#thermal:glass/hardened'
-    }).id('kubejs:pneumaticcraft_pressure_tube')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pressure_tube')
 
     e.remove({ id: 'pneumaticcraft:small_tank' })
     e.shaped('pneumaticcraft:small_tank', [
@@ -111,7 +111,7 @@ ServerEvents.recipes(e => {
         A: 'create:andesite_alloy',
         B: '#thermal:glass/hardened',
         C: 'mekanism:basic_fluid_tank'
-    }).id('kubejs:pneumaticcraft_small_tank')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_small_tank')
 
     e.remove({ id: 'pneumaticcraft:pressure_chamber_valve' })
     e.shaped(Item.of('pneumaticcraft:pressure_chamber_valve', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
@@ -121,7 +121,7 @@ ServerEvents.recipes(e => {
         A: 'thermal:upgrade_augment_1',
         B: 'pneumaticcraft:pressure_chamber_wall',
         C: 'pneumaticcraft:pressure_tube'
-    }).id('kubejs:pneumaticcraft_pressure_chamber_valve')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pressure_chamber_valve')
 
     e.remove({ id: 'pneumaticcraft:pressure_chamber_interface' })
     e.shaped('pneumaticcraft:pressure_chamber_interface', [
@@ -132,7 +132,7 @@ ServerEvents.recipes(e => {
         A: 'thermal:redstone_servo',
         B: 'pneumaticcraft:pressure_chamber_wall',
         C: '#forge:gears/compressed_iron'
-    }).id('kubejs:pneumaticcraft_pressure_chamber_interface')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pressure_chamber_interface')
 
     e.remove({ id: 'pneumaticcraft:safety_tube_module' })
     e.shaped('pneumaticcraft:safety_tube_module', [
@@ -143,7 +143,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:pressure_gauge',
         B: 'pneumaticcraft:pressure_tube',
         C: 'thermal:redstone_servo'
-    }).id('kubejs:pneumaticcraft_safety_tube_module')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_safety_tube_module')
 
     e.remove({ id: 'pneumaticcraft:pressure_gauge' })
     e.shaped('pneumaticcraft:pressure_gauge', [
@@ -154,7 +154,7 @@ ServerEvents.recipes(e => {
         A: 'minecraft:paper',
         B: '#forge:nuggets/signalum',
         C: '#forge:nuggets/iron'
-    }).id('kubejs:pneumaticcraft_pressure_gauge')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pressure_gauge')
 
     e.remove({ id: 'pneumaticcraft:pressure_gauge_module' })
     e.shaped('pneumaticcraft:pressure_gauge_module', [
@@ -164,7 +164,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:pressure_gauge',
         B: '#forge:nuggets/signalum',
         C: 'pneumaticcraft:pressure_tube'
-    }).id('kubejs:pneumaticcraft_pressure_gauge_module')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pressure_gauge_module')
 
     e.remove({ id: 'pneumaticcraft:advanced_liquid_compressor' })
     e.shaped(Item.of('pneumaticcraft:advanced_liquid_compressor', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
@@ -177,7 +177,7 @@ ServerEvents.recipes(e => {
         C: 'pneumaticcraft:advanced_pressure_tube',
         D: 'pneumaticcraft:liquid_compressor',
         E: 'thermal:upgrade_augment_2'
-    }).id('kubejs:pneumaticcraft_advanced_liquid_compressor')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_advanced_liquid_compressor')
 
     e.remove({ id: 'pneumaticcraft:electrostatic_compressor' })
     e.shaped(Item.of('pneumaticcraft:electrostatic_compressor', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
@@ -192,7 +192,7 @@ ServerEvents.recipes(e => {
         E: 'thermal:upgrade_augment_3',
         F: 'supplementaries:bellows',
         G: 'pneumaticcraft:turbine_rotor'
-    }).id('kubejs:pneumaticcraft_electrostatic_compressor')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_electrostatic_compressor')
 
     e.remove({ id: 'pneumaticcraft:thermal_compressor' })
     e.shaped(Item.of('pneumaticcraft:thermal_compressor', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
@@ -204,7 +204,18 @@ ServerEvents.recipes(e => {
         B: 'pneumaticcraft:pressure_tube',
         C: 'powah:thermoelectric_plate',
         D: '#industrialforegoing:machine_frame/pity'
-    }).id('kubejs:pneumaticcraft_thermal_compressor')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_thermal_compressor')
+
+    e.shaped('pneumaticcraft:module_expansion_card', [
+        'ABA',
+        'BCB',
+        'ADA'
+    ], {
+        A: '#forge:wires/copper',
+        B: 'rftoolscontrol:ram_chip',
+        C: 'immersiveengineering:logic_circuit',
+        D: 'immersiveengineering:connector_probe'
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_module_expansion_card_alternate')
 
     e.remove({ id: 'pneumaticcraft:programming_puzzle' })
     e.shaped(Item.of('24x pneumaticcraft:programming_puzzle'), [
@@ -214,7 +225,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#pneumaticcraft:plastic_sheets',
         B: 'pneumaticcraft:printed_circuit_board'
-    }).id('kubejs:pneumaticcraft_programming_puzzle')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_programming_puzzle')
 
     e.remove({ id: 'pneumaticcraft:pneumatic_dynamo' })
     e.shaped('pneumaticcraft:pneumatic_dynamo', [
@@ -227,7 +238,7 @@ ServerEvents.recipes(e => {
         C: 'pneumaticcraft:printed_circuit_board',
         D: '#forge:gears/compressed_iron',
         E: 'thermal:machine_frame'
-    }).id('kubejs:pneumaticcraft_pneumatic_dynamo')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_pneumatic_dynamo')
 
     e.remove({ id: 'pneumaticcraft:thermal_lagging' })
     e.shaped(Item.of('6x pneumaticcraft:thermal_lagging'), [
@@ -237,7 +248,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:glass_panes/black',
         B: 'thermal:gray_rockwool'
-    }).id('kubejs:pneumaticcraft_thermal_lagging')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_thermal_lagging')
 
     e.remove({ id: 'pneumaticcraft:refinery' })
     e.shaped('pneumaticcraft:refinery', [
@@ -249,7 +260,7 @@ ServerEvents.recipes(e => {
         B: 'mekanism:superheating_element',
         C: 'mekanism:dynamic_tank',
         D: 'mekanism:basic_mechanical_pipe'
-    }).id('kubejs:pneumaticcraft_refinery')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_refinery')
 
     e.remove({ id: 'pneumaticcraft:refinery_output' })
     e.shaped('pneumaticcraft:refinery_output', [
@@ -260,7 +271,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:reinforced_bricks',
         B: 'mekanism:basic_mechanical_pipe',
         C: 'mekanism:dynamic_tank'
-    }).id('kubejs:pneumaticcraft_refinery_output')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_refinery_output')
 
     e.remove({ id: 'pneumaticcraft:uv_light_box' })
     e.shaped('pneumaticcraft:uv_light_box', [
@@ -273,7 +284,7 @@ ServerEvents.recipes(e => {
         C: 'glassential:glass_dark',
         D: 'pneumaticcraft:pcb_blueprint',
         E: 'pneumaticcraft:pressure_tube'
-    }).id('kubejs:pneumaticcraft_uv_light_box')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_uv_light_box')
 
     e.remove({ id: 'pneumaticcraft:jet_boots_upgrade_1' })
     e.shaped('pneumaticcraft:jet_boots_upgrade_1', [
@@ -285,7 +296,7 @@ ServerEvents.recipes(e => {
         B: 'pneumaticcraft:advanced_pressure_tube',
         C: 'pneumaticcraft:vortex_cannon',
         D: 'pneumaticcraft:pressure_chamber_valve'
-    }).id('kubejs:pneumaticcraft_jet_boots_upgrade_1')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_jet_boots_upgrade_1')
 
     e.remove({ id: 'pneumaticcraft:jet_boots_upgrade_2' })
     e.shaped('pneumaticcraft:jet_boots_upgrade_2', [
@@ -299,7 +310,7 @@ ServerEvents.recipes(e => {
         D: '#forge:circuits/basic',
         E: 'pneumaticcraft:pneumatic_cylinder',
         F: Item.of('minecraft:potion', '{Potion:"undergarden:featherweight"}')
-    }).id('kubejs:pneumaticcraft_jet_boots_upgrade_2')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_jet_boots_upgrade_2')
 
     e.remove({ id: 'pneumaticcraft:jet_boots_upgrade_3' })
     e.shaped('pneumaticcraft:jet_boots_upgrade_3', [
@@ -312,7 +323,7 @@ ServerEvents.recipes(e => {
         C: '#forge:gems/blazing',
         D: '#forge:circuits/elite',
         E: 'thermal:lightning_charge'
-    }).id('kubejs:pneumaticcraft_jet_boots_upgrade_3')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_jet_boots_upgrade_3')
 
     e.remove({ id: 'pneumaticcraft:jet_boots_upgrade_4' })
     e.shaped('pneumaticcraft:jet_boots_upgrade_4', [
@@ -325,7 +336,7 @@ ServerEvents.recipes(e => {
         C: Item.of('tconstruct:copper_can', '{fluid:"industrialforegoing:ether_gas"}'),
         D: '#forge:circuits/ultimate',
         E: Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"minecraft:long_slow_falling"}')
-    }).id('kubejs:pneumaticcraft_jet_boots_upgrade_4')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_jet_boots_upgrade_4')
 
     e.remove({ id: 'pneumaticcraft:jet_boots_upgrade_5' })
     e.shaped('pneumaticcraft:jet_boots_upgrade_5', [
@@ -338,7 +349,7 @@ ServerEvents.recipes(e => {
         C: 'kubejs:replaceme',
         D: '#botania:runes/summer',
         E: Item.of('minecraft:lingering_potion', '{Potion:"minecraft:long_slow_falling"}')
-    }).id('kubejs:pneumaticcraft_jet_boots_upgrade_5')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_jet_boots_upgrade_5')
 
     e.remove({ id: 'pneumaticcraft:vacuum_trap' })
     e.shaped('pneumaticcraft:vacuum_trap', [
@@ -353,7 +364,7 @@ ServerEvents.recipes(e => {
         E: 'pneumaticcraft:pressure_tube',
         F: '#botania:runes/air',
         G: 'kubejs:dimensional_storage_crystal'
-    }).id('kubejs:pneumaticcraft_vacuum_trap')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_vacuum_trap')
 
     e.remove({ id: 'pneumaticcraft:spawner_core_shell' })
     e.shaped('pneumaticcraft:spawner_core_shell', [
@@ -364,7 +375,7 @@ ServerEvents.recipes(e => {
         A: 'kubejs:dimensional_storage_crystal',
         B: 'pneumaticcraft:pressure_chamber_glass',
         C: 'naturesaura:calling_spirit'
-    }).id('kubejs:pneumaticcraft_spawner_core_shell')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_spawner_core_shell')
 
     e.remove({ id: 'pneumaticcraft:heat_pipe' })
     e.shaped(Item.of('6x pneumaticcraft:heat_pipe'), [
@@ -375,7 +386,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:thermal_lagging',
         B: '#forge:storage_blocks/compressed_iron',
         C: '#forge:storage_blocks/copper'
-    }).id('kubejs:pneumaticcraft_heat_pipe')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_heat_pipe')
 
     e.remove({ id: 'pneumaticcraft:speed_upgrade_from_glycerol' })
     e.shaped(Item.of('4x pneumaticcraft:speed_upgrade'), [
@@ -386,7 +397,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:upgrade_matrix',
         B: 'pneumaticcraft:glycerol',
         C: { type: 'immersiveengineering:fluid', tag: 'forge:lubricant', amount: 1000 }
-    }).id('kubejs:pneumaticcraft_speed_upgrade_from_glycerol')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_speed_upgrade_from_glycerol')
 
     e.remove({ id: 'pneumaticcraft:volume_upgrade' })
     e.shaped(Item.of('4x pneumaticcraft:volume_upgrade'), [
@@ -397,7 +408,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:upgrade_matrix',
         B: 'pneumaticcraft:air_canister',
         C: '#thermal:glass/hardened'
-    }).id('kubejs:pneumaticcraft_volume_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_volume_upgrade')
 
     e.remove({ id: 'pneumaticcraft:vacuum_pump' })
     e.shaped(Item.of('pneumaticcraft:vacuum_pump', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
@@ -411,7 +422,7 @@ ServerEvents.recipes(e => {
         D: 'pneumaticcraft:reinforced_stone_slab',
         E: 'pneumaticcraft:pressure_chamber_glass',
         F: 'thermal:machine_frame'
-    }).id('kubejs:pneumaticcraft_vacuum_pump')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_vacuum_pump')
 
     e.remove({ id: 'pneumaticcraft:item_life_upgrade' })
     e.shaped('pneumaticcraft:item_life_upgrade', [
@@ -422,7 +433,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:upgrade_matrix',
         B: 'kubejs:replaceme',
         C: 'naturesaura:calling_spirit'
-    }).id('kubejs:pneumaticcraft_item_life_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_item_life_upgrade')
 
     e.remove({ id: 'pneumaticcraft:inventory_upgrade' })
     e.shaped(Item.of('4x pneumaticcraft:inventory_upgrade'), [
@@ -435,7 +446,7 @@ ServerEvents.recipes(e => {
         C: 'thermal:hazmat_fabric',
         D: 'thermal:satchel',
         E: 'thermal:fluid_reservoir'
-    }).id('kubejs:pneumaticcraft_inventory_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_inventory_upgrade')
 
     e.remove({ id: 'pneumaticcraft:entity_tracker_upgrade' })
     e.shaped('pneumaticcraft:entity_tracker_upgrade', [
@@ -446,7 +457,7 @@ ServerEvents.recipes(e => {
         A: 'pneumaticcraft:upgrade_matrix',
         B: 'kubejs:memory_basic_filled',
         C: 'botania:forest_eye'
-    }).id('kubejs:pneumaticcraft_entity_tracker_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_entity_tracker_upgrade')
 
     e.remove({ id: 'pneumaticcraft:night_vision_upgrade' })
     e.shaped('pneumaticcraft:night_vision_upgrade', [
@@ -458,5 +469,5 @@ ServerEvents.recipes(e => {
         B: Item.of('apotheosis:potion_charm', '{Damage:0,Potion:"minecraft:long_night_vision"}'),
         C: 'occultism:infused_lenses',
         D: '#forge:wires/copper'
-    }).id('kubejs:pneumaticcraft_night_vision_upgrade')
+    }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_night_vision_upgrade')
 })

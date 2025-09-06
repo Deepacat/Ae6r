@@ -1,4 +1,14 @@
 ServerEvents.recipes(e => {
+    e.shaped('immersiveengineering:insulating_glass', [
+        ' C ',
+        'BAB',
+        ' C '
+    ], {
+        A: '#forge:dyes/green',
+        B: '#forge:dusts/iron_aluminum',
+        C: '#forge:glass'
+    })
+
     e.remove({ id: 'immersiveengineering:crafting/workbench' })
     e.shaped('immersiveengineering:workbench', [
         'A  ',

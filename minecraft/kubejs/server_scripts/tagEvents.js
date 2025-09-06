@@ -16,6 +16,7 @@ ServerEvents.tags('item', e => {
     for (let mats of substitutions) {
         e.add(`forge:ingots/${mats[0]}_${mats[1]}`, [`#forge:ingots/${mats[0]}`, `#forge:ingots/${mats[1]}`])
         e.add(`forge:gems/${mats[0]}_${mats[1]}`, [`#forge:gems/${mats[0]}`, `#forge:gems/${mats[1]}`])
+        e.add(`forge:dusts/${mats[0]}_${mats[1]}`, [`#forge:dusts/${mats[0]}`, `#forge:dusts/${mats[1]}`])
         e.add(`forge:nuggets/${mats[0]}_${mats[1]}`, [`#forge:nuggets/${mats[0]}`, `#forge:nuggets/${mats[1]}`])
         e.add(`forge:storage_blocks/${mats[0]}_${mats[1]}`, [`#forge:storage_blocks/${mats[0]}`, `#forge:storage_blocks/${mats[1]}`])
         e.add(`forge:plates/${mats[0]}_${mats[1]}`, [`#forge:plates/${mats[0]}`, `#forge:plates/${mats[1]}`])

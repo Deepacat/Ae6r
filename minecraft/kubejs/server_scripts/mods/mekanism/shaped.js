@@ -152,7 +152,7 @@ ServerEvents.recipes(e => {
         B: 'create:copper_valve_handle',
         C: 'create:fluid_pipe',
         D: 'create:fluid_valve',
-        E: 'kubejs:replaceme'
+        E: 'pneumaticcraft:module_expansion_card'
     }).id('kubejs:mekanism_dynamic_valve')
 
     e.remove({ id: 'mekanism:dynamic_tank' })
@@ -327,7 +327,7 @@ ServerEvents.recipes(e => {
         'E E'
     ], {
         A: '#forge:plates/bronze',
-        B: 'kubejs:replaceme',
+        B: 'pneumaticcraft:module_expansion_card',
         C: 'create:copper_backtank',
         D: 'thermal:hazmat_chestplate',
         E: 'immersiveengineering:toolupgrade_chemthrower_focus'
@@ -362,7 +362,7 @@ ServerEvents.recipes(e => {
         ' D '
     ], {
         A: 'mekanismgenerators:solar_panel',
-        B: 'kubejs:replaceme',
+        B: 'pneumaticcraft:module_expansion_card',
         C: 'thermal:redstone_servo',
         D: 'engineersdecor:thick_steel_pole_head'
     }).id('kubejs:mekanismgenerators_generator/solar')
@@ -424,7 +424,7 @@ ServerEvents.recipes(e => {
         C: 'mekanism:basic_chemical_tank',
         D: '#industrialforegoing:machine_frame/pity',
         E: 'mekanism:basic_fluid_tank',
-        F: 'kubejs:replaceme',
+        F: 'pneumaticcraft:module_expansion_card',
         G: 'thermal:rf_coil'
     }).id('kubejs:mekanism_rotary_condensentrator')
 
@@ -452,7 +452,7 @@ ServerEvents.recipes(e => {
         B: 'engineersdecor:factory_hopper',
         C: '#sophisticatedbackpacks:upgrades/advanced_filter',
         D: '#industrialforegoing:machine_frame/pity',
-        E: 'kubejs:replaceme',
+        E: 'pneumaticcraft:module_expansion_card',
         F: 'thermal:rf_coil'
     }).id('kubejs:mekanism_crusher')
 
@@ -548,7 +548,7 @@ ServerEvents.recipes(e => {
         B: 'mekanism:basic_fluid_tank',
         C: 'mekanism:basic_chemical_tank',
         D: '#industrialforegoing:machine_frame/pity',
-        E: 'kubejs:replaceme',
+        E: 'pneumaticcraft:module_expansion_card',
         F: 'thermal:rf_coil'
     }).id('kubejs:mekanism_pressurized_reaction_chamber')
 

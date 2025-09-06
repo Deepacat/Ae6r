@@ -127,7 +127,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:nuggets/invar',
         B: 'pneumaticcraft:reinforced_stone_slab',
-        C: 'kubejs:replaceme'
+        C: 'pneumaticcraft:module_expansion_card'
     }).id('kubejs:shaped/rftoolsbase_machine_base')
 
     e.remove({ id: 'rftoolsutility:flight_module' })

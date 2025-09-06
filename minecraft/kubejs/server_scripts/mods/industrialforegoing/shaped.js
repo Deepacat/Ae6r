@@ -125,7 +125,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:plastic',
         B: 'minecraft:comparator',
-        C: 'kubejs:replaceme',
+        C: 'pneumaticcraft:module_expansion_card',
         D: '#industrialforegoing:machine_frame/pity',
         E: 'botania:ender_eye_block'
     }).id('kubejs:industrialforegoing_mob_detector')
@@ -137,7 +137,7 @@ ServerEvents.recipes(e => {
         'EFE'
     ], {
         A: '#forge:plastic',
-        B: 'kubejs:replaceme',
+        B: 'pneumaticcraft:module_expansion_card',
         C: '#forge:storage_blocks/source',
         D: '#industrialforegoing:machine_frame/pity',
         E: '#forge:gears/osmium',
