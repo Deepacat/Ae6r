@@ -1,6 +1,17 @@
 // priority: 0
 function recipeSchema_thermal(e, c) {
     if (Platform.isLoaded('thermal')) {
+        let thermalInputItem = new $RecipeComponent({
+            componentClass: () => $KJSInputItem,
+            read: (recipe, from) => recipe.readInputItem(from),
+            write: (recipe, value) => {
+                let json = value.toJson(true).getAsJsonObject()
+                let result = json.remove('ingredient').getAsJsonObject()
+                result.add(json.remove('count'))
+                return result
+            }
+        })
+
         e.register('thermal:bottler',
             new $RecipeSchema(
                 c.outputItem.key('result'),
