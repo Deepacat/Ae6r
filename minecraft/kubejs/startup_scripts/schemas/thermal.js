@@ -7,7 +7,7 @@ function recipeSchema_thermal(e, c) {
             write: (recipe, value) => {
                 let json = value.toJson(true).getAsJsonObject()
                 let result = json.remove('ingredient').getAsJsonObject()
-                result.add(json.remove('count'))
+                result.add('count', json.remove('count'))
                 return result
             }
         })
