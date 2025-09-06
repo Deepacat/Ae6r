@@ -23,10 +23,24 @@ StartupEvents.recipeSchemaRegistry(e => {
 
     comps.inputItem = componentRegistry.get('inputItem')()
     comps.outputItem = componentRegistry.get('outputItem')()
+
     comps.inputFluid = componentRegistry.get('inputFluid')()
     comps.outputFluid = componentRegistry.get('outputFluid')()
+
     comps.outputFluidOrItem = componentRegistry.get('outputFluidOrItem')()
+    
     comps.fluidTag = componentRegistry.get('tag')({ registry: 'fluid' })
+
+    comps.inputStackedItem = new $RecipeComponent({
+        componentClass: () => $KJSInputItem,
+        read: (recipe, from) => recipe.readInputItem(from),
+        write: (recipe, value) => {
+            let json = value.toJson(true).getAsJsonObject()
+            let result = json.remove('ingredient').getAsJsonObject()
+            result.add('count', json.remove('count'))
+            return result
+        }
+    })
 
     comps.inputFluidOrFluidTag = (tagKeyStr) => comps.inputFluid.or(
         new $RecipeComponentBuilder(2)
@@ -37,6 +51,9 @@ StartupEvents.recipeSchemaRegistry(e => {
 
     comps.inputFluidOrItem = (tagKeyStr) =>
         comps.inputFluidOrFluidTag(tagKeyStr).or(comps.inputItem)
+
+    comps.inputFluidOrStackedItem = (tagKeyStr) =>
+        comps.inputFluidOrFluidTag(tagKeyStr).or(comps.inputStackedItem)
 
     let $HeatCondition
     if (Platform.isLoaded('create')) {
