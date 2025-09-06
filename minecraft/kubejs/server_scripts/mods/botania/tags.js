@@ -10,4 +10,7 @@ ServerEvents.tags('item', e => {
         e.add(`botania:runes/${rune}`, `botania:rune_${rune}`)
         e.add(`botania:runes/${rune}`, `mythicbotany:${rune}_rune`)
     }
+
+    e.remove('minecraft:flowers', '#botania:special_flowers')
+    e.remove('minecraft:small_flowers', '#botania:special_flowers')
 })

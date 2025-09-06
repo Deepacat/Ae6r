@@ -368,9 +368,9 @@
 			optional: true
 			shape: "hexagon"
 			tasks: [{
-				id: "0F0C5BBA20503F7B"
-				item: "xnet:controller"
-				type: "item"
+				id: "00FEF32CAC96D26E"
+				title: "repalce me with a cable smart filtre"
+				type: "checkmark"
 			}]
 			title: "XNet"
 			x: -6.0d
