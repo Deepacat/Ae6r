@@ -12,8 +12,6 @@ StartupEvents.registry('item', event => {
         'marvelous_clay',
         'mythical_clay',
 
-        'congealed_blood', // tinkers
-
         'rainbow_rune', // quark
         'white_rune',
         'light_gray_rune',
@@ -554,4 +552,7 @@ StartupEvents.registry('item', event => {
         .food((food) => {
             food.hunger(8).saturation(0.5).effect('upgrade_aquatic:vibing', 2400, 1, 1.0)
         })
+
+        event.create('blood_slime_ball')
+            .texture('tconstruct:item/materials/blood_slime_ball')
 })
