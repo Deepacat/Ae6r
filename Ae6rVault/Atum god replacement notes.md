@@ -79,7 +79,8 @@ thoughts 1
 
 
 aspect thoughts 2
-	Aspects
+	Just looking at recipes and thinking what thaum aspects fit them, then condensing it down to a list of aspectus shards to make
+		Aspects
 		Aer (Air, the sky) 6
 		Aqua (Water, aquatic life) 2
 		Ignis (Fire, heat, flames) 3
