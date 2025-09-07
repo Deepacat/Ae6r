@@ -5,15 +5,15 @@
 	#Disables the Aether's custom skybox in case you have a shader that is incompatible with custom skyboxes
 	"Disables Aether custom skybox" = false
 	#Removes warm-tinting of the lightmap in the Aether, giving the lighting a colder feel
-	"Makes lightmap colder" = false
+	"Makes lightmap colder" = true
 	#Enables a green-tinted sunrise and sunset in the Aether, similar to the original mod
 	"Enables green sunrise/sunset" = false
 
 [Gui]
 	#Adds a button to the top right of the main menu screen to toggle between the Aether and vanilla menu
-	"Enables Aether menu button" = true
+	"Enables Aether menu button" = false
 	#Changes the background panorama into a preview of the latest played world
-	"Enables world preview" = false
+	"Enables world preview" = true
 	#Adds a button to the top right of the main menu screen to toggle between the panorama and world preview
 	"Enables toggle world button" = true
 	#Adds a button to the top right of the main menu screen to allow quick loading into a world if the world preview is enabled

@@ -14,7 +14,7 @@
 	#KEEP_VANILLA: Stores the same amount of xp that would've been dropped normally into the grave.
 	#KEEP_ALL: Stores all the players xp in the graves to restore it.
 	#Allowed Values: DROP, REMOVE, KEEP_VANILLA, KEEP_ALL
-	experienceHandling = "DROP"
+	experienceHandling = "KEEP_ALL"
 	#Defines the amount of entries per player that can be stored to retrieve using commands.
 	#Once the entry count overflows, the oldest entries will be removed.
 	#Range: 1 ~ 99

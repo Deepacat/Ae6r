@@ -179,6 +179,9 @@
   "jadeaddons.lootr": {
     "info": true
   },
+  "aether_redux": {
+    "logicator": true
+  },
   "supplementaries": {
     "hat_stand": true
   }

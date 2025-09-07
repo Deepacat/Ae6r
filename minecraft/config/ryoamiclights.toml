@@ -9,18 +9,24 @@
 
 		[light_sources.settings.entities]
 
+			[light_sources.settings.entities.tconstruct]
+				sky_slime = true
+
 			[light_sources.settings.entities.minecraft]
 				axolotl = true
 				bee = true
 				zoglin = true
 				arrow = true
 				cow = true
+				magma_cube = true
 				pig = true
 				skeleton = true
+				husk = true
 				bat = true
+				hoglin = true
 				rabbit = true
-				silverfish = true
 				firework_rocket = true
+				silverfish = true
 				armor_stand = true
 				drowned = true
 				experience_orb = true
@@ -35,62 +41,72 @@
 				horse = true
 				vindicator = true
 				phantom = true
+				minecart = true
+				llama_spit = true
 				glow_squid = true
 				squid = true
 				creeper = true
 				lightning_bolt = true
 				enderman = true
 				chicken = true
+				ravager = true
 				trader_llama = true
+				evoker_fangs = true
 				fox = true
 				tropical_fish = true
 				slime = true
 				iron_golem = true
 				zombified_piglin = true
+				area_effect_cloud = true
 				piglin = true
+				blaze = true
 				cat = true
 				zombie = true
+				ghast = true
 				sheep = true
+				fireball = true
 				player = true
+				pufferfish = true
 				wolf = true
 				villager = true
 				skeleton_horse = true
 				zombie_villager = true
+				tnt_minecart = true
+				small_fireball = true
 				strider = true
 				painting = true
 				witch = true
 				cod = true
 				spider = true
 
-			[light_sources.settings.entities.irons_spellbooks]
-				summoned_zombie = true
-				necromancer = true
-				summoned_skeleton = true
-
-			[light_sources.settings.entities.tconstruct]
-				sky_slime = true
-
-			[light_sources.settings.entities.environmental]
-				deer = true
-				koi = true
-
 			[light_sources.settings.entities.alexsmobs]
 				crocodile = true
+				stradpole = true
 				murmur_head = true
 				seal = true
+				kangaroo = true
 				blue_jay = true
+				skelewag = true
+				straddler = true
+				bone_serpent_part = true
+				cachalot_echo = true
+				gazelle = true
 				catfish = true
 				laviathan = true
+				soul_vulture = true
 				tasmanian_devil = true
 				centipede_tail = true
 				underminer = true
+				skunk = true
 				dropbear = true
 				terrapin = true
 				flying_fish = true
 				cockroach = true
 				murmur = true
+				blobfish = true
 				lobster = true
 				grizzly_bear = true
+				bone_serpent = true
 				farseer = true
 				centipede_body = true
 				rocky_roller = true
@@ -100,8 +116,13 @@
 				raccoon = true
 				fly = true
 				flutter = true
+				giant_squid = true
+				cachalot_whale = true
+				maned_wolf = true
 				crow = true
 				bison = true
+				frilled_shark = true
+				elephant = true
 				sugar_glider = true
 
 			[light_sources.settings.entities.immersiveengineering]
@@ -114,7 +135,87 @@
 				wraith = true
 				slimy_slug = true
 				raven = true
+				chant_caster = true
 				zombie_brute = true
+
+			[light_sources.settings.entities.aether]
+				slider = true
+				sun_spirit = true
+				zephyr = true
+				flying_cow = true
+				poison_needle = true
+				mimic = true
+				valkyrie_queen = true
+				sentry = true
+				cockatrice = true
+				hammer_projectile = true
+				golden_swet = true
+				fire_crystal = true
+				fire_minion = true
+				evil_whirlwind = true
+				blue_swet = true
+				cloud_minion = true
+				valkyrie = true
+				phyg = true
+				aerbunny = true
+				lightning_knife = true
+				sheepuff = true
+				aerwhale = true
+				ice_crystal = true
+				aechor_plant = true
+				moa = true
+
+			[light_sources.settings.entities.biomeswevegone]
+				man_o_war = true
+
+			[light_sources.settings.entities.botania]
+				mana_burst = true
+
+			[light_sources.settings.entities.upgrade_aquatic]
+				nautilus = true
+
+			[light_sources.settings.entities.immersive_aircraft]
+				biplane = true
+
+			[light_sources.settings.entities.thermal]
+				blitz = true
+				blizz = true
+				basalz = true
+
+			[light_sources.settings.entities.quark]
+				wraith = true
+				forgotten = true
+				toretoise = true
+				glass_frame = true
+				stoneling = true
+				foxhound = true
+
+			[light_sources.settings.entities.create]
+				stationary_contraption = true
+				contraption = true
+
+			[light_sources.settings.entities.yungscavebiomes]
+				ice_cube = true
+
+			[light_sources.settings.entities.artifacts]
+				mimic = true
+
+			[light_sources.settings.entities.irons_spellbooks]
+				pyromancer = true
+				summoned_zombie = true
+				magic_missile = true
+				necromancer = true
+				archevoker = true
+				summoned_skeleton = true
+				icicle = true
+
+			[light_sources.settings.entities.environmental]
+				deer = true
+				zebra = true
+				koi = true
+
+			[light_sources.settings.entities.guardvillagers]
+				guard = true
 
 			[light_sources.settings.entities.embers]
 				ember_projectile = true
@@ -122,30 +223,6 @@
 
 			[light_sources.settings.entities.lootr]
 				lootr_minecart = true
-
-			[light_sources.settings.entities.aether]
-				cockatrice = true
-				slider = true
-				golden_swet = true
-				fire_crystal = true
-				fire_minion = true
-				evil_whirlwind = true
-				sun_spirit = true
-				blue_swet = true
-				zephyr = true
-				flying_cow = true
-				valkyrie = true
-				phyg = true
-				aerbunny = true
-				poison_needle = true
-				sheepuff = true
-				aerwhale = true
-				ice_crystal = true
-				aechor_plant = true
-				mimic = true
-				moa = true
-				valkyrie_queen = true
-				sentry = true
 
 			[light_sources.settings.entities.aquaculture]
 				atlantic_halibut = true
@@ -168,9 +245,6 @@
 				smallmouth_bass = true
 				minnow = true
 
-			[light_sources.settings.entities.botania]
-				mana_burst = true
-
 			[light_sources.settings.entities.ars_nouveau]
 				starbuncle = true
 				gift_starby = true
@@ -178,31 +252,9 @@
 				drygmy = true
 				whirlisprig = true
 
-			[light_sources.settings.entities.upgrade_aquatic]
-				nautilus = true
-
-			[light_sources.settings.entities.thermal]
-				blitz = true
-				blizz = true
-				basalz = true
-
-			[light_sources.settings.entities.quark]
-				wraith = true
-				forgotten = true
-				toretoise = true
-				glass_frame = true
-				stoneling = true
-				foxhound = true
-
-			[light_sources.settings.entities.create]
-				stationary_contraption = true
-
-			[light_sources.settings.entities.yungscavebiomes]
-				ice_cube = true
+			[light_sources.settings.entities.deep_aether]
+				quail = true
 
 			[light_sources.settings.entities.mythicbotany]
 				alf_pixie = true
-
-			[light_sources.settings.entities.artifacts]
-				mimic = true
 

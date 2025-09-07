@@ -9,7 +9,7 @@
     },
     "projects": [
         {
-            "pakku_id": "Btuh61Xo3tUfQDFH",
+            "pakku_id": "5Dj917gOhzujwVaf",
             "type": "MOD",
             "slug": {
                 "curseforge": "tank-null"
@@ -45,7 +45,7 @@
             ]
         },
         {
-            "pakku_id": "sDMZugsJcpcwaD46",
+            "pakku_id": "jgRuNj6HtjO5Sle1",
             "type": "MOD",
             "slug": {
                 "curseforge": "ai-improvements"
@@ -82,9 +82,9 @@
             ]
         },
         {
-            "pakku_id": "e98zauiktMlGvlcE",
+            "pakku_id": "SgMsDBhyLtgJuEzJ",
             "pakku_links": [
-                "n0y21tUKzA7DnMfy"
+                "PSOhrkI71MqOfjfH"
             ],
             "type": "MOD",
             "slug": {
@@ -123,7 +123,7 @@
             ]
         },
         {
-            "pakku_id": "hCkLyjbiYhFZIWmY",
+            "pakku_id": "Jwxv3cNkqfC1Y6lT",
             "type": "MOD",
             "slug": {
                 "curseforge": "abnormals-delight"
@@ -160,7 +160,7 @@
             ]
         },
         {
-            "pakku_id": "WBxaBVz0JHiYsxYD",
+            "pakku_id": "Yb1O8rUdoSkMRA0r",
             "type": "MOD",
             "slug": {
                 "curseforge": "advanced-loot-info"
@@ -197,7 +197,7 @@
             ]
         },
         {
-            "pakku_id": "RhOhSUafYDzzImmU",
+            "pakku_id": "Tf5rMD1l4c77U2s0",
             "type": "MOD",
             "slug": {
                 "curseforge": "advanced-peripherals"
@@ -236,7 +236,51 @@
             ]
         },
         {
-            "pakku_id": "vYGxPxrE2ZFAJnOG",
+            "pakku_id": "V5zXCchNIDwsSR5N",
+            "pakku_links": [
+                "0btK3mlLqj6bPSEh",
+                "2gdjWomOegUW7w5n"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "aeroblender"
+            },
+            "name": {
+                "curseforge": "AeroBlender"
+            },
+            "id": {
+                "curseforge": "879879"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "aeroblender-1.20.1-1.0.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4789/8/aeroblender-1.20.1-1.0.1-neoforge.jar",
+                    "id": "4789008",
+                    "parent_id": "879879",
+                    "hashes": {
+                        "sha1": "98e6a2a4c312f2aae0eb674ea5a923037378c7da",
+                        "md5": "c0fab47292ec752a20e0e18d16d96a4a"
+                    },
+                    "required_dependencies": [
+                        "255308",
+                        "563928"
+                    ],
+                    "size": 21641,
+                    "date_published": "2023-10-09T05:41:24.883Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "Jr3e3o2ZmnuFFEwj",
             "type": "MOD",
             "slug": {
                 "curseforge": "aether-villages"
@@ -274,9 +318,52 @@
             ]
         },
         {
-            "pakku_id": "bIr1L3XxAS0NfGRW",
+            "pakku_id": "RciIpopB9ONbygL8",
             "pakku_links": [
-                "j6SOTghrIpXhoIWe"
+                "71AkAl9TvGecm5AK"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "aether-lost-content"
+            },
+            "name": {
+                "curseforge": "Aether: Lost Content Addon"
+            },
+            "id": {
+                "curseforge": "318602"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "lost_aether_content-1.20.1-1.2.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4927/38/lost_aether_content-1.20.1-1.2.3.jar",
+                    "id": "4927038",
+                    "parent_id": "318602",
+                    "hashes": {
+                        "sha1": "8138ec72d019ccf4e706d8466d2b1c78164ec937",
+                        "md5": "29fa2da4a1623564286f0b4ec61e8716"
+                    },
+                    "required_dependencies": [
+                        "378802",
+                        "255308"
+                    ],
+                    "size": 20264145,
+                    "date_published": "2023-12-04T19:37:27.967Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "nqfuELmAUGlOzdV1",
+            "pakku_links": [
+                "hzO6RsY3MxT5L1IJ"
             ],
             "type": "MOD",
             "slug": {
@@ -316,7 +403,7 @@
             ]
         },
         {
-            "pakku_id": "uFxZt1PNG1FO9dvX",
+            "pakku_id": "5pCrf2Tn3uASXtpZ",
             "type": "MOD",
             "slug": {
                 "curseforge": "akashic-tome"
@@ -352,7 +439,7 @@
             ]
         },
         {
-            "pakku_id": "vs0uCyzRTXtpJVrs",
+            "pakku_id": "g7AMAPaMnmkBQl9Y",
             "type": "MOD",
             "slug": {
                 "curseforge": "alexs-mobs"
@@ -389,7 +476,7 @@
             ]
         },
         {
-            "pakku_id": "l8jeNphhk4ope9g8",
+            "pakku_id": "4vjZpDvoEAK026NQ",
             "type": "MOD",
             "slug": {
                 "curseforge": "alltheleaks"
@@ -425,9 +512,9 @@
             ]
         },
         {
-            "pakku_id": "hIWw5B0EENmdJpOw",
+            "pakku_id": "zHityAApXIJhvL6U",
             "pakku_links": [
-                "1fdoZVolQlrmiGP2"
+                "E2K61L4wZ4Eqmk2n"
             ],
             "type": "MOD",
             "slug": {
@@ -466,11 +553,11 @@
             ]
         },
         {
-            "pakku_id": "gAMuk4WjNOO96Xx5",
+            "pakku_id": "krDLXVJg0dGqebBm",
             "pakku_links": [
-                "PJKH01X0GBCFJThz",
-                "hJUUn3jBV9lNYZ6y",
-                "bIiYEuvlIbA2zoGv"
+                "S7xSluYbXcHUOoqy",
+                "tqzJ90fDFrCmwDoB",
+                "KkmnSUaMF4jFJt2P"
             ],
             "type": "MOD",
             "slug": {
@@ -512,9 +599,9 @@
             ]
         },
         {
-            "pakku_id": "PJKH01X0GBCFJThz",
+            "pakku_id": "S7xSluYbXcHUOoqy",
             "pakku_links": [
-                "bIiYEuvlIbA2zoGv"
+                "KkmnSUaMF4jFJt2P"
             ],
             "type": "MOD",
             "slug": {
@@ -554,7 +641,7 @@
             ]
         },
         {
-            "pakku_id": "HZ6UrTNg66dc8T0x",
+            "pakku_id": "X47UixhxiVwFTdV1",
             "type": "MOD",
             "slug": {
                 "curseforge": "appleskin"
@@ -591,9 +678,9 @@
             ]
         },
         {
-            "pakku_id": "wQ9PmuOL3GZdSI64",
+            "pakku_id": "tTeun0C1iCtwi3xq",
             "pakku_links": [
-                "gLEOObKbyXJfJ3TT"
+                "PCUFjuGEKqX8gfJu"
             ],
             "type": "MOD",
             "slug": {
@@ -632,9 +719,9 @@
             ]
         },
         {
-            "pakku_id": "pbVAZ3oG3U5dVkOt",
+            "pakku_id": "m9gpboShUYKNJgRr",
             "pakku_links": [
-                "pNFu0nHhuh4nKkEA"
+                "Wh9bYGQycOf3OH20"
             ],
             "type": "MOD",
             "slug": {
@@ -674,10 +761,10 @@
             ]
         },
         {
-            "pakku_id": "kX6mQ7J6dWo1UCC8",
+            "pakku_id": "mlfl839tcRlh6NZ0",
             "pakku_links": [
-                "wQ9PmuOL3GZdSI64",
-                "eme89zbuNRrV25Y6"
+                "tTeun0C1iCtwi3xq",
+                "wTUkLYJbtoxXoMNf"
             ],
             "type": "MOD",
             "slug": {
@@ -717,7 +804,7 @@
             ]
         },
         {
-            "pakku_id": "QlfQKzkhsTjOkm5R",
+            "pakku_id": "B3lDZvmD0dqHdmcu",
             "type": "MOD",
             "slug": {
                 "curseforge": "aquaculture"
@@ -754,9 +841,9 @@
             ]
         },
         {
-            "pakku_id": "xQaBje9tMoDEyELX",
+            "pakku_id": "E54wGxkhetkK6JBx",
             "pakku_links": [
-                "xEGBq4XZff6DySFl"
+                "fyEyNTE72EsTQpoM"
             ],
             "type": "MOD",
             "slug": {
@@ -796,7 +883,7 @@
             ]
         },
         {
-            "pakku_id": "91RNzsGVfE8sTzR5",
+            "pakku_id": "Mo4tvWYse1FiDRTk",
             "type": "MOD",
             "slug": {
                 "curseforge": "architects-palette"
@@ -832,7 +919,7 @@
             ]
         },
         {
-            "pakku_id": "pNFu0nHhuh4nKkEA",
+            "pakku_id": "Wh9bYGQycOf3OH20",
             "type": "MOD",
             "slug": {
                 "curseforge": "architectury-api"
@@ -869,7 +956,7 @@
             ]
         },
         {
-            "pakku_id": "6nYqnkpgrz2xLDRz",
+            "pakku_id": "m4VlcUtJUIgAZvVa",
             "type": "MOD",
             "slug": {
                 "curseforge": "ars-creo"
@@ -906,9 +993,9 @@
             ]
         },
         {
-            "pakku_id": "5N63XSGNAWpPC7LL",
+            "pakku_id": "yRB2PSCuvZj6J9jp",
             "pakku_links": [
-                "WH7KTSzkInNvxBgk"
+                "VWl76zI1av5T3wPy"
             ],
             "type": "MOD",
             "slug": {
@@ -947,7 +1034,7 @@
             ]
         },
         {
-            "pakku_id": "WH7KTSzkInNvxBgk",
+            "pakku_id": "VWl76zI1av5T3wPy",
             "type": "MOD",
             "slug": {
                 "curseforge": "ars-nouveau"
@@ -984,10 +1071,10 @@
             ]
         },
         {
-            "pakku_id": "Tgk5JEXPySfqi22y",
+            "pakku_id": "uK06DUhuHg6ePBqA",
             "pakku_links": [
-                "crdhb2JHmhAgjdhe",
-                "AjXGnwV4yuFZC8Ye"
+                "NyaqFE3RA0q0S1a8",
+                "mBJMD0mqTcFO5NMR"
             ],
             "type": "MOD",
             "slug": {
@@ -1028,9 +1115,9 @@
             ]
         },
         {
-            "pakku_id": "XsYF7nLZXab54MNJ",
+            "pakku_id": "0i7BYnaLx9dftTDn",
             "pakku_links": [
-                "VYTWah6fXEM92hoY"
+                "G2p0HHE1zuvPbxxz"
             ],
             "type": "MOD",
             "slug": {
@@ -1070,7 +1157,7 @@
             ]
         },
         {
-            "pakku_id": "MtJda0Z3hI33d7e6",
+            "pakku_id": "6Fq9zhThN71Wraze",
             "type": "MOD",
             "slug": {
                 "curseforge": "attributefix"
@@ -1107,7 +1194,7 @@
             ]
         },
         {
-            "pakku_id": "K02jxK1eShTkvgAm",
+            "pakku_id": "ZxcPfstzT0ZiLHel",
             "type": "MOD",
             "slug": {
                 "curseforge": "balm"
@@ -1144,7 +1231,7 @@
             ]
         },
         {
-            "pakku_id": "GmFkMh9kYOjtZ1zI",
+            "pakku_id": "QE2Psmmlqh4B81Gi",
             "type": "MOD",
             "slug": {
                 "curseforge": "baubley-heart-canisters"
@@ -1181,7 +1268,7 @@
             ]
         },
         {
-            "pakku_id": "QwHqUkNYgwGGFRMN",
+            "pakku_id": "hsXc7lPYwwkA7Gey",
             "type": "MOD",
             "slug": {
                 "curseforge": "better-advancements"
@@ -1217,7 +1304,7 @@
             ]
         },
         {
-            "pakku_id": "qvz4BcGnPlsjCsNp",
+            "pakku_id": "gfIzrr5RE7r3jCQr",
             "type": "MOD",
             "slug": {
                 "curseforge": "bic-clipboard"
@@ -1253,7 +1340,7 @@
             ]
         },
         {
-            "pakku_id": "AZXE2zBgDHAkeuez",
+            "pakku_id": "QSqGo3beRZC6GMNj",
             "type": "MOD",
             "slug": {
                 "curseforge": "blood-magic"
@@ -1289,7 +1376,7 @@
             ]
         },
         {
-            "pakku_id": "VYTWah6fXEM92hoY",
+            "pakku_id": "G2p0HHE1zuvPbxxz",
             "type": "MOD",
             "slug": {
                 "curseforge": "blueprint"
@@ -1326,7 +1413,7 @@
             ]
         },
         {
-            "pakku_id": "rkaxJwEAOQTY8euO",
+            "pakku_id": "kSR2GPSWKXqcKo8J",
             "type": "MOD",
             "slug": {
                 "curseforge": "bookshelf"
@@ -1363,7 +1450,7 @@
             ]
         },
         {
-            "pakku_id": "f5lqIDtJmYvf6M4N",
+            "pakku_id": "dUnEtj9dwg0olaCl",
             "type": "MOD",
             "slug": {
                 "curseforge": "borderless"
@@ -1400,10 +1487,10 @@
             ]
         },
         {
-            "pakku_id": "n0y21tUKzA7DnMfy",
+            "pakku_id": "PSOhrkI71MqOfjfH",
             "pakku_links": [
-                "AjXGnwV4yuFZC8Ye",
-                "hJUUn3jBV9lNYZ6y"
+                "mBJMD0mqTcFO5NMR",
+                "tqzJ90fDFrCmwDoB"
             ],
             "type": "MOD",
             "slug": {
@@ -1443,7 +1530,7 @@
             ]
         },
         {
-            "pakku_id": "Th5zRxLB1qiI9rbR",
+            "pakku_id": "VFQCDm51GLDTjqF6",
             "type": "MOD",
             "slug": {
                 "curseforge": "botania-editor"
@@ -1482,7 +1569,7 @@
             ]
         },
         {
-            "pakku_id": "Rfz7QY5ISZAtWfMb",
+            "pakku_id": "Y4DxK5Ih5qrII23Z",
             "type": "MOD",
             "slug": {
                 "curseforge": "botany-pots"
@@ -1521,7 +1608,7 @@
             ]
         },
         {
-            "pakku_id": "gJw8j2YIBekq3a2S",
+            "pakku_id": "c4MjN8SrbMdgBTB2",
             "type": "MOD",
             "slug": {
                 "curseforge": "botarium"
@@ -1558,10 +1645,10 @@
             ]
         },
         {
-            "pakku_id": "nNZXL40Kk1C2X0le",
+            "pakku_id": "gJcsDURsytXDA8Th",
             "pakku_links": [
-                "iQolSWpsbVPKvjQU",
-                "WduUaFcum3ELoQsV"
+                "zZePR7Unvi6FtEZK",
+                "fqKPXtv2M2kRmDKE"
             ],
             "type": "MOD",
             "slug": {
@@ -1601,7 +1688,7 @@
             ]
         },
         {
-            "pakku_id": "xFheirAmUwMmFKiB",
+            "pakku_id": "ct9LJHVuGQbvekg3",
             "type": "MOD",
             "slug": {
                 "curseforge": "building-gadgets"
@@ -1637,7 +1724,7 @@
             ]
         },
         {
-            "pakku_id": "TeozlcqdJQXFu5h0",
+            "pakku_id": "JKZ3wrnPEuchKXvP",
             "type": "MOD",
             "slug": {
                 "curseforge": "caelus"
@@ -1675,7 +1762,7 @@
             ]
         },
         {
-            "pakku_id": "sj8HpPC2HymeyA3l",
+            "pakku_id": "3lRc6dZvE0Gq514m",
             "type": "MOD",
             "slug": {
                 "curseforge": "cant-sleep-clowns-will-eat-me"
@@ -1712,7 +1799,7 @@
             ]
         },
         {
-            "pakku_id": "iY9TFVuUzpNkYwZm",
+            "pakku_id": "kYHOQZDunjrNLBe1",
             "type": "MOD",
             "slug": {
                 "curseforge": "capable-cauldrons"
@@ -1749,7 +1836,7 @@
             ]
         },
         {
-            "pakku_id": "Hpk3RatSnXxjwhqG",
+            "pakku_id": "zXx7Fq9E5CL6uPJM",
             "type": "MOD",
             "slug": {
                 "curseforge": "catalogue"
@@ -1785,7 +1872,7 @@
             ]
         },
         {
-            "pakku_id": "LRB4fgLK0xOwBu4N",
+            "pakku_id": "joqwreYrukfGFjNt",
             "type": "MOD",
             "slug": {
                 "curseforge": "chat-heads"
@@ -1822,7 +1909,7 @@
             ]
         },
         {
-            "pakku_id": "IC7afEzJihrloJNt",
+            "pakku_id": "8X1SVlxebGyy2v92",
             "type": "MOD",
             "slug": {
                 "curseforge": "cherished-worlds"
@@ -1859,7 +1946,7 @@
             ]
         },
         {
-            "pakku_id": "1eGap4aotbJO5csH",
+            "pakku_id": "ZSQMphKByaQO13Uj",
             "type": "MOD",
             "slug": {
                 "curseforge": "citadel"
@@ -1896,7 +1983,7 @@
             ]
         },
         {
-            "pakku_id": "L9syoQTsZfSSQ4qG",
+            "pakku_id": "WM2Tuo8YZleMvLJQ",
             "type": "MOD",
             "slug": {
                 "curseforge": "clean-swing-through-grass"
@@ -1934,9 +2021,9 @@
             ]
         },
         {
-            "pakku_id": "lCLSI0DHASOwrrFz",
+            "pakku_id": "RDAZUqilCvYCJLot",
             "pakku_links": [
-                "OKqHHfm6HivlBCh5"
+                "COmTKlghZjrUHDrs"
             ],
             "type": "MOD",
             "slug": {
@@ -1976,7 +2063,7 @@
             ]
         },
         {
-            "pakku_id": "crdhb2JHmhAgjdhe",
+            "pakku_id": "NyaqFE3RA0q0S1a8",
             "type": "MOD",
             "slug": {
                 "curseforge": "cloth-config"
@@ -2014,7 +2101,7 @@
             ]
         },
         {
-            "pakku_id": "19RcmdZMpWNR03F0",
+            "pakku_id": "ItRl65hqTR0jCZWK",
             "type": "MOD",
             "slug": {
                 "curseforge": "cloudflared"
@@ -2054,7 +2141,7 @@
             ]
         },
         {
-            "pakku_id": "N3wMeqlqaEZL01EC",
+            "pakku_id": "1C512naZ1Tjsr0gl",
             "type": "MOD",
             "slug": {
                 "curseforge": "clumps"
@@ -2090,7 +2177,7 @@
             ]
         },
         {
-            "pakku_id": "xEGBq4XZff6DySFl",
+            "pakku_id": "fyEyNTE72EsTQpoM",
             "type": "MOD",
             "slug": {
                 "curseforge": "cofh-core"
@@ -2127,7 +2214,7 @@
             ]
         },
         {
-            "pakku_id": "nYtvP4ngnDZLp4R3",
+            "pakku_id": "5eoxp3380TxScDUB",
             "type": "MOD",
             "slug": {
                 "curseforge": "cobblegenrandomizer"
@@ -2169,7 +2256,7 @@
             ]
         },
         {
-            "pakku_id": "OjsAvepeYdn2HE6e",
+            "pakku_id": "9hekxdUkiYdK57NS",
             "type": "MOD",
             "slug": {
                 "curseforge": "codechicken-lib-1-8"
@@ -2206,7 +2293,7 @@
             ]
         },
         {
-            "pakku_id": "noD90dVuJwwfNkUR",
+            "pakku_id": "7ntcjNFezTqleurj",
             "type": "MOD",
             "slug": {
                 "curseforge": "collective"
@@ -2245,7 +2332,7 @@
             ]
         },
         {
-            "pakku_id": "axKVJTv2xz51OaA5",
+            "pakku_id": "G3JFYDdLDrvlr7Fi",
             "type": "MOD",
             "slug": {
                 "curseforge": "comforts"
@@ -2283,9 +2370,9 @@
             ]
         },
         {
-            "pakku_id": "7oV4AK9YC4BxiSdj",
+            "pakku_id": "JRVxW4fvQqqTIKcJ",
             "pakku_links": [
-                "UwhwgWbnJz1zRbYi"
+                "C0U2P70eldifL0lW"
             ],
             "type": "MOD",
             "slug": {
@@ -2324,7 +2411,7 @@
             ]
         },
         {
-            "pakku_id": "4JPmOw2W6gXrc0L4",
+            "pakku_id": "QOAihPoJid5XYvkO",
             "type": "MOD",
             "slug": {
                 "curseforge": "compact-machines"
@@ -2360,7 +2447,7 @@
             ]
         },
         {
-            "pakku_id": "OlnMTuCtiJC3GqnL",
+            "pakku_id": "9IkorTRvEuk4HLBA",
             "type": "MOD",
             "slug": {
                 "curseforge": "complicated-bees"
@@ -2396,7 +2483,7 @@
             ]
         },
         {
-            "pakku_id": "jS66QPkxqpwcvlyU",
+            "pakku_id": "llTGegYrJuSO9GEk",
             "type": "MOD",
             "slug": {
                 "curseforge": "construction-wand"
@@ -2433,9 +2520,9 @@
             ]
         },
         {
-            "pakku_id": "4AkXpKh7nJUWnhHt",
+            "pakku_id": "uGGHz15vWSThxx4M",
             "pakku_links": [
-                "cI4glIbv9Guvw79i"
+                "b2HcyUOm95OLOnuS"
             ],
             "type": "MOD",
             "slug": {
@@ -2474,7 +2561,7 @@
             ]
         },
         {
-            "pakku_id": "u9aZ04iZuRs2dBD2",
+            "pakku_id": "13qv0QyWeVSC3PZM",
             "type": "MOD",
             "slug": {
                 "curseforge": "cooking-for-blockheads"
@@ -2513,7 +2600,7 @@
             ]
         },
         {
-            "pakku_id": "Cjt30oKgFxlBaFvb",
+            "pakku_id": "v9zw19vB4VGKsDyW",
             "type": "MOD",
             "slug": {
                 "curseforge": "corgilib"
@@ -2550,7 +2637,7 @@
             ]
         },
         {
-            "pakku_id": "l0LdUNfQSB64zH8d",
+            "pakku_id": "ZFrjMkmdPCVkmCbk",
             "type": "MOD",
             "slug": {
                 "curseforge": "cosmetic-armor-reworked"
@@ -2586,7 +2673,7 @@
             ]
         },
         {
-            "pakku_id": "VumqBV8wzAIzUV52",
+            "pakku_id": "MhwCWyeqhG12IRrn",
             "type": "MOD",
             "slug": {
                 "curseforge": "crafting-station-improved"
@@ -2623,7 +2710,7 @@
             ]
         },
         {
-            "pakku_id": "xyfVrdqhozVdRUlq",
+            "pakku_id": "TxMLHbPDCtBMRE0I",
             "type": "MOD",
             "slug": {
                 "curseforge": "crafting-tweaks"
@@ -2662,7 +2749,7 @@
             ]
         },
         {
-            "pakku_id": "QzYyhx0QTSYudBqc",
+            "pakku_id": "SzKXbVoJCu2Zdttm",
             "type": "MOD",
             "slug": {
                 "curseforge": "crafting-on-a-stick"
@@ -2699,7 +2786,7 @@
             ]
         },
         {
-            "pakku_id": "kKYYZL375i0xQs7p",
+            "pakku_id": "HEkjrJj0iiGIEHna",
             "type": "MOD",
             "slug": {
                 "curseforge": "create"
@@ -2736,7 +2823,7 @@
             ]
         },
         {
-            "pakku_id": "fyAm3yW3SVCR9O66",
+            "pakku_id": "dX7XueGNLzTqT6xz",
             "type": "MOD",
             "slug": {
                 "curseforge": "createaddition"
@@ -2774,7 +2861,7 @@
             ]
         },
         {
-            "pakku_id": "46yJhZdzNbSr4H58",
+            "pakku_id": "1bleWZlDu89ZszVH",
             "type": "MOD",
             "slug": {
                 "curseforge": "create-ultimine"
@@ -2810,7 +2897,7 @@
             ]
         },
         {
-            "pakku_id": "t1HuJBSDviD0quVU",
+            "pakku_id": "r3Gs5asUgYqH8JSz",
             "type": "MOD",
             "slug": {
                 "curseforge": "create-diesel-generators"
@@ -2846,7 +2933,7 @@
             ]
         },
         {
-            "pakku_id": "wy4tF4BWICL9bcba",
+            "pakku_id": "570gq4tfK2tUwQRE",
             "type": "MOD",
             "slug": {
                 "curseforge": "cucumber"
@@ -2882,10 +2969,10 @@
             ]
         },
         {
-            "pakku_id": "kxi1PilYUmzVHjDF",
+            "pakku_id": "gXJ1UfhHDaotASMy",
             "pakku_links": [
-                "HGBIXhX53xXXfF2F",
-                "MDRjlFzsBQOW03Sf"
+                "nOhhNKOqafhAR11K",
+                "Y7ag4pD9AOIofWv1"
             ],
             "type": "MOD",
             "slug": {
@@ -2927,7 +3014,7 @@
             ]
         },
         {
-            "pakku_id": "OKqHHfm6HivlBCh5",
+            "pakku_id": "COmTKlghZjrUHDrs",
             "type": "MOD",
             "slug": {
                 "curseforge": "cupboard"
@@ -2964,7 +3051,7 @@
             ]
         },
         {
-            "pakku_id": "AjXGnwV4yuFZC8Ye",
+            "pakku_id": "mBJMD0mqTcFO5NMR",
             "type": "MOD",
             "slug": {
                 "curseforge": "curios"
@@ -3002,7 +3089,7 @@
             ]
         },
         {
-            "pakku_id": "0HUFoMbEJPQIoat1",
+            "pakku_id": "Zi6hTbQGm8kqDKYG",
             "type": "MOD",
             "slug": {
                 "curseforge": "curvy-pipes"
@@ -3039,7 +3126,7 @@
             ]
         },
         {
-            "pakku_id": "UDzHZMZZ1ll804WV",
+            "pakku_id": "kXhy9JCepsIsxLps",
             "type": "MOD",
             "slug": {
                 "curseforge": "cyanide"
@@ -3076,7 +3163,7 @@
             ]
         },
         {
-            "pakku_id": "UwhwgWbnJz1zRbYi",
+            "pakku_id": "C0U2P70eldifL0lW",
             "type": "MOD",
             "slug": {
                 "curseforge": "cyclops-core"
@@ -3112,10 +3199,10 @@
             ]
         },
         {
-            "pakku_id": "NkPnQubY1N7TK3nH",
+            "pakku_id": "FmWL9yK8BOaCcPrL",
             "pakku_links": [
-                "hARUodKFfwdZi2rP",
-                "wdy1Ekqid5qliLyM"
+                "dsik85l4DFpNR1NC",
+                "JodhL6e9paeJsR7Z"
             ],
             "type": "MOD",
             "slug": {
@@ -3157,7 +3244,46 @@
             ]
         },
         {
-            "pakku_id": "LzaF3K7NiMxqdBnG",
+            "pakku_id": "IBKm9pWH5ZMNhjgK",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "deep-aether"
+            },
+            "name": {
+                "curseforge": "Deep Aether"
+            },
+            "id": {
+                "curseforge": "852465"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "deep_aether-1.20.1-1.1.7.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6839/617/deep_aether-1.20.1-1.1.7.jar",
+                    "id": "6839617",
+                    "parent_id": "852465",
+                    "hashes": {
+                        "sha1": "3f0240c6ae68eb55a16173d22c06689e78442f06",
+                        "md5": "2d2e9e82cd7cc9ae060315445feb8b7f"
+                    },
+                    "required_dependencies": [
+                        "255308"
+                    ],
+                    "size": 40503987,
+                    "date_published": "2025-08-02T14:41:54.160Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "hJCOhTECNatWRsK3",
             "type": "MOD",
             "slug": {
                 "curseforge": "dimensional-sync-fixes"
@@ -3193,7 +3319,7 @@
             ]
         },
         {
-            "pakku_id": "iycwf6Qwc3lr6sM5",
+            "pakku_id": "Ann6GcUT1ko1nfr3",
             "type": "MOD",
             "slug": {
                 "curseforge": "dungeon-crawl"
@@ -3229,9 +3355,9 @@
             ]
         },
         {
-            "pakku_id": "0YmhA5dYLU5j5lSf",
+            "pakku_id": "DnVRJW8Oyitifqqb",
             "pakku_links": [
-                "2xnrJYX1gfad51ee"
+                "71AkAl9TvGecm5AK"
             ],
             "type": "MOD",
             "slug": {
@@ -3271,7 +3397,7 @@
             ]
         },
         {
-            "pakku_id": "43g0Up3R7Qfy8Gfr",
+            "pakku_id": "R6Zoi7Su5QuKsEoo",
             "type": "MOD",
             "slug": {
                 "curseforge": "dynamic-fps"
@@ -3308,7 +3434,7 @@
             ]
         },
         {
-            "pakku_id": "XurDSixdHc2bYueJ",
+            "pakku_id": "c1PAcoPplPVd3vU4",
             "type": "MOD",
             "slug": {
                 "curseforge": "dynamic-villager-trades"
@@ -3345,7 +3471,7 @@
             ]
         },
         {
-            "pakku_id": "XXiyboWl13eUbxUp",
+            "pakku_id": "S5g6DiZyOINNPiCF",
             "type": "MOD",
             "slug": {
                 "curseforge": "emi"
@@ -3381,7 +3507,7 @@
             ]
         },
         {
-            "pakku_id": "Rs9LpiA4GFpiRJMF",
+            "pakku_id": "2A0af7fRgySL7QWm",
             "type": "MOD",
             "slug": {
                 "curseforge": "emi-ores"
@@ -3419,9 +3545,9 @@
             ]
         },
         {
-            "pakku_id": "45LdSw7ZWJl3Vura",
+            "pakku_id": "03NOVkLHfGWk9L9E",
             "pakku_links": [
-                "pXe4zn7l8epdR4yS"
+                "QQv70z1cEqpYYlWa"
             ],
             "type": "MOD",
             "slug": {
@@ -3460,9 +3586,9 @@
             ]
         },
         {
-            "pakku_id": "Jd81gAwihKPVrUts",
+            "pakku_id": "kBuZyJBB3y4WKMO8",
             "pakku_links": [
-                "pXe4zn7l8epdR4yS"
+                "QQv70z1cEqpYYlWa"
             ],
             "type": "MOD",
             "slug": {
@@ -3501,9 +3627,9 @@
             ]
         },
         {
-            "pakku_id": "4AueCscjmTiFeFvX",
+            "pakku_id": "j4zSpIUYL8E46d47",
             "pakku_links": [
-                "pXe4zn7l8epdR4yS"
+                "QQv70z1cEqpYYlWa"
             ],
             "type": "MOD",
             "slug": {
@@ -3542,7 +3668,7 @@
             ]
         },
         {
-            "pakku_id": "NF2FOVcbVkw8Kndg",
+            "pakku_id": "cjN7O1IsGbvFtIqF",
             "type": "MOD",
             "slug": {
                 "curseforge": "eidolon-repraised"
@@ -3580,7 +3706,7 @@
             ]
         },
         {
-            "pakku_id": "I0Q7DXBmeJyhyTEp",
+            "pakku_id": "veeCIZgvIsN6LqFd",
             "type": "MOD",
             "slug": {
                 "curseforge": "embeddium"
@@ -3617,7 +3743,7 @@
             ]
         },
         {
-            "pakku_id": "j6SOTghrIpXhoIWe",
+            "pakku_id": "hzO6RsY3MxT5L1IJ",
             "type": "MOD",
             "slug": {
                 "curseforge": "embers-rekindled"
@@ -3654,10 +3780,10 @@
             ]
         },
         {
-            "pakku_id": "3KdTTgXrAcIO9fgu",
+            "pakku_id": "pikq582It0prfZLM",
             "pakku_links": [
-                "j6SOTghrIpXhoIWe",
-                "iYUQclZk1qkMVZVj"
+                "hzO6RsY3MxT5L1IJ",
+                "zrjNbXWqr8vwb40p"
             ],
             "type": "MOD",
             "slug": {
@@ -3698,7 +3824,7 @@
             ]
         },
         {
-            "pakku_id": "t8bZsOlpDzA1KYWj",
+            "pakku_id": "yLSDkGtnG16l7b1F",
             "type": "MOD",
             "slug": {
                 "curseforge": "enchantment-descriptions"
@@ -3737,7 +3863,7 @@
             ]
         },
         {
-            "pakku_id": "BKeOdLpjvbWLBif7",
+            "pakku_id": "wHhKhn633Ripjhnj",
             "type": "MOD",
             "slug": {
                 "curseforge": "ender-storage-1-8"
@@ -3776,7 +3902,44 @@
             ]
         },
         {
-            "pakku_id": "PZTwEyolT3CxZCmJ",
+            "pakku_id": "qesq7X40bhj5XkNg",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "energymeter"
+            },
+            "name": {
+                "curseforge": "Energy Meter"
+            },
+            "id": {
+                "curseforge": "532169"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "energymeter-forge-1.20.1-1.0.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4813/550/energymeter-forge-1.20.1-1.0.0.jar",
+                    "id": "4813550",
+                    "parent_id": "532169",
+                    "hashes": {
+                        "sha1": "8f786fcf31036d5af2f4a1caad5802da450c0185",
+                        "md5": "d1b3d7c1e25c3e7b3649abb780135ea4"
+                    },
+                    "required_dependencies": [],
+                    "size": 127878,
+                    "date_published": "2023-10-23T21:03:21.960Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "uSteRHtNTmdCCA0k",
             "type": "MOD",
             "slug": {
                 "curseforge": "enhanced-boss-bars"
@@ -3813,7 +3976,7 @@
             ]
         },
         {
-            "pakku_id": "O8MZpzdySy6mbJDV",
+            "pakku_id": "1V9j3LGgdKMpgpUP",
             "type": "MOD",
             "slug": {
                 "curseforge": "enigmatic-graves-fork"
@@ -3849,10 +4012,10 @@
             ]
         },
         {
-            "pakku_id": "nI3sXlOllqyjtSk5",
+            "pakku_id": "6VM9Igji7tSEWqeL",
             "pakku_links": [
-                "kQRJID3oHenmNe6A",
-                "4cOa6tDc7lYIb9rw"
+                "5ZRp7tqPEek8IjX5",
+                "7W5CTWKbZodMB68p"
             ],
             "type": "MOD",
             "slug": {
@@ -3896,10 +4059,10 @@
             ]
         },
         {
-            "pakku_id": "bamJShCUBQvxbJYY",
+            "pakku_id": "EXadzy8yzuDOCs49",
             "pakku_links": [
-                "gf6Hi6WRfMl0pBpa",
-                "HGBIXhX53xXXfF2F"
+                "5ZbsalzdzLCAklMh",
+                "nOhhNKOqafhAR11K"
             ],
             "type": "MOD",
             "slug": {
@@ -3940,7 +4103,7 @@
             ]
         },
         {
-            "pakku_id": "Bx0VKKca90BrQc8j",
+            "pakku_id": "7RsqRTAS94dWFx4K",
             "type": "MOD",
             "slug": {
                 "curseforge": "environmental"
@@ -3979,9 +4142,9 @@
             ]
         },
         {
-            "pakku_id": "febZaeVcYOE8R8LL",
+            "pakku_id": "hU3fdN9EOuojHtGz",
             "pakku_links": [
-                "RMYTl001ogDqtUSL"
+                "yhRdbS3JW7DyjPhl"
             ],
             "type": "MOD",
             "slug": {
@@ -4021,10 +4184,10 @@
             ]
         },
         {
-            "pakku_id": "kKW7JCJyCNUbTghZ",
+            "pakku_id": "MKscJDMugGwMlOhO",
             "pakku_links": [
-                "GW5IyAnuEBQ1XtOe",
-                "gLEOObKbyXJfJ3TT"
+                "ijBDbG3RZRG7GFW1",
+                "PCUFjuGEKqX8gfJu"
             ],
             "type": "MOD",
             "slug": {
@@ -4066,9 +4229,9 @@
             ]
         },
         {
-            "pakku_id": "i1NV6PO8T6fLt5EY",
+            "pakku_id": "3VT7rpdi5nMWCRc8",
             "pakku_links": [
-                "6JENhqgHkjf0Ukgm"
+                "To6KKLddpzvRtFrn"
             ],
             "type": "MOD",
             "slug": {
@@ -4110,10 +4273,10 @@
             ]
         },
         {
-            "pakku_id": "9RD6pMEkC6sRkdEe",
+            "pakku_id": "V0bWO9how98e2oxE",
             "pakku_links": [
-                "diq76lPjRDJzjOHJ",
-                "NnL834qtKXrdMZHY"
+                "PoWIjabKac3aaKsA",
+                "RblBz4RXogKDGLBV"
             ],
             "type": "MOD",
             "slug": {
@@ -4154,9 +4317,9 @@
             ]
         },
         {
-            "pakku_id": "IW4ec96VeR2XKUzR",
+            "pakku_id": "oXcahawK4EI42sma",
             "pakku_links": [
-                "diq76lPjRDJzjOHJ"
+                "PoWIjabKac3aaKsA"
             ],
             "type": "MOD",
             "slug": {
@@ -4195,7 +4358,7 @@
             ]
         },
         {
-            "pakku_id": "8aqo1XVHOZJYVsHy",
+            "pakku_id": "fV58hs7RY1fg9pLG",
             "type": "MOD",
             "slug": {
                 "curseforge": "ftb-filter-system"
@@ -4234,7 +4397,7 @@
             ]
         },
         {
-            "pakku_id": "diq76lPjRDJzjOHJ",
+            "pakku_id": "PoWIjabKac3aaKsA",
             "type": "MOD",
             "slug": {
                 "curseforge": "ftb-library-forge"
@@ -4272,9 +4435,9 @@
             ]
         },
         {
-            "pakku_id": "siUdwK4q8vY5MYti",
+            "pakku_id": "QgVKlAr2ZheBwign",
             "pakku_links": [
-                "NnL834qtKXrdMZHY"
+                "RblBz4RXogKDGLBV"
             ],
             "type": "MOD",
             "slug": {
@@ -4315,7 +4478,7 @@
             ]
         },
         {
-            "pakku_id": "NnL834qtKXrdMZHY",
+            "pakku_id": "RblBz4RXogKDGLBV",
             "type": "MOD",
             "slug": {
                 "curseforge": "ftb-teams-forge"
@@ -4354,7 +4517,7 @@
             ]
         },
         {
-            "pakku_id": "cQu7NFyaZbWheK2o",
+            "pakku_id": "8cUhQh8irxn411Pj",
             "type": "MOD",
             "slug": {
                 "curseforge": "ftb-ultimine-forge"
@@ -4393,7 +4556,7 @@
             ]
         },
         {
-            "pakku_id": "5miTuI4Ec21HhzL6",
+            "pakku_id": "t7yAnm8MWAnAFDar",
             "type": "MOD",
             "slug": {
                 "curseforge": "ftb-xmod-compat"
@@ -4432,7 +4595,7 @@
             ]
         },
         {
-            "pakku_id": "32pQuvAsWiBspBg2",
+            "pakku_id": "hrHR2rpOIS8yEw8F",
             "type": "MOD",
             "slug": {
                 "curseforge": "fallen-gems-affixes"
@@ -4469,7 +4632,7 @@
             ]
         },
         {
-            "pakku_id": "jNIIDTglpkx0sZyB",
+            "pakku_id": "ng409xTfOqqS9DDU",
             "type": "MOD",
             "slug": {
                 "curseforge": "fancy-toasts"
@@ -4505,7 +4668,7 @@
             ]
         },
         {
-            "pakku_id": "iYUQclZk1qkMVZVj",
+            "pakku_id": "zrjNbXWqr8vwb40p",
             "type": "MOD",
             "slug": {
                 "curseforge": "farmers-delight"
@@ -4542,7 +4705,7 @@
             ]
         },
         {
-            "pakku_id": "53CkJs4gr0mOvLD9",
+            "pakku_id": "ucXPZy7ovEWhL7VP",
             "type": "MOD",
             "slug": {
                 "curseforge": "fast-leaf-decay"
@@ -4580,9 +4743,9 @@
             ]
         },
         {
-            "pakku_id": "irlfew82hb2Dftwd",
+            "pakku_id": "twZn783YViKbtJOI",
             "pakku_links": [
-                "bIiYEuvlIbA2zoGv"
+                "KkmnSUaMF4jFJt2P"
             ],
             "type": "MOD",
             "slug": {
@@ -4622,7 +4785,7 @@
             ]
         },
         {
-            "pakku_id": "OFqe1621kbM38Nyf",
+            "pakku_id": "X4k41o9OWrvLGpUl",
             "type": "MOD",
             "slug": {
                 "curseforge": "feature-recycler"
@@ -4659,7 +4822,7 @@
             ]
         },
         {
-            "pakku_id": "vKHAFsqxYutMILNy",
+            "pakku_id": "THyUSgCZd6YZx5HI",
             "type": "MOD",
             "slug": {
                 "curseforge": "ferritecore"
@@ -4697,7 +4860,7 @@
             ]
         },
         {
-            "pakku_id": "spiQEPWL9Fb1i2A0",
+            "pakku_id": "NkHfVhKArClQkV1c",
             "type": "MOD",
             "slug": {
                 "curseforge": "findme"
@@ -4735,7 +4898,7 @@
             ]
         },
         {
-            "pakku_id": "UBVggDXPMD8uIdl9",
+            "pakku_id": "qs4czNzsMpzzzk09",
             "type": "MOD",
             "slug": {
                 "curseforge": "fluffy-fur"
@@ -4771,7 +4934,7 @@
             ]
         },
         {
-            "pakku_id": "BAQgBUD3OMWnXnC2",
+            "pakku_id": "xnMrDbTmSpifnCB4",
             "type": "MOD",
             "slug": {
                 "curseforge": "flux-networks"
@@ -4809,7 +4972,46 @@
             ]
         },
         {
-            "pakku_id": "p1Z8YL0M6p0wl03E",
+            "pakku_id": "vkOuN3wUMheAnEDL",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fullblock-energistics"
+            },
+            "name": {
+                "curseforge": "Fullblock Energistics"
+            },
+            "id": {
+                "curseforge": "776293"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fulleng-forge-1.7.3-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6088/198/fulleng-forge-1.7.3-1.20.1.jar",
+                    "id": "6088198",
+                    "parent_id": "776293",
+                    "hashes": {
+                        "sha1": "100bd44fe1295dbaedba5744aec9f2e9c797bc7c",
+                        "md5": "6a3f00600a7b5eedcbdb194f0956364e"
+                    },
+                    "required_dependencies": [
+                        "223794"
+                    ],
+                    "size": 118338,
+                    "date_published": "2025-01-14T23:36:05.720Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "bpEx2BtRR2QB9SL0",
             "type": "MOD",
             "slug": {
                 "curseforge": "fusion-connected-textures"
@@ -4847,9 +5049,9 @@
             ]
         },
         {
-            "pakku_id": "rP2C8fYCNybn29gI",
+            "pakku_id": "yUrO715UIFWM7oe8",
             "pakku_links": [
-                "WduUaFcum3ELoQsV"
+                "fqKPXtv2M2kRmDKE"
             ],
             "type": "MOD",
             "slug": {
@@ -4889,7 +5091,7 @@
             ]
         },
         {
-            "pakku_id": "6rZIbkRXxUx4GHlj",
+            "pakku_id": "GwAQGFGIav2wEYfG",
             "type": "MOD",
             "slug": {
                 "curseforge": "game-stages"
@@ -4928,7 +5130,7 @@
             ]
         },
         {
-            "pakku_id": "HA0IDig0JKADxUh7",
+            "pakku_id": "DNfnMpFM9eTYJhCv",
             "type": "MOD",
             "slug": {
                 "curseforge": "gauges-and-switches-ported"
@@ -4964,7 +5166,7 @@
             ]
         },
         {
-            "pakku_id": "gf6Hi6WRfMl0pBpa",
+            "pakku_id": "5ZbsalzdzLCAklMh",
             "type": "MOD",
             "slug": {
                 "curseforge": "geckolib"
@@ -5000,7 +5202,7 @@
             ]
         },
         {
-            "pakku_id": "vJ3KZxSaobOSMZ5K",
+            "pakku_id": "YPU2lZKeKlnchADA",
             "type": "MOD",
             "slug": {
                 "curseforge": "glassential-renewed"
@@ -5038,7 +5240,7 @@
             ]
         },
         {
-            "pakku_id": "GW5IyAnuEBQ1XtOe",
+            "pakku_id": "ijBDbG3RZRG7GFW1",
             "type": "MOD",
             "slug": {
                 "curseforge": "glodium"
@@ -5075,7 +5277,7 @@
             ]
         },
         {
-            "pakku_id": "YX7Ia6MhJxel7JGY",
+            "pakku_id": "e42TCSHZvszZmEIS",
             "type": "MOD",
             "slug": {
                 "curseforge": "great-scrollable-tooltips"
@@ -5113,7 +5315,7 @@
             ]
         },
         {
-            "pakku_id": "XMU4IkFJferWtWSG",
+            "pakku_id": "CmwAoEcy1sOvxo3r",
             "type": "MOD",
             "slug": {
                 "curseforge": "guard-villagers"
@@ -5150,7 +5352,7 @@
             ]
         },
         {
-            "pakku_id": "gLEOObKbyXJfJ3TT",
+            "pakku_id": "PCUFjuGEKqX8gfJu",
             "type": "MOD",
             "slug": {
                 "curseforge": "guideme"
@@ -5186,7 +5388,7 @@
             ]
         },
         {
-            "pakku_id": "RMYTl001ogDqtUSL",
+            "pakku_id": "yhRdbS3JW7DyjPhl",
             "type": "MOD",
             "slug": {
                 "curseforge": "iceberg"
@@ -5223,7 +5425,7 @@
             ]
         },
         {
-            "pakku_id": "89ThEEFRnN20WH98",
+            "pakku_id": "3fIJHeGiPG0AlnpG",
             "type": "MOD",
             "slug": {
                 "curseforge": "immediatelyfast"
@@ -5263,7 +5465,7 @@
             ]
         },
         {
-            "pakku_id": "pLIiKsoqCbTtnmqR",
+            "pakku_id": "eu924h9VBnwRUSOR",
             "type": "MOD",
             "slug": {
                 "curseforge": "immersive-aircraft"
@@ -5299,7 +5501,7 @@
             ]
         },
         {
-            "pakku_id": "nFv1nf5KbtdapEu3",
+            "pakku_id": "70V8jWQ8sSZ9KH7e",
             "type": "MOD",
             "slug": {
                 "curseforge": "immersive-engineering"
@@ -5335,7 +5537,7 @@
             ]
         },
         {
-            "pakku_id": "qBRCRSZ1UHOLuxme",
+            "pakku_id": "04bRYMIRy8xjmqiG",
             "type": "MOD",
             "slug": {
                 "curseforge": "in-control"
@@ -5371,10 +5573,10 @@
             ]
         },
         {
-            "pakku_id": "8gxfNjQzSuJLwGdJ",
+            "pakku_id": "PQTGAenw1TNYVFNH",
             "pakku_links": [
-                "hJUUn3jBV9lNYZ6y",
-                "PbFTIY40owBiHLc0"
+                "tqzJ90fDFrCmwDoB",
+                "wCaHAq196ubtslRV"
             ],
             "type": "MOD",
             "slug": {
@@ -5414,7 +5616,7 @@
             ]
         },
         {
-            "pakku_id": "dAwOOW04OnjcszaP",
+            "pakku_id": "4XxzfbiBmXfLxp6a",
             "type": "MOD",
             "slug": {
                 "curseforge": "integrated-api"
@@ -5450,10 +5652,10 @@
             ]
         },
         {
-            "pakku_id": "ruEBCYj6dQinI6mS",
+            "pakku_id": "Nx2kDqgHr9Vpg40X",
             "pakku_links": [
-                "2t6dXsSNIcUeBApi",
-                "hf7vReJ5234nu1eg"
+                "luFfoKQ8Wt9BZp4v",
+                "a1Q5wyFuUzxIQ3qv"
             ],
             "type": "MOD",
             "slug": {
@@ -5494,12 +5696,12 @@
             ]
         },
         {
-            "pakku_id": "s4RK3rmVw6CO3uQ8",
+            "pakku_id": "Qu3vBSC6lPNS5XHx",
             "pakku_links": [
-                "dAwOOW04OnjcszaP",
-                "1fdoZVolQlrmiGP2",
-                "SrOvcpwkUYxnhTbk",
-                "sqgCB107JT3a9BmO"
+                "4XxzfbiBmXfLxp6a",
+                "E2K61L4wZ4Eqmk2n",
+                "xfXKyVArx8ORbTwf",
+                "QX9JOfjcwwYqKFGk"
             ],
             "type": "MOD",
             "slug": {
@@ -5543,7 +5745,7 @@
             ]
         },
         {
-            "pakku_id": "2t6dXsSNIcUeBApi",
+            "pakku_id": "luFfoKQ8Wt9BZp4v",
             "type": "MOD",
             "slug": {
                 "curseforge": "integrated-dynamics"
@@ -5582,7 +5784,7 @@
             ]
         },
         {
-            "pakku_id": "JEG6RdzFonm0uxME",
+            "pakku_id": "eW9J8EEP1yLB3cfJ",
             "type": "MOD",
             "slug": {
                 "curseforge": "integrated-scripting"
@@ -5621,9 +5823,9 @@
             ]
         },
         {
-            "pakku_id": "DuRJAgXyL90DK88K",
+            "pakku_id": "hkAc9o8jye2eUlpU",
             "pakku_links": [
-                "hf7vReJ5234nu1eg"
+                "a1Q5wyFuUzxIQ3qv"
             ],
             "type": "MOD",
             "slug": {
@@ -5664,7 +5866,7 @@
             ]
         },
         {
-            "pakku_id": "hf7vReJ5234nu1eg",
+            "pakku_id": "a1Q5wyFuUzxIQ3qv",
             "type": "MOD",
             "slug": {
                 "curseforge": "integrated-tunnels"
@@ -5703,7 +5905,7 @@
             ]
         },
         {
-            "pakku_id": "FrqYpkf8I9nezOuE",
+            "pakku_id": "dwlKMFVXLioYi8Lu",
             "type": "MOD",
             "slug": {
                 "curseforge": "iron-jetpacks"
@@ -5741,9 +5943,9 @@
             ]
         },
         {
-            "pakku_id": "Wv2T03T3tUfhGZAL",
+            "pakku_id": "71KduVXuua1Y7exh",
             "pakku_links": [
-                "riJOmiqDPQXy55H3"
+                "BhEeoNOI268f7aYu"
             ],
             "type": "MOD",
             "slug": {
@@ -5784,7 +5986,7 @@
             ]
         },
         {
-            "pakku_id": "5YpFCEpwlKHRGadp",
+            "pakku_id": "euOEWoIQzRqBdXNV",
             "type": "MOD",
             "slug": {
                 "curseforge": "jade-addons"
@@ -5824,7 +6026,7 @@
             ]
         },
         {
-            "pakku_id": "gn4Lw57SqRooovSB",
+            "pakku_id": "pfkb4JO2pkef8wxk",
             "type": "MOD",
             "slug": {
                 "curseforge": "jade"
@@ -5862,7 +6064,7 @@
             ]
         },
         {
-            "pakku_id": "6Yp2jtEIhMEkUp0f",
+            "pakku_id": "zJXhhnaTuZknx3nu",
             "type": "MOD",
             "slug": {
                 "curseforge": "journeymap"
@@ -5898,9 +6100,9 @@
             ]
         },
         {
-            "pakku_id": "lMM35IRSaNvRQ0oA",
+            "pakku_id": "ocjszTyAQrEJ5cTU",
             "pakku_links": [
-                "6Yp2jtEIhMEkUp0f"
+                "zJXhhnaTuZknx3nu"
             ],
             "type": "MOD",
             "slug": {
@@ -5940,9 +6142,9 @@
             ]
         },
         {
-            "pakku_id": "QUPI8h0FIMD3KFak",
+            "pakku_id": "NSZ2NIeV4S8GFC96",
             "pakku_links": [
-                "eme89zbuNRrV25Y6"
+                "wTUkLYJbtoxXoMNf"
             ],
             "type": "MOD",
             "slug": {
@@ -5982,9 +6184,9 @@
             ]
         },
         {
-            "pakku_id": "iQolSWpsbVPKvjQU",
+            "pakku_id": "zZePR7Unvi6FtEZK",
             "pakku_links": [
-                "WduUaFcum3ELoQsV"
+                "fqKPXtv2M2kRmDKE"
             ],
             "type": "MOD",
             "slug": {
@@ -6023,7 +6225,7 @@
             ]
         },
         {
-            "pakku_id": "WduUaFcum3ELoQsV",
+            "pakku_id": "fqKPXtv2M2kRmDKE",
             "type": "MOD",
             "slug": {
                 "curseforge": "kotlin-for-forge"
@@ -6064,9 +6266,9 @@
             ]
         },
         {
-            "pakku_id": "HGBIXhX53xXXfF2F",
+            "pakku_id": "nOhhNKOqafhAR11K",
             "pakku_links": [
-                "MDRjlFzsBQOW03Sf"
+                "Y7ag4pD9AOIofWv1"
             ],
             "type": "MOD",
             "slug": {
@@ -6106,9 +6308,9 @@
             ]
         },
         {
-            "pakku_id": "E9qEGyEvoWY9NGCT",
+            "pakku_id": "XowO9Djg6VpQ8eIH",
             "pakku_links": [
-                "HGBIXhX53xXXfF2F"
+                "nOhhNKOqafhAR11K"
             ],
             "type": "MOD",
             "slug": {
@@ -6148,7 +6350,7 @@
             ]
         },
         {
-            "pakku_id": "efy8Xbm8v8sDYSZK",
+            "pakku_id": "tz7FXkm7l9ZsAFTg",
             "type": "MOD",
             "slug": {
                 "curseforge": "kubejs-ars-nouveau"
@@ -6188,7 +6390,7 @@
             ]
         },
         {
-            "pakku_id": "bxiTX1fiZUAxdekZ",
+            "pakku_id": "QDatpzDmtXQOaymY",
             "type": "MOD",
             "slug": {
                 "curseforge": "kubejs-botania"
@@ -6228,9 +6430,9 @@
             ]
         },
         {
-            "pakku_id": "07BoQiGY0ghvpemD",
+            "pakku_id": "FcUHTEQU8RdqfrqO",
             "pakku_links": [
-                "HGBIXhX53xXXfF2F"
+                "nOhhNKOqafhAR11K"
             ],
             "type": "MOD",
             "slug": {
@@ -6270,7 +6472,7 @@
             ]
         },
         {
-            "pakku_id": "QYLGmc3QJWLOUl6n",
+            "pakku_id": "5W3PdFxmpUGVaO98",
             "type": "MOD",
             "slug": {
                 "curseforge": "kubejs-immersive-engineering-unofficial"
@@ -6307,7 +6509,7 @@
             ]
         },
         {
-            "pakku_id": "o7Pin1SfUJpNlAi8",
+            "pakku_id": "rV7bEEC22Gewy3me",
             "type": "MOD",
             "slug": {
                 "curseforge": "kubejs-industrial-foregoing"
@@ -6343,9 +6545,9 @@
             ]
         },
         {
-            "pakku_id": "61mjFFC2PGyUbCnU",
+            "pakku_id": "eudpy80QQKNxzMCv",
             "pakku_links": [
-                "eme89zbuNRrV25Y6"
+                "wTUkLYJbtoxXoMNf"
             ],
             "type": "MOD",
             "slug": {
@@ -6386,7 +6588,7 @@
             ]
         },
         {
-            "pakku_id": "qHAbY0kTlz29jGG9",
+            "pakku_id": "T5fG2LNNmiStKRxH",
             "type": "MOD",
             "slug": {
                 "curseforge": "ldlib"
@@ -6422,7 +6624,7 @@
             ]
         },
         {
-            "pakku_id": "jfbec0jTFn8Esklh",
+            "pakku_id": "KPikMn2EvCpQWAYf",
             "type": "MOD",
             "slug": {
                 "curseforge": "laserio-uel"
@@ -6458,7 +6660,7 @@
             ]
         },
         {
-            "pakku_id": "wejnTFNpwIK2coQP",
+            "pakku_id": "EYphx5YKf0xnxcgH",
             "type": "MOD",
             "slug": {
                 "curseforge": "lemon-lib"
@@ -6494,7 +6696,7 @@
             ]
         },
         {
-            "pakku_id": "v7CdHUAWX9RYteq2",
+            "pakku_id": "7DPPpTU19ssqJktE",
             "type": "MOD",
             "slug": {
                 "curseforge": "libx"
@@ -6530,7 +6732,7 @@
             ]
         },
         {
-            "pakku_id": "ffEZicFYzELT0y6R",
+            "pakku_id": "IjCJeWDbaBbgMrps",
             "type": "MOD",
             "slug": {
                 "curseforge": "libertys-villagers"
@@ -6568,7 +6770,7 @@
             ]
         },
         {
-            "pakku_id": "c7DVlkzBv272B5ON",
+            "pakku_id": "AA2nvS8iqBGKCLN4",
             "type": "MOD",
             "slug": {
                 "curseforge": "lithostitched"
@@ -6604,7 +6806,7 @@
             ]
         },
         {
-            "pakku_id": "7UJp7TVA1itqZ3Xd",
+            "pakku_id": "bRCNYJrF7P9cCHYF",
             "type": "MOD",
             "slug": {
                 "curseforge": "little-logistics"
@@ -6642,7 +6844,7 @@
             ]
         },
         {
-            "pakku_id": "ETcpVa7yKwvoG1rF",
+            "pakku_id": "S0N0DKNfGWHTraaA",
             "type": "MOD",
             "slug": {
                 "curseforge": "lmft"
@@ -6681,7 +6883,7 @@
             ]
         },
         {
-            "pakku_id": "6RWrtAcKYXEfXasg",
+            "pakku_id": "jWllSHnjBMmW4jPk",
             "type": "MOD",
             "slug": {
                 "curseforge": "lodestone"
@@ -6718,7 +6920,7 @@
             ]
         },
         {
-            "pakku_id": "SXho2Fxc59Lj7zhV",
+            "pakku_id": "WOuCqAq4FWnTqCsP",
             "type": "MOD",
             "slug": {
                 "curseforge": "log-begone"
@@ -6754,7 +6956,7 @@
             ]
         },
         {
-            "pakku_id": "pjh9WjXcuLLKtfD1",
+            "pakku_id": "MuZprTAsv9ICgkcV",
             "type": "MOD",
             "slug": {
                 "curseforge": "lootjs"
@@ -6791,7 +6993,7 @@
             ]
         },
         {
-            "pakku_id": "WNkrpDqK9FhlXwzC",
+            "pakku_id": "rY0EmKxVuEqAUxeP",
             "type": "MOD",
             "slug": {
                 "curseforge": "lootr"
@@ -6828,7 +7030,7 @@
             ]
         },
         {
-            "pakku_id": "UtdYgTUukaveXNLe",
+            "pakku_id": "0H9pdIwiOkwY9iFI",
             "type": "MOD",
             "slug": {
                 "curseforge": "lychee"
@@ -6866,7 +7068,7 @@
             ]
         },
         {
-            "pakku_id": "UQq4OBvThh8eQIFy",
+            "pakku_id": "5NTzxUkSHFZxbpRA",
             "type": "MOD",
             "slug": {
                 "curseforge": "moogs-end-structures"
@@ -6906,7 +7108,7 @@
             ]
         },
         {
-            "pakku_id": "NzrTJF0Zx1MVsYTA",
+            "pakku_id": "mJibmcSJbjZhlvV9",
             "type": "MOD",
             "slug": {
                 "curseforge": "mantle"
@@ -6943,7 +7145,7 @@
             ]
         },
         {
-            "pakku_id": "hbaxddBABJqyIYVC",
+            "pakku_id": "k0c3rdVFI0VFiDF3",
             "type": "MOD",
             "slug": {
                 "curseforge": "max-health-fix"
@@ -6980,7 +7182,7 @@
             ]
         },
         {
-            "pakku_id": "c5qBSpBGsC94h1RY",
+            "pakku_id": "nSBvFLEC8tvanZ6e",
             "type": "MOD",
             "slug": {
                 "curseforge": "mcjtylib"
@@ -7016,7 +7218,7 @@
             ]
         },
         {
-            "pakku_id": "pTYNqtgOJid4OL7L",
+            "pakku_id": "1Q1R8jDr3w8NttdJ",
             "type": "MOD",
             "slug": {
                 "curseforge": "meet-your-fight"
@@ -7055,7 +7257,7 @@
             ]
         },
         {
-            "pakku_id": "eme89zbuNRrV25Y6",
+            "pakku_id": "wTUkLYJbtoxXoMNf",
             "type": "MOD",
             "slug": {
                 "curseforge": "mekanism"
@@ -7092,7 +7294,7 @@
             ]
         },
         {
-            "pakku_id": "eN2CPhrK31vketDj",
+            "pakku_id": "LAyOSUdKl5tW7fK4",
             "type": "MOD",
             "slug": {
                 "curseforge": "mekanism-generators"
@@ -7131,7 +7333,7 @@
             ]
         },
         {
-            "pakku_id": "5zjBbr84BIGLRbQT",
+            "pakku_id": "ZGgMDHOLNmHB86GV",
             "type": "MOD",
             "slug": {
                 "curseforge": "mekanism-tools"
@@ -7170,7 +7372,7 @@
             ]
         },
         {
-            "pakku_id": "slrv29M1zBzDVSch",
+            "pakku_id": "wjPqQ4F7fvgzIdPO",
             "type": "MOD",
             "slug": {
                 "curseforge": "mini-utilities-y"
@@ -7207,7 +7409,7 @@
             ]
         },
         {
-            "pakku_id": "Ihz7cl1dVOBtM54l",
+            "pakku_id": "ut6nCSBzpA4bspe0",
             "type": "MOD",
             "slug": {
                 "curseforge": "mining-gadgets"
@@ -7244,7 +7446,7 @@
             ]
         },
         {
-            "pakku_id": "ZATC5g34dvdAZeqm",
+            "pakku_id": "Ud9VnAzXShEk4hnz",
             "type": "MOD",
             "slug": {
                 "curseforge": "mixintrace-resmithed"
@@ -7281,9 +7483,9 @@
             ]
         },
         {
-            "pakku_id": "OA7QOrD16Q7ZXkLG",
+            "pakku_id": "yJTgNIsScUrpSVWg",
             "pakku_links": [
-                "1fdoZVolQlrmiGP2"
+                "E2K61L4wZ4Eqmk2n"
             ],
             "type": "MOD",
             "slug": {
@@ -7322,7 +7524,7 @@
             ]
         },
         {
-            "pakku_id": "hRYRf337FGN2epHM",
+            "pakku_id": "gMe1J6kd6k0DY0Lp",
             "type": "MOD",
             "slug": {
                 "curseforge": "modernfix"
@@ -7358,7 +7560,7 @@
             ]
         },
         {
-            "pakku_id": "HC9F0gw1zWiw13BV",
+            "pakku_id": "jjEgWBKeyWCeYyf9",
             "type": "MOD",
             "slug": {
                 "curseforge": "modonomicon"
@@ -7396,7 +7598,7 @@
             ]
         },
         {
-            "pakku_id": "5pbfzYvp8tR2opVq",
+            "pakku_id": "TOvElEbgSjLHQ5gB",
             "type": "MOD",
             "slug": {
                 "curseforge": "modular-routers"
@@ -7433,7 +7635,7 @@
             ]
         },
         {
-            "pakku_id": "1fdoZVolQlrmiGP2",
+            "pakku_id": "E2K61L4wZ4Eqmk2n",
             "type": "MOD",
             "slug": {
                 "curseforge": "selene"
@@ -7470,7 +7672,7 @@
             ]
         },
         {
-            "pakku_id": "vJJJ5SVjHDmI499Z",
+            "pakku_id": "bMpP8mHJR1yCHIpa",
             "type": "MOD",
             "slug": {
                 "curseforge": "more-immersive-wires"
@@ -7509,7 +7711,7 @@
             ]
         },
         {
-            "pakku_id": "TIiL130LLFflSnOk",
+            "pakku_id": "Mow7ACYMtTnIZ6cb",
             "type": "MOD",
             "slug": {
                 "curseforge": "morejs"
@@ -7547,7 +7749,7 @@
             ]
         },
         {
-            "pakku_id": "Q64dW6X2UfeeB0uE",
+            "pakku_id": "tzXyamiyGcNtoEwQ",
             "type": "MOD",
             "slug": {
                 "curseforge": "morph-o-tool"
@@ -7583,7 +7785,7 @@
             ]
         },
         {
-            "pakku_id": "FvpHry5n7wIDcFsn",
+            "pakku_id": "u6kl0HbQ7zqv9THI",
             "type": "MOD",
             "slug": {
                 "curseforge": "mouse-tweaks"
@@ -7619,7 +7821,7 @@
             ]
         },
         {
-            "pakku_id": "VOarFV4Vb1wHjbeE",
+            "pakku_id": "oMMnJgN2VspoTeVh",
             "type": "MOD",
             "slug": {
                 "curseforge": "mowlib"
@@ -7655,7 +7857,7 @@
             ]
         },
         {
-            "pakku_id": "jTj9T21doEShZHlO",
+            "pakku_id": "OTH1TZ5PVhK6dn7a",
             "type": "MOD",
             "slug": {
                 "curseforge": "multiblocked2"
@@ -7693,7 +7895,7 @@
             ]
         },
         {
-            "pakku_id": "nTUXH3z1CHa6eK51",
+            "pakku_id": "PYWqlxjTu5gwpK8a",
             "type": "MOD",
             "slug": {
                 "curseforge": "mythicbotany"
@@ -7729,9 +7931,9 @@
             ]
         },
         {
-            "pakku_id": "iK5ZZY2qYZAvHZUd",
+            "pakku_id": "5JMTxq3eOzflkQnI",
             "pakku_links": [
-                "hJUUn3jBV9lNYZ6y"
+                "tqzJ90fDFrCmwDoB"
             ],
             "type": "MOD",
             "slug": {
@@ -7771,7 +7973,7 @@
             ]
         },
         {
-            "pakku_id": "3CIoKLKiRMgLD1T6",
+            "pakku_id": "fWbCCSmeiIWkrF0F",
             "type": "MOD",
             "slug": {
                 "curseforge": "natures-compass"
@@ -7807,9 +8009,9 @@
             ]
         },
         {
-            "pakku_id": "KmQJPvtpDfUkbl0M",
+            "pakku_id": "cTp8EBRLQbQBVcMd",
             "pakku_links": [
-                "HKvLLmiAGyvmir3H"
+                "2gdjWomOegUW7w5n"
             ],
             "type": "MOD",
             "slug": {
@@ -7849,7 +8051,7 @@
             ]
         },
         {
-            "pakku_id": "3fKdFMl9Ge6vOpjM",
+            "pakku_id": "FY3jIjwp5TWyRJAh",
             "type": "MOD",
             "slug": {
                 "curseforge": "nethers-delight"
@@ -7886,7 +8088,7 @@
             ]
         },
         {
-            "pakku_id": "6TgsBIVpxV4EV4Po",
+            "pakku_id": "GOGdAjr5O3M5j3RW",
             "type": "MOD",
             "slug": {
                 "curseforge": "netherportalfix"
@@ -7925,7 +8127,7 @@
             ]
         },
         {
-            "pakku_id": "934Tvc6KpmfTFUnk",
+            "pakku_id": "6PzgyAomeUjXdeDB",
             "type": "MOD",
             "slug": {
                 "curseforge": "noisium"
@@ -7963,7 +8165,7 @@
             ]
         },
         {
-            "pakku_id": "38CbqUMQwBrg54ku",
+            "pakku_id": "lrHwSNlWBnY7dVlx",
             "type": "MOD",
             "slug": {
                 "curseforge": "nolijium"
@@ -8001,9 +8203,9 @@
             ]
         },
         {
-            "pakku_id": "WsA4gjLgfJilkPBc",
+            "pakku_id": "Wp6n1K0YVubSSsrY",
             "pakku_links": [
-                "wTjwUEEjO0TNdbCY"
+                "8Wt5s4GmEXj2a7nd"
             ],
             "type": "MOD",
             "slug": {
@@ -8044,7 +8246,7 @@
             ]
         },
         {
-            "pakku_id": "b4y9dhe0cHzVQE3C",
+            "pakku_id": "VpHWjWjs7ZyCkov9",
             "type": "MOD",
             "slug": {
                 "curseforge": "observable"
@@ -8083,7 +8285,7 @@
             ]
         },
         {
-            "pakku_id": "gtZ73n1SZJCSm3Ra",
+            "pakku_id": "72OrmLcHLWJYL484",
             "type": "MOD",
             "slug": {
                 "curseforge": "obsidianui"
@@ -8120,9 +8322,9 @@
             ]
         },
         {
-            "pakku_id": "ySixn5z1sUyTmeej",
+            "pakku_id": "dNS25JHn1X6cqGmV",
             "pakku_links": [
-                "D1jnjuGO0aPBgSuY"
+                "TXLErfKSmyiYLzq0"
             ],
             "type": "MOD",
             "slug": {
@@ -8165,7 +8367,7 @@
             ]
         },
         {
-            "pakku_id": "U4n2vatZLxaZYXL6",
+            "pakku_id": "qam4qlYf43k3JyQo",
             "type": "MOD",
             "slug": {
                 "curseforge": "occultism-kubejs"
@@ -8205,7 +8407,7 @@
             ]
         },
         {
-            "pakku_id": "wTjwUEEjO0TNdbCY",
+            "pakku_id": "8Wt5s4GmEXj2a7nd",
             "type": "MOD",
             "slug": {
                 "curseforge": "octo-lib"
@@ -8241,10 +8443,10 @@
             ]
         },
         {
-            "pakku_id": "wMuwahLDF3jRXiyB",
+            "pakku_id": "ooBCaO6AvxjUMW3R",
             "pakku_links": [
-                "42LqatUGb4dPNY3f",
-                "HKvLLmiAGyvmir3H"
+                "w35BfFcrMCaZBYLa",
+                "2gdjWomOegUW7w5n"
             ],
             "type": "MOD",
             "slug": {
@@ -8286,7 +8488,7 @@
             ]
         },
         {
-            "pakku_id": "42LqatUGb4dPNY3f",
+            "pakku_id": "w35BfFcrMCaZBYLa",
             "type": "MOD",
             "slug": {
                 "curseforge": "oh-the-trees-youll-grow"
@@ -8323,7 +8525,7 @@
             ]
         },
         {
-            "pakku_id": "rRc3sI07r6pjqEaS",
+            "pakku_id": "BJygmqV3q7PlIG9d",
             "type": "MOD",
             "slug": {
                 "curseforge": "openblocks-elevator"
@@ -8359,7 +8561,7 @@
             ]
         },
         {
-            "pakku_id": "VMoXlSdU1K7XSoYk",
+            "pakku_id": "V7j5MaHlKZthjETJ",
             "type": "MOD",
             "slug": {
                 "curseforge": "overloaded-armor-bar"
@@ -8395,7 +8597,7 @@
             ]
         },
         {
-            "pakku_id": "gSlsfXk8cyL8lXjF",
+            "pakku_id": "MkS1qmOowcnHIYLg",
             "type": "MOD",
             "slug": {
                 "curseforge": "packet-fixer"
@@ -8438,7 +8640,7 @@
             ]
         },
         {
-            "pakku_id": "cyNGVkRden2jn9oC",
+            "pakku_id": "6TopcBG2n4yP6slp",
             "type": "MOD",
             "slug": {
                 "curseforge": "patched"
@@ -8475,7 +8677,7 @@
             ]
         },
         {
-            "pakku_id": "hJUUn3jBV9lNYZ6y",
+            "pakku_id": "tqzJ90fDFrCmwDoB",
             "type": "MOD",
             "slug": {
                 "curseforge": "patchouli"
@@ -8511,7 +8713,7 @@
             ]
         },
         {
-            "pakku_id": "m1gyDH61U8AvtLa0",
+            "pakku_id": "2DcqqAyXLe86yerx",
             "type": "MOD",
             "slug": {
                 "curseforge": "pedestals"
@@ -8549,7 +8751,7 @@
             ]
         },
         {
-            "pakku_id": "hARUodKFfwdZi2rP",
+            "pakku_id": "dsik85l4DFpNR1NC",
             "type": "MOD",
             "slug": {
                 "curseforge": "pig-pen-cipher"
@@ -8588,7 +8790,7 @@
             ]
         },
         {
-            "pakku_id": "MKxnxmkUspoaTKmV",
+            "pakku_id": "eIkrDH3MHlJYwtYY",
             "type": "MOD",
             "slug": {
                 "curseforge": "pipe-connector"
@@ -8624,7 +8826,7 @@
             ]
         },
         {
-            "pakku_id": "bIiYEuvlIbA2zoGv",
+            "pakku_id": "KkmnSUaMF4jFJt2P",
             "type": "MOD",
             "slug": {
                 "curseforge": "placebo"
@@ -8661,7 +8863,7 @@
             ]
         },
         {
-            "pakku_id": "a6OFQQbeVHHQMgZ6",
+            "pakku_id": "wBat4szuLI17NqbG",
             "type": "MOD",
             "slug": {
                 "curseforge": "platform"
@@ -8698,7 +8900,7 @@
             ]
         },
         {
-            "pakku_id": "ON6g8IADqps7Pqrj",
+            "pakku_id": "aXX6xxtK45pywKkb",
             "type": "MOD",
             "slug": {
                 "curseforge": "plonk"
@@ -8736,7 +8938,7 @@
             ]
         },
         {
-            "pakku_id": "gQmPMZHWccFmwW1M",
+            "pakku_id": "wDqElvtFq0XgXQcl",
             "type": "MOD",
             "slug": {
                 "curseforge": "pneumaticcraft-repressurized"
@@ -8775,7 +8977,7 @@
             ]
         },
         {
-            "pakku_id": "6JENhqgHkjf0Ukgm",
+            "pakku_id": "To6KKLddpzvRtFrn",
             "type": "MOD",
             "slug": {
                 "curseforge": "polylib"
@@ -8813,7 +9015,7 @@
             ]
         },
         {
-            "pakku_id": "q1ZLbTR7PVmb7pvZ",
+            "pakku_id": "0CfjzOlH1FDnZabP",
             "type": "MOD",
             "slug": {
                 "curseforge": "polymorph"
@@ -8850,9 +9052,9 @@
             ]
         },
         {
-            "pakku_id": "IbFFXp5kpeZi36fg",
+            "pakku_id": "sb7i52CjRwcYKHms",
             "pakku_links": [
-                "q1ZLbTR7PVmb7pvZ"
+                "0CfjzOlH1FDnZabP"
             ],
             "type": "MOD",
             "slug": {
@@ -8892,7 +9094,7 @@
             ]
         },
         {
-            "pakku_id": "23FhwkbKfK70IPHo",
+            "pakku_id": "d56KIDU33B6L0baM",
             "type": "MOD",
             "slug": {
                 "curseforge": "ponder"
@@ -8930,7 +9132,7 @@
             ]
         },
         {
-            "pakku_id": "ZuprDmGqStFjg3bH",
+            "pakku_id": "2jVfwkJYiSnHab1t",
             "type": "MOD",
             "slug": {
                 "curseforge": "powah-rearchitected"
@@ -8969,7 +9171,7 @@
             ]
         },
         {
-            "pakku_id": "yxA578urt5VBQPoK",
+            "pakku_id": "CMzagh2gAnVZHs4W",
             "type": "MOD",
             "slug": {
                 "curseforge": "probejs"
@@ -9008,7 +9210,7 @@
             ]
         },
         {
-            "pakku_id": "3vPK6Aq0vB12wUQH",
+            "pakku_id": "OQIAlnJhUlSBvJV9",
             "type": "MOD",
             "slug": {
                 "curseforge": "project-vibrant-journeys"
@@ -9045,7 +9247,7 @@
             ]
         },
         {
-            "pakku_id": "pXe4zn7l8epdR4yS",
+            "pakku_id": "QQv70z1cEqpYYlWa",
             "type": "MOD",
             "slug": {
                 "curseforge": "puzzles-lib"
@@ -9081,9 +9283,9 @@
             ]
         },
         {
-            "pakku_id": "SrOvcpwkUYxnhTbk",
+            "pakku_id": "xfXKyVArx8ORbTwf",
             "pakku_links": [
-                "1UdDZAYVAwLWIaag"
+                "EndAihlzdqTzrry8"
             ],
             "type": "MOD",
             "slug": {
@@ -9122,7 +9324,7 @@
             ]
         },
         {
-            "pakku_id": "soRjXhuDBk8UrdDb",
+            "pakku_id": "reyVnQgMl8Vb523k",
             "type": "MOD",
             "slug": {
                 "curseforge": "quickstack"
@@ -9158,7 +9360,7 @@
             ]
         },
         {
-            "pakku_id": "dUiB6cEZMF9zYLBX",
+            "pakku_id": "6Ro68zGeZxCwrZMh",
             "type": "MOD",
             "slug": {
                 "curseforge": "rftools-base"
@@ -9196,7 +9398,7 @@
             ]
         },
         {
-            "pakku_id": "g1VzzopvC4iySnCK",
+            "pakku_id": "rOy5mOPOLRhpyosC",
             "type": "MOD",
             "slug": {
                 "curseforge": "rftools-builder"
@@ -9235,7 +9437,7 @@
             ]
         },
         {
-            "pakku_id": "C9WHpwniMU59GnD1",
+            "pakku_id": "FFjjQFyA7ST3j9th",
             "type": "MOD",
             "slug": {
                 "curseforge": "rftools-control"
@@ -9274,7 +9476,7 @@
             ]
         },
         {
-            "pakku_id": "QxVyV5pvjyHuuoiv",
+            "pakku_id": "EyeLFfaVtEbdyD0w",
             "type": "MOD",
             "slug": {
                 "curseforge": "rftools-power"
@@ -9313,7 +9515,7 @@
             ]
         },
         {
-            "pakku_id": "DlAry8YZKqknlDV7",
+            "pakku_id": "as1IG04omW6EYDqt",
             "type": "MOD",
             "slug": {
                 "curseforge": "rftools-storage"
@@ -9352,7 +9554,7 @@
             ]
         },
         {
-            "pakku_id": "vhWDX0JwFXTln9Ym",
+            "pakku_id": "3q06E72u2hRHA5ro",
             "type": "MOD",
             "slug": {
                 "curseforge": "rftools-utility"
@@ -9424,7 +9626,7 @@
             ]
         },
         {
-            "pakku_id": "XRNoRwciulEfpbJy",
+            "pakku_id": "wzZaAzOcBvZ6ba7w",
             "type": "MOD",
             "slug": {
                 "curseforge": "radium-reforged"
@@ -9461,7 +9663,7 @@
             ]
         },
         {
-            "pakku_id": "BbhumVDzXDKoe9b6",
+            "pakku_id": "d9iGFwXWzBpB8Bok",
             "type": "MOD",
             "slug": {
                 "curseforge": "ranged-pumps"
@@ -9498,7 +9700,7 @@
             ]
         },
         {
-            "pakku_id": "XiLIfuxQ744QMLfF",
+            "pakku_id": "ZHJ8rpc9DSdiwrXy",
             "type": "MOD",
             "slug": {
                 "curseforge": "redstone-pen"
@@ -9535,7 +9737,7 @@
             ]
         },
         {
-            "pakku_id": "HplUMXTDeBXLZ3E0",
+            "pakku_id": "xXrMkvvHNiQmzwL6",
             "type": "MOD",
             "slug": {
                 "curseforge": "repurposed-structures"
@@ -9571,7 +9773,7 @@
             ]
         },
         {
-            "pakku_id": "ivFbJAO3hMimlP6u",
+            "pakku_id": "qUGeUc6MdokQExtJ",
             "type": "MOD",
             "slug": {
                 "curseforge": "resourceful-config"
@@ -9607,7 +9809,7 @@
             ]
         },
         {
-            "pakku_id": "qT5ziZyG921jqY57",
+            "pakku_id": "6SL1s8TFIMU5mLLQ",
             "type": "MOD",
             "slug": {
                 "curseforge": "resourceful-lib"
@@ -9643,7 +9845,7 @@
             ]
         },
         {
-            "pakku_id": "MDRjlFzsBQOW03Sf",
+            "pakku_id": "Y7ag4pD9AOIofWv1",
             "type": "MOD",
             "slug": {
                 "curseforge": "rhino"
@@ -9679,7 +9881,7 @@
             ]
         },
         {
-            "pakku_id": "wdy1Ekqid5qliLyM",
+            "pakku_id": "JodhL6e9paeJsR7Z",
             "type": "MOD",
             "slug": {
                 "curseforge": "runelic"
@@ -9718,7 +9920,7 @@
             ]
         },
         {
-            "pakku_id": "ydHxeklRGH9yVIZA",
+            "pakku_id": "0tJUa6bpvFX9PsZf",
             "type": "MOD",
             "slug": {
                 "curseforge": "ryoamiclights"
@@ -9757,7 +9959,7 @@
             ]
         },
         {
-            "pakku_id": "w6HqMoiHJvjP3GRp",
+            "pakku_id": "WQCGi84p0gFQaQMX",
             "type": "MOD",
             "slug": {
                 "curseforge": "scannable"
@@ -9796,7 +9998,7 @@
             ]
         },
         {
-            "pakku_id": "cI4glIbv9Guvw79i",
+            "pakku_id": "b2HcyUOm95OLOnuS",
             "type": "MOD",
             "slug": {
                 "curseforge": "searchables"
@@ -9832,7 +10034,7 @@
             ]
         },
         {
-            "pakku_id": "m4tGRA73IAZBKaCR",
+            "pakku_id": "k3yxZIbgy3nNrGbz",
             "type": "MOD",
             "slug": {
                 "curseforge": "servercore"
@@ -9869,7 +10071,7 @@
             ]
         },
         {
-            "pakku_id": "VOEQCaPdbL8sgN6i",
+            "pakku_id": "AkzIvoirJlUNLWoD",
             "type": "MOD",
             "slug": {
                 "curseforge": "shrink_"
@@ -9905,7 +10107,7 @@
             ]
         },
         {
-            "pakku_id": "OpSwfPL9EJk7N46L",
+            "pakku_id": "Hp6oYw4WT2Fboe1i",
             "type": "MOD",
             "slug": {
                 "curseforge": "small-ships"
@@ -9941,7 +10143,7 @@
             ]
         },
         {
-            "pakku_id": "D1jnjuGO0aPBgSuY",
+            "pakku_id": "TXLErfKSmyiYLzq0",
             "type": "MOD",
             "slug": {
                 "curseforge": "smartbrainlib"
@@ -9977,9 +10179,9 @@
             ]
         },
         {
-            "pakku_id": "8sRTN5n8p0MxArNX",
+            "pakku_id": "TFs49Mf7Zam0arx8",
             "pakku_links": [
-                "hhm3bBkOgHq9uJv7"
+                "Tj9tE4XBDGDuA6w4"
             ],
             "type": "MOD",
             "slug": {
@@ -10019,7 +10221,7 @@
             ]
         },
         {
-            "pakku_id": "hhm3bBkOgHq9uJv7",
+            "pakku_id": "Tj9tE4XBDGDuA6w4",
             "type": "MOD",
             "slug": {
                 "curseforge": "sophisticated-core"
@@ -10056,7 +10258,7 @@
             ]
         },
         {
-            "pakku_id": "2ZooS8Z3WhcpqzEM",
+            "pakku_id": "7cViitfgtCqEFZ3C",
             "type": "MOD",
             "slug": {
                 "curseforge": "sophisticated-storage"
@@ -10095,7 +10297,7 @@
             ]
         },
         {
-            "pakku_id": "KzjGvbsuOoyirFcI",
+            "pakku_id": "tyrUTESwphuF3IBS",
             "type": "MOD",
             "slug": {
                 "curseforge": "sophisticated-storage-create-integration"
@@ -10136,7 +10338,7 @@
             ]
         },
         {
-            "pakku_id": "SsqHmLIVbAZZwopW",
+            "pakku_id": "egPVgNfTcXzesyDz",
             "type": "MOD",
             "slug": {
                 "curseforge": "starbunclemania"
@@ -10173,7 +10375,7 @@
             ]
         },
         {
-            "pakku_id": "ItEqhc2F5mUH88Wg",
+            "pakku_id": "K9vEAtRO29mdxaCz",
             "type": "MOD",
             "slug": {
                 "curseforge": "structure-essentials-forge-fabric"
@@ -10210,7 +10412,7 @@
             ]
         },
         {
-            "pakku_id": "2xnrJYX1gfad51ee",
+            "pakku_id": "71AkAl9TvGecm5AK",
             "type": "MOD",
             "slug": {
                 "curseforge": "structure-gel-api"
@@ -10247,7 +10449,7 @@
             ]
         },
         {
-            "pakku_id": "1pboOAUurhfklVU2",
+            "pakku_id": "fkGVeLgdhF0SkxT4",
             "type": "MOD",
             "slug": {
                 "curseforge": "structure-layout-optimizer"
@@ -10285,9 +10487,9 @@
             ]
         },
         {
-            "pakku_id": "kFBtazKFbgPKkvya",
+            "pakku_id": "4l9Lx5wT2BqOJpYx",
             "pakku_links": [
-                "nQ2YbIjGV1mEMdzW"
+                "7WZBlTQ1MirhvMPR"
             ],
             "type": "MOD",
             "slug": {
@@ -10327,7 +10529,7 @@
             ]
         },
         {
-            "pakku_id": "IIyBbG94AGWR7GIX",
+            "pakku_id": "2gj8favnZxD7M5fI",
             "type": "MOD",
             "slug": {
                 "curseforge": "summoningrituals"
@@ -10364,7 +10566,7 @@
             ]
         },
         {
-            "pakku_id": "G23eLb2kaYjSvOSL",
+            "pakku_id": "edu5M6xCKElVKoaG",
             "type": "MOD",
             "slug": {
                 "curseforge": "super-factory-manager"
@@ -10401,7 +10603,7 @@
             ]
         },
         {
-            "pakku_id": "kQRJID3oHenmNe6A",
+            "pakku_id": "5ZRp7tqPEek8IjX5",
             "type": "MOD",
             "slug": {
                 "curseforge": "supermartijn642s-config-lib"
@@ -10439,7 +10641,7 @@
             ]
         },
         {
-            "pakku_id": "4cOa6tDc7lYIb9rw",
+            "pakku_id": "7W5CTWKbZodMB68p",
             "type": "MOD",
             "slug": {
                 "curseforge": "supermartijn642s-core-lib"
@@ -10477,7 +10679,7 @@
             ]
         },
         {
-            "pakku_id": "sqgCB107JT3a9BmO",
+            "pakku_id": "QX9JOfjcwwYqKFGk",
             "type": "MOD",
             "slug": {
                 "curseforge": "supplementaries"
@@ -10516,7 +10718,7 @@
             ]
         },
         {
-            "pakku_id": "HKvLLmiAGyvmir3H",
+            "pakku_id": "2gdjWomOegUW7w5n",
             "type": "MOD",
             "slug": {
                 "curseforge": "terrablender"
@@ -10552,7 +10754,7 @@
             ]
         },
         {
-            "pakku_id": "TkpawTOnb657guI3",
+            "pakku_id": "0btK3mlLqj6bPSEh",
             "type": "MOD",
             "slug": {
                 "curseforge": "aether"
@@ -10589,7 +10791,53 @@
             ]
         },
         {
-            "pakku_id": "iEYpIUVfX4QzEWPJ",
+            "pakku_id": "VZiK84asi0MdegEr",
+            "pakku_links": [
+                "5ZbsalzdzLCAklMh",
+                "2gdjWomOegUW7w5n"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "aether-redux"
+            },
+            "name": {
+                "curseforge": "The Aether: Redux"
+            },
+            "id": {
+                "curseforge": "867237"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "aether-redux-2.0.19-1.20.1-neoforge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6596/294/aether-redux-2.0.19-1.20.1-neoforge.jar",
+                    "id": "6596294",
+                    "parent_id": "867237",
+                    "hashes": {
+                        "sha1": "d9ea324cc1503d769d07e23742dbfeab01fda7ea",
+                        "md5": "5bd9d4340c22a228a2d0cc571d0638fe"
+                    },
+                    "required_dependencies": [
+                        "563928",
+                        "255308",
+                        "388172",
+                        "879879"
+                    ],
+                    "size": 29448522,
+                    "date_published": "2025-05-29T18:01:03.527Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "i7E25QtEsrwC045X",
             "type": "MOD",
             "slug": {
                 "curseforge": "endergetic"
@@ -10628,7 +10876,7 @@
             ]
         },
         {
-            "pakku_id": "AjNvkzDeBw0qoc37",
+            "pakku_id": "n9cq26QsKoLXWwHr",
             "type": "MOD",
             "slug": {
                 "curseforge": "the-undergarden"
@@ -10665,9 +10913,9 @@
             ]
         },
         {
-            "pakku_id": "wNv2QkHwuEeOHJPq",
+            "pakku_id": "J45NSsdVldiWP0fN",
             "pakku_links": [
-                "m6cTgdIxzYfFoem8"
+                "QpqhKHBkIBHmwV5G"
             ],
             "type": "MOD",
             "slug": {
@@ -10707,7 +10955,7 @@
             ]
         },
         {
-            "pakku_id": "m6cTgdIxzYfFoem8",
+            "pakku_id": "QpqhKHBkIBHmwV5G",
             "type": "MOD",
             "slug": {
                 "curseforge": "thermal-foundation"
@@ -10746,7 +10994,7 @@
             ]
         },
         {
-            "pakku_id": "K8Tjs27FBgaBJOk3",
+            "pakku_id": "2IcxHXX3vhs9eTFu",
             "type": "MOD",
             "slug": {
                 "curseforge": "thermal-innovation"
@@ -10785,7 +11033,7 @@
             ]
         },
         {
-            "pakku_id": "7yuyn6RD8rvd7Vgo",
+            "pakku_id": "W9lbX44wDMwU2x1y",
             "type": "MOD",
             "slug": {
                 "curseforge": "thermal-locomotion"
@@ -10824,7 +11072,7 @@
             ]
         },
         {
-            "pakku_id": "kFOPylNw9tKcse2q",
+            "pakku_id": "w6w3Z7Ri8j9CRUpB",
             "type": "MOD",
             "slug": {
                 "curseforge": "time-in-a-bottle-universal"
@@ -10861,7 +11109,7 @@
             ]
         },
         {
-            "pakku_id": "fVEg6fegGXqm1y1X",
+            "pakku_id": "hMCs5wl57FIiBPE6",
             "type": "MOD",
             "slug": {
                 "curseforge": "tinkers-construct"
@@ -10900,9 +11148,9 @@
             ]
         },
         {
-            "pakku_id": "ot4FaPXYKZab463p",
+            "pakku_id": "uDzXHJpgoM3b6wqc",
             "pakku_links": [
-                "fVEg6fegGXqm1y1X"
+                "hMCs5wl57FIiBPE6"
             ],
             "type": "MOD",
             "slug": {
@@ -10942,7 +11190,7 @@
             ]
         },
         {
-            "pakku_id": "4TSheBgv7x9K8NHa",
+            "pakku_id": "uTj6FJyrmxcQLWxs",
             "type": "MOD",
             "slug": {
                 "curseforge": "tinkers-jewelry"
@@ -10982,7 +11230,7 @@
             ]
         },
         {
-            "pakku_id": "DnKOPOniqdKbHxaX",
+            "pakku_id": "w72AfHIY9M4pyCps",
             "type": "MOD",
             "slug": {
                 "curseforge": "tinkers-levelling-addon"
@@ -11019,7 +11267,7 @@
             ]
         },
         {
-            "pakku_id": "PbFTIY40owBiHLc0",
+            "pakku_id": "wCaHAq196ubtslRV",
             "type": "MOD",
             "slug": {
                 "curseforge": "titanium"
@@ -11055,7 +11303,7 @@
             ]
         },
         {
-            "pakku_id": "kDyNSeHAloGHRGMm",
+            "pakku_id": "KVdmeah3qxKXjoFD",
             "type": "MOD",
             "slug": {
                 "curseforge": "tome-of-blood-rebirth"
@@ -11094,7 +11342,7 @@
             ]
         },
         {
-            "pakku_id": "zHQvf4UWloqL4sbB",
+            "pakku_id": "oXQAUCYXgkHYFPnA",
             "type": "MOD",
             "slug": {
                 "curseforge": "tmrv"
@@ -11132,7 +11380,7 @@
             ]
         },
         {
-            "pakku_id": "q34uQkIL7V8vBhy4",
+            "pakku_id": "t3GDk0F3AbWcnnth",
             "type": "MOD",
             "slug": {
                 "curseforge": "torchmaster"
@@ -11169,7 +11417,7 @@
             ]
         },
         {
-            "pakku_id": "ytPL3fohBkbWrTYa",
+            "pakku_id": "mxloMwCSeUxz2w3w",
             "type": "MOD",
             "slug": {
                 "curseforge": "towers-of-the-wild-modded"
@@ -11216,7 +11464,7 @@
             ]
         },
         {
-            "pakku_id": "jBg0r9woapqPHGuj",
+            "pakku_id": "bYHDeKGV1k9tAcKF",
             "type": "MOD",
             "slug": {
                 "curseforge": "trash-cans"
@@ -11260,7 +11508,7 @@
             ]
         },
         {
-            "pakku_id": "dbpTZDpZ7aKJlTyN",
+            "pakku_id": "iyIbIqXdjaVWYYv0",
             "type": "MOD",
             "slug": {
                 "curseforge": "travel-anchors"
@@ -11298,7 +11546,7 @@
             ]
         },
         {
-            "pakku_id": "2lvipqVkO1BvcbaW",
+            "pakku_id": "ujzLzGj6A1CITATR",
             "type": "MOD",
             "slug": {
                 "curseforge": "trofers"
@@ -11337,7 +11585,7 @@
             ]
         },
         {
-            "pakku_id": "yixvT82x7Q3AkG5M",
+            "pakku_id": "yN7GNRH3a9g3CEmv",
             "type": "MOD",
             "slug": {
                 "curseforge": "underground-villages"
@@ -11373,7 +11621,7 @@
             ]
         },
         {
-            "pakku_id": "63EKeEjQYP6KT9jJ",
+            "pakku_id": "xjqoG4qGNvDtJqqX",
             "type": "MOD",
             "slug": {
                 "curseforge": "upgrade-aquatic"
@@ -11412,7 +11660,7 @@
             ]
         },
         {
-            "pakku_id": "2fCZsJFb2PvEBnbi",
+            "pakku_id": "CpXZ1EVF6KwIO7Ie",
             "type": "MOD",
             "slug": {
                 "curseforge": "valhelsia-core"
@@ -11448,7 +11696,7 @@
             ]
         },
         {
-            "pakku_id": "KFEk6cTwMHYWsC26",
+            "pakku_id": "YJMG63z5saxtyYNi",
             "type": "MOD",
             "slug": {
                 "curseforge": "valhelsia-structures"
@@ -11486,7 +11734,7 @@
             ]
         },
         {
-            "pakku_id": "kB9lWSZkrhZSBVO2",
+            "pakku_id": "ncJo8uHduL7hMTH2",
             "type": "MOD",
             "slug": {
                 "curseforge": "vanillabackport"
@@ -11526,7 +11774,7 @@
         {
             "pakku_id": "w4ZzkHiN3peOXlFD",
             "pakku_links": [
-                "iK5ZZY2qYZAvHZUd"
+                "5JMTxq3eOzflkQnI"
             ],
             "type": "RESOURCE_PACK",
             "slug": {
@@ -11559,7 +11807,7 @@
             ]
         },
         {
-            "pakku_id": "UdHFER9DJXeTmwYL",
+            "pakku_id": "llcPxfohAdyOzOz6",
             "type": "MOD",
             "slug": {
                 "curseforge": "villager-names"
@@ -11600,7 +11848,7 @@
             ]
         },
         {
-            "pakku_id": "o38vBYn83Ke34bFL",
+            "pakku_id": "WU5lUjYLQyFZEIca",
             "type": "MOD",
             "slug": {
                 "curseforge": "wits"
@@ -11637,7 +11885,7 @@
             ]
         },
         {
-            "pakku_id": "50X76i8dv3LNrBKc",
+            "pakku_id": "Ki7j1bOr6tjjkPPq",
             "type": "MOD",
             "slug": {
                 "curseforge": "waystones"
@@ -11676,7 +11924,7 @@
             ]
         },
         {
-            "pakku_id": "BQFmGPHFOJYetNVL",
+            "pakku_id": "1SgBK0VMWd6ovOT9",
             "type": "MOD",
             "slug": {
                 "curseforge": "when-dungeons-arise"
@@ -11716,7 +11964,7 @@
             ]
         },
         {
-            "pakku_id": "4PZgYOrr9fuEaHay",
+            "pakku_id": "s9gb54ItYljH0aZ6",
             "type": "MOD",
             "slug": {
                 "curseforge": "wither-skeleton-tweaks"
@@ -11755,7 +12003,7 @@
             ]
         },
         {
-            "pakku_id": "yaMtNgiIQiyTbQSc",
+            "pakku_id": "4kFxGWk431HY2BXI",
             "type": "MOD",
             "slug": {
                 "curseforge": "wizards-reborn"
@@ -11794,7 +12042,7 @@
             ]
         },
         {
-            "pakku_id": "xZjLB7eU9SpL7NrL",
+            "pakku_id": "T0jKDk63MT3Fzd5b",
             "type": "MOD",
             "slug": {
                 "curseforge": "world-stripper"
@@ -11831,7 +12079,7 @@
             ]
         },
         {
-            "pakku_id": "fG6cGl2On65GAefA",
+            "pakku_id": "Sh9mHLyKiH0tsKiE",
             "type": "MOD",
             "slug": {
                 "curseforge": "xnet"
@@ -11870,7 +12118,7 @@
             ]
         },
         {
-            "pakku_id": "0qlankN4Sga9ppCU",
+            "pakku_id": "jvCAp9obCgszEPKC",
             "type": "MOD",
             "slug": {
                 "curseforge": "xnet-gases"
@@ -11910,7 +12158,7 @@
             ]
         },
         {
-            "pakku_id": "GF3oTpcSQVUqezDz",
+            "pakku_id": "CXtzXOppWBjVkDmD",
             "type": "MOD",
             "slug": {
                 "curseforge": "yungs-api"
@@ -11947,7 +12195,7 @@
             ]
         },
         {
-            "pakku_id": "5Uw3z6OobdxWKM3F",
+            "pakku_id": "6fhyEgxM8ev3U9Vd",
             "type": "MOD",
             "slug": {
                 "curseforge": "yungs-better-caves"
@@ -11985,7 +12233,7 @@
             ]
         },
         {
-            "pakku_id": "n2fstVLM4DVCpogW",
+            "pakku_id": "1cMPktViL2OhSY1m",
             "type": "MOD",
             "slug": {
                 "curseforge": "yungs-better-mineshafts-forge"
@@ -12024,7 +12272,7 @@
             ]
         },
         {
-            "pakku_id": "r70IAcyHnATTnM9n",
+            "pakku_id": "2Dl9sePpsWtMEHqI",
             "type": "MOD",
             "slug": {
                 "curseforge": "yungs-cave-biomes"
@@ -12064,7 +12312,7 @@
             ]
         },
         {
-            "pakku_id": "nQ2YbIjGV1mEMdzW",
+            "pakku_id": "7WZBlTQ1MirhvMPR",
             "type": "MOD",
             "slug": {
                 "curseforge": "yacl"
@@ -12101,7 +12349,7 @@
             ]
         },
         {
-            "pakku_id": "1UdDZAYVAwLWIaag",
+            "pakku_id": "EndAihlzdqTzrry8",
             "type": "MOD",
             "slug": {
                 "curseforge": "zeta"
@@ -12137,7 +12385,7 @@
             ]
         },
         {
-            "pakku_id": "8Jawo0YOwvd4sdhH",
+            "pakku_id": "01IYTenvRz4KDPvw",
             "type": "MOD",
             "slug": {
                 "curseforge": "zume"
@@ -12185,7 +12433,7 @@
             ]
         },
         {
-            "pakku_id": "riJOmiqDPQXy55H3",
+            "pakku_id": "BhEeoNOI268f7aYu",
             "type": "MOD",
             "slug": {
                 "curseforge": "playeranimator"
@@ -12222,7 +12470,7 @@
             ]
         },
         {
-            "pakku_id": "7Eb2Y8aN8w7KsVSJ",
+            "pakku_id": "AGvahtzp5IqfWRWD",
             "type": "MOD",
             "slug": {
                 "curseforge": "spark"
