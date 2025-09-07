@@ -29,7 +29,7 @@ function embersMelting(e, fluidOutput, itemInput) {
         output: makeFluidStackJson(fluidOutput)
     })
     return {
-        id: function (customId) {
+        id: function (/** @type {any} */ customId) {
             recipe.id(customId ?? `kubejs:embers/melting/${itemInput.split(':')[1]}`)
         }
     }
@@ -67,7 +67,7 @@ function embersStamping(event, outputItem, inputs, stampItem) {
     const recipe = event.custom(recipeObj)
 
     return {
-        id: function (customId) {
+        id: function (/** @type {any} */ customId) {
             recipe.id(customId ?? `kubejs:embers/stamping/${outputItem.split(':')[1]}`)
         },
     }
@@ -206,13 +206,16 @@ function insideBlock(e, post, inputs, insideBlock, id) {
 
 /**
  * 1x item to 1x item crushing for all crushing recipe types
- * @param {{remove: (arg0: {type: string;input: any;output: any;}) => void;shaped: (arg0: any, arg1: string[], arg2: {H: string;I: any;}) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};recipes: {immersiveengineering: {crusher: (arg0: any, arg1: any, arg2: any[], arg3: number) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};mekanism: {crushing: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};thermal: {pulverizer: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};bloodmagic: {arc: (arg0: any, arg1: any, arg2: string) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};create: {crushing: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};milling: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};occultism: {crushing: (arg0: any, arg1: any) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};ars_nouveau: {crush: (arg0: Internal.ItemStack, arg1: OutputItem) => {(): any;new (): any;id: {(arg0: string): void;new (): any;};};};};}} e
- * @param {string} itemToCrush
+ * Used for ingot > dust recipes in unif
+ * @param {any} e
  * @param {any} outputItem
- * @param {any} id
+ * @param {any} itemToCrush
+ * @param {string} id
+ * @param {number} [procTimeMult]
+ * @param {number} [energyMult]
  * @param {boolean} [remove]
  */
-function allCrushing(e, outputItem, itemToCrush, id, remove) {
+function allCrushing(e, outputItem, itemToCrush, id, procTimeMult, energyMult, remove) {
     if (remove === true) {
         e.remove({ type: 'minecraft:crafting', input: itemToCrush, output: outputItem })
         e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: outputItem })
@@ -224,6 +227,7 @@ function allCrushing(e, outputItem, itemToCrush, id, remove) {
         e.remove({ type: 'occultism:crushing', input: itemToCrush, output: outputItem })
         e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: outputItem })
     }
+
     e.shaped(outputItem, [
         'H  ',
         'I  '
@@ -232,20 +236,31 @@ function allCrushing(e, outputItem, itemToCrush, id, remove) {
         I: itemToCrush
     }).id(`${id}/shaped/hammer_crushing/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
 
-    e.recipes.immersiveengineering.crusher(outputItem, itemToCrush, [], 3000)
+    const ieCrush = e.recipes.immersiveengineering.crusher(outputItem, itemToCrush, [], 3000 * energyMult)
         .id(`${id}/crusher/immersiveengineering/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.mekanism.crushing(outputItem, itemToCrush)
+
+    const mekCrush = e.recipes.mekanism.crushing(outputItem, itemToCrush)
         .id(`${id}/crushing/mekanism/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.thermal.pulverizer(outputItem, itemToCrush)
-        .id(`${id}/pulverizer/thermal/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.bloodmagic.arc(outputItem, itemToCrush, '#bloodmagic:arc/explosive')
+
+    const thermalPulv =
+        e.recipes.thermal.pulverizer(outputItem, itemToCrush)
+            .energy(2400 * energyMult)
+            .id(`${id}/pulverizer/thermal/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+
+    const bloodmagicArc = e.recipes.bloodmagic.arc(outputItem, itemToCrush, '#bloodmagic:arc/explosive')
         .id(`${id}/arc_crushing/bloodmagic/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.create.crushing(outputItem, itemToCrush)
+
+    const createCrush = e.recipes.create.crushing(outputItem, itemToCrush)
         .id(`${id}/crushing/create/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.create.milling(outputItem, itemToCrush)
+        .processingTime(procTimeMult * 100)
+
+    const createMill = e.recipes.create.milling(outputItem, itemToCrush)
         .id(`${id}/milling/create/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.occultism.crushing(outputItem, itemToCrush)
+        .processingTime(procTimeMult * 100)
+
+    const occultCrush = e.recipes.occultism.crushing(outputItem, itemToCrush)
         .id(`${id}/occultism/crushing/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-    e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(outputItem).withChance(1))
+
+    const arsCrush = e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(outputItem).withChance(1))
         .id(`${id}/crush_glyph/ars_nouveau/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
 }
