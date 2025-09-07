@@ -1,3 +1,8 @@
+- [ ] Finish ae6r (this is here so I can just add checkboxes below it easier lol)
+- [ ] implement ember oven
+- [ ] Add new catalyst and some kinda reinforced glowstone blocks recipes for undergarten and aether portals (change undergarten portal bricks if possible to another harder block)
+- [ ] implement aspectus shards (godshard replacement)
+- [ ] 
 - [x] Port the base non expert recipes from e6 :| (Theres more than I thought, how dare they make a good kitchen sink) (crossing this out as I am pretty much just porting them as I need to lol)
 - [x] Figure out how the FUCK e6es unification works and how to work it into emendatusjs (it does shit like unify ender pearl to dust and arcane gem to botania mana dust)
 	- [x] refactor emendatusjs again to use more e6e like recipe unifying
