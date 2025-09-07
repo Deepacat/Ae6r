@@ -159,28 +159,28 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:sorcerer_hood' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber'],
+        ['ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber'],
         Item.of('kubejs:replaceme').weakNBT(),
         'ars_nouveau:sorcerer_hood', 50
     ).id('kubejs:ars_nouveau/enchanting_apparatus/sorcerer_hood')
 
     e.remove({ id: 'ars_nouveau:sorcerer_robes' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber'],
+        ['ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber'],
         Item.of('kubejs:replaceme').weakNBT(),
         'ars_nouveau:sorcerer_robes', 50
     ).id('kubejs:ars_nouveau/enchanting_apparatus/sorcerer_robes')
 
     e.remove({ id: 'ars_nouveau:sorcerer_leggings' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber'],
+        ['ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber'],
         Item.of('kubejs:replaceme').weakNBT(),
         'ars_nouveau:sorcerer_leggings', 50
     ).id('kubejs:ars_nouveau/enchanting_apparatus/sorcerer_leggings')
 
     e.remove({ id: 'ars_nouveau:sorcerer_boots' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:mana_fiber'],
+        ['ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber', 'tconstruct:silky_cloth', 'ars_nouveau:magebloom_fiber'],
         Item.of('kubejs:replaceme').weakNBT(),
         'ars_nouveau:sorcerer_boots', 50
     ).id('kubejs:ars_nouveau/enchanting_apparatus/sorcerer_boots')
@@ -397,14 +397,14 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'mythicbotany:fire_ring' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['botania:rune_muspelheim', '#forge:ingots/elementium', '#forge:ingots/elementium', 'ars_nouveau:glyph_shield'],
+        ['mythicbotany:muspelheim_rune', '#forge:ingots/elementium', '#forge:ingots/elementium', 'ars_nouveau:glyph_shield'],
         'botania:aura_ring',
         'mythicbotany:fire_ring', 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/fire_ring')
 
     e.remove({ id: 'mythicbotany:ice_ring' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['botania:rune_niflheim', '#forge:ingots/elementium', '#forge:ingots/elementium', 'ars_nouveau:glyph_shield'],
+        ['botania:niflheim_rune', '#forge:ingots/elementium', '#forge:ingots/elementium', 'ars_nouveau:glyph_shield'],
         'botania:aura_ring',
         'mythicbotany:ice_ring', 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/ice_ring')
@@ -461,7 +461,7 @@ ServerEvents.recipes(e => {
     e.remove({ id: 'ars_nouveau:relay' })
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['#forge:gems/prismarine', '#forge:gems/source', '#forge:gems/prismarine', '#forge:ingots/gold', '#forge:ingots/gold', '#forge:gems/prismarine', '#forge:gems/source', '#forge:gems/prismarine'],
-        'ars_nouveau:mana_jar',
+        'ars_nouveau:source_jar',
         'ars_nouveau:relay', 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/relay')
 
@@ -521,7 +521,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:potion_flask' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:mana_fiber', '#forge:gems/source', 'ars_nouveau:mana_fiber', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', 'ars_nouveau:mana_fiber', '#forge:ingots/tinkers_bronze', 'ars_nouveau:mana_fiber'],
+        ['ars_nouveau:magebloom_fiber', '#forge:gems/source', 'ars_nouveau:magebloom_fiber', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', 'ars_nouveau:magebloom_fiber', '#forge:ingots/tinkers_bronze', 'ars_nouveau:magebloom_fiber'],
         Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'),
         'ars_nouveau:potion_flask', 50
     ).id('kubejs:ars_nouveau/enchanting_apparatus/potion_flask')
@@ -650,7 +650,7 @@ ServerEvents.recipes(e => {
     ).id('kubejs:ars_nouveau/enchanting_apparatus/warlock_hat')
 
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['bloodmagic:etherealslate', 'botania:rune_nidavellir', 'bloodmagic:etherealslate', '#forge:pellets/antimatter', '#forge:pellets/antimatter', 'bloodmagic:etherealslate', 'naturesaura:break_prevention', 'bloodmagic:etherealslate'],
+        ['bloodmagic:etherealslate', 'mythicbotany:nidaveller_rune', 'bloodmagic:etherealslate', '#forge:pellets/antimatter', '#forge:pellets/antimatter', 'bloodmagic:etherealslate', 'naturesaura:break_prevention', 'bloodmagic:etherealslate'],
         Item.of('immersiveengineering:graphite_electrode', '{graphDmg:0}'),
         Item.of('immersiveengineering:graphite_electrode', '{graphDmg:0,Unbreakable:1}'), 5000
     ).id('kubejs:ars_nouveau/enchanting_apparatus/unbreakable_graphite_electrode')
