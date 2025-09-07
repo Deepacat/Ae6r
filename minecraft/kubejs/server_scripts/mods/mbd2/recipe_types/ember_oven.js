@@ -5,5 +5,5 @@ ServerEvents.recipes(e => {
         .perTick(t => t.inputEmber(2))
         .outputItems('architects_palette:sunmetal_brick')
         .duration(300)
-        .id('kubejs:mbd2/ember_oven/sunmetal_brick')
+        .id('kubejs:mbd2/recipe_types/ember_oven/sunmetal_brick')
 })

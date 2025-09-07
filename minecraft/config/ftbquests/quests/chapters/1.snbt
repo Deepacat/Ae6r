@@ -243,6 +243,11 @@
 					item: "ars_nouveau:arcane_core"
 					type: "item"
 				}
+				{
+					id: "682B28204F9487DC"
+					item: "kubejs:warding_stone"
+					type: "item"
+				}
 			]
 			title: "Arcane Infusion"
 			x: 1.5d
@@ -415,22 +420,22 @@
 				"7B6DCBDD9A71FCE6"
 				"45CFB6E5BAA062B8"
 			]
-			icon: "architects_palette:sunmetal_blend"
+			icon: "architects_palette:sunmetal_brick"
 			id: "74C44875CA084050"
 			tasks: [
 				{
-					id: "581FFB70BD4EF244"
-					item: "architects_palette:sunmetal_blend"
-					type: "item"
-				}
-				{
-					id: "7C022D20F620E1FC"
-					item: "ars_nouveau:volcanic_sourcelink"
-					type: "item"
-				}
-				{
 					id: "20E1F5F3F4B5B6E7"
 					item: "architects_palette:sunmetal_brick"
+					type: "item"
+				}
+				{
+					id: "443A3DF9864F1D56"
+					item: "ars_nouveau:agronomic_sourcelink"
+					type: "item"
+				}
+				{
+					id: "294B5AA66AABD665"
+					item: "starbunclemania:source_condenser"
 					type: "item"
 				}
 			]
@@ -464,18 +469,11 @@
 			icon: "aether:aether_portal_frame"
 			id: "798F51A163767275"
 			subtitle: "As above, so below"
-			tasks: [
-				{
-					id: "3E34FBB4AEE00B61"
-					item: "minecraft:glowstone"
-					type: "item"
-				}
-				{
-					id: "37336955D083537A"
-					item: "undergarden:catalyst"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "37336955D083537A"
+				item: "undergarden:catalyst"
+				type: "item"
+			}]
 			title: "Realms Beyond"
 			x: 2.0d
 			y: 3.0d
@@ -1180,15 +1178,35 @@
 			y: 6.5d
 		}
 		{
-			dependencies: ["7039C8B5F77E2353"]
+			dependencies: [
+				"7039C8B5F77E2353"
+				"7B6DCBDD9A71FCE6"
+			]
 			icon: "embers:archaic_bricks"
 			id: "45CFB6E5BAA062B8"
 			subtitle: "True Heat"
-			tasks: [{
-				id: "0BE9D0691AD24828"
-				item: "mbd2:ember_oven"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "0BE9D0691AD24828"
+					item: "mbd2:ember_oven"
+					type: "item"
+				}
+				{
+					id: "409010902C2C2245"
+					item: "mbd2:ember_receptor_hatch"
+					type: "item"
+				}
+				{
+					id: "529A1C3B48305B27"
+					item: "mbd2:mechanical_dual_access_hatch"
+					type: "item"
+				}
+				{
+					id: "576C1BC6FB2E5251"
+					item: "embers:dawnstone_ingot"
+					type: "item"
+				}
+			]
 			title: "Infernal Alloying"
 			x: 0.5d
 			y: 1.5d
