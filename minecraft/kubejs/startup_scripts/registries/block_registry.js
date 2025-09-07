@@ -10,6 +10,8 @@ StartupEvents.registry('block', event => {
         { name: 'crystalline_dark_oak_wood', material: 'stone', hardness: 5 },
         { name: 'crystalline_oak_leaves', material: 'glass', hardness: 2.0, leaves: true },
         { name: 'aspectus_shard_block', material: 'amethyst', hardness: 5 },
+        { name: 'stabilized_arcane_stone_bricks', material: 'stone', hardness: 50 },
+        { name: 'stabilized_arcane_glowstone', material: 'amethyst', hardness: 50 },
         {
             name: 'crystalline_flowering_palo_verde_leaves',
             material: 'glass',
