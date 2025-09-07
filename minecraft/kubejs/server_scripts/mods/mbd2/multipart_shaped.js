@@ -17,7 +17,7 @@ ServerEvents.recipes(e => {
         B: 'embers:item_extractor',
         C: 'embers:ember_crystal',
         D: 'embers:fluid_vessel',
-        E: 'minecraft:hoppere'
+        E: 'minecraft:hopper'
     }).id('kubejs:mbd2/multipart_shaped/mechanical_dual_access_hatch')
     
 })
