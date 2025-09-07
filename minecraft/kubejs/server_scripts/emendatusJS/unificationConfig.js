@@ -99,6 +99,7 @@ const materialsToUnify = [
     'queens_slime',
     'rose_gold',
     // 'tinkers_bronze',
+    'amethyst_bronze',
     // 'knightslime',
     'slimesteel',
     'manyullyn',

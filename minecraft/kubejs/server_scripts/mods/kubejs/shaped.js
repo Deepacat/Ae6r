@@ -61,7 +61,7 @@ ServerEvents.recipes(e => {
         'AAA'
     ], {
         A: 'minecraft:stick',
-        B: '#resourcefulbees:resourceful_honeycomb'
+        B: '#forge:honeycombs'
     }).id('kubejs:kubejs_scented_stick')
 
     e.remove({ id: 'kubejs:cpu_core_500' })

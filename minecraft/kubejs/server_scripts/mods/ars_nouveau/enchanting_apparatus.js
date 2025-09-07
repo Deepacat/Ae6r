@@ -439,21 +439,21 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:dominion_wand' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:gems/source', '#forge:gems/source', '#forge:gems/source', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze'],
+        ['#forge:gems/source', '#forge:gems/source', '#forge:gems/source', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze'],
         'kubejs:scented_stick',
         'ars_nouveau:dominion_wand', 1000
     ).id('kubejs:ars_nouveau/enchanting_apparatus/dominion_wand')
 
     e.remove({ id: 'ars_nouveau:relay_splitter' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['botania:quartz_lavender', '#forge:gems/fluorite', 'botania:quartz_lavender', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', 'botania:quartz_lavender', '#forge:gems/fluorite', 'botania:quartz_lavender'],
+        ['botania:quartz_lavender', '#forge:gems/fluorite', 'botania:quartz_lavender', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze', 'botania:quartz_lavender', '#forge:gems/fluorite', 'botania:quartz_lavender'],
         'ars_nouveau:relay',
         'ars_nouveau:relay_splitter', 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/relay_splitter')
 
     e.remove({ id: 'ars_nouveau:relay_deposit' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['botania:quartz_lavender', '#forge:gems/apatite', 'botania:quartz_lavender', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', 'botania:quartz_lavender', '#forge:gems/apatite', 'botania:quartz_lavender'],
+        ['botania:quartz_lavender', '#forge:gems/apatite', 'botania:quartz_lavender', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze', 'botania:quartz_lavender', '#forge:gems/apatite', 'botania:quartz_lavender'],
         'ars_nouveau:relay',
         'ars_nouveau:relay_deposit', 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/relay_deposit')
@@ -467,7 +467,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:relay_warp' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['waystones:warp_dust', '#forge:gems/ender', 'waystones:warp_dust', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', 'waystones:warp_dust', '#forge:gems/ender', 'waystones:warp_dust'],
+        ['waystones:warp_dust', '#forge:gems/ender', 'waystones:warp_dust', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze', 'waystones:warp_dust', '#forge:gems/ender', 'waystones:warp_dust'],
         'ars_nouveau:relay',
         'ars_nouveau:relay_warp', 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/relay_warp')
@@ -487,28 +487,28 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:timer_spell_turret' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/tinkers_bronze', 'minecraft:clock', '#forge:nuggets/tinkers_bronze', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', '#forge:nuggets/tinkers_bronze', 'create:polished_rose_quartz', '#forge:nuggets/tinkers_bronze'],
+        ['#forge:nuggets/amethyst_bronze', 'minecraft:clock', '#forge:nuggets/amethyst_bronze', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze', '#forge:nuggets/amethyst_bronze', 'create:polished_rose_quartz', '#forge:nuggets/amethyst_bronze'],
         'ars_nouveau:basic_spell_turret',
         'ars_nouveau:timer_spell_turret', 100
     ).id('kubejs:ars_nouveau/enchanting_apparatus/timer_spell_turret')
 
     e.remove({ id: 'ars_nouveau:enchanters_shield' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['eidolon:gold_inlay', '#forge:storage_blocks/source', 'eidolon:gold_inlay', '#forge:storage_blocks/tinkers_bronze', '#forge:storage_blocks/tinkers_bronze', 'eidolon:gold_inlay', '#forge:storage_blocks/source', 'eidolon:gold_inlay'],
+        ['eidolon:gold_inlay', '#forge:storage_blocks/source', 'eidolon:gold_inlay', '#forge:storage_blocks/amethyst_bronze', '#forge:storage_blocks/amethyst_bronze', 'eidolon:gold_inlay', '#forge:storage_blocks/source', 'eidolon:gold_inlay'],
         Item.of('mekanismtools:osmium_shield', '{Damage:0}').weakNBT(),
         Item.of('ars_nouveau:enchanters_shield', '{Damage:0}').weakNBT(), 500
     ).id('kubejs:ars_nouveau/enchanting_apparatus/enchanters_shield')
 
     e.remove({ id: 'ars_nouveau:enchanters_mirror' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:glyph_self', 'kubejs:replaceme', 'ars_nouveau:glyph_self', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', '#forge:gems/source', 'ars_nouveau:purple_archwood_log', '#forge:gems/source'],
+        ['ars_nouveau:glyph_self', 'kubejs:replaceme', 'ars_nouveau:glyph_self', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze', '#forge:gems/source', 'ars_nouveau:purple_archwood_log', '#forge:gems/source'],
         '#forge:plates/silver',
         'ars_nouveau:enchanters_mirror', 1000
     ).id('kubejs:ars_nouveau/enchanting_apparatus/enchanters_mirror')
 
     e.remove({ id: 'ars_nouveau:summon_focus' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:ingots/tinkers_bronze', 'ars_nouveau:wilden_tribute', '#forge:ingots/tinkers_bronze', 'ars_nouveau:wilden_spike', 'ars_nouveau:wilden_wing', '#forge:ingots/tinkers_bronze', 'ars_nouveau:wilden_horn', '#forge:ingots/tinkers_bronze'],
+        ['#forge:ingots/amethyst_bronze', 'ars_nouveau:wilden_tribute', '#forge:ingots/amethyst_bronze', 'ars_nouveau:wilden_spike', 'ars_nouveau:wilden_wing', '#forge:ingots/amethyst_bronze', 'ars_nouveau:wilden_horn', '#forge:ingots/amethyst_bronze'],
         'minecraft:conduit',
         'ars_nouveau:summon_focus', 10000
     ).id('kubejs:ars_nouveau/enchanting_apparatus/summon_focus')
@@ -521,7 +521,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'ars_nouveau:potion_flask' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['ars_nouveau:magebloom_fiber', '#forge:gems/source', 'ars_nouveau:magebloom_fiber', '#forge:ingots/tinkers_bronze', '#forge:ingots/tinkers_bronze', 'ars_nouveau:magebloom_fiber', '#forge:ingots/tinkers_bronze', 'ars_nouveau:magebloom_fiber'],
+        ['ars_nouveau:magebloom_fiber', '#forge:gems/source', 'ars_nouveau:magebloom_fiber', '#forge:ingots/amethyst_bronze', '#forge:ingots/amethyst_bronze', 'ars_nouveau:magebloom_fiber', '#forge:ingots/amethyst_bronze', 'ars_nouveau:magebloom_fiber'],
         Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'),
         'ars_nouveau:potion_flask', 50
     ).id('kubejs:ars_nouveau/enchanting_apparatus/potion_flask')
