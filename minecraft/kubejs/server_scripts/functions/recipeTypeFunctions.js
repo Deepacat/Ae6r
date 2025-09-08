@@ -150,42 +150,52 @@ function explosionRecipe(event, id, inputs, posts, comment) {
 // lychee lightning recipe helper
 /**
  * @param {Internal.RecipesEventJS} event
- * @param {string} id
- * @param {({ item: string; count: number; tag?: undefined; } | { item: string; count?: undefined; tag?: undefined; } | { tag: string; item?: undefined; count?: undefined; })[] | ({ item: string; tag?: undefined; count?: undefined; } | { tag: string; count: number; item?: undefined; } | { item: string; count: number; tag?: undefined; })[] | ({ type: string; item: string; nbt: { stored_type: string; }; } | { item: string; type?: undefined; nbt?: undefined; })[] | ({ item: string; count: number; tag?: undefined; } | { tag: string; count: number; item?: undefined; } | { tag: string; item?: undefined; count?: undefined; })[]} inputs
- * @param {{ type: string; item: string; count: number; }[] | { type: string; item: string; }[]} posts
- * @param {undefined} [comment]
+ * @param {string | any[]} outputs
+ * @param {any[]} inputs
+ * @param {string} [comment]
  */
-function lightningRecipe(event, id, inputs, posts, comment) {
+function lightningRecipe(event, outputs, inputs, comment) {
     /* lychee apparently doesn't do itemstacks, only ingredient,
     so I have to add these stupid items several times to replicate it
     it also doesn't like having over 27 inputs */
     let finalInputs = []
+    if (!Array.isArray(inputs)) { inputs = [inputs] }
     for (let input of inputs) {
-        // @ts-ignore
-        if (input.count > 0) {
-            // @ts-ignore
-            for (let i = 0; i < input.count; i++) {
-                finalInputs.push(input)
-            }
+        input = makeJsonIngredient(input)
+        if (!input.count || input.count <= 0) {
+            finalInputs.push(input)
             continue
         }
-        finalInputs.push(input)
+
+        for (let i = 0; i < input.count; i++) {
+            finalInputs.push(input)
+        }
     }
 
     if (finalInputs.length > 27) {
-        console.log('lychee lightning recipe ' + id + ' has more than 27 inputs, bad bad')
+        console.log(`lychee lightning recipe ${makeJsonIngredient(outputs[0]).item} has more than 27 inputs, bad bad`)
         return
     }
 
-    let recipe = {
+    let finalOutputs = makeJsonIngredients(outputs)
+    finalOutputs.forEach(output => { output.type = "drop_item" })
+
+    let recipeObj = {
         type: "lychee:lightning_channeling",
         item_in: finalInputs,
-        post: posts
+        post: finalOutputs
     }
 
-    if (comment) { recipe.comment = comment }
+    if (comment) { recipeObj.comment = comment }
 
-    event.custom(recipe).id('kubejs:lychee/lightning/' + id)
+    const recipe = event.custom(recipeObj)
+
+    return {
+        id: function (/** @type {string} */ customId) {
+            // @ts-ignore
+            recipe.id(customId ?? `kubejs:lychee/lightning/${finalOutputs[0].item.split(':')[1]}`)
+        }
+    }
 }
 
 /**
