@@ -2,7 +2,7 @@ StartupEvents.registry('item', event => {
     const generalItems = [
         // placeholder item for mod items that were removed
         'replaceme', // removed items from 1.16 e6e that need to be remade
-        
+
         'leather_stripe', // betterendforge
         'silk_fiber',
 
@@ -30,17 +30,6 @@ StartupEvents.registry('item', event => {
         'magenta_rune',
         'pink_rune',
         /* end placeholder items */
-
-        // aspectus shards
-        'aer_aspectus_shard',
-        'aqua_aspectus_shard',
-        'ignis_aspectus_shard',
-        'terra_aspectus_shard',
-        'ordo_aspectus_shard',
-        'perditio_aspectus_shard',
-        'mortuus_aspectus_shard',
-        'cognitio_aspectus_shard',
-        'praecantatio_aspectus_shard',
 
         // lootboxes
         'common_lootbox',
@@ -553,6 +542,14 @@ StartupEvents.registry('item', event => {
             food.hunger(8).saturation(0.5).effect('upgrade_aquatic:vibing', 2400, 1, 1.0)
         })
 
-        event.create('blood_slime_ball')
-            .texture('tconstruct:item/materials/blood_slime_ball')
+    event.create('blood_slime_ball')
+        .texture('tconstruct:item/materials/blood_slime_ball')
+
+    // aspectus shards
+    ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
+        .forEach((aspect) => {
+            event.create(`kubejs:${aspect}_aspectus_shard`)
+                .tag(`kubejs:aspectus_shards/${aspect}`)
+                .tag(`kubejs:aspectus_shards`)
+        })
 })
