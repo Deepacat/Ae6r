@@ -546,10 +546,10 @@ StartupEvents.registry('item', event => {
         .texture('tconstruct:item/materials/blood_slime_ball')
 
     // aspectus shards
-    ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
-        .forEach((aspect) => {
-            event.create(`kubejs:${aspect}_aspectus_shard`)
-                .tag(`kubejs:aspectus_shards/${aspect}`)
-                .tag(`kubejs:aspectus_shards`)
-        })
+    let aspecti = ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
+    for (let aspect of aspecti) {
+        event.create(`kubejs:${aspect}_aspectus_shard`)
+            .tag(`kubejs:aspectus_shards/${aspect}`)
+            .tag(`kubejs:aspectus_shards`)
+    }
 })
