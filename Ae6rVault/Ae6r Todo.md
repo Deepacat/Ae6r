@@ -1,8 +1,8 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-- [ ] implement ember oven
-- [ ] Add new catalyst and some kinda reinforced glowstone blocks recipes for undergarten and aether portals (change undergarten portal bricks if possible to another harder block)
+- [x] implement ember oven
+- [x] Add new catalyst and some kinda reinforced glowstone blocks recipes for undergarten and aether portals (change undergarten portal bricks if possible to another harder block)
 - [ ] implement aspectus shards (godshard replacement)
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
@@ -15,6 +15,11 @@ Polish/fixes:
 - [ ] Fix lootbox rewards in qb
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
 - [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
+- [ ] Ponder scenes and tooltips for multiblock structures (Showing how to build)
+	- [ ] Ember oven
+		- [ ] Multipart tooltips (receptor/dual access)
+	- [ ] Aether portal
+	- [ ] Undergarten portal
 
 Other:
 - [ ] Diesel gens hammering / wirecutting recipe schemas (grouped bc theyre like the same thing)

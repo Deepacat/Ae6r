@@ -1,0 +1,3 @@
+LootJS.modifiers(e => {
+    
+})

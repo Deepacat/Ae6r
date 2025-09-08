@@ -147,6 +147,9 @@
     "camo": true,
     "semiblock": true
   },
+  "fulleng": {
+    "storage_monitor": true
+  },
   "expatternprovider": {
     "jade_chamber": true,
     "jade_wireless": true

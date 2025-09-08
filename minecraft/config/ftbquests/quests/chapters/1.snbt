@@ -469,11 +469,25 @@
 			icon: "aether:aether_portal_frame"
 			id: "798F51A163767275"
 			subtitle: "As above, so below"
-			tasks: [{
-				id: "37336955D083537A"
-				item: "undergarden:catalyst"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "37336955D083537A"
+					item: "undergarden:catalyst"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "715861BCF5C887FE"
+					item: "kubejs:stabilized_arcane_stone_bricks"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "6404EAE88435617A"
+					item: "kubejs:stabilized_arcane_glowstone"
+					type: "item"
+				}
+			]
 			title: "Realms Beyond"
 			x: 2.0d
 			y: 3.0d

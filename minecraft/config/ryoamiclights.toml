@@ -9,9 +9,6 @@
 
 		[light_sources.settings.entities]
 
-			[light_sources.settings.entities.tconstruct]
-				sky_slime = true
-
 			[light_sources.settings.entities.minecraft]
 				axolotl = true
 				bee = true
@@ -20,9 +17,10 @@
 				cow = true
 				magma_cube = true
 				pig = true
+				allay = true
 				skeleton = true
-				husk = true
 				bat = true
+				husk = true
 				hoglin = true
 				rabbit = true
 				firework_rocket = true
@@ -42,6 +40,7 @@
 				vindicator = true
 				phantom = true
 				minecart = true
+				evoker = true
 				llama_spit = true
 				glow_squid = true
 				squid = true
@@ -55,6 +54,7 @@
 				fox = true
 				tropical_fish = true
 				slime = true
+				pillager = true
 				iron_golem = true
 				zombified_piglin = true
 				area_effect_cloud = true
@@ -67,6 +67,7 @@
 				fireball = true
 				player = true
 				pufferfish = true
+				trident = true
 				wolf = true
 				villager = true
 				skeleton_horse = true
@@ -78,6 +79,15 @@
 				witch = true
 				cod = true
 				spider = true
+
+			[light_sources.settings.entities.tconstruct]
+				sky_slime = true
+
+			[light_sources.settings.entities.enigmaticgraves]
+				grave = true
+
+			[light_sources.settings.entities.immersiveengineering]
+				bulwark = true
 
 			[light_sources.settings.entities.alexsmobs]
 				crocodile = true
@@ -99,8 +109,10 @@
 				underminer = true
 				skunk = true
 				dropbear = true
+				bunfungus = true
 				terrapin = true
 				flying_fish = true
+				platypus = true
 				cockroach = true
 				murmur = true
 				blobfish = true
@@ -108,6 +120,7 @@
 				grizzly_bear = true
 				bone_serpent = true
 				farseer = true
+				potoo = true
 				centipede_body = true
 				rocky_roller = true
 				centipede_head = true
@@ -125,17 +138,13 @@
 				elephant = true
 				sugar_glider = true
 
-			[light_sources.settings.entities.immersiveengineering]
-				bulwark = true
-
-			[light_sources.settings.entities.enigmaticgraves]
-				grave = true
-
 			[light_sources.settings.entities.eidolon]
+				giant_skeleton = true
 				wraith = true
 				slimy_slug = true
 				raven = true
 				chant_caster = true
+				necromancer = true
 				zombie_brute = true
 
 			[light_sources.settings.entities.aether]
@@ -171,11 +180,11 @@
 			[light_sources.settings.entities.botania]
 				mana_burst = true
 
-			[light_sources.settings.entities.upgrade_aquatic]
-				nautilus = true
-
 			[light_sources.settings.entities.immersive_aircraft]
 				biplane = true
+
+			[light_sources.settings.entities.upgrade_aquatic]
+				nautilus = true
 
 			[light_sources.settings.entities.thermal]
 				blitz = true
@@ -202,12 +211,20 @@
 
 			[light_sources.settings.entities.irons_spellbooks]
 				pyromancer = true
-				summoned_zombie = true
-				magic_missile = true
+				citadel_keeper = true
 				necromancer = true
 				archevoker = true
+				fire_breath = true
+				firebolt = true
 				summoned_skeleton = true
+				fire_field = true
+				summoned_zombie = true
+				magic_missile = true
+				magma_ball = true
 				icicle = true
+
+			[light_sources.settings.entities.powah]
+				charged_snowball = true
 
 			[light_sources.settings.entities.environmental]
 				deer = true
@@ -246,8 +263,11 @@
 				minnow = true
 
 			[light_sources.settings.entities.ars_nouveau]
+				wilden_hunter = true
+				follow_proj = true
 				starbuncle = true
 				gift_starby = true
+				flying_item = true
 				bookwyrm = true
 				drygmy = true
 				whirlisprig = true
