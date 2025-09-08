@@ -1,7 +1,5 @@
-these are files from e6es expert kubejs folder
-(not the base mode folder, those should also be ported though)
-that have not yet been ported to ae6r, they should be ported
-then deleted when the recipes are replicated
+these are files from e6es kubejs folder to be ported or removed, 
+the files should be removed after their use is resolved (ported or removed)
 
 I use /tools/e6recipefixer.js as a script to port files with more than a few recipes
 the rest I just mostly ai autocompleted through porting
