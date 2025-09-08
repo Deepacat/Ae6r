@@ -102,13 +102,13 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'embers:fluid_vessel' })
     e.shaped('embers:fluid_vessel', [
-        'CAC',
-        'ABA',
-        'CAC'
+        ' B ',
+        ' A ',
+        ' C '
     ], {
         A: 'tconstruct:seared_fuel_tank',
         B: 'create:pulp',
-        C: 'embers:caminite_plate',
+        C: 'embers:caminite_bricks',
     }).id('kubejs:shaped/embers_fluid_vessel')
 
     e.remove({ id: 'embers:fluid_transfer' })
