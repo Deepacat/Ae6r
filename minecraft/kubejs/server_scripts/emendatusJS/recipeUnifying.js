@@ -397,7 +397,11 @@ function fluidToItemRecipes(e, materialName, typesObj) {
 
         thermalChiller(e, gemOrIngotItem, ['tconstruct:ingot_cast', { fluid_tag: fluid.tag, amount: fluidAmt }])
             .id(`emendatus:thermal/chiller/${gemOrIngotItem.split(':')[1]}`)
-        embersStamping(e, `${gemOrIngotItem}`, { tag: fluid.tag, amount: fluidAmt }, 'embers:ingot_stamp')
+        embersStamping(e, `${gemOrIngotItem}`, { tag: fluid.tag, amount: fluidAmt }, '#tconstruct:casts/multi_use')
+            .id(`emendatus:embers/stamping/${fluid.stack.id.split(':')[1]}_to_${gemOrIngotItem.split(':')[1]}`)
+        embersStamping(e, `4x ${gemOrIngotItem}`, { tag: fluid.tag, amount: fluidAmt * 4 }, 'embers:ingot_stamp')
+            .id(`emendatus:embers/stamping/${fluid.stack.id.split(':')[1]}_to_${gemOrIngotItem.split(':')[1]}`)
+        embersStamping(e, `9x ${gemOrIngotItem}`, { tag: fluid.tag, amount: fluidAmt * 9 }, 'thermal:chiller_ingot_cast')
             .id(`emendatus:embers/stamping/${fluid.stack.id.split(':')[1]}_to_${gemOrIngotItem.split(':')[1]}`)
 
         e.remove({
