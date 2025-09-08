@@ -32,6 +32,13 @@ ServerEvents.recipes(e => {
         'computercraft:pocket_computer_normal',
         'computercraft:pocket_computer_advanced',
 
+        'create:milling/lapis_lazuli',
+        'create:milling/coal',
+        'create:milling/charcoal',
+        'create:crushing/lapis_lazuli',
+        'create:crushing/coal',
+        'create:crushing/charcoal',
+
         /create:crafting\/materials\/andesite_alloy/,
         /create:\w+\/bread/,
         /create:crafting\/materials\/\w+_block_from_compacting/,

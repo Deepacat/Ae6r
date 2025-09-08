@@ -10,7 +10,7 @@ ServerEvents.recipes(e => {
         C: 'embers:caminite_plate',
     }).id('kubejs:shaped/embers_item_extractor_servo')
 
-    e.shaped('1x embers:item_extractor', [
+    e.shaped('6x embers:item_extractor', [
         ' B ',
         'CAC',
         ' B '

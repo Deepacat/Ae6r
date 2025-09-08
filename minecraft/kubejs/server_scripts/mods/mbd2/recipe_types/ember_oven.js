@@ -1,4 +1,5 @@
 ServerEvents.recipes(e => {
+    e.remove({id: /architects_palette:.*sunmetal_brick_from_sunmetal_blend/})
     e.recipes.mbd2.ember_oven()
         .inputItems('architects_palette:sunmetal_blend')
         .inputFluids(Fluid.of('starbunclemania:source_fluid', 250))
