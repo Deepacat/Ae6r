@@ -1,7 +1,7 @@
 ServerEvents.recipes(e => {
     e.recipes.mbd2.ember_oven()
         .inputItems('architects_palette:sunmetal_blend')
-        .inputFluids('starbunclemania:source_fluid', 250)
+        .inputFluids(Fluid.of('starbunclemania:source_fluid', 250))
         .perTick(t => t.inputEmber(2))
         .outputItems('architects_palette:sunmetal_brick')
         .duration(300)

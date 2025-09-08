@@ -24,61 +24,32 @@ ServerEvents.recipes(e => {
     ]).id('kubejs:lychee/lightning/sourcestone')
 
     e.remove({ id: 'minecraft:conduit' })
-    // lightningRecipe(e, 'conduit',
-    //     [{ item: 'minecraft:heart_of_the_sea' }, { item: 'minecraft:nautilus_shell', count: 4 },
-    //     { tag: 'forge:gems/lapis' }, { tag: 'forge:gems/fluorite' }, { tag: 'forge:gems/source' }],
-    //     [{ type: "drop_item", item: "minecraft:conduit" }]
-    // )
     lightningRecipe(e, 'minecraft:conduit', [
-        'minecraft:heart_of_the_sea', '4x minecraft:nautilus_shell', Ingredient.of('#forge:gems/lapis', 2), Ingredient.of('#forge:gems/fluorite', 2), Ingredient.of('#forge:gems/source', 2)
+        'minecraft:heart_of_the_sea', '4x minecraft:nautilus_shell', Ingredient.of('#forge:gems/lapis', 2),
+        Ingredient.of('#forge:gems/fluorite', 2), Ingredient.of('#forge:gems/source', 2)
     ]).id('kubejs:lychee/lightning/conduit')
 
     e.remove({ id: 'naturesaura:wood_stand' })
-    // lightningRecipe(e, 'wood_stand',
-    //     [{ item: 'eidolon:gold_inlay' }, { item: 'botania:livingwood_wall' }, { item: 'naturesaura:gold_leaf' }, { tag: 'forge:gems/apatite' }],
-    //     [{ type: "drop_item", item: "naturesaura:wood_stand" }]
-    // )
     lightningRecipe(e, 'naturesaura:wood_stand', [
         'eidolon:gold_inlay', 'botania:livingwood_wall', 'naturesaura:gold_leaf', '#forge:gems/apatite'
     ]).id('kubejs:lychee/lightning/wood_stand')
 
     e.remove({ id: 'meetyourfight:fossil_bait' })
-    // lightningRecipe(e, 'fossil_bait',
-    //     [{ item: 'undergarden:music_disc_relict' }, { item: 'aquaculture:fish_bones' },
-    //     { tag: 'forge:gems/lapis', count: 2 }, { item: 'minecraft:fermented_spider_eye', count: 2 },
-    //     { item: 'undergarden:raw_dweller_meat', count: 4 }],
-    //     [{ type: "drop_item", item: "meetyourfight:fossil_bait" }]
-    // )
     lightningRecipe(e, 'meetyourfight:fossil_bait', [
         'undergarden:music_disc_relict', 'aquaculture:fish_bones', '#forge:gems/lapis', '2x minecraft:fermented_spider_eye', '4x undergarden:raw_dweller_meat'
     ]).id('kubejs:lychee/lightning/fossil_bait')
 
     e.remove({ id: 'ars_nouveau:jar_of_light' })
-    // lightningRecipe(e, 'jar_of_light',
-    //     [{ item: 'supplementaries:jar', count: 3 }, { tag: 'forge:gems/fluorite', count: 3 }],
-    //     [{ type: "drop_item", item: "ars_nouveau:jar_of_light", count: 1 }]
-    // )
     lightningRecipe(e, 'ars_nouveau:jar_of_light', [
         '3x supplementaries:jar', Ingredient.of('#forge:gems/fluorite', 3)
     ]).id('kubejs:lychee/lightning/jar_of_light')
 
     e.remove({ id: 'ars_nouveau:void_jar' })
-    // lightningRecipe(e, 'void_jar',
-    //     [{ item: 'supplementaries:jar', count: 3 }, { tag: 'forge:dusts/obsidian', count: 3 }],
-    //     [{ type: "drop_item", item: "ars_nouveau:void_jar", count: 1 }]
-    // )
     lightningRecipe(e, 'ars_nouveau:void_jar', [
         '3x supplementaries:jar', Ingredient.of('#forge:dusts/obsidian', 3)
     ]).id('kubejs:lychee/lightning/void_jar')
 
     e.remove({ id: 'naturesaura:calling_spirit' })
-    // lightningRecipe(e, 'calling_spirit',
-    //     [{ type: 'forge:nbt', item: 'naturesaura:aura_bottle', nbt: { stored_type: "naturesaura:overworld" } },
-    //     { item: 'naturesaura:infused_iron' }, { item: 'botania:rune_water' }, { item: 'botania:rune_earth' },
-    //     { type: 'forge:nbt', item: 'naturesaura:aura_bottle', nbt: { stored_type: "naturesaura:nether" } },
-    //     { item: 'naturesaura:tainted_gold' }, { item: 'botania:rune_fire' }, { item: 'botania:rune_air' }],
-    //     [{ type: "drop_item", item: "naturesaura:calling_spirit", count: 4 }]
-    // )
     lightningRecipe(e, 'naturesaura:calling_spirit', [
         Item.of('naturesaura:aura_bottle', { stored_type: "naturesaura:overworld" }),
         'naturesaura:infused_iron', 'botania:rune_water', 'botania:rune_earth',
@@ -87,72 +58,49 @@ ServerEvents.recipes(e => {
     ]).id('kubejs:lychee/lightning/calling_spirit')
 
     e.remove({ id: 'minecraft:lodestone' })
-    // lightningRecipe(e, 'lodestone',
-    //     [{ tag: 'forge:storage_blocks/iron', count: 2 }, { tag: 'forge:dusts/iron', count: 2 },
-    //     { tag: 'forge:gems/fluorite', count: 2 }, { tag: 'forge:dusts/copper', count: 2 }],
-    //     [{ type: "drop_item", item: "minecraft:lodestone", count: 1 }],
-    // )
     lightningRecipe(e, 'minecraft:lodestone', [
         Ingredient.of('#forge:storage_blocks/iron', 2), Ingredient.of('#forge:dusts/iron', 2),
         Ingredient.of('#forge:gems/fluorite', 2), Ingredient.of('#forge:dusts/copper', 2)
     ]).id('kubejs:lychee/lightning/lodestone')
 
     e.remove({ id: 'botania:spark' })
-    // lightningRecipe(e, 'spark',
-    //     [{ tag: 'botania:petals', count: 6 }, { item: 'botania:quartz_blaze', count: 2 }, { item: 'kubejs:replaceme', count: 2 }],
-    //     [{ type: "drop_item", item: "botania:spark", count: 3 }]
-    // )
     lightningRecipe(e, 'botania:spark', [
         Ingredient.of('#botania:petals', 6), '2x botania:quartz_blaze', '2x kubejs:replaceme'
     ]).id('kubejs:lychee/lightning/spark')
 
     e.remove({ id: 'meetyourfight:haunted_bell' })
-    // lightningRecipe(e, 'haunted_bell',
-    //     [{ item: 'kubejs:replaceme', count: 3 }, { tag: 'forge:gems/fluorite', count: 3 }, { item: 'kubejs:replaceme', count: 3 }],
-    //     [{ type: "drop_item", item: "meetyourfight:haunted_bell", count: 1 }]
-    // )
+
     lightningRecipe(e, 'meetyourfight:haunted_bell', [
         '3x kubejs:replaceme', Ingredient.of('#forge:gems/fluorite', 3), '3x kubejs:replaceme'
     ]).id('kubejs:lychee/lightning/haunted_bell')
 
-    // lightningRecipe(e, 'invar_dust',
-    //     [{ item: 'thermal:phytogro', count: 2 }, { tag: 'forge:dusts/iron', count: 2 }, { tag: 'forge:dusts/nickel' }],
-    //     [{ type: "drop_item", item: "emendatus:invar_dust", count: 3 }]
-    // )
     lightningRecipe(e, 'emendatus:invar_dust', [
         '2x thermal:phytogro', Ingredient.of('#forge:dusts/iron', 2), '#forge:dusts/nickel'
     ]).id('kubejs:lychee/lightning/invar_dust')
 
-    // lightningRecipe(e, 'firmament',
-    //     [{ tag: 'forge:gems/fluorite' }, { item: 'minecraft:prismarine', count: 6 }, { item: 'undergarden:shiverstone', count: 6 }],
-    //     [{ type: "drop_item", item: "kubejs:firmament", count: 3 }]
-    // )
     lightningRecipe(e, 'kubejs:firmament', [
         '#forge:gems/fluorite', '6x minecraft:prismarine', '6x undergarden:shiverstone'
     ]).id('kubejs:lychee/lightning/firmament')
 
     e.remove({ id: 'eidolon:stone_altar' })
-    // lightningRecipe(e, 'stone_altar',
-    //     [{ item: 'eidolon:soul_shard' }, { item: 'minecraft:polished_andesite' }, { item: 'eidolon:pewter_inlay' }],
-    //     [{ type: "drop_item", item: "eidolon:stone_altar", count: 1 }]
-    // )
     lightningRecipe(e, 'eidolon:stone_altar', [
         'eidolon:soul_shard', 'minecraft:polished_andesite', 'eidolon:pewter_inlay'
     ]).id('kubejs:lychee/lightning/stone_altar')
 
     e.remove({ id: 'bloodmagic:teleposer' })
-    // lightningRecipe(e,
-    //     [{ item: 'botania:corporea_spark', count: 3 }, { tag: 'forge:nuggets/dawnstone', count: 3 }, { item: 'bloodmagic:ritualstone', count: 2 }],
-    //     [{ type: "drop_item", item: "bloodmagic:teleposer", count: 2 }]
-    // )
     lightningRecipe(e, 'bloodmagic:teleposer', [
         '3x botania:corporea_spark', Ingredient.of('#forge:nuggets/dawnstone', 3), '2x bloodmagic:ritualstone'
     ]).id('kubejs:lychee/lightning/teleposer')
 
     lightningRecipe(e, '2x kubejs:stabilized_algal_bricks', [
         '4x architects_palette:overgrown_algal_bricks', Ingredient.of('#forge:ingots/dawnstone', 4),
-        'eidolon:soul_shard', '3x ars_nouveau:manipulation_essence'
+        '4x eidolon:soul_shard', '3x ars_nouveau:manipulation_essence'
     ]).id('kubejs:lychee/lightning/stabilized_algal_bricks')
+
+    lightningRecipe(e, '2x kubejs:stabilized_glowstone', [
+        '4x minecraft:glowstone', Ingredient.of('#forge:ingots/sunmetal', 2),
+        Ingredient.of('#forge:gems/arcanum', 4), '3x ars_nouveau:manipulation_essence'
+    ]).id('kubejs:lychee/lightning/stabilized_glowstone')
 
     // these all need to be entirely remade, 27 items meh and starmetal dusts
     // lightningRecipe(e, 'crystalline_oak_leaves',
