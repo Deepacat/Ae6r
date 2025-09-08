@@ -5,12 +5,13 @@ ServerEvents.tags('item', e => {
     // Making material substitute tags
     const substitutions = [
         ['gold', 'brass'],
+        ['gold', 'copper'],
+        ['gold', 'bronze'],
         ['iron', 'aluminum'],
         ['iron', 'tin'],
         ['iron', 'copper'],
         ['copper', 'tin'],
-        ['gold', 'copper'],
-        ['source', 'diamond']
+        ['source', 'diamond'],
     ]
 
     for (let mats of substitutions) {
