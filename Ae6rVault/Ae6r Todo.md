@@ -15,6 +15,7 @@ Polish/fixes:
 - [ ] Fix lootbox rewards in qb
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
 - [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
+- [ ] gourmand dynamo recipe (waste incinerator?)
 - [ ] Ponder scenes and tooltips for multiblock structures (Showing how to build)
 	- [ ] Ember oven
 		- [ ] Multipart tooltips (receptor/dual access)
