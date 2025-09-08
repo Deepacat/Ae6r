@@ -478,14 +478,24 @@
 				{
 					count: 10L
 					id: "715861BCF5C887FE"
-					item: "kubejs:stabilized_arcane_stone_bricks"
+					item: "kubejs:stabilized_algal_bricks"
 					type: "item"
 				}
 				{
 					count: 10L
 					id: "6404EAE88435617A"
-					item: "kubejs:stabilized_arcane_glowstone"
+					item: "kubejs:stabilized_glowstone"
 					type: "item"
+				}
+				{
+					dimension: "aether:the_aether"
+					id: "5E399FAA29BDA24D"
+					type: "dimension"
+				}
+				{
+					dimension: "undergarden:undergarden"
+					id: "78EEBDF25A878762"
+					type: "dimension"
 				}
 			]
 			title: "Realms Beyond"
