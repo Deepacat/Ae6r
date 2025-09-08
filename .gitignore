@@ -17,6 +17,7 @@ minecraft/.pakku/docs
 minecraft/config/alexsmobs/*
 minecraft/config/worldedit*
 minecraft/config/jei*
+minecraft/config/embeddium-options.json
 minecraft/config/spark/tmp*
 minecraft/config/everycomp-hazardous.properties
 minecraft/config/konkrete/locals
