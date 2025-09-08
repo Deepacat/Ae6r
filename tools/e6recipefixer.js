@@ -2,6 +2,7 @@ const getString = (input) => {
     if (input == null) return
     if (typeof input === "number") return input
     if (input.item) return input
+    if (input.fluid) return input
     if (Array.isArray(input)) {
         return `[${input.map(getString).join(", ")}]`
     }
@@ -64,9 +65,7 @@ const industrialforegoing = {
     }
 }
 
-    const recipes = [
-        
-    ]
+const recipes = []
 
 // const powahTiers = ['starter', 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro'];
 
@@ -133,6 +132,15 @@ const industrialforegoing = {
 // 	})
 // })
 
+// general thermal recipes
+let thermalMachineToPort = "chiller"
+recipes.forEach((recipe) => {
+    console.log(`    ${recipe.id.includes('kubejs:') ? '' : '\n    e.remove({ id: "' + recipe.id + '" })'}
+    e.recipes.thermal.${thermalMachineToPort}(${recipe.output},
+        [${recipe.inputs.map(getString).join(", ")}])
+        .energy(${recipe.energy})
+        .id('${recipe.id.replace(/.*:/g, "kubejs:")}')`)
+})
 
 /* // bloodmagic altar
 recipes.forEach((recipe) => {
@@ -154,24 +162,8 @@ recipes.forEach((recipe) => {
     .id('${recipe.id.replace(/.*:/g, "kubejs:")}')\n`)
 }) */
 
-let a = {
-    inputs: [
-        '#forge:ingots/queens_slime',
-        '#forge:ingots/slimesteel',
-        '#forge:ingots/slimesteel',
-        '#forge:ingots/slimesteel'
-    ],
-    inputFluid: 'industrialforegoing:pink_slime',
-    inputFluidAmount: 2000,
-    processingTime: 300,
-    outputItem: { item: 'industrialforegoing:pink_slime_ingot', count: 4 },
-    outputFluid: 'industrialforegoing:sludge',
-    outputFluidAmount: 500,
-    id: 'industrialforegoing:dissolution_chamber/pink_slime_ingot'
-}
 
-
-// industrial foregoing dissolution chamber 
+/* // industrial foregoing dissolution chamber 
 recipes.forEach((recipe) => {
     let ingredients = []
     recipe.inputs.forEach((input) => {
@@ -186,7 +178,7 @@ recipes.forEach((recipe) => {
         output: { item: '${recipe.outputItem.item}', count: ${recipe.outputItem.count} }, ${recipe.outputFluid ? `\n        outputFluid: \`{ FluidName: '${recipe.outputFluid}', Amount: ${recipe.outputFluidAmount} }\`,` : ""}
         processingTime: ${recipe.processingTime},
     }).id('${recipe.id.replace(/.*:/g, "kubejs:dissolution/")}')\n`)
-})
+}) */
 
 /* // shapeless
 recipes.forEach(recipe => {
@@ -226,7 +218,7 @@ recipes.forEach((recipe) => {
 ).id('${recipe.id}')\n`)
 }) */
 
-// shaped
+/* // shaped
 recipes.forEach(recipe => {
     let finalOut = getString(recipe.output)
     let finalPattern = recipe.pattern.map(getString).join(",\n\t")
@@ -239,7 +231,7 @@ e.shaped(${finalOut}, [
     ${finalKey}
 }).id(${finalId}\n`
     )
-})
+}) */
 
 /* // bloodmagic arc
 recipes.forEach((recipe) => {
