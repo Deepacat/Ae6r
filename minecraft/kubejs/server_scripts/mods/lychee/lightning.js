@@ -94,12 +94,12 @@ ServerEvents.recipes(e => {
 
     lightningRecipe(e, '2x kubejs:stabilized_algal_bricks', [
         '4x architects_palette:overgrown_algal_bricks', Ingredient.of('#forge:ingots/dawnstone', 4),
-        '4x eidolon:soul_shard', '3x ars_nouveau:manipulation_essence'
+        '4x eidolon:soul_shard', 'ars_nouveau:manipulation_essence'
     ]).id('kubejs:lychee/lightning/stabilized_algal_bricks')
 
     lightningRecipe(e, '2x kubejs:stabilized_glowstone', [
         '4x minecraft:glowstone', Ingredient.of('#forge:ingots/sunmetal', 2),
-        Ingredient.of('#forge:gems/arcanum', 4), '3x ars_nouveau:manipulation_essence'
+        Ingredient.of('#forge:gems/arcanum', 4), 'ars_nouveau:manipulation_essence'
     ]).id('kubejs:lychee/lightning/stabilized_glowstone')
 
     // these all need to be entirely remade, 27 items meh and starmetal dusts

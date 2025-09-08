@@ -420,6 +420,7 @@
 				"7B6DCBDD9A71FCE6"
 				"45CFB6E5BAA062B8"
 			]
+			dependency_requirement: "one_completed"
 			icon: "architects_palette:sunmetal_brick"
 			id: "74C44875CA084050"
 			tasks: [
@@ -1206,6 +1207,7 @@
 				"7039C8B5F77E2353"
 				"7B6DCBDD9A71FCE6"
 			]
+			dependency_requirement: "one_completed"
 			icon: "embers:archaic_bricks"
 			id: "45CFB6E5BAA062B8"
 			subtitle: "True Heat"
