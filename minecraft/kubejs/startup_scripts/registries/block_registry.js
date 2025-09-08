@@ -1,44 +1,72 @@
-StartupEvents.registry('block', event => {
-    const blocks = [
-        { name: 'warding_stone', material: 'stone', hardness: 2 },
-        { name: 'firmament', material: 'stone', hardness: 2 },
-        { name: 'superheated_steel_block', material: 'metal', hardness: 5 },
-        { name: 'hot_compressed_iron_block', material: 'metal', hardness: 5 },
-        { name: 'rough_machine_frame_top', material: 'metal', hardness: 5 },
-        { name: 'coated_machine_frame_top', material: 'metal', hardness: 5 },
-        { name: 'rough_machine_frame', material: 'metal', hardness: 5 },
-        { name: 'crystalline_dark_oak_wood', material: 'stone', hardness: 5 },
-        { name: 'crystalline_oak_leaves', material: 'glass', hardness: 2.0, leaves: true },
-        { name: 'aspectus_shard_block', material: 'amethyst', hardness: 5 },
-        { name: 'stabilized_arcane_stone_bricks', material: 'stone', hardness: 50 },
-        { name: 'stabilized_arcane_glowstone', material: 'amethyst', hardness: 50 },
-        {
-            name: 'crystalline_flowering_palo_verde_leaves',
-            material: 'glass',
-            hardness: 2.0,
-            leaves: true
-        },
-        { name: 'marl', material: 'sand', hardness: 1, mineable: 'shovel' }
-    ]
+StartupEvents.registry('block', e => {
+    e.create('warding_stone')
+        .soundType('stone')
+        .hardness(2)
 
-    blocks.forEach((block) => {
-        const block_event = event.create(block.name).soundType(block.material).hardness(block.hardness)
+    e.create('firmament')
+        .soundType('stone')
+        .hardness(2)
 
-        if (block.mineable) {
-            block_event.tagBlock(`minecraft:mineable/${block.mineable}`)
-        }
+    e.create('superheated_steel_block')
+        .soundType('metal')
+        .hardness(5)
 
-        if (block.leaves == true) {
-            block_event
-                .renderType('cutout')
-                .notSolid()
-                .noValidSpawns(true)
-                .suffocating(false)
-                .viewBlocking(false)
-                .redstoneConductor(false)
-                .transparent(false)
-        }
-    })
+    e.create('hot_compressed_iron_block')
+        .soundType('metal')
+        .hardness(5)
+
+    e.create('rough_machine_frame_top')
+        .soundType('metal')
+        .hardness(5)
+
+    e.create('coated_machine_frame_top')
+        .soundType('metal')
+        .hardness(5)
+
+    e.create('rough_machine_frame')
+        .soundType('metal')
+        .hardness(5)
+
+    e.create('crystalline_dark_oak_wood')
+        .soundType('stone')
+        .hardness(5)
+
+    e.create('aspectus_shard_block')
+        .soundType('amethyst')
+        .hardness(5)
+
+    e.create('stabilized_algal_bricks')
+        .soundType('stone')
+        .hardness(50)
+
+    e.create('stabilized_glowstone')
+        .soundType('amethyst')
+        .hardness(50)
+
+    e.create('crystalline_oak_leaves')
+        .soundType('glass')
+        .renderType('cutout')
+        .notSolid()
+        .noValidSpawns(true)
+        .suffocating(false)
+        .viewBlocking(false)
+        .redstoneConductor(false)
+        .transparent(false)
+
+    e.create('crystalline_flowering_palo_verde_leaves')
+        .soundType('glass')
+        .renderType('cutout')
+        .notSolid()
+        .noValidSpawns(true)
+        .suffocating(false)
+        .viewBlocking(false)
+        .redstoneConductor(false)
+        .transparent(false)
+
+    e.create('marl')
+        .soundType('sand')
+        .hardness(1)
+        .tagBlock('minecraft:mineable/shovel')
 
     const aspectus = [
         'aer',
@@ -53,10 +81,12 @@ StartupEvents.registry('block', event => {
     ]
 
     for (let aspect of aspectus) {
-        event.create(`kubejs:${aspect}_aspectus_shard_block`)
+        e.create(`kubejs:${aspect}_aspectus_shard_block`)
             .soundType('amethyst')
             .tagBoth('kubejs:aspectus_block')
             .tagBoth(`kubejs:aspectus_block/${aspect}`)
+            .tagBlock('minecraft:mineable/pickaxe')
+            .tagBlock('minecraft:needs_diamond_tool')
             .hardness(5)
     }
 })
