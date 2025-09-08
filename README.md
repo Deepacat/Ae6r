@@ -1,4 +1,4 @@
-Aenigmata 6 Resurgere: A port/reimagining of Enigmatica 6 Expert for 1.20.1
+Aenigmata 6 Resurgere: A re-imagining of Enigmatica 6 Expert for 1.20.1
 
 Ae6r is "heavily inspired" by E6e using alot of it's recipes and concepts, but is still very different with several mods added and removed
 
