@@ -21,7 +21,7 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'undergarden:catalyst' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['eidolon:gold_inlay', '#forge:ingots/pewter', 'eidolon:gold_inlay', '#forge:ingots/pewter', 'eidolon:gold_inlay', '#forge:ingots/pewter', 'eidolon:gold_inlay', '#forge:ingots/pewter'],
+        ['#forge:ingots/pewter', 'eidolon:gold_inlay', '#forge:ingots/pewter', 'eidolon:gold_inlay', '#forge:ingots/pewter', 'eidolon:gold_inlay', '#forge:ingots/pewter', 'eidolon:gold_inlay'],
         '#forge:storage_blocks/arcanum',
         'undergarden:catalyst', 5000
     ).id('kubejs:ars_nouveau/enchanting_apparatus/catalyst')

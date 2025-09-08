@@ -51,9 +51,9 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'naturesaura:calling_spirit' })
     lightningRecipe(e, 'naturesaura:calling_spirit', [
-        Item.of('naturesaura:aura_bottle', { stored_type: "naturesaura:overworld" }),
+        { type: 'forge:nbt', item: 'naturesaura:aura_bottle', nbt: { stored_type: "naturesaura:overworld" }},
         'naturesaura:infused_iron', 'botania:rune_water', 'botania:rune_earth',
-        Item.of('naturesaura:aura_bottle', { stored_type: "naturesaura:nether" }),
+        { type: 'forge:nbt', item: 'naturesaura:aura_bottle', nbt: { stored_type: "naturesaura:nether" }},
         'naturesaura:tainted_gold', 'botania:rune_fire', 'botania:rune_air'
     ]).id('kubejs:lychee/lightning/calling_spirit')
 
