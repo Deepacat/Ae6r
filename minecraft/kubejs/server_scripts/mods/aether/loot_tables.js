@@ -1,17 +1,14 @@
 LootJS.modifiers(e => {
-    let aspectusShards = ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
+    let aspecti = ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
+    let aspectusShards = aspecti.map(aspect => Item.of(`kubejs:${aspect}_aspectus_shard`))
+    let aspectusShardBlocks = aspecti.map(aspect => Item.of(`kubejs:${aspect}_aspectus_shard_block`))
 
-    // 
-    let dungeonRewardShards = aspectusShards.map(
-        (aspect) => Item.of(`kubejs:${aspect}_aspectus_shard_block`).withChance(0.0005)
-    )
-
-    // Bronze dungeon boss chest
+    // bronze dungeon
     e.addLootTableModifier("aether:chests/dungeon/bronze/bronze_dungeon_reward")
-        .addWeightedLoot(
-            [0, 2],
-            dungeonRewardShards
+        .addWeightedLoot( // 1-3 random aspectus shards with 3-5 count
+            [1, 3],
+            aspectusShards
         )
-        // always give 1 shard block
-        .addLoot(Item.of('kubejs:aspectus_shard_block'))
+        .limitCount([3, 5])
+        .addLoot(Item.of('kubejs:aspectus_shard_block')) // guarantee at least one typeless aspectus shard block
 })
