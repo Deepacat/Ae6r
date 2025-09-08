@@ -6,10 +6,13 @@
  */
 function makeJsonIngredient(input) {
     let ingredient = ''
-
-    // Check if the input is an Ingredient stack
-    if (input.class) {
-        ingredient = input;
+    /* check if input is just an object input, used to include nbt or loop over
+    items in recipes sometimes using custom formats */
+    if (typeof input === "object" && input.item || input.tag) {
+        return input
+        // Check if the input is an Ingredient stack
+    } else if (input.class) {
+        ingredient = input
         // If the input is a string, it's likely just a item string e.g. '4x minecraft:dirt', convert it to an itemstack then ingredient
     } else if (typeof input === "string") {
         if (input.includes('#')) {
@@ -85,7 +88,7 @@ const unificationBlacklist = [
  * @see unificationBlacklist
  */
 function unificationBlacklistEntry(material, type) {
-    return {material: material, type: type}
+    return { material: material, type: type }
 }
 
 /**
