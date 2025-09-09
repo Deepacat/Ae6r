@@ -24,7 +24,7 @@ ServerEvents.recipes(e => {
         .id('kubejs:scannable_common_ores_module')
 
     e.remove({ id: 'scannable:rare_ores_module' })
-    e.shapeless('scannable:rare_ores_module', ['scannable:common_ores_module', 'kubejs:replaceme'])
+    e.shapeless('scannable:rare_ores_module', ['scannable:common_ores_module', 'irons_spellbooks:arcane_salvage'])
         .id('kubejs:scannable_rare_ores_module')
 
     e.remove({ id: 'scannable:fluid_module' })
