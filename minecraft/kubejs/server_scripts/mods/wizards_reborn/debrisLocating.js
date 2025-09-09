@@ -2,7 +2,7 @@
 const $BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 ItemEvents.firstRightClicked('wizard_reborn:wissen_wand', e => {
     if (e.hand != 'MAIN_HAND') { return }
-    // if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }
+    if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }
 
     if (e.player.mainHandItem.id == 'wizards_reborn:wissen_wand' &&
         e.player.offHandItem.id == 'ars_nouveau:scryers_oculus') {
@@ -20,9 +20,6 @@ ItemEvents.firstRightClicked('wizard_reborn:wissen_wand', e => {
                         // if (pos.distManhattan(blockPos) > range * 1 * 16) return
                         const { x, y, z } = blockPos
                         let mapPos = level.getHeightmapPos("motion_blocking_no_leaves", new $BlockPos(x, 0, z))
-                        // e.player.tell(`blockPos: ${x}, ${y}, ${z}`)
-                        // e.player.tell(`mapPos: ${mapPos.x}, ${mapPos.y}, ${mapPos.z}`)
-                        // e.player.tell(`light: ${level.getBlock(mapPos).light}`)
                         if (level.getBlock(mapPos).light <= 4) {
                             level.spawnParticles("deep_aether:mythical_particle",
                                 false, mapPos.x + 0.5, mapPos.y + 2, mapPos.z + 0.5, 0.1, 1, 0.1, 5, 0.001)
