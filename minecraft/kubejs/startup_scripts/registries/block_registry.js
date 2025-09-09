@@ -35,7 +35,6 @@ StartupEvents.registry('block', e => {
         .soundType('amethyst')
         .hardness(5)
         .tagBoth('kubejs:aspectus_block')
-        .tagBoth(`kubejs:aspectus_block/${aspect}`)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_diamond_tool')
         .tagBlock('embers:mineable/hammer')
