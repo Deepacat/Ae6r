@@ -34,6 +34,11 @@ StartupEvents.registry('block', e => {
     e.create('aspectus_shard_block')
         .soundType('amethyst')
         .hardness(5)
+        .tagBoth('kubejs:aspectus_block')
+        .tagBoth(`kubejs:aspectus_block/${aspect}`)
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool')
+        .tagBlock('embers:mineable/hammer')
 
     e.create('stabilized_algal_bricks')
         .soundType('stone')
@@ -83,10 +88,11 @@ StartupEvents.registry('block', e => {
     for (let aspect of aspectus) {
         e.create(`kubejs:${aspect}_aspectus_shard_block`)
             .soundType('amethyst')
+            .hardness(5)
             .tagBoth('kubejs:aspectus_block')
             .tagBoth(`kubejs:aspectus_block/${aspect}`)
             .tagBlock('minecraft:mineable/pickaxe')
             .tagBlock('minecraft:needs_diamond_tool')
-            .hardness(5)
+            .tagBlock('embers:mineable/hammer')
     }
 })
