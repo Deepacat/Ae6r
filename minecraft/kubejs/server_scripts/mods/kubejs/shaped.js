@@ -193,7 +193,7 @@ ServerEvents.recipes(e => {
         G: Item.of('kubejs:replaceme', '{astralsorcery:{constellationName:"astralsorcery:bootes"}}').weakNBT(),
         H: Item.of('kubejs:replaceme', '{astralsorcery:{constellationName:"astralsorcery:fornax"}}').weakNBT(),
         I: Item.of('kubejs:replaceme', '{astralsorcery:{constellationName:"astralsorcery:pelotrio"}}').weakNBT()
-    }).id('kubejs:kubejs_dim_constellation_box')
+    }).id('kubejs:kubejs/shaped/_dim_constellation_box')
 
     e.shaped('kubejs:marl', [
         'AB',
@@ -201,5 +201,14 @@ ServerEvents.recipes(e => {
     ], {
         A: 'aether:quicksoil',
         B: 'minecraft:clay'
-    }).id('kubejs:marl')
+    }).id('kubejs:kubejs/shaped/marl')
+
+    e.shaped('kubejs:aspectus_shard_block', [
+        'AAA',
+        'BBB',
+        'AAA'
+    ], {
+        A: 'aether_redux:gravitite_ingot',
+        B: '#kubejs:aspectus_shards'
+    }).id('kubejs:kubejs/shaped/aspectus_shard_block')
 })

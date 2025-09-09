@@ -1,8 +1,4 @@
 LootJS.modifiers(e => {
-    let aspecti = ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
-    let aspectusShards = aspecti.map(aspect => Item.of(`kubejs:${aspect}_aspectus_shard`))
-    let aspectusShardBlocks = aspecti.map(aspect => Item.of(`kubejs:${aspect}_aspectus_shard_block`))
-
     // bronze dungeon
     e.addLootTableModifier("aether:chests/dungeon/bronze/bronze_dungeon_reward")
         // 1 guaranteed aspectus shard block
