@@ -62,11 +62,6 @@ ServerEvents.highPriorityData(e => {
         'immersiveengineering:nickel',
         'immersiveengineering:silver',
         'immersiveengineering:uranium',
-
-        'aether:zanite_ore',
-        'aether:ambrosium_ore',
-        'aether:gravitite_ore',
-        'aether:gravitite_ore_buried'
     ]
 
     function removeFeatures(idArray) {
