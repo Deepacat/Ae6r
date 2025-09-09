@@ -92,7 +92,7 @@ ServerEvents.recipes(e => {
         A: 'kubejs:red_nether_brick'
     }).id('kubejs:shaped/red_nether_bricks')
 
-    e.remove({ id: 'minecraft:enchanting_table' })
+    e.remove({ output: 'minecraft:enchanting_table' })
     e.shaped('minecraft:enchanting_table', [
         ' A ',
         'BCB',
