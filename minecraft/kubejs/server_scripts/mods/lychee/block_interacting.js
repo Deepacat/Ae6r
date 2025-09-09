@@ -22,4 +22,19 @@ ServerEvents.recipes(e => {
             }
         ]
     }).id('kubejs:lychee/block_interacting/arcanum_arcane_debris')
+
+    // make flare blossom dupeable
+    e.custom({
+        type: "lychee:block_interacting",
+        item_in: {
+            item: "botania:fertilizer"
+        },
+        block_in: "aether_redux:flareblossom",
+        post: [
+            {
+                type: "drop_item",
+                item: "aether_redux:flareblossom",
+            }
+        ]
+    }).id('kubejs:lychee/block_interacting/floral_fertilizer_flareblossom')
 })

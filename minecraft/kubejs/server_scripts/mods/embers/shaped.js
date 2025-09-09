@@ -127,6 +127,7 @@ ServerEvents.recipes(e => {
     e.remove({ output: 'embers:ember_funnel' })
     e.remove({ output: 'embers:ember_ejector' })
 
+    // maybe make this a mechanical crafting
     e.remove({ output: 'embers:grandhammer' })
     e.shaped('embers:grandhammer', [
         'ABA',
@@ -136,6 +137,6 @@ ServerEvents.recipes(e => {
         A: '#forge:storage_blocks/dawnstone',
         B: 'aether_redux:gravitite_ingot',
         C: 'embers:superheater',
-        D: 'wizard_reborn:arcane_wood_branch'
+        D: 'wizards_reborn:arcane_wood_branch'
     })
 })

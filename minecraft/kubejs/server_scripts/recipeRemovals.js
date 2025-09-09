@@ -307,6 +307,7 @@ ServerEvents.recipes(e => {
         { output: 'bloodmagic:teleposer', id: 'bloodmagic:teleposer' },
         { output: 'bloodmagic:syntheticpoint', id: 'bloodmagic:synthetic_point' },
 
+        { output: /botania:apothecary_/, type: 'minecraft:crafting' },
         { output: 'botania:terrasteel_helmet', id: 'botania:terrasteel_helmet' },
         { output: 'botania:terrasteel_chestplate', id: 'botania:terrasteel_chestplate' },
         { output: 'botania:terrasteel_leggings', id: 'botania:terrasteel_leggings' },
@@ -314,7 +315,6 @@ ServerEvents.recipes(e => {
         { output: 'botania:spark', id: 'botania:spark' },
         { output: 'botania:mana_pylon', id: 'botania:mana_pylon' },
         { output: 'botania:natura_pylon', id: 'botania:natura_pylon' },
-        { output: 'botania:apothecary_default', id: 'botania:apothecary_default' },
         { output: 'botania:terra_plate', id: 'botania:terra_plate' },
         { output: 'botania:alfheim_portal', id: 'botania:alfheim_portal' },
         { output: 'botania:mana_ring', id: 'botania:mana_ring' },

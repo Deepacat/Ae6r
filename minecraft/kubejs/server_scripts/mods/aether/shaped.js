@@ -18,10 +18,10 @@ ServerEvents.recipes(e => {
         'CDC',
         'EEE'
     ], {
-        A: 'aether_redux:sentry_chip',
-        B: '#forge:ingots/froststeel',
-        C: 'aether:icestone',
-        D: 'thermal:machine_chiller',
+        A: 'cookingforblockheads:ice_unit',
+        B: '#forge:ingots/manasteel',
+        C: 'aether_redux:sentry_chip',
+        D: 'aether:icestone',
         E: 'aether:skyroot_planks',
     })
 
@@ -38,3 +38,4 @@ ServerEvents.recipes(e => {
     //     E: 'deep_aether:chiseled_holystone',
     // })
 })
+

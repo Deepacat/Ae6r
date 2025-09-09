@@ -1,4 +1,10 @@
 ServerEvents.recipes(e => {
+    e.recipes.ars_nouveau.enchanting_apparatus(
+        ['aether_redux:flareblossom', '#forge:dusts/lapis', 'eidolon:pewter_inlay', 'eidolon:pewter_inlay', 'thermal:phytogro', 'supplementaries:pedestal', 'thermal:phytogro'],
+        'farmersdelight:cooking_pot',
+        'botania:apothecary_default', 1000
+    ).id('kubejs:ars_nouveau/enchanting_apparatus/botania_apothecary_default')
+
     e.remove({ id: 'architects_palette:sunmetal_blend' })
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['#forge:dusts/silver', '#forge:dusts/silver', '#forge:dusts/silver', '#forge:dusts/silver'],
