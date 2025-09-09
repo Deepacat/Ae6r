@@ -1,23 +1,14 @@
 ServerEvents.recipes(e => {
-    // logistics
     e.remove({ id: 'eidolon:wooden_altar' })
     e.shaped('eidolon:wooden_altar', [
         'AAA',
-        'B B',
-        'B B'
+        'BCB',
+        'BCB'
     ], {
-        A: 'eidolon:polished_planks_slab',
-        B: 'eidolon:polished_planks'
-    }).id('kubejs:wooden_altar_wood')
-    e.shaped('eidolon:wooden_altar', [
-        'AAA',
-        'CBC',
-        'CBC'
-    ], {
-        A: 'quark:brown_stained_planks_slab',
-        B: 'kubejs:scented_stick',
-        C: 'quark:brown_stained_planks_vertical_slab'
-    }).id('kubejs:wooden_altar_scented_stick')
+        A: 'wizards_reborn:arcane_wood_slab',
+        B: 'wizards_reborn:arcane_wood_planks',
+        C: 'kubejs:scented_stick'
+    }).id('kubejs:eidolon/shaped/wooden_altar_wood')
 
     e.remove({ id: 'eidolon:basic_belt' })
     e.shaped('eidolon:basic_belt', [

@@ -123,7 +123,19 @@ ServerEvents.recipes(e => {
         D: 'embers:fluid_pipe'
     }).id('kubejs:shaped/embers_fluid_transfer')
 
-    e.remove({ output: 'embers:ember_funnel'})
-    e.remove({ output: 'embers:ember_ejector'})
+    // make these out of some enhanced dawnstone or sumn lol
+    e.remove({ output: 'embers:ember_funnel' })
+    e.remove({ output: 'embers:ember_ejector' })
 
+    e.remove({ output: 'embers:grandhammer' })
+    e.shaped('embers:grandhammer', [
+        'ABA',
+        ' C ',
+        ' D '
+    ], {
+        A: '#forge:storage_blocks/dawnstone',
+        B: 'aether_redux:gravitite_ingot',
+        C: 'embers:superheater',
+        D: 'wizard_reborn:arcane_wood_branch'
+    })
 })
