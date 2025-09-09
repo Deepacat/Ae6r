@@ -1,9 +1,7 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-- [x] implement ember oven
-- [x] Add new catalyst and some kinda reinforced glowstone blocks recipes for undergarten and aether portals (change undergarten portal bricks if possible to another harder block)
-- [ ] implement aspectus shards (godshard replacement)
+- [ ] Fix starting botania recipes
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
 	- [x] Create milling + crushing
@@ -16,19 +14,23 @@ Polish/fixes:
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
 - [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
 - [ ] gourmand dynamo recipe (waste incinerator?)
-- [ ] Ponder scenes and tooltips for multiblock structures (Showing how to build)
-	- [ ] Ember oven
+- [ ] Ponder scenes/guideme/tooltips 
+	- [ ] Ember oven multiblock
 		- [ ] Multipart tooltips (receptor/dual access)
-	- [ ] Aether portal
-	- [ ] Undergarten portal
+	- [ ] Aether portal multiblock
+	- [ ] Undergarten portal multiblock
+	- [ ] wizards reborn wissen arcane debris scanning info
+	- [ ] flareblossom finding tip (gold aether dungeon)
 
 Other:
 - [ ] Diesel gens hammering / wirecutting recipe schemas (grouped bc theyre like the same thing)
 
+For completed tasks, put fully finished tasks (all subtasks done) at the top of Completed
 
-For completed just put fully finished tasks (all subtasks done) at the top of it
-
-Completed:
+Completed
+- [x] implement ember oven
+- [x] Add new catalyst and some kinda reinforced glowstone blocks recipes for undergarten and aether portals (change undergarten portal bricks if possible to another harder block)
+- [x] implement aspectus shards (godshard replacement)
 - [x] Port the base non expert recipes from e6 :| (There's more than I thought, how dare they make a good kitchen sink) (crossing this out as I am pretty much just porting them as I need to lol)
 - [x] Figure out how the FUCK e6es unification works and how to work it into emendatusjs (it does shit like unify ender pearl to dust and arcane gem to botania mana dust)
 	- [x] refactor emendatusjs again to use more e6e like recipe unifying
