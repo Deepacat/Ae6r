@@ -1,6 +1,6 @@
 ServerEvents.recipes(e => {
     e.remove({ id: 'scannable:range_module' })
-    e.shapeless('scannable:range_module', ['scannable:blank_module', Item.of('kubejs:replaceme', '{OldItem:astral_sorcery}')])
+    e.shapeless('scannable:range_module', ['scannable:blank_module', 'architects_palette:sunmetal_blend'])
         .id('kubejs:scannable_range_module')
 
     e.remove({ id: 'scannable:entity_module' })
@@ -24,7 +24,7 @@ ServerEvents.recipes(e => {
         .id('kubejs:scannable_common_ores_module')
 
     e.remove({ id: 'scannable:rare_ores_module' })
-    e.shapeless('scannable:rare_ores_module', ['scannable:common_ores_module', 'irons_spellbooks:arcane_salvage'])
+    e.shapeless('scannable:rare_ores_module', ['scannable:common_ores_module', '#kubejs:aspectus_shards'])
         .id('kubejs:scannable_rare_ores_module')
 
     e.remove({ id: 'scannable:fluid_module' })
