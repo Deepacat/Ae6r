@@ -389,6 +389,91 @@
 			x: -5.5d
 			y: -0.5d
 		}
+		{
+			id: "30B2D837515200EB"
+			tasks: [{
+				id: "32130AA4853E64BD"
+				item: "embers:copper_charger"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["30B2D837515200EB"]
+			id: "5E3638C3AD59D061"
+			tasks: [{
+				id: "4787581687F1BBDB"
+				item: "embers:grandhammer"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			id: "7909D0F03F50EAC1"
+			tasks: [
+				{
+					id: "605BE89D1901EE2A"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								"embers:ember": 0.0d
+								"embers:ember_capacity": 6000.0d
+							}
+						}
+						id: "embers:ember_cartridge"
+						tag: {
+							ForgeCaps: {
+								"embers:ember_capacity": 6000.0d
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "0FA77FBEF9692E2B"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								"embers:ember": 0.0d
+								"embers:ember_capacity": 2000.0d
+							}
+						}
+						id: "embers:ember_jar"
+						tag: {
+							ForgeCaps: {
+								"embers:ember_capacity": 2000.0d
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "558F1A441A7758E4"
+					item: {
+						Count: 1
+						ForgeCaps: {
+							Parent: {
+								"embers:ember": 0.0d
+								"embers:ember_capacity": 1000.0d
+							}
+						}
+						id: "embers:ember_bulb"
+						tag: {
+							ForgeCaps: {
+								"embers:ember_capacity": 1000.0d
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			x: -1.0d
+			y: 5.0d
+		}
 	]
 	title: "Embers"
 }

@@ -673,6 +673,11 @@
 					item: "embers:grandhammer"
 					type: "item"
 				}
+				{
+					id: "0D06ED73D0F18008"
+					item: "aether:freezer"
+					type: "item"
+				}
 			]
 			x: 3.0d
 			y: 5.0d
