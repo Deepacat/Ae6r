@@ -441,29 +441,48 @@ function createOreProcessing(e, materialName, typesObj) {
             { type: 'crushing', primaryChance: 0.6, secondaryChance: 0.1 }
         ]
 
+        let rawItemTypes = [
+            { itemTypeObj: typesObj.raw_ore, mult: 1 },
+            { itemTypeObj: typesObj.raw_ore_block, mult: 9 }
+        ]
+
         for (let typeObj of recipeTypes) {
-            let outputs = [
-                Item.of(crushedOreItem), // guaranteed primary output
-                Item.of(crushedOreItem, 2).withChance(typeObj.primaryChance), // primary chanced extra output
-                Item.of(secondaryOutput, 2).withChance(typeObj.secondaryChance) // secondary chanced output
-            ]
-
-            if (typesObj.raw_ore) {
-                let rawOreItem = typesObj.raw_ore.item.id + ''
-                e.remove({ type: `create:${typeObj.type}`, input: rawOreItem, output: crushedOreItem })
-                e.remove({ type: `create:${typeObj.type}`, input: typesObj.raw_ore.tag, output: crushedOreItem })
-
-                e.recipes.create[typeObj.type](outputs, Ingredient.of('#' + typesObj.raw_ore.tag))
-                    .processingTime(mat.createProcessingTime)
-                    .id(`emendatus:oreproc/create/${typeObj.type}/${rawOreItem.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
+            let crushOutputs = (m) => {
+                return [
+                    Item.of(crushedOreItem, 1 * m), // guaranteed primary output
+                    Item.of(crushedOreItem, 2 * m).withChance(typeObj.primaryChance), // primary chanced extra output
+                    Item.of(secondaryOutput, 2 * m).withChance(typeObj.secondaryChance) // secondary chanced output
+                ]
             }
+            for (let rawItemTypeObj of rawItemTypes) {
+                if (rawItemTypeObj.itemTypeObj === undefined) { continue }
+                let { itemTypeObj, mult } = rawItemTypeObj
+                let rawProcessingItem = Item.of(itemTypeObj.item.id)
+                let rawProcessingItemTag = `#${itemTypeObj.tag}`
 
+                e.remove({ type: `create:${typeObj.type}`, input: rawProcessingItem, output: crushedOreItem })
+                e.remove({ type: `create:${typeObj.type}`, input: rawProcessingItemTag, output: crushedOreItem })
+
+                e.recipes.create[typeObj.type](crushOutputs(mult), Ingredient.of(rawProcessingItemTag))
+                    .processingTime(mat.createProcessingTime)
+                    .id(`emendatus:oreproc/create/${typeObj.type}/${rawProcessingItemTag.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
+            }
             e.remove({ type: `create:${typeObj.type}`, input: oreItem, output: crushedOreItem })
             e.remove({ type: `create:${typeObj.type}`, input: typesObj.ore.tag, output: crushedOreItem })
 
-            e.recipes.create[typeObj.type](outputs, Ingredient.of('#' + typesObj.ore.tag))
+            e.recipes.create[typeObj.type](crushOutputs(1), Ingredient.of('#' + typesObj.ore.tag))
                 .processingTime(mat.createProcessingTime)
                 .id(`emendatus:oreproc/create/${typeObj.type}/${typesObj.ore.tag.split(':')[1]}_to_${crushedOreItem.split(':')[1]}`)
+        }
+
+        if (typesObj.nugget) {
+            let nuggetItem = typesObj.nugget.item.id + ''
+            let washOutput = [Item.of(nuggetItem, 10), Item.of(nuggetItem, 5).withChance(0.5)];
+
+            e.remove({ type: 'create:splashing', output: nuggetItem })
+
+            e.recipes.create.splashing(washOutput, crushedOreItem)
+                .id(`emendatus:oreproc/create/splashing/${crushedOreItem.split(':')[1]}_to_${nuggetItem.split(':')[1]}`)
         }
     }
 
