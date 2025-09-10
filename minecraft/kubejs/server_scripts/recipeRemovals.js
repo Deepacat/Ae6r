@@ -265,12 +265,6 @@ ServerEvents.recipes(e => {
         { type: 'eidolon:worktable' },
         { type: 'eidolon:crucible' },
 
-        { output: 'apotheosis:hellshelf', id: 'apotheosis:hellshelf' },
-        { output: 'apotheosis:seashelf', id: 'apotheosis:seashelf' },
-        { output: 'apotheosis:endshelf', id: 'apotheosis:endshelf' },
-        { output: 'apotheosis:enchantment_library', id: 'apotheosis:enchantment_library' },
-        { type: 'minecraft:crafting', output: /apoth:.*tome/ },
-
         { output: 'ars_nouveau:arcane_stone', id: 'ars_nouveau:arcane_stone' },
         { output: 'ars_nouveau:crystallizer', id: 'ars_nouveau:crystallizer' },
         { output: 'ars_nouveau:volcanic_accumulator', id: 'ars_nouveau:volcanic_accumulator' },
@@ -307,7 +301,7 @@ ServerEvents.recipes(e => {
         { output: 'bloodmagic:teleposer', id: 'bloodmagic:teleposer' },
         { output: 'bloodmagic:syntheticpoint', id: 'bloodmagic:synthetic_point' },
 
-        { output: /botania:apothecary_/, type: 'minecraft:crafting' },
+        { type: 'minecraft:crafting_shaped', id: /botania.*apothecary/ },
         { output: 'botania:terrasteel_helmet', id: 'botania:terrasteel_helmet' },
         { output: 'botania:terrasteel_chestplate', id: 'botania:terrasteel_chestplate' },
         { output: 'botania:terrasteel_leggings', id: 'botania:terrasteel_leggings' },
@@ -378,7 +372,6 @@ ServerEvents.recipes(e => {
         { input: 'quark:blackstone_furnace' },
         { output: 'quark:deepslate_furnace' },
         { output: 'quark:blackstone_furnace' }
-
     ]
 
     idRemovals.forEach((id) => {
@@ -387,5 +380,44 @@ ServerEvents.recipes(e => {
 
     recipeFilterRemovals.forEach((output) => {
         e.remove(output)
+    })
+
+    // Often times mod books with patchouli and whatnot display hardcoded recipe id's
+    // and when you remove those id's, the whole book can fail to load or lose a page 
+    const modBookSafeRemovlas = [
+
+    ]
+
+    modBookSafeRemovlas.forEach(filter => {
+        e.forEachRecipe(filter, recipe => {
+            e.shapeless('kubejs:altered_recipe_indicator', 'kubejs:altered_recipe_indicator')
+                .id(recipe.getId())
+        })
+    })
+
+    // Apotheosis just looooved to hardcode recipes in a factory builder thing
+    // so the id's need to be replaced as well
+    const apothIdRemovals = [
+        'apotheosis:helmet_tome',
+        'apotheosis:chestplate_tome',
+        'apotheosis:leggings_tome',
+        'apotheosis:boots_tome',
+        'apotheosis:weapon_tome',
+        'apotheosis:bow_tome',
+        'apotheosis:pickaxe_tome',
+        'apotheosis:fishing_tome',
+        'apotheosis:other_tome',
+        'apotheosis:scrap_tome',
+        'apotheosis:improved_scrap_tome',
+        'apotheosis:extraction_tome',
+        'apotheosis:endshelf',
+        'apotheosis:seashelf',
+        'apotheosis:hellshelf',
+        'apotheosis:library'
+    ]
+
+    apothIdRemovals.forEach(id => {
+        e.shapeless('kubejs:disabled_recipe_indicator', 'kubejs:disabled_recipe_indicator')
+            .id(id)
     })
 })
