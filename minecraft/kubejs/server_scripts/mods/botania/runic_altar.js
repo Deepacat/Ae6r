@@ -79,46 +79,55 @@ ServerEvents.recipes(e => {
         64000
     ).id('botania:runic_altar/wrath')
 
+    e.remove({ output: 'mythicbotany:alfheim_rune' })
     e.recipes.botania.runic_altar('mythicbotany:alfheim_rune',
         ['#forge:ingots/alfsteel', '#botania:runes/air', '#botania:runes/summer', '#botania:runes/lust', 'naturesaura:gold_leaf'],
         96000
     ).id('mythicbotany:runic_altar/alfheim')
 
+    e.remove({ output: 'mythicbotany:asgard_rune' })
     e.recipes.botania.runic_altar('mythicbotany:asgard_rune',
         ['#forge:ingots/sky', '#botania:runes/air', '#botania:runes/autumn', '#botania:runes/pride', 'botania:bifrost_perm'],
         96000
     ).id('mythicbotany:runic_altar/asgard')
 
+    e.remove({ output: 'mythicbotany:helheim_rune' })
     e.recipes.botania.runic_altar('mythicbotany:helheim_rune',
         ['#forge:ingots/tainted_gold', '#botania:runes/fire', '#botania:runes/autumn', '#botania:runes/envy', ['eidolon:zombie_heart', 'eidolon:wraith_heart']],
         96000
     ).id('mythicbotany:runic_altar/helheim')
 
+    e.remove({ output: 'mythicbotany:joetunheim_rune' })
     e.recipes.botania.runic_altar('mythicbotany:joetunheim_rune',
         ['#forge:ingots/netherite', '#botania:runes/earth', '#botania:runes/autumn', '#botania:runes/gluttony', 'naturesaura:infused_stone'],
         96000
     ).id('mythicbotany:runic_altar/joetunheim')
 
+    e.remove({ output: 'mythicbotany:midgard_rune' })
     e.recipes.botania.runic_altar('mythicbotany:midgard_rune',
         ['#forge:ingots/terrasteel', '#botania:runes/earth', '#botania:runes/spring', '#botania:runes/greed', 'minecraft:podzol'],
         96000
     ).id('mythicbotany:runic_altar/midgard')
 
+    e.remove({ output: 'mythicbotany:muspelheim_rune' })
     e.recipes.botania.runic_altar('mythicbotany:muspelheim_rune',
         ['#forge:ingots/refined_glowstone', '#botania:runes/fire', '#botania:runes/summer', '#botania:runes/wrath', 'create:refined_radiance_casing'],
         96000
     ).id('mythicbotany:runic_altar/muspelheim')
 
+    e.remove({ output: 'mythicbotany:nidavellir_rune' })
     e.recipes.botania.runic_altar('mythicbotany:nidavellir_rune',
         ['#forge:ingots/arcane_gold', '#botania:runes/earth', '#botania:runes/winter', '#botania:runes/sloth', 'eidolon:shadow_gem'],
         96000
     ).id('mythicbotany:runic_altar/nidavellir')
 
+    e.remove({ output: 'mythicbotany:niflheim_rune' })
     e.recipes.botania.runic_altar('mythicbotany:niflheim_rune',
         ['#forge:ingots/refined_obsidian', '#botania:runes/water', '#botania:runes/winter', '#botania:runes/wrath', 'create:shadow_steel_casing'],
         96000
     ).id('mythicbotany:runic_altar/niflheim')
 
+    e.remove({ output: 'mythicbotany:vanaheim_rune' })
     e.recipes.botania.runic_altar('mythicbotany:vanaheim_rune',
         ['#forge:ingots/iesnium', '#botania:runes/earth', '#botania:runes/spring', '#botania:runes/pride', 'bloodmagic:seersigil'],
         96000
