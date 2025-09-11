@@ -57,6 +57,14 @@ global.restrictions["botania:apothecary"] = {
     ]
 }
 
+global.restrictions["botania:pure_daisy"] = {
+    conditions: [
+        {
+            dimension: 'aether:the_aether'
+        }
+    ]
+}
+
 global.restrictions['aether:freezer'] = {
     conditions: [
         {
