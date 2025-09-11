@@ -377,7 +377,7 @@ ServerEvents.recipes(e => {
         .id('kubejs:crafting/damage_plate')
 
     e.recipes.bloodmagic.alchemytable(Item.of('bloodmagic:teleposerfocus', 1),
-        ['#forge:ingots/silicon_bronze', '#forge:shards/ender', 'eidolon:enchanted_ash'])
+        ['#forge:ingots/amethyst_bronze', '#forge:shards/ender', 'eidolon:enchanted_ash'])
         .syphon(50)
         .ticks(20)
         .upgradeLevel(1)

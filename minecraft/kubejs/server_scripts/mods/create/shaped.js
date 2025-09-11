@@ -145,14 +145,14 @@ ServerEvents.recipes(e => {
     e.remove({ id: 'create:crafting/appliances/copper_diving_helmet' })
     e.shaped('create:copper_diving_helmet', ['ABA', 'BCB'], {
         A: 'thermal:diving_fabric',
-        B: '#forge:ingots/dawnstone',
+        B: '#forge:ingots/bronze',
         C: '#forge:glass_panes/cyan'
     })
 
     e.remove({ id: 'create:crafting/appliances/copper_diving_boots' })
     e.shaped('create:copper_diving_boots', ['A A', 'B B', 'C C'], {
         A: 'thermal:diving_fabric',
-        B: '#forge:ingots/dawnstone',
+        B: '#forge:ingots/bronze',
         C: '#forge:plates/lead'
     })
 })

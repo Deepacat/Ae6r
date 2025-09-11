@@ -43,7 +43,7 @@ ServerEvents.recipes(e => {
 		'BA ',
 		'CB '
 	], {
-		A: '#forge:ingots/silicon_bronze',
+		A: '#forge:ingots/amethyst_bronze',
 		B: 'eidolon:pewter_inlay',
 		C: '#forge:rods/wooden'
 	}).id('kubejs:bloodmagic_altar/daggerofsacrifice')
