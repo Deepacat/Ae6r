@@ -8,6 +8,14 @@
 // @ts-ignore
 let restrictions = global.restrictions
 
+// reset tell player cooldown data on login
+PlayerEvents.loggedIn(e => {
+    if (!e.level.isClientSide()) {
+        // @ts-ignore
+        e.player.persistentData.restrictionTellCd = {}
+    }
+})
+
 /**
  * @param {Internal.ItemClickedEventJS | Internal.BlockRightClickedEventJS | Internal.BlockPlacedEventJS} event
  * @param {string | number} blockOrItem
@@ -30,13 +38,15 @@ function canUse(event, blockOrItem) {
 
     const errors = []
     for (const condition of restrictions[blockOrItem].conditions) {
-        if (condition.sage && !player.stages.has(condition.sage)) {
-            errors.push(`§cYou can't use §b${blockOrItem} §cyet, you must complete §agamestage "${condition.sage}"`)
+        if (condition.stage && !player.stages.has(condition.stage)) {
+            errors.push(`§cYou can't use §b${blockOrItem} §cyet, you must complete §agamestage "${condition.stage}"`)
         }
         if (condition.dimension) {
             if (condition.dimension != level.dimension) {
                 let dimName = condition.dimension.split(':')[1]
-                if (condition.dimStage && !player.stages.has(condition.dimStage)) {
+                if (condition.dimStage && player.stages.has(condition.dimStage)) { continue }
+
+                if (condition.dimStage) {
                     errors.push(`§cYou can't use §b"${blockOrItem}" §coutside of §b"${dimName}" §cyet, you must complete §agamestage "${condition.dimStage}"`)
                 } else {
                     errors.push(`§cYou can't use §b"${blockOrItem}" §cin this dimension, it can only be used in §a"${dimName}"`)
