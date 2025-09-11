@@ -44,7 +44,12 @@ global.restrictions['occultism:sacrificial_bowl'] = {
     ]
 }
 
-global.restrictions['botania:apothecary_default'] = {
+// const botaniaRestrictions = [
+//     'botania:',
+// ]
+
+global.restrictions["botania:apothecary"] = {
+    regex: /botania:apothecary/,
     conditions: [
         {
             dimension: 'aether:the_aether'

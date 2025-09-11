@@ -33,11 +33,25 @@ function canUse(event, blockOrItem) {
         if (!cd) { cd = {} }
     }
 
+    let restrictionKey
+    for (let [key, obj] of Object.entries(restrictions)) {
+        if (obj.regex) {
+            if (obj.regex.test(blockOrItem.toString())) {
+                restrictionKey = key
+                break
+            }
+        } else {
+            if (key == blockOrItem) {
+                restrictionKey = key
+                break
+            }
+        }
+    }
 
-    if (!restrictions[blockOrItem]) { return true }
+    if (!restrictionKey) { return true }
 
     const errors = []
-    for (const condition of restrictions[blockOrItem].conditions) {
+    for (let condition of restrictions[restrictionKey].conditions) {
         if (condition.stage && !player.stages.has(condition.stage)) {
             errors.push(`§cYou can't use §b${blockOrItem} §cyet, you must complete §agamestage "${condition.stage}"`)
         }
