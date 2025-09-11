@@ -1,7 +1,6 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-- [x] Fix starting botania recipes
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
 	- [x] Create milling + crushing
@@ -29,6 +28,7 @@ Other:
 For completed tasks, put fully finished tasks (all subtasks done) at the top of Completed
 
 Completed
+- [x] Fix starting botania recipes
 - [x] implement ember oven
 - [x] Add new catalyst and some kinda reinforced glowstone blocks recipes for undergarten and aether portals (change undergarten portal bricks if possible to another harder block)
 - [x] implement aspectus shards (godshard replacement)
