@@ -1,11 +1,11 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-- [ ] Fix starting botania recipes
+- [x] Fix starting botania recipes
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
 	- [x] Create milling + crushing
-	- [ ] Create washing
+	- [x] Create washing
 
 Polish/fixes:
 - [ ] Fix raw ore block smelting recipes being too quick (or remove them lmao)
@@ -23,6 +23,7 @@ Polish/fixes:
 	- [ ] flareblossom finding tip (gold aether dungeon)
 
 Other:
+- [ ] Aether structure locators (like an ender eye for them)
 - [ ] Diesel gens hammering / wirecutting recipe schemas (grouped bc theyre like the same thing)
 
 For completed tasks, put fully finished tasks (all subtasks done) at the top of Completed
