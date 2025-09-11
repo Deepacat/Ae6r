@@ -79,6 +79,18 @@ ServerEvents.tags('item', e => {
         'minecraft:polished_granite_slab', 'minecraft:granite_slab', 'minecraft:polished_andesite_slab',
         'minecraft:andesite_slab', 'minecraft:smooth_stone_slab', 'minecraft:stone_slab'
     ])
+
+    // restriction tags (item tag)
+    for (let [resKey, resObj] of Object.entries(global.restrictions)) {
+        let items = resObj.regex ?
+            Ingredient.of(resObj.regex).itemIds.toArray() :
+            Ingredient.of(resKey).itemIds.toArray()
+
+        for (let item of items) {
+            e.add(`kubejs:restrictions/${resKey.split(':')[1]}`, item)
+            e.add(`kubejs:restrictions`, item)
+        }
+    }
 })
 
 ServerEvents.tags('block', e => {
@@ -87,8 +99,21 @@ ServerEvents.tags('block', e => {
     e.add('minecraft:mineable/pickaxe', [''])
     e.add('minecraft:mineable/shovel', [''])
     e.add('minecraft:mineable/hoe', [''])
+
+    // restriction tags (block tag)
+    for (let [resKey, resObj] of Object.entries(global.restrictions)) {
+        let items = resObj.regex ?
+            Ingredient.of(resObj.regex).itemIds.toArray() :
+            Ingredient.of(resKey).itemIds.toArray()
+
+        for (let item of items) {
+            e.add(`kubejs:restrictions/${resKey.split(':')[1]}`, item)
+            e.add(`kubejs:restrictions`, item)
+        }
+    }
 })
 
 ServerEvents.tags('fluid', e => {
     e.add('c:hidden_from_recipe_viewers', ['thermal:latex'])
 })
+

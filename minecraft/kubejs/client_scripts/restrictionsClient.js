@@ -16,6 +16,28 @@ PlayerEvents.loggedIn(e => {
     }
 })
 
+function textFormat(str) {
+    str = str + ''
+    if (str.includes(':')) {
+        str = str.split(':')[1]
+
+    }
+    if (str.includes('_')) {
+        // str = str.replace('_', ' ')
+        str = str.split('_').join(' ')
+    }
+    str = str.toLowerCase()
+    if (str.includes(' ')) {
+        str = str
+            .split(' ')
+            .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+            .join(' ')
+    } else {
+        str = str.charAt(0).toUpperCase() + str.substring(1)
+    }
+    return str
+}
+
 /**
  * @param {Internal.ItemClickedEventJS | Internal.BlockRightClickedEventJS | Internal.BlockPlacedEventJS} event
  * @param {string | number} blockOrItem
@@ -57,13 +79,15 @@ function canUse(event, blockOrItem) {
         }
         if (condition.dimension) {
             if (condition.dimension != level.dimension) {
-                let dimName = condition.dimension.split(':')[1]
+                let dimName = textFormat(condition.dimension)
+                let blockOrItemName = textFormat(blockOrItem)
+
                 if (condition.dimStage && player.stages.has(condition.dimStage)) { continue }
 
                 if (condition.dimStage) {
-                    errors.push(`§cYou can't use §b"${blockOrItem}" §coutside of §b"${dimName}" §cyet, you must complete §agamestage "${condition.dimStage}"`)
+                    errors.push(`§cYou can't use §b"${blockOrItemName}" §coutside of §b"${dimName}" §cyet, you must complete §agamestage "${textFormat(condition.dimStage)}"`)
                 } else {
-                    errors.push(`§cYou can't use §b"${blockOrItem}" §cin this dimension, it can only be used in §a"${dimName}"`)
+                    errors.push(`§cYou can't use §b"${blockOrItemName}" §cin this dimension, it can only be used in §a"${dimName}"`)
                 }
             }
         }

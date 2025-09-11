@@ -44,10 +44,6 @@ global.restrictions['occultism:sacrificial_bowl'] = {
     ]
 }
 
-// const botaniaRestrictions = [
-//     'botania:',
-// ]
-
 global.restrictions["botania:apothecary"] = {
     regex: /botania:apothecary/,
     conditions: [
