@@ -3,15 +3,17 @@ In each category, priority highest to lowest
 Gameplay/Progression:
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
+	- [ ] add more materials to emendatus along with potentially a new category for just ore processing additions (ore just add every oreproc item manually ig, probably aren't enough similarities for a general category)
 	- [x] Create milling + crushing
 	- [x] Create washing
+	- [ ] Mekanism processing
 
 Polish/fixes:
 - [ ] Fix raw ore block smelting recipes being too quick (or remove them lmao)
 - [ ] Meka biomass from other mods' crops (currently only MC)
 - [ ] Fix lootbox rewards in qb
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
-- [ ] move the if else abomination in my embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
+- [ ] move the if else abomination in my (deepas) embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
 - [ ] gourmand dynamo recipe (waste incinerator?)
 - [ ] Ponder scenes/guideme/tooltips 
 	- [ ] Ember oven multiblock
@@ -20,6 +22,10 @@ Polish/fixes:
 	- [ ] Undergarten portal multiblock
 	- [ ] wizards reborn wissen arcane debris scanning info
 	- [ ] flareblossom finding tip (gold aether dungeon)
+	- [ ] Soul shard obtaining info
+	- [ ] Holy/unholy symbol obtaining info
+	- [ ] Eidolon chants info
+	- [ ] Arcane wood sapling transmute info
 
 Other:
 - [ ] Aether structure locators (like an ender eye for them)
@@ -67,4 +73,4 @@ Completed
 - [x] Hide dumb recipe categories like shapeless mixing and shaped mechanical crafting, grindstone
 - [x] Fix recipes that used ars clays in e6e
 - [x] (For specifically deepa) port my iron spells/apoth rework from a concept I made
-- [x] remove function/mana flora from flower tags (why are they even lmao) it makes them spawn in the stupid dungeon flower pots :skull:
+- [x] remove function/mana flora from flower tags (why are they even lmao) it makes them spawn in the stupid dungeon flower pots :skull: ok it turns out removing them from tag didn't even fix this I hate everything
