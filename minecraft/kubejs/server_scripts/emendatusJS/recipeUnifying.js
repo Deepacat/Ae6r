@@ -379,7 +379,19 @@ function materialCrushing(e, materialName, typesObj) {
     for (let type of crushable) {
         if (!typesObj[type]) { continue }
         let itemToCrush = typesObj[type].item.id + ''
-        allCrushing(e, dustItem, itemToCrush, 'emendatusjs:recipeunifying/materialcrushing/', 3, 1, true)
+        allCrushing(e, {
+            types: allCrushTypes,
+            output: dustItem,
+            secondaryOutput: undefined,
+            input: itemToCrush,
+            xp: 0.0,
+            processTime: 300,
+            energy: 2400,
+            ignoreOccultismMult: true,
+            removeExisting: true,
+            idSuffix: `${itemToCrush.split(':')[1]}_to_${dustItem.split(':')[1]}`,
+            idPrefix: 'emendatusjs:recipeunifying/materialcrushing'
+        })
     }
 }
 

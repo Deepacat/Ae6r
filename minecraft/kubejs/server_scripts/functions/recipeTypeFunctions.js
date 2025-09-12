@@ -214,63 +214,71 @@ function insideBlock(e, post, inputs, insideBlock, id) {
     e.custom(recipe).id(`kubejs:lychee/inside_block/${id}`)
 }
 
-/**
- * 1x item to 1x item crushing for all crushing recipe types
- * Used for ingot > dust recipes in unif
- * @param {any} e
- * @param {any} outputItem
- * @param {any} itemToCrush
- * @param {string} id
- * @param {number} [procTimeMult]
- * @param {number} [energyMult]
- * @param {boolean} [remove]
- */
-function allCrushing(e, outputItem, itemToCrush, id, procTimeMult, energyMult, remove) {
-    if (remove === true) {
-        e.remove({ type: 'minecraft:crafting', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'immersiveengineering:crusher', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'mekanism:crusher', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'thermal:pulvizer', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'bloodmagic:arc', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'create:crushing', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'create:milling', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'occultism:crushing', input: itemToCrush, output: outputItem })
-        e.remove({ type: 'ars_nouveau:crush', input: itemToCrush, output: outputItem })
+const allCrushTypes = [
+    'minecraft:crafting',
+    'immersiveengineering:crusher',
+    'mekanism:crusher',
+    'thermal:pulverizer',
+    'bloodmagic:arc',
+    'create:crushing',
+    'create:milling',
+    'occultism:crushing',
+    'ars_nouveau:crush',
+]
+
+// im not even typing this shit just reference server_scripts\mods\kubejs\crushing.js
+function allCrushing(event, recipeObj) {
+    const r = recipeObj
+
+    const outputs = r.secondaryOutput == undefined ?
+        [Item.of(r.output).withChance(1)] :
+        [Item.of(r.output).withChance(1), r.secondaryOutput]
+
+    if (r.removeExisting) {
+        for (let type of r.types) {
+            event.remove({ type: type, output: r.output, input: r.input })
+        }
     }
 
-    e.shaped(outputItem, [
+    // @ts-ignore
+    event.shaped(r.output, [
         'H  ',
         'I  '
     ], {
         H: 'immersiveengineering:hammer',
-        I: itemToCrush
-    }).id(`${id}/shaped/hammer_crushing/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+        I: r.input
+    }).id(`${r.idPrefix}/allcrushing/shaped_hammer/${r.idSuffix}`)
 
-    const ieCrush = e.recipes.immersiveengineering.crusher(outputItem, itemToCrush, [], 3000 * energyMult)
-        .id(`${id}/crusher/immersiveengineering/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
 
-    const mekCrush = e.recipes.mekanism.crushing(outputItem, itemToCrush)
-        .id(`${id}/crushing/mekanism/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+    event.recipes.immersiveengineering.crusher(r.output.item ? r.output : Item.of(r.output), r.input, r.secondaryOutput || [], r.energy)
+        .id(`${r.idPrefix}/allcrushing/immersiveengineering/crusher/${r.idSuffix}`)
 
-    const thermalPulv =
-        e.recipes.thermal.pulverizer(outputItem, itemToCrush)
-            .energy(2400 * energyMult)
-            .id(`${id}/pulverizer/thermal/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+    // is this even a thing???
+    // event.recipes.industrialforegoing.crusher(r.input, r.output)
+    //     .id(`${r.idPrefix}/allcrushing/industrialforegoing/crusher/${r.idSuffix}`)
+    
+    event.recipes.mekanism.crushing(r.output, r.input)
+        .id(`${r.idPrefix}/allcrushing/mekanism/crushing/${r.idSuffix}`)
 
-    const bloodmagicArc = e.recipes.bloodmagic.arc(outputItem, itemToCrush, '#bloodmagic:arc/explosive')
-        .id(`${id}/arc_crushing/bloodmagic/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+    event.recipes.thermal.pulverizer(outputs, r.input)
+        .energy(r.energy)
+        .experience(r.xp)
+        .id(`${r.idPrefix}/allcrushing/thermal/pulverizer/${r.idSuffix}`)
 
-    const createCrush = e.recipes.create.crushing(outputItem, itemToCrush)
-        .id(`${id}/crushing/create/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-        .processingTime(procTimeMult * 100)
+    event.recipes.bloodmagic.arc(r.output, r.input, '#bloodmagic:arc/explosive')
+        .id(`${r.idPrefix}/allcrushing/bloodmagic/arc_crushing//${r.idSuffix}`)
 
-    const createMill = e.recipes.create.milling(outputItem, itemToCrush)
-        .id(`${id}/milling/create/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
-        .processingTime(procTimeMult * 100)
+    event.recipes.create.crushing(outputs, r.input)
+        .id(`${r.idPrefix}/allcrushing/create/crushing/${r.idSuffix}`)
+        .processingTime(r.processTime)
 
-    const occultCrush = e.recipes.occultism.crushing(outputItem, itemToCrush)
-        .id(`${id}/occultism/crushing/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+    event.recipes.create.milling(outputs, r.input)
+        .id(`${r.idPrefix}/allcrushing/create/milling/${r.idSuffix}`)
+        .processingTime(r.processTime)
 
-    const arsCrush = e.recipes.ars_nouveau.crush(Item.of(itemToCrush), Item.of(outputItem).withChance(1))
-        .id(`${id}/crush_glyph/ars_nouveau/${itemToCrush.split(':')[1]}_to_${outputItem.split(':')[1]}`)
+    event.recipes.occultism.crushing(r.output, r.input, r.processTime, 1, r.ignoreOccultismMult)
+        .id(`${r.idPrefix}/allcrushing/occultism/crushing/${r.idSuffix}`)
+
+    event.recipes.ars_nouveau.crush(r.input, outputs)
+        .id(`${r.idPrefix}/allcrushing/ars_nouveau/crush_glyph//${r.idSuffix}`)
 }
