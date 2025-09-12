@@ -232,48 +232,6 @@
 			y: 4.0d
 		}
 		{
-			dependencies: ["0000000000000CBD"]
-			description: [
-				"The ultimate in compact power generation. The Furnace engine is a three-part multi-block structure that provides the highest possible SU generation. "
-				""
-				"In order to run, the Furnace or Blast Furnace must be activated (lit). This would normally require it to be smelting something, though there are other ways to achieve this state."
-				""
-				"To build it, place the Furnace Engine on top of a Furnace or Blast Furnace. This will cover the furnace and a large section will project out from one side. On that side, leave an air block, then place the Flywheel (third block from the furnace). "
-			]
-			icon: "create:flywheel"
-			id: "0000000000000CC6"
-			rewards: [
-				{
-					command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_create_loot_legendary"
-					icon: "kubejs:legendary_lootbox"
-					id: "0000000000000D76"
-					title: "Legendary Create Loot Box"
-					type: "command"
-				}
-				{
-					id: "0000000000000D8A"
-					item: "minecraft:blast_furnace"
-					title: "Blast Furnace"
-					type: "item"
-				}
-			]
-			subtitle: "Held in High Esteem"
-			tasks: [
-				{
-					id: "0000000000000CC7"
-					item: "create:furnace_engine"
-					type: "item"
-				}
-				{
-					id: "0000000000000CC8"
-					item: "create:flywheel"
-					type: "item"
-				}
-			]
-			x: 4.0d
-			y: 5.0d
-		}
-		{
 			dependencies: ["0000000000000CBA"]
 			description: [
 				"Making a pretty windmill is probably not the only reason you’re here. Most likely, you’d like this thing to actually do something useful, but it’s way up there and we’re way down here… "
@@ -1751,6 +1709,16 @@
 			title: "Printing Schematics"
 			x: 1.0d
 			y: -0.5d
+		}
+		{
+			id: "64F42B369543CE54"
+			tasks: [{
+				id: "20C0E03BE6E60A9C"
+				item: "create:steam_engine"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.5d
 		}
 	]
 	title: "Create"

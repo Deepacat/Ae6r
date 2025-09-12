@@ -36,7 +36,7 @@
 			}]
 			title: "Welcome to Eidolon!"
 			x: 1.5d
-			y: 0.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["0000000000000E85"]
@@ -84,7 +84,7 @@
 			]
 			title: "Basic Altar"
 			x: 1.5d
-			y: 3.5d
+			y: 3.0d
 		}
 		{
 			dependencies: ["0000000000000E80"]
@@ -164,8 +164,8 @@
 				}
 			]
 			title: "Rituals"
-			x: 4.5d
-			y: 2.0d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0000000000000E87"]
@@ -195,8 +195,8 @@
 				item: "eidolon:necrotic_focus"
 				type: "item"
 			}]
-			x: 5.0d
-			y: 3.0d
+			x: 4.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0000000000000E80"]
@@ -239,75 +239,8 @@
 				}
 			]
 			title: "Pewter"
-			x: -1.5d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0000000000000E8E"]
-			description: [
-				"Many ingredients in Eidolon are made in the Crucible, so you’ll need to get familiar with it. Craft one, fill it with water, place it above a heat source, like lava or a magma block, and wait for the water to boil."
-				""
-				"You’ll notice Crucible recipes come in different steps you’ll need to follow. Throw all the items for a step into the crucible, wait for the water to change color and then quickly drop all the items for the next step in, until all steps are done."
-				""
-				"If you’re too slow, the water will evaporate and you’ll lose the items you dropped in so far, so be prepared! "
-				""
-				"Some recipes also require you to stir the Crucible: you can do that by right clicking the Crucible when it’s the right time."
-			]
-			id: "0000000000000E90"
-			min_width: 300
-			rewards: [
-				{
-					count: 2
-					id: "0000000000000EBE"
-					item: "minecraft:redstone"
-					title: "Redstone Dust"
-					type: "item"
-				}
-				{
-					id: "0000000000000EBF"
-					item: "eidolon:soul_shard"
-					title: "Soul Shard"
-					type: "item"
-				}
-				{
-					count: 2
-					id: "0000000000000EC0"
-					item: "minecraft:gold_ingot"
-					title: "Gold Ingot"
-					type: "item"
-				}
-				{
-					id: "0000000000000EC1"
-					item: "minecraft:magma_block"
-					title: "Magma Block"
-					type: "item"
-				}
-			]
-			subtitle: "Wouldn't be a magic mod without one of these!"
-			tasks: [{
-				icon: "eidolon:crucible"
-				id: "0000000000000E91"
-				item: {
-					Count: 1b
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "eidolon:crucible"
-							}
-							{
-								Count: 1b
-								id: "farmersdelight:cooking_pot"
-							}
-						]
-					}
-				}
-				title: "Crucible"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 3.0d
+			x: 0.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0000000000000E87"]
@@ -335,49 +268,8 @@
 				type: "item"
 			}]
 			title: "Crystallization Ritual"
-			x: 4.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["0000000000000E8E"]
-			description: [
-				"Most magic items in Eidolon require slightly more advanced crafting than a regular crafting table, so you’ll need to upgrade to a magic workbench."
-				""
-				"It’s pretty straight forward: it works exactly like a normal workbench (and can be used as one), but it has four additional slots you’ll need to use for certain magic recipes. "
-			]
-			id: "0000000000000E94"
-			rewards: [{
-				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_scavengers_delight"
-				icon: "kubejs:scavengers_delight"
-				id: "0000000000000EC2"
-				title: "Scavenger's Delight"
-				type: "command"
-			}]
-			subtitle: "I thought it was green!"
-			tasks: [{
-				icon: "eidolon:worktable"
-				id: "0000000000000E95"
-				item: {
-					Count: 1b
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "masterfulmachinery:wicked_altar_controller"
-							}
-							{
-								Count: 1b
-								id: "eidolon:worktable"
-							}
-						]
-					}
-				}
-				title: "Magic Workbench"
-				type: "item"
-			}]
-			x: -1.0d
-			y: 3.0d
+			x: 3.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0000000000000E83"]
@@ -412,8 +304,8 @@
 				type: "item"
 			}]
 			title: "Altar Upgrades: Lighting"
-			x: 2.5d
-			y: 4.0d
+			x: 0.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["0000000000000E83"]
@@ -463,8 +355,8 @@
 				type: "item"
 			}]
 			title: "Altar Upgrades: Skulls"
-			x: 3.0d
-			y: 3.5d
+			x: 0.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0000000000000E83"]
@@ -500,8 +392,8 @@
 				type: "item"
 			}]
 			title: "Altar Upgrades: Herbs"
-			x: 3.0d
-			y: 4.5d
+			x: 0.5d
+			y: 3.5d
 		}
 		{
 			dependencies: ["0000000000000E83"]
@@ -529,7 +421,7 @@
 			}]
 			title: "Sacrifices"
 			x: 1.5d
-			y: 4.5d
+			y: 4.0d
 		}
 		{
 			dependencies: ["0000000000000E9D"]
@@ -556,7 +448,7 @@
 				type: "item"
 			}]
 			x: 1.5d
-			y: 5.5d
+			y: 5.0d
 		}
 		{
 			dependencies: ["0000000000000E9F"]
@@ -581,10 +473,10 @@
 				}
 			]
 			x: 1.5d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
-			dependencies: ["0000000000000E90"]
+			dependencies: ["0000000000000E92"]
 			description: [
 				"Time for some magic to happen! Get to know some of the basic alchemy ingredients you’ll be using to craft magical items in Eidolon."
 				""
@@ -632,8 +524,8 @@
 				}
 			]
 			title: "Alchemy Practice!"
-			x: -1.5d
-			y: 4.0d
+			x: 3.0d
+			y: 3.5d
 		}
 		{
 			dependencies: ["0000000000000E8A"]
@@ -693,8 +585,8 @@
 				}
 			]
 			title: "Sanguine Items"
-			x: 5.0d
-			y: 4.5d
+			x: 4.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["0000000000000EAA"]
@@ -740,7 +632,7 @@
 				}
 			]
 			title: "Wands Galore"
-			x: -2.5d
+			x: 4.0d
 			y: 5.5d
 		}
 		{
@@ -772,8 +664,8 @@
 				}
 				type: "item"
 			}]
-			x: -1.5d
-			y: 5.5d
+			x: 4.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["0000000000000EAA"]
@@ -795,8 +687,8 @@
 				item: "eidolon:soul_enchanter"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 6.5d
+			x: 5.0d
+			y: 5.5d
 		}
 		{
 			dependencies: ["0000000000000EAA"]
@@ -815,8 +707,8 @@
 				item: "eidolon:glass_hand"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 6.5d
+			x: 5.0d
+			y: 4.5d
 		}
 		{
 			dependencies: [
@@ -846,8 +738,191 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 5.5d
+			x: 0.5d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"03DDB498835282BB"
+				"7683017AC46001BC"
+			]
+			id: "5D2EA30BE7809A33"
+			tasks: [{
+				id: "02BED9CDDBD31E0B"
+				item: "eidolon:brazier"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D2EA30BE7809A33"]
+			id: "227AFE4F0FA1A2F0"
+			tasks: [{
+				id: "34EA454810D8FFC4"
+				item: "eidolon:soul_shard"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["227AFE4F0FA1A2F0"]
+			id: "7EBA706E44C4C928"
+			tasks: [{
+				id: "2845F090DA6C2F13"
+				item: "wizards_reborn:arcane_gold_ingot"
+				type: "item"
+			}]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			id: "03DDB498835282BB"
+			tasks: [{
+				id: "50B0596E4F036A52"
+				item: "eidolon:pewter_ingot"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["03DDB498835282BB"]
+			id: "5BB443867FC78A1D"
+			tasks: [{
+				id: "739B8CAF852B3A02"
+				item: "eidolon:pewter_inlay"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7EBA706E44C4C928"]
+			id: "373A4E6FCD9F8B08"
+			tasks: [{
+				id: "71245C71BF4A09BD"
+				item: "eidolon:gold_inlay"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 2.0d
+		}
+		{
+			id: "7E74B0BCB835678C"
+			tasks: [{
+				id: "43F66528F0F5F25F"
+				item: "farmersdelight:cooking_pot"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["7E74B0BCB835678C"]
+			id: "7683017AC46001BC"
+			tasks: [{
+				id: "20FC574BCEEBAF5A"
+				item: "eidolon:ender_calx"
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.0d
+		}
+		{
+			id: "3E617753B5D89FCA"
+			tasks: [{
+				id: "248997CB9AD286CB"
+				item: "eidolon:straw_effigy"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"5BB443867FC78A1D"
+				"3E617753B5D89FCA"
+			]
+			id: "02351ED0F4311894"
+			tasks: [{
+				id: "6807C3DAEB363027"
+				item: "eidolon:unholy_symbol"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7EBA706E44C4C928"]
+			id: "66F68FD56814EB1F"
+			tasks: [{
+				id: "489EA0DA5F039D85"
+				item: "eidolon:goblet"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["3E617753B5D89FCA"]
+			id: "004CE3B98BF6094D"
+			tasks: [{
+				id: "67350C4AFD2FAA3C"
+				item: "eidolon:wooden_altar"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"02351ED0F4311894"
+				"0B6F1CC9BA618FDD"
+			]
+			id: "5792F45800FA8C00"
+			tasks: [{
+				id: "0295E74F6A2641A4"
+				item: "eidolon:unholy_effigy"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3E617753B5D89FCA"]
+			id: "12A0B296F9D843CB"
+			tasks: [
+				{
+					id: "37FF7DB6285C016D"
+					item: "minecraft:wither_skeleton_skull"
+					type: "item"
+				}
+				{
+					id: "6FA22D93E1FA6C9C"
+					item: "eidolon:candlestick"
+					type: "item"
+				}
+				{
+					id: "0DAB838B4BDAE44C"
+					item: "minecraft:wither_rose"
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["227AFE4F0FA1A2F0"]
+			id: "0B6F1CC9BA618FDD"
+			tasks: [{
+				id: "5062FFD3E0E42DC9"
+				item: "eidolon:stone_altar"
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
 		}
 	]
 	title: "Eidolon"
