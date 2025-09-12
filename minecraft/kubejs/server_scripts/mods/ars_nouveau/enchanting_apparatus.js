@@ -296,14 +296,14 @@ ServerEvents.recipes(e => {
         'naturesaura:death_ring', 100
     ).id('kubejs:ars_nouveau/enchanting_apparatus/death_ring')
 
-    e.remove({ id: 'occultism:wormhole_frame' })
+    e.remove({ id: 'occultism:crafting/wormhole_frame' })
     e.recipes.ars_nouveau.enchanting_apparatus(
-        ['#forge:nuggets/nebu', Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), '#forge:nuggets/nebu', Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), '#forge:nuggets/nebu', Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), '#forge:nuggets/nebu'],
+        ['#forge:nuggets/gravitite', Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), '#forge:nuggets/gravitite', Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), '#forge:nuggets/gravitite', Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'), '#forge:nuggets/gravitite'],
         'occultism:otherstone_frame',
         'occultism:wormhole_frame', 10
     ).id('kubejs:ars_nouveau/enchanting_apparatus/crafting/wormhole_frame')
 
-    e.remove({ id: 'occultism:otherstone_tablet' })
+    e.remove({ id: 'occultism:crafting/otherstone_tablet' })
     e.recipes.ars_nouveau.enchanting_apparatus(
         ['fluxnetworks:flux_dust', 'occultism:otherstone_slab', 'fluxnetworks:flux_dust', 'occultism:otherstone_slab', 'occultism:otherstone_slab', 'fluxnetworks:flux_dust', 'occultism:otherstone_slab', 'fluxnetworks:flux_dust'],
         '#forge:gems/source',
