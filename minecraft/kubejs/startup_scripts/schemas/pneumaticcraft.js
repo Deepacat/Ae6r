@@ -39,6 +39,7 @@ function recipeSchema_pneumaticcraft(e, c) {
             .add(c.floatNumber.key('limit'))
             .add(c.floatNumber.key('multiplier'))
             .key('bonus_output')
+            
         let pncrTempRange = new $RecipeComponentBuilder(2)
             .add(c.intNumber.key('min_temp').optional(0))
             .add(c.intNumber.key('max_temp').optional(0))

@@ -12,6 +12,16 @@ function recipeSchema_immersiveengineering(e, c) {
             }
         })
 
+        let ieCrusherSecondaries = c.outputItem.mapOut((json) => {
+            let result = json.getAsJsonObject()
+            if (result.has('chance')) {
+                result.add('output', {})
+                result.getAsJsonObject('output').add('item', result.remove('item'))
+                result.getAsJsonObject('output').add('count', result.remove('count'))
+            }
+            return result
+        })
+
         let ieClocheRender =
             new $RecipeComponentBuilder(2) // https://github.com/BluSunrize/ImmersiveEngineering/blob/e63e4824800945eccf3684200a2c2270e2e1cdf2/src/api/java/blusunrize/immersiveengineering/api/crafting/ClocheRenderFunction.java#L57
                 .add(c.nonBlankString.key('type')) // generic | crop | stem | stacking | hemp
@@ -83,7 +93,7 @@ function recipeSchema_immersiveengineering(e, c) {
             new $RecipeSchema(
                 c.outputItem.key('result'),
                 c.inputItem.key('input'),
-                c.outputItem.asArray().key('secondaries'),
+                ieCrusherSecondaries.asArray().key('secondaries'),
                 c.intNumber.key('energy').optional(1600).alwaysWrite()
             )
         )
