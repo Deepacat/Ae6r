@@ -33,7 +33,7 @@ ServerEvents.recipes(e => {
         B: '#forge:plates/invar',
     }).id('kubejs:shaped/whisk')
 
-    e.remove({ id: 'create:crafting/kinetics/empty_blaze_burner'})
+    e.remove({ id: 'create:crafting/kinetics/empty_blaze_burner' })
     e.shaped('create:empty_blaze_burner', [
         'CBC',
         'BAB',

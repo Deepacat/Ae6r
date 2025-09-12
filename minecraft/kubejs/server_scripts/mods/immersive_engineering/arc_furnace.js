@@ -128,10 +128,10 @@ ServerEvents.recipes(e => {
         ['16x minecraft:book']
     ).id(`kubejs:arc_furnace/scrap_tome`)
 
-    e.recipes.immersiveengineering.arc_furnace('16x apotheosis:improved_scrap_tome',
+    e.recipes.immersiveengineering.arc_furnace('16x apotheosis:other_tome',
         'tconstruct:sky_slime_crystal',
         ['16x minecraft:book']
-    ).id(`kubejs:arc_furnace/improved_scrap_tome`)
+    ).id(`kubejs:arc_furnace/other_tome`)
 
     e.recipes.immersiveengineering.arc_furnace('kubejs:laputian_ingot',
         Ingredient.of('#forge:ingots/refined_radiance', 12),

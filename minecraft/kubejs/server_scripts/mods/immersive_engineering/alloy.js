@@ -59,10 +59,10 @@ ServerEvents.recipes(e => {
         'tconstruct:ender_slime_crystal'
     ).id(`kubejs:alloy_kiln/scrap_tome`)
 
-    e.recipes.immersiveengineering.alloy('16x apotheosis:improved_scrap_tome',
+    e.recipes.immersiveengineering.alloy('16x apotheosis:other_tome',
         '16x minecraft:book',
         'tconstruct:sky_slime_crystal'
-    ).id(`kubejs:alloy_kiln/improved_scrap_tome`)
+    ).id(`kubejs:alloy_kiln/other_tome`)
 
     e.recipes.immersiveengineering.alloy('2x thermal:enderium_ingot',
         '2x #forge:ingots/terminite',
