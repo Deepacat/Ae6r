@@ -100,18 +100,7 @@ ServerEvents.recipes(e => {
         B: 'minecraft:sticky_piston',
         C: 'create:shaft'
     })
-
-    e.remove({ id: 'create:crafting/kinetics/encased_chain_drive' })
-    e.shaped('create:encased_chain_drive', [
-        'A',
-        'B',
-        'C'
-    ], {
-        A: 'minecraft:chain',
-        B: 'create:shaft',
-        C: 'create:andesite_casing'
-    })
-
+    
     e.remove({ id: 'create:crafting/kinetics/brass_casing' })
     e.shaped(Item.of('create:brass_casing', 4), [
         'ABA',
@@ -123,6 +112,7 @@ ServerEvents.recipes(e => {
     })
 
     e.remove({ id: 'create:crafting/kinetics/encased_chain_drive' })
+    e.remove({ id: 'create:crafting/kinetics/encased_chain_drive_from_zinc' })
     e.shaped('create:encased_chain_drive', [
         ' A ',
         'BCB',

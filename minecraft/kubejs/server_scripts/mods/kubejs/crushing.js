@@ -16,7 +16,7 @@ ServerEvents.recipes(e => {
         types: allCrushTypes,
         output: '4x kubejs:basalt_powder',
         secondaryOutput: Item.of('kubejs:basalt_powder').withChance(0.5),
-        input: Ingredient.of('#forge:stones/basalt'),
+        input: Ingredient.of('#forge:basalt'),
         xp: 0.5,
         processTime: 100,
         energy: 2400,

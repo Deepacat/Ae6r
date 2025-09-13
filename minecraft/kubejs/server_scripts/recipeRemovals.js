@@ -39,7 +39,9 @@ ServerEvents.recipes(e => {
         'create:crushing/coal',
         'create:crushing/charcoal',
 
-        /create:crafting\/materials\/andesite_alloy/,
+        'create:crafting/materials/andesite_alloy',
+        'create:crafting/materials/andesite_alloy_from_zinc',
+
         /create:\w+\/bread/,
         /create:crafting\/materials\/\w+_block_from_compacting/,
         /create:crafting\/materials\/\w+_ingot_from_compacting/,
