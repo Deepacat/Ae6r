@@ -1,7 +1,7 @@
 
 [general]
 	#Enable dump button.
-	"Enable Dump Button" = true
+	"Enable Dump Button" = false
 	#Ignore hotbar when transferring.
 	"Ignore Hotbar" = true
 	#Highlight nearby containers.

@@ -1,0 +1,14 @@
+resourcePacks:["vanilla","mod_resources","Moonlight Mods Dynamic Assets","builtin/client/golden_swet_ball/DAGoldenSwetBallFixClient","file/VibrantAura-v1.0.zip","file/RFTools-Reworked-1.2.zip","file/updated_aquaculture-1.1.zip","file/Updated_Engineering_v1.7.zip","builtin/resource/overrides_pack"]
+key_quark.keybind.autorun:key.keyboard.unknown
+key_quark.keybind.back:key.keyboard.unknown
+key_quark.keybind.camera_mode:key.keyboard.unknown
+key_quark.keybind.transfer_insert:key.keyboard.unknown
+key_quark.keybind.transfer_extract:key.keyboard.unknown
+key_quark.keybind.shift_lock:key.keyboard.unknown
+key_quark.keybind.change_hotbar:key.keyboard.unknown
+key_quark.keybind.sort_player:key.keyboard.unknown
+key_quark.keybind.sort_container:key.keyboard.grave.accent
+key_quark.keybind.lock_rotation:key.keyboard.k
+key_quark.keybind.narrator_readout:key.keyboard.unknown
+key_quark.keybind.narrator_full_readout:key.keyboard.unknown
+key_quark.keybind.variant_selector:key.keyboard.unknown
