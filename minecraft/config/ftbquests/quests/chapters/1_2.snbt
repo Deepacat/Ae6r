@@ -30,6 +30,7 @@
 			id: "2B902DE6578F5B0C"
 			optional: true
 			tasks: [{
+				consume_items: true
 				count: 3L
 				id: "40617065BA29C41B"
 				item: "minecraft:conduit"
@@ -94,12 +95,14 @@
 			optional: true
 			tasks: [
 				{
+					consume_items: true
 					count: 32L
 					id: "761388BFC8D560E0"
 					item: "minecraft:flowering_azalea"
 					type: "item"
 				}
 				{
+					consume_items: true
 					count: 5L
 					id: "4F826D733B499762"
 					item: "minecraft:spore_blossom"
@@ -127,6 +130,7 @@
 			id: "066F13A103393AE6"
 			optional: true
 			tasks: [{
+				consume_items: true
 				count: 2L
 				id: "36711A12524F8D5D"
 				item: {
