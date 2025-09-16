@@ -189,8 +189,6 @@ ServerEvents.recipes(e => {
         'sophisticatedbackpacks:advanced_tool_swapper_upgrade',
         'sophisticatedbackpacks:refill_upgrade',
 
-        // 'tconstruct:smeltery/alloys/molten_refined_obsidian',
-        /tconstruct:smeltery\/alloys/,
         'tconstruct:smeltery/melting/metal/netherite/lodestone',
         'tconstruct:smeltery/melting/metal/gold/produce',
         'tconstruct:smeltery/scorched/scorched_brick',

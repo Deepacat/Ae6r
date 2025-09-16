@@ -312,13 +312,15 @@ const allAlloyingTypes = [
 function allAlloying(event, recipeObj) {
     const r = recipeObj
 
-    // if (r.removeExisting) {
-    //     for (let type of r.types) {
-    //         event.remove({ type: type, output: r.output, input: r.input })
-    //     }
-    // }
     if (r.item) {
         let i = r.item
+
+        if (r.removeExisting) {
+            for (let type of r.types) {
+                event.remove({ type: type, output: i.output })
+            }
+        }
+
         if (r.types.includes('create:mixing')) {
             let b = event.recipes.create.mixing(i.output, i.inputs, r.processTime)
             if (r.temperature > 1000) {
@@ -328,7 +330,7 @@ function allAlloying(event, recipeObj) {
             }
             b.id(`${r.idPrefix}/allalloying/create/mixing/${r.idSuffix}`)
         }
-        if (r.types.includes('immersiveengineering:alloy') && i.inputs.length <= 2) {
+        if (r.types.includes('immersiveengineering:alloy') && (i.inputs.length <= 2) && r.temperature < 1000) {
             event.recipes.immersiveengineering.alloy(i.output, i.inputs[0], i.inputs[1], r.processTime)
                 .id(`${r.idPrefix}/allalloying/immersiveengineering/alloy/${r.idSuffix}`)
         }
@@ -340,7 +342,7 @@ function allAlloying(event, recipeObj) {
                 r.energy
             ).id(`${r.idPrefix}/allalloying/immersiveengineering/arc_furnace/${r.idSuffix}`)
         }
-        if (r.types.includes('thermal:smelter')) {
+        if (r.types.includes('thermal:smelter') && r.temperature < 1000) {
             event.recipes.thermal.smelter(i.output, i.inputs)
                 .energy(r.energy)
                 .id(`${r.idPrefix}/allalloying/thermal/smelter/${r.idSuffix}`)
@@ -352,15 +354,17 @@ function allAlloying(event, recipeObj) {
             event.recipes.tconstruct.alloy(f.output, f.inputs, r.temperature)
                 .id(`${r.idPrefix}/allalloying/tconstruct/alloy/${r.idSuffix}`)
         }
-        if (r.types.includes('embers:mixing')) {
-            // deep copy obj
-            let ef = JSON.parse(JSON.stringify(f))
-            ef.output.amount = Math.round(ef.output.amount / 90)
-            ef.inputs = ef.inputs.map(i => {
-                i.amount = Math.round(i.amount / 90)
-                return i
-            })
-            event.recipes.embers.mixing(ef.output, ef.inputs)
+        if (r.types.includes('embers:mixing') && (r.temperature < 1000)) {
+            let output = Fluid.of(f.output.id, Math.round(f.output.amount / 90))
+            let inputs = []
+            for (let input of f.inputs) {
+                if (input.tag) {
+                    inputs.push({ tag: input.tag, amount: Math.round(input.amount / 45) })
+                } else {
+                    inputs.push(Fluid.of(input.id, Math.round(input.amount / 45)))
+                }
+            }
+            event.recipes.embers.mixing(output, inputs)
                 .id(`${r.idPrefix}/allalloying/embers/mixing/${r.idSuffix}`)
         }
     }
