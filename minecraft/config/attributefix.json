@@ -440,17 +440,6 @@
         "value": 1
       }
     },
-    "ars_nouveau:ars_nouveau.perk.max_mana": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 10000,
-        "value": 10000
-      }
-    },
     "tconstruct:player.experience_multiplier": {
       "enabled": false,
       "min": {
@@ -460,6 +449,17 @@
       "max": {
         "default": 100,
         "value": 100
+      }
+    },
+    "ars_nouveau:ars_nouveau.perk.max_mana": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 10000,
+        "value": 10000
       }
     },
     "botania:pixie_spawn_chance": {
@@ -484,17 +484,6 @@
         "value": 100
       }
     },
-    "eidolon:max_soul_hearts": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2000,
-        "value": 2000
-      }
-    },
     "tconstruct:player.critical_damage": {
       "enabled": false,
       "min": {
@@ -504,6 +493,17 @@
       "max": {
         "default": 100,
         "value": 100
+      }
+    },
+    "eidolon:max_soul_hearts": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2000,
+        "value": 2000
       }
     },
     "minecraft:generic.max_health": {
@@ -583,17 +583,6 @@
         "value": 10000
       }
     },
-    "ars_nouveau:ars_nouveau.perk.warding": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "irons_spellbooks:max_mana": {
       "enabled": false,
       "min": {
@@ -603,6 +592,17 @@
       "max": {
         "default": 1000000,
         "value": 1000000
+      }
+    },
+    "ars_nouveau:ars_nouveau.perk.warding": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1024,
+        "value": 1024
       }
     },
     "minecraft:generic.knockback_resistance": {
@@ -693,17 +693,6 @@
         "value": 100
       }
     },
-    "miniutilities:divine_damage": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 2147483647,
-        "value": 2147483647
-      }
-    },
     "lodestone:magic_proficiency": {
       "enabled": false,
       "min": {
@@ -713,6 +702,17 @@
       "max": {
         "default": 2048,
         "value": 2048
+      }
+    },
+    "miniutilities:divine_damage": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 2147483647,
+        "value": 2147483647
       }
     },
     "attributeslib:cold_damage": {
@@ -759,17 +759,6 @@
         "value": 100
       }
     },
-    "ars_nouveau:ars_nouveau.perk.saturation": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 10000,
-        "value": 10000
-      }
-    },
     "irons_spellbooks:summon_damage": {
       "enabled": false,
       "min": {
@@ -779,6 +768,17 @@
       "max": {
         "default": 100,
         "value": 100
+      }
+    },
+    "ars_nouveau:ars_nouveau.perk.saturation": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 10000,
+        "value": 10000
       }
     },
     "irons_spellbooks:eldritch_spell_power": {
@@ -891,17 +891,6 @@
         "value": 2048
       }
     },
-    "forge:swim_speed": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1024,
-        "value": 1024
-      }
-    },
     "tinkersjewelry:silk": {
       "enabled": false,
       "min": {
@@ -913,15 +902,15 @@
         "value": 10
       }
     },
-    "eidolon:magic_power": {
+    "forge:swim_speed": {
       "enabled": false,
       "min": {
         "default": 0,
         "value": 0
       },
       "max": {
-        "default": 10,
-        "value": 10
+        "default": 1024,
+        "value": 1024
       }
     },
     "irons_spellbooks:fire_magic_resist": {
@@ -944,6 +933,17 @@
       "max": {
         "default": 100,
         "value": 100
+      }
+    },
+    "eidolon:magic_power": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 10,
+        "value": 10
       }
     },
     "tinkersjewelry:subspace": {
@@ -1067,17 +1067,6 @@
         "value": 4
       }
     },
-    "ars_nouveau:ars_nouveau.perk.feather": {
-      "enabled": false,
-      "min": {
-        "default": 0,
-        "value": 0
-      },
-      "max": {
-        "default": 1,
-        "value": 1
-      }
-    },
     "irons_spellbooks:ender_magic_resist": {
       "enabled": false,
       "min": {
@@ -1087,6 +1076,17 @@
       "max": {
         "default": 100,
         "value": 100
+      }
+    },
+    "ars_nouveau:ars_nouveau.perk.feather": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
       }
     },
     "minecraft:generic.armor": {
