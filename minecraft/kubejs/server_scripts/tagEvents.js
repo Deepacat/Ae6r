@@ -39,9 +39,9 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/tainted_gold', ['naturesaura:tainted_gold'])
     e.add('forge:ingots/infused_iron', ['naturesaura:infused_iron'])
     e.add('forge:ingots/sunmetal', ['architects_palette:sunmetal_brick'])
-    e.add('forge:ingots/uraninite', 'powah:uraninite');
-    e.add('forge:ingots/energized_steel', 'powah:steel_energized');
-    e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium']);
+    e.add('forge:ingots/uraninite', 'powah:uraninite')
+    e.add('forge:ingots/energized_steel', 'powah:steel_energized')
+    e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium'])
 
     // blood magic is dumb and only applied this tag in blocks so their recipes dont work LMAO
     e.add('minecraft:mushroom_hyphae', [
@@ -58,9 +58,11 @@ ServerEvents.tags('item', e => {
     e.add('forge:dusts/ender_pearl', 'miniutilities:ender_dust')
     e.add('forge:dusts/ender', '#forge:dusts/ender_pearl')
 
-    // adding gem tag to coal for unification
+    // adding gem tag to coals for unification
     e.add('forge:gems', 'minecraft:coal')
     e.add('forge:gems/coal', 'minecraft:coal')
+    e.add('forge:gems', 'thermal:bitumen')
+    e.add('forge:gems/bitumen', 'thermal:bitumen')
 
     // adding source to mana tag so they unify
     e.add('forge:gems/mana', '#forge:gems/source')
