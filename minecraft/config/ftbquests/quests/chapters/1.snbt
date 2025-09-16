@@ -196,7 +196,7 @@
 		}
 		{
 			dependencies: ["586CC55F42AABB1F"]
-			icon: "projectvibrantjourneys:seashells"
+			icon: "minecraft:heart_of_the_sea"
 			id: "2D9C8FB3247F30D9"
 			tasks: [
 				{
@@ -647,10 +647,125 @@
 			dependencies: ["798F51A163767275"]
 			icon: "alexsmobs:potted_flutter"
 			id: "24AB682AD04896AD"
+			subtitle: "I'm sorry, little one."
 			tasks: [{
-				id: "444E1C352121E007"
-				item: "alexsmobs:potted_flutter"
-				type: "item"
+				icon: {
+					Count: 1
+					id: "alexsmobs:potted_flutter"
+					tag: {
+						FlutterData: {
+							AbsorptionAmount: 0.0f
+							Age: 0
+							ArmorDropChances: [
+								0.085f
+								0.085f
+								0.085f
+								0.085f
+							]
+							ArmorItems: [
+								{ }
+								{ }
+								{ }
+								{ }
+							]
+							Attributes: [
+								{
+									Base: 0.0d
+									Name: "forge:step_height_addition"
+								}
+								{
+									Base: 32.0d
+									Modifiers: [
+										{
+											Amount: -0.05241186467482218d
+											Name: "Random spawn bonus"
+											Operation: 1
+											UUID: [I;
+												-2109833378
+												-1857925755
+												-1995456328
+												1757818401
+											]
+										}
+										{
+											Amount: 0.05181914561899454d
+											Name: "Random spawn bonus"
+											Operation: 1
+											UUID: [I;
+												2006674897
+												561202946
+												-1368954032
+												-943688438
+											]
+										}
+									]
+									Name: "minecraft:generic.follow_range"
+								}
+								{
+									Base: 16.0d
+									Name: "minecraft:generic.armor"
+								}
+								{
+									Base: 1.0d
+									Name: "forge:swim_speed"
+								}
+								{
+									Base: 0.18d
+									Name: "minecraft:generic.movement_speed"
+								}
+								{
+									Base: 0.08d
+									Name: "forge:entity_gravity"
+								}
+							]
+							Brain: {
+								memories: { }
+							}
+							CanPickUpLoot: 0b
+							CitadelData: { }
+							DeathTime: 0s
+							EntityJSData: { }
+							FallFlying: 0b
+							FlowerEaten0: "minecraft:pink_tulip"
+							FlowerEaten1: "natures_spirit:carnation"
+							FlowerEaten2: "natures_spirit:gardenia"
+							FlowerEaten3: "natures_spirit:bluebell"
+							FlowersEaten: 4
+							FlutterCommand: 2
+							FlutterSitting: 1b
+							Flying: 0b
+							ForcedAge: 0
+							HandDropChances: [
+								0.085f
+								0.085f
+							]
+							HandItems: [
+								{ }
+								{ }
+							]
+							Health: 8.0f
+							HurtByTimestamp: 0
+							HurtTime: 0s
+							InLove: 0
+							LeftHanded: 0b
+							Owner: [I;
+								366145972
+								-585744290
+								-1529567074
+								-873548397
+							]
+							PersistenceRequired: 0b
+							Potted: 1b
+							Sitting: 0b
+							"forge:spawn_type": "NATURAL"
+						}
+					}
+				}
+				id: "0BF9AE240DF8BCB5"
+				observe_type: 5
+				timer: 5L
+				to_observe: "alexsmobs:flutter"
+				type: "observation"
 			}]
 			title: "Flutter cultivation"
 			x: 1.0d

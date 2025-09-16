@@ -1,0 +1,174 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "1_2"
+	group: "46AD905989135A5C"
+	hide_quest_until_deps_complete: true
+	icon: "enderio:chemical_conduit"
+	id: "67F367A1E086451D"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Methods for creating an explosion, automating"]
+			id: "74E2A1A82515F3AB"
+			optional: true
+			tasks: [{
+				consume_items: true
+				count: 32L
+				id: "01E3A7034A3B4811"
+				item: "minecraft:tnt"
+				type: "item"
+			}]
+			title: "Explosives"
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			description: ["Finding, automating"]
+			icon: "minecraft:nautilus_shell"
+			id: "2B902DE6578F5B0C"
+			optional: true
+			tasks: [{
+				count: 3L
+				id: "40617065BA29C41B"
+				item: "minecraft:conduit"
+				type: "item"
+			}]
+			title: "Nautilus Shells"
+			x: 1.0d
+			y: -1.5d
+		}
+		{
+			description: ["Methods to create lightning, recommendations"]
+			id: "476DCABBB1146405"
+			optional: true
+			tasks: [{
+				consume_items: true
+				count: 8L
+				id: "447D5938678A944A"
+				item: "thermal:blitz_rod"
+				type: "item"
+			}]
+			title: "Lightning"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["74E2A1A82515F3AB"]
+			id: "7EAAFF1741E8A82F"
+			optional: true
+			tasks: [{
+				id: "097053B81B832A86"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["476DCABBB1146405"]
+			id: "5493CACFB6B76BA2"
+			optional: true
+			tasks: [{
+				id: "42B10A4BE333F78B"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2B902DE6578F5B0C"]
+			id: "53FEDAD63DDBBEE3"
+			optional: true
+			tasks: [{
+				id: "48B819E189990333"
+				type: "checkmark"
+			}]
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			description: ["Finding, bringing elsewhere, mechanics"]
+			icon: "alexsmobs:potted_flutter"
+			id: "269A2148B33B6365"
+			optional: true
+			tasks: [
+				{
+					count: 32L
+					id: "761388BFC8D560E0"
+					item: "minecraft:flowering_azalea"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "4F826D733B499762"
+					item: "minecraft:spore_blossom"
+					type: "item"
+				}
+			]
+			title: "Flutters"
+			x: 2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["269A2148B33B6365"]
+			id: "2D0DFDC2C14F369E"
+			optional: true
+			tasks: [{
+				id: "66DAC303157B60AE"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			description: ["Strategies for finding and mining"]
+			icon: "aether:gravitite_ore"
+			id: "066F13A103393AE6"
+			optional: true
+			tasks: [{
+				count: 2L
+				id: "36711A12524F8D5D"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(kubejs:aspectus_shards)"
+					}
+				}
+				title: "Any #kubejs:aspectus_shards"
+				type: "item"
+			}]
+			title: "Gravitite Ore"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["066F13A103393AE6"]
+			id: "611848D3B354740D"
+			optional: true
+			tasks: [{
+				id: "7F281C30A5289366"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: -0.5d
+		}
+		{
+			description: [
+				"This page includes \"purchaseable\" hints via quests, upon \"purchasing\" (handing in the required items) for a quest, it will unlock another quest that explains more in depth information than a quest or mods book might have originally."
+				""
+				"These are to be used when stuck, or simply thinking there maybe a better method than what you're doing."
+			]
+			id: "5D87074E509AD77F"
+			tasks: [{
+				id: "55AC42755F58227E"
+				type: "checkmark"
+			}]
+			title: "Hints"
+			x: 1.0d
+			y: -3.0d
+		}
+	]
+	title: " 1 - ?"
+}
