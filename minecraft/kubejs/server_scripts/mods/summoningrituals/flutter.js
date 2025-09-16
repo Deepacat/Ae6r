@@ -22,7 +22,7 @@ SummoningRituals.start(e => {
     let biome = e.level.getBiome(e.pos).unwrapKey().get().location()
     if (biome != 'minecraft:lush_caves') {
         if (e.player) {
-            e.player.tell('You must be in the lush caves to perform this ritual.')
+            e.player.setStatusMessage('You must be in the lush caves to perform this ritual.')
         }
         e.cancel()
     }

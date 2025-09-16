@@ -101,10 +101,11 @@ function canUse(event, blockOrItem) {
                 event.server.scheduleInTicks(100, () => { cd[blockOrItem] = 0 })
                 for (const error of errors) {
                     // @ts-ignore
-                    player.tell(error)
+                    // player.tell(error)
+                    player.setStatusMessage(error)
                 }
                 // @ts-ignore
-                player.tell('\n')
+                // player.tell('\n')
             }
         }
         return false
