@@ -13,7 +13,6 @@ StartupEvents.recipeSchemaRegistry(e => {
     comps.components = componentRegistry
     comps.anyFloatNumber = componentRegistry.get('anyFloatNumber')()
     comps.anyString = componentRegistry.get('anyString')()
-    comps.blockTag = componentRegistry.get('blockTag')()
     comps.bool = componentRegistry.get('bool')()
     comps.id = componentRegistry.get('id')()
     comps.intNumber = componentRegistry.get('intNumber')()
@@ -30,6 +29,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     comps.outputFluidOrItem = componentRegistry.get('outputFluidOrItem')()
     
     comps.fluidTag = componentRegistry.get('tag')({ registry: 'fluid' })
+    comps.blockTag = componentRegistry.get('blockTag')()
 
     comps.inputStackedItem = new $RecipeComponent({
         componentClass: () => $KJSInputItem,
@@ -53,6 +53,13 @@ StartupEvents.recipeSchemaRegistry(e => {
             .inputRole()
     )
 
+    comps.outputFluidOrFluidTag = (tagKeyStr) => comps.outputFluid.or(
+        new $RecipeComponentBuilder(2)
+            .add(comps.fluidTag.key(tagKeyStr))
+            .add(comps.intNumber.key('amount'))
+            .outputRole()
+    )
+
     comps.inputFluidOrItem = (tagKeyStr) =>
         comps.inputItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
 
@@ -72,4 +79,5 @@ StartupEvents.recipeSchemaRegistry(e => {
     recipeSchema_pneumaticcraft(e, comps)
     recipeSchema_tconstruct(e, comps)
     recipeSchema_thermal(e, comps)
+    recipeSchema_embers(e, comps)
 })
