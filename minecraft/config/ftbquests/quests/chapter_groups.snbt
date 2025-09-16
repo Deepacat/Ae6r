@@ -1,6 +1,7 @@
 {
 	chapter_groups: [
 		{ id: "34B7FB260B6AEB81", title: "Progression" }
+		{ id: "46AD905989135A5C", title: "Tips and Hints" }
 		{ id: "20A042B1689B41C4", title: "Old prog" }
 		{ id: "74B3CF67FCEAB20F", title: "Equipment" }
 		{ id: "0856CF7F5CBEB20A", title: "Logistics" }
