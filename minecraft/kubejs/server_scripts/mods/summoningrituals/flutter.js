@@ -1,10 +1,10 @@
 ServerEvents.tags('item', e => {
-    e.add('kubejs:fluttersummoning', ['kubejs:terra_aspectus_shard', 'mineraft:conduit'])
+    e.add('kubejs:fluttersummoning', ['kubejs:terra_aspectus_shard', 'minecraft:conduit'])
 })
 
 ServerEvents.recipes(e => {
-    e.recipes.summoningrituals.altar(Ingredient.of('kubejs:fluttersummoning'))
-        .input('2x minecraft:flowering_azalea_leaves')
+    e.recipes.summoningrituals.altar(Ingredient.of('#kubejs:fluttersummoning'))
+        .input('2x minecraft:flowering_azalea')
         .input('2x minecraft:spore_blossom')
         .recipeTime(200)
         .mobOutput(SummoningOutput.mob('alexsmobs:flutter')
