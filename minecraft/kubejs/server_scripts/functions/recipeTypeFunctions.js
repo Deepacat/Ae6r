@@ -300,15 +300,6 @@ function allCrushing(event, recipeObj) {
     }
 }
 
-const allAlloyingTypes = [
-    'create:mixing',
-    'immersiveengineering:alloy',
-    'immersiveengineering:arc_furnace',
-    'thermal:smelter',
-    'tconstruct:alloy',
-    'embers:mixing'
-]
-
 function allAlloying(event, recipeObj) {
     const r = recipeObj
 
@@ -325,7 +316,7 @@ function allAlloying(event, recipeObj) {
             let b = event.recipes.create.mixing(i.output, i.inputs, r.processTime)
             if (r.temperature > 1000) {
                 b.superheated()
-            } else {
+            } else if (r.temperature > 500) {
                 b.heated()
             }
             b.id(`${r.idPrefix}/allalloying/create/mixing/${r.idSuffix}`)
