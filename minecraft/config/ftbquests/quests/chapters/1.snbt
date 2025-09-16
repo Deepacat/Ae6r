@@ -1226,19 +1226,20 @@
 			shape: "circle"
 			tasks: [
 				{
-					icon: "thermal:machine_refinery"
-					id: "2E1731FB4D130320"
-					item: "thermal:machine_refinery"
+					id: "4A5D3B706F7D45FD"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "or(item(thermal:machine_refinery)item(thermal:machine_pyrolyzer)item(thermal:machine_centrifuge))"
+						}
+					}
+					title: "Tar Producing Machine"
 					type: "item"
 				}
 				{
-					id: "614B07A022FDD6B6"
+					id: "58EA1399BA73BBA5"
 					item: "thermal:tar"
-					type: "item"
-				}
-				{
-					id: "767FB16649C72ED7"
-					item: "thermal:machine_pyrolyzer"
 					type: "item"
 				}
 			]
@@ -1247,14 +1248,22 @@
 		}
 		{
 			dependencies: ["7829357FC39DE238"]
+			icon: "emendatus:steel_ingot"
 			id: "74C7C15846895392"
 			shape: "circle"
 			subtitle: "*GT:NH Flashbacks*"
-			tasks: [{
-				id: "1D7E4FAB5E23DC04"
-				item: "emendatus:steel_ingot"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "1D7E4FAB5E23DC04"
+					item: "emendatus:steel_ingot"
+					type: "item"
+				}
+				{
+					id: "3096F10D9A044FDD"
+					item: "thermal:coal_coke"
+					type: "item"
+				}
+			]
 			title: "Steel Blasting"
 			x: -3.0d
 			y: 4.0d
