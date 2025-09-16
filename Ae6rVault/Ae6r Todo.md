@@ -2,9 +2,9 @@ In each category, priority highest to lowest
 
 Gameplay/Progression:
 - [ ] Add alloy recipe builder to unification
-- [ ] Flutter related: 
-	- [ ] Make them more common and or add a summoning method, non automatable preferred
-	- [ ] gate spawning behind going to aether or Undergarden
+- [x] Flutter related: 
+	- [x] Make them more common and or add a summoning method, non automatable preferred
+	- [x] gate spawning behind going to aether or Undergarden (decided against)
 - [ ] Disable all of default complicated bees and implement rework
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
