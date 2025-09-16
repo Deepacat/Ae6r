@@ -9,6 +9,9 @@
 
 		[light_sources.settings.entities]
 
+			[light_sources.settings.entities.tconstruct]
+				sky_slime = true
+
 			[light_sources.settings.entities.minecraft]
 				panda = true
 				axolotl = true
@@ -96,15 +99,6 @@
 				cod = true
 				spider = true
 
-			[light_sources.settings.entities.tconstruct]
-				sky_slime = true
-
-			[light_sources.settings.entities.enigmaticgraves]
-				grave = true
-
-			[light_sources.settings.entities.immersiveengineering]
-				bulwark = true
-
 			[light_sources.settings.entities.alexsmobs]
 				pollen_ball = true
 				murmur_head = true
@@ -176,6 +170,12 @@
 				bison = true
 				sugar_glider = true
 
+			[light_sources.settings.entities.immersiveengineering]
+				bulwark = true
+
+			[light_sources.settings.entities.enigmaticgraves]
+				grave = true
+
 			[light_sources.settings.entities.eidolon]
 				giant_skeleton = true
 				wraith = true
@@ -226,6 +226,10 @@
 
 			[light_sources.settings.entities.create_mobile_packages]
 				robo_bee = true
+
+			[light_sources.settings.entities.sushigocrafting]
+				tuna = true
+				shrimp = true
 
 			[light_sources.settings.entities.atmospheric]
 				tetra = true
@@ -315,8 +319,8 @@
 				jellyfish = true
 				bluegill = true
 				muskellunge = true
-				catfish = true
 				brown_shrooma = true
+				catfish = true
 				tambaqui = true
 				rainbow_trout = true
 				boulti = true
@@ -343,10 +347,10 @@
 				rotwalker = true
 				mog = true
 				gloomper = true
-				smog_mog = true
-				rotbeast = true
-				sploogie = true
 				rotling = true
+				sploogie = true
+				rotbeast = true
+				smog_mog = true
 				brute = true
 				nargoyle = true
 				muncher = true
