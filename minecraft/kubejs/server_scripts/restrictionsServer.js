@@ -40,10 +40,11 @@ function textFormat(str) {
 
 /**
  * @param {Internal.ItemClickedEventJS | Internal.BlockRightClickedEventJS | Internal.BlockPlacedEventJS} event
- * @param {string | number} blockOrItem
+ * @param {string} blockOrItem
  */
 function canUse(event, blockOrItem) {
     const { player } = event
+    if (!player.level) { return true }
     const level = player.level
 
     let cd
@@ -57,7 +58,9 @@ function canUse(event, blockOrItem) {
 
     let restrictionKey
     for (let [key, obj] of Object.entries(restrictions)) {
+        // @ts-ignore
         if (obj.regex) {
+            // @ts-ignore
             if (obj.regex.test(blockOrItem.toString())) {
                 restrictionKey = key
                 break
