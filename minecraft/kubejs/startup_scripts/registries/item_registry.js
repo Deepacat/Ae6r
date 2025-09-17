@@ -4,7 +4,6 @@ StartupEvents.registry('item', event => {
         'replaceme', // removed items from 1.16 e6e that need to be remade
 
         'leather_stripe', // betterendforge
-        'silk_fiber',
 
         'blaze_fiber', // ars nouveau
         'end_fiber',
@@ -47,6 +46,7 @@ StartupEvents.registry('item', event => {
         'disabled_recipe_indicator',
 
         // misc ingredients
+        'lush_silk',
         'observatory_lens',
         'coarse_lapis_lazuli_compound',
         'smoldering_lapis_lazuli_compound',
