@@ -55,14 +55,14 @@ ServerEvents.tags('item', e => {
 
     // ender pearl tag mixing for unif
     e.add('forge:dusts/ender_pearl', '#forge:dusts/ender')
-    e.add('forge:dusts/ender_pearl', 'miniutilities:ender_dust')
     e.add('forge:dusts/ender', '#forge:dusts/ender_pearl')
 
     // adding gem tag to coals for unification
-    e.add('forge:gems', 'minecraft:coal')
-    e.add('forge:gems/coal', 'minecraft:coal')
-    e.add('forge:gems', 'thermal:bitumen')
-    e.add('forge:gems/bitumen', 'thermal:bitumen')
+    let coals = ['minecraft:coal', 'thermal:coal_coke', 'thermal:bitumen', 'immersiveengineering:coal_coke']
+    for (let coal of coals) {
+        e.add('forge:gems', coal)
+        e.add(`forge:gems/${coal.split(':')[1]}`, coal)
+    }
 
     // adding source to mana tag so they unify
     e.add('forge:gems/mana', '#forge:gems/source')
