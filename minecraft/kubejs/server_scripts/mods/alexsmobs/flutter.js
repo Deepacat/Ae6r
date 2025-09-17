@@ -1,14 +1,15 @@
 // flutter right click interacting for shearing lush silk
 ItemEvents.entityInteracted(e => {
     if (!e.target.type == 'alexsmobs:flutter') { return }
+
+    // potentially a specific item later
+    if (!e.item.hasTag('forge:shears')) { return }
+
     if (e.target.nbt.Owner) {
         // This is due to alex mobs wiping shearing data when picked up in a pot
         e.player.tell(`Cannot shear a tamed flutter.`)
         return
     }
-
-    // potentially a specific item later
-    if (!e.item.hasTag('forge:shears')) { return }
 
     let cooldownTicks = 20 * 60 * 5 // 5 minute cooldown in ticks
     let age = (e.target.nbt.ForgeData['time_sheared'] + cooldownTicks) - e.target.age
