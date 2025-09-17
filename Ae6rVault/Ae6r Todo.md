@@ -1,11 +1,12 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-- [ ] Add alloy recipe builder to unification
+- [x] Add alloy recipe builder to unification
 - [x] Flutter related: 
 	- [x] Make them more common and or add a summoning method, non automatable preferred
 	- [x] gate spawning behind going to aether or Undergarden (decided against)
-- [ ] Disable all of default complicated bees and implement rework
+	- [ ] Make them drop lush silks and make recipes for brilliant fiber
+- [ ] Ponder resource gen mod reworking (splendid slimes/complicated bees)
 - [ ] Port natures aura recipes
 - [ ] Ore processing builders
 	- [ ] add more materials to emendatus along with potentially a new category for just ore processing additions (ore just add every oreproc item manually ig, probably aren't enough similarities for a general category)
