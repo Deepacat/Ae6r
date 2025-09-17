@@ -314,9 +314,9 @@ function allAlloying(event, recipeObj) {
 
         if (r.types.includes('create:mixing')) {
             let b = event.recipes.create.mixing(i.output, i.inputs, r.processTime)
-            if (r.temperature > 1000) {
+            if (r.temperature >= 1000) {
                 b.superheated()
-            } else if (r.temperature > 500) {
+            } else if (r.temperature >= 500) {
                 b.heated()
             }
             b.id(`${r.idPrefix}/allalloying/create/mixing/${r.idSuffix}`)

@@ -139,11 +139,11 @@ ServerEvents.recipes(event => {
     allAlloying(event, {
         types: allButTinkers,
         item: {
-            inputs: [Ingredient.of('#forge:ingots/copper', 3), Ingredient.of('#forge:ingots/zinc')],
+            inputs: [Ingredient.of('#forge:ingots/copper', 3), Ingredient.of('#forge:ingots/tin')],
             output: Item.of('4x thermal:bronze_ingot')
         },
         fluid: {
-            inputs: [Fluid.of('tconstruct:molten_copper', 270), Fluid.of('tconstruct:molten_zinc', 90)],
+            inputs: [Fluid.of('tconstruct:molten_copper', 270), Fluid.of('tconstruct:molten_tin', 90)],
             output: Fluid.of('tconstruct:molten_bronze', 360)
         },
         processTime: 300,
