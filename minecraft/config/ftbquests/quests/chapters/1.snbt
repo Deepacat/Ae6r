@@ -12,7 +12,7 @@
 			dependencies: ["18909429C6F9FE62"]
 			icon: "create:wrench"
 			id: "61A49DF185789C50"
-			subtitle: "Without the consequences..."
+			subtitle: "Without the consequences... I hope"
 			tasks: [{
 				id: "05EECBFBB6A1F278"
 				type: "checkmark"
@@ -298,7 +298,7 @@
 			]
 			icon: "create:mechanical_crafter"
 			id: "7026C6F5506F40E7"
-			subtitle: "Is that a blood altar."
+			subtitle: "Is that a blood altar...?"
 			tasks: [
 				{
 					id: "576ABC612354602A"
@@ -517,39 +517,43 @@
 		}
 		{
 			dependencies: ["798F51A163767275"]
+			icon: "botania:apothecary_default"
 			id: "693353D7EA1E0938"
-			tasks: [{
-				id: "3068C28B707CC222"
-				item: "botania:apothecary_default"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "3068C28B707CC222"
+					item: "botania:apothecary_default"
+					type: "item"
+				}
+				{
+					id: "4C3FA16CC69C609E"
+					item: "botania:pure_daisy"
+					type: "item"
+				}
+			]
 			title: "Flower Power"
 			x: 1.0d
 			y: 3.5d
 		}
 		{
-			dependencies: ["693353D7EA1E0938"]
-			id: "65560411CF01CBA6"
-			tasks: [{
-				id: "307280EA1AE742BF"
-				item: "botania:pure_daisy"
-				type: "item"
-			}]
-			title: "A Bloom of True Purity"
-			x: 0.0d
-			y: 4.0d
-		}
-		{
 			dependencies: [
 				"3FD11C5B0F50D8E0"
-				"2FE2EAE5D06AEA6E"
+				"4EE5D9E70931437E"
 			]
+			icon: "bloodmagic:weakbloodorb"
 			id: "5A7DB8F4CDB5FE07"
-			tasks: [{
-				id: "161CC169E71881E1"
-				item: "bloodmagic:weakbloodorb"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "161CC169E71881E1"
+					item: "bloodmagic:weakbloodorb"
+					type: "item"
+				}
+				{
+					id: "4756888191A21730"
+					item: "eidolon:unholy_symbol"
+					type: "item"
+				}
+			]
 			title: "Storing Life Itself"
 			x: 4.0d
 			y: 4.0d
@@ -562,58 +566,80 @@
 				item: "bloodmagic:alchemytable"
 				type: "item"
 			}]
-			x: 4.5d
+			x: 4.0d
 			y: 5.0d
 		}
 		{
 			dependencies: [
 				"636DAED3D9B024F4"
-				"19244793FD02F7FB"
+				"2DCD916C4DBCF668"
 			]
 			id: "155C0DE1EBE6F5D0"
 			shape: "pentagon"
+			subtitle: "Power of knowledge"
 			tasks: [{
 				id: "4E7284DAA2B05168"
 				item: "wizards_reborn:arcane_workbench"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 6.5d
+			title: "Wizards Reborn"
+			x: 2.0d
+			y: 6.0d
 		}
 		{
-			dependencies: ["2FE2EAE5D06AEA6E"]
+			dependencies: [
+				"2FE2EAE5D06AEA6E"
+				"69FF9D61737CF418"
+			]
+			icon: {
+				Count: 1
+				id: "wizards_reborn:wissen_wand"
+				tag: { }
+			}
 			id: "636DAED3D9B024F4"
-			tasks: [{
-				id: "0007A0FBE53E9309"
-				item: {
-					Count: 1
-					id: "wizards_reborn:wissen_wand"
-					tag: { }
+			tasks: [
+				{
+					id: "0007A0FBE53E9309"
+					item: {
+						Count: 1
+						id: "wizards_reborn:wissen_wand"
+						tag: { }
+					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "182FFB405BCA9F09"
+					item: "irons_spellbooks:arcane_debris"
+					type: "item"
+				}
+			]
 			x: 3.0d
-			y: 6.0d
+			y: 5.5d
 		}
 		{
 			dependencies: [
-				"65560411CF01CBA6"
 				"449EE23DBF791445"
+				"6692965E713DD316"
 			]
+			icon: "naturesaura:wood_stand"
 			id: "19244793FD02F7FB"
-			tasks: [{
-				id: "65719D81ADF9532C"
-				item: "naturesaura:wood_stand"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "65719D81ADF9532C"
+					item: "naturesaura:wood_stand"
+					type: "item"
+				}
+				{
+					id: "36354AF0C990936B"
+					item: "naturesaura:ancient_log"
+					type: "item"
+				}
+			]
 			x: 0.0d
-			y: 6.0d
+			y: 5.0d
 		}
 		{
-			dependencies: [
-				"24AB682AD04896AD"
-				"2F9123AC966382F6"
-			]
+			dependencies: ["24AB682AD04896AD"]
 			icon: "naturesaura:gold_leaf"
 			id: "449EE23DBF791445"
 			tasks: [
@@ -628,18 +654,32 @@
 					type: "item"
 				}
 			]
+			title: "Brilliance Of Nature"
 			x: 1.0d
-			y: 5.5d
+			y: 4.5d
 		}
 		{
-			dependencies: ["65560411CF01CBA6"]
+			dependencies: ["6692965E713DD316"]
+			icon: "botania:corporea_index"
 			id: "3D336D59808FC606"
 			shape: "hexagon"
-			tasks: [{
-				id: "71CEC0A58C9BB285"
-				item: "botania:corporea_index"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "71CEC0A58C9BB285"
+					item: "botania:corporea_index"
+					type: "item"
+				}
+				{
+					id: "18AEBA35C2932BCB"
+					item: "botania:corporea_spark"
+					type: "item"
+				}
+				{
+					id: "2EFBB10BEDC795ED"
+					item: "botania:corporea_spark_master"
+					type: "item"
+				}
+			]
 			x: 0.0d
 			y: 3.0d
 		}
@@ -647,128 +687,136 @@
 			dependencies: ["798F51A163767275"]
 			icon: "alexsmobs:potted_flutter"
 			id: "24AB682AD04896AD"
+			shape: "circle"
 			subtitle: "I'm sorry, little one."
-			tasks: [{
-				icon: {
-					Count: 1
-					id: "alexsmobs:potted_flutter"
-					tag: {
-						FlutterData: {
-							AbsorptionAmount: 0.0f
-							Age: 0
-							ArmorDropChances: [
-								0.085f
-								0.085f
-								0.085f
-								0.085f
-							]
-							ArmorItems: [
-								{ }
-								{ }
-								{ }
-								{ }
-							]
-							Attributes: [
-								{
-									Base: 0.0d
-									Name: "forge:step_height_addition"
+			tasks: [
+				{
+					icon: {
+						Count: 1
+						id: "alexsmobs:potted_flutter"
+						tag: {
+							FlutterData: {
+								AbsorptionAmount: 0.0f
+								Age: 0
+								ArmorDropChances: [
+									0.085f
+									0.085f
+									0.085f
+									0.085f
+								]
+								ArmorItems: [
+									{ }
+									{ }
+									{ }
+									{ }
+								]
+								Attributes: [
+									{
+										Base: 0.0d
+										Name: "forge:step_height_addition"
+									}
+									{
+										Base: 32.0d
+										Modifiers: [
+											{
+												Amount: -0.05241186467482218d
+												Name: "Random spawn bonus"
+												Operation: 1
+												UUID: [I;
+													-2109833378
+													-1857925755
+													-1995456328
+													1757818401
+												]
+											}
+											{
+												Amount: 0.05181914561899454d
+												Name: "Random spawn bonus"
+												Operation: 1
+												UUID: [I;
+													2006674897
+													561202946
+													-1368954032
+													-943688438
+												]
+											}
+										]
+										Name: "minecraft:generic.follow_range"
+									}
+									{
+										Base: 16.0d
+										Name: "minecraft:generic.armor"
+									}
+									{
+										Base: 1.0d
+										Name: "forge:swim_speed"
+									}
+									{
+										Base: 0.18d
+										Name: "minecraft:generic.movement_speed"
+									}
+									{
+										Base: 0.08d
+										Name: "forge:entity_gravity"
+									}
+								]
+								Brain: {
+									memories: { }
 								}
-								{
-									Base: 32.0d
-									Modifiers: [
-										{
-											Amount: -0.05241186467482218d
-											Name: "Random spawn bonus"
-											Operation: 1
-											UUID: [I;
-												-2109833378
-												-1857925755
-												-1995456328
-												1757818401
-											]
-										}
-										{
-											Amount: 0.05181914561899454d
-											Name: "Random spawn bonus"
-											Operation: 1
-											UUID: [I;
-												2006674897
-												561202946
-												-1368954032
-												-943688438
-											]
-										}
-									]
-									Name: "minecraft:generic.follow_range"
-								}
-								{
-									Base: 16.0d
-									Name: "minecraft:generic.armor"
-								}
-								{
-									Base: 1.0d
-									Name: "forge:swim_speed"
-								}
-								{
-									Base: 0.18d
-									Name: "minecraft:generic.movement_speed"
-								}
-								{
-									Base: 0.08d
-									Name: "forge:entity_gravity"
-								}
-							]
-							Brain: {
-								memories: { }
+								CanPickUpLoot: 0b
+								CitadelData: { }
+								DeathTime: 0s
+								EntityJSData: { }
+								FallFlying: 0b
+								FlowerEaten0: "minecraft:pink_tulip"
+								FlowerEaten1: "natures_spirit:carnation"
+								FlowerEaten2: "natures_spirit:gardenia"
+								FlowerEaten3: "natures_spirit:bluebell"
+								FlowersEaten: 4
+								FlutterCommand: 2
+								FlutterSitting: 1b
+								Flying: 0b
+								ForcedAge: 0
+								HandDropChances: [
+									0.085f
+									0.085f
+								]
+								HandItems: [
+									{ }
+									{ }
+								]
+								Health: 8.0f
+								HurtByTimestamp: 0
+								HurtTime: 0s
+								InLove: 0
+								LeftHanded: 0b
+								Owner: [I;
+									366145972
+									-585744290
+									-1529567074
+									-873548397
+								]
+								PersistenceRequired: 0b
+								Potted: 1b
+								Sitting: 0b
+								"forge:spawn_type": "NATURAL"
 							}
-							CanPickUpLoot: 0b
-							CitadelData: { }
-							DeathTime: 0s
-							EntityJSData: { }
-							FallFlying: 0b
-							FlowerEaten0: "minecraft:pink_tulip"
-							FlowerEaten1: "natures_spirit:carnation"
-							FlowerEaten2: "natures_spirit:gardenia"
-							FlowerEaten3: "natures_spirit:bluebell"
-							FlowersEaten: 4
-							FlutterCommand: 2
-							FlutterSitting: 1b
-							Flying: 0b
-							ForcedAge: 0
-							HandDropChances: [
-								0.085f
-								0.085f
-							]
-							HandItems: [
-								{ }
-								{ }
-							]
-							Health: 8.0f
-							HurtByTimestamp: 0
-							HurtTime: 0s
-							InLove: 0
-							LeftHanded: 0b
-							Owner: [I;
-								366145972
-								-585744290
-								-1529567074
-								-873548397
-							]
-							PersistenceRequired: 0b
-							Potted: 1b
-							Sitting: 0b
-							"forge:spawn_type": "NATURAL"
 						}
 					}
+					id: "0BF9AE240DF8BCB5"
+					observe_type: 5
+					timer: 5L
+					to_observe: "alexsmobs:flutter"
+					type: "observation"
 				}
-				id: "0BF9AE240DF8BCB5"
-				observe_type: 5
-				timer: 5L
-				to_observe: "alexsmobs:flutter"
-				type: "observation"
-			}]
+				{
+					id: "7E39D7A933B64FCA"
+					item: "kubejs:lush_silk"
+					type: "item"
+				}
+			]
 			title: "Flutter cultivation"
-			x: 1.0d
+			x: 2.0d
 			y: 4.5d
 		}
 		{
@@ -797,20 +845,23 @@
 					type: "item"
 				}
 			]
+			title: "Aspectus Shards"
 			x: 3.0d
-			y: 5.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["69FF9D61737CF418"]
 			id: "68EB68D7A1CC783F"
 			shape: "pentagon"
+			subtitle: "Is this slavery?"
 			tasks: [{
 				id: "662DCA04AE47F996"
 				item: "occultism:chalk_white_impure"
 				type: "item"
 			}]
-			x: 4.5d
-			y: 6.5d
+			title: "Occultism"
+			x: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["4EAA5F5409E4DD3E"]
@@ -1016,18 +1067,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["798F51A163767275"]
-			icon: "quark:bottled_cloud"
-			id: "2F9123AC966382F6"
-			tasks: [{
-				id: "2CC6FB2D26DBF4BA"
-				type: "checkmark"
-			}]
-			title: "sheepuff drop some cloud fur idk"
-			x: 2.0d
-			y: 5.0d
-		}
-		{
 			dependencies: ["7026C6F5506F40E7"]
 			icon: "kubejs:coke_brick_blend"
 			id: "671903A25CFC2BC0"
@@ -1125,6 +1164,7 @@
 			dependencies: ["48D210C52F254D74"]
 			icon: "thermal:machine_bottler"
 			id: "7C116C2EEE83B018"
+			subtitle: "Are grey boxes fun yet"
 			tasks: [
 				{
 					id: "230A3AF5D61E1AEE"
@@ -1179,25 +1219,33 @@
 			dependencies: ["7C116C2EEE83B018"]
 			id: "32641439DB4C18EC"
 			subtitle: "Rubber? I barely"
-			tasks: [
-				{
-					id: "6B99E280BE8DC50E"
-					item: "industrialforegoing:dryrubber"
-					type: "item"
-				}
-				{
-					id: "388B963D5BC1B6D3"
-					item: "thermal:cured_rubber"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "6B99E280BE8DC50E"
+				item: "industrialforegoing:dryrubber"
+				type: "item"
+			}]
 			title: "Industrial Grade Rubbers"
 			x: -4.0d
 			y: 2.0d
 		}
 		{
 			dependencies: ["32641439DB4C18EC"]
+			icon: {
+				Count: 1
+				id: "thermal:fluid_cell"
+				tag: {
+					BlockEntityTag: {
+						TankInv: [{
+							Amount: 0
+							Capacity: 32000
+							FluidName: "minecraft:empty"
+							Tank: 0b
+						}]
+					}
+				}
+			}
 			id: "6F2EF58A8DC63D5F"
+			subtitle: "Fluid storage lore goes crazy"
 			tasks: [{
 				id: "3500F004E8863AF9"
 				item: {
@@ -1224,6 +1272,7 @@
 			icon: "thermal:tar"
 			id: "2EF4805DA973D0CA"
 			shape: "circle"
+			subtitle: "Grey boxes AND microcrafting!?"
 			tasks: [
 				{
 					id: "4A5D3B706F7D45FD"
@@ -1243,6 +1292,7 @@
 					type: "item"
 				}
 			]
+			title: "Tar production"
 			x: -4.0d
 			y: 4.0d
 		}
@@ -1264,7 +1314,7 @@
 					type: "item"
 				}
 			]
-			title: "Steel Blasting"
+			title: "Steel age"
 			x: -3.0d
 			y: 4.0d
 		}
@@ -1275,26 +1325,29 @@
 			]
 			id: "167BE86E3DE69218"
 			shape: "circle"
+			subtitle: "It burns!!!"
 			tasks: [{
 				id: "4F3AC136FB6CFD83"
 				item: "kubejs:superheated_steel_ingot"
 				type: "item"
 			}]
-			title: "It burns!!!"
+			title: "Superheating"
 			x: -3.5d
 			y: 5.0d
 		}
 		{
-			dependencies: ["6F2EF58A8DC63D5F"]
+			dependencies: ["6C199C851704C4F1"]
 			id: "7989B6AD3A82642C"
 			shape: "pentagon"
+			subtitle: "How immersive could it possibly be"
 			tasks: [{
 				id: "1A1656F83847F5F7"
 				item: "immersiveengineering:circuit_table"
 				type: "item"
 			}]
+			title: "Immersive Engineering"
 			x: -5.0d
-			y: 4.0d
+			y: 6.0d
 		}
 		{
 			dependencies: ["167BE86E3DE69218"]
@@ -1313,14 +1366,15 @@
 			dependencies: ["167BE86E3DE69218"]
 			id: "46483EEAF200D273"
 			shape: "pentagon"
-			subtitle: "Why do the mages get more..."
+			subtitle: "Feel the pressure?"
 			tasks: [{
 				id: "0202AD0BABDC9051"
 				item: "pneumaticcraft:ingot_iron_compressed"
 				type: "item"
 			}]
+			title: "PneumaticCraft"
 			x: -3.5d
-			y: 6.5d
+			y: 6.0d
 		}
 		{
 			dependencies: ["19244793FD02F7FB"]
@@ -1331,8 +1385,9 @@
 				item: "naturesaura:nature_altar"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 6.5d
+			title: "Natures Aura"
+			x: 0.0d
+			y: 6.0d
 		}
 		{
 			dependencies: [
@@ -1342,7 +1397,7 @@
 			dependency_requirement: "one_completed"
 			icon: "embers:archaic_bricks"
 			id: "45CFB6E5BAA062B8"
-			subtitle: "True Heat"
+			subtitle: "Hell in a box"
 			tasks: [
 				{
 					id: "0BE9D0691AD24828"
@@ -1406,6 +1461,82 @@
 			title: "Little Logistics"
 			x: -4.5d
 			y: -1.5d
+		}
+		{
+			dependencies: ["6F2EF58A8DC63D5F"]
+			icon: "immersiveengineering:creosote_bucket"
+			id: "6C199C851704C4F1"
+			subtitle: "Go on. Drink it."
+			tasks: [
+				{
+					id: "5BB5BD92E48B084D"
+					item: "immersiveengineering:creosote_bucket"
+					type: "item"
+				}
+				{
+					id: "7CA6121E331DFF83"
+					item: "immersiveengineering:treated_wood_horizontal"
+					type: "item"
+				}
+			]
+			title: "Oil up"
+			x: -5.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["693353D7EA1E0938"]
+			icon: "botania:mana_pool"
+			id: "6692965E713DD316"
+			tasks: [
+				{
+					id: "2D49387CE48904E3"
+					item: "botania:livingrock"
+					type: "item"
+				}
+				{
+					id: "38552370510D8643"
+					item: "botania:livingwood_log"
+					type: "item"
+				}
+				{
+					id: "09AABFAFA19A2E36"
+					item: "botania:mana_pool"
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["19244793FD02F7FB"]
+			id: "2DCD916C4DBCF668"
+			tasks: [
+				{
+					id: "785E75AB8E22F2EA"
+					title: "ancient wood rod, treated with a fluid maybe creosote,\\n wrapped in leather stripes,\\n BAPTIZED in source fluid"
+					type: "checkmark"
+				}
+				{
+					id: "51DBA8BC6090CE19"
+					item: "naturesaura:ancient_stick"
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["112AC64D8100972C"]
+			id: "4EE5D9E70931437E"
+			subtitle: "You bear the mark... You are cursed!"
+			tasks: [{
+				id: "5D98AF13B0F808D5"
+				item: "eidolon:straw_effigy"
+				type: "item"
+			}]
+			title: "Dark Lord's Favor"
+			x: 4.0d
+			y: 2.0d
 		}
 	]
 	title: " 1 - Discovery"
