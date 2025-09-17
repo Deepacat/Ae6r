@@ -12,13 +12,9 @@ ServerEvents.recipes(e => {
 
     e.remove({ id: 'botania:mana_infusion/mana_string' })
     e.recipes.botania.mana_infusion('6x botania:mana_string',
-        'kubejs:replaceme', 5000, 'architects_palette:sunstone'
+        'kubejs:lush_silk', 5000, 'architects_palette:sunstone'
     ).id('kubejs:mana_infusion/mana_string')
 
-    e.recipes.botania.mana_infusion('architects_palette:moonstone',
-        'kubejs:replaceme', 5000, 'architects_palette:sunstone'
-    ).id('kubejs:mana_infusion/moonstone')
-    
     e.remove({ id: 'botania:mana_infusion/mana_diamond' })
     e.recipes.botania.mana_infusion('botania:mana_diamond',
         'rftoolsbase:infused_diamond', 50000, 'architects_palette:sunstone'

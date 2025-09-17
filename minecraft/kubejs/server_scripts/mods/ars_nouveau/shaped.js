@@ -57,12 +57,12 @@ ServerEvents.recipes(e => {
     }).id('kubejs:ars_nouveau/shaped/source_jar')
 
     e.remove({ id: 'ars_nouveau:magebloom_fiber' })
-    e.shaped('ars_nouveau:magebloom_fiber', [
+    e.shaped('4x ars_nouveau:magebloom_fiber', [
         'AAA',
         'ABA',
         'AAA'
     ], {
-        A: 'betterendforge:silk_fiber',
+        A: 'kubejs:lush_silk',
         B: 'ars_nouveau:magebloom'
     }).id('kubejs:ars_nouveau/shaped/magebloom_fiber')
 

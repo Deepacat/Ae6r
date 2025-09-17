@@ -15,7 +15,7 @@ ServerEvents.recipes(e => {
     ).id('botania:runic_altar/earth')
 
     e.recipes.botania.runic_altar('2x botania:rune_air',
-        ['#forge:dusts/mana', '#forge:ingots/manasteel', 'thermal:blitz_powder', 'kubejs:replaceme', 'quark:bottled_cloud', 'alexsmobs:guster_eye'],
+        ['#forge:dusts/mana', '#forge:ingots/manasteel', 'thermal:blitz_powder', 'kubejs:lush_silk', 'quark:bottled_cloud', 'alexsmobs:guster_eye'],
         16000
     ).id('botania:runic_altar/air')
 

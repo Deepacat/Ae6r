@@ -674,4 +674,11 @@ ServerEvents.recipes(e => {
         'botania:gaia_pylon',
         'bloodmagic:demonpylon', 2000
     ).id('kubejs:ars_nouveau/enchanting_apparatus/demonpylon')
+
+    e.remove({ id: 'naturesaura:gold_fiber' })
+    e.recipes.ars_nouveau.enchanting_apparatus(
+        ['architects_palette:sunmetal_blend', 'architects_palette:sunmetal_blend', 'architects_palette:sunmetal_blend', 'architects_palette:sunmetal_blend'],
+        'kubejs:lush_silk',
+        '4x naturesaura:gold_fiber', 100
+    ).id('kubejs:ars_nouveau/enchanting_apparatus/brilliant_fiber')
 })

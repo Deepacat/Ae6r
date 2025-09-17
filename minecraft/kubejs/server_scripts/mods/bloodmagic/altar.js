@@ -5,7 +5,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(7000)
         .consumptionRate(5)
         .drainRate(1)
-        .id('kubejs:altar/weakbloodorb')
+        .id('kubejs:bloogmagic/altar/weakbloodorb')
 
     e.remove({ id: "bloodmagic:altar/apprenticebloodorb" })
     e.recipes.bloodmagic.altar('bloodmagic:apprenticebloodorb', 'meetyourfight:caged_heart')
@@ -13,7 +13,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(7000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:altar/apprenticebloodorb')
+        .id('kubejs:bloogmagic/altar/apprenticebloodorb')
 
     e.remove({ id: "bloodmagic:altar/magicianbloodorb" })
     e.recipes.bloodmagic.altar('bloodmagic:magicianbloodorb', 'botania:mana_tablet')
@@ -21,7 +21,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(50000)
         .consumptionRate(20)
         .drainRate(20)
-        .id('kubejs:altar/magicianbloodorb')
+        .id('kubejs:bloogmagic/altar/magicianbloodorb')
 
     e.remove({ id: "bloodmagic:altar/slate" })
     e.recipes.bloodmagic.altar('bloodmagic:blankslate', 'occultism:otherstone_tablet')
@@ -29,7 +29,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(1000)
         .consumptionRate(50)
         .drainRate(5)
-        .id('kubejs:altar/slate')
+        .id('kubejs:bloogmagic/altar/slate')
 
     e.remove({ id: "bloodmagic:altar/reinforcedslate" })
     e.recipes.bloodmagic.altar('bloodmagic:reinforcedslate', 'bloodmagic:blankslate')
@@ -37,7 +37,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(2000)
         .consumptionRate(100)
         .drainRate(5)
-        .id('kubejs:altar/reinforcedslate')
+        .id('kubejs:bloogmagic/altar/reinforcedslate')
 
     e.remove({ id: "bloodmagic:altar/imbuedslate" })
     e.recipes.bloodmagic.altar('bloodmagic:infusedslate', 'bloodmagic:reinforcedslate')
@@ -45,7 +45,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(5000)
         .consumptionRate(250)
         .drainRate(10)
-        .id('kubejs:altar/imbuedslate')
+        .id('kubejs:bloogmagic/altar/imbuedslate')
 
     e.remove({ id: "bloodmagic:altar/demonicslate" })
     e.recipes.bloodmagic.altar('bloodmagic:demonslate', 'bloodmagic:infusedslate')
@@ -53,14 +53,14 @@ ServerEvents.recipes(e => {
         .altarSyphon(15000)
         .consumptionRate(750)
         .drainRate(20)
-        .id('kubejs:altar/demonicslate')
+        .id('kubejs:bloogmagic/altar/demonicslate')
 
     e.recipes.bloodmagic.altar('bloodmagic:etherealslate', 'bloodmagic:demonslate')
         .upgradeLevel(4)
         .altarSyphon(200000)
         .consumptionRate(1000)
         .drainRate(1000)
-        .id('kubejs:bloodaltar/etherealslate')
+        .id('kubejs:bloogmagic/altar/etherealslate')
 
     e.remove({ id: "occultism:spirit_fire/chalk_white" })
     e.recipes.bloodmagic.altar('occultism:chalk_white', 'occultism:chalk_white_impure')
@@ -68,7 +68,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(7000)
         .consumptionRate(5)
         .drainRate(1)
-        .id('kubejs:spirit_fire/chalk_white')
+        .id('kubejs:bloogmagic/altar/chalk_white')
 
     e.remove({ id: "occultism:spirit_fire/chalk_gold" })
     e.recipes.bloodmagic.altar('occultism:chalk_gold', 'occultism:chalk_gold_impure')
@@ -76,7 +76,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(7000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:spirit_fire/chalk_gold')
+        .id('kubejs:bloogmagic/altar/chalk_gold')
 
     e.remove({ id: "occultism:spirit_fire/chalk_purple" })
     e.recipes.bloodmagic.altar('occultism:chalk_purple', 'occultism:chalk_purple_impure')
@@ -84,7 +84,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(25000)
         .consumptionRate(20)
         .drainRate(20)
-        .id('kubejs:spirit_fire/chalk_purple')
+        .id('kubejs:bloogmagic/altar/chalk_purple')
 
     e.remove({ id: "occultism:spirit_fire/chalk_red" })
     e.recipes.bloodmagic.altar('occultism:chalk_red', 'occultism:chalk_red_impure')
@@ -92,7 +92,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(40000)
         .consumptionRate(30)
         .drainRate(50)
-        .id('kubejs:spirit_fire/chalk_red')
+        .id('kubejs:bloogmagic/altar/chalk_red')
 
     e.remove({ id: "bloodmagic:altar/soul_snare" })
     e.recipes.bloodmagic.altar('bloodmagic:soulsnare', 'ars_nouveau:magebloom_fiber')
@@ -100,14 +100,14 @@ ServerEvents.recipes(e => {
         .altarSyphon(500)
         .consumptionRate(5)
         .drainRate(1)
-        .id('kubejs:altar/soul_snare')
+        .id('kubejs:bloogmagic/altar/soul_snare')
 
     e.recipes.bloodmagic.altar('architects_palette:moonstone', 'kubejs:firmament')
         .upgradeLevel(0)
         .altarSyphon(5000)
         .consumptionRate(250)
         .drainRate(1)
-        .id('kubejs:bloodaltar/moonstone')
+        .id('kubejs:bloogmagic/altar/moonstone')
 
     e.remove({ id: "bloodmagic:sacrificial_dagger" })
     e.recipes.bloodmagic.altar('bloodmagic:sacrificialdagger', Item.of('eidolon:sapping_sword', '{Damage:0}').weakNBT())
@@ -123,7 +123,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(80000)
         .consumptionRate(30)
         .drainRate(50)
-        .id('kubejs:altar/masterbloodorb')
+        .id('kubejs:bloogmagic/altar/masterbloodorb')
 
     e.remove({ id: "bloodmagic:altar/air_tool" })
     e.recipes.bloodmagic.altar('bloodmagic:airscribetool', '#botania:runes/air')
@@ -131,7 +131,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(1000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:altar/air_tool')
+        .id('kubejs:bloogmagic/altar/air_tool')
 
     e.remove({ id: "bloodmagic:altar/fire_tool" })
     e.recipes.bloodmagic.altar('bloodmagic:firescribetool', '#botania:runes/fire')
@@ -139,7 +139,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(1000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:altar/fire_tool')
+        .id('kubejs:bloogmagic/altar/fire_tool')
 
     e.remove({ id: "bloodmagic:altar/water_tool" })
     e.recipes.bloodmagic.altar('bloodmagic:waterscribetool', '#botania:runes/water')
@@ -147,7 +147,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(1000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:altar/water_tool')
+        .id('kubejs:bloogmagic/altar/water_tool')
 
     e.remove({ id: "bloodmagic:altar/earth_tool" })
     e.recipes.bloodmagic.altar('bloodmagic:earthscribetool', '#botania:runes/earth')
@@ -155,7 +155,7 @@ ServerEvents.recipes(e => {
         .altarSyphon(1000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:altar/earth_tool')
+        .id('kubejs:bloogmagic/altar/earth_tool')
 
     e.remove({ id: "bloodmagic:altar/dusk_tool" })
     e.recipes.bloodmagic.altar('bloodmagic:duskscribetool', '#botania:runes/nidavellir')
@@ -163,14 +163,14 @@ ServerEvents.recipes(e => {
         .altarSyphon(2000)
         .consumptionRate(20)
         .drainRate(10)
-        .id('kubejs:altar/dusk_tool')
+        .id('kubejs:bloogmagic/altar/dusk_tool')
 
     e.recipes.bloodmagic.altar('eidolon:polished_planks', 'botania:livingwood_planks')
         .upgradeLevel(0)
         .altarSyphon(50)
         .consumptionRate(25)
         .drainRate(5)
-        .id('kubejs:bloodaltar/polished_planks')
+        .id('kubejs:bloogmagic/altar/polished_planks')
 
     e.remove({ id: "waystones:warp_stone" })
     e.recipes.bloodmagic.altar('waystones:warp_stone', 'ars_nouveau:ritual_warping')
@@ -178,19 +178,19 @@ ServerEvents.recipes(e => {
         .altarSyphon(25000)
         .consumptionRate(20)
         .drainRate(20)
-        .id('kubejs:warp_stone')
+        .id('kubejs:bloogmagic/altar/warp_stone')
 
     e.recipes.bloodmagic.altar('botania:fel_pumpkin', 'undergarden:gloom_o_lantern')
         .upgradeLevel(0)
         .altarSyphon(1000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:bloodaltar/fel_pumpkin')
+        .id('kubejs:bloogmagic/altar/fel_pumpkin')
 
     e.recipes.bloodmagic.altar('botania:blood_pendant', 'eidolon:void_amulet')
         .upgradeLevel(1)
         .altarSyphon(7000)
         .consumptionRate(5)
         .drainRate(5)
-        .id('kubejs:bloodaltar/blood_pendant')
+        .id('kubejs:bloogmagic/altar/blood_pendant')
 })
