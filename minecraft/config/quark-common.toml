@@ -1552,15 +1552,15 @@
 					"Is Blacklist" = false
 
 [client]
-	"Auto Walk Keybind" = true
-	"Back Button Keybind" = true
+	"Auto Walk Keybind" = false
+	"Back Button Keybind" = false
 	"Buckets Show Inhabitants" = true
 	Camera = true
 	"Chest Searching" = true
 	"Elytra Indicator" = true
 	"Greener Grass" = true
-	"Improved Tooltips" = true
-	"Long Range Pick Block" = true
+	"Improved Tooltips" = false
+	"Long Range Pick Block" = false
 	"Microcrafting Helper" = true
 	"Soul Candles" = true
 	"Usage Ticker" = true

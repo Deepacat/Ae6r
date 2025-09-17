@@ -25,10 +25,6 @@ ServerEvents.tags('item', e => {
         e.add(`forge:rods/${mats[0]}_${mats[1]}`, [`#forge:rods/${mats[0]}`, `#forge:rods/${mats[1]}`])
     }
 
-    // // flame lily are basically natural blaze rods, should be in rod tag
-    // e.add('forge:rods', 'miniutilities:flame_lily')
-    // e.add('forge:rods/blaze', 'miniutilities:flame_lily')
-
     // ingot tags
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
     e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
@@ -52,6 +48,8 @@ ServerEvents.tags('item', e => {
 
     // paper tag
     e.add('forge:paper', 'minecraft:paper')
+
+    e.add('forge:slimeballs/blood', 'kubejs:blood_slime_ball')
 
     // ender pearl tag mixing for unif
     e.add('forge:dusts/ender_pearl', '#forge:dusts/ender')
@@ -116,6 +114,9 @@ ServerEvents.tags('block', e => {
 })
 
 ServerEvents.tags('fluid', e => {
-    e.add('c:hidden_from_recipe_viewers', ['thermal:latex'])
+    // fluids to hide
+    e.add('c:hidden_from_recipe_viewers', [
+        'thermal:latex', 'thermal:creosote'
+    ])
 })
 
