@@ -5,8 +5,8 @@ ServerEvents.recipes(e => {
         'ABA'
     ], {
         A: 'botania:livingrock',
-        B: 'kubejs:replaceme'
-    }).id('kubejs:botania_mana_pool')
+        B: 'kubejs:warding_stone'
+    }).id('kubejs:shaped/botania_mana_pool')
 
     e.remove({ id: 'botania:diluted_pool' })
     e.shaped('botania:diluted_pool', [
@@ -14,8 +14,8 @@ ServerEvents.recipes(e => {
         'ABA'
     ], {
         A: 'botania:livingrock_slab',
-        B: 'kubejs:replaceme'
-    }).id('kubejs:botania_diluted_pool')
+        B: 'kubejs:warding_stone'
+    }).id('kubejs:shaped/botania_diluted_pool')
 
     e.remove({ id: 'botania:fabulous_pool' })
     e.shaped('botania:fabulous_pool', [
@@ -23,8 +23,8 @@ ServerEvents.recipes(e => {
         'ABA'
     ], {
         A: 'botania:shimmerrock',
-        B: 'kubejs:replaceme'
-    }).id('kubejs:botania_fabulous_pool')
+        B: 'kubejs:warding_stone'
+    }).id('kubejs:shaped/botania_fabulous_pool')
 
     e.remove({ id: 'botania:corporea_index' })
     e.shaped('botania:corporea_index', [
@@ -32,11 +32,11 @@ ServerEvents.recipes(e => {
         'BCB',
         'DBD'
     ], {
-        A: 'kubejs:replaceme',
+        A: 'quark:soul_bead',
         B: 'glassential:glass_ghostly',
         C: 'botania:corporea_interceptor',
         D: 'occultism:spirit_attuned_gem'
-    }).id('kubejs:botania_corporea_index')
+    }).id('kubejs:shaped/botania_corporea_index')
 
     e.remove({ id: 'botania:corporea_crystal_cube' })
     e.shaped('botania:corporea_crystal_cube', [
@@ -47,7 +47,7 @@ ServerEvents.recipes(e => {
         A: 'botania:corporea_spark',
         B: 'glassential:glass_ghostly',
         C: 'botania:corporea_block'
-    }).id('kubejs:botania_corporea_crystal_cube')
+    }).id('kubejs:shaped/botania_corporea_crystal_cube')
 
     e.remove({ id: 'botania:hourglass' })
     e.shaped('botania:hourglass', [
@@ -56,10 +56,10 @@ ServerEvents.recipes(e => {
         'ABA'
     ], {
         A: '#forge:nuggets/nebu',
-        B: 'kubejs:replaceme',
+        B: 'aether:quicksoil_glass',
         C: '#forge:dusts/redstone',
         D: '#forge:gems/mana'
-    }).id('kubejs:botania_hourglass')
+    }).id('kubejs:shaped/botania_hourglass')
 
     e.remove({ id: 'botania:ender_eye_block' })
     e.shaped('botania:ender_eye_block', [
@@ -70,7 +70,7 @@ ServerEvents.recipes(e => {
         A: 'create:polished_rose_quartz',
         B: 'minecraft:ender_eye',
         C: 'architects_palette:abyssaline'
-    }).id('kubejs:botania_ender_eye_block')
+    }).id('kubejs:shaped/botania_ender_eye_block')
 
     e.remove({ id: 'botania:forest_eye' })
     e.shaped('botania:forest_eye', [
@@ -81,7 +81,7 @@ ServerEvents.recipes(e => {
         A: '#forge:ingots/infused_iron',
         B: 'naturesaura:infused_stone',
         C: 'minecraft:ender_eye'
-    }).id('kubejs:botania_forest_eye')
+    }).id('kubejs:shaped/botania_forest_eye')
 
     e.remove({ id: 'botania:knockback_belt' })
     e.shaped('botania:knockback_belt', [
@@ -93,7 +93,7 @@ ServerEvents.recipes(e => {
         B: '#botania:runes/fire',
         C: 'eidolon:basic_belt',
         D: '#forge:ingots/manasteel'
-    }).id('kubejs:botania_knockback_belt')
+    }).id('kubejs:shaped/botania_knockback_belt')
 
     e.remove({ id: 'botania:travel_belt' })
     e.shaped('botania:travel_belt', [
@@ -105,7 +105,7 @@ ServerEvents.recipes(e => {
         B: '#botania:runes/earth',
         C: 'eidolon:basic_belt',
         D: '#forge:ingots/manasteel'
-    }).id('kubejs:botania_travel_belt')
+    }).id('kubejs:shaped/botania_travel_belt')
 
     e.remove({ id: 'botania:crafting_halo' })
     e.shaped('botania:crafting_halo', [
@@ -116,7 +116,7 @@ ServerEvents.recipes(e => {
         A: 'botania:corporea_spark',
         B: 'ars_nouveau:marvelous_clay',
         C: 'ars_nouveau:glyph_craft'
-    }).id('kubejs:botania_crafting_halo')
+    }).id('kubejs:shaped/botania_crafting_halo')
 
     e.remove({ id: 'botania:glass_pickaxe' })
     e.shaped('botania:glass_pickaxe', [
@@ -127,7 +127,7 @@ ServerEvents.recipes(e => {
         A: 'glassential:glass_ghostly',
         B: '#forge:gems/mana',
         C: 'naturesaura:ancient_stick'
-    }).id('kubejs:botania_glass_pickaxe')
+    }).id('kubejs:shaped/botania_glass_pickaxe')
 
     e.remove({ id: 'botania:corporea_spark' })
     e.shaped(Item.of('botania:corporea_spark', '6'), [
@@ -136,9 +136,9 @@ ServerEvents.recipes(e => {
         'ABA'
     ], {
         A: 'botania:spark',
-        B: 'kubejs:replaceme',
-        C: Item.of('naturesaura:aura_bottle', '[object Object]')
-    }).id('kubejs:botania_corporea_spark')
+        B: 'quark:soul_bead',
+        C: Item.of('naturesaura:aura_bottle', { stored_type: 'naturesaura:nether' })
+    }).id('kubejs:shaped/botania_corporea_spark')
 
     e.remove({ id: 'botania:vine_ball' })
     e.shaped('botania:vine_ball', [
@@ -148,5 +148,5 @@ ServerEvents.recipes(e => {
     ], {
         A: 'minecraft:vine',
         B: '#forge:slimeballs'
-    }).id('kubejs:botania_vine_ball')
+    }).id('kubejs:shaped/botania_vine_ball')
 })
