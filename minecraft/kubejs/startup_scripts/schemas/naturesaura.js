@@ -24,7 +24,9 @@ function recipeSchema_naturesaura(e, c) {
             new $RecipeSchema(
                 c.outputItem.key('output'),
                 c.inputItem.key('input'),
-                c.inputItem.key('catalyst'),
+                c.inputItem.key('catalyst')
+                    .defaultOptional()
+                    .exclude(), // use .catalyst(inputItem) after recipe
                 c.intNumber.key('aura')
                     .optional(3000)
                     .alwaysWrite()
