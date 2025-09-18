@@ -1,20 +1,26 @@
 // flutter right click interacting for shearing lush silk
 ItemEvents.entityInteracted(e => {
-    if (!e.target.type == 'alexsmobs:flutter') { return }
+    let flutter = e.target
+    if (!flutter.type == 'alexsmobs:flutter') { return }
 
     // potentially a specific item later
     if (!e.item.hasTag('forge:shears')) { return }
 
-    if (e.target.nbt.Owner) {
+    // check if adult
+    if (flutter.age != 0) { return }
+
+    if (flutter.nbt.Owner) {
         // This is due to alex mobs wiping shearing data when picked up in a pot
         e.player.tell(`Cannot shear a tamed flutter.`)
         return
     }
 
-    let nbt = e.target.nbt
+    let nbtCopy = flutter.nbt
     let cooldownTicks = 20 * 60 * 5 // 5 minute cooldown in ticks
-    let realAge = nbt.ForgeData["naturesaura:time_alive"]
-    let cooldown = (nbt.ForgeData["kubejs:time_sheared"] + cooldownTicks) - realAge
+    // I found actual entity server age to be unreliable and didn't feel like ticking entities and adding
+    // my own time data so using natures auras time alive data works unless it has mechanics I don't know 
+    let realAge = nbtCopy.ForgeData["naturesaura:time_alive"]
+    let cooldown = (nbtCopy.ForgeData["kubejs:time_sheared"] + cooldownTicks) - realAge
 
     if (cooldown > 0) {
         e.player.setStatusMessage(`${Math.round(cooldown / 20).toString()} seconds to regrow silk`)
@@ -23,10 +29,10 @@ ItemEvents.entityInteracted(e => {
     }
     // shearing
 
-    nbt.ForgeData["kubejs:time_sheared"] = realAge
-    e.target.mergeNbt(nbt)
+    nbtCopy.ForgeData["kubejs:time_sheared"] = realAge
+    flutter.mergeNbt(nbtCopy)
 
-    let block = e.level.getBlock(e.target.pos)
+    let block = e.level.getBlock(flutter.pos)
 
     e.player.swing(e.hand.toString(), true)
     e.server.runCommandSilent(`/playsound minecraft:entity.sheep.shear player @a ${block.x} ${block.y} ${block.z} 1 1`)
