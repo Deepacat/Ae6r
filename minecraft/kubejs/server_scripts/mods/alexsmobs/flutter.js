@@ -11,17 +11,19 @@ ItemEvents.entityInteracted(e => {
         return
     }
 
+    let nbt = e.target.nbt
     let cooldownTicks = 20 * 60 * 5 // 5 minute cooldown in ticks
-    let age = (e.target.nbt.ForgeData['time_sheared'] + cooldownTicks) - e.target.age
-    if (age > 0) {
-        e.player.setStatusMessage(`${Math.round(age / 20)} seconds to regrow silk`)
+    let realAge = nbt.ForgeData["naturesaura:time_alive"]
+    let cooldown = (nbt.ForgeData["kubejs:time_sheared"] + cooldownTicks) - realAge
+
+    if (cooldown > 0) {
+        e.player.setStatusMessage(`${Math.round(cooldown / 20).toString()} seconds to regrow silk`)
         // do not shear, on cooldown
         return
     }
     // shearing
 
-    let nbt = e.target.nbt
-    nbt.ForgeData["time_sheared"] = e.target.age
+    nbt.ForgeData["kubejs:time_sheared"] = realAge
     e.target.mergeNbt(nbt)
 
     let block = e.level.getBlock(e.target.pos)
