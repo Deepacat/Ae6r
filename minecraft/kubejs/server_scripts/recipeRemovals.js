@@ -213,6 +213,8 @@ ServerEvents.recipes(e => {
 
     // todo organize this LMAO (also move id removals to respective recipes...?)
     const recipeFilterRemovals = [
+        // for now until I can decide how I want to use the mod or if at all
+        { mod: 'enderio' },
         { output: 'mekanism:sawdust', mod: 'mekanism', type: 'mekanism:sawing' },
 
         { output: 'botania:mana_powder', mod: 'botania' },
@@ -262,7 +264,6 @@ ServerEvents.recipes(e => {
 
         { type: 'eidolon:worktable' },
         { type: 'eidolon:crucible' },
-
 
         { type: 'minecraft:crafting_shaped', id: /botania.*apothecary/ },
 
