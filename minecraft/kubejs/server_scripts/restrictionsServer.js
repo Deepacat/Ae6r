@@ -43,8 +43,8 @@ function textFormat(str) {
  * @param {string} blockOrItem
  */
 function canUse(event, blockOrItem) {
+    if (!event.player) { return false }
     const { player } = event
-    if (!player.level) { return true }
     const level = player.level
 
     let cd
