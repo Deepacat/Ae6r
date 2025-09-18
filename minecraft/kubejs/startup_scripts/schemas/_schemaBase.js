@@ -1,3 +1,4 @@
+/// @ts-check
 // priority: 1000
 
 const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
@@ -47,6 +48,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     })
 
     comps.inputFluidOrFluidTag = (tagKeyStr) => comps.inputFluid.or(
+        // @ts-ignore
         new $RecipeComponentBuilder(2)
             .add(comps.fluidTag.key(tagKeyStr))
             .add(comps.intNumber.key('amount'))
@@ -54,6 +56,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     )
 
     comps.outputFluidOrFluidTag = (tagKeyStr) => comps.outputFluid.or(
+        // @ts-ignore
         new $RecipeComponentBuilder(2)
             .add(comps.fluidTag.key(tagKeyStr))
             .add(comps.intNumber.key('amount'))
@@ -61,6 +64,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     )
 
     comps.inputFluidOrItem = (tagKeyStr) =>
+        // @ts-ignore
         comps.inputItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
 
     comps.inputFluidOrStackedItem = (tagKeyStr) =>
@@ -80,4 +84,5 @@ StartupEvents.recipeSchemaRegistry(e => {
     recipeSchema_tconstruct(e, comps)
     recipeSchema_thermal(e, comps)
     recipeSchema_embers(e, comps)
+    recipeSchema_naturesaura(e, comps)
 })
