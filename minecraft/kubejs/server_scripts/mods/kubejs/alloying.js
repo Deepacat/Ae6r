@@ -156,11 +156,11 @@ ServerEvents.recipes(event => {
     allAlloying(event, {
         types: allButTinkers,
         item: {
-            inputs: [Ingredient.of('#forge:ingots/copper'), Ingredient.of('#forge:ingots/zinc')],
+            inputs: [Ingredient.of('#forge:ingots/copper'), Ingredient.of('#forge:ingots/nickel')],
             output: Item.of('2x emendatus:constantan_ingot')
         },
         fluid: {
-            inputs: [Fluid.of('tconstruct:molten_gold', 90), Fluid.of('tconstruct:molten_zinc', 90)],
+            inputs: [Fluid.of('tconstruct:molten_copper', 90), Fluid.of('tconstruct:molten_nickel', 90)],
             output: Fluid.of('tconstruct:molten_constantan', 180)
         },
         processTime: 300,
