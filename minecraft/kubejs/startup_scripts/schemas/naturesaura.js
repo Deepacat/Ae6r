@@ -46,7 +46,6 @@ function recipeSchema_naturesaura(e, c) {
         )
         e.register('naturesaura:animal_spawner',
             new $RecipeSchema(
-                c.outputItem.key('output'),
                 c.inputItem.asArray().key('ingredients'),
                 c.id.key('entity'),
                 c.intNumber.key('aura')
