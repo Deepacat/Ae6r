@@ -65,74 +65,18 @@ const industrialforegoing = {
     }
 }
 
-const recipes = []
+    const recipes = []
 
-// const powahTiers = ['starter', 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro'];
+// natures aura tree ritual
+recipes.forEach((recipe) => {
+    console.log(`    ${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n    '}e.recipes.naturesaura.tree_ritual(
+    ${getString(recipe.output)}, [
+        ${recipe.ingredients.map(getString).join(", ")}
+    ]).time(${recipe.time}).sapling('${recipe.sapling}')
+        .id('${recipe.id.replace(/.*:/g, "kubejs:naturesaura/tree_ritual/")}')\n`)
+})
 
-// powahTiers.forEach(function (tier) {
-// 	if (tier == 'starter') {
-// 		return
-// 	}
-// 	let casingMaterial = `#forge:storage_blocks/${tier}`
-// 	if (tier == 'basic') {
-// 		casingMaterial = '#forge:storage_blocks/lead'
-// 	} else if (tier == 'hardened') {
-// 		casingMaterial = '#forge:storage_blocks/energized_steel'
-// 	}
-
-// 	recipes.push({
-// 		output: Item.of(`powah:reactor_${tier}`, 36),
-// 		pattern: ['ABBBA', 'CPPPP', 'CDDDE', 'FGMLE', 'NGOKE', 'HIIKJ', 'ABBBA'],
-// 		key: {
-// 			A: 'powah:dielectric_casing',
-// 			B: casingMaterial,
-// 			C: Item.of(`powah:energy_cell_${tier}`),
-// 			D: Item.of(`powah:thermo_generator_${tier}`),
-// 			E: 'thermal:fluid_cell_frame',
-// 			F: 'xnet:advanced_connector_green',
-// 			G: 'xnet:netcable_green',
-// 			H: 'xnet:advanced_connector_red',
-// 			I: 'xnet:netcable_red',
-// 			J: 'xnet:advanced_connector_blue',
-// 			K: 'xnet:netcable_blue',
-// 			L: 'pneumaticcraft:heat_pipe',
-// 			M: 'kubejs:spirit_entropic_gateway',
-// 			N: 'xnet:controller',
-// 			O: Item.of(`powah:furnator_${tier}`),
-// 			P: 'create:fluid_pipe'
-// 		},
-// 		id: `powah:crafting/reactor_${tier}`
-// 	})
-// })
-
-// const compactmachines = [
-// 	{ tier: 'tiny', comb: 'forest' },
-// 	{ tier: 'small', comb: 'aluminum' },
-// 	{ tier: 'normal', comb: 'zinc' },
-// 	{ tier: 'large', comb: 'uranium' },
-// 	{ tier: 'giant', comb: 'cobalt' },
-// 	{ tier: 'maximum', comb: 'industrious' }
-// ]
-
-// compactmachines.forEach((compactmachine) => {
-// 	recipes.push({
-// 		output: `compactmachines:machine_${compactmachine.tier}`,
-// 		pattern: ['AABAA', 'ACCCA', 'DCECF', 'ACCCA', 'AAGAA'],
-// 		key: {
-// 			A: 'compactmachines:wall',
-// 			B: /*'portality:'*/ 'kubejs:replaceme',
-// 			// C: `resourcefulbees:${compactmachine.comb}_honeycomb_block`,
-// 			C: /*'resourcefulbees:'*/ 'kubejs:replaceme',
-// 			D: /*'portality:'*/ 'kubejs:replaceme',
-// 			E: /*'portality:'*/ 'kubejs:replaceme',
-// 			F: /*'portality:'*/ 'kubejs:replaceme',
-// 			G: /*'portality:'*/ 'kubejs:replaceme'
-// 		},
-// 		id: `$kubejs:mechanical_crafting/compact_machine_${compactmachine.tier}`
-// 	})
-// })
-
-// general thermal recipes
+/* // general thermal recipes
 let thermalMachineToPort = "chiller"
 recipes.forEach((recipe) => {
     console.log(`    ${recipe.id.includes('kubejs:') ? '' : '\n    e.remove({ id: "' + recipe.id + '" })'}
@@ -140,7 +84,7 @@ recipes.forEach((recipe) => {
         [${recipe.inputs.map(getString).join(", ")}])
         .energy(${recipe.energy})
         .id('${recipe.id.replace(/.*:/g, "kubejs:")}')`)
-})
+}) */
 
 /* // bloodmagic altar
 recipes.forEach((recipe) => {
