@@ -50,31 +50,3 @@ LootJS.modifiers(e => {
         .limitCount([0, 2])
         .applyLootingBonus([0, 1])
 })
-
-// flutter summoning ritual
-ServerEvents.recipes(e => {
-    e.recipes.summoningrituals.altar(['kubejs:terra_aspectus_shard', 'minecraft:conduit'])
-        .input('2x minecraft:flowering_azalea')
-        .input('2x minecraft:spore_blossom')
-        .recipeTime(200)
-        .mobOutput(SummoningOutput.mob('alexsmobs:flutter')
-            .count(2)
-            .offset(0, 1, 0)
-            .data({ ForgeData: { time_sheared: 12000 } })
-        )
-        .id('kubejs:summoningrituals/flutter')
-})
-
-// prevent flutter ritual outside lush caves
-SummoningRituals.start(e => {
-    if (!(e.recipe.id == 'kubejs:summoningrituals/flutter')) {
-        return
-    }
-    let biome = e.level.getBiome(e.pos).unwrapKey().get().location()
-    if (biome != 'minecraft:lush_caves') {
-        if (e.player) {
-            e.player.setStatusMessage('You must be in the lush caves to perform this ritual.')
-        }
-        e.cancel()
-    }
-})
