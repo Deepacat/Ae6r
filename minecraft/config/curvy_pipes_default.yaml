@@ -3,7 +3,7 @@
 # If true, unknown pipes in save data will be deleted instead of crashing.
 ignore_unknown_pipes: false
 
-# Pipe types are defined here. You can remove this section entirely if you only want pipes added by cross-mod integrations.
+# Customizable pipe types are defined here. You can remove this section entirely if you only want pipes added by cross-mod integrations, or the redstone cable.
 pipe_types:
   - # ID of the pipe item
     id: tiny_item_pipe

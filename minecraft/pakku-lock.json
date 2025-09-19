@@ -44,6 +44,42 @@
             ]
         },
         {
+            "pakku_id": "cTJJcMInfK3sUl8m",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "ae2-crafting-tree"
+            },
+            "name": {
+                "curseforge": "AE2: Crafting Tree"
+            },
+            "id": {
+                "curseforge": "1086241"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ae2ct-1.20.1-1.1.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6695/407/ae2ct-1.20.1-1.1.0.jar",
+                    "id": "6695407",
+                    "parent_id": "1086241",
+                    "hashes": {
+                        "sha1": "89f25eb1b6d837a824349093125e74d175d361ae",
+                        "md5": "d37d9d53d4bc5fdbb616d4b145f9cd26"
+                    },
+                    "required_dependencies": [],
+                    "size": 238045,
+                    "date_published": "2025-06-25T17:48:58.490Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "16LEIJuU1ywWv7tC",
             "type": "MOD",
             "slug": {
@@ -122,11 +158,7 @@
             ]
         },
         {
-            "pakku_id": "roou52XKInLNqyJx",
-            "pakku_links": [
-                "00WbVHlSnUvQLnwQ",
-                "VMbbgAEI5IN2zpf6"
-            ],
+            "pakku_id": "enCT5GNl0qDhY2OJ",
             "type": "MOD",
             "slug": {
                 "curseforge": "abnormals-delight"
@@ -2908,6 +2940,43 @@
             ]
         },
         {
+            "pakku_id": "0pOdUbmVtPHtlwSy",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "craterlib"
+            },
+            "name": {
+                "curseforge": "CraterLib"
+            },
+            "id": {
+                "curseforge": "867099"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "CraterLib-Forge-1.20-2.1.5.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6534/762/CraterLib-Forge-1.20-2.1.5.jar",
+                    "id": "6534762",
+                    "parent_id": "867099",
+                    "hashes": {
+                        "sha1": "8ce089dc8006558e1d61bc859b2421e63ed6366e",
+                        "md5": "990c6cbaab8ab67a62214ec673f9d58d"
+                    },
+                    "required_dependencies": [],
+                    "size": 2011855,
+                    "date_published": "2025-05-16T07:06:21.187Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "kK0NMeF33HoxuhdR",
             "type": "MOD",
             "slug": {
@@ -3568,6 +3637,49 @@
                     "required_dependencies": [],
                     "size": 93320,
                     "date_published": "2025-03-16T20:51:04.557Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "9XPO8P9NIVx0qvbl",
+            "pakku_links": [
+                "2tjT4qYoa86aQto3",
+                "ciewiD5H0Amd5tvb"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "drippy-loading-screen"
+            },
+            "name": {
+                "curseforge": "Drippy Loading Screen"
+            },
+            "id": {
+                "curseforge": "511770"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "drippyloadingscreen_forge_3.0.12_MC_1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6412/211/drippyloadingscreen_forge_3.0.12_MC_1.20.1.jar",
+                    "id": "6412211",
+                    "parent_id": "511770",
+                    "hashes": {
+                        "sha1": "ea21436917b84780835b041cd27b7f86679dc6a1",
+                        "md5": "a8cbcca4541cb6eb794ded4a10c57ac9"
+                    },
+                    "required_dependencies": [
+                        "410295",
+                        "367706"
+                    ],
+                    "size": 239365,
+                    "date_published": "2025-04-11T20:29:43.010Z"
                 }
             ]
         },
@@ -5023,6 +5135,49 @@
                     "required_dependencies": [],
                     "size": 236403,
                     "date_published": "2025-09-15T12:03:08.483Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "2tjT4qYoa86aQto3",
+            "pakku_links": [
+                "ciewiD5H0Amd5tvb",
+                "2EacQJGVkxbcVjaX"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fancymenu"
+            },
+            "name": {
+                "curseforge": "FancyMenu"
+            },
+            "id": {
+                "curseforge": "367706"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fancymenu_forge_3.7.0_MC_1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6918/987/fancymenu_forge_3.7.0_MC_1.20.1.jar",
+                    "id": "6918987",
+                    "parent_id": "367706",
+                    "hashes": {
+                        "sha1": "f33a40f7d33585e781d90d00d156178e369ae8ed",
+                        "md5": "365e76a8d99085a1ac942c2b46125508"
+                    },
+                    "required_dependencies": [
+                        "410295",
+                        "938643"
+                    ],
+                    "size": 3628603,
+                    "date_published": "2025-08-23T14:52:56.903Z"
                 }
             ]
         },
@@ -6540,6 +6695,81 @@
             ]
         },
         {
+            "pakku_id": "fkMz9hp9kVvZEBoh",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "just-enough-botania"
+            },
+            "name": {
+                "curseforge": "Just Enough Botania"
+            },
+            "id": {
+                "curseforge": "1286494"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Just-Enough-Botania-1.20.1-v0.2.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6858/396/Just-Enough-Botania-1.20.1-v0.2.1.jar",
+                    "id": "6858396",
+                    "parent_id": "1286494",
+                    "hashes": {
+                        "sha1": "a2131501794eec36e49876e903c95d7754753060",
+                        "md5": "787468f471b18b9cefed97bba3186402"
+                    },
+                    "required_dependencies": [
+                        "225643",
+                        "238222"
+                    ],
+                    "size": 31310,
+                    "date_published": "2025-08-07T06:54:17.747Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "0R4fB0QOPPVRotHT",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "just-enough-effect-descriptions-jeed"
+            },
+            "name": {
+                "curseforge": "Just Enough Effect Descriptions (JEED)"
+            },
+            "id": {
+                "curseforge": "532286"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "jeed-1.20-2.2.5.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6172/935/jeed-1.20-2.2.5.jar",
+                    "id": "6172935",
+                    "parent_id": "532286",
+                    "hashes": {
+                        "sha1": "9f6b1884ad8b81c0e8796daf7871eeb54271f27b",
+                        "md5": "6792ef4a197457dcff0b4353e956a94d"
+                    },
+                    "required_dependencies": [],
+                    "size": 159288,
+                    "date_published": "2025-02-08T22:50:21.437Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "0soJBQiZqMwNbN4D",
             "type": "MOD",
             "slug": {
@@ -6695,6 +6925,43 @@
                     ],
                     "size": 325546,
                     "date_published": "2023-07-20T03:52:55.497Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "ciewiD5H0Amd5tvb",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "konkrete"
+            },
+            "name": {
+                "curseforge": "Konkrete [Forge/NeoForge]"
+            },
+            "id": {
+                "curseforge": "410295"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5028/413/konkrete_forge_1.8.0_MC_1.20-1.20.1.jar",
+                    "id": "5028413",
+                    "parent_id": "410295",
+                    "hashes": {
+                        "sha1": "2019d821bed9071daabed43979433a5473ceee49",
+                        "md5": "d69107c593e361e1b7b96733250bd098"
+                    },
+                    "required_dependencies": [],
+                    "size": 625185,
+                    "date_published": "2024-01-13T03:30:23.267Z"
                 }
             ]
         },
@@ -7885,6 +8152,45 @@
             ]
         },
         {
+            "pakku_id": "2EacQJGVkxbcVjaX",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "melody"
+            },
+            "name": {
+                "curseforge": "Melody"
+            },
+            "id": {
+                "curseforge": "938643"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.3",
+                        "1.20.1",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5109/692/melody_forge_1.0.3_MC_1.20.1-1.20.4.jar",
+                    "id": "5109692",
+                    "parent_id": "938643",
+                    "hashes": {
+                        "sha1": "e0942d396a70c09038e6c2e5e1da6505178249b8",
+                        "md5": "6b528d368f7fcbf737df28f2457cdec6"
+                    },
+                    "required_dependencies": [],
+                    "size": 37178,
+                    "date_published": "2024-02-15T10:46:05.407Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "ZCnSF7i1f8FDY59j",
             "type": "MOD",
             "slug": {
@@ -7996,6 +8302,82 @@
                     ],
                     "size": 363044,
                     "date_published": "2025-08-07T16:58:30.237Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "dMG1B54Y6cQJ3MIu",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "moderately-enough-effect-descriptions-meed"
+            },
+            "name": {
+                "curseforge": "Moderately Enough Effect Descriptions (MEED)"
+            },
+            "id": {
+                "curseforge": "918638"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "MEED-1.20.1-7.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6898/579/MEED-1.20.1-7.3.jar",
+                    "id": "6898579",
+                    "parent_id": "918638",
+                    "hashes": {
+                        "sha1": "19f74f7eb86255e96b033e6c7f1228199caa45dc",
+                        "md5": "1e7c5b15586e016671115cb168f26f62"
+                    },
+                    "required_dependencies": [],
+                    "size": 74725,
+                    "date_published": "2025-08-18T00:27:27.840Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "o6TMb935zCT711Z3",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "modern-ae2-additions"
+            },
+            "name": {
+                "curseforge": "Modern AE2 Additions"
+            },
+            "id": {
+                "curseforge": "1028068"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "mae2-2.0.0-beta.c.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/6827/727/mae2-2.0.0-beta.c.jar",
+                    "id": "6827727",
+                    "parent_id": "1028068",
+                    "hashes": {
+                        "sha1": "5033f5ce274b07096e45e781eef6cc5cf1d28868",
+                        "md5": "7d225cf4a4124cc830b2dc27a8fc320a"
+                    },
+                    "required_dependencies": [
+                        "223794"
+                    ],
+                    "size": 382528,
+                    "date_published": "2025-07-30T05:04:37.590Z"
                 }
             ]
         },
@@ -10700,6 +11082,50 @@
                     "required_dependencies": [],
                     "size": 88318,
                     "date_published": "2023-11-13T00:47:59.157Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "RbBM3YqNRAnBFcrg",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "simple-discord-rpc"
+            },
+            "name": {
+                "curseforge": "Simple Discord RPC"
+            },
+            "id": {
+                "curseforge": "411816"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "SimpleRPC-4.0.4.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.1",
+                        "1.20",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "fabric",
+                        "neoforge",
+                        "forge",
+                        "quilt"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6736/722/SimpleRPC-4.0.4.jar",
+                    "id": "6736722",
+                    "parent_id": "411816",
+                    "hashes": {
+                        "sha1": "36b4246bb5ce216ecc3e3b92a56fa5eb103a9786",
+                        "md5": "ec1d2917e5ed44b7467e422d1b2506d2"
+                    },
+                    "required_dependencies": [
+                        "867099"
+                    ],
+                    "size": 713920,
+                    "date_published": "2025-07-06T11:05:51.170Z"
                 }
             ]
         },
