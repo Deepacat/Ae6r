@@ -6,7 +6,7 @@ Complicated bees rework ideas
 
 Splendid slimes rework ideas (nearly identical to complicated bees)
 - Remove all default slimes
-- Add slimes  based on magic Aspecti
+- Add slimes based on magic Aspecti
 - Rework plort press slime heart forming
 - Process primal aspectus slimes into further forms (Vitreus slime from ordo and terra, Metallum slime from Vitreus and ordo, iron slime from metallum slime infused with iron or something)
 - Create custom mbd2 multiblocks for splendid slimes similar to apiary to have non entity slimes for performance and ease of use
