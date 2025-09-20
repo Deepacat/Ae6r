@@ -519,18 +519,11 @@
 			dependencies: ["798F51A163767275"]
 			icon: "botania:apothecary_default"
 			id: "693353D7EA1E0938"
-			tasks: [
-				{
-					id: "3068C28B707CC222"
-					item: "botania:apothecary_default"
-					type: "item"
-				}
-				{
-					id: "4C3FA16CC69C609E"
-					item: "botania:pure_daisy"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "3068C28B707CC222"
+				item: "botania:apothecary_default"
+				type: "item"
+			}]
 			title: "Flower Power"
 			x: 1.0d
 			y: 3.5d
@@ -1499,8 +1492,8 @@
 					type: "item"
 				}
 				{
-					id: "09AABFAFA19A2E36"
-					item: "botania:mana_pool"
+					id: "09A1A1D647949FE5"
+					item: "botania:pure_daisy"
 					type: "item"
 				}
 			]
