@@ -2,6 +2,8 @@ In each category, priority highest to lowest
 
 Gameplay/Progression:
 
+- [ ] Port remaining mod recipes
+	- [ ] pneumaticcraft
 - [ ] Ponder resource gen mod reworking (splendid slimes/complicated bees)
 - [ ] Ore processing builders
 	- [ ] add more materials to emendatus along with potentially a new category for just ore processing additions (ore just add every oreproc item manually ig, probably aren't enough similarities for a general category)
