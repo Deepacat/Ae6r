@@ -39,38 +39,41 @@ function recipeSchema_pneumaticcraft(e, c) {
             .add(c.floatNumber.key('limit'))
             .add(c.floatNumber.key('multiplier'))
             .key('bonus_output')
-            
+
         let pncrTempRange = new $RecipeComponentBuilder(2)
             .add(c.intNumber.key('min_temp').optional(0))
             .add(c.intNumber.key('max_temp').optional(0))
             .key('temperature')
 
+        // https://github.com/TeamPneumatic/pnc-repressurized/blob/f5d0198af34a1ec05757377eb2017663bc6f9788/src/main/java/me/desht/pneumaticcraft/common/recipes/amadron/AmadronOffer.java#L146C1-L157C6
         e.register('pneumaticcraft:amadron',
             new $RecipeSchema(
-                pncrAmadronIO.asArray().key('input'),
-                pncrAmadronIO.asArray().key('output'),
+                c.id.key('id'),
+                pncrAmadronIO.key('output'),
+                pncrAmadronIO.key('input'),
                 c.intNumber.key('level').optional(0),
-                c.bool.key('static').alwaysWrite().optional(true)
+                c.bool.key('static').alwaysWrite().optional(true),
+                c.intNumber.key('maxStock').defaultOptional()
             )
         )
         e.register('pneumaticcraft:assembly_drill',
             new $RecipeSchema(
-                pncrItemInput.key('input'),
                 c.outputItem.key('result'),
+                pncrItemInput.key('input'),
                 c.anyString.key('program').alwaysWrite().optional('drill')
             )
         )
         e.register('pneumaticcraft:assembly_laser',
             new $RecipeSchema(
-                pncrItemInput.key('input'),
                 c.outputItem.key('result'),
+                pncrItemInput.key('input'),
                 c.anyString.key('program').alwaysWrite().optional('laser')
             )
         )
         e.register('pneumaticcraft:explosion_crafting',
             new $RecipeSchema(
-                pncrItemInput.key('input'),
                 c.outputItem.asArray().key('results'),
+                pncrItemInput.key('input'),
                 c.intNumber.key('loss_rate').alwaysWrite().optional(20)
             )
         )
@@ -80,8 +83,8 @@ function recipeSchema_pneumaticcraft(e, c) {
                 pncrFluidInput.key('input2'),
                 c.floatNumber.key('pressure').optional(1),
                 c.intNumber.key('time').optional(40),
-                c.outputItem.key('item_output').defaultOptional(),
-                c.outputFluid.key('fluid_output').defaultOptional()
+                c.outputItem.key('item_output').defaultOptional().exclude(), // use .item_output(fluid) after recipe
+                c.outputFluid.key('fluid_output').defaultOptional().exclude() // use .fluid_output(item) after recipe
             )
         )
         e.register('pneumaticcraft:heat_frame_cooling',
@@ -101,24 +104,24 @@ function recipeSchema_pneumaticcraft(e, c) {
         )
         e.register('pneumaticcraft:pressure_chamber',
             new $RecipeSchema(
-                pncrItemInput.asArray().key('inputs'),
                 c.outputItem.asArray().key('results'),
+                pncrItemInput.asArray().key('inputs'),
                 c.floatNumber.key('pressure')
             )
         )
         e.register('pneumaticcraft:refinery',
             new $RecipeSchema(
-                pncrFluidInput.key('input'),
                 c.outputFluid.asArray().key('results'),
+                pncrFluidInput.key('input'),
                 pncrTempRange
             )
         )
         e.register('pneumaticcraft:thermo_plant',
             new $RecipeSchema(
-                pncrFluidInput.key('fluid_input').defaultOptional(),
-                c.inputItem.key('item_input').defaultOptional(),
-                c.outputFluid.key('fluid_output').defaultOptional(),
-                c.outputItem.key('item_output').defaultOptional(),
+                c.inputItem.key('item_input').defaultOptional().exclude(), // use .item_input(item) after recipe
+                c.outputItem.key('item_output').defaultOptional().exclude(), // use use item_output(item) after recipe
+                pncrFluidInput.key('fluid_input').defaultOptional().exclude(), // use .fluid_input(fluid) after recipe
+                c.outputFluid.key('fluid_output').defaultOptional().exclude(), // use fluid_output(fluid) after recipe
                 pncrTempRange.defaultOptional(),
                 c.bool.key('exothermic').alwaysWrite().optional(false),
                 c.anyFloatNumber.key('pressure').optional(0),
