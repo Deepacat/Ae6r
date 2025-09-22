@@ -28,9 +28,7 @@ function recipeSchema_pneumaticcraft(e, c) {
                 return json
             })
 
-        // This is not a typo. We must use an outputItem here since inputItem does
-        // not support item counts.
-        let pncrItemInput = c.outputItem.mapOut((json) => {
+        let pncrItemInput = c.inputStackedItem.mapOut((json) => {
             json.getAsJsonObject().addProperty('type', 'pneumaticcraft:stacked_item')
             return json
         })
