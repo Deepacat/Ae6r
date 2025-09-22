@@ -24,7 +24,6 @@ ServerEvents.tags('item', e => {
         e.add(`forge:gears/${mats[0]}_${mats[1]}`, [`#forge:gears/${mats[0]}`, `#forge:gears/${mats[1]}`])
         e.add(`forge:rods/${mats[0]}_${mats[1]}`, [`#forge:rods/${mats[0]}`, `#forge:rods/${mats[1]}`])
     }
-
     // ingot tags
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
     e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
@@ -38,34 +37,29 @@ ServerEvents.tags('item', e => {
     e.add('forge:ingots/uraninite', 'powah:uraninite')
     e.add('forge:ingots/energized_steel', 'powah:steel_energized')
     e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium'])
-
     // blood magic is dumb and only applied this tag in blocks so their recipes dont work LMAO
     e.add('minecraft:mushroom_hyphae', [
         "minecraft:brown_mushroom_block", "minecraft:red_mushroom_block", "minecraft:crimson_hyphae", "minecraft:warped_hyphae",
         "minecraft:stripped_crimson_hyphae", "minecraft:stripped_warped_hyphae", "minecraft:nether_wart_block", "minecraft:warped_wart_block",
         "minecraft:shroomlight"
     ])
-
     // paper tag
-    e.add('forge:paper', 'minecraft:paper')
-
+    e.add('forge:paper', 'minecraft:paper') 
+    // blood slimeball tag
     e.add('forge:slimeballs/blood', 'kubejs:blood_slime_ball')
 
     // ender pearl tag mixing for unif
     e.add('forge:dusts/ender_pearl', '#forge:dusts/ender')
     e.add('forge:dusts/ender', '#forge:dusts/ender_pearl')
-
     // adding gem tag to coals for unification
     let coals = ['minecraft:coal', 'thermal:coal_coke', 'thermal:bitumen', 'immersiveengineering:coal_coke']
     for (let coal of coals) {
         e.add('forge:gems', coal)
         e.add(`forge:gems/${coal.split(':')[1]}`, coal)
     }
-
     // adding source to mana tag so they unify
     e.add('forge:gems/mana', '#forge:gems/source')
     e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
-
     // rename this to like kubejs namespace when recipe porting is done lol
     e.add('enigmatica:crafting_slabs', [
         'quark:smooth_basalt_slab', 'quark:polished_basalt_slab', 'quark:basalt_slab',
