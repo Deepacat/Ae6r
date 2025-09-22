@@ -3,6 +3,7 @@ const getString = (input) => {
     if (typeof input === "number") return input
     if (input.item) return input
     if (input.fluid) return input
+    if (input.ingredient) return input
     if (Array.isArray(input)) {
         return `[${input.map(getString).join(", ")}]`
     }
@@ -33,12 +34,20 @@ const Item = {
         }
     }
 }
-
 const Fluid = {
     of: (input, additional) => {
         let data = `Fluid.of('${input}'${additional ? `, ${getString(additional)}` : ""})`
         return {
             fluid: true,
+            toString: () => data,
+        }
+    }
+}
+const Ingredient = {
+    of: (input, additional) => {
+        let data = `Ingredient.of('${input}'${additional ? `, ${getString(additional)}` : ""})`
+        return {
+            ingredient: true,
             toString: () => data,
         }
     }
@@ -64,17 +73,29 @@ const industrialforegoing = {
         black: 'industrialforegoing:laser_lens15'
     }
 }
+const powahTiers = ['starter', 'basic', 'hardened', 'blazing', 'niotic', 'spirited', 'nitro'];
 
-    const recipes = []
+const recipes = []
 
-// natures aura tree ritual
+/* recipes.forEach((recipe) => {
+    console.log(`    ${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n    '}e.recipes.pneumaticcraft.pressure_chamber(
+        [
+            ${recipe.results.map(getString).join(",\n            ")}
+        ],
+        [
+            ${recipe.inputs.map(getString).join(",\n            ")}
+        ], ${recipe.pressure}
+    ).id('${recipe.id.replace(/.*:/g, "kubejs:pneumaticcraft/pressure_chamber/")}')\n`)
+}) */
+
+/* // natures aura tree ritual
 recipes.forEach((recipe) => {
     console.log(`    ${recipe.id.includes('kubejs:') ? '' : 'e.remove({ id: "' + recipe.id + '" })\n    '}e.recipes.naturesaura.tree_ritual(
     ${getString(recipe.output)}, [
         ${recipe.ingredients.map(getString).join(", ")}
     ]).time(${recipe.time}).sapling('${recipe.sapling}')
         .id('${recipe.id.replace(/.*:/g, "kubejs:naturesaura/tree_ritual/")}')\n`)
-})
+}) */
 
 /* // general thermal recipes
 let thermalMachineToPort = "chiller"
