@@ -6,7 +6,169 @@
 	icon: "atmospheric:aspen_sapling"
 	id: "69FF3CC24ACCD0DA"
 	order_index: 2
-	quest_links: [ ]
-	quests: [ ]
+	quest_links: [
+		{
+			id: "2DF92079B1DDFC3C"
+			linked_quest: "6BD22F97D5168969"
+			shape: "pentagon"
+			x: -5.5d
+			y: -1.0d
+		}
+		{
+			id: "3FE1B7F5539F1320"
+			linked_quest: "7989B6AD3A82642C"
+			shape: "pentagon"
+			x: -5.5d
+			y: -3.0d
+		}
+		{
+			id: "75E7563BF32EEEA0"
+			linked_quest: "46B191D72A247A1D"
+			shape: "pentagon"
+			x: -5.5d
+			y: 1.0d
+		}
+		{
+			id: "4AC24FFCE5E52C09"
+			linked_quest: "155C0DE1EBE6F5D0"
+			shape: "pentagon"
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			id: "515DADA62F52890B"
+			linked_quest: "68EB68D7A1CC783F"
+			shape: "pentagon"
+			x: -5.5d
+			y: 4.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["6BD22F97D5168969"]
+			id: "74D4B16C316F50B4"
+			tasks: [{
+				id: "6E9FAB6ED9A61039"
+				item: "pneumaticcraft:liquid_compressor"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["1E26A88609C02DAD"]
+			id: "6D873F4C66762CCB"
+			tasks: [{
+				id: "3EAF0F42AC0C5B81"
+				item: "pneumaticcraft:printed_circuit_board"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1BF0C68BF5423E86"]
+			id: "58008A4EC81B0D8F"
+			tasks: [{
+				id: "7F75C44788132524"
+				item: "industrialforegoing:plastic"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["74D4B16C316F50B4"]
+			id: "170B80914E09A31F"
+			tasks: [{
+				id: "5CF4B4F7C3D99417"
+				item: "pneumaticcraft:pressure_chamber_wall"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74D4B16C316F50B4"]
+			id: "1BF0C68BF5423E86"
+			tasks: [
+				{
+					id: "7B64FFA68E9BF8CC"
+					item: "pneumaticcraft:thermopneumatic_processing_plant"
+					type: "item"
+				}
+				{
+					id: "4655037313464DAD"
+					item: "pneumaticcraft:refinery"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"632376D988D86608"
+				"1BF0C68BF5423E86"
+			]
+			id: "1F9342A0AB113DAE"
+			tasks: [{
+				id: "472F37E95F42A653"
+				item: {
+					Count: 1
+					id: "immersiveengineering:blueprint"
+					tag: {
+						blueprint: "components"
+					}
+				}
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["72E0650427E87C77"]
+			id: "632376D988D86608"
+			tasks: [{
+				id: "721D8A65B11AD386"
+				item: "immersiveengineering:alloy_smelter"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7989B6AD3A82642C"]
+			id: "163A71B74745BF43"
+			tasks: [{
+				id: "0A2A39D392546A34"
+				item: "immersiveengineering:blastbrick"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["163A71B74745BF43"]
+			id: "72E0650427E87C77"
+			tasks: [{
+				id: "25701281B2041FC1"
+				item: "kubejs:smoldering_lapis_lazuli_compound"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["170B80914E09A31F"]
+			id: "1E26A88609C02DAD"
+			tasks: [{
+				id: "5E46C828D9B8EC85"
+				type: "checkmark"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+	]
 	title: " 2 - Understanding"
 }

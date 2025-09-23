@@ -396,6 +396,10 @@
 			y: 3.0d
 		}
 		{
+			dependencies: [
+				"6D72206EAEBA46E0"
+				"00AA0E1E061988B5"
+			]
 			dependency_requirement: "one_completed"
 			hide_dependency_lines: true
 			icon: "tconstruct:molten_copper_bucket"
@@ -857,7 +861,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["4EAA5F5409E4DD3E"]
 			icon: "minecraft:oak_sapling"
 			id: "18909429C6F9FE62"
 			rewards: [{
@@ -1106,7 +1109,7 @@
 				}
 			]
 			title: "Coke Bricks"
-			x: -2.5d
+			x: -2.0d
 			y: 3.0d
 		}
 		{
@@ -1257,7 +1260,7 @@
 				}
 				type: "item"
 			}]
-			x: -4.5d
+			x: -5.0d
 			y: 3.0d
 		}
 		{
@@ -1329,18 +1332,21 @@
 			y: 5.0d
 		}
 		{
-			dependencies: ["6C199C851704C4F1"]
+			dependencies: [
+				"6C199C851704C4F1"
+				"7829357FC39DE238"
+			]
 			id: "7989B6AD3A82642C"
 			shape: "pentagon"
 			subtitle: "How immersive could it possibly be"
 			tasks: [{
-				id: "1A1656F83847F5F7"
-				item: "immersiveengineering:circuit_table"
+				id: "1D1CDD25396EA903"
+				item: "immersiveengineering:workbench"
 				type: "item"
 			}]
 			title: "Immersive Engineering"
-			x: -5.0d
-			y: 6.0d
+			x: -3.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["167BE86E3DE69218"]
@@ -1354,20 +1360,6 @@
 			}]
 			x: -2.5d
 			y: 5.0d
-		}
-		{
-			dependencies: ["167BE86E3DE69218"]
-			id: "46483EEAF200D273"
-			shape: "pentagon"
-			subtitle: "Feel the pressure?"
-			tasks: [{
-				id: "0202AD0BABDC9051"
-				item: "pneumaticcraft:ingot_iron_compressed"
-				type: "item"
-			}]
-			title: "PneumaticCraft"
-			x: -3.5d
-			y: 6.0d
 		}
 		{
 			dependencies: ["19244793FD02F7FB"]
@@ -1418,22 +1410,6 @@
 			y: 1.5d
 		}
 		{
-			id: "4EAA5F5409E4DD3E"
-			rewards: [{
-				count: 16
-				id: "0818308C587CC162"
-				item: "farmersdelight:honey_glazed_ham"
-				type: "item"
-			}]
-			tasks: [{
-				id: "2A6E3EF661912B5C"
-				type: "checkmark"
-			}]
-			title: "Welcome"
-			x: -1.0d
-			y: -4.5d
-		}
-		{
 			dependencies: ["310E121655B252D7"]
 			icon: "littlelogistics:fishing_barge"
 			id: "228A42320F11D892"
@@ -1473,8 +1449,8 @@
 				}
 			]
 			title: "Oil up"
-			x: -5.0d
-			y: 4.0d
+			x: -4.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["693353D7EA1E0938"]
@@ -1522,14 +1498,33 @@
 			dependencies: ["112AC64D8100972C"]
 			id: "4EE5D9E70931437E"
 			subtitle: "You bear the mark... You are cursed!"
-			tasks: [{
-				id: "5D98AF13B0F808D5"
-				item: "eidolon:straw_effigy"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "5D98AF13B0F808D5"
+					item: "eidolon:straw_effigy"
+					type: "item"
+				}
+				{
+					id: "30D018A509E3C0A6"
+					item: "eidolon:wooden_altar"
+					type: "item"
+				}
+			]
 			title: "Dark Lord's Favor"
 			x: 4.0d
 			y: 2.0d
+		}
+		{
+			dependencies: ["167BE86E3DE69218"]
+			id: "6BD22F97D5168969"
+			shape: "pentagon"
+			tasks: [{
+				id: "61E64AB2DD4B19F7"
+				item: "pneumaticcraft:ingot_iron_compressed"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 6.0d
 		}
 	]
 	title: " 1 - Discovery"
