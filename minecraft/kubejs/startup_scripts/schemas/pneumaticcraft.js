@@ -58,14 +58,20 @@ function recipeSchema_pneumaticcraft(e, c) {
             new $RecipeSchema(
                 c.outputItem.key('result'),
                 pncrItemInput.key('input'),
-                c.anyString.key('program').alwaysWrite().optional('drill')
+                c.anyString.key('program') // this is just to default having the data in the recipe output
+                    .alwaysWrite()         // does not need to be set manually
+                    .optional('drill')
+                    .exclude()
             )
         )
         e.register('pneumaticcraft:assembly_laser',
             new $RecipeSchema(
                 c.outputItem.key('result'),
                 pncrItemInput.key('input'),
-                c.anyString.key('program').alwaysWrite().optional('laser')
+                c.anyString.key('program') // this is just to default having the data in the recipe output
+                    .alwaysWrite()         // does not need to be set manually
+                    .optional('laser')
+                    .exclude()
             )
         )
         e.register('pneumaticcraft:explosion_crafting',
