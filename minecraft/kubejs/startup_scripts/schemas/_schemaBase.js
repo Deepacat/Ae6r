@@ -1,6 +1,11 @@
 /// @ts-check
 // priority: 1000
 
+/* 
+Thanks to omgimanerd and https://github.com/omgimanerd/create-advanced-industries 
+For some schemas and recipe components to reference for schema related code in Ae6r
+*/
+
 const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
 const $RecipeComponentBuilder = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilder')
 const $RecipeComponent = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponent')

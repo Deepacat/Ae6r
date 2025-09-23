@@ -93,8 +93,8 @@ function recipeSchema_pneumaticcraft(e, c) {
         )
         e.register('pneumaticcraft:heat_frame_cooling',
             new $RecipeSchema(
-                pncrFluidInput.or(pncrItemInput).key('input'),
                 c.outputItem.key('result'),
+                pncrFluidInput.or(pncrItemInput).key('input'),
                 c.intNumber.key('max_temp').optional(0),
                 pncrBonusOutput.defaultOptional()
             )
