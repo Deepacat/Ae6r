@@ -126,22 +126,28 @@ StartupEvents.registry('fluid', event => {
         }
     ]
 
-    generalFluids.forEach((fluid) => {
+    for (let fluid of generalFluids) {
         if (fluid.type == 'thick') {
-            event.create(fluid.id).thickTexture(fluid.color).bucketColor(fluid.color)
+            event.create(fluid.id)
+                .thickTexture(fluid.color)
+                .bucketColor(fluid.color)
+                .tag(`forge:${fluid.id}`)
         } else if (fluid.type == 'thin') {
-            event.create(fluid.id).thinTexture(fluid.color).bucketColor(fluid.color)
+            event.create(fluid.id)
+                .thinTexture(fluid.color)
+                .bucketColor(fluid.color)
+                .tag(`forge:${fluid.id}`)
         } else if (fluid.type == 'custom') {
-            event
-                .create(fluid.id)
+            event.create(fluid.id)
                 .stillTexture(fluid.still)
                 .flowingTexture(fluid.flowing)
                 .bucketColor(fluid.color)
+                .tag(`forge:${fluid.id}`)
         } else {
             console.error('Invalid fluid registry type: ' + fluid.type)
         }
         if (fluid.display) {
             console.warn('Deprecated param used: `display`, please switch to language file(kubejs/lang/en_us.json).')
         }
-    })
+    }
 })

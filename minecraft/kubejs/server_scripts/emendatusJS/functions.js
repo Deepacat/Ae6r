@@ -150,11 +150,20 @@ function getFluid(materialName) {
     for (let mod of modFluidPriorities) {
         let tagprefix = mod == 'tconstruct' ? 'tconstruct' : 'forge'
         if (Fluid.exists(`${mod}:molten_${materialName}`)) {
-            return { stack: Fluid.of(`${mod}:molten_${materialName}`), tag: `${tagprefix}:molten_${materialName}` }
+            let f = { stack: Fluid.of(`${mod}:molten_${materialName}`) }
+            if (!Ingredient.of(`#${tagprefix}:molten_${materialName}`).empty) {
+                f.tag = `${tagprefix}:molten_${materialName}`
+            }
+            return f
         } else if (Fluid.exists(`${mod}:${materialName}`)) {
-            return { stack: Fluid.of(`${mod}:${materialName}`), tag: `${tagprefix}:${materialName}` }
+            let f = { stack: Fluid.of(`${mod}:${materialName}`) }
+            if (!Ingredient.of(`#${tagprefix}:${materialName}`).empty) {
+                f.tag = `${tagprefix}:${materialName}`
+            }
+            return f
         }
     }
+    return undefined
 }
 
 /**
