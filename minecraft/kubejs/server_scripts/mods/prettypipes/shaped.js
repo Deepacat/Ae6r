@@ -497,5 +497,9 @@ ServerEvents.recipes(e => {
         ' A ',
         'ABA',
         ' C '
-    ]).id('kubejs:prettypipes/shaped/high_fluid_retrieval_module')
+    ], {
+        A: '#forge:nuggets/bronze',
+        B: 'ppfluids:medium_fluid_retrieval_module',
+        C: '#forge:ingots/bronze'
+    }).id('kubejs:prettypipes/shaped/high_fluid_retrieval_module')
 })
