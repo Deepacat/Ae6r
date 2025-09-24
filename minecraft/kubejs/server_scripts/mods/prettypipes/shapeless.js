@@ -1,5 +1,12 @@
-onEvent('recipes', (event) => {
-    const id_prefix = 'enigmatica:base/prettypipes/shapeless/';
+ServerEvents.recipes(e => {
+    e.shapeless(Item.of('prettypipes:crafting_terminal'), [
+        'prettypipes:item_terminal',
+        'prettypipes:low_crafting_module',
+        'create:super_glue',
+        'minecraft:string',
+        'minecraft:string'
+    ]).id('kubejs:prettypipes/shapeless/crafting_terminal')
+
     const moduletype = [
         'prettypipes:low_extraction_module',
         'prettypipes:medium_extraction_module',
@@ -25,8 +32,7 @@ onEvent('recipes', (event) => {
         'ppfluids:medium_fluid_retrieval_module',
         'ppfluids:high_fluid_retrieval_module'
     ];
-
-    moduletype.forEach((module) => {
-        event.shapeless(module, [Item.of(module).ignoreNBT()]).id(`${id_prefix}${module.split(':')[1]}_clearnbt`);
-    });
-});
+    for (const module of moduletype) {
+        e.shapeless(module, [Item.of(module).weakNBT()]).id(`kubejs:prettypipes/shapeless/${module.split(':')[1]}_clearnbt`)
+    }
+})
