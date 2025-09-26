@@ -1,14 +1,12 @@
 // flutter right click interacting for shearing lush silk
-ItemEvents.entityInteracted(e => {
+ItemEvents.entityInteracted('alexsmobs:flutter', e => {
     let flutter = e.target
-    if (!flutter.type == 'alexsmobs:flutter') { return }
-
     // potentially a specific item later
     if (!e.item.hasTag('forge:shears')) { return }
 
     // check if adult
-    if (flutter.age != 0) { return }
-
+    if (flutter.nbt.Age != 0) { return }
+    
     if (flutter.nbt.Owner) {
         // This is due to alex mobs wiping shearing data when picked up in a pot
         e.player.tell(`Cannot shear a tamed flutter.`)
