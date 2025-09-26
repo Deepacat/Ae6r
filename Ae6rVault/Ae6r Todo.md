@@ -1,7 +1,9 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-
+- [ ] Find replacement for masticator boss or masticator scales
+- [ ] Add some sort of refined/infused dawnstone for embers pt2 in ch2
+	- [ ] Could used infused iron
 - [ ] Port remaining mod recipes
 	- [x] pneumaticcraft
 	- [ ] powah
@@ -12,6 +14,11 @@ Gameplay/Progression:
 	- [x] Create milling + crushing
 	- [x] Create washing
 	- [ ] Mekanism processing
+
+Recipe ideas:
+- [ ] Make catalytic plug pre alchemy (embers pt2) could be early wizreborn
+- [ ] Gate curvy pipes to post plastics (PNC plastics)
+- [ ] 1000 raw beef eternal beef sequence
 
 Polish/fixes:
 - [ ] Fix raw ore block smelting recipes being too quick (or remove them lmao)
