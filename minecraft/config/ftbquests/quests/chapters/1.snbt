@@ -1454,14 +1454,9 @@
 		}
 		{
 			dependencies: ["693353D7EA1E0938"]
-			icon: "botania:mana_pool"
+			icon: "botania:pure_daisy"
 			id: "6692965E713DD316"
 			tasks: [
-				{
-					id: "2D49387CE48904E3"
-					item: "botania:livingrock"
-					type: "item"
-				}
 				{
 					id: "38552370510D8643"
 					item: "botania:livingwood_log"

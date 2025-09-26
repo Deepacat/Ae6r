@@ -1,6 +1,7 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
+- [ ] Fix treated stick recipes (port from base stick_treated)
 - [ ] Find replacement for masticator boss or masticator scales
 - [ ] Add some sort of refined/infused dawnstone for embers pt2 in ch2
 	- [ ] Could used infused iron
