@@ -94,13 +94,14 @@ ServerEvents.recipes(e => {
         'immersiveengineering:crafting/component_steel',
         'immersiveengineering:crafting/concrete',
         'immersiveengineering:mixer/concrete',
+        'immersiveengineering:crafting/stick_steel',
+        'immersiveengineering:crafting/stick_aluminum',
+        'immersiveengineering:crafting/stick_iron',
         /immersiveengineering:crafting\/(coke|blast|alloy)brick/,
         /immersiveengineering:crafting\/ingot_\w+_to_storage_\w+/,
         /immersiveengineering:crafting\/ingot_\w+_to_nugget_\w+/,
         /immersiveengineering:crafting\/nugget_\w+_to_ingot_\w+/,
         /immersiveengineering:crafting\/storage_\w+_to_ingot_\w+/,
-        /immersiveengineering:crafting\/plate_/,
-        /immersiveengineering:crafting\/stick_/,
         /immersiveengineering:metalpress\/.*plate/,
         /immersiveengineering:metalpress\/.*rod/,
         /immersiveengineering:metalpress\/.*gear/,
@@ -214,7 +215,6 @@ ServerEvents.recipes(e => {
     // todo organize this LMAO (also move id removals to respective recipes...?)
     const recipeFilterRemovals = [
         // for now until I can decide how I want to use the mod or if at all
-        { mod: 'enderio' },
         { output: 'mekanism:sawdust', mod: 'mekanism', type: 'mekanism:sawing' },
 
         { output: 'botania:mana_powder', mod: 'botania' },

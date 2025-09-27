@@ -27,8 +27,7 @@ const modPriorities = [
     'undergarden',
     'biomeswevegone',
     'dungeons_plus',
-    'natures_spirit',
-    'enderio'
+    'natures_spirit'
 ]
 
 // priority of which mod output should come from, but for fluids
@@ -39,7 +38,8 @@ const modFluidPriorities = [
     'tconstruct',
     'tcintegrations',
     'embers',
-    'create'
+    'create',
+    'createaddition'
 ]
 
 // Used to determine which materials to unify
