@@ -2,7 +2,7 @@ ServerEvents.recipes(e => {
     e.remove({ id: "naturesaura:tree_ritual/nature_altar" })
     e.recipes.naturesaura.tree_ritual(
         'naturesaura:nature_altar', [
-        'kubejs:replaceme', 'kubejs:replaceme', 'naturesaura:token_joy', 'naturesaura:gold_leaf', 'thermal:ice_charge', 'thermal:lightning_charge', 'thermal:earth_charge', 'minecraft:fire_charge'
+        'kubejs:warding_stone', 'kubejs:warding_stone', 'naturesaura:token_joy', 'naturesaura:gold_leaf', 'thermal:ice_charge', 'thermal:lightning_charge', 'thermal:earth_charge', 'minecraft:fire_charge'
     ]).time(50).sapling('quark:yellow_blossom_sapling')
         .id('kubejs:naturesaura/tree_ritual/tree_ritual/nature_altar')
 
@@ -155,7 +155,7 @@ ServerEvents.recipes(e => {
     e.remove({ id: "naturesaura:tree_ritual/ancient_sapling" })
     e.recipes.naturesaura.tree_ritual(
         '2x naturesaura:ancient_sapling', [
-        'kubejs:replaceme', 'kubejs:replaceme', 'undergarden:veil_mushroom', 'kubejs:replaceme', 'undergarden:glowing_kelp', 'naturesaura:gold_leaf'
+        'aether_redux:crystal_fruit_sapling', 'aether:white_apple', 'undergarden:veil_mushroom', 'aether:enchanted_berry', 'undergarden:glitterkelp', 'naturesaura:gold_leaf'
     ]).time(20).sapling('quark:lavender_blossom_sapling')
         .id('kubejs:naturesaura/tree_ritual/tree_ritual/ancient_sapling')
 
