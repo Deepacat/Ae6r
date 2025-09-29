@@ -170,9 +170,9 @@ global.metal_mats = {
 }
 
 global.other_mats = {
-    obsidian: {
-        type: 'other', toolLvl: 'diamond', addFlags: ['dust'], delFlags: [],
-    }
+    obsidian: { type: 'other', toolLvl: 'diamond', addFlags: ['dust'], delFlags: [], },
+    radiant_dawnstone: { type: 'other', toolLvl: 'iron', addFlags: ['ingot', 'storage_block'], delFlags: [], }
+
 }
 
 global.emendatus_mats = Object.assign({},
@@ -206,7 +206,9 @@ global.emendatus_block_types = {
         replacer: '@_ore', tag: 'ores/', tags: ['forge:ores/@', 'forge:ores']
     },
     raw_block: {
-        replacer: 'raw_@_block', tag: 'storage_blocks/raw_', tags: ['forge:storage_blocks/raw_@', 'forge:storage_blocks/raw']
+        replacer: 'raw_@_block',
+        tag: 'storage_blocks/raw_',
+        tags: ['forge:storage_blocks/raw_@', 'forge:storage_blocks/raw']
     }
 }
 
