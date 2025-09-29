@@ -1,15 +1,15 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
-- [ ] Fix treated stick recipes (port from base stick_treated)
 - [ ] Find replacement for masticator boss or masticator scales
 - [ ] Add some sort of refined/infused dawnstone for embers pt2 in ch2
-	- [ ] Could used infused iron
+	- Could used infused iron
 - [ ] Port remaining mod recipes
 	- [x] pneumaticcraft
 	- [ ] powah
 	- [x] pretty pipes/ppfluids
 - [ ] Ponder resource gen mod reworking (splendid slimes/complicated bees)
+- [ ] Artifact recipes
 - [ ] Ore processing builders
 	- [ ] add more materials to emendatus along with potentially a new category for just ore processing additions (ore just add every oreproc item manually ig, probably aren't enough similarities for a general category)
 	- [x] Create milling + crushing
@@ -17,7 +17,7 @@ Gameplay/Progression:
 	- [ ] Mekanism processing
 
 Recipe ideas:
-- [ ] Make catalytic plug pre alchemy (embers pt2) could be early wizreborn
+- [ ] Make catalytic plug pre alchemy (embers pt2), could be early wizreborn
 - [ ] Gate curvy pipes to post plastics (PNC plastics)
 - [ ] 1000 raw beef eternal beef sequence
 
@@ -41,13 +41,16 @@ Polish/fixes:
 	- [ ] Arcane wood sapling transmute info
 
 Other:
-- [ ] Aether structure locators (like an ender eye for them)
+- [ ] Structure locators (like an ender eye for them)
+	- [ ] Aether dungeons
+	- [ ] Iron spells boss structures + ones with ancient knight (need cinder essence to make upgrade orb for wissen wand)
 - [ ] Diesel gens hammering / wirecutting recipe schemas (grouped bc theyre like the same thing)
 
-For completed tasks, put fully finished tasks (all subtasks done) at the top of Completed
+For completed tasks, put fully finished tasks (all subtasks done) at the top of Completed list below
 
 Completed
-- [x] Port natures aura re- 
+- [x] Fix treated stick recipes (port from base stick_treated)
+- [x] Port natures aura recipes
 - [x] Add alloy recipe builder to unification
 - [x] Flutter related: 
 	- [x] Make them more common and or add a summoning method, non automatable preferred
