@@ -203,15 +203,20 @@ function lightningRecipe(event, outputs, inputs, comment) {
  * @param {{ type: string; item: string; count: number; }[]} post
  * @param {any[]} inputs
  * @param {string} insideBlock
- * @param {string} id
  */
-function insideBlock(e, post, inputs, insideBlock, id) {
+function insideBlock(e, post, inputs, insideBlock) {
     let recipe = {}
     recipe.type = "lychee:item_inside"
     recipe.block_in = insideBlock
     recipe.item_in = inputs
     recipe.post = post
-    e.custom(recipe).id(`kubejs:lychee/inside_block/${id}`)
+    const r = e.custom(recipe)
+
+    return {
+        id: function (/** @type {string} */ customId) {
+            r.id(customId)
+        }
+    }
 }
 
 const allCrushTypes = [
