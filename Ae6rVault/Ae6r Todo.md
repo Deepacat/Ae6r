@@ -1,7 +1,19 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
+- [ ] Add the Archwood forest back to aether, make all da thermal blazes spawn in it!
+	- [ ] add biome back
+	- [ ] blazes
+- [ ] Consider adding "Gateways" mod
+	- Potentially useful for masticator shard replacement
+- [ ] Consider adding "Species" mod
+	- Adds cool mobs, could edit one to be hostile and be a masticator replacement
+	- Spirit mob thing could be used in aether to give ectoplasm
+	- Ghouls could be used in Undergarden/masticator gateway OR as the masticator replacement, although a much bigger and tankier one. They're quite scary as they give you a de-buff that makes you unable to eat food until exposed to daylight
 - [ ] Find replacement for masticator boss or masticator scales
+	- Could use gateway that spawns some beefy spooky mobs
+	- Could size up an existing enemy :P
+	- Find some other mechanic entirely
 - [ ] Add some sort of refined/infused dawnstone for embers pt2 in ch2
 	- Could used infused iron
 - [ ] Port remaining mod recipes
