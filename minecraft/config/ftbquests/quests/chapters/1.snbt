@@ -571,14 +571,26 @@
 				"636DAED3D9B024F4"
 				"2DCD916C4DBCF668"
 			]
+			icon: "wizards_reborn:arcane_workbench"
 			id: "155C0DE1EBE6F5D0"
 			shape: "pentagon"
 			subtitle: "Power of knowledge"
-			tasks: [{
-				id: "4E7284DAA2B05168"
-				item: "wizards_reborn:arcane_workbench"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "4E7284DAA2B05168"
+					item: "wizards_reborn:arcane_workbench"
+					type: "item"
+				}
+				{
+					id: "67E234261CF349E5"
+					item: {
+						Count: 1
+						id: "wizards_reborn:wissen_wand"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
 			title: "Wizards Reborn"
 			x: 2.0d
 			y: 6.0d
@@ -588,25 +600,33 @@
 				"2FE2EAE5D06AEA6E"
 				"69FF9D61737CF418"
 			]
-			icon: {
-				Count: 1
-				id: "wizards_reborn:wissen_wand"
-				tag: { }
-			}
+			icon: "ars_nouveau:scryers_oculus"
 			id: "636DAED3D9B024F4"
 			tasks: [
 				{
-					id: "0007A0FBE53E9309"
-					item: {
-						Count: 1
-						id: "wizards_reborn:wissen_wand"
-						tag: { }
-					}
+					id: "08DB90F151354CA1"
+					item: "ars_nouveau:scryers_oculus"
 					type: "item"
 				}
 				{
-					id: "182FFB405BCA9F09"
+					id: "75147788756F0DA4"
 					item: "irons_spellbooks:arcane_debris"
+					type: "item"
+				}
+				{
+					id: "7757192C22EA9357"
+					item: {
+						Count: 1
+						id: "wizards_reborn:arcane_wand"
+						tag: {
+							cooldown: 0
+							crystal: 0b
+							maxCooldown: 0
+							spell: ""
+							spellData: { }
+							wissen: 0
+						}
+					}
 					type: "item"
 				}
 			]
