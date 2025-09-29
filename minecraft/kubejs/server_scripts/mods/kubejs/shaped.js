@@ -211,4 +211,15 @@ ServerEvents.recipes(e => {
         A: 'aether_redux:gravitite_ingot',
         B: '#kubejs:aspectus_shards'
     }).id('kubejs:kubejs/shaped/aspectus_shard_block')
+
+    e.shaped('kubejs:aspectus_shard_block', [
+        'ACA',
+        'BDB',
+        'ACA'
+    ], {
+        A: 'aether_redux:gravitite_ingot',
+        B: '#kubejs:aspectus_shards',
+        C: 'architects_palette:sunmetal_brick',
+        D: 'irons_spellbooks:arcane_salvage'
+    }).id('kubejs:kubejs/shaped/aspectus_shard_block_alt')
 })
