@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "expert__bragging_rights"
 	group: "34B7FB260B6AEB81"
-	icon: "kubejs:disabled_recipe_indicator"
+	icon: "aether_redux:fieldsproot_sapling"
 	id: "0000000000000B69"
 	order_index: 4
 	quest_links: [ ]
@@ -656,7 +656,7 @@
 				"Once built, the inputs and outputs may be found within the structure; an entrance awaits on the side."
 			]
 			hide_until_deps_visible: true
-			icon: "minecraft:cherry_sapling"
+			icon: "aether_redux:fieldsproot_sapling"
 			id: "7C0943FD8F8A0D69"
 			tasks: [{
 				id: "0B1FB01E3D6A63F8"

@@ -3,7 +3,7 @@
 	default_quest_shape: ""
 	filename: "2"
 	group: "34B7FB260B6AEB81"
-	icon: "atmospheric:aspen_sapling"
+	icon: "wizards_reborn:arcane_wood_sapling"
 	id: "69FF3CC24ACCD0DA"
 	order_index: 2
 	quest_links: [
