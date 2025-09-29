@@ -49,12 +49,6 @@ ServerEvents.recipes(e => {
     ], 'kubejs:partial_alloybrick', 4)
         .id('kubejs:sequenced_assembly/alloybricks')
 
-    // e.recipes.create.sequenced_assembly(['integrateddynamics:cable'], 'kubejs:replaceme', [
-    //     e.recipes.create.filling('kubejs:replaceme', ['kubejs:replaceme', /* { fluid: undefined, toString: undefined } */]),
-    //     e.recipes.create.filling('kubejs:replaceme', ['kubejs:replaceme', /* { fluid: undefined, toString: undefined } */])
-    // ], 'kubejs:replaceme', 1)
-    //     .id('kubejs:sequenced_assembly/logic_cable')
-
     e.recipes.create.sequenced_assembly(['immersiveengineering:circuit_board'], 'immersiveengineering:insulating_glass', [
         e.recipes.create.deploying('immersiveengineering:insulating_glass', ['immersiveengineering:insulating_glass', '#forge:plates/copper']),
         e.recipes.create.deploying('immersiveengineering:insulating_glass', ['immersiveengineering:insulating_glass', 'powah:dielectric_paste'])
@@ -154,4 +148,12 @@ ServerEvents.recipes(e => {
         e.recipes.create.deploying('kubejs:partial_stim_pack', ['kubejs:partial_stim_pack', 'kubejs:replaceme'])
     ], 'kubejs:partial_stim_pack', 30)
         .id('kubejs:sequenced_assembly/stim_pack')
+
+    e.recipes.create.sequenced_assembly(['kubejs:treated_arcane_handle'], 'wizards_reborn:arcane_wood_branch', [
+        e.recipes.create.deploying('wizards_reborn:arcane_wood_branch', ['wizards_reborn:arcane_wood_branch', 'naturesaura:ancient_planks']),
+        e.recipes.create.filling('wizards_reborn:arcane_wood_branch', ['wizards_reborn:arcane_wood_branch', Fluid.of('immersiveengineering:creosote', 250)]),
+        e.recipes.create.filling('wizards_reborn:arcane_wood_branch', ['wizards_reborn:arcane_wood_branch', Fluid.of('starbunclemania:source_fluid', 250)]),
+        e.recipes.create.deploying('wizards_reborn:arcane_wood_branch', ['wizards_reborn:arcane_wood_branch', 'kubejs:leather_stripe']),
+    ], 'wizards_reborn:arcane_wood_branch', 4)
+        .id('kubejs:sequenced_assembly/treated_arcane_handle')
 })

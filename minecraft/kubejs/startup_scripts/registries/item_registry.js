@@ -1,8 +1,9 @@
 StartupEvents.registry('item', event => {
     const generalItems = [
         // placeholder item for mod items that were removed
-        'replaceme', // removed items from 1.16 e6e that need to be remade
+        'replaceme',
 
+        // removed items from 1.16 e6e that need to be remade
         'leather_stripe', // betterendforge
 
         'blaze_fiber', // ars nouveau
@@ -28,7 +29,6 @@ StartupEvents.registry('item', event => {
         'purple_rune',
         'magenta_rune',
         'pink_rune',
-        /* end placeholder items */
 
         // lootboxes
         'common_lootbox',
@@ -46,6 +46,7 @@ StartupEvents.registry('item', event => {
         'disabled_recipe_indicator',
 
         // misc ingredients
+        'treated_arcane_handle',
         'lush_silk',
         'observatory_lens',
         'coarse_lapis_lazuli_compound',
