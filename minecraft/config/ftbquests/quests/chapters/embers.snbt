@@ -22,7 +22,7 @@
 				type: "item"
 			}]
 			x: -3.0d
-			y: -1.5d
+			y: -2.5d
 		}
 		{
 			dependencies: ["3647B1704FF7952F"]
@@ -39,11 +39,11 @@
 			dependencies: ["76690B7C4203D15B"]
 			id: "3647B1704FF7952F"
 			tasks: [{
-				id: "2D5ACC66A3FAA707"
-				item: "embers:caminite_blend"
+				id: "76DD246660D308E6"
+				item: "embers:caminite_bricks"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -3.0d
 			y: -1.5d
 		}
 		{
@@ -258,8 +258,8 @@
 				item: "embers:mini_boiler"
 				type: "item"
 			}]
-			x: -5.5d
-			y: 1.5d
+			x: -5.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["6C07C3B2E18AA92C"]
@@ -269,8 +269,8 @@
 				item: "embers:catalytic_plug"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 1.5d
+			x: -7.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["579AF6A7E25E68A7"]
@@ -287,8 +287,8 @@
 					type: "item"
 				}
 			]
-			x: -6.5d
-			y: 1.5d
+			x: -6.0d
+			y: 2.5d
 		}
 		{
 			dependencies: ["7EE6B8AEFCDA0A93"]
@@ -473,6 +473,33 @@
 			]
 			x: -1.0d
 			y: 5.0d
+		}
+		{
+			id: "00A4E82DD2DDDE90"
+			tasks: [
+				{
+					id: "64E04F752FC4BCE3"
+					item: "embers:reservoir"
+					type: "item"
+				}
+				{
+					id: "06DD0F37958B97F3"
+					item: "embers:caminite_valve"
+					type: "item"
+				}
+				{
+					id: "20DD6248E2C08040"
+					item: "embers:caminite_gauge"
+					type: "item"
+				}
+				{
+					id: "04BFF7C96E0CB3CC"
+					item: "embers:caminite_ring"
+					type: "item"
+				}
+			]
+			x: -5.5d
+			y: -1.5d
 		}
 	]
 	title: "Embers"

@@ -215,10 +215,10 @@ ServerEvents.recipes(e => {
     e.remove({ id: "naturesaura:tree_ritual/ancient_sapling" })
     e.recipes.naturesaura.tree_ritual(
         '2x naturesaura:ancient_sapling', [
-        'naturesaura:gold_leaf', 'naturesaura:gold_leaf',
-        'undergarden:blisterberry', 'aether:enchanted_berry',
-        'undergarden:wigglewood_sapling', 'undergarden:veil_mushroom',
-        'aether_redux:crystal_fruit_sapling', 'aether_redux:shimmerstool'
+        'naturesaura:gold_leaf', 'naturesaura:gold_leaf', // N, S
+        'undergarden:blisterberry', 'aether:enchanted_berry', // W, E
+        'undergarden:wigglewood_sapling', 'aether_redux:shimmerstool', // NW, SE
+        'aether_redux:crystal_fruit_sapling', 'undergarden:veil_mushroom' // NE, SW
     ]).time(20).sapling('quark:lavender_blossom_sapling')
         .id('kubejs:naturesaura/tree_ritual/tree_ritual/ancient_sapling')
 
