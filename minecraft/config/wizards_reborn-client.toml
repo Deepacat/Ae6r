@@ -62,19 +62,19 @@
 #Numerical
 [numerical]
 	#Enable numerical wissen.
-	wissen = false
+	wissen = true
 	#Enable numerical cooldown.
-	cooldown = false
+	cooldown = true
 	#Enable show light name.
-	light = false
+	light = true
 	#Enable numerical experience.
-	experience = false
+	experience = true
 	#Enable numerical heat.
-	heat = false
+	heat = true
 	#Enable numerical fluid.
 	fluid = true
 	#Enable numerical steam.
-	steam = false
+	steam = true
 
 #Overlay
 [overlay]
