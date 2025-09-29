@@ -569,12 +569,12 @@
 		{
 			dependencies: [
 				"636DAED3D9B024F4"
-				"2DCD916C4DBCF668"
+				"33B76E3B4F7C4614"
 			]
 			icon: "wizards_reborn:arcane_workbench"
 			id: "155C0DE1EBE6F5D0"
 			shape: "pentagon"
-			subtitle: "Power of knowledge"
+			subtitle: "Knowledge is Power"
 			tasks: [
 				{
 					id: "4E7284DAA2B05168"
@@ -591,7 +591,7 @@
 					type: "item"
 				}
 			]
-			title: "Wizards Reborn"
+			title: "Culmination of Ancient Discovery"
 			x: 2.0d
 			y: 6.0d
 		}
@@ -630,6 +630,7 @@
 					type: "item"
 				}
 			]
+			title: "Scrying for Ancient Metals"
 			x: 3.0d
 			y: 5.5d
 		}
@@ -640,18 +641,13 @@
 			]
 			icon: "naturesaura:wood_stand"
 			id: "19244793FD02F7FB"
-			tasks: [
-				{
-					id: "65719D81ADF9532C"
-					item: "naturesaura:wood_stand"
-					type: "item"
-				}
-				{
-					id: "36354AF0C990936B"
-					item: "naturesaura:ancient_log"
-					type: "item"
-				}
-			]
+			tasks: [{
+				count: 8L
+				id: "65719D81ADF9532C"
+				item: "naturesaura:wood_stand"
+				type: "item"
+			}]
+			title: "Natural Exchange"
 			x: 0.0d
 			y: 5.0d
 		}
@@ -671,7 +667,7 @@
 					type: "item"
 				}
 			]
-			title: "Brilliance Of Nature"
+			title: "Brilliance of Nature"
 			x: 1.0d
 			y: 4.5d
 		}
@@ -870,13 +866,12 @@
 			dependencies: ["69FF9D61737CF418"]
 			id: "68EB68D7A1CC783F"
 			shape: "pentagon"
-			subtitle: "Is this slavery?"
 			tasks: [{
 				id: "662DCA04AE47F996"
 				item: "occultism:chalk_white_impure"
 				type: "item"
 			}]
-			title: "Occultism"
+			title: "Otherworldian Markings"
 			x: 4.0d
 			y: 6.0d
 		}
@@ -1488,29 +1483,13 @@
 					type: "item"
 				}
 			]
+			title: "Purity Blooms"
 			x: 0.0d
 			y: 4.0d
 		}
 		{
-			dependencies: ["19244793FD02F7FB"]
-			id: "2DCD916C4DBCF668"
-			tasks: [
-				{
-					id: "785E75AB8E22F2EA"
-					title: "ancient wood rod, treated with a fluid maybe creosote,\\n wrapped in leather stripes,\\n BAPTIZED in source fluid"
-					type: "checkmark"
-				}
-				{
-					id: "51DBA8BC6090CE19"
-					item: "naturesaura:ancient_stick"
-					type: "item"
-				}
-			]
-			x: 1.0d
-			y: 5.5d
-		}
-		{
 			dependencies: ["112AC64D8100972C"]
+			icon: "eidolon:codex"
 			id: "4EE5D9E70931437E"
 			subtitle: "You bear the mark... You are cursed!"
 			tasks: [
@@ -1540,6 +1519,26 @@
 			}]
 			x: -3.5d
 			y: 6.0d
+		}
+		{
+			dependencies: ["19244793FD02F7FB"]
+			icon: "naturesaura:ancient_sapling"
+			id: "33B76E3B4F7C4614"
+			tasks: [
+				{
+					id: "7A96DD6ECFFB8A5C"
+					item: "naturesaura:ancient_sapling"
+					type: "item"
+				}
+				{
+					id: "34C8D6971DAED598"
+					item: "kubejs:treated_arcane_handle"
+					type: "item"
+				}
+			]
+			title: "Bark of Forgotten Groves"
+			x: 1.0d
+			y: 5.5d
 		}
 	]
 	title: " 1 - Discovery"
