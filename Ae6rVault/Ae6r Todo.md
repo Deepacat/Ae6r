@@ -40,22 +40,32 @@ Polish/fixes:
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
 - [ ] move the if else abomination in my (deepas) embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
 - [ ] gourmand dynamo recipe (waste incinerator?)
-- [ ] Ponder scenes/guideme/tooltips 
-	- [ ] Ember oven multiblock
-		- [ ] Multipart tooltips (receptor/dual access)
-	- [ ] Aether portal multiblock
-	- [ ] Undergarten portal multiblock
-	- [ ] wizards reborn wissen arcane debris scanning info
-	- [ ] flareblossom finding tip (gold aether dungeon)
-	- [ ] Soul shard obtaining info
-	- [ ] Holy/unholy symbol obtaining info
-	- [ ] Eidolon chants info
-	- [ ] Arcane wood sapling transmute info
+
+Ponder scenes/GuideME/tooltips:
+- [ ] Ember oven multiblock
+	- [ ] Multipart tooltips (receptor/dual access)
+- [ ] Embers alchemy ponder
+- [ ] Ritual of the forest ponder ponder
+- [ ] Aether portal multiblock ponder
+- [ ] Undergarden portal multiblock ponder
+- [ ] wizards reborn Wissen arcane debris scanning ponder
+- [ ] arcane debris transmute mining ponder
+- [ ] Flareblossom finding tip (gold aether dungeon)
+- [ ] Soul shard obtaining ponder
+- [ ] Holy/unholy symbol obtaining ponder
+- [ ] Eidolon chants ponder
+- [ ] Arcane wood sapling transmute ponder
+- [ ] Crystal sapling finding and fortune ponder
+	- Found on mini floating islands around the aether, rare to drop leaves without using fortune on them
+- [ ] Shimmerstool grown by bonemeal in certain biomes ponder
+- [ ] Veiled mushroom found in etc biome ponder
+- [ ] Aether blueberry biome ponder
+- [ ] Blister berry in smog spires biome
 
 Other:
 - [ ] Structure locators (like an ender eye for them)
 	- [ ] Aether dungeons
-	- [ ] Iron spells boss structures + ones with ancient knight (need cinder essence to make upgrade orb for wissen wand)
+	- [ ] Iron spells boss structures + ones with ancient knight (need cinder essence to make upgrade orb for Wissen wand)
 - [ ] Diesel gens hammering / wirecutting recipe schemas (grouped bc theyre like the same thing)
 
 For completed tasks, put fully finished tasks (all subtasks done) at the top of Completed list below
