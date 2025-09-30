@@ -1,0 +1,89 @@
+// Thanks to Liopyu in the KubeJS discord for structure locating
+// https://discord.com/channels/303440391124942858/1375491432630059008
+
+// wands that can be used for structure locating
+const locatingWands = [
+    'wizards_reborn:wissen_wand',
+    'wizards_reborn:arcane_wand'
+]
+
+// structures that can be located and catalyst offhand item
+const locators = {
+    'minecraft:fire_charge': 'irons_spellbooks:ancient_battleground',
+}
+
+let ServerLevel = Java.loadClass("net.minecraft.server.level.ServerLevel")
+let BlockPos = Java.loadClass("net.minecraft.core.BlockPos")
+let ChunkPos = Java.loadClass("net.minecraft.world.level.ChunkPos")
+let SectionPos = Java.loadClass("net.minecraft.core.SectionPos")
+let ResourceLocation = Java.loadClass("net.minecraft.resources.ResourceLocation")
+let Registries = Java.loadClass("net.minecraft.core.registries.Registries")
+let HolderSet = Java.loadClass("net.minecraft.core.HolderSet")
+let Holder = Java.loadClass("net.minecraft.core.Holder")
+
+ItemEvents.rightClicked(e => {
+    if (!(e.level instanceof ServerLevel)) return
+
+    let offhand = e.player.offHandItem
+    let mainhand = e.player.mainHandItem
+
+    if (!locatingWands.includes(mainhand.id)) return
+    if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) return
+    if (!locators[offhand.id]) return
+
+    if (e.hand != 'MAIN_HAND') {
+        e.cancel()
+        return
+    }
+
+    let registryAccess = e.level.registryAccess()
+    let structureRegistry = registryAccess.registryOrThrow(Registries.STRUCTURE)
+    let structureKey = structureRegistry.getResourceKey(structureRegistry.get(locators[offhand.id])).get()
+    let structureHolder = structureRegistry.getHolderOrThrow(structureKey)
+
+    if (!structureHolder) { e.player.tell("Structure not found"); return }
+
+    let structure = structureHolder.get()
+    let holderSet = HolderSet.direct([structureHolder])
+    let origin = e.player.getPos()
+
+    let generator = e.level.getChunkSource().getGenerator()
+    let result = generator.findNearestMapStructure(e.level, holderSet, origin, 100, false)
+
+    if (result != null) {
+        let pos = result.getFirst()
+        let chunkPos = new ChunkPos(pos)
+        let sectionPos = SectionPos.of(chunkPos, e.level.getMinSection())
+        let chunk = e.level.getChunk(chunkPos.x, chunkPos.z)
+
+        let start = e.level.structureManager().getStartForStructure(sectionPos, structure, chunk)
+        if (start && start.isValid()) {
+            let piece = start.getPieces()[0]
+            let { x, y, z } = piece.locatorPosition
+
+            let startVec = { x: e.player.pos.x(), y: e.player.pos.y(), z: e.player.pos.z() }
+            let endVec = { x: x + 0.5, y: y + 0.5, z: z + 0.5 }
+            let dir = { x: endVec.x - startVec.x, y: endVec.y - startVec.y, z: endVec.z - startVec.z }
+            let distance = Math.sqrt(dir.x * dir.x + dir.y * dir.y + dir.z * dir.z)
+            let norm = { x: dir.x / distance, y: dir.y / distance, z: dir.z / distance }
+
+            let distanceStep = 3 // Distance between each particle
+            let steps = Math.ceil(distance / distanceStep)
+            let maxSteps = Math.min(steps, 20)
+            let ticks = 0
+
+            for (let i = 0; i <= maxSteps; i++) {
+                let px = startVec.x + norm.x * i * distanceStep
+                let py = startVec.y + norm.y * i * distanceStep
+                let pz = startVec.z + norm.z * i * distanceStep
+                e.server.scheduleInTicks(ticks, () => {
+                    e.level.spawnParticles("embers:star 0.29 0.62 0.98 5", false, px, py, pz, 0, 0, 0, 5, 0.001)
+                })
+                ticks += 5
+            }
+        }
+    } else {
+        e.player.tell("No structure found nearby")
+    }
+    e.cancel()
+})
