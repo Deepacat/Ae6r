@@ -1,5 +1,5 @@
 // locating arcane debris with wissen wand
-const $BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
+let $BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 
 ItemEvents.firstRightClicked(e => {
     if (e.hand != 'MAIN_HAND') { return }
