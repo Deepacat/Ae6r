@@ -6,7 +6,7 @@ ServerEvents.recipes(e => {
         'D  '
     ], {
         A: '#forge:ingots/arcane_gold',
-        B: ['minecraft:conduit', 'kubejs:cognito_aspectus_shard'],
+        B: ['minecraft:conduit', 'kubejs:cognitio_aspectus_shard'],
         C: 'wizards_reborn:arcane_wood_branch',
         D: '#forge:storage_blocks/arcane_gold'
     }).id('kubejs:wizards_reborn/shaped/arcane_wand')
