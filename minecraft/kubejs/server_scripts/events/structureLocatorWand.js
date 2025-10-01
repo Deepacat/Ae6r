@@ -2,14 +2,14 @@
 // https://discord.com/channels/303440391124942858/1375491432630059008
 
 // wands that can be used for structure locating
-const locatingWands = [
+let locatingWands = [
     'wizards_reborn:wissen_wand',
     'wizards_reborn:arcane_wand'
 ]
 
 // structures that can be located and catalyst offhand item
-const locators = {
-    'minecraft:fire_charge': 'irons_spellbooks:ancient_battleground',
+let locators = {
+    'ars_nouveau:fire_essence': 'irons_spellbooks:ancient_battleground',
 }
 
 let ServerLevel = Java.loadClass("net.minecraft.server.level.ServerLevel")
@@ -23,6 +23,7 @@ let Holder = Java.loadClass("net.minecraft.core.Holder")
 
 ItemEvents.rightClicked(e => {
     if (!(e.level instanceof ServerLevel)) return
+    if (e.hand == 'OFF_HAND') return
 
     let offhand = e.player.offHandItem
     let mainhand = e.player.mainHandItem
@@ -30,11 +31,6 @@ ItemEvents.rightClicked(e => {
     if (!locatingWands.includes(mainhand.id)) return
     if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) return
     if (!locators[offhand.id]) return
-
-    if (e.hand != 'MAIN_HAND') {
-        e.cancel()
-        return
-    }
 
     let registryAccess = e.level.registryAccess()
     let structureRegistry = registryAccess.registryOrThrow(Registries.STRUCTURE)
@@ -67,9 +63,9 @@ ItemEvents.rightClicked(e => {
             let distance = Math.sqrt(dir.x * dir.x + dir.y * dir.y + dir.z * dir.z)
             let norm = { x: dir.x / distance, y: dir.y / distance, z: dir.z / distance }
 
-            let distanceStep = 3 // Distance between each particle
+            let distanceStep = 3
             let steps = Math.ceil(distance / distanceStep)
-            let maxSteps = Math.min(steps, 20)
+            let maxSteps = Math.min(steps, 10)
             let ticks = 0
 
             for (let i = 0; i <= maxSteps; i++) {
@@ -78,9 +74,16 @@ ItemEvents.rightClicked(e => {
                 let pz = startVec.z + norm.z * i * distanceStep
                 e.server.scheduleInTicks(ticks, () => {
                     e.level.spawnParticles("embers:star 0.29 0.62 0.98 5", false, px, py, pz, 0, 0, 0, 5, 0.001)
+                    e.level.playSound(null, px, py, pz,
+                        "wizards_reborn:arcanum_dust_transmutation", "blocks", 1,
+                        Math.random() * (1.2 - 0.8) + 0.8
+                    )
                 })
                 ticks += 5
             }
+            e.player.swing()
+            offhand.count--
+            e.player.addItemCooldown(mainhand, 20 * 15)
         }
     } else {
         e.player.tell("No structure found nearby")
