@@ -10,7 +10,7 @@ ServerEvents.recipes(e => {
         
     e.remove({ id: 'irons_spellbooks:arcane_ingot' })
     e.recipes.mbd2.ember_oven()
-        .inputItems('8x irons_spellbooks:arcane_dust')
+        .inputItems('4x irons_spellbooks:arcane_essence', '#forge:ingots/amethyst_bronze')
         .inputFluids(Fluid.of('starbunclemania:source_fluid', 50))
         .perTick(t => t.inputEmber(1))
         .outputItems('irons_spellbooks:arcane_ingot')
