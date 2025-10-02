@@ -1,0 +1,26 @@
+
+["Media Amounts"]
+	#How much media a single Amethyst Dust item is worth
+	#Range: 0 ~ 2147483647
+	dustMediaAmount = 10000
+	#How much media a single Amethyst Shard item is worth
+	#Range: 0 ~ 2147483647
+	shardMediaAmount = 50000
+	#How much media a single Charged Amethyst Crystal item is worth
+	#Range: 0 ~ 2147483647
+	chargedCrystalMediaAmount = 100000
+	#How many points of media a half-heart is worth when casting from HP
+	#Range: 0.0 ~ Infinity
+	mediaToHealthRate = 10000.0
+
+[Cooldowns]
+	#Cooldown in ticks of a cypher
+	#Range: > 0
+	cypherCooldown = 8
+	#Cooldown in ticks of a trinket
+	#Range: > 0
+	trinketCooldown = 5
+	#Cooldown in ticks of a artifact
+	#Range: > 0
+	artifactCooldown = 3
+

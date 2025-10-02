@@ -264,6 +264,17 @@
         "value": 100
       }
     },
+    "reach-entity-attributes:reach": {
+      "enabled": false,
+      "min": {
+        "default": -1024,
+        "value": -1024
+      },
+      "max": {
+        "default": 1024,
+        "value": 1024
+      }
+    },
     "irons_spellbooks:evocation_magic_resist": {
       "enabled": false,
       "min": {
@@ -405,6 +416,17 @@
       "max": {
         "default": 1024,
         "value": 1024
+      }
+    },
+    "constructs_casting:slime_magic_resist": {
+      "enabled": false,
+      "min": {
+        "default": -100,
+        "value": -100
+      },
+      "max": {
+        "default": 100,
+        "value": 100
       }
     },
     "irons_spellbooks:lightning_spell_power": {
@@ -737,6 +759,17 @@
         "value": 1000
       }
     },
+    "hexcasting:grid_zoom": {
+      "enabled": false,
+      "min": {
+        "default": 0.5,
+        "value": 0.5
+      },
+      "max": {
+        "default": 4,
+        "value": 4
+      }
+    },
     "tconstruct:generic.bad_effect_duration_multiplier": {
       "enabled": false,
       "min": {
@@ -847,6 +880,17 @@
         "value": 1
       }
     },
+    "hexcasting:scry_sight": {
+      "enabled": false,
+      "min": {
+        "default": 0,
+        "value": 0
+      },
+      "max": {
+        "default": 1,
+        "value": 1
+      }
+    },
     "attributeslib:fire_damage": {
       "enabled": false,
       "min": {
@@ -946,6 +990,17 @@
         "value": 10
       }
     },
+    "reach-entity-attributes:attack_range": {
+      "enabled": false,
+      "min": {
+        "default": -1024,
+        "value": -1024
+      },
+      "max": {
+        "default": 1024,
+        "value": 1024
+      }
+    },
     "tinkersjewelry:subspace": {
       "enabled": false,
       "min": {
@@ -973,6 +1028,17 @@
       "min": {
         "default": 1,
         "value": 1
+      },
+      "max": {
+        "default": 100,
+        "value": 100
+      }
+    },
+    "constructs_casting:slime_spell_power": {
+      "enabled": false,
+      "min": {
+        "default": -100,
+        "value": -100
       },
       "max": {
         "default": 100,

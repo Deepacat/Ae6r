@@ -1,0 +1,6 @@
+{
+	"maxMatrixSize": 144,
+	"maxStringLength": 1728,
+	"setBlockStringCost": 0.01,
+	"nameCost": 0.01
+}

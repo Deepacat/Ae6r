@@ -1990,6 +1990,43 @@
             ]
         },
         {
+            "pakku_id": "JZteO1qAgo7U9J1I",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "cardinal-components-api"
+            },
+            "name": {
+                "curseforge": "Cardinal Components API"
+            },
+            "id": {
+                "curseforge": "318449"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "cardinal-components-api-5.2.3.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "fabric"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6064/429/cardinal-components-api-5.2.3.jar",
+                    "id": "6064429",
+                    "parent_id": "318449",
+                    "hashes": {
+                        "sha1": "d0d687d8fc3f367bf696fa0059bccdf0591c51f4",
+                        "md5": "b902397d35fbbf6df232f46fb483024a"
+                    },
+                    "required_dependencies": [],
+                    "size": 228709,
+                    "date_published": "2025-01-08T01:33:51.737Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "DZQ8vkSpYRuAA45u",
             "type": "MOD",
             "slug": {
@@ -2633,6 +2670,83 @@
                     "required_dependencies": [],
                     "size": 1781523,
                     "date_published": "2025-09-16T22:05:00.123Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "EO4KcnkJE38b3cqu",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "connector-extras"
+            },
+            "name": {
+                "curseforge": "Connector Extras"
+            },
+            "id": {
+                "curseforge": "913445"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "ConnectorExtras-1.11.2+1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5490/637/ConnectorExtras-1.11.2+1.20.1.jar",
+                    "id": "5490637",
+                    "parent_id": "913445",
+                    "hashes": {
+                        "sha1": "9336db4e6ce458bccf7724c039f0371e822397ae",
+                        "md5": "6a79978270b2aa5ddc42c2be4f4d73a7"
+                    },
+                    "required_dependencies": [
+                        "890127"
+                    ],
+                    "size": 182464,
+                    "date_published": "2024-06-30T22:11:23.003Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "VbOr7RYGiLT64OhC",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "constructs-casting"
+            },
+            "name": {
+                "curseforge": "Construct's Casting"
+            },
+            "id": {
+                "curseforge": "1000007"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "constructs_casting-1.3.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6780/396/constructs_casting-1.3.0.jar",
+                    "id": "6780396",
+                    "parent_id": "1000007",
+                    "hashes": {
+                        "sha1": "8e5f89ee5f9a05dad87e702a6071c0431cfd84fe",
+                        "md5": "557b6b6254d6519b8f5d7ceb3d52eb37"
+                    },
+                    "required_dependencies": [
+                        "855414",
+                        "74072"
+                    ],
+                    "size": 759150,
+                    "date_published": "2025-07-17T19:55:07.513Z"
                 }
             ]
         },
@@ -4228,42 +4342,6 @@
             ]
         },
         {
-            "pakku_id": "8Zj5VGlvFNzjbRpR",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "ender-io"
-            },
-            "name": {
-                "curseforge": "Ender IO"
-            },
-            "id": {
-                "curseforge": "64578"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "EnderIO-1.20.1-6.2.15-beta-all.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/7004/92/EnderIO-1.20.1-6.2.15-beta-all.jar",
-                    "id": "7004092",
-                    "parent_id": "64578",
-                    "hashes": {
-                        "sha1": "05f569ba82d0707fb2e92ed06b63976e9e8d89a1",
-                        "md5": "286e8d4cfeaf3418a4db66527e1a07c3"
-                    },
-                    "required_dependencies": [],
-                    "size": 8086926,
-                    "date_published": "2025-09-16T20:22:12.957Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "vh7eiGVp20zCjr3j",
             "type": "MOD",
             "slug": {
@@ -5066,6 +5144,48 @@
             ]
         },
         {
+            "pakku_id": "KxZtN2BrSU0HjwBe",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fabric-language-kotlin"
+            },
+            "name": {
+                "curseforge": "Fabric Language Kotlin"
+            },
+            "id": {
+                "curseforge": "308769"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fabric-language-kotlin-1.13.6+kotlin.2.2.20.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.5",
+                        "1.20.3",
+                        "1.20.1",
+                        "1.20",
+                        "1.20.6",
+                        "1.20.4"
+                    ],
+                    "loaders": [
+                        "fabric"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6985/480/fabric-language-kotlin-1.13.6+kotlin.2.2.20.jar",
+                    "id": "6985480",
+                    "parent_id": "308769",
+                    "hashes": {
+                        "sha1": "05e9cc4108da5b50735fa6d8a79a18fcd5310d82",
+                        "md5": "c1d19e5d8b325b55c11c767468005aa2"
+                    },
+                    "required_dependencies": [],
+                    "size": 7479598,
+                    "date_published": "2025-09-11T07:46:53.780Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "BhJCb988zdIYYhVW",
             "type": "MOD",
             "slug": {
@@ -5525,6 +5645,42 @@
             ]
         },
         {
+            "pakku_id": "hWnbicJbLB2dHcga",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "forgified-fabric-api"
+            },
+            "name": {
+                "curseforge": "Forgified Fabric API"
+            },
+            "id": {
+                "curseforge": "889079"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "fabric-api-0.92.6+1.11.14+1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6885/853/fabric-api-0.92.6+1.11.14+1.20.1.jar",
+                    "id": "6885853",
+                    "parent_id": "889079",
+                    "hashes": {
+                        "sha1": "285c22b2567b9fdf98ef9808eceb5557de9611d3",
+                        "md5": "2859d401e221e94acf0b48c5f7efa50b"
+                    },
+                    "required_dependencies": [],
+                    "size": 3065813,
+                    "date_published": "2025-08-14T14:02:34.270Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "dnUtkRHzpJ7PMLJQ",
             "type": "MOD",
             "slug": {
@@ -5941,6 +6097,82 @@
             ]
         },
         {
+            "pakku_id": "S3buZVtttKlfwA2Q",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "hexcasting"
+            },
+            "name": {
+                "curseforge": "Hex Casting"
+            },
+            "id": {
+                "curseforge": "569849"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "hexcasting-forge-1.20.1-0.11.2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/5937/33/hexcasting-forge-1.20.1-0.11.2.jar",
+                    "id": "5937033",
+                    "parent_id": "569849",
+                    "hashes": {
+                        "sha1": "05f39e56900906baae0587e20958bc03e89c90e6",
+                        "md5": "dc40b464650d18571bafccab716823f0"
+                    },
+                    "required_dependencies": [],
+                    "size": 3695248,
+                    "date_published": "2024-11-25T19:26:55.367Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "wM873EGOXm3c7j9g",
+            "type": "RESOURCE_PACK",
+            "slug": {
+                "curseforge": "ie-reimmersed"
+            },
+            "name": {
+                "curseforge": "IE: Reimmersed"
+            },
+            "id": {
+                "curseforge": "1354996"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "IE Reimmersed v1.0 Forge.zip",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.5",
+                        "1.20.3",
+                        "1.20.1",
+                        "1.20",
+                        "1.20.6",
+                        "1.20.4"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7041/824/IE Reimmersed v1.0 Forge.zip",
+                    "id": "7041824",
+                    "parent_id": "1354996",
+                    "hashes": {
+                        "sha1": "7f2dfa57fa0abd5484cf53835f2de43ac2d4ef0a",
+                        "md5": "2daa6287ec0c0626d8264b07332204f7"
+                    },
+                    "required_dependencies": [],
+                    "size": 1447726,
+                    "date_published": "2025-09-28T10:45:38.587Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "D7vEjUSpkWpRWVWx",
             "type": "MOD",
             "slug": {
@@ -6165,6 +6397,44 @@
                     ],
                     "size": 4528434,
                     "date_published": "2025-06-07T18:03:29.540Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "yAGOeVWJDWjskZVq",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "inline"
+            },
+            "name": {
+                "curseforge": "Inline"
+            },
+            "id": {
+                "curseforge": "971167"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "inline-forge-1.20.1-1.2.2.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6556/850/inline-forge-1.20.1-1.2.2.jar",
+                    "id": "6556850",
+                    "parent_id": "971167",
+                    "hashes": {
+                        "sha1": "f19ae88f41256a74eed7b08b434d5c4695aaa6dd",
+                        "md5": "a97f6a24addd875751a33912e92bfa34"
+                    },
+                    "required_dependencies": [
+                        "348521"
+                    ],
+                    "size": 375864,
+                    "date_published": "2025-05-22T21:56:00.910Z"
                 }
             ]
         },
@@ -9497,6 +9767,42 @@
             ]
         },
         {
+            "pakku_id": "z2rStakVqnBnFeMD",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "paucal"
+            },
+            "name": {
+                "curseforge": "PAUCAL"
+            },
+            "id": {
+                "curseforge": "597824"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "paucal-0.6.0+1.20.1-forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://edge.forgecdn.net/files/5687/7/paucal-0.6.0+1.20.1-forge.jar",
+                    "id": "5687007",
+                    "parent_id": "597824",
+                    "hashes": {
+                        "sha1": "360a748d33bc23674399781992489e10e613e5ea",
+                        "md5": "7cec020efb35ae268869ca4490c9276d"
+                    },
+                    "required_dependencies": [],
+                    "size": 283568,
+                    "date_published": "2024-09-02T17:16:38.997Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "iK3FhRd5FLEOx2mF",
             "type": "MOD",
             "slug": {
@@ -11126,6 +11432,47 @@
                     ],
                     "size": 713920,
                     "date_published": "2025-07-06T11:05:51.170Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "f00Q3ep7u2DgtSqa",
+            "pakku_links": [
+                "hWnbicJbLB2dHcga"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "sinytra-connector"
+            },
+            "name": {
+                "curseforge": "Sinytra Connector"
+            },
+            "id": {
+                "curseforge": "890127"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Connector-1.0.0-beta.46+1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/5761/411/Connector-1.0.0-beta.46+1.20.1.jar",
+                    "id": "5761411",
+                    "parent_id": "890127",
+                    "hashes": {
+                        "sha1": "4c65f7cec969cb6c2e39d0b06c9be28e72fe370d",
+                        "md5": "3c07e0a25c1921da7586c0290c72ba86"
+                    },
+                    "required_dependencies": [
+                        "889079"
+                    ],
+                    "size": 5043384,
+                    "date_published": "2024-09-27T11:10:59.270Z"
                 }
             ]
         },
