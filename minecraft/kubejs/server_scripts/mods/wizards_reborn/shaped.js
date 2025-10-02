@@ -17,8 +17,8 @@ ServerEvents.recipes(e => {
         ' CA',
         'D  '
     ], {
-        A: 'irons_spellbooks:upgrade_orb',
-        B: '#forge:storage_blocks/arcanum',
+        A: '#forge:storage_blocks/arcanum',
+        B: 'irons_spellbooks:upgrade_orb',
         C: 'wizards_reborn:arcane_wand',
         D: 'kubejs:treated_arcane_handle'
     }).id('kubejs:wizards_reborn/shaped/wissen_wand')
