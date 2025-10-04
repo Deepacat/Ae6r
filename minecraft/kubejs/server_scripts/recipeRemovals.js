@@ -74,8 +74,6 @@ ServerEvents.recipes(e => {
         /embers:melting\/ingots/,
         /embers:melting\/nuggets/,
         /embers:melting\/storage_blocks/,
-        /embers:melting\/raw_materials/,
-        /embers:melting\/ores/,
 
         // move to nuke
         'eidolon:crucible',

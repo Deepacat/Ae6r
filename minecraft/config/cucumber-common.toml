@@ -2,7 +2,7 @@
 #General configuration options.
 [General]
 	#Mod ids (in order) to prioritize using items for when generating the cucumber-tags.json file.
-	modTagPriorities = ["minecraft", "emendatus", "kubejs", "thermal", "create", "mekanism", "embers", "tconstruct", "tcintegrations", "immersiveengineering", "pneumaticcraft", "occultism", "industrialforegoing", "botania", "ars_nouveau", "quark", "pedestals", "appliedenergistics", "bloodmagic", "wizards_reborn", "eidolon", "mythicbotany", "undergarden", "miniutilities"]
+	modTagPriorities = ["minecraft", "emendatus", "kubejs", "thermal", "tconstruct", "tcintegrations", "create", "mekanism", "botania", "ars_nouveau", "immersiveengineering", "embers", "pneumaticcraft", "occultism", "industrialforegoing", "quark", "pedestals", "appliedenergistics", "bloodmagic", "wizards_reborn", "eidolon", "mythicbotany", "undergarden", "biomeswevegone", "dungeons_plus", "natures_spirit"]
 	#If enabled, any tags in the cucumber-tags.json file set to items that don't exist will be refreshed if possible.
 	autoRefreshTagOptions = true
 

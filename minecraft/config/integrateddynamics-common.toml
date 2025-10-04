@@ -113,7 +113,7 @@
 		#The maximum values that Part Offset items will have when dropped from a broken part.
 		enchancementOffsetPartDropValue = 4
 		#Priority list of mod id's when determining tag-based recipe outputs.
-		recipeTagOutputModPriorities = ["minecraft", "emendatus", "kubejs", "thermal", "create", "mekanism", "embers", "tconstruct", "tcintegrations", "immersiveengineering", "pneumaticcraft", "occultism", "industrialforegoing", "botania", "ars_nouveau", "quark", "pedestals", "appliedenergistics", "bloodmagic", "wizards_reborn", "eidolon", "mythicbotany", "undergarden", "miniutilities"]
+		recipeTagOutputModPriorities = ["minecraft", "emendatus", "kubejs", "thermal", "tconstruct", "tcintegrations", "create", "mekanism", "botania", "ars_nouveau", "immersiveengineering", "embers", "pneumaticcraft", "occultism", "industrialforegoing", "quark", "pedestals", "appliedenergistics", "bloodmagic", "wizards_reborn", "eidolon", "mythicbotany", "undergarden", "biomeswevegone", "dungeons_plus", "natures_spirit"]
 		#The default update frequency in ticks to use for new parts.
 		defaultPartUpdateFreq = 1
 		#The NBT tags that are not allowed to be read by displaying NBT tags or performing operations on them.
