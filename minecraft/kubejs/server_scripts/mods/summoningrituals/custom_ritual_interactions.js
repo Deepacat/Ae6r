@@ -24,7 +24,7 @@ SummoningRituals.complete(e => {
     let wissenCount
     switch (e.recipe.id) {
         case 'kubejs:summoningrituals/altar/wissen_allay':
-            wissenCount = 100;
+            wissenCount = 200;
             break
         case 'kubejs:summoningrituals/altar/wissen_quenched':
             wissenCount = 1000;

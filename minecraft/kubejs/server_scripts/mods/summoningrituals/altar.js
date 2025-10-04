@@ -50,7 +50,7 @@ ServerEvents.recipes(e => {
         .sacrificeRegion(9, 9)
         .recipeTime(20 * 10)
         .itemOutput(findingHelperItem('wizards_reborn:arcanum'))
-        .itemOutput(commentItem(["\"This ritual outputs 100 wissen to an arcane workbench below the altar.\""]))
+        .itemOutput(commentItem(["\"This ritual outputs 200 wissen to an arcane workbench below the altar.\""]))
         .id('kubejs:summoningrituals/altar/wissen_allay')
 
     // quenched allay to wissen
