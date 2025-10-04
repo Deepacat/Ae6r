@@ -1,15 +1,42 @@
 {
-	default_hide_dependency_lines: false
+	default_hide_dependency_lines: true
 	default_quest_shape: ""
 	filename: "expert__bragging_rights"
 	group: "34B7FB260B6AEB81"
 	icon: "aether_redux:fieldsproot_sapling"
 	id: "0000000000000B69"
+	images: [{
+		height: 17.0d
+		image: "natures_spirit:block/mahogany_tree"
+		rotation: 0.0d
+		width: 17.0d
+		x: 0.0d
+		y: 1.0d
+	}]
 	order_index: 4
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: [
+				"1AB15D784915A09E"
+				"03A2E4E196FA93AB"
+				"4CE38751F8FF0799"
+				"474DFFBB63FE90BA"
+				"5DA9A0C75EA47DFF"
+				"3AB61B2854483CE3"
+				"477CEC2E3F4736C3"
+				"2A79C4CDDA045886"
+				"5A9BCC1CC2CC3E0C"
+				"6218AF7644C178A7"
+				"36CDE03E505E0F94"
+				"188BE70C3D176BCA"
+				"72C894BE4081603D"
+				"4AB9649C1D2FE587"
+				"65F9021D56312C9B"
+			]
 			description: ["Obtaining the Creative Worldshaper is the ultimate goal - Complete this quest and you complete the modpack!"]
+			hide_dependency_lines: true
+			hide_dependent_lines: true
 			hide_until_deps_visible: true
 			id: "6D3FE88DB30DEE00"
 			rewards: [{
@@ -57,10 +84,9 @@
 				type: "item"
 			}]
 			x: 0.0d
-			y: -6.0d
+			y: 0.0d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: [
 				"Mining is a dangerous profession to undertake, but technology can make it considerably safer."
 				""
@@ -105,16 +131,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "720841254075293B"
 				item: "kubejs:excavation_mastery_token"
 				type: "item"
 			}]
-			x: -2.5d
-			y: 0.0d
+			x: 1.75d
+			y: -1.75d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: [
 				"The art of medicine and healing lives on through ancient alchemical practices."
 				""
@@ -159,16 +185,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "6BDE4D704EAF5C05"
 				item: "kubejs:alchemy_mastery_token"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 1.5d
+			x: 4.5d
+			y: -2.5d
 		}
 		{
-			dependencies: ["7C0943FD8F8A0D69"]
 			description: [
 				"As the Tree of Life settles its roots into the soil, a deep hum emanates from the ground as ethereal roots begin to spread and take hold. Within moments, lights blink to life upon the surface and as things settle down, fifty lights blink a gentle calming greenish-blue. Many more, however, settle into a deeply unsettling crimson."
 				""
@@ -219,16 +245,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "571A2D485D7D82AD"
 				item: "kubejs:automation_mastery_token"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 2.0d
+			x: 5.5d
+			y: -0.75d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: ["A return to prosperity will require a great deal of knowledge. Help prepare these communities to build and maintain the complex machinery they’ll need."]
 			id: "6218AF7644C178A7"
 			rewards: [{
@@ -269,16 +295,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "2BB3E567517D599F"
 				item: "kubejs:engineering_mastery_token"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -1.0d
+			x: -5.5d
+			y: -0.75d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: ["The purest life essence of the earth, Mana suffuses all things. Knowledge of its ebb and flow will undoubtedly aid these communities in becoming excellent stewards of this land."]
 			id: "5DA9A0C75EA47DFF"
 			rewards: [{
@@ -319,16 +345,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "3F5DB81D50286BAC"
 				item: "kubejs:botanical_mastery_token"
 				type: "item"
 			}]
 			x: 2.0d
-			y: -1.5d
+			y: -5.25d
 		}
 		{
-			dependencies: ["6218AF7644C178A7"]
 			description: ["Many threats still roam this land and without defenses, these communities are under severe threat; it’s no wonder so few lights appear to still be active; many must have fallen to the various monstrosities that roam the lands."]
 			id: "188BE70C3D176BCA"
 			rewards: [{
@@ -369,16 +395,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "5C9CA9991302C5CA"
 				item: "kubejs:battle_mastery_token"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -3.5d
+			x: 0.5d
+			y: -4.5d
 		}
 		{
-			dependencies: ["6218AF7644C178A7"]
 			description: [
 				"There’s no shortage of resources across the realms and allies a plenty for those willing to bridge the gap."
 				""
@@ -423,16 +449,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "5A6A9B10EF0B2E06"
 				item: "kubejs:dimensional_mastery_token"
 				type: "item"
 			}]
-			x: -1.0d
-			y: -2.5d
+			x: -4.25d
+			y: -4.5d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: ["Access to clean renewable energy will be vital for these communities to thrive. Assist them in setting up the infrastructure they’ll need as they step forward into a new dawn."]
 			id: "3AB61B2854483CE3"
 			rewards: [{
@@ -473,16 +499,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "7C2A6AD9D846702E"
 				item: "kubejs:energistics_mastery_token"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -1.5d
+			x: -2.75d
+			y: -1.0d
 		}
 		{
-			dependencies: ["6218AF7644C178A7"]
 			description: [
 				"Thriving means living in balance with life and not just the local flora and fauna. The spirits of the Otherworld will undoubtedly be important allies to these communities as they grow."
 				""
@@ -527,16 +553,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "7DE2D48092C045AA"
 				item: "kubejs:ritual_mastery_token"
 				type: "item"
 			}]
-			x: 1.0d
-			y: -2.5d
+			x: -2.0d
+			y: -3.25d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: [
 				"Stepping into this new age of prosperity does not mean forsaking the lands around us that provide the essentials of life."
 				""
@@ -581,16 +607,16 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "15599A14E7C2F230"
 				item: "kubejs:aura_mastery_token"
 				type: "item"
 			}]
-			x: 2.5d
-			y: 0.0d
+			x: -0.25d
+			y: -2.25d
 		}
 		{
-			dependencies: ["5A9BCC1CC2CC3E0C"]
 			description: [
 				"Keep an eye to the heavens."
 				""
@@ -635,13 +661,14 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "364C3C195CEB985C"
 				item: "kubejs:infernal_mastery_token"
 				type: "item"
 			}]
-			x: -1.5d
-			y: 1.5d
+			x: -3.5d
+			y: 1.0d
 		}
 		{
 			description: [
@@ -658,6 +685,7 @@
 			hide_until_deps_visible: true
 			icon: "aether_redux:fieldsproot_sapling"
 			id: "7C0943FD8F8A0D69"
+			shape: "heart"
 			tasks: [{
 				id: "0B1FB01E3D6A63F8"
 				item: "mbd2:enigmatic_tree_of_life"
@@ -665,10 +693,9 @@
 			}]
 			title: "Bragging Rights"
 			x: 0.0d
-			y: 4.0d
+			y: 3.625d
 		}
 		{
-			dependencies: ["4AB9649C1D2FE587"]
 			description: [
 				"For many of these communities, nutrition has taken a back seat as farming techniques and access to diverse foods has been lost."
 				""
@@ -713,13 +740,50 @@
 				}
 				type: "item"
 			}]
+			shape: "rsquare"
 			tasks: [{
 				id: "0C3AD97B67E61659"
 				item: "kubejs:culinary_mastery_token"
 				type: "item"
 			}]
+			x: 2.75d
+			y: 0.25d
+		}
+		{
+			id: "4CE38751F8FF0799"
+			shape: "diamond"
+			size: 1.25d
+			tasks: [{
+				id: "16AB2C2AAF0556B9"
+				item: "kubejs:worldshaper_cog"
+				type: "item"
+			}]
+			x: 0.625d
+			y: 1.5d
+		}
+		{
+			id: "1AB15D784915A09E"
+			shape: "diamond"
+			size: 1.25d
+			tasks: [{
+				id: "0AD01EF28B7E4132"
+				item: "kubejs:worldshaper_barrel"
+				type: "item"
+			}]
 			x: 0.0d
-			y: 0.5d
+			y: 2.125d
+		}
+		{
+			id: "03A2E4E196FA93AB"
+			shape: "diamond"
+			size: 1.25d
+			tasks: [{
+				id: "3828AFE5FED130FE"
+				item: "kubejs:worldshaper_handle"
+				type: "item"
+			}]
+			x: -0.625d
+			y: 1.5d
 		}
 	]
 	title: " 4 - Mastery"

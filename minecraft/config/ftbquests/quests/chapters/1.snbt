@@ -371,7 +371,7 @@
 			dependencies: ["3FB5BA7D7B54B852"]
 			id: "2E7956FE5FFAF5C6"
 			optional: true
-			shape: "hexagon"
+			shape: "octagon"
 			tasks: [{
 				id: "00FEF32CAC96D26E"
 				title: "repalce me with a cable smart filtre"
@@ -384,7 +384,7 @@
 		{
 			dependencies: ["2A9F678F8A130296"]
 			id: "0FAAC4107C67FE08"
-			shape: "hexagon"
+			shape: "octagon"
 			tasks: [{
 				id: "1EE321AAD2ACE650"
 				item: "tconstruct:smeltery_controller"
@@ -573,7 +573,7 @@
 			]
 			icon: "wizards_reborn:arcane_workbench"
 			id: "155C0DE1EBE6F5D0"
-			shape: "pentagon"
+			shape: "hexagon"
 			subtitle: "Knowledge is Power"
 			tasks: [
 				{
@@ -865,7 +865,7 @@
 		{
 			dependencies: ["69FF9D61737CF418"]
 			id: "68EB68D7A1CC783F"
-			shape: "pentagon"
+			shape: "hexagon"
 			tasks: [{
 				id: "662DCA04AE47F996"
 				item: "occultism:chalk_white_impure"
@@ -1215,7 +1215,7 @@
 			]
 			id: "7678EEC915A4748F"
 			optional: true
-			shape: "hexagon"
+			shape: "pentagon"
 			subtitle: "EMI trees <3"
 			tasks: [{
 				id: "6C9CF12513742889"
@@ -1367,7 +1367,7 @@
 			dependencies: ["167BE86E3DE69218"]
 			id: "769C15E5DA48B038"
 			optional: true
-			shape: "hexagon"
+			shape: "octagon"
 			tasks: [{
 				id: "4D24B2D0F82A5561"
 				item: "tconstruct:foundry_controller"
@@ -1379,7 +1379,7 @@
 		{
 			dependencies: ["19244793FD02F7FB"]
 			id: "46B191D72A247A1D"
-			shape: "pentagon"
+			shape: "hexagon"
 			tasks: [{
 				id: "3886AE9C9E5998AF"
 				item: "naturesaura:nature_altar"
@@ -1428,7 +1428,8 @@
 			dependencies: ["310E121655B252D7"]
 			icon: "littlelogistics:fishing_barge"
 			id: "228A42320F11D892"
-			shape: "hexagon"
+			optional: true
+			shape: "pentagon"
 			subtitle: "They're Soooo Cute!"
 			tasks: [
 				{
@@ -1511,7 +1512,7 @@
 		{
 			dependencies: ["167BE86E3DE69218"]
 			id: "6BD22F97D5168969"
-			shape: "pentagon"
+			shape: "hexagon"
 			tasks: [{
 				id: "61E64AB2DD4B19F7"
 				item: "pneumaticcraft:ingot_iron_compressed"
@@ -1539,6 +1540,31 @@
 			title: "Bark of Forgotten Groves"
 			x: 1.0d
 			y: 5.5d
+		}
+		{
+			description: [
+				"circle - generic quest"
+				""
+				"octagon - optional for now but will need later probably"
+				""
+				"hexagon - chapter end point, may lead to another point as a link"
+				""
+				"pentagon - entirely optional but you probably should anyway"
+				""
+				"diamond - decorative for split up components"
+				""
+				"heart - is ugly"
+				""
+				"gear - finale"
+			]
+			id: "1C5BCFB7EFF86CD4"
+			tasks: [{
+				id: "3250BA7E82FEB08B"
+				title: "scheming notes putting here for now"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: -4.0d
 		}
 	]
 	title: " 1 - Discovery"
