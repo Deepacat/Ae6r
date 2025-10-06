@@ -113,7 +113,7 @@ ServerEvents.recipes(e => {
             'pneumaticcraft:unassembled_pcb',
             '2x pneumaticcraft:capacitor',
             '2x pneumaticcraft:transistor',
-            'kubejs:replaceme',
+            'ae2:logic_processor',
             Ingredient.of('#forge:wires/lead')
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/printed_circuit_board')
@@ -428,7 +428,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '6x pneumaticcraft:pneumatic_cylinder',
-            '10x kubejs:replaceme',
+            '10x prettypipes:pipe',
             '6x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
             '2x create:brass_hand',
@@ -442,7 +442,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '3x pneumaticcraft:pneumatic_cylinder',
-            '5x kubejs:replaceme',
+            '5x prettypipes:pipe',
             '3x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
             Ingredient.of('#powah:energizing_rod'),
@@ -456,7 +456,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '3x pneumaticcraft:pneumatic_cylinder',
-            '5x kubejs:replaceme',
+            '5x prettypipes:pipe',
             '3x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
             'pneumaticcraft:drill_bit_diamond',
@@ -483,7 +483,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '3x pneumaticcraft:printed_circuit_board',
-            '5x kubejs:replaceme',
+            '5x prettypipes:pipe',
             'computercraft:monitor_normal',
             '3x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
