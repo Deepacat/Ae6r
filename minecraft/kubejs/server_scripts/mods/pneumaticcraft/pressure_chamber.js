@@ -1,4 +1,5 @@
 ServerEvents.recipes(e => {
+    e.remove({ id: 'pneumaticcraft:pressure_chamber/compressed_iron_ingot' })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             '4x pneumaticcraft:ingot_iron_compressed'
@@ -10,6 +11,7 @@ ServerEvents.recipes(e => {
         ], 2
     ).id('kubejs:pneumaticcraft/pressure_chamber/compressed_iron_ingot')
 
+    e.remove({ id: 'pneumaticcraft:pressure_chamber/compressed_iron_block' })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             '4x pneumaticcraft:compressed_iron_block'
@@ -75,6 +77,7 @@ ServerEvents.recipes(e => {
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/crafting/aerial_pearl')
 
+    e.remove({ id: "pneumaticcraft:pressure_chamber/transistor" })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             '2x pneumaticcraft:transistor'
@@ -87,6 +90,7 @@ ServerEvents.recipes(e => {
         ], 1
     ).id('kubejs:pneumaticcraft/pressure_chamber/transistor')
 
+    e.remove({ id: "pneumaticcraft:pressure_chamber/capacitor" })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             '2x pneumaticcraft:capacitor'
@@ -100,6 +104,7 @@ ServerEvents.recipes(e => {
         ], 1
     ).id('kubejs:pneumaticcraft/pressure_chamber/capacitor')
 
+    e.remove({ id: "pneumaticcraft:printed_circuit_board" })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             'pneumaticcraft:printed_circuit_board'
@@ -113,6 +118,7 @@ ServerEvents.recipes(e => {
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/printed_circuit_board')
 
+    e.remove({ id: "pneumaticcraft:pressure_chamber/empty_pcb" })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             '6x pneumaticcraft:empty_pcb'
@@ -124,6 +130,7 @@ ServerEvents.recipes(e => {
         ], 1.5
     ).id('kubejs:pneumaticcraft/pressure_chamber/empty_pcb')
 
+    e.remove({ id: "pneumaticcraft:pressure_chamber/turbine_blade" })
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             'pneumaticcraft:turbine_blade'
@@ -197,16 +204,6 @@ ServerEvents.recipes(e => {
             'pneumaticcraft:turbine_rotor'
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/turbine/blade')
-
-    e.recipes.pneumaticcraft.pressure_chamber(
-        [
-            '3x kubejs:astrogro'
-        ],
-        [
-            'kubejs:replaceme',
-            Ingredient.of('#forge:dusts/starmetal')
-        ], 4.5
-    ).id('kubejs:pneumaticcraft/pressure_chamber/astrogro')
 
     e.recipes.pneumaticcraft.pressure_chamber(
         [
@@ -300,21 +297,6 @@ ServerEvents.recipes(e => {
             'mekanism:cardboard_box'
         ], 4.5
     ).id('kubejs:pneumaticcraft/pressure_chamber/flux_bore_kit')
-
-    // e.recipes.pneumaticcraft.pressure_chamber(
-    //     [
-    //         'kubejs:diy_pedestal_quarry'
-    //     ],
-    //     [
-    //         'pedestals:pedestal/stone333',
-    //         'pedestals:coin/quarry',
-    //         'pedestals:bookspeed',
-    //         'pedestals:bookrange',
-    //         'pedestals:bookarea',
-    //         'pedestals:bookcapacity',
-    //         'mekanism:cardboard_box'
-    //     ], 4.5
-    // ).id('kubejs:pneumaticcraft/pressure_chamber/diy_pedestal_quarry')
 
     e.recipes.pneumaticcraft.pressure_chamber(
         [

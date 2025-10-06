@@ -24,6 +24,7 @@ ServerEvents.recipes(e => {
         C: 'kubejs:replaceme'
     }).id('kubejs:powah_crafting/energizing_orb')
 
+    e.remove({ id: "pneumaticcraft:flux_compressor" })
     e.recipes.create.mechanical_crafting(Item.of('pneumaticcraft:flux_compressor', { BlockEntityTag: { UpgradeInventory: { Size: 4, Items: [{ Slot: 0, id: "pneumaticcraft:security_upgrade", Count: 1 }] } } }), [
         'ABBBA',
         'ACDCA',
@@ -44,6 +45,7 @@ ServerEvents.recipes(e => {
         K: 'thermal:rf_coil'
     }).id('kubejs:mechanical_crafting/flux_compressor')
 
+    e.remove({ id: "pneumaticcraft:assembly_drill" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:assembly_drill', [
         'AAA ',
         'BCCA',
@@ -57,6 +59,7 @@ ServerEvents.recipes(e => {
         E: Item.of('pneumaticcraft:pneumatic_dynamo')
     }).id('kubejs:mechanical_crafting/assembly_drill')
 
+    e.remove({ id: "pneumaticcraft:assembly_laser" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:assembly_laser', [
         'AAA ',
         'BCCA',
@@ -70,6 +73,7 @@ ServerEvents.recipes(e => {
         E: Item.of('pneumaticcraft:pneumatic_dynamo')
     }).id('kubejs:mechanical_crafting/assembly_laser')
 
+    e.remove({ id: "pneumaticcraft:assembly_io_unit_import" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:assembly_io_unit_import', [
         'AAA ',
         'BCCA',
@@ -83,6 +87,7 @@ ServerEvents.recipes(e => {
         E: Item.of('pneumaticcraft:pneumatic_dynamo')
     }).id('kubejs:mechanical_crafting/assembly_io_unit_import')
 
+    e.remove({ id: "pneumaticcraft:assembly_io_unit_export" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:assembly_io_unit_export', [
         ' AAA',
         'ACCB',
@@ -96,6 +101,7 @@ ServerEvents.recipes(e => {
         E: Item.of('pneumaticcraft:pneumatic_dynamo')
     }).id('kubejs:mechanical_crafting/assembly_io_unit_export')
 
+    e.remove({ id: "pneumaticcraft:assembly_controller" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:assembly_controller', [
         ' AAA',
         'ACCB',
@@ -109,6 +115,7 @@ ServerEvents.recipes(e => {
         E: Item.of('pneumaticcraft:pneumatic_dynamo')
     }).id('kubejs:mechanical_crafting/assembly_controller')
 
+    e.remove({ id: "pneumaticcraft:assembly_platform" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:assembly_platform', [
         ' AA ',
         'BCCB',
@@ -120,6 +127,7 @@ ServerEvents.recipes(e => {
         D: 'pneumaticcraft:reinforced_stone_slab'
     }).id('kubejs:mechanical_crafting/assembly_platform')
 
+    e.remove({ id: "pneumaticcraft:aerial_interface" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:aerial_interface', [
         'AABAA',
         'ACDEA',
@@ -137,6 +145,7 @@ ServerEvents.recipes(e => {
         H: 'powah:player_aerial_pearl'
     }).id('kubejs:mechanical_crafting/aerial_interface')
 
+    e.remove({ id: "pneumaticcraft:spawner_extractor" })
     e.recipes.create.mechanical_crafting('pneumaticcraft:spawner_extractor', [
         '  A  ',
         ' BCB ',

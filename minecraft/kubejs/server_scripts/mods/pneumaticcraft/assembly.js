@@ -4,20 +4,11 @@ ServerEvents.recipes(e => {
         'thermal:machine_frame',
     ).id(`kubejs:pneumaticcraft/assembly/rough_machine_frame_top`)
 
+    e.remove({ id: 'rftoolsbase:machine_frame' })
     e.recipes.pneumaticcraft.assembly_laser(
         'rftoolsbase:machine_frame',
         'kubejs:rough_machine_frame',
     ).id(`kubejs:pneumaticcraft/assembly/machine_frame`)
-
-    e.recipes.pneumaticcraft.assembly_drill(
-        '5x supplementaries:gold_trapdoor',
-        Ingredient.of('#forge:storage_blocks/gold'),
-    ).id(`kubejs:pneumaticcraft/assembly/gold_trapdoor`)
-
-    // e.recipes.pneumaticcraft.assembly_laser(
-    //     '10x pedestals:coin/default',
-    //     '5x supplementaries:gold_trapdoor',
-    // ).id(`kubejs:pneumaticcraft/assembly/gold_trapdoor`)
 
     e.recipes.pneumaticcraft.assembly_drill(
         'kubejs:basic_circuit_assembly',
@@ -39,6 +30,7 @@ ServerEvents.recipes(e => {
         'kubejs:batch_basic_circuit_assembly',
     ).id(`kubejs:pneumaticcraft/assembly/batch_basic_control_circuit`)
 
+    e.remove({ id: 'occultism:crafting/lenses' })
     e.recipes.pneumaticcraft.assembly_laser(
         '3x occultism:lenses',
         'kubejs:basic_lenses_package',
