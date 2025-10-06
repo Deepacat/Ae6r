@@ -40,6 +40,8 @@ Polish/fixes:
 - [ ] Fix unsafe patchouli/book removals, e.g. removing occultism recipes instead of replacing them so the book doesn't break and error out (Make arrays in the files that go over replacing the recipe with a altered recipe item like e6e)
 - [ ] move the if else abomination in my (deepas) embers stamp and chiller to its own function (I dont know how to implement it rn) (OR JUST MAKE BETTER SCHEMAS)
 - [ ] gourmand dynamo recipe (waste incinerator?)
+- [ ] Move default client configs to defaultoptions mod to avoid overwriting on updates
+- [ ] Disable crappy/bloat enchants from enchantment table using MoreJS/Apotheosis config (Or entirely for dupes or useless)
 
 Ponder scenes/GuideME/tooltips:
 - [ ] Ember oven multiblock
