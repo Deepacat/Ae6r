@@ -369,14 +369,29 @@
 		}
 		{
 			dependencies: ["3FB5BA7D7B54B852"]
+			icon: "xnet:controller"
 			id: "2E7956FE5FFAF5C6"
 			optional: true
 			shape: "octagon"
-			tasks: [{
-				id: "00FEF32CAC96D26E"
-				title: "repalce me with a cable smart filtre"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					icon: "xnet:netcable_red"
+					id: "11C729688B8BDD3E"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "or(item_tag(xnet:cables))"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5A766B7E8B1D9EB8"
+					item: "xnet:controller"
+					type: "item"
+				}
+			]
 			title: "XNet"
 			x: -6.0d
 			y: -0.5d
@@ -1558,12 +1573,13 @@
 				"gear - finale"
 			]
 			id: "1C5BCFB7EFF86CD4"
+			invisible: true
 			tasks: [{
 				id: "3250BA7E82FEB08B"
 				title: "scheming notes putting here for now"
 				type: "checkmark"
 			}]
-			x: -2.0d
+			x: -3.0d
 			y: -4.0d
 		}
 	]

@@ -10,6 +10,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["6F3F728C16D4C22B"]
 			id: "7522971912BCF482"
 			tasks: [{
 				id: "558BD74C18EFB6EA"
@@ -21,6 +22,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["6F3F728C16D4C22B"]
 			id: "1E4DC3A7546EC894"
 			tasks: [{
 				id: "3E03729D4E825E26"
@@ -463,6 +465,15 @@
 			}]
 			x: 2.0d
 			y: 9.0d
+		}
+		{
+			id: "6F3F728C16D4C22B"
+			tasks: [{
+				id: "1CE23D908AA710A7"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -1.5d
 		}
 	]
 	title: "Tech - Nuclear Physics"

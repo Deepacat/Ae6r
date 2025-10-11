@@ -672,6 +672,7 @@
 			y: 4.0d
 		}
 		{
+			dependencies: ["0768F9D4F826023E"]
 			hide_until_deps_visible: true
 			icon: "create:large_cogwheel"
 			id: "1D574D041D9164AD"
@@ -884,6 +885,15 @@
 			]
 			x: 7.5d
 			y: 1.5d
+		}
+		{
+			id: "0768F9D4F826023E"
+			tasks: [{
+				id: "3BBD342E277D4C21"
+				type: "checkmark"
+			}]
+			x: 4.5d
+			y: -2.5d
 		}
 	]
 	title: "Tech - Mechanical Mayhem"

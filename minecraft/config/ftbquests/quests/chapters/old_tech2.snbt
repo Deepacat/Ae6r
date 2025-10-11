@@ -10,6 +10,7 @@
 	quest_links: [ ]
 	quests: [
 		{
+			dependencies: ["553B6CE6378E6DF8"]
 			icon: "pneumaticcraft:pressure_gauge_module"
 			id: "67F7E4C19E39F9F3"
 			shape: "rsquare"
@@ -24,6 +25,7 @@
 			y: 0.0d
 		}
 		{
+			dependencies: ["553B6CE6378E6DF8"]
 			id: "06F4A47216226927"
 			shape: "rsquare"
 			tasks: [{
@@ -500,6 +502,15 @@
 			title: "Building Materials"
 			x: 3.0d
 			y: 7.5d
+		}
+		{
+			id: "553B6CE6378E6DF8"
+			tasks: [{
+				id: "559B6BBC30C47027"
+				type: "checkmark"
+			}]
+			x: 3.0d
+			y: -1.0d
 		}
 	]
 	title: "Tech - Computer Science"

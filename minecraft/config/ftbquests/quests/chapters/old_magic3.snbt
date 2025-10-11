@@ -59,6 +59,7 @@
 			y: 3.5d
 		}
 		{
+			dependencies: ["1619DB8E248879CD"]
 			id: "06A6BE8C4A3B0C1D"
 			shape: "rsquare"
 			tasks: [{
@@ -127,6 +128,7 @@
 			y: 1.5d
 		}
 		{
+			dependencies: ["1619DB8E248879CD"]
 			description: ["Seek out the Crystalline Mountains in the End where these crystals grow naturally in great abundance. "]
 			id: "0CFE47372EC49DC8"
 			shape: "diamond"
@@ -139,6 +141,7 @@
 			y: 0.5d
 		}
 		{
+			dependencies: ["1619DB8E248879CD"]
 			description: ["Found commonly in the Sulfur Springs of the End. Be prepared to go for a swim!"]
 			id: "69201BA9E47F94EE"
 			shape: "diamond"
@@ -309,6 +312,7 @@
 			y: 4.5d
 		}
 		{
+			dependencies: ["1619DB8E248879CD"]
 			id: "1C5802ADD3834FE9"
 			shape: "rsquare"
 			tasks: [{
@@ -536,6 +540,15 @@
 			}]
 			x: 1.5d
 			y: 5.5d
+		}
+		{
+			id: "1619DB8E248879CD"
+			tasks: [{
+				id: "7EB46731B5F77275"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -3.0d
 		}
 	]
 	title: "Magic - Master"

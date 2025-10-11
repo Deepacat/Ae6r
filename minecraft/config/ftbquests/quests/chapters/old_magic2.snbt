@@ -132,6 +132,7 @@
 			y: -2.5d
 		}
 		{
+			dependencies: ["371FF835010B0B38"]
 			description: [""]
 			icon: "naturesaura:gold_leaf"
 			id: "6A88DD23AB4B2551"
@@ -146,6 +147,7 @@
 			y: -5.5d
 		}
 		{
+			dependencies: ["371FF835010B0B38"]
 			icon: "occultism:golden_sacrificial_bowl"
 			id: "4CEB33C94A160D68"
 			shape: "rsquare"
@@ -191,6 +193,7 @@
 			y: -5.5d
 		}
 		{
+			dependencies: ["371FF835010B0B38"]
 			description: [
 				"Komodo dragons may be found in many dry climates and “befriended” with suitably rotten meat. Their spit is prized by alchemists and naturalists alike. In the case of the former, as a reagent for purifying ore, and the latter for the deep emotions it evokes."
 				""
@@ -259,6 +262,7 @@
 			y: -1.5d
 		}
 		{
+			dependencies: ["371FF835010B0B38"]
 			description: [
 				""
 				"Knowledge once thought lost has turned up in the most unexpected of places: the music of the denizens of the Undergarden. "
@@ -689,6 +693,15 @@
 			}]
 			x: -4.0d
 			y: -4.5d
+		}
+		{
+			id: "371FF835010B0B38"
+			tasks: [{
+				id: "3DE3A82E96915A40"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -6.5d
 		}
 	]
 	title: "Magic - Adept"

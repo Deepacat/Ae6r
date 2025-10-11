@@ -405,13 +405,18 @@
 			y: -3.5d
 		}
 		{
+			dependencies: ["1E2893E110C78D76"]
 			description: [
 				"“They came from above… With their power, they raised the land sundering the seas… In a blink they had wiped themselves out.”"
 				""
 				"– V'uithlos The Elder"
 			]
 			hide_until_deps_visible: true
-			icon: "ars_nouveau:spell_parchment"
+			icon: {
+				Count: 1
+				id: "ars_nouveau:spell_parchment"
+				tag: { }
+			}
 			id: "48BA066E1B977D32"
 			tasks: [{
 				id: "254F767D474E7B72"
@@ -573,6 +578,15 @@
 			}]
 			x: 0.5d
 			y: -5.5d
+		}
+		{
+			id: "1E2893E110C78D76"
+			tasks: [{
+				id: "530AFD63D3C33A48"
+				type: "checkmark"
+			}]
+			x: -1.0d
+			y: -13.0d
 		}
 	]
 	title: "Magic - Apprentice"

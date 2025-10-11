@@ -31,7 +31,7 @@
 			optional: true
 			tasks: [{
 				consume_items: true
-				count: 3L
+				count: 2L
 				id: "40617065BA29C41B"
 				item: "minecraft:conduit"
 				type: "item"
@@ -96,14 +96,14 @@
 			tasks: [
 				{
 					consume_items: true
-					count: 32L
+					count: 16L
 					id: "761388BFC8D560E0"
 					item: "minecraft:flowering_azalea"
 					type: "item"
 				}
 				{
 					consume_items: true
-					count: 5L
+					count: 3L
 					id: "4F826D733B499762"
 					item: "minecraft:spore_blossom"
 					type: "item"
@@ -174,5 +174,5 @@
 			y: -3.0d
 		}
 	]
-	title: " 1 - ?"
+	title: " 1"
 }
