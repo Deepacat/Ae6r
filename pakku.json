@@ -1,0 +1,54 @@
+{
+  "name": "Aenigmata 6 Resurgere",
+  "version": "DEV",
+  "release_type": "alpha",
+  "description": "A re-imagining of Enigmatica 6 Expert for 1.20.1",
+  "author": "Deepacat",
+  "overrides": [
+    "config",
+    "defaultconfigs",
+    "kubejs",
+    "!kubejs/probe/**"
+  ],
+  "server_overrides": [
+    "!kubejs/assets",
+    "forge-auto-install.txt",
+    "generate_auto_installation_file.bat",
+    "minecraft_server.jar",
+    "server.properties",
+    "server_starter.conf",
+    "server-icon.png",
+    "start_server.bat",
+    "README.md"
+  ],
+  "client_overrides": [
+    "resourcepacks"
+  ],
+  "projects": {
+    "legendary-tooltips": {
+      "side": "CLIENT"
+    },
+    "zume": {
+      "side": "CLIENT"
+    },
+    "oculus": {
+      "side": "CLIENT"
+    },
+    "watermedia": {
+      "side": "CLIENT"
+    },
+    "embeddium": {
+      "side": "CLIENT"
+    },
+    "embeddiumplus": {
+      "side": "CLIENT"
+    },
+    "citresewn": {
+      "side": "CLIENT"
+    },
+    "probejs": {
+      "side": "CLIENT",
+      "export": false
+    }
+  }
+}

@@ -1,28 +1,100 @@
-minecraft/*
-instance.cfg
-mmc-pack.json
-modlist.html
-minecraft/build/
-flame/
+# Minecraft
+local/
+saves/
+mods/
+logs/
+crash-reports/
+backups/
+resourcepacks/
+server-resource-packs/
+screenshots/
+downloads/
+modernfix/
+fancymenu_data/
+ESM/
 
-!/minecraft/config*
-!/minecraft/defaultconfigs*
-!/minecraft/kubejs*
-!/minecraft/config/emi.json
-!/minecraft/config/icon.png
-!/minecraft/*pakku*
-!/minecraft/ldlib*
+icon.png
+options.txt
+rhino.local.properties
+usercache.json
+usernamecache.json
+emi.json
 
-minecraft/.pakku/docs
-minecraft/config/alexsmobs/*
-minecraft/config/worldedit*
-minecraft/config/jei*
-minecraft/config/embeddium-options.json
-minecraft/config/spark/tmp*
-minecraft/config/everycomp-hazardous.properties
-minecraft/config/konkrete/locals
-minecraft/config/emi.css
-minecraft/config/ae2/client.json
-minecraft/config/spark/activity.json
-minecraft/config/embeddium-fingerprint.json
-minecraft/kubejs/*/example.js
+# Pakku
+build/
+!.pakku/
+!pakku.jar
+!pakku.json
+!pakku-lock.json
+
+# Node.js
+**/node_modules/
+
+# dotenv
+.env
+
+# VSCode
+!/.vscode/*.code-workspace
+/.vscode/*
+
+# ProbeJS
+/kubejs/probe/
+/kubejs/config/probejs.json
+/kubejs/config/probe-settings.json
+/kubejs/*/jsconfig.json
+
+# Client configs (with exceptions below)
+/config/**/*client.*
+
+!/config/sophisticatedstorage-client.toml
+!/config/**/darkmodeeverywhere-client.toml
+!/config/create-client.toml
+
+# Configs (generaly ones that tend to edit the date on launch)
+config/fml.toml
+config/jei/world/local/*
+config/fabric/indigo-renderer.properties
+config/roughlyenoughitems/pinyin*.properties
+config/trofers/general.json5
+config/roughlyenoughitems/config.json5
+config/sidebar_buttons.json
+config/oculus.properties
+config/modernfix-mixins.properties
+config/immediatelyfast.json
+config/ftbbackups2.json
+config/packetfixer.properties
+config/spark/tmp/
+config/spark/activity.json
+config/roughlyenoughitems/hints.json
+config/voicechat/username-cache.json
+config/minihud/*
+config/embeddium-fingerprint.json
+config/chiselsandbits-common.toml
+config/defaultworldtype/world-presets.txt
+config/jecalculation/record.json
+config/jade/sort-order.json
+config/jei*
+config/embeddium++.toml
+config/emi.css
+config/darkmodeeverywhereshaders*
+config/ichunutil/themes/
+config/gtceu.yaml
+defaultconfigs/ftbultimine/ftbultimine-*.snbt
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
