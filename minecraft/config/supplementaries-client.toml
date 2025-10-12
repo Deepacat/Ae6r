@@ -157,6 +157,8 @@
 	#ignore this
 	#Range: -10.0 ~ 10.0
 	test3 = 0.0
+	#I am very boring
+	unfunny = false
 
 #Game tweaks
 [tweaks]

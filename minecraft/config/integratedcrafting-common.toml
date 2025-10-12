@@ -18,6 +18,8 @@
 		interfaceCraftingBaseConsumption = 5
 		#The base energy usage for the crafting writer.
 		craftingWriterBaseConsumption = 1
+		#The base energy usage for the attuned crafting interface per crafting job being processed.
+		interfaceCraftingAttunedBaseConsumption = 10
 
 [core]
 

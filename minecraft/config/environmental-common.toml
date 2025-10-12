@@ -4,6 +4,9 @@
 	[mobs.deer]
 		#If Deer can reproduce and spread flowers by feeding them an Apple followed by a flower
 		"Deer flower reproducing" = true
+		#The chance Deer have to spawn with Antlers; 0.0 for never, 1.0 for always
+		#Range: 0.0 ~ 1.0
+		"Deer Antler chance" = 0.5
 
 	[mobs.koi]
 		#Make Koi only block natural spawns

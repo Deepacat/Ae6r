@@ -9,9 +9,6 @@
 
 		[light_sources.settings.entities]
 
-			[light_sources.settings.entities.tconstruct]
-				sky_slime = true
-
 			[light_sources.settings.entities.minecraft]
 				panda = true
 				axolotl = true
@@ -83,6 +80,7 @@
 				fireball = true
 				player = true
 				pufferfish = true
+				illusioner = true
 				potion = true
 				trident = true
 				wolf = true
@@ -93,14 +91,34 @@
 				elder_guardian = true
 				small_fireball = true
 				strider = true
+				polar_bear = true
 				painting = true
 				cave_spider = true
 				witch = true
 				cod = true
+				snow_golem = true
 				spider = true
+
+			[light_sources.settings.entities.tconstruct]
+				sky_slime = true
+
+			[light_sources.settings.entities.splendid_slimes]
+				splendid_slime = true
+
+			[light_sources.settings.entities.enigmaticgraves]
+				grave = true
+
+			[light_sources.settings.entities.immersiveengineering]
+				commando = true
+				railgun_shot = true
+				fusilier = true
+				chemthrower_shot = true
+				bulwark = true
+				revolver_shot = true
 
 			[light_sources.settings.entities.alexsmobs]
 				pollen_ball = true
+				devils_hole_pupfish = true
 				murmur_head = true
 				kangaroo = true
 				blue_jay = true
@@ -124,12 +142,14 @@
 				blobfish = true
 				lobster = true
 				grizzly_bear = true
+				snow_leopard = true
 				farseer = true
 				potoo = true
 				tiger = true
 				rocky_roller = true
 				centipede_head = true
 				flutter = true
+				orca = true
 				rain_frog = true
 				maned_wolf = true
 				crow = true
@@ -156,6 +176,7 @@
 				capuchin_monkey = true
 				murmur = true
 				cockroach = true
+				komodo_dragon = true
 				bone_serpent = true
 				centipede_body = true
 				seagull = true
@@ -169,12 +190,6 @@
 				frilled_shark = true
 				bison = true
 				sugar_glider = true
-
-			[light_sources.settings.entities.immersiveengineering]
-				bulwark = true
-
-			[light_sources.settings.entities.enigmaticgraves]
-				grave = true
 
 			[light_sources.settings.entities.eidolon]
 				giant_skeleton = true
@@ -239,6 +254,7 @@
 				biplane = true
 
 			[light_sources.settings.entities.upgrade_aquatic]
+				thrasher = true
 				lionfish = true
 				nautilus = true
 
@@ -250,6 +266,7 @@
 
 			[light_sources.settings.entities.quark]
 				wraith = true
+				shiba = true
 				forgotten = true
 				toretoise = true
 				glass_frame = true
@@ -295,9 +312,16 @@
 			[light_sources.settings.entities.environmental]
 				deer = true
 				zebra = true
+				reindeer = true
 				koi = true
 				duck = true
 				tapir = true
+
+			[light_sources.settings.entities.farmingforblockheads]
+				merchant = true
+
+			[light_sources.settings.entities.pneumaticcraft]
+				heat_frame = true
 
 			[light_sources.settings.entities.guardvillagers]
 				guard = true
@@ -319,8 +343,8 @@
 				jellyfish = true
 				bluegill = true
 				muskellunge = true
-				brown_shrooma = true
 				catfish = true
+				brown_shrooma = true
 				tambaqui = true
 				rainbow_trout = true
 				boulti = true
@@ -328,6 +352,7 @@
 				gar = true
 				perch = true
 				capitaine = true
+				arrau_turtle = true
 				atlantic_halibut = true
 				piranha = true
 				red_grouper = true
@@ -353,6 +378,7 @@
 				smog_mog = true
 				brute = true
 				nargoyle = true
+				blisterbomb = true
 				muncher = true
 				forgotten = true
 				gwib = true
@@ -367,10 +393,24 @@
 				starbuncle = true
 				gift_starby = true
 				flying_item = true
+				flourishing_weald_walker = true
 				bookwyrm = true
 				drygmy = true
 				summon_wolf = true
 				whirlisprig = true
+
+			[light_sources.settings.entities.species]
+				cliff_hanger = true
+				bewereager = true
+				spectre = true
+				wicked_fireball = true
+				birt = true
+				quake = true
+				ghoul = true
+				limpet = true
+				deepfish = true
+				leaf_hanger = true
+				wicked = true
 
 			[light_sources.settings.entities.deep_aether]
 				gentle_wind = true
@@ -378,6 +418,7 @@
 				wind_crystal = true
 				eots_controller = true
 				baby_zephyr = true
+				venomite_bubble = true
 				aerglow_fish = true
 				venomite = true
 				quail = true
@@ -386,6 +427,7 @@
 				mykapod = true
 				vanilla_swet = true
 				shimmercow = true
+				blightbunny_spawner = true
 				blightbunny = true
 
 			[light_sources.settings.entities.supplementaries]
