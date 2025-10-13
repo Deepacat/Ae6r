@@ -171,7 +171,8 @@ global.metal_mats = {
 
 global.other_mats = {
     obsidian: { type: 'other', toolLvl: 'diamond', addFlags: ['dust'], delFlags: [], },
-    radiant_dawnstone: { type: 'other', toolLvl: 'iron', addFlags: ['ingot', 'storage_block'], delFlags: [], }
+    radiant_dawnstone: { type: 'other', toolLvl: 'iron', addFlags: ['ingot', 'nugget', 'storage_block'], delFlags: [], },
+    dwarven_mithril: { type: 'other', toolLvl: 'iron', addFlags: ['ingot', 'nugget', 'storage_block'], delFlags: [], }
 
 }
 
