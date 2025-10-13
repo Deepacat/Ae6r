@@ -98,7 +98,7 @@ function unificationBlacklistEntry(material, type) {
  */
 function entryIsBlacklisted(material, type) {
     for (let blackList of unificationBlacklist) {
-        if (blackList.material == material && blackList.type) {
+        if (blackList.material == material && blackList.type == type) {
             return true
         }
     }
