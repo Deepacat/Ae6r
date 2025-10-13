@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "ca347c4709156839",
+    "id": "1cae1c2a0995b316",
     "type": "split",
     "children": [
       {
-        "id": "6e3dddd4557e7859",
+        "id": "baef1606b36aac7f",
         "type": "tabs",
         "children": [
           {
-            "id": "eb71ba51ddb0b1e1",
+            "id": "23d717b91eb2abec",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Ae6r Todo.md",
+                "file": "Ae6r Ideas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ae6r Todo"
+              "title": "Ae6r Ideas"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "ba1a87da0c2d1d83",
+    "id": "1c34165a1fd3885b",
     "type": "split",
     "children": [
       {
-        "id": "78d7278fd7a710cc",
+        "id": "6aaff32b87e6a87f",
         "type": "tabs",
         "children": [
           {
-            "id": "3b583a9eb40f686b",
+            "id": "ebd9fd07d251d187",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "b1ee4dc5d8e7ec5c",
+            "id": "d2b0521b49a7b75d",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "53e62704e092422e",
+            "id": "cefffb3565f5f320",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -81,19 +81,20 @@
     "width": 300
   },
   "right": {
-    "id": "4fe5006a7ff3f104",
+    "id": "355b16affe875eae",
     "type": "split",
     "children": [
       {
-        "id": "24d2f1eae7dba947",
+        "id": "22aad05cc0f716cc",
         "type": "tabs",
         "children": [
           {
-            "id": "c265e818a016b01f",
+            "id": "88919cafbe192267",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Ae6r Todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,24 +104,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Ae6r Todo"
             }
           },
           {
-            "id": "f35be9815b12f2c3",
+            "id": "6874a1cefb951080",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Ae6r Todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Ae6r Todo"
             }
           },
           {
-            "id": "c27ed33a3839fddf",
+            "id": "feccec83ef94456e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -135,17 +137,18 @@
             }
           },
           {
-            "id": "d02bc388cc49aad6",
+            "id": "2adb6a080f48521c",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": "Ae6r Todo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Ae6r Todo"
             }
           }
         ]
@@ -157,23 +160,22 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
     }
   },
-  "active": "eb71ba51ddb0b1e1",
+  "active": "23d717b91eb2abec",
   "lastOpenFiles": [
-    "Pasted image 20250907024332.png",
-    "Atum god replacement notes.md",
     "Ae6r Playthrough notes.md",
-    "Aether ideas.md",
+    "Ae6r Ideas.md",
+    "Atum god replacement notes.md",
     "Ae6r Todo.md",
-    "Atum aspect to item.md",
-    "Welcome.md"
+    "Resource gen ideas.md",
+    "Chapter gates.md"
   ]
 }
