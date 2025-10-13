@@ -3,7 +3,7 @@
 // Client part (Server, Client)
 
 NetworkEvents.dataReceived('ae6r:rpc', e => {
-    console.log(e.data)
+    // console.log(e.data)
     SDRP.setState(
         `Tech: ${e.data.tech}, Magic: ${e.data.magic}, 
         Playtime: ${(e.player.stats.playTime / 60 / 60 / 20).toFixed(2)}h`,
