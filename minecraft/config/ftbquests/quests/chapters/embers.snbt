@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "embers"
 	group: "5A8B89F87F77CF4C"
+	icon: "embers:ember_crystal_cluster"
 	id: "588804AA09D9FD0B"
 	order_index: 0
 	quest_links: [ ]

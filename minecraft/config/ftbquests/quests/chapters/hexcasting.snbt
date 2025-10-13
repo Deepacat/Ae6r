@@ -1,0 +1,161 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: "hexagon"
+	filename: "hexcasting"
+	group: "5A8B89F87F77CF4C"
+	hide_quest_until_deps_complete: true
+	icon: "hexical:plush_hexxy"
+	id: "5B3C6FFD0BD2A5B1"
+	images: [{
+		height: 9.0d
+		image: "kubejs:textures/questimages/fathermes.png"
+		rotation: 0.0d
+		width: 9.0d
+		x: 1.1d
+		y: 1.0d
+	}]
+	order_index: 7
+	progression_mode: "linear"
+	quest_links: [ ]
+	quests: [
+		{
+			description: [""]
+			id: "472868C30A9123C9"
+			shape: "hexagon"
+			subtitle: "Crystallized Thought"
+			tasks: [
+				{
+					id: "35EE0AA8AA9E8E42"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(hexcasting:grants_root_advancement)"
+						}
+					}
+					title: "Any #hexcasting:grants_root_advancement"
+					type: "item"
+				}
+				{
+					id: "031E893C7F57176C"
+					item: {
+						Count: 1
+						id: "patchouli:guide_book"
+						tag: {
+							"patchouli:book": "hexcasting:thehexbook"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Hexcasting | Media"
+			x: 2.25d
+			y: -1.0d
+		}
+		{
+			dependencies: ["472868C30A9123C9"]
+			hide_until_deps_complete: false
+			hide_until_deps_visible: false
+			id: "63500CA58BE6FAC4"
+			shape: "hexagon"
+			tasks: [{
+				id: "0579521ED78B45AE"
+				item: {
+					Count: 1
+					id: "ftbfiltersystem:smart_filter"
+					tag: {
+						"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(hexcasting:staves)"
+					}
+				}
+				title: "Any #hexcasting:staves"
+				type: "item"
+			}]
+			title: "Staves \\& Casting"
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3097814DDECBB435"]
+			id: "73A5081858A8132B"
+			invisible: true
+			shape: "hexagon"
+			tasks: [{
+				advancement: "hexcasting:y_u_no_cast_angy"
+				criterion: ""
+				id: "489845D4656A525D"
+				type: "advancement"
+			}]
+			x: -0.25d
+			y: -1.0d
+		}
+		{
+			dependencies: ["73A5081858A8132B"]
+			id: "027A92C51FFC640A"
+			invisible: true
+			shape: "hexagon"
+			tasks: [{
+				advancement: "hexcasting:opened_eyes"
+				criterion: ""
+				id: "41D1B3F98D0086B9"
+				type: "advancement"
+			}]
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["027A92C51FFC640A"]
+			id: "52C36BC2E83C5C83"
+			invisible: true
+			shape: "hexagon"
+			tasks: [{
+				advancement: "hexcasting:enlightenment"
+				criterion: ""
+				id: "76F7500FCC52747A"
+				type: "advancement"
+			}]
+			x: -0.25d
+			y: 3.0d
+		}
+		{
+			dependencies: ["63500CA58BE6FAC4"]
+			description: [
+				"You can place the scroll on a wall to view easier"
+				"Using an amethyst dust on the placed scroll will show the directions to draw"
+			]
+			hide_until_deps_complete: false
+			hide_until_deps_visible: false
+			id: "3097814DDECBB435"
+			shape: "hexagon"
+			subtitle: "Skill issue"
+			tasks: [{
+				id: "1BF4899A2D05566C"
+				item: {
+					Count: 1
+					id: "hexcasting:scroll"
+					tag: {
+						op_id: ""
+					}
+				}
+				match_nbt: false
+				title: "Greater spell scroll"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["52C36BC2E83C5C83"]
+			id: "217E4D258A9E3374"
+			shape: "hexagon"
+			tasks: [{
+				id: "4D051FDC0C0E0935"
+				item: "hexcasting:quenched_allay_shard"
+				type: "item"
+			}]
+			title: "Flaying of minds"
+			x: 2.25d
+			y: 3.0d
+		}
+	]
+	title: "Hexcasting"
+}

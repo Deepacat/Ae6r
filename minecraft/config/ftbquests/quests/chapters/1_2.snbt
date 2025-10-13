@@ -2,11 +2,11 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "1_2"
-	group: "46AD905989135A5C"
+	group: "34B7FB260B6AEB81"
 	hide_quest_until_deps_complete: true
 	icon: "enderio:chemical_conduit"
 	id: "67F367A1E086451D"
-	order_index: 0
+	order_index: 5
 	quest_links: [ ]
 	quests: [
 		{
@@ -174,5 +174,5 @@
 			y: -3.0d
 		}
 	]
-	title: " 1"
+	title: " Tip Store"
 }
