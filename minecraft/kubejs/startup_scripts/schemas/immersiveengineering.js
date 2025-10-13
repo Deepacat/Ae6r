@@ -38,24 +38,24 @@ function recipeSchema_immersiveengineering(e, c) {
         e.register('immersiveengineering:arc_furnace',
             new $RecipeSchema(
                 c.outputItem.asArray().key('results'),
-                c.inputItem.key('input'),
+                ieInputItem.key('input'),
                 ieInputItem.asArray().key('additives').defaultOptional(),
                 c.intNumber.key('time').optional(100).alwaysWrite(),
                 c.intNumber.key('energy').optional(2400).alwaysWrite(),
-                c.inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
+                ieInputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
         e.register('immersiveengineering:blast_furnace',
             new $RecipeSchema(
                 c.outputItem.key('result'),
-                c.inputItem.key('input'),
+                ieInputItem.key('input'),
                 c.intNumber.key('time').optional(1200).alwaysWrite(),
-                c.inputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
+                ieInputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
         e.register('immersiveengineering:blast_furnace_fuel',
             new $RecipeSchema(
-                c.inputItem.key('input'),
+                ieInputItem.key('input'),
                 c.intNumber.key('time')
             )
         )
@@ -92,7 +92,7 @@ function recipeSchema_immersiveengineering(e, c) {
         e.register('immersiveengineering:crusher',
             new $RecipeSchema(
                 c.outputItem.key('result'),
-                c.inputItem.key('input'),
+                ieInputItem.key('input'),
                 ieCrusherSecondaries.asArray().key('secondaries'),
                 c.intNumber.key('energy').optional(1600).alwaysWrite()
             )
