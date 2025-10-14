@@ -18,8 +18,8 @@ NetworkEvents.dataReceived('ae6r:rpc', e => {
             icon = "starting"
     }
 
-    // let status = `Tech: ${e.data.tech}, Magic: ${e.data.magic}${pt}`
-    console.log(status)
+    let status = `Tech: ${e.data.tech}, Magic: ${e.data.magic}${pt}`
+    // console.log(status)
     SDRP.setState(
         `${status}`,
         "test", "menu"
