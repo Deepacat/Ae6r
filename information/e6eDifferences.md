@@ -1,6 +1,6 @@
 Note not all listed is complete, alot of ideas are still to be implemented and or improved!
 
-Notable major differences:
+- Notable major differences
     - Mod changes:
         - RS replaced with Ae2 and addons, although Ae2 will progress fairly differently.
         - Astral sorcery removed, new magic progression points using Embers and Wizards reborn.

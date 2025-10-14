@@ -1,12 +1,14 @@
 Contributing guide
-I use a workflow with prism where you create an instance of the github repo so that it can sync your ingame files with Git, allowing you to edit files ingame, commit from and pull to your instance all without needing to drag files around to another folder.
+
+I use a workflow with prism where you create an instance of the github repo so that it can sync your ingame files with Git. Allowing you to edit files ingame, commit from and pull to your instance all without needing to drag files around to another folder.
 
 The workflow uses Pakku to sync/add/fetch mods to and from a manifest file that stores all the mods data.
-You can use ```pakku --yes fetch``` to pull/update all mods from the local pakku file after performing ```git pull``` or on initial setup.
-Using ```pakku --yes sync``` will update the manifest file from all your locally installed mods, you should really use ```pakku add```
-Instead of this unless I really trust you!
 
-Contributing expects you to understand Git, command line, and GitHub basics, or get assistance from a developer do so.
+You can use ```pakku --yes fetch``` to pull/update all mods from the local pakku file after performing ```git pull``` or on initial setup.
+
+Using ```pakku --yes sync``` will update the manifest file from all your locally installed mods, you should really use ```pakku add``` Instead of this unless I really trust you!
+
+Contributing expects you to understand Git, command line, and GitHub basics. Or get assistance from a developer do so.
 
 Instance/repo workflow setup (Only supports [Prism Launcher](https://prismlauncher.org/download/)):
 1. [Install pakku](https://juraj-hrivnak.github.io/Pakku/installing-pakku.html) through [Scoop](https://scoop.sh/) on windows, or [another method](https://juraj-hrivnak.github.io/Pakku/installing-pakku.html) on mac/linux
@@ -18,18 +20,19 @@ I prefer to make commits from my IDE, using VSCodes built in git integration, th
 
 Remember to use pakku to fetch possible mod changes after pulling.
 
-[ProbeJS](https://www.curseforge.com/minecraft/mc-mods/probejs) usage guide:
+__**[ProbeJS](https://www.curseforge.com/minecraft/mc-mods/probejs) usage guide:**__
 
 ProbeJS is an addon for [KubeJS](https://kubejs.com/wiki) which dumps information/"typing data" about classes KubeJS and addons have access to. Allowing you to see available functions, their usages, registries, and more to develop KubeJS scripts much easier.
 
 __**Some examples I made of things ProbeJS does:**__ [Server (Mineraft Pack Development)](https://discord.gg/28W6cQH), [Messages](https://discord.com/channels/362322551684464641/919534613423063080/1415111204405252158)
 
 __**Mod setup**__
+
 ***You do not need the ProbeJS VSCode extension to use ProbeJS!*** All the mods extension does under 1.21 is allow showing icons on item registries if you have a specific mod to work with it.
 
 Note that ProbeJS data isn't exclusively usable by VSCode, but rather any IDE with a typescript server such as IntelliJ (I believe their typescript features are premium only however)
 
-__Here I'll share my process to get Probe working and possible issues that may occur:__
+__**Here I'll share my process to get Probe working and possible issues that may occur:**__
 
 1. Close your IDE (usually vscode) and minecraft.
 
