@@ -10,19 +10,15 @@
 	quests: [
 		{
 			description: [
-				" Welcome to Enigmatica 6, we're glad to have you :D"
-				" "
-				"Quests are divided into 3 types:"
+				"Welcome to Aenigmata 6 Resurgere! (Or Ae6r)"
 				""
-				"- Exploring Enigmatica"
-				"- Learning Mods"
-				"- Challenges"
+				"This pack is an opinionated reimagining of Enigmatica 6 Expert, expanding the progression with with some of my own favourite mods and adding onto or changing existing ones for a whole new experience."
 				""
-				"You can learn more about each type below."
+				"(Note that this pack is in no way related to the Enigmatica modpacks developers or branding)"
 				""
-				"Note that we're still working on quests, and many more will be added in the future."
+				"The pack follows through 2 paths of magic and tech, while they may have seperate paths they still converge quite a bit requiring progress in the other."
 			]
-			icon: "minecraft:oak_sapling"
+			icon: "aether_redux:fieldsproot_sapling"
 			id: "0000000000000045"
 			rewards: [{
 				command: "/execute at @p run loot spawn ~ ~1 ~ loot enigmatica:chests/quest_farmers_delight"
@@ -44,9 +40,13 @@
 		{
 			dependencies: ["0000000000000045"]
 			description: [
-				"The Learning Mods chapters are designed to help you get started with a mod, explain how to progress, and show off some of the things you can do."
+				"Yes this is an \"Expert pack\" and is moreso designed towards players with experienced in many mods and using them together."
 				""
-				"The chapters do not show everything that every mod has to offer, so make sure to explore if you want to find all the cool features."
+				"But you aren't required to be all knowing!"
+				""
+				"Below the main progressions quests are categories of mods, incuding chapters and quests for most of the content mods in the pack to read about so you can understand them better, or even for someone that has been around these mods plenty but just forgot how something worked."
+				""
+				"Some of the quests will also have links in them enclosed in [ link ] square brackets, clicking these links will bring you to a mods book page or other external source related to the word or quest the links attached to."
 			]
 			icon: "minecraft:writable_book"
 			id: "00000000000002AE"
@@ -62,6 +62,95 @@
 			}]
 			x: -1.5d
 			y: -4.5d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			id: "19CE8546DF2120B1"
+			subtitle: "&4<neon p=8 r=2 a=0.3>I rember you're formats"
+			tasks: [{
+				id: "685CA4B9CA9CB7C9"
+				type: "checkmark"
+			}]
+			title: "Quest text formatting"
+			x: -1.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			id: "039CD764527293B5"
+			tasks: [{
+				id: "3DAFD5A88F78E709"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -7.5d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			id: "47E19B14111C5CD2"
+			tasks: [{
+				id: "5C9C69A6B7A58B07"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			description: [
+				"circle - generic quest"
+				""
+				"octagon - optional for now but will need later probably"
+				""
+				"hexagon - chapter end point, may lead to another point as a link"
+				""
+				"pentagon - entirely optional but you probably should anyway"
+				""
+				"diamond - decorative for split up components"
+				""
+				"heart - is ugly"
+				""
+				"gear - finale"
+			]
+			id: "18166AA349AD3F24"
+			tasks: [{
+				id: "7294A686EBAA38B9"
+				title: "scheming notes putting here for now"
+				type: "checkmark"
+			}]
+			title: "Quest shape formatting"
+			x: -2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			id: "7E322BA2BF9996E9"
+			tasks: [{
+				id: "7D6B09B3F3D1FE4A"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			id: "3E10140278F34F1B"
+			tasks: [{
+				id: "33FAAFE89857FB6A"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0000000000000045"]
+			id: "63A125ACC6B587E9"
+			tasks: [{
+				id: "0EBD65341CC5522F"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -8.0d
 		}
 	]
 	title: "Getting Started"

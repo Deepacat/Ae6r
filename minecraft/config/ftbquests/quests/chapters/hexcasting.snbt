@@ -19,7 +19,16 @@
 	quest_links: [ ]
 	quests: [
 		{
-			description: [""]
+			description: [
+				"{ \"color\": \"light_purple\", \"text\": \"<neon p=8 r=2 a=0.15>Media\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"472868C30A9123C9\" } } is the main source of energy used to fuel your &bspells&r and &bpatterns&r in hexcasting."
+				""
+				"Early on it mostly takes form as Amethyst, in shards or dusts, and will be used straight from your inventory when casting."
+				""
+				"although later you may find..."
+				""
+				"\"  &4<pend f=0.5 a=30 r=5><shake a=1 f=1>Other methods.</shake></pend>&r  \""
+				"&r"
+			]
 			id: "472868C30A9123C9"
 			shape: "hexagon"
 			subtitle: "Crystallized Thought"
@@ -54,6 +63,7 @@
 		}
 		{
 			dependencies: ["472868C30A9123C9"]
+			description: ["[ "]
 			hide_until_deps_complete: false
 			hide_until_deps_visible: false
 			id: "63500CA58BE6FAC4"

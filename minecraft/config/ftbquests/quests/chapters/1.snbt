@@ -10,6 +10,7 @@
 	quests: [
 		{
 			dependencies: ["18909429C6F9FE62"]
+			description: ["This route begins the tech side of the modpack"]
 			icon: "create:wrench"
 			id: "61A49DF185789C50"
 			subtitle: "Without the consequences... I hope"
@@ -1555,32 +1556,6 @@
 			title: "Bark of Forgotten Groves"
 			x: 1.0d
 			y: 5.5d
-		}
-		{
-			description: [
-				"circle - generic quest"
-				""
-				"octagon - optional for now but will need later probably"
-				""
-				"hexagon - chapter end point, may lead to another point as a link"
-				""
-				"pentagon - entirely optional but you probably should anyway"
-				""
-				"diamond - decorative for split up components"
-				""
-				"heart - is ugly"
-				""
-				"gear - finale"
-			]
-			id: "1C5BCFB7EFF86CD4"
-			invisible: true
-			tasks: [{
-				id: "3250BA7E82FEB08B"
-				title: "scheming notes putting here for now"
-				type: "checkmark"
-			}]
-			x: -3.0d
-			y: -4.0d
 		}
 	]
 	title: " 1 - Discovery"

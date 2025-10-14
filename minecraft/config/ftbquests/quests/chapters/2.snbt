@@ -174,10 +174,18 @@
 			dependencies: ["170B80914E09A31F"]
 			icon: "ae2:logic_processor"
 			id: "1E26A88609C02DAD"
-			tasks: [{
-				id: "5E46C828D9B8EC85"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "50B45D5893E793E3"
+					item: "ae2:logic_processor"
+					type: "item"
+				}
+				{
+					id: "0963FF2823ADCF04"
+					item: "ae2:inscriber"
+					type: "item"
+				}
+			]
 			x: -2.5d
 			y: 1.0d
 		}

@@ -9,7 +9,7 @@
 	drop_book_on_death: false
 	drop_loot_crates: false
 	emergency_items_cooldown: 300
-	grid_scale: 0.25d
+	grid_scale: 0.5d
 	icon: "minecraft:oak_sapling"
 	lock_message: ""
 	loot_crate_no_drop: {
