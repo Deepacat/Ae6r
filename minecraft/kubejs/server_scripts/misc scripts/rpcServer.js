@@ -19,9 +19,10 @@ const questProgression = {
 }
 
 function updateRPC(e) {
-    let progress = {
+    let dataObj = {
         magic: 0,
-        tech: 0
+        tech: 0,
+        pt: Number(e.player.stats.playTime)
     }
 
     for (let [path, chapter] of Object.entries(questProgression)) {
@@ -30,12 +31,12 @@ function updateRPC(e) {
                 let questObj = FTBQuests.getObject(e.player.level, questId)
                 let isCompleted = FTBQuests.getData(e.player).isCompleted(questObj)
                 if (isCompleted) {
-                    progress[path] = chapter.indexOf(questsInChapter) + 1
+                    dataObj[path] = chapter.indexOf(questsInChapter) + 1
                 }
             }
         }
     }
-    e.player.sendData('ae6r:rpc', progress)
+    e.player.sendData('ae6r:rpc', dataObj)
 }
 
 PlayerEvents.loggedIn(e => {
