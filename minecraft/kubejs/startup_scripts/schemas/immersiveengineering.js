@@ -1,4 +1,6 @@
 // priority: 0
+// https://github.com/BluSunrize/ImmersiveEngineering/tree/1.20.1/src/main/java/blusunrize/immersiveengineering/common/crafting/serializers
+
 function recipeSchema_immersiveengineering(e, c) {
     if (Platform.isLoaded('immersiveengineering')) {
         // ie uses a special custom ingredient format for stacked inputs
@@ -42,7 +44,7 @@ function recipeSchema_immersiveengineering(e, c) {
                 ieInputItem.asArray().key('additives').defaultOptional(),
                 c.intNumber.key('time').optional(100).alwaysWrite(),
                 c.intNumber.key('energy').optional(2400).alwaysWrite(),
-                ieInputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
+                c.outputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
         e.register('immersiveengineering:blast_furnace',
@@ -50,12 +52,12 @@ function recipeSchema_immersiveengineering(e, c) {
                 c.outputItem.key('result'),
                 ieInputItem.key('input'),
                 c.intNumber.key('time').optional(1200).alwaysWrite(),
-                ieInputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
+                c.outputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
             )
         )
         e.register('immersiveengineering:blast_furnace_fuel',
             new $RecipeSchema(
-                ieInputItem.key('input'),
+                c.inputItem.key('input'),
                 c.intNumber.key('time')
             )
         )
@@ -92,7 +94,7 @@ function recipeSchema_immersiveengineering(e, c) {
         e.register('immersiveengineering:crusher',
             new $RecipeSchema(
                 c.outputItem.key('result'),
-                ieInputItem.key('input'),
+                c.inputItem.key('input'),
                 ieCrusherSecondaries.asArray().key('secondaries'),
                 c.intNumber.key('energy').optional(1600).alwaysWrite()
             )
