@@ -1,4 +1,17 @@
 ServerEvents.recipes(e => {
+    e.remove({ id: 'immersiveengineering:crafting/connector_probe' })
+    e.shaped('immersiveengineering:connector_probe', [
+        ' A ',
+        'BCB',
+        ' D '
+    ], {
+        A: 'immersiveengineering:connector_redstone',
+        B: '#c:glass_panes',
+        C: 'immersiveengineering:circuit_board',
+        D: 'minecraft:quartz'
+    }).id('kubejs:immersiveengineering/shaped/connector_probe')
+
+    e.remove({ id: 'immersiveengineering:crafting/insulating_glass' })
     e.shaped('immersiveengineering:insulating_glass', [
         ' C ',
         'BAB',
@@ -7,7 +20,7 @@ ServerEvents.recipes(e => {
         A: '#forge:dyes/green',
         B: '#forge:dusts/iron_aluminum',
         C: '#forge:glass'
-    })
+    }).id('kubejs:immersiveengineering/shaped/insulating_glass')
 
     e.remove({ id: 'immersiveengineering:crafting/workbench' })
     e.shaped('immersiveengineering:workbench', [
@@ -20,7 +33,7 @@ ServerEvents.recipes(e => {
         C: '#forge:treated_wood_slab',
         D: 'immersiveengineering:treated_fence',
         E: 'immersiveengineering:craftingtable'
-    }).id('kubejs:immersiveengineering_crafting/workbench')
+    }).id('kubejs:immersiveengineering/shaped/workbench')
 
     e.remove({ id: 'immersiveengineering:crafting/turntable' })
     e.shaped('immersiveengineering:turntable', [
@@ -31,7 +44,7 @@ ServerEvents.recipes(e => {
         B: 'create:brass_casing',
         C: '#forge:dusts/redstone',
         D: 'immersiveengineering:coil_lv'
-    }).id('kubejs:immersiveengineering_crafting/turntable')
+    }).id('kubejs:immersiveengineering/shaped/turntable')
 
     e.remove({ id: 'immersiveengineering:crafting/furnace_heater' })
     e.shaped('immersiveengineering:furnace_heater', [
@@ -43,7 +56,7 @@ ServerEvents.recipes(e => {
         B: 'immersiveengineering:coil_lv',
         C: 'powah:dielectric_casing',
         D: 'thermal:rf_coil'
-    }).id('kubejs:immersiveengineering_crafting/furnace_heater')
+    }).id('kubejs:immersiveengineering/shaped/furnace_heater')
 
     e.remove({ id: 'immersiveengineering:crafting/conveyor_basic' })
     e.shaped(Item.of('12x immersiveengineering:conveyor_basic'), [
@@ -54,7 +67,7 @@ ServerEvents.recipes(e => {
         B: 'create:belt_connector',
         C: '#forge:gears/iron_aluminum',
         D: 'thermal:redstone_servo'
-    }).id('kubejs:immersiveengineering_crafting/conveyor_basic')
+    }).id('kubejs:immersiveengineering/shaped/conveyor_basic')
 
     e.remove({ id: 'immersiveengineering:crafting/circuit_table' })
     e.shaped('immersiveengineering:circuit_table', [
@@ -67,7 +80,7 @@ ServerEvents.recipes(e => {
         C: '#forge:treated_wood_slab',
         D: 'immersiveengineering:craftingtable',
         E: Item.of('thermal:energy_cell')
-    }).id('kubejs:immersiveengineering_crafting/circuit_table')
+    }).id('kubejs:immersiveengineering/shaped/circuit_table')
 
     e.remove({ id: 'immersiveengineering:crafting/rs_engineering' })
     e.shaped(Item.of('2x immersiveengineering:rs_engineering'), [
@@ -79,7 +92,7 @@ ServerEvents.recipes(e => {
         B: { 0: 'rftoolscontrol:ram_chip', 1: 'kubejs:advanced_ram_chip' },
         C: 'immersiveengineering:wirecoil_redstone',
         D: '#forge:sheetmetals/aluminum'
-    }).id('kubejs:immersiveengineering_crafting/rs_engineering')
+    }).id('kubejs:immersiveengineering/shaped/rs_engineering')
 
     e.remove({ id: 'immersiveengineering:crafting/heavy_engineering' })
     e.shaped(Item.of('2x immersiveengineering:heavy_engineering'), [
@@ -91,7 +104,7 @@ ServerEvents.recipes(e => {
         B: 'immersiveengineering:component_steel',
         C: 'immersiveengineering:wirecoil_electrum',
         D: '#forge:sheetmetals/steel'
-    }).id('kubejs:immersiveengineering_crafting/heavy_engineering')
+    }).id('kubejs:immersiveengineering/shaped/heavy_engineering')
 
     e.remove({ id: 'immersiveengineering:crafting/light_engineering' })
     e.shaped(Item.of('2x immersiveengineering:light_engineering'), [
@@ -103,7 +116,7 @@ ServerEvents.recipes(e => {
         B: 'immersiveengineering:component_iron',
         C: 'immersiveengineering:wirecoil_copper',
         D: '#forge:sheetmetals/aluminum'
-    }).id('kubejs:immersiveengineering_crafting/light_engineering')
+    }).id('kubejs:immersiveengineering/shaped/light_engineering')
 
     e.remove({ id: 'immersiveengineering:crafting/capacitor_lv' })
     e.shaped('immersiveengineering:capacitor_lv', [
@@ -116,7 +129,7 @@ ServerEvents.recipes(e => {
         C: '#forge:plates/lead',
         D: Item.of('thermal:fluid_cell'),
         E: { type: 'immersiveengineering:fluid', tag: 'pneumaticcraft:etching_acid', amount: 1000 }
-    }).id('kubejs:immersiveengineering_crafting/capacitor_lv')
+    }).id('kubejs:immersiveengineering/shaped/capacitor_lv')
 
     e.remove({ id: 'immersiveengineering:crafting/capacitor_mv' })
     e.shaped('immersiveengineering:capacitor_mv', [
@@ -129,7 +142,7 @@ ServerEvents.recipes(e => {
         C: 'immersiveengineering:capacitor_lv',
         D: '#forge:plates/lead',
         E: '#forge:storage_blocks/electrum'
-    }).id('kubejs:immersiveengineering_crafting/capacitor_mv')
+    }).id('kubejs:immersiveengineering/shaped/capacitor_mv')
 
     e.remove({ id: 'immersiveengineering:crafting/capacitor_hv' })
     e.shaped('immersiveengineering:capacitor_hv', [
@@ -142,7 +155,7 @@ ServerEvents.recipes(e => {
         C: 'immersiveengineering:capacitor_mv',
         D: '#forge:plates/lead',
         E: '#forge:storage_blocks/steel'
-    }).id('kubejs:immersiveengineering_crafting/capacitor_hv')
+    }).id('kubejs:immersiveengineering/shaped/capacitor_hv')
 
     e.remove({ id: 'immersiveengineering:crafting/windmill_blade' })
     e.shaped('immersiveengineering:windmill_blade', [
@@ -152,7 +165,7 @@ ServerEvents.recipes(e => {
     ], {
         A: 'eidolon:polished_planks',
         B: 'create:sail_frame'
-    }).id('kubejs:immersiveengineering_crafting/windmill_blade')
+    }).id('kubejs:immersiveengineering/shaped/windmill_blade')
 
     e.remove({ id: 'immersiveengineering:crafting/windmill' })
     e.shaped('immersiveengineering:windmill', [
@@ -162,7 +175,7 @@ ServerEvents.recipes(e => {
     ], {
         A: 'immersiveengineering:windmill_blade',
         B: 'create:mechanical_bearing'
-    }).id('kubejs:immersiveengineering_crafting/windmill')
+    }).id('kubejs:immersiveengineering/shaped/windmill')
 
     e.remove({ id: 'immersiveengineering:crafting/watermill' })
     e.shaped('immersiveengineering:watermill', [
@@ -172,7 +185,7 @@ ServerEvents.recipes(e => {
     ], {
         A: 'immersiveengineering:waterwheel_segment',
         B: 'create:mechanical_bearing'
-    }).id('kubejs:immersiveengineering_crafting/watermill')
+    }).id('kubejs:immersiveengineering/shaped/watermill')
 
     e.remove({ id: 'immersiveengineering:crafting/waterwheel_segment' })
     e.shaped('immersiveengineering:waterwheel_segment', [
@@ -182,7 +195,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:rods/brass',
         B: 'eidolon:polished_planks'
-    }).id('kubejs:immersiveengineering_crafting/waterwheel_segment')
+    }).id('kubejs:immersiveengineering/shaped/waterwheel_segment')
 
     e.remove({ id: 'immersiveengineering:crafting/dynamo' })
     e.shaped('immersiveengineering:dynamo', [
@@ -194,7 +207,7 @@ ServerEvents.recipes(e => {
         B: 'immersiveengineering:coil_lv',
         C: 'thermal:machine_frame',
         D: '#forge:ingots/andesite_alloy'
-    }).id('kubejs:immersiveengineering_crafting/dynamo')
+    }).id('kubejs:immersiveengineering/shaped/dynamo')
 
     e.remove({ id: 'immersiveengineering:crafting/radiator' })
     e.shaped('immersiveengineering:radiator', [
@@ -205,7 +218,7 @@ ServerEvents.recipes(e => {
         A: '#forge:sheetmetals/steel',
         B: 'create:fluid_pipe',
         C: { type: 'immersiveengineering:fluid', tag: 'minecraft:water', amount: 1000 }
-    }).id('kubejs:immersiveengineering_crafting/radiator')
+    }).id('kubejs:immersiveengineering/shaped/radiator')
 
     e.remove({ id: 'immersiveengineering:crafting/generator' })
     e.shaped('immersiveengineering:generator', [
@@ -216,5 +229,5 @@ ServerEvents.recipes(e => {
         A: '#forge:sheetmetals/steel',
         B: 'immersiveengineering:coil_mv',
         C: 'immersiveengineering:dynamo'
-    }).id('kubejs:immersiveengineering_crafting/generator')
+    }).id('kubejs:immersiveengineering/shaped/generator')
 })

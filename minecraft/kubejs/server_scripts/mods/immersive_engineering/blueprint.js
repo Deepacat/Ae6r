@@ -23,4 +23,11 @@ ServerEvents.recipes(e => {
             '#forge:wires'
         ], 'components'
     ).id('kubejs:immersive_engineering/blueprint/augment_core')
+
+    e.recipes.immersiveengineering.blueprint('immersiveengineering:circuit_board',
+        [
+            'immersiveengineering:insulating_glass',
+            '#forge:plates/copper',
+        ], 'components'
+    ).id('kubejs:immersive_engineering/blueprint/circuit_board')
 })
