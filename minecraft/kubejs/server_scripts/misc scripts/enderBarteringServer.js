@@ -2,7 +2,7 @@
 // Thanks to liopyu for EntityJS, examples, and help
 // Server part (server, startup)
 
-const valuedItem = 'minecraft:cobblestone' // cobble temporary
+const valuedItem = 'kubejs:alien_debris' // cobble temporary
 
 // loot table to be rolled
 const endermanBarterLootTable = [
