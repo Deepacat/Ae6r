@@ -1,10 +1,9 @@
 PlayerEvents.inventoryChanged(e => {
     const player = e.player
-    if (!player.isPlayer() || player.isFake()) { return }
+    if (!isRealPlayer(e.player)) { return }
     if (!e.item.hasTag('kubejs:burning_hot')) { return }
 
     if (e.player.inventory.find('#kubejs:burning_hot') == -1) {
-        console.log('extinguishing player')
         player.extinguish()
         return
     }
@@ -17,7 +16,7 @@ PlayerEvents.inventoryChanged(e => {
 
 ItemEvents.dropped(e => {
     const player = e.player
-    if (!player.isPlayer() || player.isFake()) { return }
+    if (!isRealPlayer(e.player)) { return }
     if (!player.isOnFire()) { return }
     if (!e.item.hasTag('kubejs:burning_hot')) { return }
 
@@ -31,7 +30,7 @@ PlayerEvents.tick(e => {
     if (Utils.server.tickCount % 20 != 0) { return }
 
     const player = e.player
-    if (!player.isPlayer() || player.isFake()) { return }
+    if (!isRealPlayer(e.player)) { return }
 
     if (!(player.inventory.find('#kubejs:burning_hot') == -1) && !player.isInWater()) {
         player.setSecondsOnFire(3)

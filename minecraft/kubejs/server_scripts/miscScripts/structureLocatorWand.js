@@ -1,12 +1,6 @@
 // Thanks to Liopyu in the KubeJS discord for structure locating
 // https://discord.com/channels/303440391124942858/1375491432630059008
 
-// wands that can be used for structure locating
-let locatingWands = [
-    'wizards_reborn:wissen_wand',
-    'wizards_reborn:arcane_wand'
-]
-
 // structures that can be located and catalyst offhand item
 let locators = {
     'ars_nouveau:fire_essence': 'irons_spellbooks:ancient_battleground',
@@ -22,22 +16,26 @@ let HolderSet = Java.loadClass("net.minecraft.core.HolderSet")
 let Holder = Java.loadClass("net.minecraft.core.Holder")
 
 ItemEvents.rightClicked(e => {
-    if (!(e.level instanceof ServerLevel)) return
-    if (e.hand == 'OFF_HAND') return
+    if (!(e.level instanceof ServerLevel)) { return }
+    if (!isRealPlayer(e.player)) { return }
+    if (e.hand != 'MAIN_HAND') { return }
 
     let offhand = e.player.offHandItem
     let mainhand = e.player.mainHandItem
 
-    if (!locatingWands.includes(mainhand.id)) return
-    if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) return
-    if (!locators[offhand.id]) return
+    if (!mainhand.hasTag('kubejs:locator_wands')) { return }
+    if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }
+    if (!locators[offhand.id]) { return }
 
     let registryAccess = e.level.registryAccess()
     let structureRegistry = registryAccess.registryOrThrow(Registries.STRUCTURE)
     let structureKey = structureRegistry.getResourceKey(structureRegistry.get(locators[offhand.id])).get()
     let structureHolder = structureRegistry.getHolderOrThrow(structureKey)
 
-    if (!structureHolder) { e.player.tell("Structure not found"); return }
+    if (!structureHolder) {
+        e.player.tell("Structure not found")
+        { return }
+    }
 
     let structure = structureHolder.get()
     let holderSet = HolderSet.direct([structureHolder])

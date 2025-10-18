@@ -6,8 +6,8 @@ ItemEvents.entityInteracted('alexsmobs:flutter', e => {
 
     // check if adult
     if (flutter.nbt.Age != 0) { return }
-    
-    if (flutter.nbt.Owner) {
+
+    if (flutter.nbt.Owner && isRealPlayer(e.player)) {
         // This is due to alex mobs wiping shearing data when picked up in a pot
         e.player.tell(`Cannot shear a tamed flutter.`)
         return
@@ -20,7 +20,7 @@ ItemEvents.entityInteracted('alexsmobs:flutter', e => {
     let realAge = nbtCopy.ForgeData["naturesaura:time_alive"]
     let cooldown = (nbtCopy.ForgeData["kubejs:time_sheared"] + cooldownTicks) - realAge
 
-    if (cooldown > 0) {
+    if (cooldown > 0 && isRealPlayer(e.player)) {
         e.player.setStatusMessage(`${Math.round(cooldown / 20).toString()} seconds to regrow silk`)
         // do not shear, on cooldown
         return

@@ -43,11 +43,12 @@ ServerEvents.tags('item', e => {
         "minecraft:stripped_crimson_hyphae", "minecraft:stripped_warped_hyphae", "minecraft:nether_wart_block", "minecraft:warped_wart_block",
         "minecraft:shroomlight"
     ])
+    // locator wands tag
+    e.add('kubejs:locator_wands', ['wizards_reborn:wissen_wand', 'wizards_reborn:arcane_wand'])
     // paper tag
     e.add('forge:paper', 'minecraft:paper') 
     // blood slimeball tag
     e.add('forge:slimeballs/blood', 'kubejs:blood_slime_ball')
-
     // ender pearl tag mixing for unif
     e.add('forge:dusts/ender_pearl', '#forge:dusts/ender')
     e.add('forge:dusts/ender', '#forge:dusts/ender_pearl')
