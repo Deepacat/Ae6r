@@ -4,11 +4,13 @@ let $BlockPos = Java.loadClass('net.minecraft.core.BlockPos')
 let dimensions = {
     "minecraft:overworld": {
         checkLight: true,
-        block: "irons_spellbooks:arcane_debris"
+        block: "irons_spellbooks:arcane_debris",
+        particleColor: '0.29 0.62 1'
     },
     "minecraft:the_end": {
         checkLight: false,
-        block: "kubejs:alien_debris"
+        block: "kubejs:alien_debris",
+        particleColor: '0.85 0.49 1'
     }
 }
 
@@ -33,14 +35,31 @@ ItemEvents.firstRightClicked(e => {
                 (blockState, blockPos) =>
                     blockState.equals(Block.getBlock(dim.block).defaultBlockState()),
                 (blockPos, blockState) => {
-                    // if (pos.distManhattan(blockPos) > range * 1 * 16) return
                     const { x, y, z } = blockPos
+                    // return if not within 32 blocks on x, z
+                    if (new $BlockPos(pos.x, 0, pos.z)
+                        .distManhattan(new $BlockPos(x, 0, z)) > range * 1 * 32) return
+                    // gets highest position in world, ignoring leaves
                     let mapPos = level.getHeightmapPos("motion_blocking_no_leaves", new $BlockPos(x, 0, z))
+                    // checks if light level is less than 5 or if not required in dimension
                     if ((dim.checkLight && level.getBlock(mapPos).light <= 4) || !dim.checkLight) {
-                        // TODO: find a cooler particle
-                        // embers particles are. really cool. and customizable!
-                        level.spawnParticles("deep_aether:mythical_particle",
-                            false, mapPos.x + 0.5, mapPos.y + 2, mapPos.z + 0.5, 0.1, 1, 0.1, 5, 0.001)
+                        let n = 0 // negative counter
+                        for (let i = 10; i >= 0; i--) {
+                            let o = i // copying I because scheduled ticks has loop issues
+                            let yOff = n
+                            level.server.scheduleInTicks(i * 3, () => {
+                                level.spawnParticles(`embers:star ${dim.particleColor} 3`,
+                                    false, mapPos.x + 0.5, mapPos.y + (yOff * 0.5), mapPos.z + 0.5,
+                                    0.1, 0.1, 0.1, 3, 0.001)
+                                if (o % 2 == 0) {
+                                    level.playSound(null, mapPos.x + 0.5, mapPos.y + 2, mapPos.z + 0.5,
+                                        "wizards_reborn:arcanum_dust_transmutation", "blocks", 0.5,
+                                        Math.random() * (1.5 - 1.2) + 1.2
+                                    )
+                                }
+                            })
+                            n++
+                        }
                     }
                 }
             )
