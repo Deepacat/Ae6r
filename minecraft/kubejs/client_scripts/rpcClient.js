@@ -2,6 +2,8 @@
 // Thanks to Monifactory for reference
 // Client part (Server, Client)
 
+let status = "Status initializing..."
+
 NetworkEvents.dataReceived('ae6r:rpc', e => {
     let pt = e.data.pt > 0 ? `, Playtime: ${(e.data.pt / 60 / 60 / 20).toFixed(2)}h` : ""
     let icon
@@ -18,9 +20,17 @@ NetworkEvents.dataReceived('ae6r:rpc', e => {
             icon = "starting"
     }
 
-    let status = `Tech: ${e.data.tech}, Magic: ${e.data.magic}${pt}`
+    status = `Tech: ${e.data.tech}, Magic: ${e.data.magic}${pt}`
+    
     // console.log(status)
     SDRP.setState(
+        `${status}`,
+        "test", "menu"
+    )
+})
+
+sdrp.dimension_change(e => {
+    e.updateSDRPState(
         `${status}`,
         "test", "menu"
     )
