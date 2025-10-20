@@ -1,9 +1,10 @@
 ServerEvents.recipes(e => {
+    e.remove({ type: 'thermal:tree_extractor' })
+    
     for (let treeCategories of treeRegistry) {
         for (let tree of treeCategories.trees) {
             if (!tree.sap) { continue }
             if (!(tree.rate.living > 0)) { continue }
-            
             e.custom({
                 type: 'thermal:tree_extractor',
                 trunk: {
