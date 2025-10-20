@@ -1,0 +1,19 @@
+#Defines the max amount of times a logic gauge can update itself in a single tick
+#Range: > 0
+logicGaugeMaxChain = 15
+#Defines the max amount of times an int gauge can update itself in a single tick
+#Range: > 0
+intGaugeMaxChain = 15
+#Defines the max amount of times a comparator gauge can update itself in a single tick
+#Range: > 0
+comparatorGaugeMaxChain = 15
+#Defines the max amount of times a counter gauge can update itself in a single tick
+#Range: > 0
+counterGaugeMaxChain = 15
+#Defines the max amount of times a string gauge can update itself in a single tick
+#Range: > 0
+stringGaugeMaxChain = 15
+#Defines the max length of a string collected by a string gauge. Increase at your own risk
+#Range: > 0
+stringGaugeMaxLength = 256
+

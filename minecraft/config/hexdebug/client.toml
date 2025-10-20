@@ -1,0 +1,172 @@
+openDebugPort = true
+debugPort = 4444
+smartDebuggerSneakScroll = true
+debuggerDisplayMode = "ENABLED"
+showDebugClientLineNumber = false
+
+[splicingTable]
+invertScrollDirection = false
+enableRainbowBrackets = true
+rainbowBracketColors = [14301447, 16685869, 13756724, 6487147, 1822677, 4617966]
+showNestedPatternNames = true
+
+[splicingTableKeybinds]
+enabled = true
+overrideVanillaArrowKeys = true
+sendHexicalTelepathy = true
+
+[splicingTableKeybinds.viewLeft]
+key = "key.keyboard.up"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.viewLeftPage]
+key = "key.keyboard.page.up"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.viewLeftFull]
+key = "key.keyboard.home"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.viewRight]
+key = "key.keyboard.down"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.viewRightPage]
+key = "key.keyboard.page.down"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.viewRightFull]
+key = "key.keyboard.end"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.cursorLeft]
+key = "key.keyboard.left"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.cursorRight]
+key = "key.keyboard.right"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.expandSelectionLeft]
+key = "key.keyboard.left"
+alt = false
+ctrl = false
+shift = true
+
+[splicingTableKeybinds.expandSelectionRight]
+key = "key.keyboard.right"
+alt = false
+ctrl = false
+shift = true
+
+[splicingTableKeybinds.moveSelectionLeft]
+key = "key.keyboard.left"
+alt = false
+ctrl = true
+shift = true
+
+[splicingTableKeybinds.moveSelectionRight]
+key = "key.keyboard.right"
+alt = false
+ctrl = true
+shift = true
+
+[splicingTableKeybinds.selectNone]
+key = "key.keyboard.a"
+alt = false
+ctrl = true
+shift = true
+
+[splicingTableKeybinds.selectAll]
+key = "key.keyboard.a"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.undo]
+key = "key.keyboard.z"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.redo]
+key = "key.keyboard.y"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.nudgeLeft]
+key = "key.keyboard.left"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.nudgeRight]
+key = "key.keyboard.right"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.duplicate]
+key = "key.keyboard.d"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.delete]
+key = "key.keyboard.delete"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.backspace]
+key = "key.keyboard.backspace"
+alt = false
+ctrl = false
+shift = false
+
+[splicingTableKeybinds.cut]
+key = "key.keyboard.x"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.copy]
+key = "key.keyboard.c"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.pasteSplat]
+key = "key.keyboard.v"
+alt = false
+ctrl = true
+shift = false
+
+[splicingTableKeybinds.pasteVerbatim]
+key = "key.keyboard.v"
+alt = false
+ctrl = true
+shift = true
+
+[splicingTableKeybinds.enlightened.cast]
+key = "key.keyboard.enter"
+alt = false
+ctrl = true
+shift = false

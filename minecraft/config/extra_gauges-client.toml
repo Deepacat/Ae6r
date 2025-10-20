@@ -1,0 +1,3 @@
+#Caching all input values to display when non instant updates are still processing
+panelCaching = true
+
