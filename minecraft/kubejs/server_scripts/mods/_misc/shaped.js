@@ -12,6 +12,19 @@ ServerEvents.recipes(e => {
         C: "embers:ember_crystal"
     }).id('kubejs:craftingstation')
 
+    e.remove({ id: 'shrink:shrinking_device' })
+    e.shaped('shrink:shrinking_device', [
+        'ABA',
+        'CDC',
+        'ECE'
+    ], {
+        A: '#forge:ender_pearls',
+        B: '#forge:glass_panes/lime',
+        C: '#forge:plates/steel',
+        D: 'eidolon:gold_inlay',
+        E: 'ars_nouveau:manipulation_essence'
+    }).id('kubejs:shrink_shrinking_device')
+
     e.remove({ id: 'architects_palette:sunmetal_block' })
     e.shaped('architects_palette:sunmetal_block', [
         'AAA',
