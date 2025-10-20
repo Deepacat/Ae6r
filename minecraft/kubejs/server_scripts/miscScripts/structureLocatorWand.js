@@ -3,7 +3,28 @@
 
 // structures that can be located and catalyst offhand item
 let locators = {
-    'ars_nouveau:fire_essence': 'irons_spellbooks:ancient_battleground',
+    'ars_nouveau:fire_essence': {
+        structure: 'irons_spellbooks:ancient_battleground',
+        dimension: 'minecraft:the_nether',
+        consume: true,
+        particleColor: '1 0.43 0.30',
+    },
+    'minecraft:white_banner': {
+        structure: 'minecraft:pillager_outpost',
+        dimension: 'minecraft:overworld',
+        consume: true,
+        particleColor: '0.5 1 0.43',
+        itemNbt: Item.of('minecraft:white_banner', {
+            display: { Name: '{"color":"gold","translate":"block.minecraft.ominous_banner"}' }
+        })
+    },
+    // replace with ship crash in the end
+    'ae2:meteorite_compass': {
+        structure: 'ae2:meteorite',
+        dimension: 'minecraft:overworld',
+        consume: false,
+        particleColor: '0.5 1 0.43'
+    }
 }
 
 let ServerLevel = Java.loadClass("net.minecraft.server.level.ServerLevel")
@@ -22,25 +43,47 @@ ItemEvents.rightClicked(e => {
 
     let offhand = e.player.offHandItem
     let mainhand = e.player.mainHandItem
+    let locatorObj = locators[offhand.id]
 
+    if (!locatorObj) { return }
     if (!mainhand.hasTag('kubejs:locator_wands')) { return }
     if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }
-    if (!locators[offhand.id]) { return }
+
+    // check if locator item requires nbt, and if offhand has any nbt
+    if (locatorObj.itemNbt) {
+        // if offhand has no nbt, return
+        if (!offhand.nbt) { return }
+        // loop over locators required nbt
+        for (let [key, value] of Object.entries(locatorObj.itemNbt.nbt)) {
+            // if offhand does not have the nbt entry, return
+            if (!offhand.nbt[key]) { return }
+            let locatorData = JSON.stringify(Object.assign({}, locatorObj.itemNbt.nbt[key]))
+            let offhandData = JSON.stringify(Object.assign({}, offhand.nbt[key]))
+            // if the nbt entry in offhand and locator doesn't have the same value, return
+            if (locatorData != offhandData) {
+                return
+            }
+        }
+    }
 
     let registryAccess = e.level.registryAccess()
     let structureRegistry = registryAccess.registryOrThrow(Registries.STRUCTURE)
-    let structureKey = structureRegistry.getResourceKey(structureRegistry.get(locators[offhand.id])).get()
+    let structureKey = structureRegistry.getResourceKey(structureRegistry.get(locatorObj.structure)).get()
     let structureHolder = structureRegistry.getHolderOrThrow(structureKey)
 
     if (!structureHolder) {
-        e.player.tell("Structure not found")
+        e.player.setStatusMessage("Structure doesn't exist! If you see this, report it!")
         { return }
+    }
+
+    if (e.player.level.dimension != locatorObj.dimension) {
+        e.player.setStatusMessage("Could not locate structure in this dimension.")
+        return
     }
 
     let structure = structureHolder.get()
     let holderSet = HolderSet.direct([structureHolder])
     let origin = e.player.getPos()
-
     let generator = e.level.getChunkSource().getGenerator()
     let result = generator.findNearestMapStructure(e.level, holderSet, origin, 100, false)
 
@@ -71,7 +114,7 @@ ItemEvents.rightClicked(e => {
                 let py = startVec.y + norm.y * i * distanceStep
                 let pz = startVec.z + norm.z * i * distanceStep
                 e.server.scheduleInTicks(ticks, () => {
-                    e.level.spawnParticles("embers:star 0.29 0.62 0.98 5", false, px, py, pz, 0, 0, 0, 5, 0.001)
+                    e.level.spawnParticles(`embers:star ${locatorObj.particleColor} 5`, false, px, py, pz, 0.2, 0.2, 0.2, 5, 0.001)
                     e.level.playSound(null, px, py, pz,
                         "wizards_reborn:arcanum_dust_transmutation", "blocks", 1,
                         Math.random() * (1.2 - 0.8) + 0.8
@@ -80,11 +123,11 @@ ItemEvents.rightClicked(e => {
                 ticks += 5
             }
             e.player.swing()
-            offhand.count--
-            e.player.addItemCooldown(mainhand, 20 * 15)
+            if (locatorObj.consume) { offhand.count-- }
+            e.player.addItemCooldown(mainhand, 20 * 10)
         }
     } else {
-        e.player.tell("No structure found nearby")
+        e.player.setStatusMessage("No structure found nearby")
     }
     e.cancel()
 })
