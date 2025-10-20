@@ -1,10 +1,10 @@
 
 [energy]
 	#Whether to consume energy when performing a scan. Will make the scanner a chargeable item.
-	useEnergy = false
+	useEnergy = true
 	#Amount of energy that can be stored in a scanner.
 	#Range: > 0
-	energyCapacityScanner = 5000
+	energyCapacityScanner = 100000
 	#Amount of energy used by the range module per scan.
 	#Range: > 0
 	energyCostModuleRange = 100
@@ -66,7 +66,7 @@
 	#Registry names of blocks that should be ignored.
 	#Blocks in this list will be excluded from the default ore list based on the forge:ores
 	#tag and it will be impossible to tune the entity module to this block.
-	ignoredBlocks = ["minecraft:command_block"]
+	ignoredBlocks = ["minecraft:ancient_debris", "irons_spellbooks:arcane_debris", "kubejs:alien_debris"]
 	#Tag names of block tags that should be ignored.
 	#Blocks matching a tag in this list will be excluded from the default ore list based on the
 	#forge:ores tag and it will be impossible to tune the entity module to this block.
