@@ -123,7 +123,7 @@ ServerEvents.recipes(e => {
         D: '#forge:plates/lead',
         E: '#create:toolboxes',
         F: 'thermal:rf_coil',
-        G: 'engineersdecor:metal_crafting_table'
+        G: 'thermal:machine_frame'
     })
 
     e.remove({ id: 'thermal:device_collector' })
