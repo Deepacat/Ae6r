@@ -15,10 +15,6 @@
             "category": "emi:world_interaction"
         },
         {
-            "id": "/repair/",
-            "category": "emi:anvil_repairing"
-        },
-        {
             "category": "create:automatic_shaped" 
         },
         {
