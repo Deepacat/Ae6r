@@ -43,7 +43,7 @@ ServerEvents.highPriorityData(e => {
             },
             {
                 type: "minecraft:rarity_filter",
-                chance: 2
+                chance: 5
             }
         ]
     })
