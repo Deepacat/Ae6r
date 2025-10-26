@@ -1,0 +1,15 @@
+{
+  "name": "kubejs:alien_crashsite_lower_pool",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "kubejs:alien_crashsite_lower",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
