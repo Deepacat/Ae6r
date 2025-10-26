@@ -7,7 +7,7 @@ StartupEvents.registry('block', e => {
         }
     }
     e.create('alien_debris')
-        .soundType('ANCIENT_DEBRIS')
+        .soundType('ancient_debris')
         .hardness(50)
         .requiresTool()
         .tagBlock('minecraft:mineable/pickaxe')
@@ -15,6 +15,14 @@ StartupEvents.registry('block', e => {
         .tagBoth('forge:ores')
         .tagBoth('forge:ore_rates/singular')
         .modelJson = alienDebrisModel
+        
+    e.create('damaged_controller')
+        .displayName('Damaged ME Controller')
+        .soundType('stone')
+        .hardness(2)
+        .requiresTool()
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
 
     e.create('warding_stone')
         .soundType('stone')
@@ -26,39 +34,39 @@ StartupEvents.registry('block', e => {
 
     e.create('superheated_steel_block')
         .soundType('metal')
+        .hardness(5)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(5)
 
     e.create('hot_compressed_iron_block')
         .soundType('metal')
+        .hardness(5)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(5)
 
     e.create('rough_machine_frame_top')
         .soundType('metal')
+        .hardness(5)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(5)
 
     e.create('coated_machine_frame_top')
         .soundType('metal')
+        .hardness(5)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(5)
 
     e.create('rough_machine_frame')
         .soundType('metal')
+        .hardness(5)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(5)
 
     e.create('crystalline_dark_oak_wood')
         .soundType('stone')
+        .hardness(5)
         .tagBlock('minecraft:mineable/axe')
         .tagBlock('minecraft:needs_wood_tool')
-        .hardness(5)
 
     e.create('aspectus_shard_block')
         .soundType('amethyst')
@@ -70,15 +78,15 @@ StartupEvents.registry('block', e => {
 
     e.create('stabilized_algal_bricks')
         .soundType('stone')
+        .hardness(50)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(50)
 
     e.create('stabilized_glowstone')
         .soundType('glass')
+        .hardness(50)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
-        .hardness(50)
 
     e.create('crystalline_oak_leaves')
         .soundType('amethyst')
