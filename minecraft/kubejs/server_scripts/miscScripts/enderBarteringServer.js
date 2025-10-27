@@ -41,7 +41,7 @@ ServerEvents.highPriorityData(e => {
                 rolls: 1.0
             }
         ],
-        random_sequence: "kubejs:enderman_bartering_loot_table"
+        random_sequence: "kubejs:gameplay/enderman_bartering"
     }
     for (let lootItem of endermanBarterLootTable) {
         lootTableJson.pools[0].entries.push({
@@ -61,7 +61,7 @@ ServerEvents.highPriorityData(e => {
             weight: lootItem.weight
         })
     }
-    e.addJson('kubejs:loot_tables/enderman_bartering_loot_table', lootTableJson)
+    e.addJson('kubejs:loot_tables/gameplay/enderman_bartering', lootTableJson)
 })
 
 function randomItemFromPool() {
