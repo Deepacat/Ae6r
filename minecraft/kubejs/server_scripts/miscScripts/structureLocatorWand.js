@@ -18,9 +18,8 @@ let locators = {
             display: { Name: '{"color":"gold","translate":"block.minecraft.ominous_banner"}' }
         })
     },
-    // replace with ship crash in the end
     'ae2:meteorite_compass': {
-        structure: 'ae2:meteorite',
+        structure: 'kubejs:alien_crashsite',
         dimension: 'minecraft:overworld',
         consume: false,
         particleColor: '0.5 1 0.43'

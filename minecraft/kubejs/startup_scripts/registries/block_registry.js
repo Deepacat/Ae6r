@@ -15,14 +15,27 @@ StartupEvents.registry('block', e => {
         .tagBoth('forge:ores')
         .tagBoth('forge:ore_rates/singular')
         .modelJson = alienDebrisModel
-        
+
     e.create('damaged_controller')
         .displayName('Damaged ME Controller')
         .soundType('stone')
-        .hardness(2)
+        .hardness(5)
         .requiresTool()
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_iron_tool')
+
+    e.create('damaged_me_chest')
+        .displayName('Damaged ME Chest')
+        .soundType('stone')
+        .hardness(5)
+        .requiresTool()
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .defaultCutout()
+        .property(BlockProperties.HORIZONTAL_FACING)
+        .placementState(ctx => {
+            ctx.setValue(BlockProperties.HORIZONTAL_FACING, ctx.getHorizontalDirection().getOpposite())
+        })
 
     e.create('warding_stone')
         .soundType('stone')
