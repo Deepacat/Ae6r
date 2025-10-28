@@ -401,10 +401,7 @@
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"6BD22F97D5168969"
-				"07FF629DC56E5912"
-			]
+			dependencies: ["07FF629DC56E5912"]
 			icon: "pneumaticcraft:module_expansion_card"
 			id: "78D1E7FCAE279FB4"
 			tasks: [
@@ -420,7 +417,7 @@
 				}
 			]
 			x: -4.5d
-			y: 0.0d
+			y: -1.0d
 		}
 		{
 			dependencies: ["58008A4EC81B0D8F"]
@@ -958,7 +955,6 @@
 		}
 		{
 			dependencies: ["6BD22F97D5168969"]
-			hide_dependency_lines: true
 			icon: "kubejs:alien_debris"
 			id: "07FF629DC56E5912"
 			tasks: [
@@ -986,7 +982,7 @@
 				}
 			]
 			x: -4.5d
-			y: 1.0d
+			y: 0.0d
 		}
 	]
 	title: " 2 - Understanding"
