@@ -1456,6 +1456,43 @@
             ]
         },
         {
+            "pakku_id": "qAoYnOXUn28XoJRB",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "better-tips-nbt-tag"
+            },
+            "name": {
+                "curseforge": "Better Tag NBT Tips"
+            },
+            "id": {
+                "curseforge": "682363"
+            },
+            "redistributable": false,
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Better Tags-1.20.1-1.4.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5932/570/Better Tags-1.20.1-1.4.jar",
+                    "id": "5932570",
+                    "parent_id": "682363",
+                    "hashes": {
+                        "sha1": "6a443c16a679f33d91f1b9a104dc15d1896f77dc",
+                        "md5": "ad62ed16a01fea0a678bd7fe673a2112"
+                    },
+                    "required_dependencies": [],
+                    "size": 140977,
+                    "date_published": "2024-11-24T03:33:35.623Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "TB4JtWcGu0SLp3KW",
             "type": "MOD",
             "slug": {
@@ -4052,45 +4089,6 @@
                     "required_dependencies": [],
                     "size": 1048567,
                     "date_published": "2025-04-14T03:37:30.690Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "JvVsLLjOEjntnPoW",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "emi-enchanting"
-            },
-            "name": {
-                "curseforge": "EMI Enchanting"
-            },
-            "id": {
-                "curseforge": "936713"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "emi_enchanting-0.1.2+1.20.1+forge.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "neoforge",
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5733/124/emi_enchanting-0.1.2+1.20.1+forge.jar",
-                    "id": "5733124",
-                    "parent_id": "936713",
-                    "hashes": {
-                        "sha1": "0374c5c3eb4dd361f89388cda84744dc70ae638d",
-                        "md5": "8ba128234e033c843e517364f7fd24aa"
-                    },
-                    "required_dependencies": [
-                        "580555"
-                    ],
-                    "size": 15470,
-                    "date_published": "2024-09-18T02:22:21.427Z"
                 }
             ]
         },
@@ -8313,6 +8311,46 @@
                     "required_dependencies": [],
                     "size": 692289,
                     "date_published": "2025-09-20T16:57:55.713Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "o65v2zrvU9umZ8bW",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "mega-cells"
+            },
+            "name": {
+                "curseforge": "MEGA Cells"
+            },
+            "id": {
+                "curseforge": "622112"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "megacells-forge-2.4.6-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6175/8/megacells-forge-2.4.6-1.20.1.jar",
+                    "id": "6175008",
+                    "parent_id": "622112",
+                    "hashes": {
+                        "sha1": "ed6fd5eb0c782529be03f199d66d9a7c9eb2a518",
+                        "md5": "c2fbcaaa3c810162602ad709ad31a792"
+                    },
+                    "required_dependencies": [
+                        "348521",
+                        "223794"
+                    ],
+                    "size": 387196,
+                    "date_published": "2025-02-09T14:26:09.890Z"
                 }
             ]
         },
@@ -13994,6 +14032,42 @@
                     ],
                     "size": 37299940,
                     "date_published": "2025-04-30T16:07:23.940Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "LXq4WEY7V0PQkIYk",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "world-play-time"
+            },
+            "name": {
+                "curseforge": "World Play Time"
+            },
+            "id": {
+                "curseforge": "968891"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "worldplaytime-1.2.3-1.20.x-FORGE.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5920/87/worldplaytime-1.2.3-1.20.x-FORGE.jar",
+                    "id": "5920087",
+                    "parent_id": "968891",
+                    "hashes": {
+                        "sha1": "fd2d2b5ba5aba079020c76fa865d4db27cfe3520",
+                        "md5": "2959e9d10c4b333265a7ec345987f65e"
+                    },
+                    "required_dependencies": [],
+                    "size": 83163,
+                    "date_published": "2024-11-19T17:48:14.147Z"
                 }
             ]
         },
