@@ -3,10 +3,10 @@
 exBusMultiplier = 8
 #ME Infinity Cell idle energy cost (unit: AE/t)
 #Range: 0.1 ~ 64.0
-cost = 8.0
+cost = 64.0
 #The max range between two wireless connector
 #Range: 10.0 ~ 10000.0
-range = 1000.0
+range = 500.0
 #ME Infinity Cell types (item or fluid's id)
 types = ["minecraft:water", "minecraft:cobblestone"]
 #The AE device/part that can be packed by ME Packing Tape
@@ -22,7 +22,7 @@ disableItemRender = false
 	custom_oversize_interface_multiplier = ["appbot:mana 2", "appflux:flux 4"]
 	#The max size of Assembler Matrix
 	#Range: 3 ~ 16
-	assembler_matrix_max_size = 6
+	assembler_matrix_max_size = 5
 
 [misc]
 	#Enable debug logging.
