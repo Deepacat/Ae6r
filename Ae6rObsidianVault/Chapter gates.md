@@ -11,13 +11,13 @@ Major mods:
 	- Embers
 	- Eidolon
 	- Ars nouveau
-	- Kinda Aether
+	- Aether*
 	- Botania
 	- Mythic Botany
 	- Blood magic
 	- Natures aura
 	- Wizards reborn
-	- 
+	- Summoning Altars
 - Other
 	- Ae2
 	- Mbd2
