@@ -9,6 +9,8 @@ For some schemas and recipe components to reference for schema related code in A
 const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
 const $RecipeComponentBuilder = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilder')
 const $RecipeComponent = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponent')
+const $MapRecipeComponent = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.MapRecipeComponent')
+const $RecipeComponentBuilderMap = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilderMap')
 const $KJSInputItem = Java.loadClass('dev.latvian.mods.kubejs.item.InputItem')
 
 StartupEvents.recipeSchemaRegistry(e => {
@@ -16,7 +18,10 @@ StartupEvents.recipeSchemaRegistry(e => {
 
     let comps = {}
 
+
     comps.components = componentRegistry
+    comps.bound = componentRegistry.get.bind(componentRegistry)
+
     comps.anyFloatNumber = componentRegistry.get('anyFloatNumber')()
     comps.anyString = componentRegistry.get('anyString')()
     comps.bool = componentRegistry.get('bool')()
@@ -33,7 +38,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     comps.outputFluid = componentRegistry.get('outputFluid')()
 
     comps.outputFluidOrItem = componentRegistry.get('outputFluidOrItem')()
-    
+
     comps.fluidTag = componentRegistry.get('tag')({ registry: 'fluid' })
     comps.blockTag = componentRegistry.get('blockTag')()
 
@@ -81,6 +86,7 @@ StartupEvents.recipeSchemaRegistry(e => {
         comps.heatCondition = componentRegistry.get('enum')({ class: $HeatCondition })
     }
 
+    recipeSchema_ae2(e, comps)
     recipeSchema_apotheosis(e, comps)
     recipeSchema_createaddition(e, comps)
     recipeSchema_farmers_delight(e, comps)
