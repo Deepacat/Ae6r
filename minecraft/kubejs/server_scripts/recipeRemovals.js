@@ -169,6 +169,7 @@ ServerEvents.recipes(e => {
         'powah:energizing/blazing_crystal_2',
         'powah:crafting/capacitor_basic',
         'powah:crafting/capacitor_basic_tiny',
+        'powah:energizing/compat/certus_quartz_to_charged_certus_quartz',
         /powah:crafting\/cable_/,
 
         'quark:building/crafting/red_nether_bricks_util',
@@ -212,7 +213,6 @@ ServerEvents.recipes(e => {
 
     // todo organize this LMAO (also move id removals to respective recipes...?)
     const recipeFilterRemovals = [
-        // for now until I can decide how I want to use the mod or if at all
         { output: 'mekanism:sawdust', mod: 'mekanism', type: 'mekanism:sawing' },
 
         { output: 'botania:mana_powder', mod: 'botania' },

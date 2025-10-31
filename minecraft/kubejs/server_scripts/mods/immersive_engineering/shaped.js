@@ -7,7 +7,7 @@ ServerEvents.recipes(e => {
     ], {
         A: 'immersiveengineering:connector_redstone',
         B: '#c:glass_panes',
-        C: 'immersiveengineering:circuit_board',
+        C: 'immersiveengineering:component_electronic',
         D: 'minecraft:quartz'
     }).id('kubejs:immersiveengineering/shaped/connector_probe')
 

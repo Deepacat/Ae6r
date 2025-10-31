@@ -55,7 +55,7 @@ ServerEvents.recipes(e => {
         'CDC',
         'ABA'
     ], {
-        A: '#forge:nuggets/nebu',
+        A: '#forge:nuggets/gravitite',
         B: 'aether:quicksoil_glass',
         C: '#forge:dusts/redstone',
         D: '#forge:gems/mana'
