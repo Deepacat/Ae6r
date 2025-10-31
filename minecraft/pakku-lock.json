@@ -2739,44 +2739,6 @@
             ]
         },
         {
-            "pakku_id": "LNFpnf1SqMAmF6eV",
-            "type": "MOD",
-            "slug": {
-                "curseforge": "connector-extras"
-            },
-            "name": {
-                "curseforge": "Connector Extras"
-            },
-            "id": {
-                "curseforge": "913445"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "ConnectorExtras-1.11.2+1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/5490/637/ConnectorExtras-1.11.2+1.20.1.jar",
-                    "id": "5490637",
-                    "parent_id": "913445",
-                    "hashes": {
-                        "sha1": "9336db4e6ce458bccf7724c039f0371e822397ae",
-                        "md5": "6a79978270b2aa5ddc42c2be4f4d73a7"
-                    },
-                    "required_dependencies": [
-                        "890127"
-                    ],
-                    "size": 182464,
-                    "date_published": "2024-06-30T22:11:23.003Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "jKHvZCttY7sN6I0U",
             "pakku_links": [
                 "h6VSIu6JUyk4CLMx",
@@ -6253,6 +6215,52 @@
             ]
         },
         {
+            "pakku_id": "FOKLYHqlVuXUMPGW",
+            "pakku_links": [
+                "epaVFdijosRb9duN"
+            ],
+            "type": "MOD",
+            "slug": {
+                "curseforge": "hexal"
+            },
+            "name": {
+                "curseforge": "Hexal"
+            },
+            "id": {
+                "curseforge": "824725"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "hexal-forge-1.20.1-0.3.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7168/104/hexal-forge-1.20.1-0.3.1.jar",
+                    "id": "7168104",
+                    "parent_id": "824725",
+                    "hashes": {
+                        "sha1": "79c0150e18cf7c7d41cf85d6dcb44c287d4cbfdb",
+                        "md5": "034b970bfbe6cf09c8c1d6a7e87a669c"
+                    },
+                    "required_dependencies": [
+                        "569849",
+                        "597824",
+                        "351264",
+                        "388172",
+                        "306770",
+                        "824728"
+                    ],
+                    "size": 1590568,
+                    "date_published": "2025-10-30T20:28:22.173Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "wM873EGOXm3c7j9g",
             "type": "RESOURCE_PACK",
             "slug": {
@@ -9153,6 +9161,47 @@
             ]
         },
         {
+            "pakku_id": "epaVFdijosRb9duN",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "moreiotas"
+            },
+            "name": {
+                "curseforge": "MoreIotas"
+            },
+            "id": {
+                "curseforge": "824728"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "moreiotas-forge-1.20.1-0.1.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7027/592/moreiotas-forge-1.20.1-0.1.1.jar",
+                    "id": "7027592",
+                    "parent_id": "824728",
+                    "hashes": {
+                        "sha1": "0df24b35dc31e9a9ca24a590803d6243a31f1e9a",
+                        "md5": "bfc42665077edf9db4768d5a39b03504"
+                    },
+                    "required_dependencies": [
+                        "351264",
+                        "306770",
+                        "569849",
+                        "597824"
+                    ],
+                    "size": 19408245,
+                    "date_published": "2025-09-24T01:45:55.007Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "JmDJhcrVQIztOE62",
             "type": "MOD",
             "slug": {
@@ -11817,47 +11866,6 @@
                     ],
                     "size": 1198997,
                     "date_published": "2023-12-17T22:09:26.180Z"
-                }
-            ]
-        },
-        {
-            "pakku_id": "sicibG94bkusQeiH",
-            "pakku_links": [
-                "HPfQNrdJYyOtswk1"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "sinytra-connector"
-            },
-            "name": {
-                "curseforge": "Sinytra Connector"
-            },
-            "id": {
-                "curseforge": "890127"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "Connector-1.0.0-beta.46+1.20.1.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "beta",
-                    "url": "https://edge.forgecdn.net/files/5761/411/Connector-1.0.0-beta.46+1.20.1.jar",
-                    "id": "5761411",
-                    "parent_id": "890127",
-                    "hashes": {
-                        "sha1": "4c65f7cec969cb6c2e39d0b06c9be28e72fe370d",
-                        "md5": "3c07e0a25c1921da7586c0290c72ba86"
-                    },
-                    "required_dependencies": [
-                        "889079"
-                    ],
-                    "size": 5043384,
-                    "date_published": "2024-09-27T11:10:59.270Z"
                 }
             ]
         },
