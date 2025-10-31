@@ -6,7 +6,7 @@
     "tinyTntBlockDamage_comment": "Enables the ability of Tiny TNT to break blocks.",
     "tinyTntBlockDamage": false,
     "channels_comment": "Changes the channel capacity that cables provide in AE2.",
-    "channels": "x2",
+    "channels": "default",
     "spatialAnchorEnableRandomTicks_comment": "Whether Spatial Anchors should force random chunk ticks and entity spawning.",
     "spatialAnchorEnableRandomTicks": false
   },
@@ -26,7 +26,7 @@
     "disassemblyCrafting_comment": "Enable shift-clicking with the crafting units in hand to disassemble them.",
     "disassemblyCrafting": true,
     "growthAccelerator_comment": "Number of ticks between two crystal growth accelerator ticks",
-    "growthAccelerator": 10
+    "growthAccelerator": 50
   },
   "spatialio": {
     "spatialPowerMultiplier": 1250.0,
@@ -43,7 +43,7 @@
   },
   "battery": {
     "chargerChargeRate_comment": "The chargers charging rate factor, which is applied to the charged items charge rate. 2 means it charges everything twice as fast. 0.5 half as fast.",
-    "chargerChargeRate": 1.0,
+    "chargerChargeRate": 0.5,
     "wirelessTerminal": 1600000,
     "chargedStaff": 8000,
     "entropyManipulator": 200000,
