@@ -31,12 +31,13 @@ global.vanilla_mats = {
 
 // Materials comprised of multiple other materials
 global.alloy_mats = { // has ingot, nugget, block default flags
-    brass: { type: 'alloy', toolLvl: 'stone', addFlags: ['rod'], delFlags: [] },
-    constantan: { type: 'alloy', toolLvl: 'stone', addFlags: ['gear', 'dust', 'rod'], delFlags: [] },
-    invar: { type: 'alloy', toolLvl: 'stone', addFlags: ['gear', 'dust'], delFlags: [] },
-    steel: { type: 'alloy', toolLvl: 'stone', addFlags: [], delFlags: ['gear', 'rod'] },
-    radiant_dawnstone: { type: 'other', toolLvl: 'iron', addFlags: [], delFlags: [] },
-    dwarven_mithril: { type: 'other', toolLvl: 'iron', addFlags: [], delFlags: [] }
+    brass: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'rod'], delFlags: [] },
+    constantan: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'dust', 'rod'], delFlags: [] },
+    invar: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'dust'], delFlags: [] },
+    steel: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'rod'], delFlags: [] },
+    radiant_dawnstone: { type: 'alloy', toolLvl: 'iron', addFlags: [], delFlags: [] },
+    dwarven_mithril: { type: 'alloy', toolLvl: 'netherite', addFlags: [], delFlags: [] },
+    charged_certus_steel: { type: 'alloy', toolLvl: 'diamond', addFlags: [], delFlags: ['nugget'] },
 }
 
 // Gem materials (Has an ore that drops gem)
