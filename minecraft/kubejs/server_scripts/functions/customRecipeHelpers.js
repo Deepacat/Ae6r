@@ -104,7 +104,7 @@ function thermalChiller(event, outputItem, inputs) {
     return {
         id: function (/** @type {string} */ customId) {
             recipe.id(customId ?? `kubejs:thermal/chiller/${outputItem.split(':')[1]}`)
-        },
+        }
     }
 }
 
