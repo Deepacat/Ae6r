@@ -2,19 +2,28 @@
 // high priority so the tags load before unification (removals etc)
 
 ServerEvents.tags('item', e => {
+    // Flags to be used when attempting to add materials to tags
+    const flagTagPrefixes = [
+        'forge:gems/', 'forge:ingots/', 'forge:dusts/', 'forge:nuggets/',
+        'forge:storage_blocks/', 'forge:plates/', 'forge:gears/', 'forge:rods/',
+        'forge:wires/'
+    ]
+
     // Making material substitute tags
-    const substitutions = [
+    const substitutionMaterials = [
         ['gold', 'brass'],
         ['gold', 'copper'],
         ['gold', 'bronze'],
+        ['gold', 'silver'],
         ['iron', 'aluminum'],
         ['iron', 'tin'],
         ['iron', 'copper'],
+        ['iron', 'osmium'],
         ['copper', 'tin'],
         ['source', 'diamond'],
     ]
 
-    for (let mats of substitutions) {
+    for (let mats of substitutionMaterials) {
         e.add(`forge:ingots/${mats[0]}_${mats[1]}`, [`#forge:ingots/${mats[0]}`, `#forge:ingots/${mats[1]}`])
         e.add(`forge:gems/${mats[0]}_${mats[1]}`, [`#forge:gems/${mats[0]}`, `#forge:gems/${mats[1]}`])
         e.add(`forge:dusts/${mats[0]}_${mats[1]}`, [`#forge:dusts/${mats[0]}`, `#forge:dusts/${mats[1]}`])
@@ -24,16 +33,29 @@ ServerEvents.tags('item', e => {
         e.add(`forge:gears/${mats[0]}_${mats[1]}`, [`#forge:gears/${mats[0]}`, `#forge:gears/${mats[1]}`])
         e.add(`forge:rods/${mats[0]}_${mats[1]}`, [`#forge:rods/${mats[0]}`, `#forge:rods/${mats[1]}`])
     }
+
+    // generic materials to attempt tagging
+    // for mods that for SOME reason don't have their items tagged cough cough natures aura
+    const materials = [
+        'sky',
+        'tainted_gold',
+        'infused_iron',
+        'alfsteel',
+        'sunmetal',
+    ]
+    for (let mat of materials) {
+        for (let prefix of flagTagPrefixes) {
+            if (Item.exists(`${prefix}${mat}`)) {
+                e.add(`${prefix}${mat}`, `#forge:ingots/${mat}`)
+            }
+        }
+    }
+
     // ingot tags
     e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
     e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
     e.add('forge:ingots/gaia', 'botania:gaia_ingot')
     e.add('forge:ingots/gaia_spirit', 'botania:gaia_ingot')
-    e.add('forge:ingots/alfsteel', 'mythicbotany:alfsteel_ingot')
-    e.add('forge:ingots/sky', ['naturesaura:sky_ingot'])
-    e.add('forge:ingots/tainted_gold', ['naturesaura:tainted_gold'])
-    e.add('forge:ingots/infused_iron', ['naturesaura:infused_iron'])
-    e.add('forge:ingots/sunmetal', ['architects_palette:sunmetal_brick'])
     e.add('forge:ingots/uraninite', 'powah:uraninite')
     e.add('forge:ingots/energized_steel', 'powah:steel_energized')
     e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium'])
@@ -46,7 +68,7 @@ ServerEvents.tags('item', e => {
     // locator wands tag
     e.add('kubejs:locator_wands', ['wizards_reborn:wissen_wand', 'wizards_reborn:arcane_wand'])
     // paper tag
-    e.add('forge:paper', 'minecraft:paper') 
+    e.add('forge:paper', 'minecraft:paper')
     // blood slimeball tag
     e.add('forge:slimeballs/blood', 'kubejs:blood_slime_ball')
     // ender pearl tag mixing for unif

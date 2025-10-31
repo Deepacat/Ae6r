@@ -31,7 +31,7 @@ global.vanilla_mats = {
 
 // Materials comprised of multiple other materials
 global.alloy_mats = { // has ingot, nugget, block default flags
-    brass: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'rod'], delFlags: [] },
+    brass: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'rod'], delFlags: [] },
     constantan: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'dust', 'rod'], delFlags: [] },
     invar: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'dust'], delFlags: [] },
     steel: { type: 'alloy', toolLvl: 'stone', addFlags: ['plate', 'gear', 'rod'], delFlags: [] },
