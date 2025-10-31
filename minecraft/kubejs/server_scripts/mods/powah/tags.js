@@ -7,13 +7,15 @@ ServerEvents.tags('item', e => {
     e.add('forge:storage_blocks/nitro', 'powah:nitro_crystal_block')
 
     // powah gem tags
-    e.add('forge:gems/blazing', 'powah:blazing_crystal')
-    e.add('forge:gems/niotic', 'powah:niotic_crystal')
-    e.add('forge:gems/spirited', 'powah:spirited_crystal')
-    e.add('forge:gems/nitro', 'powah:nitro_crystal')
+    e.add('forge:gems/blazing', 'powah:crystal_blazing')
+    e.add('forge:gems/niotic', 'powah:crystal_niotic')
+    e.add('forge:gems/spirited', 'powah:crystal_spirited')
+    e.add('forge:gems/nitro', 'powah:crystal_nitro')
 
     // powah energizing rod
-    e.add('powah:energizing_rod', ['powah:energizing_rod_starter', 'powah:energizing_rod_basic', 'powah:energizing_rod_hardened',
-        'powah:energizing_rod_blazing', 'powah:energizing_rod_niotic', 'powah:energizing_rod_spirited', 'powah:energizing_rod_nitro'])
-
+    e.add('powah:energizing_rod', [
+        'powah:energizing_rod_starter', 'powah:energizing_rod_basic', 'powah:energizing_rod_hardened',
+        'powah:energizing_rod_blazing', 'powah:energizing_rod_niotic', 'powah:energizing_rod_spirited',
+        'powah:energizing_rod_nitro'
+    ])
 })
