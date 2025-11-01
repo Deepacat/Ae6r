@@ -551,20 +551,6 @@ ServerEvents.recipes(e => {
         ], 4.5
     ).id('kubejs:pneumaticcraft/pressure_chamber/altar_of_birthing_kit')
 
-    // e.recipes.pneumaticcraft.pressure_chamber(
-    //     [
-    //         'kubejs:diy_furnace_engine_kit'
-    //     ],
-    //     [
-    //         'mekanism:resistive_heater',
-    //         'pneumaticcraft:heat_pipe',
-    //         'minecraft:blast_furnace',
-    //         'create:flywheel',
-    //         'create:furnace_engine',
-    //         'mekanism:cardboard_box'
-    //     ], 4.5
-    // ).id('kubejs:pneumaticcraft/pressure_chamber/diy_furnace_engine_kit')
-
     e.recipes.pneumaticcraft.pressure_chamber(
         [
             'kubejs:diy_mixer'
@@ -727,4 +713,49 @@ ServerEvents.recipes(e => {
             '36x powah:reactor_nitro'
         ], -0.9
     ).id('kubejs:pneumaticcraft/pressure_chamber/disassemble_reactor_nitro')
+
+    // ae2 circuits
+    e.recipes.pneumaticcraft.pressure_chamber(
+        [
+            'ae2:printed_silicon'
+        ],
+        [
+            '8x redstonepen:relay',
+            '3x #forge:wires/aluminum',
+            'kubejs:silicon_base'
+        ], 4
+    ).id('kubejs:pneumaticcraft/pressure_chamber/printed_silicon')
+
+    e.recipes.pneumaticcraft.pressure_chamber(
+        [
+            'ae2:printed_calculation_processor'
+        ],
+        [
+            'pneumaticcraft:logistics_core',
+            '3x tconstruct:sky_slime_crystal',
+            'kubejs:calculation_processor_base'
+        ], 4
+    ).id('kubejs:pneumaticcraft/pressure_chamber/printed_calculation_processor')
+
+        e.recipes.pneumaticcraft.pressure_chamber(
+        [
+            'ae2:printed_engineering_processor'
+        ],
+        [
+            'pneumaticcraft:logistics_core',
+            '3x tconstruct:ichor_slime_crystal',
+            'kubejs:engineering_processor_base'
+        ], 4
+    ).id('kubejs:pneumaticcraft/pressure_chamber/printed_engineering_processor')
+
+        e.recipes.pneumaticcraft.pressure_chamber(
+        [
+            'ae2:printed_logic_processor'
+        ],
+        [
+            'pneumaticcraft:logistics_core',
+            '3x tconstruct:earth_slime_crystal',
+            'kubejs:logic_processor_base'
+        ], 4
+    ).id('kubejs:pneumaticcraft/pressure_chamber/printed_logic_processor')
 })
