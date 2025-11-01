@@ -20,9 +20,9 @@ let locators = {
     },
     'ae2:meteorite_compass': {
         structure: 'kubejs:alien_crashsite',
-        dimension: 'minecraft:overworld',
+        dimension: 'minecraft:the_end',
         consume: false,
-        particleColor: '0.5 1 0.43'
+        particleColor: '0.98 0.44 1'
     }
 }
 
@@ -97,7 +97,7 @@ ItemEvents.rightClicked(e => {
             let piece = start.getPieces()[0]
             let { x, y, z } = piece.locatorPosition
 
-            let startVec = { x: e.player.pos.x(), y: e.player.pos.y(), z: e.player.pos.z() }
+            let startVec = { x: e.player.pos.x(), y: e.player.pos.y() + 3, z: e.player.pos.z() }
             let endVec = { x: x + 0.5, y: y + 0.5, z: z + 0.5 }
             let dir = { x: endVec.x - startVec.x, y: endVec.y - startVec.y, z: endVec.z - startVec.z }
             let distance = Math.sqrt(dir.x * dir.x + dir.y * dir.y + dir.z * dir.z)
