@@ -49,21 +49,35 @@ StartupEvents.registry('item', e => {
         'treated_arcane_handle',
         'lush_silk',
         'observatory_lens',
-        'coarse_lapis_lazuli_compound',
-        'smoldering_lapis_lazuli_compound',
         'cutting_essence',
         'superheated_steel_ingot',
         'hot_compressed_iron_ingot',
         'dimensional_storage_crystal',
         'spirit_entropic_gateway',
         'amadron_survey_tools',
+        'ground_meat',
+        'scented_stick',
+        'celestial_mycelium_filaments',
+        'incomplete_book',
+        'incomplete_capacitor_basic_large',
+        'astrogro',
+        'monster_mash',
+        'advanced_ram_chip',
+        'cpu_core_mk_1026',
+        'cpu_core_eg_28222',
+        'cpu_core_as_81221',
+
+        // brick related
+        'coarse_lapis_lazuli_compound',
+        'smoldering_lapis_lazuli_compound',
         'basalt_powder',
         'coke_brick_blend',
         'coke_brick',
         'blast_brick_blend',
         'blast_brick',
         'red_nether_brick',
-        'ground_meat',
+
+        // memory sticks
         'memory_basic_empty',
         'memory_basic_filled',
         'memory_advanced_empty',
@@ -72,16 +86,13 @@ StartupEvents.registry('item', e => {
         'memory_elite_filled',
         'memory_ultimate_empty',
         'memory_ultimate_filled',
-        'scented_stick',
-        'celestial_mycelium_filaments',
-        'incomplete_book',
-        'incomplete_capacitor_basic_large',
-        'astrogro',
-        'advanced_ram_chip',
-        'monster_mash',
-        'cpu_core_mk_1026',
-        'cpu_core_eg_28222',
-        'cpu_core_as_81221',
+
+        // ae2 intermediary processors
+        'silicon_base',
+        'logic_processor_base',
+        'engineering_processor_base',
+        'calculation_processor_base',
+        'accumulation_processor_base',
 
         // mastery shards
         'automation_mastery_shard',
@@ -571,6 +582,8 @@ StartupEvents.registry('item', e => {
             .tag(`kubejs:aspectus_shards/${aspect}`)
             .tag(`kubejs:aspectus_shards`)
     }
+
+
 
 
 })
