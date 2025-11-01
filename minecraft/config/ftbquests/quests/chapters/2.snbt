@@ -173,7 +173,7 @@
 		{
 			dependencies: [
 				"170B80914E09A31F"
-				"2680944D40F91AFF"
+				"3F82980E00FCB455"
 			]
 			icon: "ae2:logic_processor"
 			id: "1E26A88609C02DAD"
@@ -204,8 +204,8 @@
 			y: 12.5d
 		}
 		{
-			dependencies: ["170B80914E09A31F"]
-			icon: "ae2:controller"
+			dependencies: ["1E26A88609C02DAD"]
+			icon: "ae2:energy_acceptor"
 			id: "62FCD83DA87694A7"
 			shape: "octagon"
 			tasks: [
@@ -215,11 +215,17 @@
 					type: "item"
 				}
 				{
-					id: "53011EE03EA9A13C"
-					item: "ae2:controller"
+					id: "197733B156B42EAA"
+					item: "ae2:energy_acceptor"
+					type: "item"
+				}
+				{
+					id: "54196DA67C4EB3E1"
+					item: "ae2:calculation_processor"
 					type: "item"
 				}
 			]
+			title: "Applied Energistics 2"
 			x: -2.5d
 			y: 0.0d
 		}
@@ -935,25 +941,6 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["07FF629DC56E5912"]
-			icon: "ae2:inscriber"
-			id: "2680944D40F91AFF"
-			tasks: [
-				{
-					id: "4B6A5DB12421576C"
-					item: "ae2:inscriber"
-					type: "item"
-				}
-				{
-					id: "2C1376B5CB3155A3"
-					item: "ae2:charger"
-					type: "item"
-				}
-			]
-			x: -3.5d
-			y: 1.0d
-		}
-		{
 			dependencies: ["6BD22F97D5168969"]
 			icon: "kubejs:alien_debris"
 			id: "07FF629DC56E5912"
@@ -967,7 +954,7 @@
 				{
 					id: "47DCD805ACA2BA51"
 					optional_task: true
-					structure: "ae2:meteorite"
+					structure: "kubejs:alien_crashsite"
 					type: "structure"
 				}
 				{
@@ -983,6 +970,25 @@
 			]
 			x: -4.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["07FF629DC56E5912"]
+			icon: "createaddition:tesla_coil"
+			id: "3F82980E00FCB455"
+			tasks: [
+				{
+					id: "3B8F58C7CE7295AB"
+					item: "createaddition:tesla_coil"
+					type: "item"
+				}
+				{
+					id: "09E22B068E4FF96F"
+					item: "ae2:charged_certus_quartz_crystal"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 1.0d
 		}
 	]
 	title: " 2 - Understanding"

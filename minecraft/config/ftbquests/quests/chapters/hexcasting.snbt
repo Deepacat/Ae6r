@@ -14,7 +14,7 @@
 		x: 1.1d
 		y: 1.0d
 	}]
-	order_index: 7
+	order_index: 8
 	progression_mode: "linear"
 	quest_links: [ ]
 	quests: [

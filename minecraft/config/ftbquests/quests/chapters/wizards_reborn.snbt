@@ -1,0 +1,434 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "wizards_reborn"
+	group: "5A8B89F87F77CF4C"
+	id: "12BCABEA34D26284"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "24647D372186CE16"
+			tasks: [
+				{
+					id: "5116993DA3DE3270"
+					item: "wizards_reborn:arcanum"
+					type: "item"
+				}
+				{
+					id: "4A88A7ECF59BC0AE"
+					item: "wizards_reborn:arcanemicon"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["24647D372186CE16"]
+			id: "3BEBE0E6127B59D7"
+			tasks: [
+				{
+					id: "48FD13AC77445A55"
+					item: "wizards_reborn:arcane_wood_sapling"
+					type: "item"
+				}
+				{
+					id: "39D942D3AF195D8A"
+					item: "wizards_reborn:arcanum_dust"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3BEBE0E6127B59D7"]
+			id: "2B2BBF9F0BF7196C"
+			tasks: [{
+				id: "7ED3041E141C8C98"
+				item: {
+					Count: 1
+					id: "wizards_reborn:wissen_wand"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["1C0A065E86BF3AFB"]
+			id: "22908799B28A8ACB"
+			tasks: [{
+				id: "2B47AD9DCD4A8A3E"
+				item: "wizards_reborn:wissen_translator"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["22908799B28A8ACB"]
+			id: "22A34CC203324B59"
+			tasks: [{
+				id: "2173EC46BBB4B0CC"
+				type: "checkmark"
+			}]
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2B2BBF9F0BF7196C"]
+			id: "5C22877D996D7B17"
+			tasks: [{
+				id: "6249538E7C52BDC9"
+				item: "wizards_reborn:arcane_workbench"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["3BEBE0E6127B59D7"]
+			id: "11E67A69920820A5"
+			tasks: [
+				{
+					id: "4A2B6D67E1EA2ADD"
+					item: {
+						Count: 1
+						id: "wizards_reborn:arcane_wand"
+						tag: {
+							cooldown: 0
+							crystal: 0b
+							maxCooldown: 0
+							spell: ""
+							spellData: { }
+							wissen: 0
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "2CC4D1706C0063B8"
+					item: {
+						Count: 1
+						id: "wizards_reborn:wissen_wand"
+						tag: { }
+					}
+					type: "item"
+				}
+			]
+			title: "Utility wands"
+			x: -0.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5C22877D996D7B17"]
+			id: "1C0A065E86BF3AFB"
+			tasks: [{
+				id: "17B1CBBE5D8F2D99"
+				item: "wizards_reborn:wissen_altar"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["22908799B28A8ACB"]
+			id: "1124C62D033FBC2B"
+			tasks: [{
+				id: "224F8F61483E76BD"
+				item: {
+					Count: 1
+					id: "wizards_reborn:wissen_cell"
+					tag: {
+						wissen: 0
+					}
+				}
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1C0A065E86BF3AFB"]
+			id: "1187E3A6529090D6"
+			tasks: [{
+				id: "4B47F9425E0B23A2"
+				item: "wizards_reborn:wissen_crystallizer"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"5C22877D996D7B17"
+				"3E45B283CB40339A"
+			]
+			id: "45783BDAE8071405"
+			tasks: [
+				{
+					id: "2AC7ED1FC54C8780"
+					item: "wizards_reborn:alchemy_machine"
+					type: "item"
+				}
+				{
+					id: "4F9841B3D9022E33"
+					item: "wizards_reborn:alchemy_boiler"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["1187E3A6529090D6"]
+			id: "3E45B283CB40339A"
+			tasks: [
+				{
+					id: "112B7E4C491C8039"
+					item: "wizards_reborn:arcane_linen"
+					type: "item"
+				}
+				{
+					id: "588A0A4F0CF13379"
+					item: "wizards_reborn:petals"
+					type: "item"
+				}
+				{
+					id: "75851F04CC0B128A"
+					item: "wizards_reborn:arcane_wood_mortar"
+					type: "item"
+				}
+				{
+					id: "48C213F9E47F41BB"
+					item: "wizards_reborn:arcane_linen_seeds"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"45783BDAE8071405"
+				"18079DE0F6D31E7D"
+			]
+			id: "1B430C254BFB8B1A"
+			tasks: [
+				{
+					id: "49DD6484B7C65733"
+					item: "wizards_reborn:alchemy_oil_bucket"
+					type: "item"
+				}
+				{
+					id: "2F807D4AC4C5596A"
+					item: "wizards_reborn:wissen_tea_bucket"
+					type: "item"
+				}
+				{
+					id: "3494C1D5CC080E0C"
+					item: "wizards_reborn:mor_brew_bucket"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1B430C254BFB8B1A"]
+			id: "4B0D3532039F90E5"
+			tasks: [
+				{
+					id: "08B40FD7513C901A"
+					item: "wizards_reborn:alchemy_calx"
+					type: "item"
+				}
+				{
+					id: "4BBD7BBC4C7977E7"
+					item: "wizards_reborn:natural_calx"
+					type: "item"
+				}
+				{
+					id: "3FEF2ACD6AF364A3"
+					item: "wizards_reborn:scorched_calx"
+					type: "item"
+				}
+				{
+					id: "7A57533112D62268"
+					item: "wizards_reborn:distant_calx"
+					type: "item"
+				}
+				{
+					id: "13869F5DDA450B1D"
+					item: "wizards_reborn:enchanted_calx"
+					type: "item"
+				}
+			]
+			x: -4.5d
+			y: 2.5d
+		}
+		{
+			id: "18079DE0F6D31E7D"
+			tasks: [{
+				id: "34E912CFE15B1BF7"
+				item: "wizards_reborn:elder_mor"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["4B0D3532039F90E5"]
+			id: "216978A48B8A2816"
+			tasks: [{
+				id: "7136B3269AB4F2B2"
+				item: "wizards_reborn:arcacite"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"216978A48B8A2816"
+				"1187E3A6529090D6"
+			]
+			id: "410F593AB773DDB2"
+			tasks: [{
+				id: "03ACCE6A7226B581"
+				item: "wizards_reborn:arcane_iterator"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1187E3A6529090D6"]
+			id: "0F1C0DFC1552E2AB"
+			tasks: [
+				{
+					id: "41560DA1244D154F"
+					item: {
+						Count: 1
+						id: "wizards_reborn:earth_crystal"
+						tag: {
+							randomStats: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5D7F293BA945B120"
+					item: {
+						Count: 1
+						id: "wizards_reborn:water_crystal"
+						tag: {
+							randomStats: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "6F6609CF934EBD04"
+					item: {
+						Count: 1
+						id: "wizards_reborn:air_crystal"
+						tag: {
+							randomStats: 1b
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3B0FDBA168FE9810"
+					item: {
+						Count: 1
+						id: "wizards_reborn:fire_crystal"
+						tag: {
+							randomStats: 1b
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["410F593AB773DDB2"]
+			id: "73628762C1A50B38"
+			tasks: [{
+				id: "342ED71DE8CE8D25"
+				item: "wizards_reborn:arcanum_lens"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["284929FEAB9CCD5A"]
+			id: "0D7108FAFB65A0C4"
+			tasks: [{
+				id: "51D7479858D348E8"
+				item: "wizards_reborn:runic_pedestal"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["73628762C1A50B38"]
+			id: "284929FEAB9CCD5A"
+			tasks: [{
+				id: "225CCBC4E1E8B7AF"
+				item: "wizards_reborn:light_emitter"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["284929FEAB9CCD5A"]
+			icon: "wizards_reborn:light_transfer_lens"
+			id: "707D39164898BFF9"
+			tasks: [
+				{
+					id: "50463DF715F46363"
+					item: "wizards_reborn:arcane_wood_light_casing"
+					type: "item"
+				}
+				{
+					id: "718B60A280A9CD78"
+					item: "wizards_reborn:light_transfer_lens"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0D7108FAFB65A0C4"
+				"0F1C0DFC1552E2AB"
+			]
+			id: "4616A66983AF58EC"
+			tasks: [{
+				id: "5855113463FC4E16"
+				item: {
+					Count: 1
+					id: "wizards_reborn:runic_wisestone_plate"
+					tag: {
+						crystalRitual: "wizards_reborn:focusing"
+					}
+				}
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.5d
+		}
+	]
+	title: "Wizards Reborn"
+}
