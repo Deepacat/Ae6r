@@ -1,2 +1,0 @@
-itemTagUnificationData.json - kubejs/server_scripts/emendatusJS/datagen.js
-fluidTagUnificationData.json - kubejs/server_scripts/emendatusJS/datagen.js

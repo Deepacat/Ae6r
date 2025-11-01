@@ -84,8 +84,6 @@ const materialsToUnify = [
     'redstone',
     'glowstone',
     'mana',
-    // 'certus_quartz',
-    // 'charged_certus_quartz',
     'iesnium',
     'dimensional',
     'cloggrum',
@@ -93,26 +91,19 @@ const materialsToUnify = [
     'regalium',
     'utherium',
     'coal_coke',
-    // 'amber',
     'cobalt',
     'queens_slime',
     'rose_gold',
-    // 'tinkers_bronze',
     'amethyst_bronze',
-    // 'knightslime',
     'slimesteel',
     'manyullyn',
     'hepatizon',
-    // 'thallasium',
-    // 'nebu',
-    // 'aeternium',
     'alfsteel',
     'elementium',
     'gaia_spirit',
     'infused_iron',
     'manasteel',
     'sky',
-    // 'terminite',
     'terrasteel',
     'energized_steel',
     'blazing',
@@ -120,11 +111,17 @@ const materialsToUnify = [
     'spirited',
     'nitro',
     'arcane_gold',
-    'dawnstone'
+    'dawnstone',
+    'charged_certus_steel',
+    'sky_steel'
 ]
 
 // Used to determine which material types to unify
-const typesToUnify = ['nugget', 'ingot', 'gem', 'block', 'storage_block', 'ore', 'wire', 'dust', 'gear', 'plate', 'rod', 'raw_block', 'raw_material']
+const typesToUnify = [
+    'nugget', 'ingot', 'gem', 'block', 'storage_block',
+    'raw_block', 'raw_material', 'dust', 'ore',
+    'wire', 'gear', 'plate', 'rod', 'coin'
+]
 
 // Used for creating tags on custom ore processing materials
 const metals = [
@@ -157,11 +154,12 @@ function meltingValues(x) {
         nugget: { amount: x / 9, energy: 250 },
         block: { amount: x * 9, energy: 18000 },
         storage_block: { amount: x * 9, energy: 18000 },
+        dust: { amount: x, energy: 2000 },
         plate: { amount: x, energy: 2000 },
         rod: { amount: x / 2, energy: 1000 },
         gear: { amount: x * 4, energy: 8000 },
         wire: { amount: x / 2, energy: 1000 },
-        dust: { amount: x, energy: 2000 }
+        coin: { amount: x / 3, energy: 1000 }
     }
 }
 

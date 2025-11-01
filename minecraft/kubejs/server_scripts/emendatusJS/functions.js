@@ -194,7 +194,8 @@ function getFluidAmountForType(type) {
     if (/gem/.test(type)) { return 100 }
     if (/dust/.test(type)) { return 100 }
     if (/ingot/.test(type)) { return 90 }
-    return 90
+    if (/coin/.test(type)) { return 30 }
+    console.error(`Could not find fluid amount for type ${type}`)
 }
 
 /**

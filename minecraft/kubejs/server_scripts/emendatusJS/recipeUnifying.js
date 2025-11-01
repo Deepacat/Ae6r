@@ -69,7 +69,7 @@ ServerEvents.recipes(e => {
             // special
             fluid: getFluid(materialName),
         }
-
+    
         typesObj['gemOrIngot'] = typesObj.gem || typesObj.ingot
         typesObj['smeltable'] = [typesObj.raw_ore, typesObj.crushed_ore, typesObj.dust]
         // console.log(`material: ${materialName}`, Object.entries(typesObj).map(entry => `${entry[0]}: ${entry[1] == undefined ? 'undefined' : entry[1].item ? entry[1].item.id : entry[1]}`), ` - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - `)
@@ -354,7 +354,7 @@ function scrapMelting(e, materialName, typesObj) {
     let fluid = typesObj.fluid
 
     for (let itemType of typesToUnify) {
-        if (!typesObj[itemType]) { continue }
+        if (!typesObj[itemType]) { continue } // checks if the type exists for the item
         let melt = meltingValues(getFluidAmountForType(typesObj.gemOrIngot.tag))[itemType]
         if (!melt) { continue }
 
@@ -400,7 +400,6 @@ function fluidToItemRecipes(e, materialName, typesObj) {
     if (!typesObj.gemOrIngot) { return }
 
     let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
-
     const castType = typesObj.gem ? 'gem' : typesObj.ingot ? 'ingot' : undefined;
 
     if (typesObj.fluid) {
