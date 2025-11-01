@@ -1,4 +1,4 @@
-StartupEvents.registry('item', event => {
+StartupEvents.registry('item', e => {
     const generalItems = [
         // placeholder item for mod items that were removed
         'replaceme',
@@ -509,15 +509,15 @@ StartupEvents.registry('item', event => {
     })
 
     generalItems.forEach((item) => {
-        event.create(item).texture(`kubejs:item/${item}`)
+        e.create(item).texture(`kubejs:item/${item}`)
     })
 
     ritualDummies.forEach((item) => {
-        event.create(item, 'occultism:ritual_dummy').texture('kubejs:item/ritual_dummy');
+        e.create(item, 'occultism:ritual_dummy').texture('kubejs:item/ritual_dummy');
     })
 
     reusableItemTextures.forEach((item) => {
-        event.create(item.name).texture(`kubejs:item/${item.texture}`)
+        e.create(item.name).texture(`kubejs:item/${item.texture}`)
     })
 
     // bees.forEach((bee) => {
@@ -530,27 +530,47 @@ StartupEvents.registry('item', event => {
     // })
 
     // Custom Occultism Miners
-    event.create('fisher_foliot').texture('kubejs:item/magic_lamp').maxStackSize(1).maxDamage(500)
-    event.create('miner_marid_irradiated')
+    e.create('fisher_foliot')
+        .texture('kubejs:item/magic_lamp')
+        .maxStackSize(1)
+        .maxDamage(500)
+
+    e.create('miner_marid_irradiated')
         .texture('kubejs:item/magic_lamp')
         .maxStackSize(1)
         .maxDamage(50)
 
-    // Custom Foods
-    event.create('meat_ingot')
+    // Custom Items with tags or other properties
+    e.create('meat_ingot')
         .texture('kubejs:item/meat_ingot')
         .food((food) => {
             food.hunger(8).saturation(0.5).effect('upgrade_aquatic:vibing', 2400, 1, 1.0)
         })
 
-    event.create('blood_slime_ball')
+    e.create('blood_slime_ball')
         .texture('tconstruct:item/materials/blood_slime_ball')
+
+    e.create('charged_certus_steel_coin')
+        // too lazy to figure out fusion item stacking, thermals seemed hardcoded
+        // .modelJson({ parent: "thermal:item/charged_certus_steel_coin" })
+        .texture('kubejs:item/charged_certus_steel_coin_2')
+        .tag('forge:coins')
+        .tag('forge:coins/charged_certus_steel')
+
+    e.create('sky_steel_coin')
+        // too lazy to figure out fusion item stacking, thermals seemed hardcoded
+        // .modelJson({ parent: "thermal:item/sky_steel_coin" })
+        .texture('kubejs:item/sky_steel_coin_2')
+        .tag('forge:coins')
+        .tag('forge:coins/sky_steel')
 
     // aspectus shards
     let aspecti = ['aer', 'aqua', 'ignis', 'terra', 'ordo', 'perditio', 'mortuus', 'cognitio', 'praecantatio']
     for (let aspect of aspecti) {
-        event.create(`kubejs:${aspect}_aspectus_shard`)
+        e.create(`kubejs:${aspect}_aspectus_shard`)
             .tag(`kubejs:aspectus_shards/${aspect}`)
             .tag(`kubejs:aspectus_shards`)
     }
+
+
 })
