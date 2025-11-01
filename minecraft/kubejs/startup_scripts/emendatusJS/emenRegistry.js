@@ -14,7 +14,7 @@ StartupEvents.registry('item', e => {
             let itemId = `emendatus:${replaceableId}`
             let texturePath = `emendatus:item/${replaceableId}`
 
-            console.log(`Registering ${itemId} with texture ${texturePath}`)
+            console.log(`Registering ${itemId}`)
 
             // register item
             let item = e.create(itemId).texture(texturePath)
