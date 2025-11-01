@@ -1,13 +1,19 @@
 // priority: 1000
 // high priority so the tags load before unification (removals etc)
 
+// item tags
 ServerEvents.tags('item', e => {
-    // Flags to be used when attempting to add materials to tags
-    const flagTagPrefixes = [
-        'forge:gems/', 'forge:ingots/', 'forge:dusts/', 'forge:nuggets/',
-        'forge:storage_blocks/', 'forge:plates/', 'forge:gears/', 'forge:rods/',
-        'forge:wires/'
-    ]
+    // restriction tags (item tag)
+    for (let [resKey, resObj] of Object.entries(global.restrictions)) {
+        let items = resObj.regex ?
+            Ingredient.of(resObj.regex).itemIds.toArray() :
+            Ingredient.of(resKey).itemIds.toArray()
+
+        for (let item of items) {
+            e.add(`kubejs:restrictions/${resKey.split(':')[1]}`, item)
+            e.add(`kubejs:restrictions`, item)
+        }
+    }
 
     // Making material substitute tags
     const substitutionMaterials = [
@@ -34,30 +40,32 @@ ServerEvents.tags('item', e => {
         e.add(`forge:rods/${mats[0]}_${mats[1]}`, [`#forge:rods/${mats[0]}`, `#forge:rods/${mats[1]}`])
     }
 
-    // generic materials to attempt tagging
-    // for mods that for SOME reason don't have their items tagged cough cough natures aura
-    const materials = [
-        'sky',
-        'tainted_gold',
-        'infused_iron',
-        'alfsteel',
-        'sunmetal',
+    const quickTags = [
+        ['sky', ['naturesaura:sky_ingot'], 'forge:ingots'],
+        ['tainted_gold', ['naturesaura:tainted_gold'], 'forge:ingots'],
+        ['infused_iron', ['naturesaura:infused_iron'], 'forge:ingots'],
+        ['alfsteel', ['mythicbotany:alfsteel_ingot'], 'forge:ingots'],
+        ['sunmetal', ['architects_palette:sunmetal_brick'], 'forge:ingots'],
+        ['andesite_alloy', ['create:andesite_alloy'], 'forge:ingots'],
+        ['superheated_steel', ['kubejs:superheated_steel_ingot'], 'forge:ingots'],
+        ['gaia', ['botania:gaia_ingot'], 'forge:ingots'],
+        ['gaia_spirit', ['botania:gaia_ingot'], 'forge:ingots'],
+        ['uraninite', ['powah:uraninite'], 'forge:ingots'],
+        ['energized_steel', ['powah:steel_energized'], 'forge:ingots'],
     ]
-    for (let mat of materials) {
-        for (let prefix of flagTagPrefixes) {
-            if (Item.exists(`${prefix}${mat}`)) {
-                e.add(`${prefix}${mat}`, `#forge:ingots/${mat}`)
-            }
-        }
+
+    for (let entry of quickTags) {
+        e.add(`${entry[2]}/${entry[0]}`, entry[1])
+        e.add(`${entry[2]}`, entry[1])
     }
 
-    // ingot tags
-    e.add('forge:ingots/andesite_alloy', 'create:andesite_alloy')
-    e.add('forge:ingots/superheated_steel', 'kubejs:superheated_steel_ingot')
-    e.add('forge:ingots/gaia', 'botania:gaia_ingot')
-    e.add('forge:ingots/gaia_spirit', 'botania:gaia_ingot')
-    e.add('forge:ingots/uraninite', 'powah:uraninite')
-    e.add('forge:ingots/energized_steel', 'powah:steel_energized')
+    // adding gem tag to coals for unification
+    let coals = ['minecraft:coal', 'thermal:coal_coke', 'thermal:bitumen', 'immersiveengineering:coal_coke']
+    for (let coal of coals) {
+        e.add('forge:gems', coal)
+        e.add(`forge:gems/${coal.split(':')[1]}`, coal)
+    }
+
     e.add('forge:ingots/radioactive', ['#forge:ingots/uraninite', '#forge:ingots/uranium'])
     // blood magic is dumb and only applied this tag in blocks so their recipes dont work LMAO
     e.add('minecraft:mushroom_hyphae', [
@@ -75,12 +83,6 @@ ServerEvents.tags('item', e => {
     e.add('forge:dusts/ender_pearl', '#forge:dusts/ender')
     e.add('forge:dusts/ender', '#forge:dusts/ender_pearl')
     e.add('forge:gems/ender', '#forge:ender_pearls')
-    // adding gem tag to coals for unification
-    let coals = ['minecraft:coal', 'thermal:coal_coke', 'thermal:bitumen', 'immersiveengineering:coal_coke']
-    for (let coal of coals) {
-        e.add('forge:gems', coal)
-        e.add(`forge:gems/${coal.split(':')[1]}`, coal)
-    }
     // adding source to mana tag so they unify
     e.add('forge:gems/mana', '#forge:gems/source')
     e.add('forge:storage_blocks/mana', '#forge:storage_blocks/source')
@@ -97,27 +99,10 @@ ServerEvents.tags('item', e => {
         'minecraft:polished_granite_slab', 'minecraft:granite_slab', 'minecraft:polished_andesite_slab',
         'minecraft:andesite_slab', 'minecraft:smooth_stone_slab', 'minecraft:stone_slab'
     ])
-
-    // restriction tags (item tag)
-    for (let [resKey, resObj] of Object.entries(global.restrictions)) {
-        let items = resObj.regex ?
-            Ingredient.of(resObj.regex).itemIds.toArray() :
-            Ingredient.of(resKey).itemIds.toArray()
-
-        for (let item of items) {
-            e.add(`kubejs:restrictions/${resKey.split(':')[1]}`, item)
-            e.add(`kubejs:restrictions`, item)
-        }
-    }
 })
 
+// block tags
 ServerEvents.tags('block', e => {
-    // Mineable tags
-    e.add('minecraft:mineable/axe', ['bountiful:bountyboard'])
-    e.add('minecraft:mineable/pickaxe', [''])
-    e.add('minecraft:mineable/shovel', [''])
-    e.add('minecraft:mineable/hoe', [''])
-
     // restriction tags (block tag)
     for (let [resKey, resObj] of Object.entries(global.restrictions)) {
         let items = resObj.regex ?
@@ -129,10 +114,17 @@ ServerEvents.tags('block', e => {
             e.add(`kubejs:restrictions`, item)
         }
     }
+
+    // Mineable tags
+    e.add('minecraft:mineable/axe', ['bountiful:bountyboard'])
+    e.add('minecraft:mineable/pickaxe', [''])
+    e.add('minecraft:mineable/shovel', [''])
+    e.add('minecraft:mineable/hoe', [''])
 })
 
+// fluid tags
 ServerEvents.tags('fluid', e => {
-    // fluids to hide
+    // fluids to hide (maybe fix fluid unif if the tags align)
     e.add('c:hidden_from_recipe_viewers', [
         'thermal:latex', 'thermal:creosote'
     ])
