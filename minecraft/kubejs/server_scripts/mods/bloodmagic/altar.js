@@ -167,7 +167,7 @@ ServerEvents.recipes(e => {
 
     e.recipes.bloodmagic.altar('eidolon:polished_planks', 'botania:livingwood_planks')
         .upgradeLevel(0)
-        .altarSyphon(50)
+        .altarSyphon(100)
         .consumptionRate(25)
         .drainRate(5)
         .id('kubejs:bloogmagic/altar/polished_planks')

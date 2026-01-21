@@ -100,16 +100,6 @@ ServerEvents.recipes(e => {
         B: 'minecraft:sticky_piston',
         C: 'create:shaft'
     })
-    
-    e.remove({ id: 'create:crafting/kinetics/brass_casing' })
-    e.shaped(Item.of('create:brass_casing', 4), [
-        'ABA',
-        'BBB',
-        'ABA'
-    ], {
-        A: '#forge:plates/brass',
-        B: 'eidolon:polished_planks'
-    })
 
     e.remove({ id: 'create:crafting/kinetics/encased_chain_drive' })
     e.remove({ id: 'create:crafting/kinetics/encased_chain_drive_from_zinc' })
