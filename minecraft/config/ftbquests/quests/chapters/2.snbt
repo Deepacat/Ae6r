@@ -11,14 +11,14 @@
 			id: "2DF92079B1DDFC3C"
 			linked_quest: "6BD22F97D5168969"
 			shape: "hexagon"
-			x: -5.5d
-			y: 0.0d
+			x: -6.5d
+			y: -1.0d
 		}
 		{
 			id: "3FE1B7F5539F1320"
 			linked_quest: "7989B6AD3A82642C"
 			shape: "hexagon"
-			x: -5.5d
+			x: -6.5d
 			y: -3.0d
 		}
 		{
@@ -45,14 +45,25 @@
 	]
 	quests: [
 		{
-			dependencies: ["78D1E7FCAE279FB4"]
+			dependencies: [
+				"78D1E7FCAE279FB4"
+				"6BD22F97D5168969"
+			]
 			id: "74D4B16C316F50B4"
-			tasks: [{
-				id: "6E9FAB6ED9A61039"
-				item: "pneumaticcraft:liquid_compressor"
-				type: "item"
-			}]
-			x: -3.5d
+			tasks: [
+				{
+					id: "6E9FAB6ED9A61039"
+					item: "pneumaticcraft:liquid_compressor"
+					type: "item"
+				}
+				{
+					id: "01286A305E1BD052"
+					item: "pneumaticcraft:pressure_tube"
+					type: "item"
+				}
+			]
+			title: "Under Pressure"
+			x: -4.5d
 			y: -1.0d
 		}
 		{
@@ -114,6 +125,7 @@
 					type: "item"
 				}
 			]
+			title: "Pneumatic Processing"
 			x: -2.5d
 			y: -1.0d
 		}
@@ -135,17 +147,19 @@
 				type: "item"
 			}]
 			x: -2.5d
-			y: -2.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["72E0650427E87C77"]
+			description: [""]
 			id: "632376D988D86608"
+			subtitle: "Yet another multiblock furnace!"
 			tasks: [{
 				id: "721D8A65B11AD386"
 				item: "immersiveengineering:alloy_smelter"
 				type: "item"
 			}]
-			x: -2.5d
+			x: -3.5d
 			y: -3.0d
 		}
 		{
@@ -156,7 +170,8 @@
 				item: "immersiveengineering:blastbrick"
 				type: "item"
 			}]
-			x: -4.5d
+			title: "Blast Furnace"
+			x: -5.5d
 			y: -3.0d
 		}
 		{
@@ -167,13 +182,14 @@
 				item: "kubejs:smoldering_lapis_lazuli_compound"
 				type: "item"
 			}]
-			x: -3.5d
+			x: -4.5d
 			y: -3.0d
 		}
 		{
 			dependencies: [
 				"170B80914E09A31F"
 				"3F82980E00FCB455"
+				"07FF629DC56E5912"
 			]
 			icon: "ae2:logic_processor"
 			id: "1E26A88609C02DAD"
@@ -407,23 +423,34 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["07FF629DC56E5912"]
+			dependencies: ["3CF751F1C642762C"]
 			icon: "pneumaticcraft:module_expansion_card"
 			id: "78D1E7FCAE279FB4"
 			tasks: [
 				{
-					id: "4A78AD9056051CDE"
-					item: "pneumaticcraft:module_expansion_card"
+					id: "6D2172481E399CC2"
+					item: "rftoolscontrol:ram_chip"
 					type: "item"
 				}
 				{
-					id: "5D4662CFA412EB16"
-					item: "thermal:upgrade_augment_1"
+					id: "134217F170E5D15E"
+					item: "immersiveengineering:circuit_board"
+					type: "item"
+				}
+				{
+					id: "7EBFECB7834B27BE"
+					item: "immersiveengineering:component_electronic"
+					type: "item"
+				}
+				{
+					id: "002E305F7288A8FF"
+					item: "pneumaticcraft:module_expansion_card"
 					type: "item"
 				}
 			]
-			x: -4.5d
-			y: -1.0d
+			title: "Primitive Circuitry"
+			x: -5.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["58008A4EC81B0D8F"]
@@ -941,7 +968,7 @@
 			y: 8.0d
 		}
 		{
-			dependencies: ["6BD22F97D5168969"]
+			dependencies: ["3C895AA17C38BE5F"]
 			icon: "kubejs:alien_debris"
 			id: "07FF629DC56E5912"
 			tasks: [
@@ -969,7 +996,7 @@
 				}
 			]
 			x: -4.5d
-			y: 0.0d
+			y: 1.0d
 		}
 		{
 			dependencies: ["07FF629DC56E5912"]
@@ -988,7 +1015,53 @@
 				}
 			]
 			x: -3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6BD22F97D5168969"]
+			hide_dependency_lines: true
+			icon: "minecraft:end_portal_frame"
+			id: "3C895AA17C38BE5F"
+			tasks: [{
+				dimension: "minecraft:the_end"
+				id: "085D76B723D41F53"
+				type: "dimension"
+			}]
+			x: -5.5d
 			y: 1.0d
+		}
+		{
+			dependencies: ["632376D988D86608"]
+			description: [
+				"The circuit table is used to create logic circuits"
+				""
+				"Requires a circuit backplane in the first slot, and a solder item like copper or lead wire in the third slot."
+				""
+				"All logic circuit types except \"Set\" also cost a vacuum tube, so the \"Set\" type is the cheapest to use for making logic circuit as a ingredient for other recipes."
+			]
+			icon: "immersiveengineering:circuit_table"
+			id: "3CF751F1C642762C"
+			min_width: 350
+			tasks: [
+				{
+					id: "1706305CD1417D67"
+					item: "immersiveengineering:insulating_glass"
+					type: "item"
+				}
+				{
+					id: "293E38C822FE8029"
+					item: "immersiveengineering:circuit_table"
+					type: "item"
+				}
+				{
+					id: "5F7E6A0C043B4AF9"
+					item: "immersiveengineering:logic_circuit"
+					type: "item"
+				}
+			]
+			title: "Logic Circuit Printing"
+			x: -3.5d
+			y: -2.0d
 		}
 	]
 	title: " 2 - Understanding"
