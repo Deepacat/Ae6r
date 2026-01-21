@@ -1,6 +1,7 @@
 ServerEvents.recipes(e => {
     e.remove({ type: 'thermal:tree_extractor' })
     
+    // generate arboreal extractor fluid recipes from tree config
     for (let treeCategories of treeRegistry) {
         for (let tree of treeCategories.trees) {
             if (!tree.sap) { continue }

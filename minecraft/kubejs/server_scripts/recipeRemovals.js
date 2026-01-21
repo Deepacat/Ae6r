@@ -255,7 +255,7 @@ ServerEvents.recipes(e => {
         { type: 'minecraft:smelting', input: '#farmersdelight:tools/knives' },
         { type: 'minecraft:blasting', input: '#farmersdelight:tools/knives' },
 
-        // {type: 'industrialforegoing:'}
+        { mod: 'industrialforegoing', output: 'ae2:silicon' },
 
         { mod: 'ironjetpacks' },
         { mod: 'theoneprobe' },

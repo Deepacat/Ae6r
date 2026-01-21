@@ -72,7 +72,7 @@ global.metal_mats = {
 // materials that don't have any default flags and or don't fall into another category
 global.other_mats = {
     obsidian: { type: 'other', toolLvl: 'diamond', addFlags: ['dust'], delFlags: [] },
-
+    silica: { type: 'other', toolLvl: 'wood', addFlags: ['dust'], delFlags: [] },
 }
 
 // Grouping all material categories to iterate

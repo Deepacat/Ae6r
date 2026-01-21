@@ -4,4 +4,10 @@ ServerEvents.recipes(e => {
         'kubejs:ground_meat')
         .energy(2000)
         .id('kubejs:centrifuge/meat')
+        
+    e.recipes.thermal.centrifuge(
+        ['emendatus:silica_dust', Item.of('ae2:sky_dust').withChance(0.75)],
+        'ae2:certus_quartz_dust')
+        .energy(3000)
+        .id('kubejs:centrifuge/silicon_dioxide')
 })
