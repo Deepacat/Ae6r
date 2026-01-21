@@ -29,7 +29,7 @@ ServerEvents.recipes(e => {
                     fluid: tree.sap,
                     amount: tree.rate.living
                 }
-            }).id(`kubejs:thermal/tree_extractor/${tree.sap.replace(':', '_')}_from_${tree.sapling.replace(':', '_').replace('_sapling', '')}`)
+            }).id(`kubejs:thermal/machines/tree_extractor/${tree.sap.replace(':', '_')}_from_${tree.sapling.replace(':', '_').replace('_sapling', '')}`)
         }
     }
 })
