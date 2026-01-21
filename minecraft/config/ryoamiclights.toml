@@ -15,32 +15,69 @@
 				sky_slime = true
 
 			[light_sources.settings.entities.minecraft]
-				panda = true
 				axolotl = true
-				bee = true
 				zoglin = true
-				arrow = true
-				cow = true
-				magma_cube = true
-				pig = true
 				allay = true
-				skeleton = true
 				llama = true
-				husk = true
 				bat = true
-				hoglin = true
+				husk = true
 				experience_bottle = true
 				camel = true
 				rabbit = true
 				firework_rocket = true
 				silverfish = true
-				armor_stand = true
 				drowned = true
+				item = true
+				horse = true
+				vindicator = true
+				minecart = true
+				llama_spit = true
+				mooshroom = true
+				glow_item_frame = true
+				parrot = true
+				creeper = true
+				lightning_bolt = true
+				ravager = true
+				evoker_fangs = true
+				tropical_fish = true
+				slime = true
+				pillager = true
+				area_effect_cloud = true
+				piglin = true
+				blaze = true
+				endermite = true
+				zombie = true
+				ender_pearl = true
+				guardian = true
+				fireball = true
+				illusioner = true
+				eye_of_ender = true
+				wolf = true
+				zombie_villager = true
+				tnt_minecart = true
+				elder_guardian = true
+				small_fireball = true
+				strider = true
+				cave_spider = true
+				witch = true
+				cod = true
+				snow_golem = true
+				spider = true
+				panda = true
+				bee = true
+				arrow = true
+				cow = true
+				magma_cube = true
+				pig = true
+				skeleton = true
+				frog = true
+				hoglin = true
+				armor_stand = true
 				experience_orb = true
 				dolphin = true
-				item = true
 				stray = true
 				shulker = true
+				turtle = true
 				salmon = true
 				wandering_trader = true
 				wither_skeleton = true
@@ -48,67 +85,34 @@
 				piglin_brute = true
 				ocelot = true
 				item_frame = true
-				horse = true
-				vindicator = true
 				phantom = true
-				minecart = true
 				ender_dragon = true
 				evoker = true
-				llama_spit = true
-				mooshroom = true
 				glow_squid = true
 				warden = true
-				glow_item_frame = true
 				squid = true
 				shulker_bullet = true
-				parrot = true
-				creeper = true
-				lightning_bolt = true
 				enderman = true
 				dragon_fireball = true
 				chicken = true
-				ravager = true
+				sniffer = true
 				trader_llama = true
 				donkey = true
-				evoker_fangs = true
 				fox = true
-				tropical_fish = true
-				slime = true
-				pillager = true
 				iron_golem = true
 				zombified_piglin = true
-				area_effect_cloud = true
-				piglin = true
-				blaze = true
-				endermite = true
 				cat = true
-				zombie = true
-				ender_pearl = true
-				guardian = true
 				ghast = true
 				sheep = true
-				fireball = true
 				player = true
 				pufferfish = true
-				illusioner = true
 				potion = true
 				trident = true
-				eye_of_ender = true
-				wolf = true
 				villager = true
 				skeleton_horse = true
-				zombie_villager = true
-				tnt_minecart = true
-				elder_guardian = true
-				small_fireball = true
-				strider = true
 				polar_bear = true
 				painting = true
-				cave_spider = true
-				witch = true
-				cod = true
-				snow_golem = true
-				spider = true
+				wither = true
 
 			[light_sources.settings.entities.splendid_slimes]
 				splendid_slime = true
@@ -140,6 +144,7 @@
 				centipede_tail = true
 				cosmic_cod = true
 				rhinoceros = true
+				comb_jelly = true
 				endergrade = true
 				jerboa = true
 				mungus = true
@@ -173,6 +178,7 @@
 				sand_shot = true
 				seal = true
 				hammerhead_shark = true
+				sunbird = true
 				straddler = true
 				emu = true
 				triops = true
@@ -200,6 +206,7 @@
 				giant_squid = true
 				toucan = true
 				cachalot_whale = true
+				skreecher = true
 				hummingbird = true
 				frilled_shark = true
 				bison = true
@@ -290,10 +297,15 @@
 				glass_frame = true
 				stoneling = true
 				foxhound = true
+				crab = true
 
 			[light_sources.settings.entities.create]
 				stationary_contraption = true
 				contraption = true
+				gantry_contraption = true
+
+			[light_sources.settings.entities.essentials]
+				cannon_skull = true
 
 			[light_sources.settings.entities.yungscavebiomes]
 				sand_snapper = true
@@ -342,7 +354,13 @@
 				merchant = true
 
 			[light_sources.settings.entities.pneumaticcraft]
+				logistics_frame_default_storage = true
+				logistics_drone = true
+				logistics_frame_storage = true
 				heat_frame = true
+				logistics_frame_requester = true
+				logistics_frame_passive_provider = true
+				logistics_frame_active_provider = true
 
 			[light_sources.settings.entities.guardvillagers]
 				guard = true
@@ -434,6 +452,7 @@
 			[light_sources.settings.entities.species]
 				cliff_hanger = true
 				spectre = true
+				treeper = true
 				wicked_fireball = true
 				birt = true
 				limpet = true

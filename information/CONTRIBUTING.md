@@ -26,7 +26,7 @@ ProbeJS is an addon for [KubeJS](https://kubejs.com/wiki) which dumps informatio
 
 __**Some examples I made of things ProbeJS does:**__ [Server (Mineraft Pack Development)](https://discord.gg/28W6cQH), [Messages](https://discord.com/channels/362322551684464641/919534613423063080/1415111204405252158)
 
-__**Mod setup**__
+__**Mod setup:**__
 
 ***You do not need the ProbeJS VSCode extension to use ProbeJS!*** All the mods extension does under 1.21 is allow showing icons on item registries if you have a specific mod to work with it.
 

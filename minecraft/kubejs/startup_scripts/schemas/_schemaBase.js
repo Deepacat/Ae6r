@@ -18,7 +18,6 @@ StartupEvents.recipeSchemaRegistry(e => {
 
     let comps = {}
 
-
     comps.components = componentRegistry
     comps.bound = componentRegistry.get.bind(componentRegistry)
 

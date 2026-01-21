@@ -3,8 +3,8 @@ ServerEvents.recipes(e => {
         { type: "drop_item", item: "kubejs:magic_clay", count: 2 }
     ],
         makeJsonIngredients(["2x eidolon:enchanted_ash", "#forge:clay", "#forge:dusts/mana", "#forge:dusts/lapis"]),
+        "kubejs:magic_clay",
         "minecraft:water",
-        "magic_clay"
     ).id(`kubejs:lychee/inside_block/magic_clay`)
 
     insideBlock(e, [

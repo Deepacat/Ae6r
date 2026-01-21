@@ -11,14 +11,14 @@ SummoningRituals.start(e => {
     }
 })
 
-SummoningRituals.start(e => {
-    if (!e.recipe.id == 'kubejs:summoningrituals/altar/wissen') { return }
+// SummoningRituals.start(e => {
+//     if (!e.recipe.id == 'kubejs:summoningrituals/altar/wissen') { return }
 
-    if (e.level.getBlock(e.pos.below()) != 'wizards_reborn:arcane_workbench') {
-        e.player.tell('You can only perform this ritual with the altar above an arcane workbench.')
-        e.cancel()
-    }
-})
+//     if (e.level.getBlock(e.pos.below()) != 'wizards_reborn:arcane_workbench') {
+//         e.player.tell('You can only perform this ritual with the altar above an arcane workbench.')
+//         e.cancel()
+//     }
+// })
 
 SummoningRituals.complete(e => {
     let wissenCount
@@ -33,7 +33,7 @@ SummoningRituals.complete(e => {
             break
     }
 
-    if (!(wissenCount > 0)) return
+    if ((wissenCount > 0) == false) return // return if not a wissen ritual
 
     let blockBelow = e.level.getBlock(e.pos.below())
     if (blockBelow != 'wizards_reborn:arcane_workbench') {

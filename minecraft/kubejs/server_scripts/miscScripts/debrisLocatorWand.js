@@ -17,7 +17,7 @@ let dimensions = {
 ItemEvents.firstRightClicked(e => {
     if (!isRealPlayer(e.player)) { return }
     if (e.hand != 'MAIN_HAND') { return }
-    
+
     let { player, level, player: { block: { pos } } } = e
 
     if (player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }

@@ -49,7 +49,7 @@ ServerEvents.recipes(e => {
         'ae2:engineering_processor_press',
         '#forge:coins/enderium',
         'fluxnetworks:flux_dust'
-    ).id('kubejs:ae2/inscriber/engineering_processor_base')    
+    ).id('kubejs:ae2/inscriber/engineering_processor_base')
 
     e.recipes.ae2.inscriber('kubejs:accumulation_processor_base',
         'megacells:accumulation_processor_press',

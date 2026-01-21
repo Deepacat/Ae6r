@@ -25,4 +25,23 @@ ServerEvents.recipes(e => {
     //     },
     //     "wissen": 0
     // }).id('kubejs:test_diamond')
+    e.custom({
+        type: "wizards_reborn:arcane_workbench",
+        pattern: [
+            "AAA",
+            "___",
+            "AAA",
+            "A__A"
+        ],
+        key: {
+            A: {
+                "item": "minecraft:dirt"
+            }
+        },
+        output: {
+            item: "wizards_reborn:wissen_altar"
+        },
+        wissen: 1000
+    }).id('kubejs:test_diamond')
+    
 })

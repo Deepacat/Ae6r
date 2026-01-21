@@ -255,6 +255,8 @@ ServerEvents.recipes(e => {
         { type: 'minecraft:smelting', input: '#farmersdelight:tools/knives' },
         { type: 'minecraft:blasting', input: '#farmersdelight:tools/knives' },
 
+        // {type: 'industrialforegoing:'}
+
         { mod: 'ironjetpacks' },
         { mod: 'theoneprobe' },
 
@@ -265,10 +267,8 @@ ServerEvents.recipes(e => {
 
         { type: 'minecraft:crafting_shaped', id: /botania.*apothecary/ },
 
-        { input: 'quark:deepslate_furnace' },
-        { input: 'quark:blackstone_furnace' },
-        { output: 'quark:deepslate_furnace' },
-        { output: 'quark:blackstone_furnace' }
+        { input: 'quark:deepslate_furnace' }, { input: 'quark:blackstone_furnace' },
+        { output: 'quark:deepslate_furnace' }, { output: 'quark:blackstone_furnace' }
     ]
 
     idRemovals.forEach((id) => {

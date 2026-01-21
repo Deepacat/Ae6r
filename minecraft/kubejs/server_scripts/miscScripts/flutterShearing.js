@@ -9,14 +9,14 @@ ItemEvents.entityInteracted('alexsmobs:flutter', e => {
 
     if (flutter.nbt.Owner && isRealPlayer(e.player)) {
         // This is due to alex mobs wiping shearing data when picked up in a pot
-        e.player.tell(`Cannot shear a tamed flutter.`)
+        e.player.tell(`You cannot shear a tamed flutter.`)
         return
     }
 
     let nbtCopy = flutter.nbt
     let cooldownTicks = 20 * 60 * 5 // 5 minute cooldown in ticks
     // I found actual entity server age to be unreliable and didn't feel like ticking entities and adding
-    // my own time data so using natures auras time alive data works unless it has mechanics I don't know 
+    // my own time data, so using natures auras time alive data works unless it has mechanics I don't know 
     let realAge = nbtCopy.ForgeData["naturesaura:time_alive"]
     let cooldown = (nbtCopy.ForgeData["kubejs:time_sheared"] + cooldownTicks) - realAge
 
