@@ -4,6 +4,7 @@ ServerEvents.recipes(e => {
         'thermal:blizz_powder'
     ).id(`kubejs:alloy_kiln/alloy/froststeel_ingot_3`)
 
+    e.remove({ id: 'immersiveengineering:crafting/blueprint_components' })
     e.recipes.immersiveengineering.alloy(Item.of('immersiveengineering:blueprint', { blueprint: "components" }),
         'minecraft:book',
         'pneumaticcraft:upgrade_matrix'

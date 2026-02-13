@@ -219,21 +219,10 @@ function insideBlock(e, post, inputs, insideBlock) {
     }
 }
 
-const allCrushTypes = [
-    'minecraft:crafting',
-    'immersiveengineering:crusher',
-    'mekanism:crusher',
-    'thermal:pulverizer',
-    'bloodmagic:arc',
-    'create:crushing',
-    'create:milling',
-    'occultism:crushing',
-    'ars_nouveau:crush',
-]
-
 // im not even typing this shit just reference server_scripts\mods\kubejs\crushing.js
 function allCrushing(event, recipeObj) {
     const r = recipeObj
+    const idPrefix = 'kubejs:crushing'
 
     const outputs = r.secondaryOutput == undefined ?
         [Item.of(r.output).withChance(1)] :
@@ -253,60 +242,61 @@ function allCrushing(event, recipeObj) {
         ], {
             H: 'immersiveengineering:hammer',
             I: r.input
-        }).id(`${r.idPrefix}/allcrushing/shaped_hammer/${r.idSuffix}`)
+        }).id(`${idPrefix}/allcrushing/shaped_hammer/${r.idSuffix}`)
     }
 
     if (r.types.includes('immersiveengineering:crusher')) {
         event.recipes.immersiveengineering.crusher(r.output.item ? r.output : Item.of(r.output), r.input, r.secondaryOutput || [], r.energy)
-            .id(`${r.idPrefix}/allcrushing/immersiveengineering/crusher/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/immersiveengineering/crusher/${r.idSuffix}`)
     }
 
     // is this even a thing???
     // event.recipes.industrialforegoing.crusher(r.input, r.output)
-    //     .id(`${r.idPrefix}/allcrushing/industrialforegoing/crusher/${r.idSuffix}`)
+    //     .id(`${idPrefix}/allcrushing/industrialforegoing/crusher/${r.idSuffix}`)
 
     if (r.types.includes('mekanism:crusher')) {
         event.recipes.mekanism.crushing(r.output, r.input)
-            .id(`${r.idPrefix}/allcrushing/mekanism/crushing/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/mekanism/crushing/${r.idSuffix}`)
     }
 
     if (r.types.includes('thermal:pulverizer')) {
         event.recipes.thermal.pulverizer(outputs, r.input)
             .energy(r.energy)
             .experience(r.xp)
-            .id(`${r.idPrefix}/allcrushing/thermal/pulverizer/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/thermal/pulverizer/${r.idSuffix}`)
     }
 
     if (r.types.includes('bloodmagic:arc')) {
         event.recipes.bloodmagic.arc(r.output, r.input, '#bloodmagic:arc/explosive')
-            .id(`${r.idPrefix}/allcrushing/bloodmagic/arc_crushing/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/bloodmagic/arc_crushing/${r.idSuffix}`)
     }
 
     if (r.types.includes('create:crushing')) {
         event.recipes.create.crushing(outputs, r.input)
-            .id(`${r.idPrefix}/allcrushing/create/crushing/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/create/crushing/${r.idSuffix}`)
             .processingTime(r.processTime)
     }
 
     if (r.types.includes('create:milling')) {
         event.recipes.create.milling(outputs, r.input)
-            .id(`${r.idPrefix}/allcrushing/create/milling/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/create/milling/${r.idSuffix}`)
             .processingTime(r.processTime)
     }
 
     if (r.types.includes('occultism:crushing')) {
         event.recipes.occultism.crushing(r.output, r.input, r.processTime, 1, r.ignoreOccultismMult)
-            .id(`${r.idPrefix}/allcrushing/occultism/crushing/${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/occultism/crushing/${r.idSuffix}`)
     }
 
     if (r.types.includes('ars_nouveau:crush')) {
         event.recipes.ars_nouveau.crush(r.input, outputs)
-            .id(`${r.idPrefix}/allcrushing/ars_nouveau/crush_glyph//${r.idSuffix}`)
+            .id(`${idPrefix}/allcrushing/ars_nouveau/crush_glyph//${r.idSuffix}`)
     }
 }
 
 function allAlloying(event, recipeObj) {
     const r = recipeObj
+    const idPrefix = 'kubejs:alloying'
 
     if (r.item) {
         let i = r.item
@@ -324,11 +314,11 @@ function allAlloying(event, recipeObj) {
             } else if (r.temperature >= 500) {
                 b.heated()
             }
-            b.id(`${r.idPrefix}/allalloying/create/mixing/${r.idSuffix}`)
+            b.id(`${idPrefix}/allalloying/create/mixing/${r.idSuffix}`)
         }
         if (r.types.includes('immersiveengineering:alloy') && (i.inputs.length <= 2) && r.temperature < 1000) {
             event.recipes.immersiveengineering.alloy(i.output, i.inputs[0], i.inputs[1], r.processTime)
-                .id(`${r.idPrefix}/allalloying/immersiveengineering/alloy/${r.idSuffix}`)
+                .id(`${idPrefix}/allalloying/immersiveengineering/alloy/${r.idSuffix}`)
         }
         if (r.types.includes('immersiveengineering:arc_furnace')) {
             event.recipes.immersiveengineering.arc_furnace(
@@ -336,19 +326,19 @@ function allAlloying(event, recipeObj) {
                 i.inputs.slice(1, i.inputs.length),
                 r.processTime,
                 r.energy
-            ).id(`${r.idPrefix}/allalloying/immersiveengineering/arc_furnace/${r.idSuffix}`)
+            ).id(`${idPrefix}/allalloying/immersiveengineering/arc_furnace/${r.idSuffix}`)
         }
         if (r.types.includes('thermal:smelter') && r.temperature < 1000) {
             event.recipes.thermal.smelter(i.output, i.inputs)
                 .energy(r.energy)
-                .id(`${r.idPrefix}/allalloying/thermal/smelter/${r.idSuffix}`)
+                .id(`${idPrefix}/allalloying/thermal/smelter/${r.idSuffix}`)
         }
     }
     if (r.fluid) {
         let f = r.fluid
         if (r.types.includes('tconstruct:alloy')) {
             event.recipes.tconstruct.alloy(f.output, f.inputs, r.temperature)
-                .id(`${r.idPrefix}/allalloying/tconstruct/alloy/${r.idSuffix}`)
+                .id(`${idPrefix}/allalloying/tconstruct/alloy/${r.idSuffix}`)
         }
         if (r.types.includes('embers:mixing') && (r.temperature < 1000)) {
             let output = Fluid.of(f.output.id, Math.round(f.output.amount / 90))
@@ -361,7 +351,44 @@ function allAlloying(event, recipeObj) {
                 }
             }
             event.recipes.embers.mixing(output, inputs)
-                .id(`${r.idPrefix}/allalloying/embers/mixing/${r.idSuffix}`)
+                .id(`${idPrefix}/allalloying/embers/mixing/${r.idSuffix}`)
         }
+    }
+}
+
+/** @param {Internal.RecipesEventJS} event */
+function allMelting(event, recipeObj) {
+    const r = recipeObj
+    const idPrefix = 'kubejs:melting'
+
+    if (r.removeExisting) {
+        for (let type of r.types) {
+            event.remove({ type: type, output: r.fluidOutput, input: r.itemInput })
+        }
+    }
+
+    if (!r.item) {
+        console.log(`No item for melting in recipe: ${JSON.stringify(r)}`)
+        return
+    }
+    
+    console.log(makeFluidStackJson(r.fluidOutput))
+
+        console.log(makeJsonIngredient(r.itemInput))
+
+    if (r.types.includes('thermal:crucible')) {
+        event.recipes.thermal.crucible(makeFluidStackJson(r.fluidOutput), makeJsonIngredient(r.itemInput))
+            .energy(r.energy)
+            .id(`${idPrefix}/allmelting/thermal/crucible/${r.idSuffix}`)
+    }
+
+    if (r.types.includes('tconstruct:melting')) {
+        event.recipes.tconstruct.melting(makeFluidStackJson(r.fluidOutput), makeJsonIngredient(r.itemInput), r.temperature)
+            .id(`${idPrefix}/allmelting/tconstruct/melting/${r.idSuffix}`)
+    }
+
+    if (r.types.includes('embers:melting')) {
+        event.recipes.embers.melting(makeFluidStackJson(r.fluidOutput), makeJsonIngredient(r.itemInput))
+            .id(`${idPrefix}/allmelting/embers/melting/${r.idSuffix}`)
     }
 }

@@ -152,11 +152,13 @@
 		{
 			dependencies: ["72E0650427E87C77"]
 			description: [""]
+			icon: "immersiveengineering:alloy_smelter"
 			id: "632376D988D86608"
 			subtitle: "Yet another multiblock furnace!"
 			tasks: [{
-				id: "721D8A65B11AD386"
-				item: "immersiveengineering:alloy_smelter"
+				count: 8L
+				id: "26F08AE07B8E6DD1"
+				item: "immersiveengineering:alloybrick"
 				type: "item"
 			}]
 			x: -3.5d
@@ -281,35 +283,24 @@
 		}
 		{
 			dependencies: ["1F9342A0AB113DAE"]
-			id: "438C2D2BF3248FC3"
-			tasks: [{
-				id: "65BFB6396FC1680F"
-				item: "immersiveengineering:workbench"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -3.0d
-		}
-		{
-			dependencies: ["438C2D2BF3248FC3"]
 			id: "5A98DCA2099B1309"
 			tasks: [{
 				id: "7C65002E7E337624"
 				item: "immersiveengineering:component_iron"
 				type: "item"
 			}]
-			x: -0.5d
+			x: -1.5d
 			y: -3.0d
 		}
 		{
-			dependencies: ["438C2D2BF3248FC3"]
+			dependencies: ["1F9342A0AB113DAE"]
 			id: "67E18FEFB3A2F36A"
 			tasks: [{
 				id: "177B2DDB23296961"
 				item: "immersiveengineering:concrete_leaded"
 				type: "item"
 			}]
-			x: -0.5d
+			x: -1.5d
 			y: -4.0d
 		}
 		{
@@ -324,7 +315,7 @@
 				item: "industrialforegoing:machine_frame_pity"
 				type: "item"
 			}]
-			x: 0.5d
+			x: -0.5d
 			y: -4.0d
 		}
 		{
@@ -1031,7 +1022,7 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["632376D988D86608"]
+			dependencies: ["6BD22F97D5168969"]
 			description: [
 				"The circuit table is used to create logic circuits"
 				""
@@ -1039,6 +1030,7 @@
 				""
 				"All logic circuit types except \"Set\" also cost a vacuum tube, so the \"Set\" type is the cheapest to use for making logic circuit as a ingredient for other recipes."
 			]
+			hide_dependency_lines: true
 			icon: "immersiveengineering:circuit_table"
 			id: "3CF751F1C642762C"
 			min_width: 350
@@ -1060,7 +1052,7 @@
 				}
 			]
 			title: "Logic Circuit Printing"
-			x: -3.5d
+			x: -6.5d
 			y: -2.0d
 		}
 	]

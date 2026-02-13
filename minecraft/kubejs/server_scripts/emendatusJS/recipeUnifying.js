@@ -69,7 +69,7 @@ ServerEvents.recipes(e => {
             // special
             fluid: getFluid(materialName),
         }
-    
+
         typesObj['gemOrIngot'] = typesObj.gem || typesObj.ingot
         typesObj['smeltable'] = [typesObj.raw_ore, typesObj.crushed_ore, typesObj.dust]
         // console.log(`material: ${materialName}`, Object.entries(typesObj).map(entry => `${entry[0]}: ${entry[1] == undefined ? 'undefined' : entry[1].item ? entry[1].item.id : entry[1]}`), ` - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - `)

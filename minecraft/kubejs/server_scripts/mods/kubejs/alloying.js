@@ -1,15 +1,15 @@
-ServerEvents.recipes(event => {
-    const allAlloyingTypes = [
-        'create:mixing',
-        'immersiveengineering:alloy',
-        'immersiveengineering:arc_furnace',
-        'thermal:smelter',
-        'tconstruct:alloy',
-        'embers:mixing'
-    ]
-    let allButTinkers = allAlloyingTypes.filter(type => type !== 'tconstruct:alloy')
-    let allButThermal = allAlloyingTypes.filter(type => type !== 'thermal:smelter')
+const allAlloyingTypes = [
+    'create:mixing',
+    'immersiveengineering:alloy',
+    'immersiveengineering:arc_furnace',
+    'thermal:smelter',
+    'tconstruct:alloy',
+    'embers:mixing'
+]
+const allButTinkers = allAlloyingTypes.filter(type => type !== 'tconstruct:alloy')
+const allButThermal = allAlloyingTypes.filter(type => type !== 'thermal:smelter')
 
+ServerEvents.recipes(event => {
     // temp > 500 means heated mixing in create
     // temp > 1000 means superheated mixing in create and tcon blazing blood
     // the higher number also may use more fuel in tcon unsure
@@ -25,8 +25,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 750,
-        idSuffix: `steel_coke_dust`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `steel_coke_dust`
     })
     allAlloying(event, {
         types: ['create:mixing'],
@@ -36,8 +35,7 @@ ServerEvents.recipes(event => {
         },
         processTime: 300,
         temperature: 9001,
-        idSuffix: `steel_create_superheat`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `steel_create_superheat`
     })
 
     // generic alloys
@@ -51,8 +49,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 300,
-        idSuffix: `andesite_alloy_iron`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `andesite_alloy_iron`
     })
     allAlloying(event, {
         types: allAlloyingTypes,
@@ -64,8 +61,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 300,
-        idSuffix: `andesite_alloy_zinc`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `andesite_alloy_zinc`
     })
     event.remove({ id: 'tconstruct:smeltery/alloys/molten_pewter' })
     allAlloying(event, {
@@ -82,8 +78,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 400,
-        idSuffix: `pewter`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `pewter`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -99,8 +94,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 900,
-        idSuffix: `invar`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `invar`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -116,8 +110,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 820,
-        idSuffix: `amethyst_bronze`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `amethyst_bronze`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -133,8 +126,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 605,
-        idSuffix: `brass`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `brass`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -150,8 +142,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 700,
-        idSuffix: `bronze`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `bronze`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -167,8 +158,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 920,
-        idSuffix: `constantan`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `constantan`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -184,8 +174,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 920,
-        idSuffix: `electrum`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `electrum`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -201,8 +190,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 811,
-        idSuffix: `pig_iron`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `pig_iron`
     })
     allAlloying(event, {
         types: allButTinkers.filter(type => type !== 'embers:mixing'),
@@ -218,8 +206,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 550,
-        idSuffix: `rose_gold`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `rose_gold`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -235,8 +222,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 999,
-        idSuffix: `slimesteel`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `slimesteel`
     })
     // thermal alloys
     allAlloying(event, {
@@ -249,8 +235,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 950,
-        idSuffix: `enderium`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `enderium`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -266,8 +251,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 980,
-        idSuffix: `signalum`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `signalum`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -279,8 +263,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 900,
-        idSuffix: `lumium`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `lumium`
     })
     // thermal glass
     allAlloying(event, {
@@ -293,8 +276,7 @@ ServerEvents.recipes(event => {
         energy: 3200,
         removeExisting: true,
         temperature: 500,
-        idSuffix: `obsidian_glass`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `obsidian_glass`
     })
     allAlloying(event, {
         types: allButThermal,
@@ -306,8 +288,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 500,
-        idSuffix: `enderium_glass`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `enderium_glass`
     })
     allAlloying(event, {
         types: allButThermal,
@@ -319,8 +300,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 500,
-        idSuffix: `signalum_glass`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `signalum_glass`
     })
     allAlloying(event, {
         types: allButThermal,
@@ -332,8 +312,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 500,
-        idSuffix: `lumium_glass`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `lumium_glass`
     })
 
     // blazing tcon alloys
@@ -347,8 +326,7 @@ ServerEvents.recipes(event => {
         energy: 32000,
         removeExisting: true,
         temperature: 1400,
-        idSuffix: `hepatizon`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `hepatizon`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -360,8 +338,7 @@ ServerEvents.recipes(event => {
         energy: 32000,
         removeExisting: true,
         temperature: 1200,
-        idSuffix: `manyullyn`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `manyullyn`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -373,8 +350,7 @@ ServerEvents.recipes(event => {
         energy: 32000,
         removeExisting: true,
         temperature: 1050,
-        idSuffix: `cinderslime`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `cinderslime`
     })
     allAlloying(event, {
         types: allButTinkers,
@@ -386,8 +362,7 @@ ServerEvents.recipes(event => {
         energy: 32000,
         removeExisting: true,
         temperature: 1150,
-        idSuffix: `queens_slime`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `queens_slime`
     })
 
     // superheated netherite cheaper in later machines
@@ -405,8 +380,7 @@ ServerEvents.recipes(event => {
         energy: 32000,
         removeExisting: true,
         temperature: 1250,
-        idSuffix: `netherite_superheat`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `netherite_superheat`
     })
     // warm netherite cheaper in earlier machines
     allAlloying(event, {
@@ -419,8 +393,7 @@ ServerEvents.recipes(event => {
         energy: 6400,
         removeExisting: true,
         temperature: 999,
-        idSuffix: `netherite`,
-        idPrefix: `kubejs:alloying`
+        idSuffix: `netherite`
     })
 
 })

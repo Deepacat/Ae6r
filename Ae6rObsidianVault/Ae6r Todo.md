@@ -1,6 +1,7 @@
 In each category, priority highest to lowest
 
 Gameplay/Progression:
+- [ ] Unify/fix plastic recipes, check e6e reference
 - [ ] Add the Archwood forest back to aether, make all da thermal blazes spawn in it!
 	- [ ] add biome back
 	- [ ] blazes
