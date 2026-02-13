@@ -367,14 +367,10 @@ function allMelting(event, recipeObj) {
         }
     }
 
-    if (!r.item) {
+    if (!r.itemInput) {
         console.log(`No item for melting in recipe: ${JSON.stringify(r)}`)
         return
     }
-    
-    console.log(makeFluidStackJson(r.fluidOutput))
-
-        console.log(makeJsonIngredient(r.itemInput))
 
     if (r.types.includes('thermal:crucible')) {
         event.recipes.thermal.crucible(makeFluidStackJson(r.fluidOutput), makeJsonIngredient(r.itemInput))
