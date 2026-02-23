@@ -9,7 +9,7 @@ ServerEvents.recipes(e => {
         B: 'create:andesite_casing',
         C: '#forge:storage_blocks/andesite_alloy',
         D: '#forge:storage_blocks/invar'
-    }).id('kubejs:shaped/mechanical_press')
+    }).id('kubejs:create/shaped/mechanical_press')
 
     e.remove({ id: 'create:crafting/kinetics/mechanical_mixer' })
     e.shaped('create:mechanical_mixer', [
@@ -21,7 +21,7 @@ ServerEvents.recipes(e => {
         B: 'create:andesite_casing',
         C: '#forge:ingots/andesite_alloy',
         D: 'create:whisk'
-    }).id('kubejs:shaped/mechanical_mixer')
+    }).id('kubejs:create/shaped/mechanical_mixer')
 
     e.remove({ id: 'create:crafting/kinetics/whisk' })
     e.shaped('create:whisk', [
@@ -31,7 +31,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:storage_blocks/andesite_alloy',
         B: '#forge:plates/invar',
-    }).id('kubejs:shaped/whisk')
+    }).id('kubejs:create/shaped/whisk')
 
     e.remove({ id: 'create:crafting/kinetics/empty_blaze_burner' })
     e.shaped('create:empty_blaze_burner', [
@@ -42,7 +42,7 @@ ServerEvents.recipes(e => {
         A: '#forge:ingots/lumium',
         B: 'tconstruct:scorched_brick',
         C: 'minecraft:iron_bars'
-    })
+    }).id('kubejs:create/shaped/empty_blaze_burner')
 
     e.remove({ id: 'create:crafting/kinetics/millstone' })
     e.shaped('create:millstone', [
@@ -66,7 +66,7 @@ ServerEvents.recipes(e => {
         B: '#forge:ingots/andesite_alloy',
         C: 'create:cogwheel',
         D: 'create:andesite_casing'
-    })
+    }).id('kubejs:create/shaped/mechanical_drill')
 
     e.remove({ id: 'create:crafting/kinetics/mechanical_saw' })
     e.shaped('create:mechanical_saw', [
@@ -78,7 +78,7 @@ ServerEvents.recipes(e => {
         B: '#forge:ingots/andesite_alloy',
         C: 'create:cogwheel',
         D: 'create:andesite_casing'
-    })
+    }).id('kubejs:create/shaped/mechanical_saw')
 
     e.remove({ id: 'create:crafting/kinetics/propeller' })
     e.shaped('create:propeller', [
@@ -88,7 +88,7 @@ ServerEvents.recipes(e => {
     ], {
         A: '#forge:ingots/arcane_gold',
         B: '#forge:plates/invar',
-    })
+    }).id('kubejs:create/shaped/propeller')
 
     e.remove({ id: 'create:crafting/kinetics/windmill_bearing' })
     e.shaped('create:windmill_bearing', [
@@ -99,7 +99,7 @@ ServerEvents.recipes(e => {
         A: 'create:turntable',
         B: 'minecraft:sticky_piston',
         C: 'create:shaft'
-    })
+    }).id('kubejs:create/shaped/windmill_bearing')
 
     e.remove({ id: 'create:crafting/kinetics/encased_chain_drive' })
     e.remove({ id: 'create:crafting/kinetics/encased_chain_drive_from_zinc' })
@@ -120,19 +120,25 @@ ServerEvents.recipes(e => {
         C: '#forge:plates/copper',
         D: 'mekanism:basic_chemical_tank',
         E: 'create:andesite_alloy'
-    })
+    }).id('kubejs:create/shaped/copper_backtank')
 
     e.remove({ id: 'create:crafting/appliances/copper_diving_helmet' })
     e.shaped('create:copper_diving_helmet', ['ABA', 'BCB'], {
         A: 'thermal:diving_fabric',
         B: '#forge:ingots/bronze',
         C: '#forge:glass_panes/cyan'
-    })
+    }).id('kubejs:create/shaped/copper_diving_helmet')
 
     e.remove({ id: 'create:crafting/appliances/copper_diving_boots' })
     e.shaped('create:copper_diving_boots', ['A A', 'B B', 'C C'], {
         A: 'thermal:diving_fabric',
         B: '#forge:ingots/bronze',
         C: '#forge:plates/lead'
-    })
+    }).id('kubejs:create/shaped/copper_diving_boots')
+
+    e.shaped('create:electron_tube', [' AB', ' A ', ' C '], {
+        A: 'create:polished_rose_quartz',
+        B: 'immersiveengineering:hammer',
+        C: '#forge:plates/iron'
+    }).id('kubejs:create/shaped/electron_tube_hammer')
 })
