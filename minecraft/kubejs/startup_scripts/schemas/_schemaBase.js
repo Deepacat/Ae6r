@@ -5,7 +5,6 @@
 Thanks to omgimanerd and https://github.com/omgimanerd/create-advanced-industries 
 For some schemas and recipe components to reference for schema related code in Ae6r
 */
-
 const $RecipeSchema = Java.loadClass('dev.latvian.mods.kubejs.recipe.schema.RecipeSchema')
 const $RecipeComponentBuilder = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponentBuilder')
 const $RecipeComponent = Java.loadClass('dev.latvian.mods.kubejs.recipe.component.RecipeComponent')
@@ -91,6 +90,7 @@ StartupEvents.recipeSchemaRegistry(e => {
     recipeSchema_farmers_delight(e, comps)
     recipeSchema_immersiveengineering(e, comps)
     recipeSchema_pneumaticcraft(e, comps)
+    recipeSchema_powah(e, comps)
     recipeSchema_tconstruct(e, comps)
     recipeSchema_thermal(e, comps)
     recipeSchema_embers(e, comps)
