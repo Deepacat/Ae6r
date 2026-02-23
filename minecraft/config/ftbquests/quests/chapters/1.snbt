@@ -296,6 +296,7 @@
 			dependencies: [
 				"0EE8357B14D77784"
 				"43974FB2F5BB59AE"
+				"2A9F678F8A130296"
 			]
 			icon: "create:mechanical_crafter"
 			id: "7026C6F5506F40E7"

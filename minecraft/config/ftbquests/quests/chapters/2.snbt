@@ -424,11 +424,6 @@
 					type: "item"
 				}
 				{
-					id: "134217F170E5D15E"
-					item: "immersiveengineering:circuit_board"
-					type: "item"
-				}
-				{
 					id: "7EBFECB7834B27BE"
 					item: "immersiveengineering:component_electronic"
 					type: "item"
@@ -1046,7 +1041,12 @@
 					type: "item"
 				}
 				{
-					id: "5F7E6A0C043B4AF9"
+					id: "4322FF4A4440783F"
+					item: "immersiveengineering:circuit_board"
+					type: "item"
+				}
+				{
+					id: "48068FEE6E49365E"
 					item: "immersiveengineering:logic_circuit"
 					type: "item"
 				}
