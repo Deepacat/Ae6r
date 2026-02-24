@@ -1,3 +1,5 @@
+// Mass alloying script
+
 const allAlloyingTypes = [
     'create:mixing',
     'immersiveengineering:alloy',

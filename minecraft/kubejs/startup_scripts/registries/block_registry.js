@@ -121,10 +121,27 @@ StartupEvents.registry('block', e => {
         .redstoneConductor(false)
         .transparent(false)
 
-    e.create('marl')
+    e.create('marl') // Recreate atum marl block
         .soundType('sand')
         .hardness(1)
         .tagBlock('minecraft:mineable/shovel')
+
+    e.create('pigmented_bricks') // Replace marl>ceramic tile
+        .soundType('stone')
+        .hardness(2)
+        .tagBlock('minecraft:mineable/pickaxe')
+
+    e.create('crystal_glass') // Recreate atum crystal glass block
+        .soundType('glass')
+        .renderType('cutout')
+        .hardness(2)
+        .notSolid()
+        .noValidSpawns(true)
+        .suffocating(false)
+        .viewBlocking(false)
+        .redstoneConductor(false)
+        .transparent(true)
+        .tagBlock('minecraft:mineable/pickaxe')
 
     const aspectus = [
         'aer',
@@ -138,6 +155,7 @@ StartupEvents.registry('block', e => {
         'praecantatio'
     ]
 
+    // Generate aspectus shard blocks
     for (let aspect of aspectus) {
         e.create(`kubejs:${aspect}_aspectus_shard_block`)
             .soundType('amethyst')

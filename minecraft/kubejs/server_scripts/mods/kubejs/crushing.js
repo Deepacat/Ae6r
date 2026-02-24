@@ -1,3 +1,5 @@
+// Mass crushing script
+
 const allCrushTypes = [
     'minecraft:crafting',
     'immersiveengineering:crusher',

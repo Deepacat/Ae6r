@@ -19,9 +19,9 @@ ServerEvents.recipes(e => {
         ' CBC ',
         'CCCCC'
     ], {
-        A: 'kubejs:replaceme',
+        A: 'kubejs:crystal_glass', // A: 'atum:crystal_glass'
         B: 'thermal:machine_frame',
-        C: 'kubejs:replaceme'
+        C: 'kubejs:pigmented_bricks' // C: 'atum:ceramic_slab_black'
     }).id('kubejs:powah_crafting/energizing_orb')
 
     e.remove({ id: "pneumaticcraft:flux_compressor" })
@@ -67,7 +67,7 @@ ServerEvents.recipes(e => {
         'DDED'
     ], {
         A: 'prettypipes:pipe',
-        B: '#powah:energizing_rod',
+        B: 'powah:energizing_rod_basic',
         C: 'pneumaticcraft:pneumatic_cylinder',
         D: 'pneumaticcraft:reinforced_stone_slab',
         E: Item.of('pneumaticcraft:pneumatic_dynamo')

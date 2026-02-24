@@ -1,3 +1,5 @@
+// Mass melting script
+
 const AllMeltingTypes = [
     'tconstruct:melting',
     'thermal:smelter',
