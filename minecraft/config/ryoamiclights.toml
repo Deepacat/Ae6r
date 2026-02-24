@@ -9,11 +9,6 @@
 
 		[light_sources.settings.entities]
 
-			[light_sources.settings.entities.tconstruct]
-				ender_slime = true
-				fancy_item_frame = true
-				sky_slime = true
-
 			[light_sources.settings.entities.minecraft]
 				axolotl = true
 				zoglin = true
@@ -21,8 +16,8 @@
 				llama = true
 				bat = true
 				husk = true
-				experience_bottle = true
 				camel = true
+				experience_bottle = true
 				rabbit = true
 				firework_rocket = true
 				silverfish = true
@@ -31,8 +26,8 @@
 				horse = true
 				vindicator = true
 				minecart = true
-				llama_spit = true
 				mooshroom = true
+				llama_spit = true
 				glow_item_frame = true
 				parrot = true
 				creeper = true
@@ -114,6 +109,11 @@
 				painting = true
 				wither = true
 
+			[light_sources.settings.entities.tconstruct]
+				ender_slime = true
+				fancy_item_frame = true
+				sky_slime = true
+
 			[light_sources.settings.entities.splendid_slimes]
 				splendid_slime = true
 
@@ -129,10 +129,10 @@
 				revolver_shot = true
 
 			[light_sources.settings.entities.alexsmobs]
-				devils_hole_pupfish = true
 				pollen_ball = true
-				murmur_head = true
+				devils_hole_pupfish = true
 				kangaroo = true
+				murmur_head = true
 				blue_jay = true
 				skelewag = true
 				bone_serpent_part = true
@@ -199,6 +199,7 @@
 				komodo_dragon = true
 				bone_serpent = true
 				centipede_body = true
+				bald_eagle = true
 				seagull = true
 				mantis_shrimp = true
 				raccoon = true
@@ -389,8 +390,8 @@
 				jellyfish = true
 				bluegill = true
 				muskellunge = true
-				brown_shrooma = true
 				catfish = true
+				brown_shrooma = true
 				tambaqui = true
 				rainbow_trout = true
 				boulti = true

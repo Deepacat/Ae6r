@@ -133,13 +133,13 @@
 	"hideAdvancementToasts": false,
 	// Disables toast messages for unlocking Recipes.
 	// DEFAULT: `false`
-	"hideRecipeToasts": false,
+	"hideRecipeToasts": true,
 	// Disables toasts for System messages.
 	// DEFAULT: `false`
 	"hideSystemToasts": false,
 	// Disables the Tutorial.
 	// DEFAULT: `false`
-	"hideTutorialToasts": false,
+	"hideTutorialToasts": true,
 	// Prevents all particles from rendering.
 	// DEFAULT: `false`
 	"hideParticles": false,
