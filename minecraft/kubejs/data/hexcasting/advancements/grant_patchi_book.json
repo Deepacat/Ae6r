@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "deleted": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "deleted"
+    ]
+  ]
+}
