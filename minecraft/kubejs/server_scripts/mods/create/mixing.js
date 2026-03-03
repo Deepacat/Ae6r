@@ -43,7 +43,7 @@ ServerEvents.recipes(e => {
         .superheated()
         .id(`kubejs:create/mixing/chromatic_compound`)
 
-    e.remove({ id: 'powah:dielectric_paste' })
+    e.remove({ id: 'powah:crafting/dielectric_paste' })
     e.recipes.create.mixing(Item.of('powah:dielectric_paste', 24), [
         '#forge:sand/colorless',
         '#forge:sand/colorless',

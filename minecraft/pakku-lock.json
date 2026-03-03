@@ -2089,6 +2089,44 @@
             ]
         },
         {
+            "pakku_id": "6AgVHXrgkxL7aiNW",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "carry-on"
+            },
+            "name": {
+                "curseforge": "Carry On"
+            },
+            "id": {
+                "curseforge": "274259"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "carryon-forge-1.20.1-2.1.2.7.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/4882/500/carryon-forge-1.20.1-2.1.2.7.jar",
+                    "id": "4882500",
+                    "parent_id": "274259",
+                    "hashes": {
+                        "sha1": "9999714ca3dd2f2401f0396ca44f3b27c3784c4f",
+                        "md5": "8956b37c2ae11cc5522c8404a262c6b7"
+                    },
+                    "required_dependencies": [],
+                    "size": 439457,
+                    "date_published": "2023-11-19T22:32:08.460Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "DjgugDOzJddXO9br",
             "type": "MOD",
             "slug": {
@@ -5435,6 +5473,44 @@
             ]
         },
         {
+            "pakku_id": "s6FbNY7CspBacSFi",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "fastquit-forge"
+            },
+            "name": {
+                "curseforge": "FastQuit-Forge"
+            },
+            "id": {
+                "curseforge": "1177884"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Fastquit-3.0.1+1.20.1forge.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6079/815/Fastquit-3.0.1+1.20.1forge.jar",
+                    "id": "6079815",
+                    "parent_id": "1177884",
+                    "hashes": {
+                        "sha1": "3bb20fb815c95689abc360322701c3c2cae4e66c",
+                        "md5": "e01bb246e112544060cd0acff48aa232"
+                    },
+                    "required_dependencies": [
+                        "348521"
+                    ],
+                    "size": 316223,
+                    "date_published": "2025-01-12T11:57:23.643Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "e25Rcpu6cIHSvuwm",
             "pakku_links": [
                 "kVkXUuwdkRwBOFAH"
@@ -7037,6 +7113,9 @@
         },
         {
             "pakku_id": "I29EXhcIBthx6WgS",
+            "pakku_links": [
+                "94SuAM2CmZO8hsCl"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "just-enough-botania"
@@ -7112,6 +7191,9 @@
         },
         {
             "pakku_id": "RWPFOrY5Y2gQTg8a",
+            "pakku_links": [
+                "94SuAM2CmZO8hsCl"
+            ],
             "type": "MOD",
             "slug": {
                 "curseforge": "just-enough-immersive-multiblocks"
@@ -7151,9 +7233,46 @@
             ]
         },
         {
+            "pakku_id": "94SuAM2CmZO8hsCl",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "jei"
+            },
+            "name": {
+                "curseforge": "Just Enough Items (JEI)"
+            },
+            "id": {
+                "curseforge": "238222"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "jei-1.20.1-forge-15.20.0.116.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "beta",
+                    "url": "https://edge.forgecdn.net/files/7037/120/jei-1.20.1-forge-15.20.0.116.jar",
+                    "id": "7037120",
+                    "parent_id": "238222",
+                    "hashes": {
+                        "sha1": "ebb8d9033c29538824281b3ac651c49135aba78e",
+                        "md5": "89817a7201d47a7a23c3f9d217f891f4"
+                    },
+                    "required_dependencies": [],
+                    "size": 1387236,
+                    "date_published": "2025-09-27T01:04:44.357Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "Gx5hMxCNf2nlqVXp",
             "pakku_links": [
-                "5fxKTYVwL9UV2e8c"
+                "5fxKTYVwL9UV2e8c",
+                "94SuAM2CmZO8hsCl"
             ],
             "type": "MOD",
             "slug": {
@@ -8726,7 +8845,7 @@
             ]
         },
         {
-            "pakku_id": "mA4TChUfQjlLS1mR",
+            "pakku_id": "mcr0lyqyt6Mlg5a4",
             "type": "MOD",
             "slug": {
                 "curseforge": "modern-ae2-additions"
@@ -8748,7 +8867,7 @@
                         "forge",
                         "neoforge"
                     ],
-                    "release_type": "release",
+                    "release_type": "beta",
                     "url": "https://edge.forgecdn.net/files/7084/998/mae2-2.0.0-beta.d.jar",
                     "id": "7084998",
                     "parent_id": "1028068",

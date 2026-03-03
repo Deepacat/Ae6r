@@ -1,7 +1,7 @@
 
 [General]
 	#Enable mod dungeon loot generation
-	enable_dungeon_loot = true
+	enable_dungeon_loot = false
 	#Efficiency of fuel buckets as furnace fuel (default 0.05 means 1 bucket of LPG smelts 450 items in a vanilla furnace)
 	#Range: 0.0 ~ 1.7976931348623157E308
 	fuel_bucket_efficiency = 0.05
@@ -65,7 +65,7 @@
 	#Are players in Creative mode exempt from Security Station block protection? If false, only server ops are exempt (command permission >= 2)
 	security_station_creative_players_exempt = false
 	#Can Security Stations be hacked? If set to false, Security Stations are purely a grief protection feature with no hacking minigame
-	security_station_allow_hacking = true
+	security_station_allow_hacking = false
 	#The amount of air produced for 1 pump cycle in the manual compressor
 	#Range: > 0
 	manual_compressor_air_per_cycle = 1000

@@ -19,7 +19,7 @@
 			linked_quest: "7989B6AD3A82642C"
 			shape: "hexagon"
 			x: -6.5d
-			y: -3.0d
+			y: -4.0d
 		}
 		{
 			id: "75E7563BF32EEEA0"
@@ -162,7 +162,7 @@
 				type: "item"
 			}]
 			x: -3.5d
-			y: -3.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["7989B6AD3A82642C"]
@@ -174,7 +174,7 @@
 			}]
 			title: "Blast Furnace"
 			x: -5.5d
-			y: -3.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["163A71B74745BF43"]
@@ -185,7 +185,7 @@
 				type: "item"
 			}]
 			x: -4.5d
-			y: -3.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -435,7 +435,7 @@
 				}
 			]
 			title: "Primitive Circuitry"
-			x: -5.5d
+			x: -4.5d
 			y: -2.0d
 		}
 		{
@@ -1017,7 +1017,10 @@
 			y: 1.0d
 		}
 		{
-			dependencies: ["6BD22F97D5168969"]
+			dependencies: [
+				"6BD22F97D5168969"
+				"58CCF5EDFC97C643"
+			]
 			description: [
 				"The circuit table is used to create logic circuits"
 				""
@@ -1025,7 +1028,6 @@
 				""
 				"All logic circuit types except \"Set\" also cost a vacuum tube, so the \"Set\" type is the cheapest to use for making logic circuit as a ingredient for other recipes."
 			]
-			hide_dependency_lines: true
 			icon: "immersiveengineering:circuit_table"
 			id: "3CF751F1C642762C"
 			min_width: 350
@@ -1041,17 +1043,37 @@
 					type: "item"
 				}
 				{
-					id: "4322FF4A4440783F"
-					item: "immersiveengineering:circuit_board"
-					type: "item"
-				}
-				{
 					id: "48068FEE6E49365E"
 					item: "immersiveengineering:logic_circuit"
 					type: "item"
 				}
 			]
 			title: "Logic Circuit Printing"
+			x: -5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6BD22F97D5168969"]
+			icon: "immersiveengineering:circuit_board"
+			id: "58CCF5EDFC97C643"
+			tasks: [
+				{
+					id: "68DD2ED2A6C3AAB4"
+					item: "create:blaze_cake"
+					type: "item"
+				}
+				{
+					id: "5E624519E18C9160"
+					item: "powah:dielectric_paste"
+					type: "item"
+				}
+				{
+					id: "611BB35B32D521FF"
+					item: "immersiveengineering:circuit_board"
+					type: "item"
+				}
+			]
+			title: "Panes under flames"
 			x: -6.5d
 			y: -2.0d
 		}

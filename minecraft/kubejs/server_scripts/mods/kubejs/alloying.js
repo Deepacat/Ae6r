@@ -322,7 +322,7 @@ ServerEvents.recipes(event => {
         types: allButTinkers,
         item: {
             inputs: [Ingredient.of('#forge:ingots/copper', 2), Ingredient.of('#forge:ingots/cobalt'), Ingredient.of('#forge:gems/quartz')],
-            output: Item.of('2x thermal:enderium_ingot')
+            output: Item.of('2x thermal:hepatizon_ingot')
         },
         processTime: 300,
         energy: 32000,
