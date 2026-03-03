@@ -945,6 +945,13 @@
 									"patchouli:book": "buildinggadgets2:buildinggadgets2book"
 								}
 							}
+							complicated_bees: {
+								Count: 1b
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "complicated_bees:field_guide"
+								}
+							}
 							cookingforblockheads: {
 								Count: 1
 								id: "cookingforblockheads:crafting_book"
@@ -960,6 +967,13 @@
 							ftbquests: {
 								Count: 1
 								id: "ftbquests:book"
+							}
+							hexcasting: {
+								Count: 1b
+								id: "patchouli:guide_book"
+								tag: {
+									"patchouli:book": "hexcasting:thehexbook"
+								}
 							}
 							immersiveengineering: {
 								Count: 1
