@@ -1,31 +1,31 @@
 ServerEvents.recipes(e => {
     // Replace input for ids
-    e.replaceInput({ id: 'entangled:block' }, 'minecraft:chest', '#forge:chests/wooden')
-    e.replaceInput({ id: 'constructionwand:stone_wand' }, '#minecraft:stone_tool_materials', '#quark:stone_tool_materials')
-    e.replaceInput({ id: 'archers_paradox:lightning_arrow' }, 'minecraft:nether_star', 'thermal:lightning_charge')
-    e.replaceInput({ id: 'immersivecooking:fried_potato_cubes' }, 'immersivecooking:potato_slice', 'immersivecooking:potato_cubes')
-    e.replaceInput({ not: [{ id: 'minecraft:dried_kelp_block' }] }, 'minecraft:dried_kelp', ['minecraft:dried_kelp', 'sushigocrafting:dried_seaweed'])
-    e.replaceInput({ id: 'eidolon:stone_hand' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
-    e.replaceInput({ id: 'culinaryconstruct:culinary_station' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
-    e.replaceInput({ id: 'minecraft:grindstone' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
-    e.replaceInput({ id: 'minecraft:nether_bricks' }, '#forge:ingots/nether_brick', 'minecraft:nether_brick')
-    e.replaceInput({ id: 'thermal:machine/press/packing2x2/press_nether_bricks_packing' },
+    replaceExactInput(e, { id: 'entangled:block' }, 'minecraft:chest', '#forge:chests/wooden')
+    replaceExactInput(e, { id: 'constructionwand:stone_wand' }, '#minecraft:stone_tool_materials', '#quark:stone_tool_materials')
+    replaceExactInput(e, { id: 'archers_paradox:lightning_arrow' }, 'minecraft:nether_star', 'thermal:lightning_charge')
+    replaceExactInput(e, { id: 'immersivecooking:fried_potato_cubes' }, 'immersivecooking:potato_slice', 'immersivecooking:potato_cubes')
+    replaceExactInput(e, { not: [{ id: 'minecraft:dried_kelp_block' }] }, 'minecraft:dried_kelp', ['minecraft:dried_kelp', 'sushigocrafting:dried_seaweed'])
+    replaceExactInput(e, { id: 'eidolon:stone_hand' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
+    replaceExactInput(e, { id: 'culinaryconstruct:culinary_station' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
+    replaceExactInput(e, { id: 'minecraft:grindstone' }, 'minecraft:stone_slab', '#enigmatica:crafting_slabs')
+    replaceExactInput(e, { id: 'minecraft:nether_bricks' }, '#forge:ingots/nether_brick', 'minecraft:nether_brick')
+    replaceExactInput(e, { id: 'thermal:machine/press/packing2x2/press_nether_bricks_packing' },
         '#forge:ingots/nether_brick',
         'minecraft:nether_brick'
     )
-    e.replaceInput({ id: 'thermal:machine/press/unpacking/press_wool_unpacking' },
+    replaceExactInput(e, { id: 'thermal:machine/press/unpacking/press_wool_unpacking' },
         'minecraft:white_wool',
         '#forge:wool'
     )
-    e.replaceInput({ id: 'bloodmagic:alchemytable/basic_cutting_fluid' },
+    replaceExactInput(e, { id: 'bloodmagic:alchemytable/basic_cutting_fluid' },
         'minecraft:potion',
         Item.of('minecraft:potion', { Potion: 'minecraft:water' })
     )
-    e.replaceInput({ id: 'powah:crafting/solar_panel_basic' },
+    replaceExactInput(e, { id: 'powah:crafting/solar_panel_basic' },
         'powah:solar_panel_starter',
         'powah:photoelectric_pane'
     )
-    e.replaceInput({
+    replaceExactInput(e, {
         type: 'minecraft:crafting_shaped',
         not: [{ id: 'minecraft:stone_slab' }, { id: 'minecraft:stone_stairs' }]
     },
@@ -34,23 +34,23 @@ ServerEvents.recipes(e => {
     )
 
     // Replace inputs for all recipes in a mod
-    e.replaceInput({ mod: 'buildinggadgets' }, '#forge:ingots/iron', '#forge:ingots/iron_aluminum')
-    e.replaceInput({ mod: 'powah' }, '#forge:ingots/iron', '#forge:ingots/iron_copper')
-    e.replaceInput({ mod: 'powah' }, '#forge:nuggets/iron', '#forge:nuggets/iron_copper')
-    e.replaceInput({ mod: 'powah' }, '#powah:magmator', 'mekanism:dynamic_tank')
-    e.replaceInput({ mod: 'powah' }, '#powah:thermo_generator', 'powah:thermoelectric_plate')
-    e.replaceInput({ mod: 'powah' }, '#powah:solar_panel', 'powah:photoelectric_pane')
+    replaceExactInput(e, { mod: 'buildinggadgets' }, '#forge:ingots/iron', '#forge:ingots/iron_aluminum')
+    replaceExactInput(e, { mod: 'powah' }, '#forge:ingots/iron', '#forge:ingots/iron_copper')
+    replaceExactInput(e, { mod: 'powah' }, '#forge:nuggets/iron', '#forge:nuggets/iron_copper')
+    replaceExactInput(e, { mod: 'powah' }, '#powah:magmator', 'mekanism:dynamic_tank')
+    replaceExactInput(e, { mod: 'powah' }, '#powah:thermo_generator', 'powah:thermoelectric_plate')
+    replaceExactInput(e, { mod: 'powah' }, '#powah:solar_panel', 'powah:photoelectric_pane')
 
     // Replace inputs for all recipes in a type
-    e.replaceInput({ type: 'minecraft:crafting_shapeless' }, 'minecraft:stone', '#forge:stone')
-    e.replaceInput({ type: 'minecraft:crafting_shaped' }, 'powah:uraninite', '#forge:ingots/radioactive')
-    e.replaceInput({ type: 'minecraft:crafting_shaped' }, 'minecraft:netherrack', '#forge:netherrack')
-    e.replaceInput(
+    replaceExactInput(e, { type: 'minecraft:crafting_shapeless' }, 'minecraft:stone', '#forge:stone')
+    replaceExactInput(e, { type: 'minecraft:crafting_shaped' }, 'powah:uraninite', '#forge:ingots/radioactive')
+    replaceExactInput(e, { type: 'minecraft:crafting_shaped' }, 'minecraft:netherrack', '#forge:netherrack')
+    replaceExactInput(e,
         { type: 'minecraft:crafting_shaped', output: 'minecraft:piston' },
         '#forge:cobblestone',
         '#quark:stone_tool_materials'
     )
-    e.replaceInput({
+    replaceExactInput(e, {
         not: [{ type: 'ars_nouveau:glyph_recipe' }]
     },
         'minecraft:nether_brick',
@@ -59,41 +59,41 @@ ServerEvents.recipes(e => {
 
 
     // Replace inputs on all recipes with no filter
-    e.replaceInput({}, 'architects_palette:withered_bone', '#forge:bones/wither')
-    e.replaceInput({}, 'mythicbotany:elementium_ore', '#forge:ores/elementium')
+    replaceExactInput(e, { input: 'architects_palette:withered_bone' }, 'architects_palette:withered_bone', '#forge:bones/wither')
+    replaceExactInput(e, { input: 'mythicbotany:elementium_ore' }, 'mythicbotany:elementium_ore', '#forge:ores/elementium')
     e.replaceInput({}, 'thermal:rubber', 'industrialforegoing:dryrubber')
-    e.replaceInput({}, 'thermal:cinnabar', '#forge:gems/cinnabar')
-    e.replaceInput({}, 'thermal:sulfur', '#forge:gems/sulfur')
-    e.replaceInput({}, 'thermal:apatite', '#forge:gems/apatite')
-    e.replaceInput({}, 'thermal:niter', '#forge:gems/niter')
-    e.replaceInput({}, 'thermal:bitumen', '#forge:bitumen')
-    e.replaceInput({}, 'thermal:coal_coke', '#forge:coal_coke')
-    e.replaceInput({}, 'rftoolsbase:dimensionalshard', '#forge:gems/dimensional')
-    e.replaceInput({}, 'immersiveengineering:slag', '#forge:slag')
-    e.replaceInput({}, 'thermal:slag', '#forge:slag')
-    e.replaceInput({}, 'farmersdelight:fried_egg', '#forge:cooked_eggs')
-    e.replaceInput({}, 'farmersdelight:brown_mushroom_colony', '#forge:mushroom_colonies/brown')
-    e.replaceInput({}, 'farmersdelight:red_mushroom_colony', '#forge:mushroom_colonies/red')
-    e.replaceInput({}, 'upgrade_aquatic:beachgrass', '#forge:beach_grass')
-    e.replaceInput({}, 'environmental:cattail', '#forge:cattails')
-    e.replaceInput({}, 'pneumaticcraft:wheat_flour', '#forge:dusts/flour')
-    e.replaceInput({}, 'create:wheat_flour', '#forge:dusts/flour')
-    e.replaceInput({}, 'create:dough', '#forge:doughs')
-    e.replaceInput({}, 'farmersdelight:wheat_dough', '#forge:doughs')
-    e.replaceInput({}, 'create:bar_of_chocolate', '#forge:chocolate_bars')
+    replaceExactInput(e, { input: 'thermal:cinnabar' }, 'thermal:cinnabar', '#forge:gems/cinnabar')
+    replaceExactInput(e, { input: 'thermal:sulfur' }, 'thermal:sulfur', '#forge:gems/sulfur')
+    replaceExactInput(e, { input: 'thermal:apatite' }, 'thermal:apatite', '#forge:gems/apatite')
+    replaceExactInput(e, { input: 'thermal:niter' }, 'thermal:niter', '#forge:gems/niter')
+    replaceExactInput(e, { input: 'thermal:bitumen' }, 'thermal:bitumen', '#forge:bitumen')
+    replaceExactInput(e, { input: 'thermal:coal_coke' }, 'thermal:coal_coke', '#forge:gems/coal_coke')
+    replaceExactInput(e, { input: 'rftoolsbase:dimensionalshard' }, 'rftoolsbase:dimensionalshard', '#forge:gems/dimensional')
+    replaceExactInput(e, { input: 'immersiveengineering:slag' }, 'immersiveengineering:slag', '#forge:slag')
+    replaceExactInput(e, { input: 'thermal:slag' }, 'thermal:slag', '#forge:slag')
+    replaceExactInput(e, { input: 'farmersdelight:fried_egg' }, 'farmersdelight:fried_egg', '#forge:cooked_eggs')
+    replaceExactInput(e, { input: 'farmersdelight:brown_mushroom_colony' }, 'farmersdelight:brown_mushroom_colony', '#forge:mushroom_colonies/brown')
+    replaceExactInput(e, { input: 'farmersdelight:red_mushroom_colony' }, 'farmersdelight:red_mushroom_colony', '#forge:mushroom_colonies/red')
+    replaceExactInput(e, { input: 'upgrade_aquatic:beachgrass' }, 'upgrade_aquatic:beachgrass', '#forge:beach_grass')
+    replaceExactInput(e, { input: 'environmental:cattail' }, 'environmental:cattail', '#forge:cattails')
+    replaceExactInput(e, { input: 'pneumaticcraft:wheat_flour' }, 'pneumaticcraft:wheat_flour', '#forge:dusts/flour')
+    replaceExactInput(e, { input: 'create:wheat_flour' }, 'create:wheat_flour', '#forge:dusts/flour')
+    replaceExactInput(e, { input: 'create:dough' }, 'create:dough', '#forge:doughs')
+    replaceExactInput(e, { input: 'farmersdelight:wheat_dough' }, 'farmersdelight:wheat_dough', '#forge:doughs')
+    replaceExactInput(e, { input: 'create:bar_of_chocolate' }, 'create:bar_of_chocolate', '#forge:chocolate_bars')
 
     // Replace inputs for powah tiers
     powahTiers.forEach(function (tier) {
         var capacitor = `powah:capacitor_${tier}`
-        e.replaceInput({ id: `powah:crafting/energy_cell_${tier}` }, '#powah:energy_cell', capacitor)
+        replaceExactInput(e, { id: `powah:crafting/energy_cell_${tier}` }, '#powah:energy_cell', capacitor)
         if (tier == 'basic') {
             capacitor = `powah:capacitor_${tier}_large`
         }
-        e.replaceInput({ id: `powah:crafting/battery_${tier}` }, '#powah:battery', capacitor)
+        replaceExactInput(e, { id: `powah:crafting/battery_${tier}` }, '#powah:battery', capacitor)
     })
 
     // ['quark:tallow', 'eidolon:tallow', 'occultism:tallow'].forEach((tallow) => {
-    //     e.replaceInput({}, tallow, '#forge:tallow')
+    //     replaceExactInput(e, {}, tallow, '#forge:tallow')
     // })
 
 
@@ -329,7 +329,7 @@ ServerEvents.recipes(e => {
 
     alt_material_tag_replacements.forEach((recipe) => {
         recipe.items.forEach((item) => {
-            e.replaceInput(
+            replaceExactInput(e,
                 { output: item },
                 `#forge:${recipe.type}/${recipe.replace}`,
                 `#forge:${recipe.type}/${recipe.replace}_${recipe.replaceWith}`

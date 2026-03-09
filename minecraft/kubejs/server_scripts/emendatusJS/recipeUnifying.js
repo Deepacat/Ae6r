@@ -1,14 +1,15 @@
 //priority: 900
 ServerEvents.recipes(e => {
     let itemUnifTagData = JsonIO.read('kubejs/datagen/itemTagUnificationData.json')
-    if (!(itemUnifTagData == null)) {
+    if (itemUnifTagData != null) {
         for (let tagObj of Object.entries(itemUnifTagData)) {
             if (tagObj[0].includes('ores')) { continue }
             e.replaceOutput({}, `#${tagObj[0]}`, tagObj[1].prefItem)
             for (let item of tagObj[1].toUnify) {
                 if (item.includes('emendatus')) { continue }
-                e.replaceOutput({}, item, tagObj[1].prefItem)
-                e.replaceInput({}, item, tagObj[1].prefItem)
+                // console.log(`replacing ${item} with ${tagObj[1].prefItem}`)
+                e.replaceOutput({ output: Item.of(item) }, Item.of(item), tagObj[1].prefItem)
+                replaceExactInput(e, { input: Item.of(item) }, Item.of(item), tagObj[1].prefItem)
                 e.remove({ output: item })
             }
         }
@@ -20,7 +21,7 @@ ServerEvents.recipes(e => {
     //         for (let fluidToUnify of fluidObj[1].toUnify) {
     //             console.log(`replacing ${fluidToUnify} with ${fluidObj[1].prefFluid}`)
     //             e.replaceOutput({}, Fluid.of(fluidToUnify), Fluid.of(fluidObj[1].prefFluid))
-    //             e.replaceInput({}, Fluid.of(fluidToUnify), Fluid.of(fluidObj[1].prefFluid))
+    //             replaceExactInput(e, {}, Fluid.of(fluidToUnify), Fluid.of(fluidObj[1].prefFluid))
     //             e.remove({ output: Fluid.of(fluidToUnify) })
     //         }
     //     }
