@@ -1,6 +1,4 @@
 ServerEvents.recipes(e => {
-
-
     e.remove({ output: 'modularrouters:blank_module' })
     e.recipes.immersiveengineering.blueprint('2x modularrouters:blank_module',
         [

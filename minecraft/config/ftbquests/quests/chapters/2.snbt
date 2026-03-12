@@ -424,11 +424,6 @@
 					type: "item"
 				}
 				{
-					id: "7EBFECB7834B27BE"
-					item: "immersiveengineering:component_electronic"
-					type: "item"
-				}
-				{
 					id: "002E305F7288A8FF"
 					item: "pneumaticcraft:module_expansion_card"
 					type: "item"
