@@ -1,0 +1,11 @@
+
+[creativeModeTabs]
+	enableCreativeModeTabs = true
+	syncSelectedCreativeModeTab = true
+	enableBerryTheme = true
+	disabledCreativeModeTabs = ["minecraft:op_blocks", "bic_clipboard:bic_clipboard", "ars_creo:general", "fluffy_fur:tab", "rangedpumps:general", "shrink:creative_tab", "summoningrituals:tab", "lootr:lootr", "runelic:creative_tab", "travelanchors:tab", "energymeter:tab", "ftbfiltersystem:default"]
+
+[stackGroups]
+	enableStackGroups = true
+	enableCreateStackGroupButton = true
+

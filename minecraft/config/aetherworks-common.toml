@@ -13,41 +13,34 @@
 	ember_use = 4.0
 	#Syntax is ( block|block|...|block ). List of sets of blocks that are considered identical for certain aetherium tool effects.
 	same_blocks = ["minecraft:oak_log|minecraft:oak_wood", "minecraft:birch_log|minecraft:birch_wood", "minecraft:spruce_log|minecraft:spruce_wood", "minecraft:jungle_log|minecraft:jungle_wood", "minecraft:dark_oak_log|minecraft:dark_oak_wood", "minecraft:acacia_log|minecraft:acacia_wood", "minecraft:mangrove_log|minecraft:mangrove_wood", "minecraft:cherry_log|minecraft:cherry_wood", "minecraft:crimson_stem|minecraft:crimson_hyphae", "minecraft:warped_stem|minecraft:warped_hyphae", "minecraft:azalea_leaves|minecraft:flowering_azalea_leaves"]
+	#How strong should each tick of Moongaze damage be? [default: 4.0]
+	#Range: 0.0 ~ 20.0
+	moongaze_strength = 4.0
 
 	[tool.pobs]
 		#Maximum vein mine radius of the Pickaxe of the Boundless Sky. [default: 8]
 		#Range: 0 ~ 128
 		range = 8
-		#Blocks that the Pickaxe of the Boundless Sky should NOT be able to vein mine.
-		banned = ["minecraft:bedrock", "minecraft:reinforced_deepslate", "aetherworks:forge_block"]
 
 	[tool.pomd]
-		#Maximum number of bore holes the Pickaxe of the Molten Depths makes when tunneling. [default: 8]
+		#Maximum number of boreholes the Pickaxe of the Molten Depths makes when tunneling. [default: 8]
 		#Range: 0 ~ 128
 		range = 8
-		#Blocks that the Pickaxe of the Molten Depths can vein mine.
-		allowed = ["#minecraft:base_stone_overworld", "minecraft:dripstone_block", "minecraft:calcite", "#forge:sandstone", "#minecraft:base_stone_nether", "#minecraft:nylium", "minecraft:smooth_basalt", "minecraft:basalt", "minecraft:end_stone", "aetherworks:suevite"]
 
 	[tool.aotr]
 		#Maximum recursions the Axe of the Twisted Realm can do while chopping. [default: 512]
 		#Range: 0 ~ 2048
 		range = 512
-		#Blocks that the Axe of the Twisted Realm is allowed to vein mine. [defaults to logs]
-		allowed = ["#minecraft:logs"]
 
 	[tool.aosa]
 		#Maximum growing radius of the Axe of the Sonorous Archives. [default: 24]
 		#Range: 0 ~ 128
 		range = 24
-		#Blocks that the Axe of the Sonorous Archives is allowed to vein mine. [defaults to leaves]
-		allowed = ["#minecraft:leaves"]
 
 	[tool.soic]
 		#Maximum replacement radius of the Shovel of the Ineluctable Changes. [default: 16]
 		#Range: 0 ~ 128
 		range = 16
-		#Blocks that the Shovel of the Ineluctable Changes is NOT allowed to exchange.
-		banned = ["minecraft:bedrock", "minecraft:reinforced_deepslate", "aetherworks:forge_block"]
 
 	[tool.sotc]
 		#Fluid capacity of the Shovel of the Timeless Cascades. [default: 4096]
@@ -61,8 +54,6 @@
 		#Maximum harvest radius of the Hoe of the Villatic Harvest. [default: 12]
 		#Range: 1 ~ 64
 		harvest_range = 12
-		#List of blocks that should be harvested via right-click, like Sweet Berry Bushes, when using the Hoe of the Villatic Harvest.
-		right_click_harvest = ["minecraft:sweet_berry_bush", "minecraft:cave_vines_plant", "minecraft:cave_vines", "farmersdelight:tomatoes"]
 
 	[tool.crossbow]
 		#Ember cost of loading an aetherium crossbow. [default 10]
@@ -83,8 +74,12 @@
 	[tool.tuning_cylinder]
 		#Base chance (1/X) per level to drop a geode when using the Tuning Cylinder augment. [default: 32]
 		chance = 32
-		#List of blocks that can drop geodes when using the Tuning Cylinder augment.
-		allowed = ["#minecraft:base_stone_overworld", "#minecraft:base_stone_nether", "#minecraft:nylium", "#forge:sandstone", "minecraft:dripstone_block", "minecraft:calcite", "minecraft:smooth_basalt", "minecraft:basalt", "minecraft:end_stone", "minecraft:obsidian", "aetherworks:suevite"]
+
+		[tool.tuning_cylinder.deep]
+			#At what depth should deep geodes start dropping?
+			depth = 0
+			#What dimensions should be able to drop this geode?
+			dimensions = ["minecraft:overworld"]
 
 #Settings for block parameters
 [block]
