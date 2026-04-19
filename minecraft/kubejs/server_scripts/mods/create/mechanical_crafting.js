@@ -52,7 +52,7 @@ ServerEvents.recipes(e => {
         '  CA',
         'DDED'
     ], {
-        A: 'prettypipes:pipe',
+        A: 'moderndynamics:item_pipe',
         B: 'pneumaticcraft:drill_bit_diamond',
         C: 'pneumaticcraft:pneumatic_cylinder',
         D: 'pneumaticcraft:reinforced_stone_slab',
@@ -66,7 +66,7 @@ ServerEvents.recipes(e => {
         '  CA',
         'DDED'
     ], {
-        A: 'prettypipes:pipe',
+        A: 'moderndynamics:item_pipe',
         B: 'powah:energizing_rod_basic',
         C: 'pneumaticcraft:pneumatic_cylinder',
         D: 'pneumaticcraft:reinforced_stone_slab',
@@ -80,7 +80,7 @@ ServerEvents.recipes(e => {
         '  CA',
         'DDED'
     ], {
-        A: 'prettypipes:pipe',
+        A: 'moderndynamics:item_pipe',
         B: 'create:brass_hand',
         C: 'pneumaticcraft:pneumatic_cylinder',
         D: 'pneumaticcraft:reinforced_stone_slab',
@@ -94,7 +94,7 @@ ServerEvents.recipes(e => {
         'AC  ',
         'DEDD'
     ], {
-        A: 'prettypipes:pipe',
+        A: 'moderndynamics:item_pipe',
         B: 'create:brass_hand',
         C: 'pneumaticcraft:pneumatic_cylinder',
         D: 'pneumaticcraft:reinforced_stone_slab',
@@ -108,7 +108,7 @@ ServerEvents.recipes(e => {
         'AC  ',
         'DEDD'
     ], {
-        A: 'prettypipes:pipe',
+        A: 'moderndynamics:item_pipe',
         B: 'computercraft:monitor_normal',
         C: 'pneumaticcraft:printed_circuit_board',
         D: 'pneumaticcraft:reinforced_stone_slab',

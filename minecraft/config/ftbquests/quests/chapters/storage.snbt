@@ -709,7 +709,7 @@
 				{
 					count: 4
 					id: "77079E43823E3AE6"
-					item: "prettypipes:pipe"
+					item: "moderndynamics:item_pipe"
 					type: "item"
 				}
 				{
@@ -1284,7 +1284,7 @@
 			rewards: [{
 				count: 8
 				id: "68188157B1667326"
-				item: "prettypipes:pipe"
+				item: "moderndynamics:item_pipe"
 				type: "item"
 			}]
 			tasks: [{

@@ -428,7 +428,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '6x pneumaticcraft:pneumatic_cylinder',
-            '10x prettypipes:pipe',
+            '10x moderndynamics:item_pipe',
             '6x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
             '2x create:brass_hand',
@@ -442,7 +442,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '3x pneumaticcraft:pneumatic_cylinder',
-            '5x prettypipes:pipe',
+            '5x moderndynamics:item_pipe',
             '3x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
             Ingredient.of('#powah:energizing_rod'),
@@ -456,7 +456,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '3x pneumaticcraft:pneumatic_cylinder',
-            '5x prettypipes:pipe',
+            '5x moderndynamics:item_pipe',
             '3x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',
             'pneumaticcraft:drill_bit_diamond',
@@ -483,7 +483,7 @@ ServerEvents.recipes(e => {
         ],
         [
             '3x pneumaticcraft:printed_circuit_board',
-            '5x prettypipes:pipe',
+            '5x moderndynamics:item_pipe',
             'computercraft:monitor_normal',
             '3x pneumaticcraft:reinforced_stone_slab',
             'pneumaticcraft:pneumatic_dynamo',

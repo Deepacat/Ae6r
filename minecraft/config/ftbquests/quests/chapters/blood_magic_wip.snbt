@@ -291,7 +291,7 @@
 				{
 					count: 4
 					id: "00000000000008BE"
-					item: "prettypipes:pipe"
+					item: "moderndynamics:item_pipe"
 					title: "Pipe"
 					type: "item"
 				}

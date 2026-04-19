@@ -1129,6 +1129,7 @@
 					}
 					tic_stats: {
 						"tconstruct:attack_damage": 6.0f
+						"tconstruct:block_amount": 10.0f
 						"tconstruct:durability": 3.5f
 						"tconstruct:mining_speed": 0.25f
 					}
@@ -1222,6 +1223,7 @@
 							}
 							tic_stats: {
 								"tconstruct:attack_damage": 6.0f
+								"tconstruct:block_amount": 10.0f
 								"tconstruct:durability": 3.5f
 								"tconstruct:mining_speed": 0.25f
 							}
@@ -1881,6 +1883,7 @@
 					tic_stats: {
 						"tconstruct:attack_damage": 4.0f
 						"tconstruct:attack_speed": 1.6f
+						"tconstruct:block_amount": 10.0f
 						"tconstruct:durability": 1.1f
 						"tconstruct:mining_speed": 0.5f
 					}
@@ -1968,6 +1971,7 @@
 							tic_stats: {
 								"tconstruct:attack_damage": 4.0f
 								"tconstruct:attack_speed": 1.6f
+								"tconstruct:block_amount": 10.0f
 								"tconstruct:durability": 1.1f
 								"tconstruct:mining_speed": 0.5f
 							}

@@ -19,25 +19,25 @@ ServerEvents.recipes(e => {
         [Ingredient.of('#forge:ingots/copper'), Ingredient.of('#thermal:crafting/dies/bullet_casing')])
         .id('kubejs:thermal/machines/press/empty_casing')
 
-    e.recipes.thermal.press('4x biomeswevegone:pink_sand',
-        ['biomeswevegone:pink_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
-        .id('kubejs:thermal/machines/press/pink_sand')
+    // e.recipes.thermal.press('4x biomeswevegone:pink_sand',
+    //     ['biomeswevegone:pink_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
+    //     .id('kubejs:thermal/machines/press/pink_sand')
 
-    e.recipes.thermal.press('4x biomeswevegone:purple_sand',
-        ['biomeswevegone:purple_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
-        .id('kubejs:thermal/machines/press/purple_sand')
+    // e.recipes.thermal.press('4x biomeswevegone:purple_sand',
+    //     ['biomeswevegone:purple_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
+    //     .id('kubejs:thermal/machines/press/purple_sand')
 
-    e.recipes.thermal.press('4x biomeswevegone:blue_sand',
-        ['biomeswevegone:blue_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
-        .id('kubejs:thermal/machines/press/blue_sand')
+    // e.recipes.thermal.press('4x biomeswevegone:blue_sand',
+    //     ['biomeswevegone:blue_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
+    //     .id('kubejs:thermal/machines/press/blue_sand')
 
-    e.recipes.thermal.press('4x biomeswevegone:white_sand',
-        ['biomeswevegone:white_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
-        .id('kubejs:thermal/machines/press/white_sand')
+    // e.recipes.thermal.press('4x biomeswevegone:white_sand',
+    //     ['biomeswevegone:white_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
+    //     .id('kubejs:thermal/machines/press/white_sand')
 
-    e.recipes.thermal.press('4x biomeswevegone:black_sand',
-        ['biomeswevegone:black_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
-        .id('kubejs:thermal/machines/press/black_sand')
+    // e.recipes.thermal.press('4x biomeswevegone:black_sand',
+    //     ['biomeswevegone:black_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
+    //     .id('kubejs:thermal/machines/press/black_sand')
 
     e.recipes.thermal.press('4x atmospheric:arid_sand',
         ['atmospheric:arid_sandstone', Ingredient.of('#thermal:crafting/dies/unpacking')])
