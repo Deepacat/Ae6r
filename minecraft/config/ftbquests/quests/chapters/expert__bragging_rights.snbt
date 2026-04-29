@@ -7,11 +7,11 @@
 	id: "0000000000000B69"
 	images: [{
 		height: 17.0d
-		image: "natures_spirit:block/mahogany_tree"
+		image: "environmental:block/purple_wisteria_sapling"
 		rotation: 0.0d
 		width: 17.0d
 		x: 0.0d
-		y: 1.0d
+		y: 0.5d
 	}]
 	order_index: 4
 	quest_links: [ ]

@@ -39,7 +39,7 @@ ServerEvents.recipes(e => {
         'CCC'
     ], {
         A: '#forge:dusts/redstone',
-        B: '#enigmatica:crafting_slabs',
+        B: '#forge:plates/quartz',
         C: '#forge:nuggets/copper'
     }).id('kubejs:moderndynamics/shaped/inhibitor')
     // Extractor

@@ -114,6 +114,8 @@ ServerEvents.recipes(e => {
     }).id('kubejs:pneumaticcraft/shaped/pneumaticcraft_small_tank')
 
     e.remove({ id: 'pneumaticcraft:pressure_chamber_valve' })
+    e.remove({ id: 'pneumaticcraft:pressure_chamber_valve_x1' })
+    e.remove({ id: 'pneumaticcraft:pressure_chamber_valve_x4' })
     e.shaped(Item.of('pneumaticcraft:pressure_chamber_valve', '{BlockEntityTag:{UpgradeInventory:{Size:4,Items:[{Slot:0,id:"pneumaticcraft:security_upgrade",Count:1b}]}}}'), [
         ' A ',
         'CBC'

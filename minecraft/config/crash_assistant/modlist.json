@@ -2754,6 +2754,14 @@
     "curseForgeHash": 1749632426,
     "modrinthHash": "5b45e8d6da3bfd9e67cfe1ffbe31094c02812e95"
   },
+  "vanillin-forge-1.20.1-1.1.3.jar": {
+    "jarName": "vanillin-forge-1.20.1-1.1.3.jar",
+    "modId": "vanillin",
+    "name": "Vanillin",
+    "version": "1.1.3",
+    "curseForgeHash": 3420070768,
+    "modrinthHash": "bc49b972af2523aef31c1dfd68989d8d896e8452"
+  },
   "villagernames-1.20.1-8.2.jar": {
     "jarName": "villagernames-1.20.1-8.2.jar",
     "modId": "villagernames",

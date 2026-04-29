@@ -1,4 +1,4 @@
-//priority: 1001
+//priority: 1000
 
 // Ensures a player is entirely real, for lychee interactions mostly
 function isRealPlayer(player) {

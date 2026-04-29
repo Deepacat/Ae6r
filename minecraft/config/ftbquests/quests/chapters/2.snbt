@@ -101,12 +101,43 @@
 		}
 		{
 			dependencies: ["74D4B16C316F50B4"]
+			description: [
+				"Structure must be a minimum of 3x3x3 with an empty inside"
+				""
+				"Requires an interface for outputs and inputs"
+				""
+				"Requires a valve to recieve pressure"
+				""
+				"Interfaces, valves, and glass cannot go on edges/corners, only within the center part of a side."
+				""
+				"If building a 3x3x3, that means you can fit one interface, valve, glass, or just a wall per side."
+			]
 			id: "170B80914E09A31F"
-			tasks: [{
-				id: "5CF4B4F7C3D99417"
-				item: "pneumaticcraft:pressure_chamber_wall"
-				type: "item"
-			}]
+			min_width: 250
+			tasks: [
+				{
+					id: "08B177980495C2CE"
+					item: "pneumaticcraft:pressure_chamber_valve"
+					type: "item"
+				}
+				{
+					id: "71A3B4CABF35C2B7"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "or(item(pneumaticcraft:pressure_chamber_wall)item(pneumaticcraft:pressure_chamber_glass))"
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1EE7E6C393153313"
+					item: { Count: 2, id: "pneumaticcraft:pressure_chamber_interface" }
+					type: "item"
+				}
+			]
 			x: -3.5d
 			y: 0.0d
 		}

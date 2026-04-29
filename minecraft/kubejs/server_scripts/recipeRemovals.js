@@ -1,12 +1,18 @@
+//priority: 999
+// High priority so recipes are removed before replacement scripts run
+// 999 is just under constants and functions, this should be ran nearly first
+
 ServerEvents.recipes(e => {
     /*
     This file is moreso for mass removals of items via regex or recipe filters.
-    if an item has one recipe then the recipe should be removed before it is created.
+    if an item has one recipe or multiple of the same type,
+    then the recipe should be removed before it is created.
 
     if an item has no recipe, and should be entirely removed,
     it should be added to nuker instead to be hidden and removed.
     
-    if an item has multiple recipes that are not custom, they may be removed here.
+    if an item has multiple recipes that are not custom,
+    or in different recipe types, they may be removed here.
     */
     const idRemovals = [
         'quark:tweaks/crafting/utility/misc/easy_sticks',

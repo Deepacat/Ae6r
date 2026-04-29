@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "1cae1c2a0995b316",
+    "id": "43eaa034a8366c20",
     "type": "split",
     "children": [
       {
-        "id": "baef1606b36aac7f",
+        "id": "3ad595936877138c",
         "type": "tabs",
         "children": [
           {
-            "id": "23d717b91eb2abec",
+            "id": "9f033adce5abbd4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Aspectus shard (godshard) notes.md",
+                "file": "Ae6r Ideas.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Aspectus shard (godshard) notes"
+              "title": "Ae6r Ideas"
             }
           }
         ]
@@ -27,20 +27,20 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "1c34165a1fd3885b",
+    "id": "efacd9267b8fedc9",
     "type": "split",
     "children": [
       {
-        "id": "6aaff32b87e6a87f",
+        "id": "ac70c6ae0a819af0",
         "type": "tabs",
         "children": [
           {
-            "id": "ebd9fd07d251d187",
+            "id": "df7e3298744cdb16",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -48,12 +48,12 @@
             }
           },
           {
-            "id": "d2b0521b49a7b75d",
+            "id": "780c2f3de6587ef4",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "master",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "cefffb3565f5f320",
+            "id": "f6a0432df43874e1",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -74,27 +74,27 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300
   },
   "right": {
-    "id": "355b16affe875eae",
+    "id": "6f86e984acbac79b",
     "type": "split",
     "children": [
       {
-        "id": "22aad05cc0f716cc",
+        "id": "fe8f012767a19c15",
         "type": "tabs",
         "children": [
           {
-            "id": "88919cafbe192267",
+            "id": "9c95e079f4ef5b06",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Ae6r Todo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Ae6r Todo"
+              "title": "Backlinks"
             }
           },
           {
-            "id": "6874a1cefb951080",
+            "id": "f4a5131558185a9f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Ae6r Todo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Ae6r Todo"
+              "title": "Outgoing links"
             }
           },
           {
-            "id": "feccec83ef94456e",
+            "id": "93bf5b62cda63d04",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,18 +136,17 @@
             }
           },
           {
-            "id": "2adb6a080f48521c",
+            "id": "b258fac59f7256f1",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Ae6r Todo.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Ae6r Todo"
+              "title": "Outline"
             }
           }
         ]
@@ -169,14 +167,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "23d717b91eb2abec",
+  "active": "780c2f3de6587ef4",
   "lastOpenFiles": [
     "Ae2 notes & ideas.md",
+    "Ae6r Todo.md",
     "Ae6r Ideas.md",
     "Ae6r Playthrough notes.md",
-    "Ae6r Todo.md",
     "Chapter gates.md",
-    "Resource gen ideas.md",
-    "Aspectus shard (godshard) notes.md"
+    "Aspectus shard (godshard) notes.md",
+    "Resource gen ideas.md"
   ]
 }

@@ -1,6 +1,7 @@
-///@ts-check
 //priority: 1000
 // custom event helpers for recipe types with no kube addon
+// Alot of these were or should be moved to be part of the startup schema scripts instead,
+// However are left in for systems already using them that need to be replaced
 
 const farmersDelightTools = {
     "axe": {
