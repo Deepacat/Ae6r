@@ -26,7 +26,6 @@ function embersMelting(e, fluidOutput, itemInput) {
     const recipe = e.custom({
         type: "embers:melting",
         input: makeJsonIngredient(itemInput),
-        // @ts-ignore
         output: makeFluidStackJson(fluidOutput)
     })
     return {
