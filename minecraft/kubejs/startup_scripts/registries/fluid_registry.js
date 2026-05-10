@@ -1,10 +1,7 @@
-StartupEvents.registry('fluid', event => {
+StartupEvents.registry('fluid', e => {
     /**
      * @type {{type:string,id:string,color:number,display?:string,still?:string,flowing?:string}[]}
      * @param type Can be `thin`, `thick`, or `custom`
-     * @param display Deprecated, DO NOT USE. Please switch to lang file.
-     * Tips: For a targeted fluid, its language key is `"fluid.kubejs.{id}"`,
-     * and the language key for its bucket item is `"item.kubejs.{id}_bucket"`
      * @param still Valid only when `type` is `custom`
      * @param flowing Valid only when `type` is `custom`
      */
@@ -127,27 +124,28 @@ StartupEvents.registry('fluid', event => {
     ]
 
     for (let fluid of generalFluids) {
-        if (fluid.type == 'thick') {
-            event.create(fluid.id)
-                .thickTexture(fluid.color)
-                .bucketColor(fluid.color)
-                .tag(`forge:${fluid.id}`)
-        } else if (fluid.type == 'thin') {
-            event.create(fluid.id)
-                .thinTexture(fluid.color)
-                .bucketColor(fluid.color)
-                .tag(`forge:${fluid.id}`)
-        } else if (fluid.type == 'custom') {
-            event.create(fluid.id)
-                .stillTexture(fluid.still)
-                .flowingTexture(fluid.flowing)
-                .bucketColor(fluid.color)
-                .tag(`forge:${fluid.id}`)
-        } else {
-            console.error('Invalid fluid registry type: ' + fluid.type)
-        }
-        if (fluid.display) {
-            console.warn('Deprecated param used: `display`, please switch to language file(kubejs/lang/en_us.json).')
+        switch (fluid.type) {
+            case 'thick':
+                e.create(fluid.id)
+                    .thickTexture(fluid.color)
+                    .bucketColor(fluid.color)
+                    .tag(`forge:${fluid.id}`)
+                break
+            case 'thin':
+                e.create(fluid.id)
+                    .thinTexture(fluid.color)
+                    .bucketColor(fluid.color)
+                    .tag(`forge:${fluid.id}`)
+                break
+            case 'custom':
+                e.create(fluid.id)
+                    .stillTexture(fluid.still)
+                    .flowingTexture(fluid.flowing)
+                    .bucketColor(fluid.color)
+                    .tag(`forge:${fluid.id}`)
+                break
+            default:
+                console.error('Invalid fluid registry type: ' + fluid.type)
         }
     }
 })

@@ -174,7 +174,7 @@ function queueLootDrop(mob) {
         try {
             if (!mob.alive) return
             if (getHeld(mob) != valuedItem) return
-            
+
             mob.getNavigation().stop()
             preventPlace(mob)
 
@@ -342,9 +342,10 @@ EntityJSEvents.addGoalSelectors('minecraft:enderman', e => {
         * @param {Function} tick The action to perform when the goal ticks
     */
     e.customGoal(
-        'barter',
-        1,
-        /** @param {Internal.Mob} mob */ mob => {
+        'barter', // Name
+        1, // Priority
+        /** @param {Internal.Mob} mob */
+        mob => { // Can Use
             if (isMobAngry(mob)) return false
             if (findGroundItem(mob)) {
                 preventPlace(mob)
@@ -352,20 +353,20 @@ EntityJSEvents.addGoalSelectors('minecraft:enderman', e => {
             }
             return false
         },
-        mob => {
+        mob => { // Can Continue To Use
             preventPlace(mob)
             return true
         },
-        true,
-        mob => {
+        true, // Is Interruptable
+        mob => { // Start
             preventPlace(mob)
             mob.getNavigation().stop()
         },
-        mob => {
+        mob => { // Requires Update Every Tick
             preventPlace(mob)
             mob.getNavigation().stop()
         },
-        true,
-        mob => barter(mob)
+        true, // Tick
+        mob => barter(mob) // Tick
     )
 })

@@ -669,6 +669,14 @@
     "curseForgeHash": 1940121833,
     "modrinthHash": "7376f2fa9aabe4ad32a79c9796ec57facd08fb98"
   },
+  "CTM-1.20.1-1.1.10.jar": {
+    "jarName": "CTM-1.20.1-1.1.10.jar",
+    "modId": "ctm",
+    "name": "ConnectedTexturesMod",
+    "version": "1.20.1-1.1.10",
+    "curseForgeHash": 2008920469,
+    "modrinthHash": "5381b3092d99c8f16f9fe36b3b680dee63db33a9"
+  },
   "Cucumber-1.20.1-7.0.15.jar": {
     "jarName": "Cucumber-1.20.1-7.0.15.jar",
     "modId": "cucumber",
@@ -1348,6 +1356,14 @@
     "version": "3.5.21",
     "curseForgeHash": 1153262941,
     "modrinthHash": "bb88528b286ccd4aae1fe06654f4d8eb0879c8a8"
+  },
+  "industrialhellscape-0.3.6A-1-1.20.1.jar": {
+    "jarName": "industrialhellscape-0.3.6A-1-1.20.1.jar",
+    "modId": "industrialhellscape",
+    "name": "Industrial Hellscape",
+    "version": "0.0.1-1.20.1",
+    "curseForgeHash": 876559356,
+    "modrinthHash": "06ce36791f723b1d568a483555b03a44d26f1bf3"
   },
   "inline-forge-1.20.1-1.2.2.jar": {
     "jarName": "inline-forge-1.20.1-1.2.2.jar",

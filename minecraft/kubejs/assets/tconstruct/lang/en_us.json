@@ -1,0 +1,30 @@
+{
+    // "E6 Tier 1 Materials",
+    "material.kubejs.livingrock": "Livingrock",
+    "material.kubejs.treated_wood": "Treated Wood",
+
+    //"E6 Tier 2 Materials",
+    "material.kubejs.andesite_alloy": "Andesite Alloy",
+    "material.kubejs.compressed_iron": "Compressed Iron",
+    "material.kubejs.infused_iron": "Infused Iron",
+    "material.kubejs.thallasium": "Thallasium",
+    "material.kubejs.tin": "Tin",
+    "material.kubejs.zinc": "Zinc",
+
+    //"E6 Tier 3 Materials",
+    "material.kubejs.blazing": "Blazing Crystal",
+    "material.kubejs.energized_steel": "Energized Steel",
+    "material.kubejs.iesnium": "Iesnium",
+    "material.kubejs.sky": "Sky Metal",
+    "material.kubejs.signalum": "Signalum",
+    "material.kubejs.terminite": "Terminite",
+
+    //"E6 Tier 4 Materials",
+    "material.kubejs.aeternium": "Aeternium",
+    "material.kubejs.enderium": "Enderium",
+    "material.kubejs.gaia_spirit": "Gaia Spirit",
+    "material.kubejs.lumium": "Lumium",
+    "material.kubejs.niotic": "Niotic Crystal",
+    "material.kubejs.nitro": "Nitro Crystal",
+    "material.kubejs.spirited": "Spirited Crystal"
+}
