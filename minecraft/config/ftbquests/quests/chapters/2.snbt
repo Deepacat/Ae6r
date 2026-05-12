@@ -226,6 +226,7 @@
 			]
 			icon: "ae2:logic_processor"
 			id: "1E26A88609C02DAD"
+			subtitle: "Super-silicon Circuits"
 			tasks: [
 				{
 					id: "50B45D5893E793E3"
@@ -983,18 +984,13 @@
 			dependencies: ["3C895AA17C38BE5F"]
 			icon: "kubejs:alien_debris"
 			id: "07FF629DC56E5912"
+			subtitle: "Aliens Matter, like Energy!"
 			tasks: [
 				{
 					id: "49E4C10420D59674"
 					item: "kubejs:alien_debris"
 					optional_task: true
 					type: "item"
-				}
-				{
-					id: "47DCD805ACA2BA51"
-					optional_task: true
-					structure: "kubejs:alien_crashsite"
-					type: "structure"
 				}
 				{
 					id: "0DE0F8CE9182A4BC"
@@ -1006,7 +1002,46 @@
 					item: "ae2:silicon"
 					type: "item"
 				}
+				{
+					dimension: "kubejs:alien_crashsite"
+					icon: "minecraft:filled_map"
+					id: "729AE9A57DEF2F27"
+					ignore_dimension: false
+					position: [I;
+						0
+						0
+						0
+					]
+					size: [I;
+						1
+						1
+						1
+					]
+					title: "A long since crashed ship of unknown origin."
+					type: "location"
+				}
+				{
+					icon: "ae2:mysterious_cube"
+					id: "37ED739C90D41B69"
+					observe_type: 0
+					timer: 0L
+					to_observe: "ae2:mysterious_cube"
+					type: "observation"
+				}
+				{
+					id: "086E3D9DC9BA6466"
+					item: {
+						Count: 1
+						id: "ftbfiltersystem:smart_filter"
+						tag: {
+							"ftbfiltersystem:filter": "ftbfiltersystem:item_tag(ae2:inscriber_presses)"
+						}
+					}
+					title: "Any #ae2:inscriber_presses"
+					type: "item"
+				}
 			]
+			title: "Foreign Digitization"
 			x: -4.5d
 			y: 1.0d
 		}
@@ -1014,6 +1049,7 @@
 			dependencies: ["07FF629DC56E5912"]
 			icon: "createaddition:tesla_coil"
 			id: "3F82980E00FCB455"
+			subtitle: "Supercharging Alien Minerals"
 			tasks: [
 				{
 					id: "3B8F58C7CE7295AB"
@@ -1034,11 +1070,32 @@
 			hide_dependency_lines: true
 			icon: "minecraft:end_portal_frame"
 			id: "3C895AA17C38BE5F"
-			tasks: [{
-				dimension: "minecraft:the_end"
-				id: "085D76B723D41F53"
-				type: "dimension"
-			}]
+			subtitle: "Moreso the earlygame actually"
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "085D76B723D41F53"
+					type: "dimension"
+				}
+				{
+					dimension: "minecraft:end"
+					id: "05D1F95506A8625D"
+					ignore_dimension: false
+					position: [I;
+						500
+						0
+						500
+					]
+					size: [I;
+						1
+						1
+						1
+					]
+					title: "The outer isles"
+					type: "location"
+				}
+			]
+			title: "The End"
 			x: -5.5d
 			y: 1.0d
 		}

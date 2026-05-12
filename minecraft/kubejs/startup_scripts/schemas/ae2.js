@@ -1,4 +1,3 @@
-// @ts-check
 // priority: 0
 
 // Original Ae2 recipe schemas by Chief Arug and Squoshi in the KubeJS discord
@@ -6,7 +5,7 @@
 
 /**
  * @param {Internal.RecipeSchemaRegistryEventJS} e
- * @param {{ components: any; bound?: any; anyFloatNumber?: Internal.NumberComponent$FloatRange; anyString?: Internal.StringComponent; bool?: Internal.BooleanComponent; id?: Internal.StringComponent; intNumber?: Internal.NumberComponent$IntRange; filteredString?: (...args: any[]) => Internal.RecipeComponent<any>; nonBlankString?: Internal.StringComponent; floatNumber?: Internal.NumberComponent$FloatRange; inputItem?: Internal.ItemComponents$1; outputItem?: Internal.ItemComponents$3; inputFluid?: Internal.FluidComponents$1; outputFluid?: Internal.FluidComponents$2; outputFluidOrItem?: Internal.OrRecipeComponent<any, any>; fluidTag?: Internal.RecipeComponent<any>; blockTag?: Internal.TagKeyComponent<any>; inputStackedItem?: any; inputFluidOrFluidTag?: (tagKeyStr: any) => Internal.OrRecipeComponent<Internal.InputFluid, any>; outputFluidOrFluidTag?: (tagKeyStr: any) => Internal.OrRecipeComponent<Internal.OutputFluid, any>; inputFluidOrItem?: (tagKeyStr: any) => Internal.OrRecipeComponent<InputItem, any>; inputFluidOrStackedItem?: (tagKeyStr: any) => any; heatCondition?: Internal.RecipeComponent<any>; }} c
+ * @param {{ components?: Special.RecipeComponentMap; bound: any; anyFloatNumber?: Internal.NumberComponent$FloatRange; anyString?: Internal.StringComponent; bool?: Internal.BooleanComponent; id?: Internal.StringComponent; intNumber?: Internal.NumberComponent$IntRange; filteredString?: (...args: any[]) => Internal.RecipeComponent<any>; nonBlankString?: Internal.StringComponent; floatNumber?: Internal.NumberComponent$FloatRange; inputItem?: Internal.ItemComponents$1; outputItem?: Internal.ItemComponents$3; inputFluid?: Internal.FluidComponents$1; outputFluid?: Internal.FluidComponents$2; outputFluidOrItem?: Internal.OrRecipeComponent<any, any>; fluidTag?: Internal.RecipeComponent<any>; blockTag?: Internal.TagKeyComponent<any>; inputStackedItem?: any; inputFluidOrFluidTag?: (tagKeyStr: any) => Internal.OrRecipeComponent<Internal.InputFluid, any>; outputFluidOrFluidTag?: (tagKeyStr: any) => Internal.OrRecipeComponent<Internal.OutputFluid, any>; inputFluidOrItem?: (tagKeyStr: any) => Internal.OrRecipeComponent<InputItem, any>; inputFluidOrStackedItem?: (tagKeyStr: any) => any; heatCondition?: Internal.RecipeComponent<any>; }} c
  */
 function recipeSchema_ae2(e, c) {
     const $EntropyMode = Java.loadClass('appeng.recipes.entropy.EntropyMode')
@@ -32,14 +31,16 @@ function recipeSchema_ae2(e, c) {
     ))
 
     let ic0, ic1, ic2, ic3, ic4, ic5
+
     e.register('ae2:inscriber', new $RecipeSchema(
         ic0 = c.bound('outputItem')().key('result'),
         ic1 = Builder(
-            ic2 = c.bound('inputItem')().key('top').optional('air'),
-            ic3 = c.bound('inputItem')().key('middle'),
-            ic4 = c.bound('inputItem')().key('bottom').optional('air')
+            (ic2 = c.bound('inputItem')().key('top').optional('air')),
+            (ic3 = c.bound('inputItem')().key('middle')),
+            (ic4 = c.bound('inputItem')().key('bottom').optional('air'))
         ).key('ingredients'),
-        ic5 = c.bound('enum')({ class: 'appeng.recipes.handlers.InscriberProcessType' }).key('mode').optional('inscriber'),
+        ic5 = c.bound('enum')({ class: 'appeng.recipes.handlers.InscriberProcessType' })
+            .key('mode').optional('inscribe').alwaysWrite().exclude(),
     ).addConstructor((recipe, _st, _k, source) => {
         recipe.setValue(ic0, source.getValue(recipe, ic0))
         recipe.setValue(ic1, new $RecipeComponentBuilderMap(ic1.component))
