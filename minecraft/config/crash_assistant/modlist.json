@@ -757,6 +757,14 @@
     "curseForgeHash": 2687774497,
     "modrinthHash": "9912745e0ec510cad4211ffc0c21eb2b81a51e9d"
   },
+  "DontClearChatHistory-1.jar": {
+    "jarName": "DontClearChatHistory-1.jar",
+    "modId": "dcch",
+    "name": "Dont Clear Chat History",
+    "version": "1",
+    "curseForgeHash": 3403112640,
+    "modrinthHash": "a6e532823419a509b7ef9dba7d252eaa19d49b34"
+  },
   "doomangelring-neo-1.20.1-3.0.1.jar": {
     "jarName": "doomangelring-neo-1.20.1-3.0.1.jar",
     "modId": "doomangelring",
@@ -908,6 +916,14 @@
     "version": "1.2+1.20.1+forge",
     "curseForgeHash": 1182642266,
     "modrinthHash": "c821f26e4a00c14fb453bfdb7628aec59fd2acf1"
+  },
+  "emiextraworkstations-2.1.0.jar": {
+    "jarName": "emiextraworkstations-2.1.0.jar",
+    "modId": "emiextraworkstations",
+    "name": "Emi Extra Workstations",
+    "version": "2.1.0",
+    "curseForgeHash": 2192813155,
+    "modrinthHash": "b1401e006298ae3d2152c1ec677d437a6def40d3"
   },
   "emixx-forge-1.4.0.jar": {
     "jarName": "emixx-forge-1.4.0.jar",
@@ -1993,6 +2009,14 @@
     "version": "1.20.1-1.11.2-forge",
     "curseForgeHash": 3701495044,
     "modrinthHash": "31ae930cdbb34e8e05e1954cfb2fee3a3813e850"
+  },
+  "NBTac-FORGE-1.20.1-1.3.10.jar": {
+    "jarName": "NBTac-FORGE-1.20.1-1.3.10.jar",
+    "modId": "nbt_ac",
+    "name": "NBT Autocomplete",
+    "version": "1.3.10",
+    "curseForgeHash": 1580737701,
+    "modrinthHash": "280485e7654dd3e45445356ae22d5966b4e85242"
   },
   "Neruina-2.1.2-forge+1.20.1.jar": {
     "jarName": "Neruina-2.1.2-forge+1.20.1.jar",

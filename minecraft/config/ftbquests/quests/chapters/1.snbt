@@ -282,7 +282,7 @@
 			]
 			dependency_requirement: "one_completed"
 			id: "0EE8357B14D77784"
-			subtitle: "The creators best friend"
+			subtitle: "The Mechanists best friend"
 			tasks: [{
 				id: "2837BB412E06A847"
 				item: "emendatus:brass_ingot"
@@ -300,7 +300,7 @@
 			]
 			icon: "create:mechanical_crafter"
 			id: "7026C6F5506F40E7"
-			subtitle: "Is that a blood altar...?"
+			subtitle: "Is... Is that a blood altar...?"
 			tasks: [
 				{
 					id: "576ABC612354602A"
@@ -360,6 +360,7 @@
 		{
 			dependencies: ["00AA0E1E061988B5"]
 			id: "3FB5BA7D7B54B852"
+			subtitle: "I wouldn't make a blanket with this"
 			tasks: [{
 				id: "3741DB4A740D72EA"
 				item: "thermal:white_rockwool"
@@ -374,7 +375,8 @@
 			icon: "xnet:controller"
 			id: "2E7956FE5FFAF5C6"
 			optional: true
-			shape: "octagon"
+			shape: "pentagon"
+			subtitle: "Simple Programmable Logistics"
 			tasks: [
 				{
 					icon: "xnet:netcable_red"
@@ -401,7 +403,8 @@
 		{
 			dependencies: ["2A9F678F8A130296"]
 			id: "0FAAC4107C67FE08"
-			shape: "octagon"
+			shape: "pentagon"
+			subtitle: "Multiblock Melting"
 			tasks: [{
 				id: "1EE321AAD2ACE650"
 				item: "tconstruct:smeltery_controller"
@@ -432,9 +435,9 @@
 				}
 				type: "item"
 			}]
-			title: "Molten Melting"
+			title: "Molten Metals"
 			x: -1.0d
-			y: 1.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
@@ -527,6 +530,7 @@
 		{
 			dependencies: ["798F51A163767275"]
 			id: "3FD11C5B0F50D8E0"
+			subtitle: "Sacrifice shall be necessary."
 			tasks: [{
 				id: "5E0ADE9630C722BA"
 				item: "bloodmagic:altar"
@@ -568,7 +572,7 @@
 					type: "item"
 				}
 			]
-			title: "Storing Life Itself"
+			title: "Life Essence Storage"
 			x: 4.0d
 			y: 4.0d
 		}
@@ -591,7 +595,7 @@
 			icon: "wizards_reborn:arcane_workbench"
 			id: "155C0DE1EBE6F5D0"
 			shape: "hexagon"
-			subtitle: "Knowledge is Power"
+			subtitle: "Culminating your Ancient Discoveries"
 			tasks: [
 				{
 					id: "4E7284DAA2B05168"
@@ -608,7 +612,7 @@
 					type: "item"
 				}
 			]
-			title: "Culminating your Ancient Discoveries"
+			title: "Wizards Reborn"
 			x: 2.0d
 			y: 6.0d
 		}
@@ -692,7 +696,8 @@
 			dependencies: ["6692965E713DD316"]
 			icon: "botania:corporea_index"
 			id: "3D336D59808FC606"
-			shape: "hexagon"
+			optional: true
+			shape: "pentagon"
 			tasks: [
 				{
 					id: "71CEC0A58C9BB285"
@@ -710,6 +715,7 @@
 					type: "item"
 				}
 			]
+			title: "Spiritual Networking"
 			x: 0.0d
 			y: 3.0d
 		}
@@ -1206,7 +1212,7 @@
 			dependencies: ["48D210C52F254D74"]
 			icon: "thermal:machine_bottler"
 			id: "7C116C2EEE83B018"
-			subtitle: "Are grey boxes fun yet"
+			subtitle: "Are grey boxes fun yet..."
 			tasks: [
 				{
 					id: "230A3AF5D61E1AEE"
@@ -1228,13 +1234,25 @@
 			icon: "create:stock_ticker"
 			id: "48AD6CD8CFF92F93"
 			optional: true
-			shape: "hexagon"
+			shape: "octagon"
 			subtitle: "Mechanically digital"
-			tasks: [{
-				id: "7ABF9092A783EC47"
-				item: "create:stock_ticker"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7ABF9092A783EC47"
+					item: "create:stock_ticker"
+					type: "item"
+				}
+				{
+					id: "2CC5C332CDABAE7F"
+					item: "create:stock_link"
+					type: "item"
+				}
+				{
+					id: "1E5FA33D95F32BDC"
+					item: "create:packager"
+					type: "item"
+				}
+			]
 			title: "High Logistics"
 			x: -3.5d
 			y: 1.0d
@@ -1398,7 +1416,8 @@
 			dependencies: ["167BE86E3DE69218"]
 			id: "769C15E5DA48B038"
 			optional: true
-			shape: "octagon"
+			shape: "pentagon"
+			subtitle: "Byproduct Melting"
 			tasks: [{
 				id: "4D24B2D0F82A5561"
 				item: "tconstruct:foundry_controller"
@@ -1495,7 +1514,7 @@
 					type: "item"
 				}
 			]
-			title: "Oil up"
+			title: "Creosote Oil"
 			x: -4.0d
 			y: 3.0d
 		}
@@ -1515,7 +1534,7 @@
 					type: "item"
 				}
 			]
-			title: "Purity Blooms"
+			title: "Purifying Bloom"
 			x: 0.0d
 			y: 4.0d
 		}
@@ -1544,6 +1563,7 @@
 			dependencies: ["167BE86E3DE69218"]
 			id: "6BD22F97D5168969"
 			shape: "hexagon"
+			subtitle: "*Pressure tube explosion noise*"
 			tasks: [{
 				id: "61E64AB2DD4B19F7"
 				item: "pneumaticcraft:ingot_iron_compressed"
@@ -1572,6 +1592,21 @@
 			title: "Bark of Forgotten Groves"
 			x: 1.0d
 			y: 5.5d
+		}
+		{
+			dependencies: ["0E9DE9C7AD78C8A6"]
+			id: "0C944870610BD5EA"
+			optional: true
+			shape: "pentagon"
+			subtitle: "Welcome back, item ducts!"
+			tasks: [{
+				id: "60EDA9BA0C792428"
+				item: "moderndynamics:item_pipe"
+				type: "item"
+			}]
+			title: "Modern Dynamics"
+			x: -2.0d
+			y: -0.5d
 		}
 	]
 	title: " 1 - Discovery"

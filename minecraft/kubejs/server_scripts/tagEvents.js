@@ -99,6 +99,10 @@ ServerEvents.tags('item', e => {
         'minecraft:polished_granite_slab', 'minecraft:granite_slab', 'minecraft:polished_andesite_slab',
         'minecraft:andesite_slab', 'minecraft:smooth_stone_slab', 'minecraft:stone_slab'
     ])
+    // Immersive engineering recycling recipe generation prevention tag. what a mouthful
+    e.add('immersiveengineering:recycling/ignored_components', [
+        '#forge:gears'
+    ])
 })
 
 // block tags
