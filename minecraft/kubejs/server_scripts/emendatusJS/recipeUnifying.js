@@ -100,6 +100,7 @@ function smeltingXp(materialType, recipe) {
     if (materialType.includes('ores')) { recipe.experience(2); return }
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function smeltingRecipes(e, materialName, typesObj) {
     // added to an empty string to convert to a normal js string instead of java
     if (!typesObj.gemOrIngot) { return }
@@ -149,6 +150,7 @@ function smeltingRecipes(e, materialName, typesObj) {
     }
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function plateRecipes(e, materialName, typesObj) {
     if (!(typesObj.gemOrIngot && typesObj.plate)) { return }
     // added to an empty string to convert to a normal js string instead of java
@@ -190,6 +192,7 @@ function plateRecipes(e, materialName, typesObj) {
     }).id(`emendatus:hammer/${materialName}_plate`)
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function rodRecipes(e, materialName, typesObj) {
     if (!(typesObj.gemOrIngot && typesObj.rod)) { return }
     let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
@@ -232,6 +235,7 @@ function rodRecipes(e, materialName, typesObj) {
     }).id(`emendatus:hammer/${materialName}_rod`)
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function gearRecipes(e, materialName, typesObj) {
     if (!(typesObj.gemOrIngot && typesObj.gear)) { return }
 
@@ -265,8 +269,13 @@ function gearRecipes(e, materialName, typesObj) {
         P: '#forge:plates/iron_tin'
     }).id(`emendatus:shaped/${materialName}_gear`)
 
+    // Gear recycling recipes, since IE recycling auto generation messes them up
+    // This has the side effect of putting them in the wrong tab but it's better than nothing
+    e.recipes.immersiveengineering.arc_furnace(`4x ${gemOrIngotItem}`, gearItem)
+        .id(`emendatus:immersiveengineering/arcfurnace/${materialName}_gear_recycling`)
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function wireRecipes(e, materialName, typesObj) {
     if (!typesObj.wire || !typesObj.gemOrIngot) { return }
 
@@ -307,6 +316,7 @@ function wireRecipes(e, materialName, typesObj) {
     }
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function materialCompacting(e, materialName, typesObj) {
     if (!(typesObj.gemOrIngot)) { return }
     let gemOrIngotItem = typesObj.gemOrIngot.item.id + ''
@@ -350,6 +360,7 @@ function materialCompacting(e, materialName, typesObj) {
     }
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function scrapMelting(e, materialName, typesObj) {
     if (!typesObj.fluid || !typesObj.gemOrIngot) { return }
     let fluid = typesObj.fluid
@@ -376,6 +387,7 @@ function scrapMelting(e, materialName, typesObj) {
 }
 
 const crushable = ['gemOrIngot', 'plate']
+/** @param {Internal.RecipesEventJS} e */
 function materialCrushing(e, materialName, typesObj) {
     if (!typesObj.gemOrIngot) { return }
     if (!typesObj.dust) { return }
@@ -402,6 +414,7 @@ function materialCrushing(e, materialName, typesObj) {
 }
 
 // for materials that dont already have a unification function, e.g. blocks ingots gems
+/** @param {Internal.RecipesEventJS} e */
 function fluidToItemRecipes(e, materialName, typesObj) {
     if (!typesObj.gemOrIngot) { return }
 
@@ -444,6 +457,7 @@ function fluidToItemRecipes(e, materialName, typesObj) {
     }
 }
 
+/** @param {Internal.RecipesEventJS} e */
 function createOreProcessing(e, materialName, typesObj) {
     // metal ore milling/crushing
     if (oreProcessingSecondaries[materialName] && typesObj.crushed_ore && typesObj.ore) {

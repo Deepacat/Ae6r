@@ -45,7 +45,7 @@ function recipeSchema_immersiveengineering(e, c) {
             new $RecipeSchema(
                 c.outputItem.asArray().key('results'),
                 ieInputItem.key('input'),
-                ieInputItem.asArray().key('additives').defaultOptional(),
+                ieInputItem.asArray().key('additives').optional([]).alwaysWrite(), // Defaults to an empty array, doesn't error if you give it one
                 c.intNumber.key('time').optional(100).alwaysWrite(),
                 c.intNumber.key('energy').optional(2400).alwaysWrite(),
                 c.outputItem.key('slag').defaultOptional().exclude() // use .slag(itemInput) after recipe
