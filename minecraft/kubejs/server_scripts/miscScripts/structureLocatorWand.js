@@ -1,31 +1,6 @@
 // Thanks to Liopyu in the KubeJS discord for structure locating
 // https://discord.com/channels/303440391124942858/1375491432630059008
 
-// structures that can be located and catalyst offhand item
-let locators = {
-    'ars_nouveau:fire_essence': {
-        structure: 'irons_spellbooks:ancient_battleground',
-        dimension: 'minecraft:the_nether',
-        consume: true,
-        particleColor: '1 0.43 0.30',
-    },
-    'minecraft:white_banner': {
-        structure: 'minecraft:pillager_outpost',
-        dimension: 'minecraft:overworld',
-        consume: true,
-        particleColor: '0.5 1 0.43',
-        itemNbt: Item.of('minecraft:white_banner', {
-            display: { Name: '{"color":"gold","translate":"block.minecraft.ominous_banner"}' }
-        })
-    },
-    'ae2:meteorite_compass': {
-        structure: 'kubejs:alien_crashsite',
-        dimension: 'minecraft:the_end',
-        consume: false,
-        particleColor: '0.98 0.44 1'
-    }
-}
-
 let ServerLevel = Java.loadClass("net.minecraft.server.level.ServerLevel")
 let BlockPos = Java.loadClass("net.minecraft.core.BlockPos")
 let ChunkPos = Java.loadClass("net.minecraft.world.level.ChunkPos")
@@ -35,18 +10,46 @@ let Registries = Java.loadClass("net.minecraft.core.registries.Registries")
 let HolderSet = Java.loadClass("net.minecraft.core.HolderSet")
 let Holder = Java.loadClass("net.minecraft.core.Holder")
 
+let wands = Ingredient.of('#kubejs:locator_wands').itemIds.toArray()
+
+// structures that can be located and catalyst offhand item
+let locators = {
+    "ars_nouveau:fire_essence": {
+        structure: 'irons_spellbooks:ancient_battleground',
+        dimension: 'minecraft:the_nether',
+        consume: true,
+        particleColor: '1 0.43 0.30',
+    },
+    "minecraft:white_banner": {
+        structure: 'minecraft:pillager_outpost',
+        dimension: 'minecraft:overworld',
+        consume: true,
+        particleColor: '0.5 1 0.43',
+        itemNbt: Item.of('minecraft:white_banner', {
+            display: { Name: '{"color":"gold","translate":"block.minecraft.ominous_banner"}' }
+        })
+    },
+    "ae2:meteorite_compass": {
+        structure: 'kubejs:alien_crashsite',
+        dimension: 'minecraft:the_end',
+        consume: false,
+        particleColor: '0.98 0.44 1'
+    }
+}
+
 ItemEvents.rightClicked(e => {
     if (!(e.level instanceof ServerLevel)) { return }
     if (!isRealPlayer(e.player)) { return }
     if (e.hand != 'MAIN_HAND') { return }
 
-    let offhand = e.player.offHandItem
-    let mainhand = e.player.mainHandItem
+    let { player, level, player: { block: { pos } } } = e
+    let offhand = player.offHandItem
+    let mainhand = player.mainHandItem
     let locatorObj = locators[offhand.id]
 
     if (!locatorObj) { return }
-    if (!mainhand.hasTag('kubejs:locator_wands')) { return }
-    if (e.player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }
+    if (wands.includes(player.mainHandItem.id) == false) { return }
+    if (player.getCooldowns().isOnCooldown(e.player.mainHandItem)) { return }
 
     // check if locator item requires nbt, and if offhand has any nbt
     if (locatorObj.itemNbt) {
@@ -71,12 +74,12 @@ ItemEvents.rightClicked(e => {
     let structureHolder = structureRegistry.getHolderOrThrow(structureKey)
 
     if (!structureHolder) {
-        e.player.setStatusMessage("Structure doesn't exist! If you see this, report it!")
+        e.player.setStatusMessage("§aStructure doesn't exist! If you see this, report it!")
         { return }
     }
 
     if (e.player.level.dimension != locatorObj.dimension) {
-        e.player.setStatusMessage("Could not locate structure in this dimension.")
+        e.player.setStatusMessage(Text.of("§oThis plane rejects the spells attempts.").color("#769ece"))
         return
     }
 
@@ -123,10 +126,10 @@ ItemEvents.rightClicked(e => {
             }
             e.player.swing()
             if (locatorObj.consume) { offhand.count-- }
-            e.player.addItemCooldown(mainhand, 20 * 10)
+            wands.forEach(item => e.player.addItemCooldown(item, 200))
         }
     } else {
-        e.player.setStatusMessage("No structure found nearby")
+        e.player.setStatusMessage(Text.of("§oThe wands glow quickly fades. The outcome seems beyond it's reach.").color("#769ece"))
     }
     e.cancel()
 })
