@@ -1,0 +1,35 @@
+{
+    "pneumaticcraft:pressure_chamber": {
+        "order": 1
+    },
+    "create:sequenced_assembly": {
+        "order": 1
+    },
+    "minecraft:crafting": {
+        "order": 2
+    },
+    "ali:block_loot": {
+        "order": 100
+    },
+    "ali:entity_loot": {
+        "order": 100
+    },
+    "ali:gameplay_loot": {
+        "order": 101
+    },
+    "ali:archaeology_loot": {
+        "order": 101
+    },
+    "ali:chest_loot": {
+        "order": 101
+    },
+    "ali:trade_loot": {
+        "order": 101
+    },
+    "emi:grinding": {
+        "order": 102
+    },
+    "emi:anvil_repairing": {
+        "order": 102
+    }
+}
