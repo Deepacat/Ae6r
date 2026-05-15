@@ -716,46 +716,38 @@ ServerEvents.recipes(e => {
 
     // ae2 circuits
     e.recipes.pneumaticcraft.pressure_chamber(
+        ['ae2:printed_silicon'],
         [
-            'ae2:printed_silicon'
-        ],
-        [
-            '8x redstonepen:relay',
-            '3x #forge:wires/aluminum',
-            'kubejs:silicon_base'
+            'kubejs:silicon_base',
+            'pneumaticcraft:logistics_core',
+            '3x redstonepen:relay'
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/printed_silicon')
 
     e.recipes.pneumaticcraft.pressure_chamber(
+        ['ae2:printed_calculation_processor'],
         [
-            'ae2:printed_calculation_processor'
-        ],
-        [
-            'pneumaticcraft:logistics_core',
             '3x tconstruct:sky_slime_crystal',
-            'kubejs:calculation_processor_base'
+            'kubejs:calculation_processor_base',
+            'fluxnetworks:flux_dust'
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/printed_calculation_processor')
 
-        e.recipes.pneumaticcraft.pressure_chamber(
+    e.recipes.pneumaticcraft.pressure_chamber(
+        ['ae2:printed_engineering_processor'],
         [
-            'ae2:printed_engineering_processor'
-        ],
-        [
-            'pneumaticcraft:logistics_core',
             '3x tconstruct:ichor_slime_crystal',
-            'kubejs:engineering_processor_base'
+            'kubejs:engineering_processor_base',
+            'fluxnetworks:flux_dust'
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/printed_engineering_processor')
 
-        e.recipes.pneumaticcraft.pressure_chamber(
+    e.recipes.pneumaticcraft.pressure_chamber(
+        ['ae2:printed_logic_processor'],
         [
-            'ae2:printed_logic_processor'
-        ],
-        [
-            'pneumaticcraft:logistics_core',
             '3x tconstruct:earth_slime_crystal',
-            'kubejs:logic_processor_base'
+            'kubejs:logic_processor_base',
+            'fluxnetworks:flux_dust'
         ], 4
     ).id('kubejs:pneumaticcraft/pressure_chamber/printed_logic_processor')
 })

@@ -1,4 +1,3 @@
-/// @ts-check
 // priority: 1000
 
 /* 
@@ -56,7 +55,6 @@ StartupEvents.recipeSchemaRegistry(e => {
     })
 
     comps.inputFluidOrFluidTag = (tagKeyStr) => comps.inputFluid.or(
-        // @ts-ignore
         new $RecipeComponentBuilder(2)
             .add(comps.fluidTag.key(tagKeyStr))
             .add(comps.intNumber.key('amount'))
@@ -64,7 +62,6 @@ StartupEvents.recipeSchemaRegistry(e => {
     )
 
     comps.outputFluidOrFluidTag = (tagKeyStr) => comps.outputFluid.or(
-        // @ts-ignore
         new $RecipeComponentBuilder(2)
             .add(comps.fluidTag.key(tagKeyStr))
             .add(comps.intNumber.key('amount'))
@@ -72,7 +69,6 @@ StartupEvents.recipeSchemaRegistry(e => {
     )
 
     comps.inputFluidOrItem = (tagKeyStr) =>
-        // @ts-ignore
         comps.inputItem.or(comps.inputFluidOrFluidTag(tagKeyStr))
 
     comps.inputFluidOrStackedItem = (tagKeyStr) =>

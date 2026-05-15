@@ -39,7 +39,6 @@ ServerEvents.recipes(event => {
         temperature: 9001,
         idSuffix: `steel_create_superheat`
     })
-
     // generic alloys
     allAlloying(event, {
         types: allAlloyingTypes,
@@ -366,7 +365,6 @@ ServerEvents.recipes(event => {
         temperature: 1150,
         idSuffix: `queens_slime`
     })
-
     // superheated netherite cheaper in later machines
     allAlloying(event, {
         types: ['create:mixing', 'immersiveengineering:arc_furnace', 'tconstruct:alloy'],
@@ -397,5 +395,17 @@ ServerEvents.recipes(event => {
         temperature: 999,
         idSuffix: `netherite`
     })
-
+    e.remove({ output: 'morered:red_alloy_ingot' })
+    allAlloying(event, {
+        types: allAlloyingTypes,
+        item: {
+            inputs: [Ingredient.of('#forge:ingots/iron', 1), Ingredient.of('#forge:dusts/redstone', 4)],
+            output: Item.of('morered:red_alloy_ingot')
+        },
+        processTime: 300,
+        energy: 3200,
+        removeExisting: true,
+        temperature: 600,
+        idSuffix: `red_alloy`
+    })
 })
