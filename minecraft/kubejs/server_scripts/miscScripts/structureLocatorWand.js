@@ -75,7 +75,7 @@ ItemEvents.rightClicked(e => {
 
     if (!structureHolder) {
         e.player.setStatusMessage("§aStructure doesn't exist! If you see this, report it!")
-        { return }
+        return 
     }
 
     if (e.player.level.dimension != locatorObj.dimension) {

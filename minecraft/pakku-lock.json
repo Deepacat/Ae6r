@@ -2646,6 +2646,43 @@
             ]
         },
         {
+            "pakku_id": "tzZukKcSunjIK3ML",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "ctm"
+            },
+            "name": {
+                "curseforge": "ConnectedTexturesMod"
+            },
+            "id": {
+                "curseforge": "267602"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "CTM-1.20.1-1.1.10.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5983/309/CTM-1.20.1-1.1.10.jar",
+                    "id": "5983309",
+                    "parent_id": "267602",
+                    "hashes": {
+                        "sha1": "5381b3092d99c8f16f9fe36b3b680dee63db33a9",
+                        "md5": "573b6524784b3c56bfb47d8552ce4835"
+                    },
+                    "required_dependencies": [],
+                    "size": 243895,
+                    "date_published": "2024-12-11T19:50:00.423Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "jKHvZCttY7sN6I0U",
             "pakku_links": [
                 "h6VSIu6JUyk4CLMx",
@@ -3608,6 +3645,51 @@
             ]
         },
         {
+            "pakku_id": "vJtEAeIDGJ3WNcAv",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "dont-clear-chat-history"
+            },
+            "name": {
+                "curseforge": "Don't Clear Chat History"
+            },
+            "id": {
+                "curseforge": "404400"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "DontClearChatHistory-1.jar",
+                    "mc_versions": [
+                        "1.20.2",
+                        "1.20.2-Snapshot",
+                        "1.20.5-Snapshot",
+                        "1.20.3-Snapshot",
+                        "1.20.3",
+                        "1.20.1",
+                        "1.20",
+                        "1.20.4",
+                        "1.20-Snapshot"
+                    ],
+                    "loaders": [
+                        "neoforge",
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5189/256/DontClearChatHistory-1.jar",
+                    "id": "5189256",
+                    "parent_id": "404400",
+                    "hashes": {
+                        "sha1": "a6e532823419a509b7ef9dba7d252eaa19d49b34",
+                        "md5": "fb72ae2902fb690b2da7c6fc8063a2f5"
+                    },
+                    "required_dependencies": [],
+                    "size": 3093,
+                    "date_published": "2024-03-17T12:11:49.687Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "aANkTmDVoIWU8Tkf",
             "type": "MOD",
             "slug": {
@@ -4231,6 +4313,42 @@
                     ],
                     "size": 748968,
                     "date_published": "2025-03-14T22:29:28.687Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "PLbG5W7UGBz0C2xk",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "emi-extra-workstations"
+            },
+            "name": {
+                "curseforge": "Emi Extra Workstations"
+            },
+            "id": {
+                "curseforge": "1480976"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "emiextraworkstations-2.1.0.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7799/468/emiextraworkstations-2.1.0.jar",
+                    "id": "7799468",
+                    "parent_id": "1480976",
+                    "hashes": {
+                        "sha1": "b1401e006298ae3d2152c1ec677d437a6def40d3",
+                        "md5": "1fddf85273b4df2e384ba1dc6bed6450"
+                    },
+                    "required_dependencies": [],
+                    "size": 21328,
+                    "date_published": "2026-03-23T12:59:07.523Z"
                 }
             ]
         },
@@ -6375,6 +6493,44 @@
             ]
         },
         {
+            "pakku_id": "PM1TnvUDbduIZuye",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "industrial-hellscape"
+            },
+            "name": {
+                "curseforge": "Industrial Hellscape"
+            },
+            "id": {
+                "curseforge": "1302110"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "industrialhellscape-0.3.6A-1-1.20.1.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "alpha",
+                    "url": "https://edge.forgecdn.net/files/7790/264/industrialhellscape-0.3.6A-1-1.20.1.jar",
+                    "id": "7790264",
+                    "parent_id": "1302110",
+                    "hashes": {
+                        "sha1": "06ce36791f723b1d568a483555b03a44d26f1bf3",
+                        "md5": "30186a25b1c62a0175916942599e025a"
+                    },
+                    "required_dependencies": [
+                        "267602"
+                    ],
+                    "size": 3235569,
+                    "date_published": "2026-03-21T15:45:42.333Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "xRIqJLuG7VWw2KcI",
             "type": "MOD",
             "slug": {
@@ -6919,6 +7075,42 @@
                     ],
                     "size": 69022,
                     "date_published": "2024-07-07T11:46:16.467Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "ZuNf5QkUXtJ1GWAM",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "json-things"
+            },
+            "name": {
+                "curseforge": "Json Things"
+            },
+            "id": {
+                "curseforge": "541617"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "JsonThings-1.20.1-0.9.13.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7949/740/JsonThings-1.20.1-0.9.13.jar",
+                    "id": "7949740",
+                    "parent_id": "541617",
+                    "hashes": {
+                        "sha1": "80a644b44ae3951813dd6d5b780ce407f7de6faf",
+                        "md5": "37009deb1206452cfdbe6bad0e5ce1c5"
+                    },
+                    "required_dependencies": [],
+                    "size": 528983,
+                    "date_published": "2026-04-19T11:33:30.753Z"
                 }
             ]
         },
@@ -8571,47 +8763,6 @@
             ]
         },
         {
-            "pakku_id": "Sem3rVrDxuZ3NixH",
-            "pakku_links": [
-                "B9faiVpq9bYRgszl"
-            ],
-            "type": "MOD",
-            "slug": {
-                "curseforge": "mmmmmmmmmmmm"
-            },
-            "name": {
-                "curseforge": "MmmMmmMmmMmm (Target Dummy)"
-            },
-            "id": {
-                "curseforge": "225738"
-            },
-            "files": [
-                {
-                    "type": "curseforge",
-                    "file_name": "dummmmmmy-1.20-2.0.9.jar",
-                    "mc_versions": [
-                        "1.20.1"
-                    ],
-                    "loaders": [
-                        "forge"
-                    ],
-                    "release_type": "release",
-                    "url": "https://edge.forgecdn.net/files/6860/192/dummmmmmy-1.20-2.0.9.jar",
-                    "id": "6860192",
-                    "parent_id": "225738",
-                    "hashes": {
-                        "sha1": "782d16edca6fa22fb72fa825cec39117bbb7e78a",
-                        "md5": "4d3c04e63f560cfb51d100b7a4e78563"
-                    },
-                    "required_dependencies": [
-                        "499980"
-                    ],
-                    "size": 363044,
-                    "date_published": "2025-08-07T16:58:30.237Z"
-                }
-            ]
-        },
-        {
             "pakku_id": "D7WJDL1ppJYla75r",
             "type": "MOD",
             "slug": {
@@ -9285,6 +9436,43 @@
                     ],
                     "size": 2233413,
                     "date_published": "2025-06-27T18:00:42.603Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "BSPeAoyJbxT46M8M",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "nbt-autocomplete"
+            },
+            "name": {
+                "curseforge": "NBT Autocomplete"
+            },
+            "id": {
+                "curseforge": "813557"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "NBTac-FORGE-1.20.1-1.3.10.jar",
+                    "mc_versions": [
+                        "1.20.1",
+                        "1.20"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/5957/924/NBTac-FORGE-1.20.1-1.3.10.jar",
+                    "id": "5957924",
+                    "parent_id": "813557",
+                    "hashes": {
+                        "sha1": "280485e7654dd3e45445356ae22d5966b4e85242",
+                        "md5": "4311325533feb1901ce6dc82ab1a21f2"
+                    },
+                    "required_dependencies": [],
+                    "size": 229695,
+                    "date_published": "2024-12-03T00:10:29.837Z"
                 }
             ]
         },
@@ -12683,6 +12871,46 @@
             ]
         },
         {
+            "pakku_id": "V4VqmMKn3qMNuBY4",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "tinkers-things-json"
+            },
+            "name": {
+                "curseforge": "Tinkers' JSON Things"
+            },
+            "id": {
+                "curseforge": "811436"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "Tinker-Things-1.20.1-1.3.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge",
+                        "neoforge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/7375/264/Tinker-Things-1.20.1-1.3.3.jar",
+                    "id": "7375264",
+                    "parent_id": "811436",
+                    "hashes": {
+                        "sha1": "cf1891a3b892058ef7b978fc4263e11824f649f5",
+                        "md5": "2d331d8f017423c6088594ce3dfd8c79"
+                    },
+                    "required_dependencies": [
+                        "74072",
+                        "541617"
+                    ],
+                    "size": 1854816,
+                    "date_published": "2025-12-25T04:24:08.190Z"
+                }
+            ]
+        },
+        {
             "pakku_id": "0lPP5pFJCnI2A8Or",
             "type": "MOD",
             "slug": {
@@ -13259,6 +13487,42 @@
                     ],
                     "size": 7166917,
                     "date_published": "2025-06-25T23:50:19.680Z"
+                }
+            ]
+        },
+        {
+            "pakku_id": "XKrLCtJHge4w3nYO",
+            "type": "MOD",
+            "slug": {
+                "curseforge": "vanillin"
+            },
+            "name": {
+                "curseforge": "Vanillin"
+            },
+            "id": {
+                "curseforge": "965702"
+            },
+            "files": [
+                {
+                    "type": "curseforge",
+                    "file_name": "vanillin-forge-1.20.1-1.1.3.jar",
+                    "mc_versions": [
+                        "1.20.1"
+                    ],
+                    "loaders": [
+                        "forge"
+                    ],
+                    "release_type": "release",
+                    "url": "https://edge.forgecdn.net/files/6446/560/vanillin-forge-1.20.1-1.1.3.jar",
+                    "id": "6446560",
+                    "parent_id": "965702",
+                    "hashes": {
+                        "sha1": "bc49b972af2523aef31c1dfd68989d8d896e8452",
+                        "md5": "f30485347ab8852e6ca01970aebe5371"
+                    },
+                    "required_dependencies": [],
+                    "size": 1055068,
+                    "date_published": "2025-04-21T04:27:55.007Z"
                 }
             ]
         },
