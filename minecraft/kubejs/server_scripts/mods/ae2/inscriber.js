@@ -1,5 +1,7 @@
 ServerEvents.recipes(e => {
     e.remove({ type: 'ae2:inscriber' })
+    e.remove({ type: 'expatternprovider:circuit_cutter' })
+    e.remove({ output: 'expatternprovider:circuit_cutter' })
     
     // completed processors (stage 3)
     e.recipes.ae2.inscriber('ae2:calculation_processor',

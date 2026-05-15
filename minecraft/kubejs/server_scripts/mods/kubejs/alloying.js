@@ -395,7 +395,7 @@ ServerEvents.recipes(event => {
         temperature: 999,
         idSuffix: `netherite`
     })
-    e.remove({ output: 'morered:red_alloy_ingot' })
+    event.remove({ output: 'morered:red_alloy_ingot' })
     allAlloying(event, {
         types: allAlloyingTypes,
         item: {
