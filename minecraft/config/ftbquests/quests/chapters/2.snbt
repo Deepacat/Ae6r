@@ -193,7 +193,7 @@
 				type: "item"
 			}]
 			x: -3.5d
-			y: -4.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["7989B6AD3A82642C"]
@@ -205,7 +205,7 @@
 			}]
 			title: "Blast Furnace"
 			x: -5.5d
-			y: -4.0d
+			y: -3.5d
 		}
 		{
 			dependencies: ["163A71B74745BF43"]
@@ -229,16 +229,22 @@
 			subtitle: "Super-silicon Circuits"
 			tasks: [
 				{
-					id: "50B45D5893E793E3"
-					item: "ae2:logic_processor"
+					id: "1F87D09E482E584A"
+					item: "emendatus:charged_certus_steel_ingot"
 					type: "item"
 				}
 				{
-					id: "0963FF2823ADCF04"
+					id: "1A1FC89A1BEB1322"
 					item: "ae2:inscriber"
 					type: "item"
 				}
+				{
+					id: "30D1A5F7EE4DF6EA"
+					item: "ae2:logic_processor"
+					type: "item"
+				}
 			]
+			title: "Matter Processors"
 			x: -2.5d
 			y: 1.0d
 		}
@@ -1158,7 +1164,7 @@
 			]
 			title: "Panes Under Flames"
 			x: -6.5d
-			y: -2.0d
+			y: -2.5d
 		}
 	]
 	title: " 2 - Understanding"
